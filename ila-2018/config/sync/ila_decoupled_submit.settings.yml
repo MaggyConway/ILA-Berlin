@@ -1,0 +1,4 @@
+decoupled_submit_block:
+  form_selector: .node-form
+_core:
+  default_config_hash: a27ckVQNOJ1TvtighsWhtEFkGu3mw4qa1pIv0ngQyBc

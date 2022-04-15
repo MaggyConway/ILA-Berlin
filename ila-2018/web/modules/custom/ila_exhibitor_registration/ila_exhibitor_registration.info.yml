@@ -1,0 +1,7 @@
+name: 'Exhibitor Registration'
+type: module
+description: 'Contains logic related to main exhibitor registration process'
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - formblock

@@ -1,0 +1,46 @@
+.layout__region {
+  &--exhibition,
+  &--program {
+    padding-top: 120px;
+    padding-bottom: 145px;
+
+    @media screen and (max-width: 640px) {
+      padding-top: 60px;
+      padding-bottom: 70px;
+    }
+
+    .block-block-content-text {
+      .field--type-text-with-summary {
+        column-count: 2;
+
+        li > p,
+        li {
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        @media screen and (max-width: 768px) {
+          column-count: 1;
+        }
+      }
+    }
+  }
+  &--exhibition {
+    padding-bottom: 65px;
+
+    @media screen and (max-width: 640px) {
+      padding-bottom: 30px;
+    }
+  }
+  &--facts {
+  }
+}
+
+.field--name-field-sub-title {
+  @extend .h4;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 640px) {
+    margin-bottom: 30px;
+  }
+}

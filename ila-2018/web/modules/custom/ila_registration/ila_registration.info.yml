@@ -1,0 +1,7 @@
+name: 'Registration'
+type: module
+description: 'Configuration and logic related to Registration process'
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - inline_entity_form

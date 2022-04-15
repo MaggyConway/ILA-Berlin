@@ -1,0 +1,22 @@
+uuid: f247d804-99ad-4202-8342-6b6a8bd30ada
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.megamenu
+id: block_content.megamenu.status
+field_name: status
+entity_type: block_content
+bundle: megamenu
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

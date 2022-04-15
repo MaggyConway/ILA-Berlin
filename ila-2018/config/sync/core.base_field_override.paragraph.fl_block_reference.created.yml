@@ -1,0 +1,18 @@
+uuid: 7207beac-3e48-4ab4-90e1-cd2857704fd8
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_block_reference
+id: paragraph.fl_block_reference.created
+field_name: created
+entity_type: paragraph
+bundle: fl_block_reference
+label: 'Geschrieben am'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

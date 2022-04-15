@@ -1,0 +1,166 @@
+uuid: f4171bab-ca77-4fd2-b904-97b049db5498
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.attendee_registration.attendee_registration.field_ar_0zip_code
+    - field.field.attendee_registration.attendee_registration.field_ar_branch
+    - field.field.attendee_registration.attendee_registration.field_ar_city
+    - field.field.attendee_registration.attendee_registration.field_ar_company
+    - field.field.attendee_registration.attendee_registration.field_ar_conference
+    - field.field.attendee_registration.attendee_registration.field_ar_country
+    - field.field.attendee_registration.attendee_registration.field_ar_email
+    - field.field.attendee_registration.attendee_registration.field_ar_fax
+    - field.field.attendee_registration.attendee_registration.field_ar_first_name
+    - field.field.attendee_registration.attendee_registration.field_ar_last_name
+    - field.field.attendee_registration.attendee_registration.field_ar_phone
+    - field.field.attendee_registration.attendee_registration.field_ar_position
+    - field.field.attendee_registration.attendee_registration.field_ar_registration_confirmed
+    - field.field.attendee_registration.attendee_registration.field_ar_salutation
+    - field.field.attendee_registration.attendee_registration.field_ar_street
+  module:
+    - address
+    - ila_attendee_registration
+    - options
+    - telephone
+    - user
+id: attendee_registration.attendee_registration.default
+targetEntityType: attendee_registration
+bundle: attendee_registration
+mode: default
+content:
+  field_ar_0zip_code:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ar_branch:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ar_city:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ar_company:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ar_conference:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ar_country:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_country_default
+    region: content
+  field_ar_email:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ar_fax:
+    weight: 14
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_ar_first_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ar_last_name:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ar_phone:
+    weight: 13
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_ar_position:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ar_registration_confirmed:
+    weight: 15
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ar_salutation:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ar_street:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

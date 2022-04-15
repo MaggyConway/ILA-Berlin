@@ -1,0 +1,35 @@
+uuid: e68fbf68-a623-40fb-a945-fd6e056774a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - exhibitor_zone
+_core:
+  default_config_hash: TnjIBvVBGnkO3KcNf3Lehmunikc154LrGN4kNQnORB8
+id: exhibitor_zone_messages
+theme: exhibitor_zone
+region: highlighted
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/51\r\n/node/50"
+    negate: true
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      editor: editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

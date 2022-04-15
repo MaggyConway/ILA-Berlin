@@ -1,0 +1,200 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_c.field__outdoor_area
+    - field.field.node.request_c.field_product_group
+    - field.field.node.request_c.field_product_group_index
+    - field.field.node.request_c.field_registration_outdoor_area
+    - field.field.node.request_c.field_request_c_comments
+    - field.field.node.request_c.field_request_c_depth_in_m
+    - field.field.node.request_c.field_request_c_plus_advertising
+    - field.field.node.request_c.field_request_c_plus_auma
+    - field.field.node.request_c.field_request_c_preferred_stand
+    - field.field.node.request_c.field_request_c_registration_inf
+    - field.field.node.request_c.field_request_c_registration_of
+    - field.field.node.request_c.field_request_c_total_in_m2
+    - field.field.node.request_c.field_request_c_we_will_show
+    - field.field.node.request_c.field_request_c_width_in_m
+    - node.type.request_c
+  module:
+    - entity_reference_views_select
+    - field_group
+    - ila_grouped_options
+    - markup
+third_party_settings:
+  field_group:
+    group_request_c_preferred_stand:
+      children:
+        - group_request_c_square
+        - field_request_c_comments
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: 'Preferred stand size'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'field-group--pref-size wrapp-2-cols'
+      label: 'Preferred stand size'
+    group_request_c_square:
+      children:
+        - field_request_c_preferred_stand
+        - field_request_c_width_in_m
+        - field_request_c_depth_in_m
+        - field_request_c_total_in_m2
+        - field_request_c_plus_auma
+      parent_name: group_request_c_preferred_stand
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: Square
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: field-group--square
+      label: Square
+    group_request_c_plus_advertising:
+      children:
+        - field_request_c_plus_advertising
+        - field_request_c_registration_inf
+      parent_name: ''
+      weight: 6
+      format_type: html_element
+      format_settings:
+        label: 'Plus Advertising Box'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'field-group--advertise wrapp-2-cols'
+      label: 'Plus Advertising Box'
+id: node.request_c.default
+targetEntityType: node
+bundle: request_c
+mode: default
+content:
+  field__outdoor_area:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: grouped_options
+    region: content
+  field_product_group_index:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_registration_outdoor_area:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_request_c_comments:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: 'Please insert your comments here.'
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_request_c_depth_in_m:
+    weight: 23
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_request_c_plus_advertising:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_plus_auma:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_preferred_stand:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_registration_inf:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_registration_of:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_total_in_m2:
+    weight: 24
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_request_c_we_will_show:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_request_c_width_in_m:
+    weight: 22
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

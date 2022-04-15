@@ -1,0 +1,14 @@
+uuid: b87b07f3-e72e-4e87-953e-bee5c60948af
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.conference
+  module:
+    - user
+id: user_remove_role_action.conference
+label: 'Remove the Conference role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: conference

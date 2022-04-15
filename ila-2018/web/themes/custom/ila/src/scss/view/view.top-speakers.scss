@@ -1,0 +1,133 @@
+.view-display-id-top_speakers {
+  margin: 0 auto 100px;
+  padding: 0 50px;
+
+  @media #{$m-to-m} {
+    padding: 0 15px;
+  }
+  
+  .view-header {
+    margin-bottom: 50px;
+  }
+
+  .top-speaker-header {
+    font-size: 40px;
+    font-weight: 900;
+    color: $conferences-dark;
+    @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-green, $uas-dark, $digital-dark);
+    text-transform: uppercase;
+  }
+
+  .top-speaker-header--text {
+    font-size: 17px;
+    color: $conferences-light;
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+  }
+
+  .view-content {
+    display: flex;
+    justify-content: center;
+    margin: 0 -60px 80px;
+    
+    @media #{$m-to-2l} {
+      margin: 0 -20px 50px;
+    }
+
+    @media #{$m-to-m} {
+      margin: 0 0 50px;
+      flex-direction: column;
+    }
+
+    .views-row {
+      margin: 0 60px;
+      width: calc(33% - 120px);
+      text-align: center;
+
+      @media #{$m-to-2l} {
+        margin: 0 20px;
+        width: calc(33% - 40px);
+      }
+
+      @media #{$m-to-m} {
+        margin: 0 0 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  .field--name-field-portrait {
+    margin-bottom: 25px;
+  }
+
+  .field--name-node-title {
+    padding: 0;
+    margin-bottom: 12px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 900;
+    }
+  }
+
+  .field--name-field-position {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    font-style: italic;
+    margin-bottom: 15px;
+
+    &::before {
+      content: '(';
+    }
+
+    &::after {
+      content: ')';
+    }
+  }
+
+  .field--name-node-link {
+    a {
+      display: block;
+      padding: 5px 0;
+      font-weight: 500;
+      text-decoration: underline;
+      color: $conferences-link;
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-link, $career-green, $uas-dark, $digital-dark);
+
+      &:hover {
+        color: $conferences-light;
+        @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .view-footer {
+    width: 100%;
+    text-align: center;
+
+    .btn {
+      color: $conferences-light;
+      border-color: $conferences-light;
+      @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+      @include section-theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+      &::before,
+      &::after {
+        border-color: $conferences-light;
+        @include section-theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+      }
+
+      &:hover {
+        color: $conferences-dark;
+				@include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-green, $uas-dark, $digital-dark);        
+
+        &::before,
+        &::after {
+          border-color: $conferences-dark;
+					@include section-theme-specific('border-color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-green, $uas-dark, $digital-dark);
+        }
+      }
+    }
+  }
+}

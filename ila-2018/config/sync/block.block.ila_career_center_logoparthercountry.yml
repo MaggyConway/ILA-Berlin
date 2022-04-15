@@ -1,0 +1,25 @@
+uuid: e914be12-e3c6-4c85-8675-01f36c80a8a3
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:text:a6ec2037-4b23-459c-93fc-ddc27bd0fdbe'
+  module:
+    - block_content
+  theme:
+    - ila_career_center
+id: ila_career_center_logoparthercountry
+theme: ila_career_center
+region: header_bottom
+weight: -9
+provider: null
+plugin: 'block_content:a6ec2037-4b23-459c-93fc-ddc27bd0fdbe'
+settings:
+  id: 'block_content:a6ec2037-4b23-459c-93fc-ddc27bd0fdbe'
+  label: 'Logo parther country'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }

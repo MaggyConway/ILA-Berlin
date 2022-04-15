@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.faq
+  content:
+    - 'block_content:faq:c471db21-dbe3-4c3c-be9c-b848595ad5d2'
+    - 'block_content:page_description:a28ae77b-7959-4ffe-abf8-2fa748b54635'
+  module:
+    - block_content
+    - panels
+id: faq-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    349cc79f-e194-4645-8af4-733dae270898:
+      id: 'block_content:a28ae77b-7959-4ffe-abf8-2fa748b54635'
+      label: 'FAQ Title'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 349cc79f-e194-4645-8af4-733dae270898
+      context_mapping: {  }
+    a95a3fcb-264d-4c57-8d1d-f0d15489f1cc:
+      id: 'block_content:c471db21-dbe3-4c3c-be9c-b848595ad5d2'
+      label: 'FAQ Block'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: a95a3fcb-264d-4c57-8d1d-f0d15489f1cc
+      context_mapping: {  }
+  id: panels_variant
+  uuid: ae595057-bf55-4411-bd34-3f6afce7a69c
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: faq-panels_variant-0
+  builder: standard
+page: faq
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

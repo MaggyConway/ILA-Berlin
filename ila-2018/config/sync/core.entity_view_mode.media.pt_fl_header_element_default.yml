@@ -1,0 +1,10 @@
+uuid: 99e13848-bc7b-4924-8143-173297254d07
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_header_element_default
+label: 'PT FL Header Element: Default'
+targetEntityType: media
+cache: true

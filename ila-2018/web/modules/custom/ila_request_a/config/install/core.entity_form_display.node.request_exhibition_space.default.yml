@@ -1,0 +1,189 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_exhibition_space.field_field_request_a_plus_auma
+    - field.field.node.request_exhibition_space.field_following_services_are_inc
+    - field.field.node.request_exhibition_space.field_product_group
+    - field.field.node.request_exhibition_space.field_product_group_index
+    - field.field.node.request_exhibition_space.field_request_a_comments
+    - field.field.node.request_exhibition_space.field_request_a_depth_in_m
+    - field.field.node.request_exhibition_space.field_request_a_plus_advertising
+    - field.field.node.request_exhibition_space.field_request_a_total_in_m2
+    - field.field.node.request_exhibition_space.field_request_a_width_in_m
+    - field.field.node.request_exhibition_space.field_request_preferred_size
+    - field.field.node.request_exhibition_space.field_stand_number
+    - field.field.node.request_exhibition_space.field_stand_registration_package
+    - field.field.node.request_exhibition_space.field_stand_size_depth
+    - field.field.node.request_exhibition_space.field_stand_size_total
+    - field.field.node.request_exhibition_space.field_stand_size_width
+    - node.type.request_exhibition_space
+  module:
+    - entity_reference_views_select
+    - field_group
+    - ila_grouped_options
+    - markup
+third_party_settings:
+  field_group:
+    group_preferred_stand_size:
+      children:
+        - group_square
+        - field_request_a_comments
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: 'Preferred stand size'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'field-group--pref-size wrapp-2-cols'
+      label: 'Preferred stand size'
+    group_square:
+      children:
+        - field_request_preferred_size
+        - field_request_a_width_in_m
+        - field_request_a_depth_in_m
+        - field_request_a_total_in_m2
+        - field_field_request_a_plus_auma
+      parent_name: group_preferred_stand_size
+      weight: 34
+      format_type: html_element
+      format_settings:
+        label: Square
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: field-group--square
+      label: Square
+    group_wrapper:
+      children:
+        - field_request_a_plus_advertising
+        - field_following_services_are_inc
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: wrapper
+id: node.request_exhibition_space.default
+targetEntityType: node
+bundle: request_exhibition_space
+mode: default
+content:
+  field_field_request_a_plus_auma:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_following_services_are_inc:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: grouped_options
+    region: content
+  field_product_group_index:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_a_comments:
+    weight: 35
+    settings:
+      rows: 5
+      placeholder: 'Please insert your comments here.'
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_request_a_depth_in_m:
+    weight: 35
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_request_a_plus_advertising:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_a_total_in_m2:
+    weight: 36
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_request_a_width_in_m:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_request_preferred_size:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_stand_number:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_stand_registration_package:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  field_stand_size_depth: true
+  field_stand_size_total: true
+  field_stand_size_width: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

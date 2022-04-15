@@ -1,0 +1,42 @@
+uuid: 29f231eb-1cf1-4838-b265-720983df8c74
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.info_list
+    - field.storage.block_content.field_title_text
+    - paragraphs.paragraphs_type.title_text
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: kzo9RBm6Dz9TPFk3zevw1zdw56sSHh1EkVhQrVVK_Oc
+id: block_content.info_list.field_title_text
+field_name: field_title_text
+entity_type: block_content
+bundle: info_list
+label: 'Title & Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_text: title_text
+    target_bundles_drag_drop:
+      title_text:
+        enabled: true
+        weight: 5
+      request_link:
+        weight: 6
+        enabled: false
+      text:
+        weight: 7
+        enabled: false
+      two_column_text:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

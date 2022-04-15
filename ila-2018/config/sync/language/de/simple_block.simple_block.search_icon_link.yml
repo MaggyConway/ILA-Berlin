@@ -1,0 +1,3 @@
+content:
+  value: "<div class=\"search-link-wrapper\"><a class=\"search-link\" href=\"/de/suche\">Suche</a></div>\r\n"
+  format: full_html

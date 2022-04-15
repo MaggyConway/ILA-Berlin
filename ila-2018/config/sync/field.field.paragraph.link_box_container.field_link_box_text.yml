@@ -1,0 +1,21 @@
+uuid: eba13653-829e-4c31-9b30-5659248fa3df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_box_text
+    - paragraphs.paragraphs_type.link_box_container
+  module:
+    - text
+id: paragraph.link_box_container.field_link_box_text
+field_name: field_link_box_text
+entity_type: paragraph
+bundle: link_box_container
+label: 'Info Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

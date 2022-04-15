@@ -1,0 +1,10 @@
+uuid: 7a1e8cf3-66ee-4d9d-942b-e7f1b547aea2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_news_default_thumbnails_
+label: 'CT News: Default (thumbnails)'
+targetEntityType: media
+cache: true

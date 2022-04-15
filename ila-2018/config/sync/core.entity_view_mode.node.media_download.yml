@@ -1,0 +1,10 @@
+uuid: 28113965-a40e-4a07-ba57-b39c63abd86c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.media_download
+label: Media-Download
+targetEntityType: node
+cache: true

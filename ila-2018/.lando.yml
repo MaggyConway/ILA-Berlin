@@ -1,0 +1,26 @@
+name: ila
+recipe: drupal8
+config:
+  webroot: web
+  xdebug: true
+  via: nginx
+  php: '7.3'
+proxy:
+  adminer:
+    - adminer.ila.lndo.site:8080
+  mailhog:
+    - mail.ila.lndo.site
+services:
+  adminer:
+    type: compose
+    services:
+      image: adminer
+      environment:
+        - ADMINER_DEFAULT_SERVER=database
+      command: docker-php-entrypoint php -S [::]:8080 -t /var/www/html
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+  pma:
+    type: phpmyadmin

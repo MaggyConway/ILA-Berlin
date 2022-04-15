@@ -1,0 +1,20 @@
+uuid: 7ff827ac-f4a2-4fb3-81b0-d6369b935f93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_street
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_street
+field_name: field_ar_street
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Street
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

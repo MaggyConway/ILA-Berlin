@@ -1,0 +1,20 @@
+uuid: 097a11c6-7b17-4030-ad03-8d80ec9d9e81
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_cc_link_list_item_title
+field_name: field_cc_link_list_item_title
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

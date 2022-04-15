@@ -1,0 +1,16 @@
+uuid: 8de996b4-1119-4d47-b7e6-e522c0fbfc77
+langcode: de
+status: true
+dependencies: {  }
+name: embedded_big
+label: 'embedded big'
+effects:
+  8605dfa2-988e-4795-b14b-75b72c4901f5:
+    uuid: 8605dfa2-988e-4795-b14b-75b72c4901f5
+    id: image_scale
+    weight: 1
+    data:
+      width: 1115
+      height: null
+      upscale: true
+pipeline: image_optimiza

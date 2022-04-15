@@ -1,0 +1,23 @@
+uuid: fe512c71-abcc-4184-80a6-a6a7644c9238
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_cc_logo_wall
+    - media.type.image
+id: media.image.field_cc_logo_wall
+field_name: field_cc_logo_wall
+entity_type: media
+bundle: image
+label: 'Career Center Logo Wall'
+description: 'Für die Ausgabe des Bildes auf der CC Logowall bitte anklicken.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

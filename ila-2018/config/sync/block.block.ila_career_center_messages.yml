@@ -1,0 +1,35 @@
+uuid: 77c374fb-b1e0-4659-9006-8af365c26a54
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: 8QbSEV02Fwn-sOlNJVNBCyCsgfkwOaJoIpbUtKILuxQ
+id: ila_career_center_messages
+theme: ila_career_center
+region: highlighted
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/51\r\n/node/50"
+    negate: true
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      editor: editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

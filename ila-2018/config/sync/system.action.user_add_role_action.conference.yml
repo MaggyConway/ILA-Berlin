@@ -1,0 +1,14 @@
+uuid: 3deda86f-44ac-4512-9634-a3685917f5d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.conference
+  module:
+    - user
+id: user_add_role_action.conference
+label: 'Add the Conference role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: conference

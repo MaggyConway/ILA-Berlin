@@ -1,0 +1,56 @@
+uuid: 55481e92-516b-46bc-a7ce-3f3f5141848e
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.exhibitor_zone
+  content:
+    - 'block_content:page_description:963a61f7-4786-4d91-ac85-8c43c1567e25'
+    - 'block_content:text:b7123ae4-7c1f-498b-a1e3-b900ab46097e'
+  module:
+    - block_content
+    - panels
+id: exhibitor_zone-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    e6346b90-5ea4-4dd6-b691-74fdcb04c577:
+      id: 'block_content:963a61f7-4786-4d91-ac85-8c43c1567e25'
+      label: 'EXHIBITOR ZONE'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: e6346b90-5ea4-4dd6-b691-74fdcb04c577
+      context_mapping: {  }
+    53a3e6ec-f8df-4737-835c-5ac6a28c1f87:
+      id: 'block_content:b7123ae4-7c1f-498b-a1e3-b900ab46097e'
+      label: 'Exhibitor zone page text'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 53a3e6ec-f8df-4737-835c-5ac6a28c1f87
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 6a40f779-fe74-4a0d-8ff5-7c3e1e699b67
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: exhibitor_zone-panels_variant-0
+  builder: standard
+page: exhibitor_zone
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

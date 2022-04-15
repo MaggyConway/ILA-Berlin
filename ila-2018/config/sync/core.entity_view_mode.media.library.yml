@@ -1,0 +1,10 @@
+uuid: ddea0f06-c975-4332-a9fa-41225d3f0497
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.library
+label: Bibliothek
+targetEntityType: media
+cache: true

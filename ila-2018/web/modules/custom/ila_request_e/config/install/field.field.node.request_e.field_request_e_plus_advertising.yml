@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_e_plus_advertising
+    - node.type.request_e
+  module:
+    - markup
+id: node.request_e.field_request_e_plus_advertising
+field_name: field_request_e_plus_advertising
+entity_type: node
+bundle: request_e
+label: 'Plus Advertising Box'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Plus Advertising Box</h3>\r\n\r\n<h4>mandatory for all main exhibitors</h4>\r\n\r\n<ul>\r\n\t<li>Starter Package 399 EUR</li>\r\n</ul>\r\n"
+    format: full_html
+field_type: markup

@@ -1,0 +1,8 @@
+uuid: e5d5cc01-895d-439c-8e91-6f481415ad55
+langcode: en
+status: true
+dependencies: {  }
+id: careercenter_sponsors
+label: 'CareerCenter -- Sponsors'
+revision: 0
+description: ''

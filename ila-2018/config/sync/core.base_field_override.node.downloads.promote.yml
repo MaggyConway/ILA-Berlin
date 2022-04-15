@@ -1,0 +1,24 @@
+uuid: 09573c1c-6fbf-457e-a909-b7be0ad55175
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+_core:
+  default_config_hash: 8P4ps97g9HWODVeJQBb0d0NCNkmIH-paV27TF7Tc_cA
+id: node.downloads.promote
+field_name: promote
+entity_type: node
+bundle: downloads
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,74 @@
+uuid: 4ecc9913-41a5-4aba-b2e6-b8f8521725ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conference_registration_confirmation
+    - views.view.attendee_registration_confirmation_
+    - views.view.conferences
+  module:
+    - node
+    - panels
+    - views
+id: conference_registration_confirmation-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    a18d83d4-605c-4f5c-b94d-95baf07eff88:
+      id: 'views_block:conferences-block_5'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: -2
+      uuid: a18d83d4-605c-4f5c-b94d-95baf07eff88
+      context_mapping: {  }
+    a53ee1a9-bc89-4b7c-81d0-b62b307e88ce:
+      id: 'views_block:conferences-block_6'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: a53ee1a9-bc89-4b7c-81d0-b62b307e88ce
+      context_mapping: {  }
+    971711e1-ff5b-4dd5-84b1-d51185800a79:
+      id: 'views_block:attendee_registration_confirmation_-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: 971711e1-ff5b-4dd5-84b1-d51185800a79
+      context_mapping: {  }
+    a48c3a55-9ba3-42bb-a010-63f48b6bad7b:
+      id: attendee_registration_confirm
+      label: 'Attendee registration confirmation'
+      provider: node
+      label_display: '0'
+      region: content
+      weight: 2
+      uuid: a48c3a55-9ba3-42bb-a010-63f48b6bad7b
+      context_mapping: {  }
+  id: panels_variant
+  uuid: b0c878f6-1402-4d01-a4e1-2481cd5c7223
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: conference_registration_confirmation-panels_variant-0
+  builder: standard
+page: conference_registration_confirmation
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

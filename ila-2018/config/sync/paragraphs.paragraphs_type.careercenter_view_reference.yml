@@ -1,0 +1,9 @@
+uuid: 4e6b1649-06d3-4d63-ad52-54dd195fa179
+langcode: en
+status: true
+dependencies: {  }
+id: careercenter_view_reference
+label: 'CareerCenter -- View reference'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

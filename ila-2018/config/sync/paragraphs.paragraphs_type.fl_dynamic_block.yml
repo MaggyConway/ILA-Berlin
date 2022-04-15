@@ -1,0 +1,9 @@
+uuid: 6c8512ff-7fda-4a76-b0db-62b5a7fad602
+langcode: en
+status: true
+dependencies: {  }
+id: fl_dynamic_block
+label: 'FL Dynamic Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

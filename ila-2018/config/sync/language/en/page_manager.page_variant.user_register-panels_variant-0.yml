@@ -1,0 +1,9 @@
+label: Panels
+variant_settings:
+  blocks:
+    ef3d1758-37d2-4055-af00-a4aa79d54b4c:
+      label: 'User registration form'
+    79a57a00-1f09-489f-aec8-ed610794cc46:
+      label: Registration
+    2f749698-a35a-4401-b6a5-15898313bbdf:
+      label: 'Registration - Contact us'

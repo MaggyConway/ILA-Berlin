@@ -1,0 +1,19 @@
+uuid: d6e03a7c-29ba-4243-975a-b2912fdcf558
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_download_box
+id: paragraph.fl_download_box.field_paragraph_title
+field_name: field_paragraph_title
+entity_type: paragraph
+bundle: fl_download_box
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

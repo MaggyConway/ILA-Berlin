@@ -1,0 +1,141 @@
+.main-menu {
+  @include list-reset;
+  color: $c-white;
+  border-bottom: 1px solid;
+  display: inline-block;
+  padding: 28px 40px;
+  width: 100%;
+
+  &__item {
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    > a {
+      font-weight: 700;
+      font-size: 20px;
+      color: inherit;
+      line-height: 56px;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        color: $c-blue-sky;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width: 975px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.footer-menu {
+  @include list-reset;
+
+  &__item {
+    display: inline-block;
+    margin-right: 30px;
+
+    &:last-of-type {
+      @media screen and (max-width: 480px) {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      color: $c-white;
+      font-size: 16px;
+      font-weight: 400;
+      transition: .3s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $c-blue-normal;
+      }
+
+    }
+  }
+}
+
+.menu--social {
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    @include list-reset;
+    font-size: 0;
+
+    &__item {
+      display: inline-block;
+      margin-left: 20px;
+
+      a {
+        display: block;
+        color: $c-white;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+          outline: none;
+          color: $c-blue-light;
+        }
+
+        &.icon-twitter {
+          background: url(../img/svg/twitter.svg) center no-repeat;
+          &:hover,
+          &:focus {
+            background-image: url(../img/svg/twitter-hover.svg);
+          }
+        }
+
+        &.icon-facebook {
+          background: url(../img/svg/facebook.svg) center no-repeat;
+          &:hover,
+          &:focus {
+            background-image: url(../img/svg/facebook-hover.svg);
+          }
+        }
+
+        &.icon-instagram {
+          background: url(../img/svg/instagram.svg) center no-repeat;
+          &:hover,
+          &:focus {
+            background-image: url(../img/svg/instagram-hover.svg);
+          }
+        }
+
+        &.icon-youtube {
+          background: url(../img/svg/youtube.svg) center no-repeat;
+          background-size: 19px auto;
+          &:hover,
+          &:focus {
+            background-image: url(../img/svg/youtube-hover.svg);
+          }
+        }
+        &.icon-linkedin {
+          background: url(../img/svg/linkedin.svg) center no-repeat;
+          background-size: 19px auto;
+          &:hover,
+          &:focus {
+            background-image: url(../img/svg/linkedin-hover.svg);
+          }
+        }
+      }
+    }
+  }
+}

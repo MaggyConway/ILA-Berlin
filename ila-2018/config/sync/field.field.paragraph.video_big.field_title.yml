@@ -1,0 +1,19 @@
+uuid: 6d4dd591-856f-4ca7-b203-893530ffae16
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.video_big
+id: paragraph.video_big.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: video_big
+label: Titel
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

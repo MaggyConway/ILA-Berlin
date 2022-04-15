@@ -1,0 +1,89 @@
+.paragraph--type--fl-testimonials-container {
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  max-width: 1240px;
+
+  @media #{$m-to-m} {
+    margin-bottom: 90px;
+  }
+
+  .field--name-field-paragraph-title {
+    @extend .title;
+
+    margin-bottom: 20px;
+
+    @media #{$m-to-m} {
+      margin-bottom: 30px;
+    }
+  }
+
+  .fieldset-wrapper,
+  .paragraph--type--fl-testimonial {
+    display: flex;
+    height: 100%;
+    background-color: $bg-box;
+
+    // @media #{$m-from-l} {
+    //   margin: 0 40px 40px;
+    // }
+  }
+
+  .slick-list {
+    @media #{$m-from-l} {
+      margin: 0 -40px;
+    }
+  }
+
+  .wrapper-left {
+    flex-shrink: 0;
+  }
+
+  .wrapper-right {
+    padding: 20px 30px 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media #{$m-to-m} {
+      padding: 17px 10px 14px;
+    }
+
+    .field--name-field-cc-text {
+      margin-bottom: 6px;
+
+      @media #{$m-to-m} {
+        margin-bottom: 30px;
+      }
+    }
+
+    .field--name-field-title {
+      text-align: right;
+
+      &::before {
+        margin-right: 5px;
+        content: '—';
+      }
+    }
+  }
+
+  .slick__arrow {
+    @media #{$m-from-l} {
+      margin-top: 0;
+    }
+  }
+
+  /* stylelint-disable */
+
+  .slick-slide > div {
+    display: flex;
+
+    > fieldset {
+      @media #{$m-from-l} {
+        margin: 0 40px 40px;
+      }
+    }
+  }
+}
+
+/* stylelint-enable */

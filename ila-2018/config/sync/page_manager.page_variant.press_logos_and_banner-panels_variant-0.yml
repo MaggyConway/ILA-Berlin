@@ -1,0 +1,41 @@
+uuid: 40f72596-766b-4681-8fdb-a1d118848acb
+langcode: de
+status: true
+dependencies:
+  config:
+    - page_manager.page.press_logos_and_banner
+    - views.view.press_logos_and_banner
+  module:
+    - panels
+    - views
+id: press_logos_and_banner-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    a415dc33-e16e-43e4-ac31-83b4c10734ad:
+      id: 'views_block:press_logos_and_banner-block_downloads_available'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: a415dc33-e16e-43e4-ac31-83b4c10734ad
+      context_mapping: {  }
+  id: panels_variant
+  uuid: e189fd99-6ab3-4758-b30b-14634387877b
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: press_logos_and_banner-panels_variant-0
+  builder: standard
+page: press_logos_and_banner
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

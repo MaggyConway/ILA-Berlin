@@ -1,0 +1,7 @@
+name: Import flightprogram nodes
+type: module
+description: Module for import flightprogram nodes from json.
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - ila_import_json

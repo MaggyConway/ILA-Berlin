@@ -1,0 +1,16 @@
+uuid: 683e834e-bec2-42ff-8ba7-d5c0625b0523
+langcode: en
+status: true
+dependencies: {  }
+name: conference_partner_logo
+label: 'Conference partner logo'
+effects:
+  9eb3910a-e570-4273-ace2-409a78ce0e86:
+    uuid: 9eb3910a-e570-4273-ace2-409a78ce0e86
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: false
+pipeline: image_optimiza

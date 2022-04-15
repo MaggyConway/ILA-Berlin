@@ -1,0 +1,20 @@
+uuid: 6762e8a7-3273-45c8-b235-c0f8eda2200d
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_infographic_box_columns
+field_name: field_infographic_box_columns
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 88a2d60d-7f42-428c-9934-c7e119fb7ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.pt_careercenter_testimonial_140x164_
+    - image.style.pt_careercenter_testimonial_240x278_
+  theme:
+    - ila_career_center
+id: ila_careercenter_testimonials
+label: 'ILA CareerCenter Testimonials'
+image_style_mappings:
+  -
+    breakpoint_id: ila_career_center.desktop_full_hd
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: pt_careercenter_testimonial_240x278_
+  -
+    breakpoint_id: ila_career_center.phone
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: pt_careercenter_testimonial_140x164_
+breakpoint_group: ila_career_center
+fallback_image_style: pt_careercenter_testimonial_240x278_

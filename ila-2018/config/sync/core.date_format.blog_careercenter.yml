@@ -1,0 +1,8 @@
+uuid: 84321032-b6c5-40e6-9e59-861941636a2e
+langcode: en
+status: true
+dependencies: {  }
+id: blog_careercenter
+label: 'Blog CareerCenter'
+locked: false
+pattern: d.m.Y

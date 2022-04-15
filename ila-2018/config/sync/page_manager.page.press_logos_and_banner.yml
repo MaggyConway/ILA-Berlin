@@ -1,0 +1,12 @@
+uuid: 28931bfc-c540-4fa2-9bf2-ccc91b36ccce
+langcode: de
+status: true
+dependencies: {  }
+id: press_logos_and_banner
+label: 'Press logos and banner'
+description: ''
+use_admin_theme: false
+path: /logos-banner
+access_logic: and
+access_conditions: {  }
+parameters: {  }

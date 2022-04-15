@@ -1,0 +1,40 @@
+uuid: cd2b3d40-59aa-4843-acb8-2524063a873c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_address
+  module:
+    - address
+    - user
+_core:
+  default_config_hash: TD88TMRxkW-mnaNShFso9x8l_kG0dZ5I8i_dK0brTRY
+id: user.user.field_address
+field_name: field_address
+entity_type: user
+bundle: user
+label: Address
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    country_code: DE
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    sortingCode: '0'
+    addressLine2: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+  field_overrides: {  }
+field_type: address

@@ -1,0 +1,21 @@
+uuid: 242eed3e-f07b-4a05-a6cd-e520446653ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_svg_snippet
+    - paragraphs.paragraphs_type.fl_svg_tag_snippet
+  module:
+    - text
+id: paragraph.fl_svg_tag_snippet.field_cc_svg_snippet
+field_name: field_cc_svg_snippet
+entity_type: paragraph
+bundle: fl_svg_tag_snippet
+label: 'SVG snippet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

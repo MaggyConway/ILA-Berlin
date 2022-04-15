@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_alph_listing
+    - node.type.co_exhibitor
+id: node.co_exhibitor.field_company_alph_listing
+field_name: field_company_alph_listing
+entity_type: node
+bundle: co_exhibitor
+label: 'Alphabetical listing'
+description: 'Please fill in how you want your company to be listed in the catalogue (minimum of 3 letters). Example: If your company name is "John Smith Aviation Ltd." and you want to be listed as "Smith Aviation".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

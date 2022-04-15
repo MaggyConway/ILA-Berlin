@@ -1,0 +1,23 @@
+.path-exhibitor-zone-account {
+  .form-item-field-salutation {
+    .select-wrapper {
+
+      &:after {
+        content: none;
+      }
+
+      .form-select {
+        @extend button;
+        appearance: menulist;
+        display: inline-block;
+        width: auto;
+        background: rgb(221, 221, 221);
+        padding: 0 5px;
+        min-width: 100px;
+        height: 22px;
+        line-height: 1;
+        border-radius: 2px;
+      }
+    }
+  }
+}

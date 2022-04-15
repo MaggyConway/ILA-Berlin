@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__outdoor_area
+    - node.type.request_c
+  module:
+    - markup
+id: node.request_c.field__outdoor_area
+field_name: field__outdoor_area
+entity_type: node
+bundle: request_c
+label: 'Registration outdoor area'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>The required raw space for aircraft and mockups is calculated from total length x wing or rotor span.</h3>\r\n\r\n<h4>Area type | Price</h4>\r\n"
+    format: full_html
+field_type: markup

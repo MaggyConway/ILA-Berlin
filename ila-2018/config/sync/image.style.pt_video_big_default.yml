@@ -1,0 +1,16 @@
+uuid: 3b0dbcdf-37c0-4c91-b3aa-0d420d2b7551
+langcode: en
+status: true
+dependencies: {  }
+name: pt_video_big_default
+label: 'PT Video Big: Default (548x305)'
+effects:
+  51c96566-2534-4d05-a45f-496ec32f4ed1:
+    uuid: 51c96566-2534-4d05-a45f-496ec32f4ed1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 548
+      height: 305
+      anchor: center-center
+pipeline: ''

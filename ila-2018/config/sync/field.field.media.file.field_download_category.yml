@@ -1,0 +1,29 @@
+uuid: 008a3b5b-321e-478d-9183-f60f42207dbd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_download_category
+    - media.type.file
+    - taxonomy.vocabulary.downloads_categories
+id: media.file.field_download_category
+field_name: field_download_category
+entity_type: media
+bundle: file
+label: "Download Kategorie\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      downloads_categories: downloads_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

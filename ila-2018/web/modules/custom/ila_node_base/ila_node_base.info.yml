@@ -1,0 +1,28 @@
+name: 'Content - Base'
+description: 'Node entity type common configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - content_translation
+  - datetime_range
+  - entity_reference_revisions
+  - field
+  - file
+  - filefield_paths
+  - ila_node_basic_page
+  - ila_node_downloads
+  - ila_node_facts
+  - ila_node_news
+  - ila_node_press
+  - ila_node_section
+  - image
+  - language
+  - link
+  - node
+  - paragraphs
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+package: ILA

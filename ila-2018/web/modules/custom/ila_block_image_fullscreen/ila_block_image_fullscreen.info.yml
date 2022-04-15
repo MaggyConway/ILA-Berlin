@@ -1,0 +1,13 @@
+name: 'Block - Image (Fullscreen)'
+description: 'Block content - "Image (Fullscreen)" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - field
+  - filefield_paths
+  - ila_block_base
+  - ila_block_video
+  - ila_core
+  - image
+package: ILA

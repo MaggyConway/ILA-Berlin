@@ -1,0 +1,20 @@
+uuid: 46d7ea2b-c073-4051-866e-894352e7612e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press
+_core:
+  default_config_hash: gM7VPJR9MQm3wkfySC_qsY_weOnyKcyyoyO_I08PWU8
+id: node.press.created
+field_name: created
+entity_type: node
+bundle: press
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

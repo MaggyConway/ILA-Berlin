@@ -1,0 +1,6 @@
+name: Area Code Formatter
+type: module
+description: Formatter for area code (without 0, if this number is first)
+core_version_requirement: ^8 || ^9
+dependencies:
+  - field

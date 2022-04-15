@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Main module file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_form_alter().
+ */
+function ila_decoupled_submit_form_alter(array &$form, FormStateInterface $form_state, string $form_id) {
+  // Hardcoded list of the content type forms. Bad.
+  $content_type_forms = [
+    'node_request_exhibition_space_form',
+    'node_reqest_b_form',
+    'node_request_c_form',
+    'node_request_d_form',
+    'node_request_e_form',
+    'node_request_f_form',
+    'node_request_fb_1_form',
+    'node_co_exhibitor_form',
+  ];
+
+  if (array_search($form_id, $content_type_forms) === FALSE) {
+    return;
+  }
+
+  if (isset($form['actions'])) {
+    foreach ($form['actions'] as &$action) {
+      if (!isset($action['#submit'])) {
+        continue;
+      }
+      $action['#value'] = new TranslatableMarkup('Complete request');
+      $action['#submit'][] = 'ila_decoupled_submit_redirect_to_print_submit';
+    }
+  }
+}
+
+/**
+ * Submit callback: redirect to corresponding Print request page.
+ */
+function ila_decoupled_submit_redirect_to_print_submit(array $form, FormStateInterface $form_state) {
+  // Hide all messages.
+  \Drupal::messenger()->all();
+
+  // Get current URL.
+  $current_uri = Url::fromRoute('<current>')->toString();
+  $print_uri = $current_uri . '/print';
+
+  // Why not ::disableRedirect or ::setRebuild - these methods do not update
+  // form build id,so when the page is reloaded the form is already outdated.
+  $form_state->setRedirectUrl(Url::fromUserInput($print_uri));
+}

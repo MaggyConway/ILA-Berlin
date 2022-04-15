@@ -1,0 +1,23 @@
+uuid: c9daebd5-9c8e-4a32-9a7e-c3c1884ea9de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_link
+    - node.type.section
+  module:
+    - link
+id: node.section.field_header_link
+field_name: field_header_link
+entity_type: node
+bundle: section
+label: 'Header link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

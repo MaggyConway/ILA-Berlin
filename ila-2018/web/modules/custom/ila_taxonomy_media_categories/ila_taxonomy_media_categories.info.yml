@@ -1,0 +1,9 @@
+name: 'Taxonomy - Media categories'
+description: 'Taxonomy - "Media categories" bundle'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - path
+  - taxonomy
+  - text
+package: ILA

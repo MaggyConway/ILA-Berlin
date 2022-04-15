@@ -1,0 +1,23 @@
+uuid: e25b5c0b-0ce3-4339-b704-29b8024ae62f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wLISTARz74DGDERfwfR586pNpltw8GqBoR3icSaWMgg
+id: section_thumbnails
+name: section_thumbnails
+label: 'Section - Thumbnails'
+weight: 0
+group: ''
+skin: ''
+breakpoints: 0
+optimized: true
+options:
+  options__active_tab: edit-options-settings
+  settings:
+    asNavFor: '#section--carousel-slider'
+    arrows: false
+    focusOnSelect: true
+    lazyLoad: ondemand
+    slidesPerRow: 0
+    slidesToShow: 10

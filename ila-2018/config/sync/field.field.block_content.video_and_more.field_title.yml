@@ -1,0 +1,19 @@
+uuid: 764af14a-8675-47b5-9d1f-f3e83664872f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_and_more
+    - field.storage.block_content.field_title
+id: block_content.video_and_more.field_title
+field_name: field_title
+entity_type: block_content
+bundle: video_and_more
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

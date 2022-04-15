@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: carousel_thumbnail
+label: 'Carousel thumbnail (95x95)'
+effects:
+  74456cee-6b0e-4dbc-b02a-8c84c5515299:
+    uuid: 74456cee-6b0e-4dbc-b02a-8c84c5515299
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 95
+      height: 95

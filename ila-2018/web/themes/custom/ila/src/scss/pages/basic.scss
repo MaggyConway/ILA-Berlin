@@ -1,0 +1,735 @@
+.page-node-type-basic-page {
+
+  .header__bottom {
+    background-color: #1B457B;
+  }
+
+  .layout-content {
+      min-height: 100vh;
+      padding-top: 107px; // header height
+      padding-bottom: 250px; // footer heigth
+      margin-bottom: -250px;
+      box-sizing: border-box;
+
+    padding-top: 150px;
+    @media screen and (max-width: 975px) {
+      padding-top: 105px;
+    }
+    @media screen and (max-width: 609px) {
+      padding-top: 64px;
+    }
+    .region-content {
+      padding-top: 185px;
+    }
+  }
+  &.toolbar-horizontal {
+    .layout-content {
+      min-height: calc(100vh - 39px); // toolbar height
+    }
+  }
+  &.toolbar-tray-open {
+    .layout-content {
+      min-height: calc(100vh - 80px); // toolbar height
+    }
+  }
+}
+
+.node--type-basic-page {
+  // Career center specific modifications. Because it uses different font, some
+  // font-size adjustments are needed.
+  // @todo: refactor this file to make adding new styles simpler.
+  &.node--style-green-careercenter {
+    color: $career-dark;
+
+    h1 {
+      font-size: 3.5em;
+    }
+
+    h2 {
+      font-size: 2.5em;
+    }
+
+    .paragraph--type--dwn-link .news__links-group .field__label {
+      font: {
+        family: $career-font;
+        size: 24px;
+      }
+      margin-bottom: 15px;
+    }
+
+    .paragraph--type--faq .paragraph--type-faq-group .faq-group__title,
+    h3 {
+      color: $career-dark-green;
+      font: {
+        size: 2em;
+        weight: bold;
+      }
+    }
+
+    .paragraph--type--link-box-container .field--name-field-link-boxes-ref > .field__item .field--name-field-lb-title {
+      font: {
+        size: 2em;
+        weight: bold;
+      }
+    }
+
+    .paragraph--type--link-box-container .field--name-field-link-boxes-ref > .field__item .field--name-field-lb-link a {
+      box-shadow: 2px 2px 0 $career-green;
+    }
+
+    .paragraph--type--faq .faq-block__subtitle,
+    .paragraph--type--faq .paragraph--type-faq-group .ui-accordion-header,
+    .paragraph--type--text-boxes .paragraph--type--text-box .field--name-field-tb-title,
+    h4 {
+      font: {
+        size: 1.5em;
+        weight: normal;
+      }
+    }
+
+    .field--name-field-sub-title {
+      font-size: 1.75em;
+    }
+  }
+
+  a {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-dark-green, $uas-light, $digital-light);
+    &:hover {
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-light-green, $uas-dark, $digital-dark);
+    }
+  }
+
+  .paragraph--type--text a {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $c-blue, $conferences-light, $career-dark-green, $uas-light, $digital-light);
+    &:hover {
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $c-blue-normal, $conferences-dark, $career-light-green, $uas-dark, $digital-dark);
+    }
+  }
+
+  h2 {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+  }
+  h3 {
+    color: $c-blue;
+    font-size: 20px;
+    line-height: 1.1764;
+    font-weight: 900;
+    @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-light-green, $uas-dark, $digital-dark);
+    @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
+    @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-light-green, $uas-dark, $digital-dark);
+    @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+  }
+
+  .paragraph--type--text-boxes {
+    .field--name-field-tbs-title {
+      @include section-theme-specific('font-size', 40px, 40px, 40px, 40px, 40px, 40px, 4em, 40px, 40px);
+    }
+    .paragraph--type--block-reference {
+      .block-contact-block {
+        @extend .field--name-field-block-reference-text;
+        h4 {
+          margin-bottom: 20px;
+        }
+        .form-item {
+          input {
+            @include section-theme-specific('border-bottom', 1px dashed $defense-dark, 1px dashed $aviation-dark, 1px dashed $space-dark, 1px dashed $suppliers-dark, 1px dashed $special-dark, 1px dashed $conferences-dark, 1px dashed $career-dark-green, 1px dashed $uas-dark, 1px dashed $digital-dark);
+          }
+          textarea {
+            @include section-theme-specific('border-bottom', 1px dashed $defense-dark, 1px dashed $aviation-dark, 1px dashed $space-dark, 1px dashed $suppliers-dark, 1px dashed $special-dark, 1px dashed $conferences-dark, 1px dashed $career-dark-green, 1px dashed $uas-dark, 1px dashed $digital-dark);
+          }
+          .form-select {
+            @include section-theme-specific('border-bottom', 1px dashed $defense-dark, 1px dashed $aviation-dark, 1px dashed $space-dark, 1px dashed $suppliers-dark, 1px dashed $special-dark, 1px dashed $conferences-dark, 1px dashed $career-dark-green, 1px dashed $uas-dark, 1px dashed $digital-dark);
+          }
+        }
+        .form-actions {
+          input {
+            @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+            &:hover {
+              @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .field--name-node-title {
+  @include content-grid(0);
+  }
+  .subtitle-wrapper {
+    @include content-grid(40px);
+  }
+  .paragraph--type--text {
+    @include content-grid(60px);
+  }
+  .paragraph--type--two-column-text {
+    @include content-grid(40px);
+  }
+  .paragraph--type--text-boxes {
+    @include content-grid;
+  }
+  .paragraph--type--dwn-link {
+    @include content-grid(0);
+
+    .news__links-group {
+      @include section-theme-specific('border-bottom', 1px solid $defense-dark, 1px solid $aviation-dark, 1px solid $space-dark, 1px solid $suppliers-dark, 1px solid $special-dark, 1px solid $conferences-dark, 1px solid $career-light-green, 1px solid $uas-dark, 1px solid $digital-dark);
+      @include section-theme-specific('border-top', 1px solid $defense-dark, 1px solid $aviation-dark, 1px solid $space-dark, 1px solid $suppliers-dark, 1px solid $special-dark, 1px solid $conferences-dark, 1px solid $career-light-green, 1px solid $uas-dark, 1px solid $digital-dark);
+
+      .field__label {
+        @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+      }
+    }
+   }
+
+  .field--name-node-title {
+    margin-bottom: 15px;
+
+    h1 {
+      @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+      @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+
+      max-width: 100%;
+    }
+  }
+
+  .field--name-field-sub-title {
+    @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+    @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+
+    text-transform: none;
+    max-width: 660px;
+  }
+
+  .paragraph--type--text {
+    .field--name-field-body {
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark, $uas-dark, $digital-dark);
+
+      font-size: 17px;
+      font-weight: 300;
+      margin-bottom: 50px;
+
+      @media #{$m-to-m} {
+        max-width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .paragraph--type--block-reference {
+    .field--name-field-block-reference-text {
+      @include content-grid (60px);
+      margin-bottom: 25px;
+    }
+    .block-views-blockevents-block-1,
+    .block-views-blockevents-block-4 {
+      @include content-grid (60px);
+      .views-field-field-future-lab-1 {
+        width: 200px;
+      }
+      .views-field-field-date-and-time {
+        width: 200px;
+      }
+    }
+    .partners-view {
+      @include content-grid (60px);
+      margin: 0 auto 60px !important;
+      .view-content {
+        display: table;
+        @media #{$m-to-4xl} {
+          text-align: center;
+        }
+        .views-row {
+          float: left;
+          margin-bottom: 35px;
+          margin-right: 35px;
+
+          @-moz-document url-prefix() {
+            margin-bottom: 34px;
+            margin-right: 34px;
+          }
+
+          /* simple */
+          .flip-container {
+            width: 250px;
+            height: 250px;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
+            -ms-transform: perspective(1000px);
+            -moz-transform: perspective(1000px);
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+
+            /* START: Accommodating for IE */
+            &:hover .back-side,
+            &.hover .back-side {
+              -webkit-transform: rotateY(0deg);
+              -moz-transform: rotateY(0deg);
+              -o-transform: rotateY(0deg);
+              -ms-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+            }
+
+            &:hover .front-side,
+            &.hover .front-side {
+              -webkit-transform: rotateY(180deg);
+              -moz-transform: rotateY(180deg);
+              -o-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+            }
+            /* END: Accommodating for IE */
+            .front-side,
+            .back-side {
+              -webkit-backface-visibility: hidden;
+              -moz-backface-visibility: hidden;
+              -ms-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-transition: 0.6s;
+              -webkit-transform-style: preserve-3d;
+              -webkit-transform: rotateY(0deg);
+              -moz-transition: 0.6s;
+              -moz-transform-style: preserve-3d;
+              -moz-transform: rotateY(0deg);
+              -o-transition: 0.6s;
+              -o-transform-style: preserve-3d;
+              -o-transform: rotateY(0deg);
+              -ms-transition: 0.6s;
+              -ms-transform-style: preserve-3d;
+              -ms-transform: rotateY(0deg);
+              transition: 0.6s;
+              transform-style: preserve-3d;
+              transform: rotateY(0deg);
+              width: 250px;
+              height: 250px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: #fff;
+              border: 1px solid lightgray;
+            }
+
+            .flipper {
+              -webkit-transition: 0.6s;
+              -webkit-transform-style: preserve-3d;
+              -ms-transition: 0.6s;
+              -moz-transition: 0.6s;
+              -moz-transform: perspective(1000px);
+              -moz-transform-style: preserve-3d;
+              -ms-transform-style: preserve-3d;
+              transition: 0.6s;
+              transform-style: preserve-3d;
+              position: relative;
+            }
+
+            .front-side {
+              -webkit-transform: rotateY(0deg);
+              -ms-transform: rotateY(0deg);
+              z-index: 2;
+              line-height: 250px;
+              text-align: center;
+              vertical-align: middle;
+              img {
+                line-height: normal;
+                display: inline-block;
+              }
+            }
+
+            .back-side {
+              -webkit-transform: rotateY(-180deg);
+              -moz-transform: rotateY(-180deg);
+              -o-transform: rotateY(-180deg);
+              -ms-transform: rotateY(-180deg);
+              transform: rotateY(-180deg);
+              padding: 24px;
+
+              .item {
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 16px;
+                color: black;
+              }
+            }
+          }
+
+          .vertical {
+
+            &.flip-container {
+              position: relative;
+            }
+
+            .back-side {
+              -webkit-transform: rotateX(180deg);
+              -moz-transform: rotateX(180deg);
+              -ms-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+            }
+
+            &.flip-container .flipper {
+              -webkit-transform-origin: 100% 213.5px;
+              -moz-transform-origin: 100% 213.5px;
+              -ms-transform-origin: 100% 213.5px;
+              transform-origin: 100% 213.5px;
+            }
+
+            &.flip-container:hover .back-side,
+            &.flip-container.hover .back-side {
+              -webkit-transform: rotateX(0deg);
+              -moz-transform: rotateX(0deg);
+              -o-transform: rotateX(0deg);
+              -ms-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+            }
+
+            &.flip-container:hover .front-side,
+            &.flip-container.hover .front-side {
+              -webkit-transform: rotateX(180deg);
+              -moz-transform: rotateX(180deg);
+              -o-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+            }
+          }
+
+          //.flip-container {
+          //  position: relative;
+          //  perspective: 1000px;
+          //  &:hover .flipper {
+          //    transform: rotateX(180deg);
+          //
+          //
+          //  }
+          //  .flipper {
+          //    transform-origin: 100% 125.5px; /* height image */
+          //    transition: 0.6s;
+          //    transform-style: preserve-3d;
+          //    position: relative;
+          //
+          //    .front-side,
+          //    .back-side {
+          //      background-color: #f7f7f7;
+          //      border: 1px solid lightgray;
+          //      backface-visibility: hidden;
+          //      top: 0;
+          //      left: 0;
+          //    }
+          //    .front-side {
+          //      z-index: 2;
+          //      /* for firefox 31 */
+          //      transform: rotateY(0deg);
+          //      width: 250px;
+          //      height: 250px;
+          //      line-height: 250px;
+          //      text-align: center;
+          //      vertical-align: middle;
+          //      img {
+          //        line-height: normal;
+          //        display: inline-block;
+          //      }
+          //    }
+          //    .back-side {
+          //      transform: rotateX(180deg);
+          //      height: 250px;
+          //      width: 250px;
+          //      position: absolute;
+          //      padding: 24px;
+          //
+          //      .item {
+          //        text-transform: uppercase;
+          //        text-align: center;
+          //        padding: 10px;
+          //        font-weight: 600;
+          //        font-size: 16px;
+          //        color: black;
+          //      }
+          //    }
+          //  }
+          //}
+          &:nth-child(4n+4) {
+            margin-right: 0;
+            @media #{$m-to-4xl} {
+              margin-right: 35px;
+            }
+          }
+        }
+      }
+    }
+    .block-views-blockpartners-block-3 {
+      @include content-grid (60px);
+      margin: 0 auto 60px !important;
+      .view-content {
+        display: table;
+        @media #{$m-to-4xl} {
+          text-align: center;
+          .field-content {
+
+          }
+        }
+        .views-row {
+          display: inline-table;
+          margin-bottom: 20px;
+          margin-right: 20px;
+          .field-content {
+            width: 165px;
+            height: 165px;
+            line-height: 150px;
+            text-align: center;
+            vertical-align: middle;
+            display: block;
+            img {
+              line-height: normal;
+              display: inline-block;
+            }
+          }
+        }
+        &:nth-child(4n+4) {
+          margin-right: 0;
+          @media #{$m-to-4xl} {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .events-view {
+    @include content-grid (60px);
+    .form-select {
+      border: none;
+      background: none;
+    }
+    .view-header {
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+      @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+    }
+    .view-filters {
+      @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+      .form-item {
+        @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+        margin-top: auto;
+      }
+      .form-actions {
+        input {
+          @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+        }
+      }
+    }
+    .view-content {
+      .view-grouping-header {
+        @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+        @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+      }
+      .views-table {
+        caption {
+          @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+          @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+        }
+      }
+      thead {
+        @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+        tr {
+          th {
+            @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+            @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+          }
+          .views-field-field-future-lab-1 {
+            @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+            @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+          }
+          .views-field-title {
+            @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+            @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+          }
+          caption {
+            @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+            @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+          }
+        }
+      }
+      tbody {
+        tr {
+          @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+          .views-field-body {
+            @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+            @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+            p {
+              color: black;
+            }
+          }
+          .views-field-field-date-and-time {
+            color: black;
+          }
+          td {
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .paragraph--type--faq {
+    margin: 0 auto 50px;
+    max-width: 1145px;
+    padding: {
+      left: 15px;
+      right: 15px;
+    }
+
+    .faq-block__subtitle {
+      @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+
+    .paragraph--type-faq-group .ui-accordion-header {
+      @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+      @include section-theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+
+    .faq-block__title {
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+    }
+
+    .faq-group__title {
+      @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+    }
+
+    .paragraph--type-faq-group .ui-accordion-content:last-child {
+      @include section-theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+
+    .ui-accordion-content a {
+      color: $c-blue-normal;
+      @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-dark-green, $uas-light, $digital-light);
+      &:hover {
+        color: $c-blue-light;
+        @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-light-green, $uas-dark, $digital-dark);
+      }
+    }
+  }
+
+  .paragraph--type--info-box .field--name-field-info-box-text {
+    @include section_theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+    &::before {
+      @include section-theme-specific('background-image', url(../img/i-icon-defense.svg), url(../img/i-icon-aviation.svg), url(../img/i-icon-space.svg), url(../img/i-icon-suppliers.svg), url(../img/i-icon-specials.svg), url(../img/i-icon-conferences.png), url(../img/i-icon-career.svg), url(../img/i-icon-uas.svg), url(../img/i-icon-digital.svg));
+    }
+    .infobox__content {
+      @include section-theme-specific('border-top', 1px solid $defense-light, 1px solid $aviation-light, 1px solid $space-light, 1px solid $suppliers-light, 1px solid $special-light, 1px solid $conferences-light, 1px solid $career-dark-green, 1px solid $uas-dark, 1px solid $digital-light);
+      @include section-theme-specific('border-bottom', 1px solid $defense-light, 1px solid $aviation-light, 1px solid $space-light, 1px solid $suppliers-light, 1px solid $special-light, 1px solid $conferences-light, 1px solid $career-dark-green, 1px solid $uas-dark, 1px solid $digital-light);
+    }
+  }
+
+  .paragraph--type--single-link-box {
+    @include section-theme-specific('background-image', linear-gradient(45deg, rgba($defense-dark , 1) 0%, rgba($defense-light, 1) 100%), linear-gradient(45deg, rgba($aviation-dark, 1) 0%, rgba($aviation-light, 1) 100%), linear-gradient(45deg, rgba($space-dark, 1) 0%, rgba($space-light, 1) 100%), linear-gradient(45deg, rgba($suppliers-dark, 1) 0%, rgba($suppliers-light, 1) 100%), linear-gradient(45deg, rgba($special-dark, 1) 0%, rgba($special-light, 1) 100%), linear-gradient(45deg, rgba($conferences-dark, 1) 0%, rgba($conferences-light, 1) 100%), linear-gradient(45deg, rgba($career-dark-green , 1) 0%, rgba($career-light-green, 1) 100%), linear-gradient(45deg, rgba($uas-dark , 1) 0%, rgba($uas-light, 1) 100%), $digital-gradient);
+
+    a:hover {
+      @include section_theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+
+    .field--name-field-single-link-box-link a::before {
+      @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+
+    .field--name-field-single-link-box-link a::after {
+      @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+  }
+
+  .paragraph--type--navigation {
+    margin: 15px auto 50px;
+    max-width: 1145px;
+    padding: {
+      left: 15px;
+      right: 15px;
+    }
+
+    .field--name-field-navigation-links {
+      @include section_theme-specific('border-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+      .field__item a {
+        @include section_theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        &:hover {
+          @include section_theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+        }
+      }
+    }
+  }
+  .contact-message-sponsoring-katalog-form {
+    max-width: 1140px;
+    margin: 30px auto;
+    padding: 0 15px;
+    .button {
+      display: none;
+      &.button--primary {
+        display: block;
+      }
+    }
+  }
+  #contact_ajax_contact_message_sponsoring_katalog_form {
+    .messages {
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+  }
+
+  .paragraph--type--video-big {
+    @include section-theme-specific('background', linear-gradient(225deg, rgba($defense-light , 0.1) 0%, rgba($defense-dark, 0.1) 100%), linear-gradient(225deg, rgba($aviation-light, 0.1) 0%, rgba($aviation-dark, 0.1) 100%), linear-gradient(225deg, rgba($space-light, 0.1) 0%, rgba($space-dark, 0.1) 100%), linear-gradient(225deg, rgba($suppliers-light, 0.1) 0%, rgba($suppliers-dark, 0.1) 100%), linear-gradient(225deg, rgba($special-light, 0.1) 0%, rgba($special-dark, 0.1) 100%), linear-gradient(225deg, rgba($conferences-light, 0.1) 0%, rgba($conferences-dark, 0.1) 100%), linear-gradient(225deg, rgba($career-dark-green , 0.1) 0%, rgba($career-light-green, 0.1) 100%), linear-gradient(225deg, rgba($uas-dark , 0.1) 0%, rgba($uas-light, 0.1) 100%), $digital-background);
+    margin-bottom: 40px;
+    padding: 54px 15px 70px;
+
+    .field--name-field-title {
+      max-width: 990px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 14px;
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      @include section_theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    }
+
+    .field--name-field-subtitle {
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 42px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 23px;
+      text-align: center;
+      text-transform: uppercase;
+      @include section_theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+    }
+
+    .field--name-field-video {
+      max-width: 990px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+
+      video,
+      iframe {
+        width: 100%;
+        @include section-theme-specific('border', 2px solid $defense-light, 2px solid $aviation-light, 2px solid $space-light, 2px solid $suppliers-light, 2px solid $special-light, 2px solid $conferences-light, 2px solid $career-dark-green, 2px solid $uas-dark, 2px solid $digital-light);
+      }
+    }
+
+    .field--name-field-html {
+      max-width: 990px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      @include section_theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark-green, $uas-dark, $digital-dark);
+    }
+  }
+}

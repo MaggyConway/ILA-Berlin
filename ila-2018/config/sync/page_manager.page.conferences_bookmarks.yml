@@ -1,0 +1,12 @@
+uuid: cafedebe-70eb-4bbf-9237-f99872c897ff
+langcode: en
+status: true
+dependencies: {  }
+id: conferences_bookmarks
+label: 'Conferences bookmarks'
+description: ''
+use_admin_theme: false
+path: /notepad/merkliste
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,19 @@
+uuid: 0e592150-05c4-4611-8871-ac37698dfd1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_infographic_column_body
+field_name: field_infographic_column_body
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

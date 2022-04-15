@@ -1,0 +1,18 @@
+uuid: b6db37e0-7e5c-4910-9129-3f61ff728da0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.career_center_news
+id: block_content.career_center_news.metatag
+field_name: metatag
+entity_type: block_content
+bundle: career_center_news
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

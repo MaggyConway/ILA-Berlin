@@ -1,0 +1,22 @@
+uuid: c16e86e8-2261-481d-8fab-735a9071fa2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_facebook_post
+id: paragraph.cc_facebook_post.status
+field_name: status
+entity_type: paragraph
+bundle: cc_facebook_post
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,9 @@
+uuid: a86e807a-2b33-431a-ac3e-1cf4beae0234
+langcode: de
+status: true
+dependencies: {  }
+id: content_subtitle
+label: Untertitel
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

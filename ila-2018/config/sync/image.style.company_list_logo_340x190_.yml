@@ -1,0 +1,16 @@
+uuid: f41e9174-ba56-4d10-a210-3ecc34ce9355
+langcode: en
+status: true
+dependencies: {  }
+name: company_list_logo_340x190_
+label: 'Company list logo'
+effects:
+  c98aae03-7468-4556-a5d1-439f52fcbdb0:
+    uuid: c98aae03-7468-4556-a5d1-439f52fcbdb0
+    id: image_scale
+    weight: 1
+    data:
+      width: 240
+      height: null
+      upscale: false
+pipeline: company_list_optimiz

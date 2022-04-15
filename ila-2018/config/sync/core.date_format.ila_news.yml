@@ -1,0 +1,8 @@
+uuid: 16523f07-6711-473b-880c-1c4cce4ef4b0
+langcode: und
+status: true
+dependencies: {  }
+id: ila_news
+label: 'Ila News'
+locked: false
+pattern: j.n.Y

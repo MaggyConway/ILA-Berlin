@@ -1,0 +1,8 @@
+name: Image Formatter for File
+type: module
+description: Image Field formatter for File
+# core_version_requirement: ^8 || ^9
+package: ILA
+
+core: '8.x'
+

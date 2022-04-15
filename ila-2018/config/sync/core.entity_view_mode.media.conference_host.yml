@@ -1,0 +1,10 @@
+uuid: 6970bed5-2ce2-470c-9598-47ae20303824
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.conference_host
+label: 'Conference Host'
+targetEntityType: media
+cache: true

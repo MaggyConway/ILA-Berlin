@@ -1,0 +1,46 @@
+.block-views-blockdownloads-block-downloads-available,
+.view-downloads-media {
+  .view-filters {
+    margin: 0;
+    border-top: 1px solid #009cde;
+    border-bottom: 1px solid #009cde;
+    padding: 18px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .bef-exposed-form {
+      .form-item {
+        float: left;
+        list-style: none;
+        margin-bottom: 17px;
+        margin-right: 30px;
+        color: #009cde;
+        input:checked + label {
+          color: #1d428a;
+        }
+
+        label {
+          font-size: 15px;
+          text-transform: uppercase;
+          font-weight: 900;
+          cursor: pointer;
+          display: block;
+
+          &:before {
+            content: none;
+          }
+          @media #{$m-to-m} {
+            padding-left: 0px !important;
+          }
+        }
+
+      }
+    }
+  }
+}
+.view-downloads-media {
+  .form-actions {
+    display: none;
+  }
+}

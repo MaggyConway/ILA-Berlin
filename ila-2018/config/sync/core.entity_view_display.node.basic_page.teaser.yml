@@ -1,0 +1,35 @@
+uuid: 38d3e526-04b7-4564-8e87-b6e493fbe219
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.basic_page.field_node_metatag
+    - field.field.node.basic_page.field_paragraphs
+    - field.field.node.basic_page.field_parallax_background
+    - field.field.node.basic_page.field_style
+    - field.field.node.basic_page.field_sub_title
+    - field.field.node.basic_page.field_yoast_seo
+    - node.type.basic_page
+  module:
+    - user
+_core:
+  default_config_hash: REs60_WhI4R36skRtWY9ckY-FsavKE1KmGWfTX_3IxQ
+id: node.basic_page.teaser
+targetEntityType: node
+bundle: basic_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_node_metatag: true
+  field_paragraphs: true
+  field_parallax_background: true
+  field_style: true
+  field_sub_title: true
+  field_yoast_seo: true
+  langcode: true

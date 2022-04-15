@@ -1,0 +1,24 @@
+uuid: 687634cf-376b-4178-9378-ad9c34ff750b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - media
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: aca88e78-6549-4629-a75e-4f73675ac40b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_conference_type
+    - node.type.conference
+  module:
+    - options
+id: node.conference.field_co_conference_type
+field_name: field_co_conference_type
+entity_type: node
+bundle: conference
+label: 'Conference type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,9 @@
+uuid: 86a7376e-719c-46aa-8446-f0111606c153
+langcode: en
+status: true
+dependencies: {  }
+id: single_link_box
+label: 'Single link box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

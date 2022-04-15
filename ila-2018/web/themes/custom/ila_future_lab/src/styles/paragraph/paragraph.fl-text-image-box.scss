@@ -1,0 +1,23 @@
+.paragraph--type--fl-text-image-box {
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  max-width: 1240px;
+
+  .field--name-field-title {
+    @extend .title;
+    margin-bottom: 10px;
+
+    max-width: 720px;
+  }
+
+  .field--name-field-cc-text {
+    margin-bottom: 40px;
+    max-width: 720px;
+  }
+
+  .field--name-field-cc-link {
+    a {
+      @extend .btn;
+    }
+  }
+}

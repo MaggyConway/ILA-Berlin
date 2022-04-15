@@ -1,0 +1,27 @@
+uuid: 9ffd6f5a-c8f8-49e7-8343-04d5d7eca667
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+    - options
+id: attendee_registration.field_ar_salutation
+field_name: field_ar_salutation
+entity_type: attendee_registration
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Ms
+      label: Ms
+    -
+      value: Mr
+      label: Mr
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

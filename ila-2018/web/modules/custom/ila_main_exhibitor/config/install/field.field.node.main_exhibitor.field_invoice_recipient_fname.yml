@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invoice_recipient_fname
+    - node.type.main_exhibitor
+id: node.main_exhibitor.field_invoice_recipient_fname
+field_name: field_invoice_recipient_fname
+entity_type: node
+bundle: main_exhibitor
+label: 'First name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

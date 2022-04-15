@@ -1,0 +1,84 @@
+uuid: bb0337af-38e9-48d6-b13d-c8de711ae4cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_entity_browser
+    - field.field.paragraph.careercenter_title_text_images.field_cc_anchor
+    - field.field.paragraph.careercenter_title_text_images.field_cc_link
+    - field.field.paragraph.careercenter_title_text_images.field_cc_paragraph_options
+    - field.field.paragraph.careercenter_title_text_images.field_cc_text
+    - field.field.paragraph.careercenter_title_text_images.field_cc_tti_images
+    - field.field.paragraph.careercenter_title_text_images.field_title
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+  module:
+    - entity_browser
+    - link
+    - text
+id: paragraph.careercenter_title_text_images.default
+targetEntityType: paragraph
+bundle: careercenter_title_text_images
+mode: default
+content:
+  field_cc_anchor:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_cc_paragraph_options:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cc_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cc_tti_images:
+    type: entity_browser_entity_reference
+    weight: 5
+    settings:
+      entity_browser: image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

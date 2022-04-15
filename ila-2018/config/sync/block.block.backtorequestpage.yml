@@ -1,0 +1,26 @@
+uuid: 101e4af8-e0c1-425b-88b9-29553e557ad9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - exhibitor_zone
+id: backtorequestpage
+theme: exhibitor_zone
+region: sticky
+weight: -3
+provider: null
+plugin: back_to_request
+settings:
+  id: back_to_request
+  label: 'Back to Request page'
+  provider: node
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/exhibitor-zone/request_a/print\r\n/exhibitor-zone/request_b/print\r\n/exhibitor-zone/request_c/print\r\n/exhibitor-zone/request_d/print\r\n/exhibitor-zone/request_e/print\r\n/exhibitor-zone/request_f/print\r\n/exhibitor-zone/request_fb1/print\r\n/exhibitor-zone/co-exhibitor/print"
+    negate: false
+    context_mapping: {  }

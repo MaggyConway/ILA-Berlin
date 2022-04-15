@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="240px" viewBox="0 0 1200 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>export/program-header</title>
+    <desc>Created with Sketch.</desc>
+    <g id="export/program-header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="#00529C">
+            <polygon id="Path-3" points="0.5 40.5 240 0 320 240 0 140"></polygon>
+            <path d="M240,0 L319.578,80.573 L1200,140 L640,200 L320,81.058 L320,240 L240,0 Z" id="Combined-Shape" stroke-linejoin="bevel"></path>
+            <line x1="320" y1="240" x2="640" y2="200" id="Path-8"></line>
+        </g>
+    </g>
+</svg>

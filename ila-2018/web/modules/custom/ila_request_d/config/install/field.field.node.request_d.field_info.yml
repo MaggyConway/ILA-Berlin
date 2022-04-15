@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info
+    - node.type.request_d
+  module:
+    - markup
+id: node.request_d.field_info
+field_name: field_info
+entity_type: node
+bundle: request_d
+label: Info
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Sie können Standfläche (ohne Standbau) mieten oder sich für eine Standfläche mit Komplettstand entscheiden. Ein Übersicht mit den Ausstattungsmerkmalen der Komplettstände finden sie hier.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+field_type: markup

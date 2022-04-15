@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_c_depth_in_m
+    - node.type.request_c
+id: node.request_c.field_request_c_depth_in_m
+field_name: field_request_c_depth_in_m
+entity_type: node
+bundle: request_c
+label: 'Depth in m'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

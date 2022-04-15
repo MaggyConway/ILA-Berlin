@@ -1,0 +1,153 @@
+uuid: 0022abf4-c97f-45fc-b3b8-76934a8a6db3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.news
+    - paragraphs.paragraphs_type.image_row
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: node.news.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: news
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_row: image_row
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      block_reference:
+        weight: 42
+        enabled: false
+      career_center_visitors_news:
+        weight: 43
+        enabled: false
+      cc_facebook_post:
+        weight: 44
+        enabled: false
+      cc_link_box:
+        weight: 45
+        enabled: false
+      cc_link_list:
+        weight: 46
+        enabled: false
+      cc_link_list_item:
+        weight: 47
+        enabled: false
+      cc_news_block:
+        weight: 48
+        enabled: false
+      cc_text_box:
+        weight: 49
+        enabled: false
+      cc_text_on_image:
+        weight: 50
+        enabled: false
+      cc_tiled_title:
+        weight: 51
+        enabled: false
+      content_subtitle:
+        weight: 52
+        enabled: false
+      download:
+        weight: 53
+        enabled: false
+      dwn_link:
+        weight: 54
+        enabled: false
+      exhibition:
+        weight: 55
+        enabled: false
+      exhibition_container:
+        weight: 56
+        enabled: false
+      faq:
+        weight: 57
+        enabled: false
+      faq_group:
+        weight: 58
+        enabled: false
+      image_box:
+        weight: 59
+        enabled: false
+      image_full:
+        weight: 60
+        enabled: false
+      image_row:
+        enabled: true
+        weight: 61
+      info_box:
+        weight: 62
+        enabled: false
+      infographic_box:
+        weight: 63
+        enabled: false
+      infographic_box_column:
+        weight: 64
+        enabled: false
+      kontakt_person:
+        weight: 65
+        enabled: false
+      link_box:
+        weight: 66
+        enabled: false
+      link_box_container:
+        weight: 67
+        enabled: false
+      list_of_companies:
+        weight: 68
+        enabled: false
+      list_of_companies_link:
+        weight: 69
+        enabled: false
+      navigation:
+        weight: 70
+        enabled: false
+      quote:
+        weight: 71
+        enabled: false
+      request_link:
+        weight: 72
+        enabled: false
+      single_link_box:
+        weight: 73
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 74
+      speaker:
+        weight: 75
+        enabled: false
+      text:
+        weight: 76
+        enabled: false
+      text_box:
+        weight: 77
+        enabled: false
+      text_boxes:
+        weight: 78
+        enabled: false
+      title_image_text:
+        weight: 79
+        enabled: false
+      title_text:
+        weight: 80
+        enabled: false
+      twitter_feed:
+        weight: 81
+        enabled: false
+      two_column_text:
+        weight: 82
+        enabled: false
+field_type: entity_reference_revisions

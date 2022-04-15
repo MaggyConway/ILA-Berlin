@@ -1,0 +1,35 @@
+uuid: 5df66672-b51f-47de-8139-73af0b65e8af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_video_box_container.field_cc_anchor
+    - field.field.paragraph.fl_video_box_container.field_paragraph_reference
+    - paragraphs.paragraphs_type.fl_video_box_container
+  module:
+    - ds
+    - entity_reference_revisions
+id: paragraph.fl_video_box_container.default
+targetEntityType: paragraph
+bundle: fl_video_box_container
+mode: default
+content:
+  field_paragraph_reference:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_cc_anchor: true

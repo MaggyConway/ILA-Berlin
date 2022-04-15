@@ -1,0 +1,88 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Suche
+      title: Media
+  block_media:
+    display_title: Block
+  block_1:
+    display_options:
+      fields:
+        nothing_2:
+          alter:
+            text: "<div class=\"media-popup-win popup-id-{{ nid }}\">\r\n<div class=\"close-button\">x</div>\r\n<div class=\"popup-wrapper\">\r\n<div class=\"media-popup-description-wrapper\">\r\n<div class=\"text-title\">{{ title }}</div>\r\n<div class=\"text-body\">{{ body }}</div>\r\n<div class=\"text-filemime\">{{ filemime }}</div>\r\n<div class=\"text-filesize\">{{ filesize }} </div>\r\n<div class=\"text-buttons\">\r\n<div class=\"text-field_file_1 \"><a class=\"media-high-res-button\" href=\"{{ field_file_1 }}\" download=\"{{ title }}_high.{{ field_file_1 | split('.') | last | split('?') | first }}\">HIGH RES</a></div>\r\n<div class=\"text-field_file\"><a class=\"media-low-res-button\" href=\"{{ field_file }}\" download=\"{{ title }}_low.{{ field_file | split('.') | last | split('?') | first }}\">LOW RES</a></div>\r\n</div>\r\n</div>\r\n<div class=\"media-popup-img-wrapper\">\r\n<img src=\"{{ field_file_1 }}\">\r\n</div>\r\n</div>\r\n</div>"
+        nothing_1:
+          alter:
+            text: "<div class=\"image-wrapper\">\r\n<div class=\"text-field-image popup-id-{{ nid }}\">\r\n{% if field_image %}\r\n{{ field_image }}\r\n{% else %}\r\n<img src=\"{{ field_file_2 }}\">\r\n{% endif %}\r\n</div>\r\n</div>\r\n<div class=\"text-wrapper\">\r\n<div class=\"text-title popup-id-{{ nid }}\">{{ title }}</div>\r\n<div class=\"text-body\">{{ body }}</div>\r\n<div class=\"text-filemime\">{{ filemime }}</div>\r\n<div class=\"text-filesize\">{{ filesize }} </div>\r\n<div class=\"text-buttons\">\r\n<div class=\"text-field_file_1 \"><a class=\"media-high-res-button\" href=\"{{ field_file_1 }}\" download=\"{{ title }}_high.{{ field_file_1 | split('.') | last | split('?') | first }}\">HIGH RES</a></div>\r\n<div class=\"text-field_file\"><a class=\"media-low-res-button\" href=\"{{ field_file }}\" download=\"{{ title }}_low.{{ field_file | split('.') | last | split('?') | first }}\">LOW RES</a></div>\r\n</div>\r\n</div>"
+      empty:
+        area:
+          content:
+            value: "<p>Keine Suchergebnisse für ihre Suchanfrage gefunden.</p>\r\nBitte versuchen Sie folgende Optionen:\r\n<ul style=\"margin-bottom: 55px;\">\r\n  <li>Verwenden Sie andere Suchbegriffe.</li>\r\n  <li>Versuchen Sie eine allgemeinere Suchanfrage. Beginnen Sie zum Beispiel mit nur wenigen Suchbegriffen und verfeinern Sie Ihre Suche in einem zweiten Schritt.</li>\r\n</ul>"
+            format: plain_html
+  block_2:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2 class=\"view-header-title\">VIDEOBEITRÄGE</h2>\r\n\r\n<p>Alle Videoaufnahmen dürfen zur redaktionellen Verwendung (als Footagematerial) heruntergeladen und verarbeitet werden. Alle Dateien sind im MP4-Format gespeichert.</p>\r\n"
+            format: full_html
+      fields:
+        nothing:
+          alter:
+            text: "<div class=\"media-video-popup popup-id-{{ nid }}\">\r\n<div class=\"close-button\">x</div>\r\n<div class=\"popup-wrapper\">\r\n<div class=\"media-video-file\">\r\n</div>\r\n</div>\r\n</div>"
+        field_file_1:
+          alter:
+            text: "<div class=\"download-media-video-wrapper\">\r\n<div class=\"field-video-preview-image\">{{ field_image }}</div>\r\n<div class=\"field-video-file-download popup-id-{{ nid }}\"><a href=\"{{ field_file_1 }}\"><div class=\"link-media-video-download\">DOWNLOAD</div></a></div>\r\n</div>"
+      empty:
+        area:
+          content:
+            value: "<p>Keine Suchergebnisse für ihre Suchanfrage gefunden.</p>\r\nBitte versuchen Sie folgende Optionen:\r\n<ul style=\"margin-bottom: 55px;\">\r\n  <li>Verwenden Sie andere Suchbegriffe.</li>\r\n  <li>Versuchen Sie eine allgemeinere Suchanfrage. Beginnen Sie zum Beispiel mit nur wenigen Suchbegriffen und verfeinern Sie Ihre Suche in einem zweiten Schritt.</li>\r\n</ul>"
+            format: plain_html
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2 class=\"view-header-title\">HÖRFUNKBEITRÄGE</h2>\r\n\r\n<p>Hier finden Sie sendefähige Radio-Beiträge der ILA Berlin 2018 mit einem O-Ton-Paket zu Ihrer freien redaktionellen Verwendung. Alle Dateien sind im MP3-Format gespeichert.</p>\r\n"
+            format: full_html
+      fields:
+        nothing:
+          alter:
+            text: "<div class=\"media-audio-popup popup-id-{{ nid }}\">\r\n<div class=\"close-button\">x</div>\r\n<div class=\"popup-wrapper\">\r\n<div class=\"media-audio-file\">\r\n</div>\r\n</div>\r\n</div>"
+  block_4:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"field field--name-block-description field--type-ds field--label-hidden field__item\">\r\n<h1>AUDIO/VIDEO</h1>\r\n</div>\r\n\r\n<div class=\"field field--name-field-sub-title field--type-string field--label-hidden field__item quickedit-field\" data-quickedit-field-id=\"block_content/12/field_sub_title/en/full\">FÜR DIE REDAKTIONELLE BERICHTERSTATTUNG ZUR ILA BERLIN 2018</div>\r\n"
+            format: full_html
+      filters:
+        combine:
+          expose:
+            label: Suchbegriff
+      exposed_form:
+        options:
+          submit_button: Suche
+  block_5:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<div class=\"field field--name-block-description field--type-ds field--label-hidden field__item\">\r\n<h1>Fotos</h1>\r\n</div>\r\n\r\n<div class=\"field field--name-field-sub-title field--type-string field--label-hidden field__item quickedit-field\" data-quickedit-field-id=\"block_content/12/field_sub_title/en/full\">FÜR DIE REDAKTIONELLE BERICHTERSTATTUNG ZUR ILA BERLIN 2018</div>\r\n"
+            format: full_html
+      filters:
+        combine:
+          expose:
+            label: Suchbegriff
+      exposed_form:
+        options:
+          submit_button: Suche
+  block_6:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2 class=\"view-header-title\">Bildbeiträge</h2>\r\n\r\n<p>Nachfolgende Fotos sind ausschließlich der redaktionellen Berichterstattung vorbehalten und dürfen nicht für werbliche Zwecke genutzt werden. Veröffentlichung kostenfrei – Beleg erbeten – Copyright Messe Berlin GmbH.</p>\r\n"
+            format: full_html

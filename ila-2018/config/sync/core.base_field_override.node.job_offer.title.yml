@@ -1,0 +1,18 @@
+uuid: 7d904d72-e80b-4a3a-9ada-e4c7f69f45e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.job_offer
+id: node.job_offer.title
+field_name: title
+entity_type: node
+bundle: job_offer
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+display:
+  block_downloads_available:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p>No Downloads in this category available.</p>\r\n"
+            format: filtered_html

@@ -1,0 +1,162 @@
+.paragraph--orientation-image-right {
+  padding: 0 40px;
+  display: flex;
+  max-width: 1440px;
+
+  @media #{$m-to-m} {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+
+  .wrapper--background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 20px;
+    left: 0;
+    width: 63%;
+    background: url('../../img/diagonal-lines.svg') repeat, $career-dark;
+
+    @media #{$m-to-m} {
+      width: 100%;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      content: '';
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      border-top: 220px solid #ffffff;
+      border-right: 280px solid transparent;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      border-left: 80px solid transparent;
+      border-bottom: 100px solid #ffffff;
+
+      @media #{$m-to-m} {
+        display: none;
+      }
+    }
+  }
+
+  .field--name-field-title {
+    position: absolute;
+
+    @media #{$m-to-m} {
+      position: relative;
+    }
+  }
+
+  .wrapper--tti-images {
+    margin-top: 100px;
+    width: 60%;
+    height: 680px;
+    order: 1;
+
+    @media #{$m-to-4xl} {
+      margin-top: 60px;
+      width: 50%;
+    }
+
+    @media #{$m-to-m} {
+      margin-top: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .wrapper--content {
+    margin: 40px 80px 0;
+    width: 40%;
+    max-width: 480px;
+
+    @media #{$m-to-4xl} {
+      margin: 40px 0 0;
+      width: 50%;
+    }
+
+    @media #{$m-from-l} {
+      order: -1;
+    }
+
+    @media #{$m-to-m} {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .field--name-field-cc-tti-images {
+    > .field__item {
+      position: absolute;
+      overflow: hidden;
+      max-width: 100%;
+
+      @media #{$m-to-m} {
+        position: relative;
+      }
+
+      &:nth-child(1) {
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        width: 560px;
+        height: 380px;
+        transform: translateX(-50%);
+
+        @media #{$m-to-4xl} {
+          width: 100%;
+        }
+
+        @media #{$m-to-m} {
+          width: 77%;
+          height: auto;
+        }
+      }
+
+      &:nth-child(2) {
+        z-index: 2;
+        top: 340px;
+        left: 0;
+        width: 400px;
+        height: 280px;
+
+        @media #{$m-to-4xl} {
+          width: 55%;
+        }
+
+        @media #{$m-to-m} {
+          top: -25px;
+          height: auto;
+        }
+      }
+
+      &:nth-child(3) {
+        z-index: 3;
+        top: 400px;
+        right: 0;
+        width: 400px;
+        height: 280px;
+
+        @media #{$m-to-4xl} {
+          width: 55%;
+        }
+
+        @media #{$m-to-m} {
+          top: -135px;
+          margin-left: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}

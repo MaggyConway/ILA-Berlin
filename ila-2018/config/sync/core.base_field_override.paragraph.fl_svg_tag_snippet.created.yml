@@ -1,0 +1,18 @@
+uuid: 8c2cd0e4-7943-460f-86fd-f91870023c60
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_svg_tag_snippet
+id: paragraph.fl_svg_tag_snippet.created
+field_name: created
+entity_type: paragraph
+bundle: fl_svg_tag_snippet
+label: 'Geschrieben am'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

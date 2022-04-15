@@ -1,0 +1,55 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - page_manager.page.error_404
+  content:
+    - 'block_content:image:3275e6ba-f091-48c0-920e-687a7255ae2f'
+    - 'block_content:text:0a7518a2-779e-4e18-bb97-73ff83d83bd8'
+  module:
+    - block_content
+    - panels
+id: error_404-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    6fc60790-47a9-4f92-8d8b-c4e86e489d07:
+      id: 'block_content:0a7518a2-779e-4e18-bb97-73ff83d83bd8'
+      label: 'Error 404'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: 6fc60790-47a9-4f92-8d8b-c4e86e489d07
+      context_mapping: {  }
+    2a866b92-39da-43e7-845d-c690f7c955ae:
+      id: 'block_content:3275e6ba-f091-48c0-920e-687a7255ae2f'
+      label: 'Error 404 - Image'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 2a866b92-39da-43e7-845d-c690f7c955ae
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 5c857c1a-d2f4-4da8-9d8c-b346b316c45f
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: error_404-panels_variant-0
+  builder: standard
+page: error_404
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

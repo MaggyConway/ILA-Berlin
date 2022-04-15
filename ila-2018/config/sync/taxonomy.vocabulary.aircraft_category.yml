@@ -1,0 +1,8 @@
+uuid: f475ae46-a169-44a7-9645-193c3d0735de
+langcode: en
+status: true
+dependencies: {  }
+name: 'Aircraft Category'
+vid: aircraft_category
+description: ''
+weight: 0

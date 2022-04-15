@@ -1,0 +1,23 @@
+uuid: 717eddfa-6d36-48e8-8eea-e2f298d3f289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.fl_double_box
+  module:
+    - link
+id: paragraph.fl_double_box.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: fl_double_box
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

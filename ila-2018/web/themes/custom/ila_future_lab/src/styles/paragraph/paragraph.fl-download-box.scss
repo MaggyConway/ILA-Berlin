@@ -1,0 +1,94 @@
+.paragraph--type--fl-download-box {
+  margin-bottom: 100px;
+  padding: 45px 20px;
+  width: 100%;
+  background-color: $bg-box;
+  background-image: url('../../assets/images/bg-dots.png');
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+
+  @media #{$m-to-m} {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .wrapper-main {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1280px;
+    flex-wrap: wrap;
+
+    @media #{$m-to-m} {
+      flex-wrap: wrap;
+    }
+  }
+
+  .field--name-field-paragraph-title {
+    @extend .title;
+
+    margin: 0 40px 25px;
+    width: 100%;
+
+    @media #{$m-to-m} {
+      margin: 0 0 10px;
+    }
+  }
+
+  .wrapper-left,
+  .wrapper-right {
+    margin: 0 40px;
+    width: calc(50% - 80px);
+
+    @media #{$m-to-m} {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .wrapper-left {
+    @media #{$m-to-m} {
+      margin-bottom: 20px;
+    }
+  }
+
+  .field--name-field-media-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .field--name-field-cc-text {
+    margin-bottom: 25px;
+    line-height: 1.28;
+
+    @media #{$m-to-m} {
+      margin-bottom: 30px;
+      line-height: 1.4;
+    }
+  }
+
+  .field--name-field-media-file {
+    a {
+      @extend .btn;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        width: 40px;
+        height: 100%;
+        content: '';
+        background-color: $bg-button;
+        background-image: url('../../assets/images/download-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 23px;
+        border-left: 2px solid $bg-box;
+        transform: translateX(100%);
+      }
+    }
+  }
+}

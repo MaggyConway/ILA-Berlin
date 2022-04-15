@@ -1,0 +1,10 @@
+uuid: fe1e33d3-05ae-4be9-9dcf-f0170195ba1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_careercenter_testimonial_default
+label: 'PT CareerCenter Testimonial: Default'
+targetEntityType: media
+cache: true

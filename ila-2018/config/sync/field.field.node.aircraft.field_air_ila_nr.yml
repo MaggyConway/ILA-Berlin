@@ -1,0 +1,23 @@
+uuid: b755c3b0-7e20-448c-a2eb-8f7579e0ac02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_ila_nr
+    - node.type.aircraft
+id: node.aircraft.field_air_ila_nr
+field_name: field_air_ila_nr
+entity_type: node
+bundle: aircraft
+label: ila-nr
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

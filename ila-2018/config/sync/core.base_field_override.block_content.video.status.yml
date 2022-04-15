@@ -1,0 +1,22 @@
+uuid: a902425d-9011-493f-a163-b5986b5d7476
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+id: block_content.video.status
+field_name: status
+entity_type: block_content
+bundle: video
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

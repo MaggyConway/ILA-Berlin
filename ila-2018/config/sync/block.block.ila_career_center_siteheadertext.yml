@@ -1,0 +1,22 @@
+uuid: 5f0a802b-a72b-44d0-9841-5cdff770ee0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.site_header_text
+  module:
+    - simple_block
+  theme:
+    - ila_career_center
+id: ila_career_center_siteheadertext
+theme: ila_career_center
+region: header_top
+weight: -12
+provider: null
+plugin: 'simple_block:site_header_text'
+settings:
+  id: 'simple_block:site_header_text'
+  label: 'Site header - Text'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

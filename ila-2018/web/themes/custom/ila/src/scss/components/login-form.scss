@@ -1,0 +1,96 @@
+.layout-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba($c-black, .6);
+  z-index: 1000;
+  display: none;
+  transition: .3s;
+}
+#block-ila-user-login {
+  position: absolute;
+  background-image: linear-gradient(225deg, #009CDE 0%, #1D428A 100%);
+  padding: 30px;
+  padding-bottom: 40px;
+  width: 435px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: $c-white;
+  font-size: 17px;
+  font-weight: 300;
+  box-sizing: border-box;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: $c-blue;
+  }
+
+  input[type="submit"] {
+    @extend .btn;
+  }
+  .user-login-form {
+    margin-top: 30px;
+
+    .form-item {
+      border-bottom: none;
+    }
+
+    label {
+      display: none;
+    }
+
+    .form-text {
+      width: 100%;
+      border: none;
+      background: none;
+      color: $c-white;
+      border-bottom: 1px solid $c-white;
+      margin-bottom: 20px;
+      opacity: .9;
+      transition: .3s;
+
+      &:focus {
+        opacity: 1;
+      }
+
+      &::placeholder {
+        text-transform: uppercase;
+        color: $c-white;
+        font-size: 15px;
+        font-weight: 300;
+        opacity: .75;
+      }
+    }
+    .form-actions {
+      margin-top: 45px;
+    }
+  }
+
+  .item-list {
+    float: right;
+    margin-top: -65px;
+    max-width: 60%;
+
+    ul {
+      @include list-reset;
+    }
+
+
+    a {
+      text-decoration: underline;
+      color: $c-blue-normal;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

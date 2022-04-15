@@ -1,0 +1,26 @@
+uuid: 3b9d267c-42b2-4186-be92-7e449f5b70ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_dynamic_block.field_cc_anchor
+    - field.field.paragraph.fl_dynamic_block.field_view_reference
+    - paragraphs.paragraphs_type.fl_dynamic_block
+  module:
+    - viewsreference
+id: paragraph.fl_dynamic_block.default
+targetEntityType: paragraph
+bundle: fl_dynamic_block
+mode: default
+content:
+  field_view_reference:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_cc_anchor: true

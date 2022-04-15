@@ -1,0 +1,20 @@
+uuid: f89f1103-f51f-4cee-aaa7-2d96972adb04
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_categories
+_core:
+  default_config_hash: K8UWC652N_ty1TD8Gv_u9RWbsQgaw_Npisbx1S_55Ic
+id: taxonomy_term.media_categories.name
+field_name: name
+entity_type: taxonomy_term
+bundle: media_categories
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

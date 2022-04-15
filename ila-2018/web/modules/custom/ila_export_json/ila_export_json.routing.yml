@@ -1,0 +1,21 @@
+ila_export_json.data:
+  path: '/events/export'
+  defaults:
+    _controller: '\Drupal\ila_export_json\Controller\ExportEventsController::data'
+    _title: 'Export events'
+  requirements:
+    _permission: 'access content'
+ila_export_json.aircraft:
+  path: '/aircraft/export'
+  defaults:
+    _controller: '\Drupal\ila_export_json\Controller\ExportEventsController::aircraft'
+    _title: 'Export aircraft'
+  requirements:
+    _permission: 'access content'
+ila_export_json.conferences:
+  path: '/conferences/export'
+  defaults:
+    _controller: '\Drupal\ila_export_json\Controller\ExportConferences::exportConferences'
+    _title: 'Export conferences'
+  requirements:
+    _permission: 'access content'

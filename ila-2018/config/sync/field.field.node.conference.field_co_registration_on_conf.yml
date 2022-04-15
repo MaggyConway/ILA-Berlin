@@ -1,0 +1,28 @@
+uuid: 2bfe59ba-79ad-4090-bff4-b4c3f50724b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_registration_on_conf
+    - node.type.conference
+  module:
+    - link
+id: node.conference.field_co_registration_on_conf
+field_name: field_co_registration_on_conf
+entity_type: node
+bundle: conference
+label: 'Registration on conference'
+description: "Visitors to the ILA website will now be presented with a standard form for online registration.\r\nIf you have an external login page, please add the link here."
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'route:<nolink>'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

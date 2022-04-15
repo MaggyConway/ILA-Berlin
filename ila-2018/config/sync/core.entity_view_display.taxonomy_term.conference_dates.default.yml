@@ -1,0 +1,23 @@
+uuid: 3ce37fa7-e841-4add-bb74-240290092897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.conference_dates.field_co_week_day
+    - taxonomy.vocabulary.conference_dates
+id: taxonomy_term.conference_dates.default
+targetEntityType: taxonomy_term
+bundle: conference_dates
+mode: default
+content:
+  field_co_week_day:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true
+  langcode: true

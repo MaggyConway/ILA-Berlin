@@ -1,0 +1,16 @@
+uuid: 7702b4f2-f691-4d9c-957b-952fd399425c
+langcode: de
+status: true
+dependencies: {  }
+name: banner_mobile
+label: 'Banner Mobile'
+effects:
+  a7dfca16-2022-465d-bd02-26ee0763ce2f:
+    uuid: a7dfca16-2022-465d-bd02-26ee0763ce2f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 468
+      height: 60
+      anchor: center-center
+pipeline: company_list_optimiz

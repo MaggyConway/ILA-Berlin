@@ -1,0 +1,25 @@
+display:
+  default:
+    display_options:
+      fields:
+        name:
+          alter:
+            text: "<h1>Conferences 2018</h1>\r\n<div class=\"field field--name-field-sub-title field--type-string field--label-hidden field__item quickedit-field\">{{ name }} category</div>\r\n"
+  block_3:
+    display_options:
+      fields:
+        name:
+          alter:
+            text: "<h1>Konferenzen 2018</h1>\r\n<div class=\"field field--name-field-sub-title field--type-string field--label-hidden field__item quickedit-field\">{{ name }}</div>\r\n"
+  block_4:
+    display_options:
+      fields:
+        name:
+          alter:
+            text: "<h1>Konferenzen 2018</h1>\r\n<div class=\"field field--name-field-sub-title field--type-string field--label-hidden field__item quickedit-field\">{{ name }}</div>\r\n"
+  block_1:
+    display_options:
+      title: 'Konferenzen nach Kategorien geordnet'
+  block_2:
+    display_options:
+      title: 'Konferenzen chronologisch geordnet'

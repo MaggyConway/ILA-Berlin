@@ -1,0 +1,10 @@
+uuid: a55af185-4fbb-485d-9409-cc399a8ed2bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_video_box_thumbnail
+label: 'PT FL Video Box Thumbnail'
+targetEntityType: media
+cache: true

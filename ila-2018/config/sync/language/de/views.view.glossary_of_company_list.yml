@@ -1,0 +1,14 @@
+label: 'Publikationen am Fachpressestand'
+display:
+  default:
+    display_options:
+      fields:
+        nothing:
+          alter:
+            text: "{% if field_company_list_title_1 matches '/^\\\\d+$/' %}\r\n# <a href=\"#link-top\" class=\"back-to-top__link\">up</a>\r\n{% else %}\r\n{{ field_company_list_title_1 }} <a href=\"#link-top\" class=\"back-to-top__link\">up</a>\r\n{% endif %}"
+      header:
+        area:
+          content:
+            value: "<h4>Am Fachpressestand erhalten Sie kostenfrei die folgenden Fachpublikationen:</h4>\r\n\r\n<div id=\"link-top\">&nbsp;</div>\r\n"
+            format: full_html
+      title: 'Publikationen am Fachpressestand'

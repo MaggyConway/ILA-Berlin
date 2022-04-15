@@ -1,0 +1,33 @@
+uuid: 58ef5fc2-3215-47be-b41d-83d2b9518ea2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_dynamic_block.field_cc_anchor
+    - field.field.paragraph.fl_dynamic_block.field_view_reference
+    - paragraphs.paragraphs_type.fl_dynamic_block
+  module:
+    - viewsreference
+id: paragraph.fl_dynamic_block.default
+targetEntityType: paragraph
+bundle: fl_dynamic_block
+mode: default
+content:
+  field_cc_anchor:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view_reference:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

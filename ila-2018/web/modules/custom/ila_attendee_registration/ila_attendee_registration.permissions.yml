@@ -1,0 +1,33 @@
+add attendee registration entities:
+  title: 'Create new Attendee registration entities'
+
+administer attendee registration entities:
+  title: 'Administer Attendee registration entities'
+  description: 'Allow to access the administration form to configure Attendee registration entities.'
+  restrict access: true
+
+delete attendee registration entities:
+  title: 'Delete Attendee registration entities'
+
+edit attendee registration entities:
+  title: 'Edit Attendee registration entities'
+
+access attendee registration overview:
+  title: 'Access the Attendee registration overview page'
+
+view published attendee registration entities:
+  title: 'View published Attendee registration entities'
+
+view unpublished attendee registration entities:
+  title: 'View unpublished Attendee registration entities'
+
+view all attendee registration revisions:
+  title: 'View all Attendee registration revisions'
+
+revert all attendee registration revisions:
+  title: 'Revert all Attendee registration revisions'
+  description: 'Role requires permission <em>view Attendee registration revisions</em> and <em>edit rights</em> for attendee registration entities in question or <em>administer attendee registration entities</em>.'
+
+delete all attendee registration revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Attendee registration revisions</em> and <em>delete rights</em> for attendee registration entities in question or <em>administer attendee registration entities</em>.'

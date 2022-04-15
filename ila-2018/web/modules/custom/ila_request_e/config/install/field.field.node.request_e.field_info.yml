@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info
+    - node.type.request_e
+  module:
+    - markup
+id: node.request_e.field_info
+field_name: field_info
+entity_type: node
+bundle: request_e
+label: Info
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>You can rent raw exhibiton space or book a full stand. Please refer to the overview about stand construction and equipment.</p>\r\n"
+    format: full_html
+field_type: markup

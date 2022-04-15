@@ -1,0 +1,27 @@
+uuid: 8ed74239-4540-44a0-b538-493daf76ba75
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - exhibitor_zone
+id: account_save_button
+theme: exhibitor_zone
+region: sticky
+weight: -6
+provider: null
+plugin: decoupled_submit_button
+settings:
+  id: decoupled_submit_button
+  label: 'Account: Save button'
+  provider: node
+  label_display: '0'
+  form_selector: .user-form
+visibility:
+  request_path:
+    id: request_path
+    pages: /exhibitor-zone/account
+    negate: false
+    context_mapping: {  }

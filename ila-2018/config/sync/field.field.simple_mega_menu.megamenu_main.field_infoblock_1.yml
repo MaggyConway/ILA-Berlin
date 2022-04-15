@@ -1,0 +1,79 @@
+uuid: c9bf96b5-d604-4019-900a-8019fd82ff0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.simple_mega_menu.field_infoblock_1
+    - paragraphs.paragraphs_type.title_image_text
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - entity_reference_revisions
+id: simple_mega_menu.megamenu_main.field_infoblock_1
+field_name: field_infoblock_1
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: 'Infoblock 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_image_text: title_image_text
+    target_bundles_drag_drop:
+      title_image_text:
+        enabled: true
+        weight: 18
+      content_subtitle:
+        weight: 19
+        enabled: false
+      image_box:
+        weight: 20
+        enabled: false
+      image_full:
+        weight: 21
+        enabled: false
+      image_row:
+        weight: 22
+        enabled: false
+      infographic_box:
+        weight: 23
+        enabled: false
+      infographic_box_column:
+        weight: 24
+        enabled: false
+      link_box:
+        weight: 25
+        enabled: false
+      link_box_container:
+        weight: 26
+        enabled: false
+      quote:
+        weight: 27
+        enabled: false
+      request_link:
+        weight: 28
+        enabled: false
+      slideshow:
+        weight: 29
+        enabled: false
+      text:
+        weight: 30
+        enabled: false
+      text_box:
+        weight: 31
+        enabled: false
+      text_boxes:
+        weight: 32
+        enabled: false
+      title_text:
+        weight: 33
+        enabled: false
+      two_column_text:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

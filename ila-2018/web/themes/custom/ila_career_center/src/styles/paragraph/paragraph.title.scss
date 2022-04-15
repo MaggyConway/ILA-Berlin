@@ -1,0 +1,22 @@
+.paragraph--type--careercenter-header-title {
+  h1 {
+    margin: 20px auto;
+    max-width: 300px;
+    font-family: $career-font;
+    font-size: 62px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: $career-green;
+
+    @media (min-width: 768px) {
+      margin: 40px 0 0 40%;
+      max-width: 850px;
+      text-align: left;
+    }
+
+    @media #{$m-to-m} {
+      font-size: 32px;
+    }
+  }
+}

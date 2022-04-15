@@ -1,0 +1,27 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'https://www.ila-berlin.de/themes/custom/exhibitor_zone/favicon.ico'
+  use_default: 1
+schemas:
+  bootstrap: 8000
+  exhibitor_zone: 8000
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+  node_user_picture: false
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+region_wells:
+  header_left: ''
+  header_right: ''
+  highlighted: ''
+  sidebar_first: ''
+  content: ''
+  sticky: ''
+forms_smart_descriptions_limit: ''
+table_responsive: '-1'
+table: ''

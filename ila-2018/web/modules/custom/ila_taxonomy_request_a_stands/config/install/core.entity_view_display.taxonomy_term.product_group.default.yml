@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.product_group.field_group_index
+    - field.field.taxonomy_term.product_group.field_group_title
+    - taxonomy.vocabulary.product_group
+id: taxonomy_term.product_group.default
+targetEntityType: taxonomy_term
+bundle: product_group
+mode: default
+content:
+  field_group_index:
+    weight: -4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_group_title:
+    weight: -3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true
+  langcode: true

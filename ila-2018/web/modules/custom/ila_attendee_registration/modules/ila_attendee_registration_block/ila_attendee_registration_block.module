@@ -1,0 +1,226 @@
+<?php
+/**
+ * @file
+ * Module hooks implementations.
+ */
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\Entity;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Url;
+
+/*
+ * Implements hook_form_alter
+ */
+function ila_attendee_registration_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'attendee_registration_form') {
+    if (!_ila_definition_conference_id()) {
+      return;
+    }
+
+    $form['field_ar_conference'] = [
+      '#type' => 'value',
+      '#value' => [_ila_definition_conference_id()],
+    ];
+
+    if ($node = Node::load(_ila_definition_conference_id())) {
+      $title = $node->getTitle();
+    } else {
+      $title = '';
+    }
+
+    // Hidden fields for the attendee
+    $entity_name = strlen($title) > 50 ? substr($title, 0, 50) : $title;
+    $form['name']['widget'][0]['value']['#default_value'] = $entity_name;
+    $form['name']['widget'][0]['value']['#type'] = 'hidden';
+    $form['field_ar_registration_confirmed']['#type'] = 'hidden';
+
+    $form['actions']['submit']['#submit'][]= '_ila_attendee_registration_block_save_attendee';
+  }
+
+  if ($form_id == 'attendee_registration_confirm') {
+    $form['actions']['submit']['#submit'][]= '_ila_attendee_registration_block_send';
+  }
+
+  if ($form_id == 'node_request_exhibition_space_form' ||
+  $form_id == 'node_co_exhibitor_form' || $form_id == "node_main_exhibitor_form") {
+    if (isset($form['advanced'])) {
+      $form['advanced']['#access'] = false;
+    }
+    if (isset($form['revision_log'])) {
+      $form['revision_log']['#access'] = false;
+    }
+    if(isset($form['footer'])) {
+      $form['footer']['#access'] = false;
+    }
+  }
+}
+
+/*
+ * Custom function _ila_definition_conference_id
+ */
+function _ila_definition_conference_id() {
+
+  $conference_id = '';
+  $uri_segments = explode('/', \Drupal::service('path.current')->getPath());
+  if (intval($uri_segments[2]) && intval($uri_segments[2]) !=0 ) {
+    $conference_id = intval($uri_segments[2]);
+  }
+
+  return $conference_id;
+}
+
+/**
+ * Submit function create registration
+ *
+ * @param $form
+ * @param FormStateInterface $form_state
+ */
+function _ila_attendee_registration_block_save_attendee(&$form, FormStateInterface $form_state) {
+  $form_state->setRedirectUrl(Url::fromRoute('ila_attendee_registration_block.confirm', ['node_id' => _ila_definition_conference_id()]));
+  \Drupal::messenger()->all();
+}
+
+/**
+ * Submit functions send attendee data
+ */
+function _ila_attendee_registration_block_send(&$form, FormStateInterface $form_state) {
+  $config = $config = \Drupal::config('ila_attendee_registration_block.settings');
+  $current_user = \Drupal::currentUser();
+
+  $session = \Drupal::request()->getSession();
+  $conf_id = $session->get('registration_id', 0);
+  $entity_attendee = \Drupal::entityTypeManager()->getStorage('attendee_registration')->load((int) $conf_id);
+
+  if ($entity_attendee) {
+    $entity_attendee->field_ar_registration_confirmed->value = 1;
+    $entity_attendee->save();
+  }
+
+  $entity_conference = Node::load(_ila_definition_conference_id());
+  $conference_owner = $entity_conference->getOwner();
+
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $addressee = array('attendee','host');
+  $module = 'ila_attendee_registration_block';
+
+  foreach ($addressee as $address) {
+    switch ($address) {
+      case 'attendee':
+        $key = 'email_to_attendee';
+        if ($current_user->id() == 0) {
+          $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        }
+        else {
+          $langcode = $current_user->getPreferredLangcode();
+        }
+        $to = $entity_attendee->get('field_ar_email')->getValue()[0]['value'] ; // email to be sent to this Email ID
+        $params['message_subject'] = $config->get('message.email_attendee.subject', array(), array('langcode' => $langcode));
+        $params['message_body'] = $config->get('message.email_attendee.body', array(), array('langcode' => $langcode));
+        $params['node_title'] = $entity_attendee->label();
+        $params['user_host_salutation'] = t($conference_owner->get('field_salutation')->getValue()[0]['value'], array(), array('langcode' => $langcode));
+        $params['user_attendee_salutation'] = t($entity_attendee->get('field_ar_salutation')->getValue()[0]['value'], array(), array('langcode' => $langcode));
+        $params['user_attendee_first_name'] = $entity_attendee->get('field_ar_first_name')->getValue()[0]['value'];
+        $params['user_attendee_last_name'] = $entity_attendee->get('field_ar_last_name')->getValue()[0]['value'];
+        $params['user_attendee_company'] = $entity_attendee->get('field_ar_company')->getValue()[0]['value'];
+        $params['user_attendee_branch'] = $entity_attendee->get('field_ar_branch')->getValue()[0]['value'];
+        $params['user_attendee_street'] = $entity_attendee->get('field_ar_street')->getValue()[0]['value'];
+        $params['user_attendee_city'] = $entity_attendee->get('field_ar_city')->getValue()[0]['value'];
+        $params['user_attendee_country'] = $entity_attendee->get('field_ar_country')->getValue()[0]['value'];
+        $params['user_attendee_email'] = $entity_attendee->get('field_ar_email')->getValue()[0]['value'];
+        $params['user_attendee_phone'] = $entity_attendee->get('field_ar_phone')->getValue()[0]['value'];
+        $params['user_attendee_zip_code'] = $entity_attendee->get('field_ar_0zip_code')->getValue()[0]['value'];
+
+        $send = TRUE;
+        $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+
+        break;
+
+      case 'host':
+        $key = 'email_to_host';
+        $langcode = $conference_owner->getPreferredLangcode();
+        $to = $conference_owner->getEmail(); // email to be sent to this Email ID
+        $params['message_subject'] = $config->get('message.email_host.subject', array(), array('langcode' => $langcode));
+        $params['message_body'] = $config->get('message.email_host.body', array(), array('langcode' => $langcode));
+        $params['node_title'] = $entity_conference->label();
+        $params['user_host_salutation'] = t($conference_owner->get('field_salutation')->getValue()[0]['value'], array(), array('langcode' => $langcode));
+        $params['user_attendee_salutation'] = t($entity_attendee->get('field_ar_salutation')->getValue()[0]['value'], array(), array('langcode' => $langcode));
+        $params['user_host_first_name'] = $conference_owner->get('field_first_name')->getValue()[0]['value'];
+        $params['user_host_last_name'] = $conference_owner->get('field_last_name')->getValue()[0]['value'];
+
+        $date = $entity_conference->get('field_co_date_and_time')->getValue();
+        $start_date_time = new DrupalDateTime($date[0]['value'], 'UTC');
+        $end_date_time = new DrupalDateTime($date[0]['end_value'], 'UTC');
+        $start_date = $start_date_time->format('d. F Y');
+        $start_time = $start_date_time->format('H:i A');
+        $end_time = $end_date_time->format('H:i A');
+
+        $params['conference_date'] = $start_date;
+        $params['conference_time'] = $start_time . '-' . $end_time;
+        $params['conference_location'] = $entity_conference->get('field_co_location')->getValue()[0]['value'];
+        $params['conference_fee'] = $entity_conference->get('field_co_fee')->getValue()[0]['value'];
+        $send = TRUE;
+        $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+
+        break;
+    }
+  }
+
+  // Save cookie for anon user.
+  if ($current_user->id() == 0) {
+    user_cookie_save(['Drupal_registration_FirstTimer' => true]);
+  }
+  $form_state->setRedirectUrl(Url::fromRoute('ila_attendee_registration_block.complete', ['node_id' => _ila_definition_conference_id()]));
+}
+
+/**
+ * Implements hook_mail().
+ */
+function ila_attendee_registration_block_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'email_to_attendee':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t($params['message_subject'], array('@title' => $params['node_title']), $options);
+      $message['body'][] = Html::escape(t($params['message_body'],
+        array('@attendee_salutation' => $params['user_attendee_salutation'],
+          '@attendee_first_name' => $params['user_attendee_first_name'],
+          '@attendee_last_name' => $params['user_attendee_last_name']
+        ),
+        $options));
+      break;
+
+    case 'email_to_host':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t($params['message_subject'], array('@title' => $params['node_title']), $options);
+      $message['body'][] = Html::escape(t($params['message_body'],
+        array('@title' => $params['node_title'],
+          '@host_salutation' => $params['user_host_salutation'],
+          '@host_first_name' => $params['user_host_first_name'],
+          '@host_last_name' => $params['user_host_last_name'],
+          '@conf_date' => $params["conference_date"],
+          '@conf_time' => $params["conference_time"],
+          '@conf_location' => $params["conference_location"],
+          '@conf_fee' => $params["conference_fee"],
+          '@attendee_salutation' => $params['user_attendee_salutation'],
+          '@attendee_first_name' => $params['user_attendee_first_name'],
+          '@attendee_last_name' => $params['user_attendee_last_name'],
+          '@attendee_company' => $params['user_attendee_company'],
+          '@attendee_branch' => $params['user_attendee_branch'],
+          '@attendee_street' => $params['user_attendee_street'],
+          '@attendee_city' => $params['user_attendee_city'],
+          '@attendee_country' => $params['user_attendee_country'],
+          '@attendee_zip_code' => $params['user_attendee_zip_code'],
+          '@attendee_phone' => $params['user_attendee_phone'],
+          '@attendee_email' => $params['user_attendee_email'],
+        ),
+        $options));
+      break;
+  }
+}
+

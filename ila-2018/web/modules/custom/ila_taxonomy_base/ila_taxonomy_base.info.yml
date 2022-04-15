@@ -1,0 +1,15 @@
+name: 'Taxonomy - Base'
+description: 'Taxonomy entity type common configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - content_translation
+  - ila_node_base
+  - ila_taxonomy_cities
+  - ila_taxonomy_media_categories
+  - language
+  - node
+  - taxonomy
+  - user
+  - views
+package: ILA

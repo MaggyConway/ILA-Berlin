@@ -1,0 +1,35 @@
+name: 'Content - News'
+description: 'Node - "News" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - content_translation
+  - daterange_compact
+  - datetime_range
+  - ds
+  - field
+  - field_group
+  - file
+  - filefield_paths
+  - ila_core
+  - ila_homepage
+  - ila_node_base
+  - ila_node_downloads
+  - ila_node_facts
+  - ila_node_section
+  - ila_taxonomy_cities
+  - image
+  - link
+  - menu_ui
+  - node
+  - page_manager
+  - panels
+  - path
+  - slick
+  - slick_views
+  - text
+  - user
+  - views
+  - views_infinite_scroll
+package: ILA

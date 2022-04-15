@@ -1,0 +1,22 @@
+uuid: 6cebc795-b14f-46f7-bf84-9481e30ca50d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.careercenter_header_title
+id: paragraph.careercenter_header_title.status
+field_name: status
+entity_type: paragraph
+bundle: careercenter_header_title
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

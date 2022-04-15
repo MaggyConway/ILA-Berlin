@@ -1,0 +1,18 @@
+uuid: c7598516-1b01-4ea4-be0d-2447668e7b53
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.quote_portrait_container
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.quote_portrait_container
+target_entity_type_id: paragraph
+target_bundle: quote_portrait_container
+default_langcode: site_default
+language_alterable: true

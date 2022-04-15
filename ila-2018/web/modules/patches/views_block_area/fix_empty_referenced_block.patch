@@ -1,0 +1,67 @@
+Index: src/Plugin/views/area/ViewsBlockArea.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Plugin/views/area/ViewsBlockArea.php	(date 1558532623000)
++++ src/Plugin/views/area/ViewsBlockArea.php	(date 1558532259000)
+@@ -8,6 +8,7 @@
+ namespace Drupal\views_block_area\Plugin\views\area;
+ 
+ use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Plugin\Context\ContextRepositoryInterface;
+ use Drupal\views\Plugin\views\area\AreaPluginBase;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Drupal\Core\Block\BlockManagerInterface;
+@@ -28,18 +29,26 @@
+    */
+   protected $blockManager;
+ 
++  /**
++   * The context repository.
++   *
++   * @var \Drupal\Core\Plugin\Context\ContextRepositoryInterface
++   */
++  protected $contextRepository;
++
+   /**
+    * {@inheritdoc}
+    */
+   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+-    return new static($configuration, $plugin_id, $plugin_definition, $container->get('plugin.manager.block'));
++    return new static($configuration, $plugin_id, $plugin_definition, $container->get('plugin.manager.block'), $container->get('context.repository'));
+   }
+ 
+   /**
+    * {@inheritdoc}
+    */
+-  public function __construct(array $configuration, $plugin_id, $plugin_definition, BlockManagerInterface $block_manager) {
++  public function __construct(array $configuration, $plugin_id, $plugin_definition, BlockManagerInterface $block_manager, ContextRepositoryInterface $context_repository) {
+     $this->blockManager = $block_manager;
++    $this->contextRepository = $context_repository;
+     parent::__construct($configuration, $plugin_id, $plugin_definition);
+   }
+ 
+@@ -86,20 +95,8 @@
+    *   An associative array of supported block definitions.
+    */
+   protected function getBlockDefinitions() {
+-    $definitions = $this->blockManager->getSortedDefinitions();
+-    $block_definitions = [];
+-    foreach ($definitions as $plugin_id => $definition) {
+-      // Context aware plugins are not currently supported.
+-      // Core and component plugins can be context-aware
+-      // https://www.drupal.org/node/1938688
+-      // @see \Drupal\ctools\Plugin\Block\EntityView
+-      if (isset($definition['context'])) {
+-        continue;
+-      }
+-
+-      $block_definitions[$plugin_id] = $definition;
+-    }
+-    return $block_definitions;
++    $definitions = $this->blockManager->getDefinitionsForContexts($this->contextRepository->getAvailableContexts());
++    return $this->blockManager->getSortedDefinitions($definitions);
+   }
+ 
+   /**

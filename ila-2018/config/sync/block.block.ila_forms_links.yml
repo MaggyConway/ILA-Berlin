@@ -1,0 +1,27 @@
+uuid: 2f631a08-81c4-4cd6-b550-b1a18cbeb76d
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.forms
+  module:
+    - system
+  theme:
+    - ila
+_core:
+  default_config_hash: Pozd9-grvpRmSh1iEK6IK4ECtFWcPmpZEUSuDfbKS_k
+id: ila_forms_links
+theme: ila
+region: header_top
+weight: -10
+provider: null
+plugin: 'system_menu_block:forms'
+settings:
+  id: 'system_menu_block:forms'
+  label: Formulare
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_price
+    - taxonomy.vocabulary.request_c
+id: taxonomy_term.request_c.field_price
+field_name: field_price
+entity_type: taxonomy_term
+bundle: request_c
+label: price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

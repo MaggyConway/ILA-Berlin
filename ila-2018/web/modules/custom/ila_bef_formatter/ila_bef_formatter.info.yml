@@ -1,0 +1,6 @@
+name: ILA Better Exposed Filter Formatter
+description: Module for rewrite 'Links' format.
+
+type: module
+core_version_requirement: ^8 || ^9
+package: ILA

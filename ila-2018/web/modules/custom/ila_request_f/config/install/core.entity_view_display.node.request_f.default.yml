@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_f.field_booking_conference_rooms
+    - field.field.node.request_f.field_product_group
+    - field.field.node.request_f.field_product_group_index
+    - field.field.node.request_f.field_registration_conferences
+    - field.field.node.request_f.field_request_f_additional_eq
+    - field.field.node.request_f.field_request_f_comments
+    - field.field.node.request_f.field_request_f_conference_topic
+    - field.field.node.request_f.field_request_f_date
+    - field.field.node.request_f.field_request_f_following_servic
+    - field.field.node.request_f.field_request_f_withdraw_from
+    - node.type.request_f
+  module:
+    - markup
+    - options
+    - user
+id: node.request_f.default
+targetEntityType: node
+bundle: request_f
+mode: default
+content:
+  field_booking_conference_rooms:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_group_index:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_registration_conferences:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_request_f_additional_eq:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_f_comments:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_request_f_conference_topic:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_request_f_date:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_request_f_following_servic:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_f_withdraw_from:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

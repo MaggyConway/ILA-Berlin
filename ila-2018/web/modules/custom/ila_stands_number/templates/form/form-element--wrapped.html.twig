@@ -1,0 +1,36 @@
+<div{{ attributes.addClass(classes) }} xmlns="http://www.w3.org/1999/html">
+    {{ label_open }}
+    {% if title_display == 'before' %}
+        {{ title }}
+    {% endif %}
+    {% if prefix is not empty %}
+        <span class="field-prefix">{{ prefix }}</span>
+    {% endif %}
+    {% if description_display == 'before' and description.content %}
+        <div{{ description.attributes }}>
+            {{ description.content }}
+        </div>
+    {% endif %}
+    {% for key, value in values %}
+    {% endfor %}
+    {{ children }}
+    {% if suffix is not empty %}
+        <span class="field-suffix">{{ suffix }}</span>
+    {% endif %}
+    {% if label_display == 'after' %}
+        {% for key, value in values %}
+            <div class="col-{{ loop.index }}">{{ value }}</div>
+        {% endfor %}
+    {% endif %}
+    </label>
+    {% if errors %}
+        <div class="form-item--error-message">
+            {{ errors }}
+        </div>
+    {% endif %}
+    {% if description_display in ['after', 'invisible'] and description.content %}
+        <div{{ description.attributes.addClass(description_classes) }}>
+            {{ description.content }}
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,27 @@
+uuid: a4169d06-3d06-40df-9c66-2282dc3ab345
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.media
+  module:
+    - system
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: oPjwI-0RHlZBSTUcuvkLPXGJhl8Br-nsmCiPOg7qdJY
+id: ila_career_center_media_links_second
+theme: ila_career_center
+region: header_bottom
+weight: -10
+provider: null
+plugin: 'system_menu_block:media'
+settings:
+  id: 'system_menu_block:media'
+  label: Medien
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

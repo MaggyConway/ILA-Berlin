@@ -1,0 +1,24 @@
+name: 'Request FB 1'
+description: 'Provides Request FB 1 content type and related configuration. '
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - content_translation
+  - datetime
+  - field
+  - field_group
+  - ila_grouped_options
+  - ila_node_base
+  - ila_partial_validation
+  - ila_request_b
+  - ila_taxonomy_request_a_stands
+  - language
+  - markup
+  - menu_ui
+  - node
+  - options
+  - page_manager
+  - panels
+  - path
+  - user

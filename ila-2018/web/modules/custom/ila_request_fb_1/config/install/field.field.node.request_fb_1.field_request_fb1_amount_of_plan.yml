@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_fb1_amount_of_plan
+    - node.type.request_fb_1
+id: node.request_fb_1.field_request_fb1_amount_of_plan
+field_name: field_request_fb1_amount_of_plan
+entity_type: node
+bundle: request_fb_1
+label: 'Amount of planes (of this type)'
+description: 'Multiple aircrafts of the same type can be entered here.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

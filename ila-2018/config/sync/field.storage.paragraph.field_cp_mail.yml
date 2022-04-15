@@ -1,0 +1,18 @@
+uuid: eac98c36-1577-44e1-8a08-d16362a79f7d
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_cp_mail
+field_name: field_cp_mail
+entity_type: paragraph
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

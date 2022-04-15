@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.forms
+  module:
+    - system
+  theme:
+    - ila
+id: ila_forms_links
+theme: ila
+region: header_top
+weight: -5
+provider: null
+plugin: 'system_menu_block:forms'
+settings:
+  id: 'system_menu_block:forms'
+  label: Formulare
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

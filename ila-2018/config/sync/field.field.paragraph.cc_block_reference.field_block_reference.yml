@@ -1,0 +1,25 @@
+uuid: d660f32d-9893-44fc-9299-5adb19112fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference
+    - paragraphs.paragraphs_type.cc_block_reference
+  module:
+    - block_field
+id: paragraph.cc_block_reference.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+bundle: cc_block_reference
+label: 'Block reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'simple_block:career_center_social_feed': 'simple_block:career_center_social_feed'
+field_type: block_field

@@ -1,0 +1,11 @@
+name: 'Page - Media'
+description: 'Page "Media" configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - ila_node_press
+  - page_manager
+  - panels
+  - views
+package: ILA

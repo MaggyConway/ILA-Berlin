@@ -1,0 +1,23 @@
+uuid: 8ac9c870-94a0-4cc4-9f63-c2c3de821aa1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.bdli_event
+  module:
+    - text
+id: node.bdli_event.body
+field_name: body
+entity_type: node
+bundle: bdli_event
+label: Beschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

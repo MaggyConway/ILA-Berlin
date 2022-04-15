@@ -1,0 +1,13 @@
+uuid: 26900314-a767-4647-bc4f-d9e5fb49eaa4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CGyfMsjW3aqRPdMDaRfJuqDposYyyqlRL2qBWOkNE2I
+id: main_exhibitor
+label: 'Angaben zum Hauptaussteller'
+weight: 5
+is_admin: null
+permissions:
+  - 'display eu cookie compliance popup'
+  - 'translate conference node'

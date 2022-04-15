@@ -1,0 +1,23 @@
+uuid: 60bd34e2-b410-4cca-9799-db181db02377
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parallax_background
+    - node.type.basic_page
+id: node.basic_page.field_parallax_background
+field_name: field_parallax_background
+entity_type: node
+bundle: basic_page
+label: 'Parallax background'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

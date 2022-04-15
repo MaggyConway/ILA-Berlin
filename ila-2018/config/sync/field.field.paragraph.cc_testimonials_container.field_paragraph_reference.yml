@@ -1,0 +1,175 @@
+uuid: 58556d9b-20c5-4181-9ec1-ee8dd0648a0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_reference
+    - paragraphs.paragraphs_type.cc_testimonial
+    - paragraphs.paragraphs_type.cc_testimonials_container
+  module:
+    - entity_reference_revisions
+id: paragraph.cc_testimonials_container.field_paragraph_reference
+field_name: field_paragraph_reference
+entity_type: paragraph
+bundle: cc_testimonials_container
+label: Testimonial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cc_testimonial: cc_testimonial
+    target_bundles_drag_drop:
+      cc_testimonials_container:
+        weight: 50
+        enabled: false
+      block_reference:
+        weight: 51
+        enabled: false
+      career_center_visitors_news:
+        weight: 52
+        enabled: false
+      careercenter_view_reference:
+        weight: 53
+        enabled: false
+      cc_block_reference:
+        weight: 54
+        enabled: false
+      cc_facebook_post:
+        weight: 55
+        enabled: false
+      cc_header_image_container:
+        weight: 56
+        enabled: false
+      cc_header_image_item:
+        weight: 57
+        enabled: false
+      cc_link_box:
+        weight: 58
+        enabled: false
+      cc_link_list:
+        weight: 59
+        enabled: false
+      cc_link_list_item:
+        weight: 60
+        enabled: false
+      cc_news_block:
+        weight: 61
+        enabled: false
+      cc_testimonial:
+        enabled: true
+        weight: 62
+      cc_text_box:
+        weight: 63
+        enabled: false
+      cc_text_on_image:
+        weight: 64
+        enabled: false
+      cc_tiled_title:
+        weight: 65
+        enabled: false
+      content_subtitle:
+        weight: 66
+        enabled: false
+      download:
+        weight: 67
+        enabled: false
+      dwn_link:
+        weight: 68
+        enabled: false
+      exhibition:
+        weight: 69
+        enabled: false
+      exhibition_container:
+        weight: 70
+        enabled: false
+      faq:
+        weight: 71
+        enabled: false
+      faq_group:
+        weight: 72
+        enabled: false
+      image_box:
+        weight: 73
+        enabled: false
+      image_full:
+        weight: 74
+        enabled: false
+      image_row:
+        weight: 75
+        enabled: false
+      info_box:
+        weight: 76
+        enabled: false
+      infographic_box:
+        weight: 77
+        enabled: false
+      infographic_box_column:
+        weight: 78
+        enabled: false
+      kontakt_person:
+        weight: 79
+        enabled: false
+      link_box:
+        weight: 80
+        enabled: false
+      link_box_container:
+        weight: 81
+        enabled: false
+      list_of_companies:
+        weight: 82
+        enabled: false
+      list_of_companies_link:
+        weight: 83
+        enabled: false
+      navigation:
+        weight: 84
+        enabled: false
+      quote:
+        weight: 85
+        enabled: false
+      quote_portrait:
+        weight: 86
+        enabled: false
+      quote_portrait_container:
+        weight: 87
+        enabled: false
+      request_link:
+        weight: 88
+        enabled: false
+      single_link_box:
+        weight: 89
+        enabled: false
+      slideshow:
+        weight: 90
+        enabled: false
+      speaker:
+        weight: 91
+        enabled: false
+      text:
+        weight: 92
+        enabled: false
+      text_box:
+        weight: 93
+        enabled: false
+      text_boxes:
+        weight: 94
+        enabled: false
+      title_image_text:
+        weight: 95
+        enabled: false
+      title_text:
+        weight: 96
+        enabled: false
+      twitter_feed:
+        weight: 97
+        enabled: false
+      two_column_text:
+        weight: 98
+        enabled: false
+field_type: entity_reference_revisions

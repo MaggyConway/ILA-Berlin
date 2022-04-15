@@ -1,0 +1,297 @@
+uuid: 1a6e8708-7e8d-4991-b8db-cff81ea9404c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_co_add_to_my_calendar
+    - field.storage.node.field_contact_persons
+    - field.storage.paragraph.field_cp_first_name
+    - field.storage.paragraph.field_cp_function
+    - field.storage.paragraph.field_cp_mail
+    - field.storage.paragraph.field_cp_name
+    - field.storage.paragraph.field_cp_phone
+    - field.storage.node.field_date_and_time
+    - field.storage.node.field_ev_venue
+    - search_api.server.default_database
+  module:
+    - content_translation
+    - node
+    - paragraphs
+    - search_api
+    - ila_search_api
+    - search_api_solr
+id: ila_bdli_events
+name: 'ILA BDLI Events'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Beschreibung
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.body
+  content_translation_source:
+    label: Übersetzungsquelle
+    datasource_id: 'entity:node'
+    property_path: content_translation_source
+    type: string
+    dependencies:
+      module:
+        - content_translation
+  created:
+    label: 'Geschrieben am'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  default_langcode:
+    label: Standardübersetzung
+    datasource_id: 'entity:node'
+    property_path: default_langcode
+    type: boolean
+    dependencies:
+      module:
+        - node
+  field_co_add_to_my_calendar:
+    label: Kalendereintrag
+    datasource_id: 'entity:node'
+    property_path: field_co_add_to_my_calendar
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_add_to_my_calendar
+  field_contact_persons:
+    label: 'Kontakt Person(en)'
+    datasource_id: 'entity:node'
+    property_path: field_contact_persons
+    type: string
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_contact_persons
+  field_cp_first_name:
+    label: 'Kontakt Person(en) » Paragraph » Vorname'
+    datasource_id: 'entity:node'
+    property_path: 'field_contact_persons:entity:field_cp_first_name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_contact_persons
+        - field.storage.paragraph.field_cp_first_name
+      module:
+        - paragraphs
+  field_cp_function:
+    label: 'Kontakt Person(en) » Paragraph » Titel/Funktion'
+    datasource_id: 'entity:node'
+    property_path: 'field_contact_persons:entity:field_cp_function'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_contact_persons
+        - field.storage.paragraph.field_cp_function
+      module:
+        - paragraphs
+  field_cp_mail:
+    label: 'Kontakt Person(en) » Paragraph » E-Mail'
+    datasource_id: 'entity:node'
+    property_path: 'field_contact_persons:entity:field_cp_mail'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_contact_persons
+        - field.storage.paragraph.field_cp_mail
+      module:
+        - paragraphs
+  field_cp_name:
+    label: 'Kontakt Person(en) » Paragraph » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_contact_persons:entity:field_cp_name'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_contact_persons
+        - field.storage.paragraph.field_cp_name
+      module:
+        - paragraphs
+  field_cp_phone:
+    label: 'Kontakt Person(en) » Paragraph » Telefon'
+    datasource_id: 'entity:node'
+    property_path: 'field_contact_persons:entity:field_cp_phone'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_contact_persons
+        - field.storage.paragraph.field_cp_phone
+      module:
+        - paragraphs
+  field_date_and_time:
+    label: 'Date and Time'
+    datasource_id: 'entity:node'
+    property_path: field_date_and_time
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_and_time
+  field_ev_venue:
+    label: Ort
+    datasource_id: 'entity:node'
+    property_path: field_ev_venue
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_ev_venue
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Titel
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 2
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - bdli_event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ila_conferences_start_date: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  stemmer:
+    all_fields: false
+    fields:
+      - body
+      - field_cp_first_name
+      - field_cp_function
+      - field_cp_mail
+      - field_cp_name
+      - field_cp_phone
+      - field_ev_venue
+      - title
+    exceptions:
+      mexican: mexic
+      texan: texa
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - content_translation_source
+      - field_contact_persons
+      - field_cp_first_name
+      - field_cp_function
+      - field_cp_mail
+      - field_cp_name
+      - field_cp_phone
+      - field_ev_venue
+      - langcode
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - field_cp_first_name
+      - field_cp_function
+      - field_cp_mail
+      - field_cp_name
+      - field_cp_phone
+      - field_ev_venue
+      - title
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    ignored: ._-
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+    weights:
+      preprocess_index: 0
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - content_translation_source
+      - field_contact_persons
+      - field_cp_first_name
+      - field_cp_function
+      - field_cp_mail
+      - field_cp_name
+      - field_cp_phone
+      - field_ev_venue
+      - langcode
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

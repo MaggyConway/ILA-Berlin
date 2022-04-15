@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies: {  }
+name: news_teaser
+label: 'News - Teaser (435x280)'
+effects:
+  1c885811-0f1b-4531-8cb7-a2906682cb42:
+    uuid: 1c885811-0f1b-4531-8cb7-a2906682cb42
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 435
+      height: 280

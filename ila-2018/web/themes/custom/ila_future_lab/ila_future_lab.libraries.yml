@@ -1,0 +1,7 @@
+global-styling-future-lab:
+  css:
+    component:
+      dist/css/main.css: {}
+  js:
+    dist/js/runtime.js: {}
+    dist/js/main.js: {}

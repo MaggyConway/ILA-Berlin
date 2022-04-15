@@ -1,0 +1,19 @@
+uuid: 3ca25eb0-97f2-47da-a438-8cfca5f7751d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_news_block_title
+    - paragraphs.paragraphs_type.cc_news_block
+id: paragraph.cc_news_block.field_cc_news_block_title
+field_name: field_cc_news_block_title
+entity_type: paragraph
+bundle: cc_news_block
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

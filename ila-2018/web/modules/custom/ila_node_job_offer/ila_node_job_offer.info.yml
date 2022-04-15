@@ -1,0 +1,7 @@
+name: 'Content - Job Offer'
+description: 'Node - "Job Offer" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - address
+package: ILA

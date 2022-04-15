@@ -1,0 +1,16 @@
+Index: css/paragraphs_browser.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- css/paragraphs_browser.css	(revision 234f94cf355dfaf67693ed3ddbec48fdf3c86e5a)
++++ css/paragraphs_browser.css	(date 1529034525000)
+@@ -24,6 +24,8 @@
+ .paragraphs-browser-wrapper .form-wrapper {
+   display: flex;
+   flex-wrap: wrap;
++  display: -ms-flexbox;
++  -ms-flex-wrap: wrap;
+ }
+ 
+ .paragraphs-browser-wrapper .form-wrapper {

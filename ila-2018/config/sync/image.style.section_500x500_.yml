@@ -1,0 +1,16 @@
+uuid: fdfde308-9c88-47df-83c0-21d58aaf1de3
+langcode: en
+status: true
+dependencies: {  }
+name: section_500x500_
+label: 'Section (500x500)'
+effects:
+  42e53d2b-dad0-4af8-ac12-cbe1ef20e903:
+    uuid: 42e53d2b-dad0-4af8-ac12-cbe1ef20e903
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 500
+      anchor: center-center
+pipeline: image_optimiza

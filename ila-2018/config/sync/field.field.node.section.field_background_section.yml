@@ -1,0 +1,23 @@
+uuid: 48d1e017-e38b-475c-b3e8-bc9b54d0c3b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_section
+    - node.type.section
+  module:
+    - colorapi
+id: node.section.field_background_section
+field_name: field_background_section
+entity_type: node
+bundle: section
+label: 'Background section'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#0091FF'
+default_value_callback: ''
+settings: {  }
+field_type: colorapi_color_field

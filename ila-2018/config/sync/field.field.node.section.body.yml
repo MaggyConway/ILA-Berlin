@@ -1,0 +1,25 @@
+uuid: bd460cee-281c-4101-a1c3-d3a35d893d1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.section
+  module:
+    - text
+_core:
+  default_config_hash: lfVBssTNfdLyd-SAnSQN0mkfXxhKqTVvu-WsNfdEX-M
+id: node.section.body
+field_name: body
+entity_type: node
+bundle: section
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

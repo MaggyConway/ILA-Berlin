@@ -1,0 +1,161 @@
+.paragraph-content--view-display-id-careercenter_media_list_video {
+  margin: 30px auto;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1460px;
+
+  @media #{$m-to-m} {
+    padding: 0;
+  }
+
+  .view-careercenter-media-list {
+    position: relative;
+    margin: 0 80px;
+    background: url('../../img/diagonal-lines.svg') repeat, $career-dark;
+    border-bottom: 20px solid $career-green;
+
+    @media #{$m-to-m} {
+      margin: 0;
+      border-bottom-width: 13px;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      display: block;
+      width: 300px;
+      height: 300px;
+      opacity: .3;
+      content: '';
+      background: radial-gradient(circle, rgba(0, 156, 222, 0) 0%, #2dccd3 100%);
+      border-radius: 300px;
+      transform: translateX(-50%);
+
+      @media (min-width: 768px) {
+        width: 565px;
+        height: 565px;
+      }
+    }
+  }
+
+  .view-header {
+    position: relative;
+    z-index: 2;
+    padding: 15px 0;
+    width: 100%;
+    font-family: $career-font;
+    font-size: 62px;
+    line-height: 1.5;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    @media #{$m-to-m} {
+      font-size: 32px;
+    }
+  }
+
+  .view-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .slick--view--careercenter-media-list {
+    padding-bottom: 130px;
+
+    @media #{$m-to-m} {
+      padding-bottom: 80px;
+    }
+  }
+
+  .slick__slider {
+    margin: 0 -80px;
+
+    @media #{$m-to-m} {
+      margin: 0;
+    }
+  }
+
+  .media--view-mode-careercenter-video-block {
+    margin: 0 31px 5px;
+    background: #ffffff;
+    border: 1px solid $career-dark;
+    box-shadow: 5px 5px 0 0 $career-green;
+
+    @media #{$m-to-m} {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .field--name-field-description {
+    padding: 20px;
+    font-size: 21px;
+    font-weight: 700;
+
+    @media #{$m-to-m} {
+      font-size: 19px;
+    }
+  }
+
+  .slick__arrow {
+    top: auto;
+    bottom: 60px;
+
+    @media #{$m-to-m} {
+      bottom: 20px;
+    }
+  }
+
+  .slick-arrow {
+    top: auto;
+    bottom: 0;
+    background: $career-green;
+    border-radius: 0;
+    transform: translateY(0%);
+
+    &::before {
+      margin: 0 auto;
+      display: block;
+      width: calc(70% - 8px);
+      height: 3px;
+      opacity: 1;
+      content: '';
+      background: $career-dark;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-color: transparent $career-dark;
+    }
+  }
+
+  .slick-next {
+    &::after {
+      right: 0;
+      border-width: 7px 0 7px 8px;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  .slick-prev {
+    right: 2px;
+    left: auto;
+    transform: translate(-100%, 0);
+
+    &::after {
+      left: 0;
+      border-width: 7px 8px 7px 0;
+      transform: translate(100%, -50%);
+    }
+  }
+}

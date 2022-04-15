@@ -1,0 +1,31 @@
+uuid: c8fccb82-9bad-4f1f-868f-6c5e5a966de1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.media
+  module:
+    - menu_block
+  theme:
+    - ila_future_lab
+id: ila_future_lab_media_links
+theme: ila_future_lab
+region: header_top_main_nav
+weight: -6
+provider: null
+plugin: 'menu_block:media'
+settings:
+  id: 'menu_block:media'
+  label: Media
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'media:'
+  suggestion: media
+  label_type: block
+  label_link: false
+visibility: {  }

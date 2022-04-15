@@ -1,0 +1,9 @@
+uuid: 4aa8efec-f71f-4f25-a6d9-6ff477e5c3b3
+langcode: en
+status: true
+dependencies: {  }
+id: fl_video_message
+label: 'FL Video Message'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

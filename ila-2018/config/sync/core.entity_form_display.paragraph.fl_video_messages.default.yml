@@ -1,0 +1,48 @@
+uuid: 8e8f8dbb-a7d2-4360-ba3d-9807cd24d46c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_video_messages.field_cc_anchor
+    - field.field.paragraph.fl_video_messages.field_paragraph_reference
+    - field.field.paragraph.fl_video_messages.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_video_messages
+  module:
+    - paragraphs
+id: paragraph.fl_video_messages.default
+targetEntityType: paragraph
+bundle: fl_video_messages
+mode: default
+content:
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_reference:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: fl_video_message
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

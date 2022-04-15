@@ -1,0 +1,31 @@
+uuid: fa714b30-a5af-4659-aad7-325dff4e8f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.future-lab-footer
+  module:
+    - menu_block
+  theme:
+    - ila_future_lab
+id: futurelabfooter
+theme: ila_future_lab
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'menu_block:future-lab-footer'
+settings:
+  id: 'menu_block:future-lab-footer'
+  label: Fußbereich
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'future-lab-footer:'
+  suggestion: future_lab_footer
+  label_type: block
+  label_link: false
+visibility: {  }

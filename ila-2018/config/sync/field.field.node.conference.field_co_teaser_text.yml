@@ -1,0 +1,21 @@
+uuid: 1cf46854-c66f-4960-ae2f-996392baa887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_teaser_text
+    - node.type.conference
+  module:
+    - text
+id: node.conference.field_co_teaser_text
+field_name: field_co_teaser_text
+entity_type: node
+bundle: conference
+label: 'Conference teaser text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

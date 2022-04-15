@@ -1,0 +1,16 @@
+uuid: 26355cca-66dc-4841-be2c-95a69711d972
+langcode: en
+status: true
+dependencies: {  }
+name: fl_video_message_colorbox_thumbnail_343x221_
+label: 'FL Video Message Colorbox Thumbnail (343x221)'
+effects:
+  5feec912-7be3-4867-9416-e37351f8db90:
+    uuid: 5feec912-7be3-4867-9416-e37351f8db90
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 343
+      height: 221
+      anchor: center-center
+pipeline: image_optimiza

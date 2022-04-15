@@ -1,0 +1,84 @@
+uuid: 3050625e-a3a3-43eb-8970-ec0796390732
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+    - field.field.contact_message.sponsoring_katalog.field_firm
+    - field.field.contact_message.sponsoring_katalog.field_last_name
+    - field.field.contact_message.sponsoring_katalog.field_mr_ms
+    - field.field.contact_message.sponsoring_katalog.field_position
+    - field.field.contact_message.sponsoring_katalog.field_subject
+    - field.field.contact_message.sponsoring_katalog.field_surname
+    - field.field.contact_message.sponsoring_katalog.field_telephone
+  module:
+    - options
+id: contact_message.sponsoring_katalog.default
+targetEntityType: contact_message
+bundle: sponsoring_katalog
+mode: default
+content:
+  field_firm:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mr_ms:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_position:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_subject:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_surname:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

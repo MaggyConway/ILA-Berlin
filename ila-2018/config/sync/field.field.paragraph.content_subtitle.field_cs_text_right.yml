@@ -1,0 +1,21 @@
+uuid: 1e50c27c-b71d-483f-a0fb-1313b28f3f6b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cs_text_right
+    - paragraphs.paragraphs_type.content_subtitle
+  module:
+    - text
+id: paragraph.content_subtitle.field_cs_text_right
+field_name: field_cs_text_right
+entity_type: paragraph
+bundle: content_subtitle
+label: 'Text rechts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

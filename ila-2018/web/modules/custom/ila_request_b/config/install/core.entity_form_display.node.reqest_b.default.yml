@@ -1,0 +1,147 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.reqest_b.field_chalet_rental_fee
+    - field.field.node.reqest_b.field_chalet_rental_fee_excludin
+    - field.field.node.reqest_b.field_download_chalet_specificat
+    - field.field.node.reqest_b.field_product_group
+    - field.field.node.reqest_b.field_product_group_index
+    - field.field.node.reqest_b.field_request_b_comments
+    - field.field.node.reqest_b.field_request_b_deadline_chalet
+    - field.field.node.reqest_b.field_request_b_down_payment
+    - field.field.node.reqest_b.field_request_b_following_servic
+    - field.field.node.reqest_b.field_request_b_plus_advertising
+    - node.type.reqest_b
+  module:
+    - entity_reference_views_select
+    - field_group
+    - ila_grouped_options
+    - markup
+third_party_settings:
+  field_group:
+    group_request_b_plus_advertising:
+      children:
+        - field_request_b_plus_advertising
+        - field_request_b_comments
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: 'Plus Advertising Box'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'field-group--advertise wrapp-2-cols'
+      label: 'Plus Advertising Box'
+    group_request_b_down_payment:
+      children:
+        - field_request_b_down_payment
+        - field_request_b_deadline_chalet
+      parent_name: ''
+      weight: 6
+      format_type: html_element
+      format_settings:
+        label: 'Down payment'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'field-group--down-payment wrapp-2-cols'
+      label: 'Down payment'
+id: node.reqest_b.default
+targetEntityType: node
+bundle: reqest_b
+mode: default
+content:
+  field_chalet_rental_fee:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_chalet_rental_fee_excludin:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_download_chalet_specificat:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: grouped_options
+    region: content
+  field_product_group_index:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_comments:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: 'Please insert your comments here.'
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_request_b_deadline_chalet:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_down_payment:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_following_servic:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_plus_advertising:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

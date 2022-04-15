@@ -1,0 +1,23 @@
+uuid: 6d94661f-22a0-403e-9e4a-1137d87f7fbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_downloads_hide_from_view
+    - node.type.downloads
+id: node.downloads.field_downloads_hide_from_view
+field_name: field_downloads_hide_from_view
+entity_type: node
+bundle: downloads
+label: 'Exclude from the Downloads view'
+description: 'Check if you want this node to be hidden from the Downloads page'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

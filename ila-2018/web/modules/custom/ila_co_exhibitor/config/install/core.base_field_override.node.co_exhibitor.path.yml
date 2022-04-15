@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.co_exhibitor
+  module:
+    - path
+id: node.co_exhibitor.path
+field_name: path
+entity_type: node
+bundle: co_exhibitor
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

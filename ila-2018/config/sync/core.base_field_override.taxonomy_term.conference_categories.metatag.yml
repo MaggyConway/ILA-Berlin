@@ -1,0 +1,18 @@
+uuid: 95bde9ee-feb8-47ed-bac6-c13d0beeb40b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_categories
+id: taxonomy_term.conference_categories.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: conference_categories
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

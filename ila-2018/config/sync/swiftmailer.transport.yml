@@ -1,0 +1,16 @@
+transport: smtp
+smtp_host: outlook.office365.com
+smtp_port: 587
+smtp_encryption: tls
+smtp_username: noreply@ila-berlin.de
+smtp_password: Goldstrom15!
+sendmail_path: /usr/sbin/sendmail
+sendmail_mode: bs
+spool_directory: ''
+_core:
+  default_config_hash: 4CNX06GnFxH2fCdczzrGyM3vBCkW5-p0uZBV4CRSFsQ
+smtp_credential_provider: swiftmailer
+smtp_credentials:
+  swiftmailer:
+    username: noreply@ila-berlin.de
+    password: GawT7KqoL85oMryKetNo!

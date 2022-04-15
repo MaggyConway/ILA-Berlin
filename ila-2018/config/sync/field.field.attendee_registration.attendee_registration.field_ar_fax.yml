@@ -1,0 +1,21 @@
+uuid: 990438a4-7773-48a6-a948-1dfcfeb730cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_fax
+  module:
+    - ila_attendee_registration
+    - telephone
+id: attendee_registration.attendee_registration.field_ar_fax
+field_name: field_ar_fax
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Fax
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,30 @@
+uuid: 67a160b5-6cc0-4a0a-87f0-226d346138c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference
+    - media.type.embedded_video
+    - media.type.local_video
+    - paragraphs.paragraphs_type.fl_video_message
+id: paragraph.fl_video_message.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+bundle: fl_video_message
+label: 'Video message'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      embedded_video: embedded_video
+      local_video: local_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: embedded_video
+field_type: entity_reference

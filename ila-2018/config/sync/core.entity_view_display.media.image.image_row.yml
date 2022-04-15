@@ -1,0 +1,68 @@
+uuid: 45f65efe-4616-4ff0-b882-9e57a11ee1e9
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.image_row
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - image.style.image_row
+    - media.type.image
+  module:
+    - ds
+    - svg_image
+id: media.image.image_row
+targetEntityType: media
+bundle: image
+mode: image_row
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: image_row
+      image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  field_url: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

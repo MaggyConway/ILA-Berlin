@@ -1,0 +1,9 @@
+uuid: 06225931-631e-445d-92e2-f4a4276c81f3
+langcode: en
+status: true
+dependencies: {  }
+id: cc_header_image_container
+label: 'CareerCenter -- Header image container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

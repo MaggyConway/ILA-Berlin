@@ -1,0 +1,58 @@
+.paragraph--type--dwn-link a:not([class="btn"]),
+.text-formatted a:not([class="btn"]),
+.page-node-type-conference .node--type-conference .paragraph--type--download a:not([class="btn"]),
+.page-node-type-conference .node--type-conference a.speaker-node-details {
+  position: relative;
+  display: inline-block;
+  text-decoration: none !important;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    color: inherit;
+    background: currentColor;
+    content: '';
+    transition: transform 0.3s;
+    transform: scale(0.85);
+  }
+
+  &::after {
+    opacity: 0;
+    transition: top 0.3s, opacity 0.3s, transform 0.3s;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    transform: scale(1);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+
+.block-early-bird {
+  a:not([class="btn"]) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+a {
+  &.image-link {
+    &::before,
+    &::after {
+      content: none !important;
+    }
+  }
+}

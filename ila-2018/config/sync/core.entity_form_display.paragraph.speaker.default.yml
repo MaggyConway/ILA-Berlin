@@ -1,0 +1,33 @@
+uuid: 58ab0f0f-c7d9-4d7d-9ccf-bbf7197ccd93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.speaker.field_description
+    - field.field.paragraph.speaker.field_name
+    - paragraphs.paragraphs_type.speaker
+id: paragraph.speaker.default
+targetEntityType: paragraph
+bundle: speaker
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

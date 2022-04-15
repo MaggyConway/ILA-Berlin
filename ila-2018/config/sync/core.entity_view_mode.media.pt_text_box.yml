@@ -1,0 +1,10 @@
+uuid: 93d9ba03-ecaa-4391-91c0-8d0d4831931c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_text_box
+label: 'PT Text box'
+targetEntityType: media
+cache: true

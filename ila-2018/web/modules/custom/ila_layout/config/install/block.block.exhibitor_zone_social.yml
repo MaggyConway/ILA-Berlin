@@ -1,0 +1,23 @@
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - exhibitor_zone
+id: exhibitor_zone_social
+theme: exhibitor_zone
+region: header_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: Social
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

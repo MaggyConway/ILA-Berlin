@@ -1,0 +1,219 @@
+.paragraph-content--view-display-id-blog_career_center {
+  position: relative;
+  margin: 30px 0;
+  padding: 20px 0;
+  background-color: $career-green;
+
+  @media #{$m-to-m} {
+    padding: 13px 0;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 50%;
+    height: 80px;
+    content: '';
+    background-color: #ffffff;
+    border-top: 20px solid $career-green;
+
+    @media #{$m-to-m} {
+      display: none;
+    }
+  }
+
+  .view-careercenter-content-list {
+    display: flex;
+    background: url('../../img/diagonal-lines.svg') repeat,
+      url('../../assets/images/blog-bg@2x.png') center / cover no-repeat;
+
+    @media #{$m-to-m} {
+      flex-direction: column;
+      background: none;
+    }
+
+    .view-header,
+    .view-content {
+      width: 50%;
+
+      @media #{$m-to-m} {
+        width: 100%;
+      }
+    }
+
+    .view-content {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 60px;
+
+      @media #{$m-to-m} {
+        padding-bottom: 0;
+      }
+    }
+
+    .view-header {
+      text-align: center;
+      text-transform: uppercase;
+      align-self: center;
+
+      @media #{$m-to-m} {
+        background: url('../../img/diagonal-lines.svg') top / 3px repeat,
+          url('../../assets/images/blog-bg@2x.png') center / 100% no-repeat;
+      }
+    }
+
+    .blog-header {
+      font-family: $career-font;
+      font-size: 180px;
+      font-weight: 900;
+      text-shadow: 0 2px 20px 0 rgba(0, 0, 0, .35), 2px 5px 0 0 $career-dark;
+      color: $c-white;
+
+      @media #{$m-to-m} {
+        padding: 50px 0;
+        font-size: 60px;
+      }
+    }
+
+    .slick--view--careercenter-content-list--blog-career-center {
+      padding: 45px 60px;
+      width: 80%;
+      background-color: #ffffff;
+
+      @media #{$m-to-2l} {
+        width: 95%;
+      }
+
+      @media #{$m-to-m} {
+        padding: 25px 10px 60px;
+        width: 100%;
+      }
+    }
+  }
+
+  .node--type-career-center {
+    margin: 15px 0;
+    padding: 0 10px;
+  }
+
+  .field--name-node-post-date {
+    font-size: 15px;
+    font-weight: 700;
+
+    @media #{$m-to-m} {
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+  }
+
+  .field--name-node-title {
+    h2 {
+      margin-bottom: 0;
+      font-size: 21px;
+      font-weight: 700;
+
+      @media #{$m-to-m} {
+        font-size: 17px;
+      }
+    }
+
+    a {
+      display: block;
+      color: $career-dark;
+    }
+  }
+
+  .field--name-node-link {
+    > a {
+      position: relative;
+      display: inline-block;
+      width: calc(100% - 8px);
+      height: 5px;
+      font-size: 0;
+      background: $career-dark;
+      box-shadow: 2px 2px 0 0 $career-green;
+
+      &::before {
+        position: absolute;
+        z-index: 2;
+        top: -4px;
+        left: 100%;
+        width: 0;
+        height: 0;
+        content: '';
+        border-width: 7px 0 7px 8px;
+        border-style: solid;
+        border-color: transparent $career-dark;
+      }
+
+      &::after {
+        position: absolute;
+        z-index: 1;
+        top: -2px;
+        left: 100%;
+        width: 0;
+        height: 0;
+        content: '';
+        border-width: 7px 0 7px 8px;
+        border-style: solid;
+        border-color: transparent $career-green;
+      }
+    }
+  }
+
+  .slick__arrow {
+    top: auto;
+    bottom: 0;
+  }
+
+  .slick-arrow {
+    top: auto;
+    bottom: 0;
+    background: $career-dark;
+    border-radius: 0;
+    transform: translateY(0%);
+
+    &::before {
+      margin: 0 auto;
+      display: block;
+      width: calc(70% - 8px);
+      height: 3px;
+      opacity: 1;
+      content: '';
+      background: $career-green;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-color: transparent $career-green;
+    }
+  }
+
+  .slick-next {
+    &::after {
+      right: 0;
+      border-width: 7px 0 7px 8px;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  .slick-prev {
+    right: 2px;
+    left: auto;
+    transform: translate(-100%, 0);
+
+    &::after {
+      left: 0;
+      border-width: 7px 8px 7px 0;
+      transform: translate(100%, -50%);
+    }
+  }
+}

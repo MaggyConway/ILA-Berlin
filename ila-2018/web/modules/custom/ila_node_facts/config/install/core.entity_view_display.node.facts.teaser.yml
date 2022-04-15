@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.facts.field_facts_number
+    - field.field.node.facts.field_number
+    - node.type.facts
+  module:
+    - user
+id: node.facts.teaser
+targetEntityType: node
+bundle: facts
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_facts_number: true
+  field_number: true
+  langcode: true

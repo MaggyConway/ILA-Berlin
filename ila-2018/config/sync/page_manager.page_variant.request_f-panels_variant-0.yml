@@ -1,0 +1,58 @@
+uuid: 8a391e99-e8c3-4046-b909-668b36a45211
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_f
+  content:
+    - 'block_content:page_description:223685ce-788d-4e6c-877b-d18672d1b14e'
+  module:
+    - block_content
+    - node
+    - panels
+_core:
+  default_config_hash: HnhDsEvLUOrMPds2vnEVu7nIui07WWpk_wp8Xb4C23I
+id: request_f-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    191bb375-5d30-4b07-96ae-4871ca4a807c:
+      id: exhibitor_registration
+      label: 'Exhibitor registration'
+      provider: node
+      label_display: '0'
+      type: request_f
+      form_mode: default
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: 191bb375-5d30-4b07-96ae-4871ca4a807c
+      context_mapping: {  }
+    b0ccbb5c-f868-4bb8-96e4-1b207b01dfb4:
+      id: 'block_content:223685ce-788d-4e6c-877b-d18672d1b14e'
+      label: 'Registration of conferences'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: b0ccbb5c-f868-4bb8-96e4-1b207b01dfb4
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 17e4f6aa-dbcd-47d4-9e48-1178464dee18
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'Conferences (F)'
+  storage_type: page_manager
+  storage_id: request_f-panels_variant-0
+  builder: standard
+page: request_f
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

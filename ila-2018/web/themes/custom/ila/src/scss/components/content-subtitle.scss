@@ -1,0 +1,55 @@
+.paragraph--type--content-subtitle {
+  width: 100%;
+  max-width: 1145px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto 45px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @media #{$m-to-s} {
+    margin-bottom: 30px;
+  }
+  
+  > .layout__region--content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .field--name-field-cs-subtitle, h2 {
+    //@include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 40px;
+    text-transform: uppercase;
+    width: 100%;
+    @media #{$m-to-m} {
+      margin-bottom: 10px;
+    }
+  }
+  .field--name-field-cs-subtitle {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light, $career-light-green);
+  }
+  h2 {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light, $career-light-green);
+  }
+
+  .field--name-field-cs-text-left {
+    width: 50%;
+    padding-right: 10px;
+    @media #{$m-to-m} {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .field--name-field-cs-text-right {
+    width: 50%;
+    padding-left: 10px;
+    @media #{$m-to-m} {
+      width: 100%;
+      padding: 0;
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+name: File Download link formatter
+description: 'Render file field as a simple Download link'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - file
+package: ILA

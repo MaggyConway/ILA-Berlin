@@ -1,0 +1,17 @@
+uuid: 6ae89dc8-c795-465d-b35d-5fd33f834295
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_import_job_offer
+title: 'Default cron handler'
+id: ila_import_job_offer_cron
+weight: 0
+module: ila_import_job_offer
+callback: ila_import_job_offer_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

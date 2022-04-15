@@ -1,0 +1,19 @@
+uuid: 747abb92-443f-418a-bea8-91a29592e585
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_sponsors
+    - field.storage.block_content.field_cc_sponsors_first_line
+id: block_content.careercenter_sponsors.field_cc_sponsors_first_line
+field_name: field_cc_sponsors_first_line
+entity_type: block_content
+bundle: careercenter_sponsors
+label: 'First line'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

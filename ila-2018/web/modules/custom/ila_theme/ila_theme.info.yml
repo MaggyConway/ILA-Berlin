@@ -1,0 +1,4 @@
+name: ILA Theme Switcher
+description: Switches to special site theme on Exhibitor Zone pages.
+type: module
+core_version_requirement: ^8 || ^9

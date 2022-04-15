@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq
+    - field.field.block_content.faq.field_faq
+  module:
+    - ds
+    - faqfield
+id: block_content.faq.default
+targetEntityType: block_content
+bundle: faq
+mode: default
+content:
+  field_faq:
+    weight: 1
+    label: hidden
+    settings:
+      active: 0
+      heightStyle: auto
+      collapsible: true
+      event: click
+      animate:
+        duration: 200
+        easing: linear
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: faqfield_accordion
+    region: content
+hidden:
+  langcode: true

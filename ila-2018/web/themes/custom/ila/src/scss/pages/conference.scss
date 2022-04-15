@@ -1,0 +1,715 @@
+
+// $conferences-dark: #2E1A47;
+// $conferences-light: #991E66;
+// $conferences-background: #EAE8ED;$conferences-link
+
+.page-node-type-conference {
+  .layout-container {
+    background: #ffffff;
+  }
+  // .region-content {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  //   margin: 0;
+  //   max-width: 100%;
+  // }
+  .layout-content {
+    padding-top: 108px;
+
+    @media screen and (max-width: 975px) {
+      padding-top: 105px;
+    }
+    @media screen and (max-width: 609px) {
+      padding-top: 64px;
+    }
+
+    .region-content {
+      padding-top: 120px;
+      @media #{$m-to-s} {
+        padding-top: 60px;
+      }
+    }
+  }
+
+  .flag-flag {
+    @include content-grid(0);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: right;
+    a {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  // .header_title_bubble {
+
+  //   @media screen and (max-width: 768px) {
+  //     padding-right: 80px;
+  //   }
+  // }
+
+  .field--name-node-title {
+    margin-bottom: 0;
+    @include content-grid(0);
+    h1 {
+      max-width: 660px;
+      color: $conferences-dark;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1.175;
+
+      @media #{$m-to-s} {
+        font-size: 24px;
+      }
+    }
+  }
+  .node--type-conference {
+    position: relative;
+    a {
+      color: $conferences-link;
+      font-weight: 400;
+      text-decoration: underline;
+
+      &:hover {
+        color: $conferences-dark;
+      }
+    }
+  }
+
+  .date-time-wrapper {
+    @include content-grid(20px);
+  }
+
+  .field--name-field-co-date, .field--name-field-co-time {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.176;
+    color: $conferences-light;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .field--name-field-co-date-and-time,
+  .field--name-field-date-and-time {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.176;
+    color: $conferences-light;
+    display: inline;
+    text-transform: uppercase;
+  }
+
+  .field--name-field-co-invitation-only {
+    background-color: $conferences-light;
+    color: $c-white;
+    border-radius: 3px;
+    font-size: 8px;
+    text-transform: uppercase;
+    padding: 2px 4px;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: text-top;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .wrapper--header-links {
+    padding-right: 15px;
+  }
+
+  .field--name-field-co-add-to-my-calendar {
+    .atcb-link {
+      color: $conferences-light;
+      font-weight: 400;
+      text-decoration: none;
+      background-color: transparent;
+      box-shadow: none;
+      font-family: $main-font;
+      padding: 0;
+
+      em {
+        font-style: normal;
+      }
+
+      &::after {
+        content: '';
+        margin-left: 12px;
+        width: 16px;
+        height: 20px;
+        display: inline-block;
+        background: url('../img/svg/add-calendar-icon.svg') center no-repeat;
+        background-size: 16px 20px;
+        vertical-align: text-bottom;
+      }
+    }
+    .atcb-list {
+      padding: 10px;
+    }
+    .atcb-item {
+      padding: 0;
+      margin: 3px 0;
+      &:hover {
+        background: none !important;
+      }
+      a {
+        font-family: $main-font;
+        color: $conferences-light;
+        text-decoration: none;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .field--name-better-social-sharing-buttons {
+    .field__label {
+      font-weight: 400;
+      text-transform: lowercase;
+    }
+
+    .field__item {
+      padding-right: 0;
+    }
+
+    .social-sharing-buttons {
+      margin: 0;
+    }
+  }
+
+  .field--name-field-co-add-to-my-calendar {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media #{$m-to-m} {
+      margin-bottom: 5px;
+    }
+  }
+
+  .field--name-better-social-sharing-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .social-sharing-buttons__button {
+    background-color: $conferences-light;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    svg {
+      fill: #ffffff;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .field--name-field-co-date {
+    &::after {
+      content: " // "
+    }
+  }
+
+  .field__label, h2 {
+    color: $conferences-light;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  .group-co-venue {
+    padding: 45px 0 10px;
+    background-color: #EAE8ED;
+    margin-bottom: 35px;
+
+    .field {
+      margin-bottom: 24px;
+    }
+
+    &-wrapper {
+      @include content-grid(0);
+      display: flex;
+      @media #{$m-to-m} {
+        flex-direction: column;
+      }
+    }
+
+    &__left-block {
+      width: 50%;
+      padding-right: 80px;
+      @media #{$m-to-m} {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+
+    &__right-block {
+      width: 50%;
+      padding-left: 20px;
+      @media #{$m-to-m} {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  .gropu-co-programm-and-speakers {
+    @include content-grid(35px);
+    display: flex;
+    @media #{$m-to-m} {
+      flex-direction: column;
+    }
+
+    > .field {
+      width: 50%;
+      @media #{$m-to-m} {
+        width: 100%;
+      }
+
+      &--name-field-co-programm {
+        padding-right: 80px;
+        @media #{$m-to-m} {
+          padding-right: 0;
+          margin-bottom: 24px;
+        }
+      }
+      &--name-field-co-speakers {
+        padding-left: 20px;
+        @media #{$m-to-m} {
+          padding-left: 0;
+        }
+        .field__items {
+          padding-left: 35px;
+          .field__item {
+            display: list-item;
+            line-height: 1.2;
+            font-style: italic;
+            margin-bottom: 15px;
+            list-style: none;
+            position: relative;
+            &:before {
+              content:"\2022";
+              position: absolute;
+              left: -22px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .group-co-info {
+    @include content-grid(65px);
+
+    .field {
+      margin-bottom: 24px;
+    }
+
+    .field--name-field-co-logos {
+      .field__items {
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+      }
+      .field__item {
+        float: left;
+        padding-right: 15px;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      padding-top: 30px;
+      border-top: 1px solid rgba($conferences-light, 0.3);
+      @media #{$m-to-m} {
+        flex-direction: column;
+      }
+    }
+
+    &__left-block {
+      width: 50%;
+      padding-right: 80px;
+      @media #{$m-to-m} {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+
+    &__right-block {
+      width: 50%;
+      padding-left: 20px;
+      @media #{$m-to-m} {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    .field--name-field-co-logos {
+      .field__items {
+        .field__item {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .field--name-field-co-downloads {
+      > .field__items {
+        padding-left: 35px;
+        > .field__item {
+          display: list-item;
+          line-height: 1.2;
+          margin-bottom: 15px;
+          list-style: none;
+          position: relative;
+          &:before {
+            content:"\2022";
+            position: absolute;
+            left: -22px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .paragraph--type--download {
+      .layout__region {
+        > div {
+          display: inline-block;
+          margin-bottom: 0;
+          &.field--name-field-file {
+            &::after {
+              content: " // ";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.path-conference-speakers, .path-all-conferences, .path-notepad {
+  .layout-container {
+    background: #ffffff;
+  }
+  .layout-content {
+    .region-content {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  .view-header {
+    margin-bottom: 50px;
+  }
+
+  .view-empty {
+    margin-bottom: 60px;
+  }
+
+  h1 {
+    max-width: 660px;
+    color: $conferences-dark;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.175;
+
+    @media #{$m-to-s} {
+      font-size: 24px;
+    }
+  }
+
+  .field--name-field-sub-title {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.176;
+    color: $conferences-light;
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 550px;
+
+  }
+
+  h2, h3 {
+    color: #2E1A47;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: $conferences-dark;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .block-views-blockglossary-the-speakers-block-2 {
+    h2 {
+      width: 100%;
+      max-width: 1145px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto 0;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  .block-system-main-block {
+    a {
+      color: $conferences-link;
+
+      &:hover {
+        color: $conferences-dark;
+      }
+    }
+
+    .back-to-top__link {
+      margin-left: 10px;
+      height: 22px;
+      width: 100%;
+      max-width: 22px;
+      min-width: 22px;
+      flex-basis: 22px;
+      color: $conferences-light;
+      background: url(../img/svg/arrow-up-conference.svg) center no-repeat;
+      background-size: 8px;
+      &:hover {
+        color: $conferences-dark;
+        background: url(../img/svg/arrow-up-conference-hover.svg) center no-repeat;
+        background-size: 8px;
+      }
+    }
+  }
+
+  .search-block-form {
+    display: flex;
+    form {
+      width: 100%;
+      align-self: flex-end;
+      display: flex;
+      @media #{$m-to-s} {
+        display: block;
+      }
+      .form-item {
+        flex: 1 1 100%;
+        margin-bottom: 25px;
+        @media #{$m-to-s} {
+          margin-bottom: 15px;
+          display: block;
+        }
+        label {
+          display: none;
+        }
+        .form-search {
+          width: 90%;
+          border: 0;
+          background: none;
+          outline: none;
+          border-bottom: 1px dashed $conferences-light;
+          line-height: 1.75;
+        }
+      }
+      .form-submit {
+        color: $conferences-light;
+        margin-top: 7px;
+        &:hover {
+          color: $conferences-link;
+        }
+      }
+    }
+  }
+
+  .block-views-blockcategories-conferences-block-1, .block-views-blockcategories-conferences-block-2 {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-bottom: 25px;
+    a {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    @media #{$m-to-m} {
+      width: 100%;
+    }
+  }
+
+  .block-views-blockcategories-conferences-block-1 {
+    padding-right: 60px;
+    @media #{$m-to-m} {
+      padding-right: 0;
+    }
+  }
+  .block-views-blockcategories-conferences-block-2 {
+    padding-left: 20px;
+    @media #{$m-to-m} {
+      padding-left: 0;
+    }
+  }
+
+  .block-block-content-button_with_link {
+    width: 100%;
+    .field--name-field-btn-with-link {
+      margin-bottom: 50px;
+      text-align: right;
+      a {
+        @extend .btn;
+        color: $conferences-light;
+        border-color: $conferences-light;
+
+        &:hover {
+          color: $conferences-link;
+        }
+
+        &::before,
+        &::after {
+          border-color: $conferences-link;
+        }
+      }
+    }
+  }
+
+  .view-categories-conferences {
+    .views-row {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+  }
+}
+
+.path-conference-speakers {
+
+  .layout-content {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 107px; // header height
+    padding-bottom: 240px; // footer heigth
+    margin-bottom: -240px;
+    box-sizing: border-box;
+  }
+  &.toolbar-horizontal {
+    .layout-content {
+      min-height: calc(100vh - 39px); // toolbar height
+    }
+  }
+  &.toolbar-tray-open {
+    .layout-content {
+      min-height: calc(100vh - 80px); // toolbar height
+    }
+  }
+
+  .layout-content {
+    padding-top: 108px;
+
+    @media screen and (max-width: 975px) {
+      padding-top: 105px;
+    }
+    @media screen and (max-width: 609px) {
+      padding-top: 64px;
+    }
+
+    .region-content {
+      padding-top: 120px;
+      @media #{$m-to-s} {
+        padding-top: 60px;
+      }
+    }
+  }
+
+  .conference-filtered {
+    @include content-grid(0);
+  }
+
+  .layout-region--top {
+    @include content-grid(55px);
+    .block-region-top {
+      // border-bottom: 1px solid $conferences-light;
+      display: flex;
+      flex-wrap: wrap;
+      @media #{$m-to-m} {
+        display: block;
+      }
+      .block-block-content-page_description, .search-block-form {
+        width: 50%;
+        @media #{$m-to-m} {
+          width: 100%;
+        }
+      }
+      .search-block-form {
+        padding-left: 20px;
+        @media #{$m-to-m} {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.node--type-speaker {
+  &.node--view-mode-speaker-info-node-conference {
+    margin: 0 0 20px 0;
+    .field--name-title {
+      display: none;
+    }
+    .node__content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .speaker-left {
+      max-width: 95px;
+      width: 100%;
+      margin-right: 20px;
+      img {
+        border-radius: 50px;
+      }
+    }
+    .speaker-middle {
+      max-width: 400px;
+      width: 100%;
+      .speaker-position {
+        font-style: italic;
+      }
+    }
+    .speaker-right {
+      width: 20px;
+      a {
+        width: 20px;
+        height: 0;
+        padding-top: 20px;
+        overflow: hidden;
+        display: block;
+        background-position: center;
+        background-size: 16px;
+      }
+
+      .field--name-field-linked-in {
+        a {
+          background-image: url('../img/linkedin-icon.svg');
+        }
+      }
+
+      .field--name-field-xing {
+        a {
+          background-image: url('../img/xing-icon.svg');
+        }
+      }
+    }
+  }
+}
+

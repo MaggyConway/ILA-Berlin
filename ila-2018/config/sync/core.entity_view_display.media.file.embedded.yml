@@ -1,0 +1,46 @@
+uuid: 36580eb2-6bc0-478c-93c5-3d0aa5d6796d
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - field.field.media.file.field_download_category
+    - field.field.media.file.field_download_preview
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_press_info
+    - field.field.media.file.field_show_on_downloads
+    - media.type.file
+  module:
+    - ds
+    - file
+id: media.file.embedded
+targetEntityType: media
+bundle: file
+mode: embedded
+content:
+  field_media_file:
+    weight: 0
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: file_default
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_download_category: true
+  field_download_preview: true
+  field_press_info: true
+  field_show_on_downloads: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

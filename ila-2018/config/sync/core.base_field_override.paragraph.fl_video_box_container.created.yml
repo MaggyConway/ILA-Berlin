@@ -1,0 +1,18 @@
+uuid: bb0321c1-4518-4ca1-8766-93bb6fb7c824
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_video_box_container
+id: paragraph.fl_video_box_container.created
+field_name: created
+entity_type: paragraph
+bundle: fl_video_box_container
+label: 'Geschrieben am'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

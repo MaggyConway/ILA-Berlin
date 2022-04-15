@@ -1,0 +1,174 @@
+uuid: 7afacd15-5c02-4306-b4ef-b4892b14e981
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_careercenter
+    - field.field.node.news.body
+    - field.field.node.news.field_categories
+    - field.field.node.news.field_cc_news
+    - field.field.node.news.field_city
+    - field.field.node.news.field_date_range
+    - field.field.node.news.field_downloads
+    - field.field.node.news.field_images
+    - field.field.node.news.field_links
+    - field.field.node.news.field_media_images
+    - field.field.node.news.field_media_teaser_image
+    - field.field.node.news.field_news_ausstellar_highlight
+    - field.field.node.news.field_node_metatag
+    - field.field.node.news.field_paragraphs
+    - field.field.node.news.field_sub_title
+    - field.field.node.news.field_teaser_text
+    - field.field.node.news.field_yoast_seo
+    - node.type.news
+  module:
+    - ds
+    - field_group
+    - linked_field
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_publication_data:
+      children: {  }
+      parent_name: ''
+      weight: 29
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__publication-data
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Publication data'
+      region: hidden
+    group_links_group:
+      children: {  }
+      parent_name: ''
+      weight: 30
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__links-group
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Links group'
+      region: hidden
+    group_images:
+      children: {  }
+      parent_name: ''
+      weight: 28
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Images
+      region: hidden
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_teaser_image
+        - node_title
+        - field_teaser_text
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h1
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+_core:
+  default_config_hash: I25oXbn8IiHmySx_4jEfJtVMZKFG9GNP8z_Q1CK9yiw
+id: node.news.news_careercenter
+targetEntityType: node
+bundle: news
+mode: news_careercenter
+content:
+  field_media_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: ct_news_news_careercenter
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_teaser_text:
+    type: text_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: custom
+        destination: '[node:url]'
+        advanced: {  }
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_categories: true
+  field_cc_news: true
+  field_city: true
+  field_date_range: true
+  field_downloads: true
+  field_images: true
+  field_links: true
+  field_media_images: true
+  field_news_ausstellar_highlight: true
+  field_node_metatag: true
+  field_paragraphs: true
+  field_sub_title: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

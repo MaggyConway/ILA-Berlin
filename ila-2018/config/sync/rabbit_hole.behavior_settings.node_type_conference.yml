@@ -1,0 +1,14 @@
+uuid: 480d6daf-0254-443d-b23b-2bd7fd66175f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.conference
+id: node_type_conference
+entity_type_id: node_type
+entity_id: conference
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

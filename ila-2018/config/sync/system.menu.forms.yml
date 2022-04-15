@@ -1,0 +1,10 @@
+uuid: e8b31152-aa15-46a3-84b2-9ff21de4a8ea
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rQgI7DhpfXvx3Krpt9D1SKAzKoeyeQv8kamjQvYBt7g
+id: forms
+label: Forms
+description: 'Links to site forms'
+locked: false

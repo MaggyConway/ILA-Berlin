@@ -1,0 +1,23 @@
+uuid: baea2f7d-31eb-40db-876f-ecec721c8e54
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_press_info
+    - media.type.file
+id: media.file.field_press_info
+field_name: field_press_info
+entity_type: media
+bundle: file
+label: 'Presseinformationen?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

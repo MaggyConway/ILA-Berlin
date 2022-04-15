@@ -1,0 +1,23 @@
+uuid: 379c9d33-8037-47ce-8f6a-be9be3ab3dcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_paragraph_options
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+  module:
+    - options
+id: paragraph.careercenter_title_text_images.field_cc_paragraph_options
+field_name: field_cc_paragraph_options
+entity_type: paragraph
+bundle: careercenter_title_text_images
+label: 'Paragraph options'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

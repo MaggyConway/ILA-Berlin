@@ -1,0 +1,14 @@
+uuid: 9a24337c-0525-48d9-8165-be8bd49107a0
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node_type_future_lab
+entity_type_id: node_type
+entity_id: future_lab
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

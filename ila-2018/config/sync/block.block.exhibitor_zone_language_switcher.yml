@@ -1,0 +1,21 @@
+uuid: 58d7bf10-a444-4a92-8807-89d772ab99b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_core
+  theme:
+    - exhibitor_zone
+id: exhibitor_zone_language_switcher
+theme: exhibitor_zone
+region: header_right
+weight: 0
+provider: null
+plugin: 'ila_language_block:language_interface'
+settings:
+  id: 'ila_language_block:language_interface'
+  label: 'Language switcher (Short codes)'
+  provider: ila_core
+  label_display: '0'
+  links_labels: code
+visibility: {  }

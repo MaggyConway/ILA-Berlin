@@ -1,0 +1,19 @@
+uuid: 742e9355-0bab-4520-a1b5-cb0a67f3e773
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_anchor
+    - paragraphs.paragraphs_type.fl_video_messages
+id: paragraph.fl_video_messages.field_cc_anchor
+field_name: field_cc_anchor
+entity_type: paragraph
+bundle: fl_video_messages
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,16 @@
+uuid: fcaf23ec-df5e-4ac3-a26b-9afdef8ea845
+langcode: en
+status: true
+dependencies: {  }
+name: exhibition_container_image_s
+label: 'Exhibition container image style'
+effects:
+  bdbb1888-7cbb-40db-9dca-fa0d53514b30:
+    uuid: bdbb1888-7cbb-40db-9dca-fa0d53514b30
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 305
+      anchor: center-center
+pipeline: image_optimiza

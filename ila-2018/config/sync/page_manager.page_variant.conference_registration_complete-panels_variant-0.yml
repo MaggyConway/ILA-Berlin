@@ -1,0 +1,51 @@
+uuid: d8e5a535-3a98-4824-b149-91b5325559cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conference_registration_complete
+    - views.view.conferences
+  module:
+    - node
+    - panels
+    - views
+id: conference_registration_complete-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    f16e4f98-c20d-490f-bd8e-5fca3d78b20c:
+      id: 'views_block:conferences-block_5'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: -1
+      uuid: f16e4f98-c20d-490f-bd8e-5fca3d78b20c
+      context_mapping: {  }
+    50ca9247-3fd6-42ae-b1a6-177109dd3767:
+      id: attendee_registration_complete
+      label: 'Attendee registration complete'
+      provider: node
+      label_display: '0'
+      region: content
+      weight: 2
+      uuid: 50ca9247-3fd6-42ae-b1a6-177109dd3767
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 9e1dd6b6-2ba3-4f66-b349-5fde5dec88e9
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: conference_registration_complete-panels_variant-0
+  builder: standard
+page: conference_registration_complete
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

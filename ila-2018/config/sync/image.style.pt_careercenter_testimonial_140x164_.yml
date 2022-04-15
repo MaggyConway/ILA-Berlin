@@ -1,0 +1,16 @@
+uuid: fa1a4b1e-a658-4f88-ad57-c42c8ece9f03
+langcode: en
+status: true
+dependencies: {  }
+name: pt_careercenter_testimonial_140x164_
+label: 'PT CareerCenter Testimonial (140x164)'
+effects:
+  0815be43-dbc9-4bf7-8683-b8caafeab978:
+    uuid: 0815be43-dbc9-4bf7-8683-b8caafeab978
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 164
+      anchor: center-center
+pipeline: image_optimiza

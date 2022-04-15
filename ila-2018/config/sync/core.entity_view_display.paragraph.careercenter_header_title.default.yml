@@ -1,0 +1,64 @@
+uuid: 3122168e-fe82-441b-bc04-50f1ae098698
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careercenter_header_title.field_cc_anchor
+    - field.field.paragraph.careercenter_header_title.field_titel
+    - paragraphs.paragraphs_type.careercenter_header_title
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_titel
+id: paragraph.careercenter_header_title.default
+targetEntityType: paragraph
+bundle: careercenter_header_title
+mode: default
+content:
+  field_titel:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: h1
+            fis-cl: cc-tilte
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden:
+  field_cc_anchor: true

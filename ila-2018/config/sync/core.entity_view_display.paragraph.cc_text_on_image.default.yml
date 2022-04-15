@@ -1,0 +1,32 @@
+uuid: 6a0c2eaf-8cdf-45c7-997e-045d98c40128
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_text_on_image.field_cc_text_on_image_image
+    - field.field.paragraph.cc_text_on_image.field_cc_text_on_image_text
+    - paragraphs.paragraphs_type.cc_text_on_image
+  module:
+    - ds
+    - text
+id: paragraph.cc_text_on_image.default
+targetEntityType: paragraph
+bundle: cc_text_on_image
+mode: default
+content:
+  field_cc_text_on_image_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: text_default
+    region: content
+hidden:
+  field_cc_text_on_image_image: true

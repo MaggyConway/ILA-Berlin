@@ -1,0 +1,21 @@
+uuid: 369d3a30-14b8-4da2-802f-ffc748a30ace
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_exhibition_description
+    - paragraphs.paragraphs_type.exhibition
+  module:
+    - text
+id: paragraph.exhibition.field_exhibition_description
+field_name: field_exhibition_description
+entity_type: paragraph
+bundle: exhibition
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

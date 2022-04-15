@@ -1,0 +1,23 @@
+uuid: c6718aa4-2e82-4800-9e08-683c5ba88039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_link
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+  module:
+    - link
+id: paragraph.careercenter_title_text_images.field_cc_link
+field_name: field_cc_link
+entity_type: paragraph
+bundle: careercenter_title_text_images
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

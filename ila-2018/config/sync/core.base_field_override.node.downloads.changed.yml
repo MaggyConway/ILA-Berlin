@@ -1,0 +1,20 @@
+uuid: 9c97c253-983a-43c1-91c4-af80189e507f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+_core:
+  default_config_hash: Kx-io2oO2BbQOXyDgWwkkGQ5ZtP7rJwURHdTmD6IH_4
+id: node.downloads.changed
+field_name: changed
+entity_type: node
+bundle: downloads
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

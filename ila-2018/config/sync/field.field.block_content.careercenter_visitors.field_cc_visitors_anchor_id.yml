@@ -1,0 +1,19 @@
+uuid: df35a525-1073-4938-a639-0d2620f4d0c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_visitors
+    - field.storage.block_content.field_cc_visitors_anchor_id
+id: block_content.careercenter_visitors.field_cc_visitors_anchor_id
+field_name: field_cc_visitors_anchor_id
+entity_type: block_content
+bundle: careercenter_visitors
+label: 'Anchor ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: 8862878c-f1db-43c9-be4c-4c672aad1e4f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Downloads categories'
+vid: downloads_categories
+description: ''
+weight: 0

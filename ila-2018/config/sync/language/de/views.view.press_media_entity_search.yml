@@ -1,0 +1,38 @@
+display:
+  default:
+    display_options:
+      header:
+        area_text_custom:
+          content: "<div class=\"conference-filters\">\r\n<a href=\"#\" class=\"link-history-back\">Zurück</a>\r\n<a href=\"#\" class=\"filter-open-btn\">Filter öffnen</a>\r\n</div>"
+      exposed_form:
+        options:
+          submit_button: Suchen
+          reset_button_label: Zurücksetzen
+  attachment_1:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2 class=\"view-header-title\">VIDEOBEITRÄGE</h2>\r\n\r\n<p>Alle Videoaufnahmen dürfen zur redaktionellen Verwendung (als Footagematerial) heruntergeladen und verarbeitet werden. Alle Dateien sind im MP4-Format gespeichert.</p>\r\n"
+            format: full_html
+      empty:
+        area_text_custom:
+          content: 'Leider keine Videos gefunden.'
+      filters:
+        search_api_fulltext:
+          expose:
+            placeholder: Suchbegriff
+  block_3:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2 class=\"view-header-title\">HÖRFUNKBEITRÄGE</h2>\r\n\r\n<p>Hier finden Sie sendefähige Radio-Beiträge der ILA Berlin 2018 mit einem O-Ton-Paket zu Ihrer freien redaktionellen Verwendung. Alle Dateien sind im MP3-Format gespeichert.</p>\r\n"
+            format: full_html
+      empty:
+        area_text_custom:
+          content: 'Leider keine Audio Dateien gefunden.'
+      filters:
+        search_api_fulltext:
+          expose:
+            placeholder: Suchbegriff

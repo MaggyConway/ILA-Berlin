@@ -1,0 +1,18 @@
+uuid: 64ac1bc0-26db-48b8-96df-fdd79407765c
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_download_box
+id: paragraph.fl_download_box.created
+field_name: created
+entity_type: paragraph
+bundle: fl_download_box
+label: 'Geschrieben am'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

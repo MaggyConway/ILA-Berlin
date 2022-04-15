@@ -1,0 +1,187 @@
+/* stylelint-disable */
+
+.block-simple-blockcareer-center-social-feed {
+  position: relative;
+  margin: 30px auto;
+  padding: 0 40px;
+  max-width: 1440px;
+
+  @media #{$m-to-m} {
+    padding: 0 5px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 1040px;
+    height: 1040px;
+    content: '';
+    background: url('../../assets/images/diagonal-lines-light.svg') repeat, rgba(114, 255, 46, .4);
+    border-radius: 50%;
+
+    @media screen and (max-width: 1119px) {
+      width: 800px;
+      height: 800px;
+    }
+
+    @media #{$m-to-2l} {
+      width: 600px;
+      height: 600px;
+    }
+
+    @media #{$m-to-m} {
+      width: 370px;
+      height: 370px;
+    }
+  }
+
+  &::before {
+    left: 0;
+
+    @media #{$m-to-2l} {
+      left: -10%;
+    }
+  }
+
+  &::after {
+    right: 0;
+    transform: translateY(50%);
+
+    @media #{$m-to-2l} {
+      right: -10%;
+    }
+  }
+
+  > h2 {
+    font-family: $career-font;
+    font-size: 62px;
+    line-height: 1.5;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: $career-dark;
+
+    @media #{$m-to-m} {
+      font-size: 30px;
+    }
+  }
+
+  .crt-post {
+    color: $career-dark !important;
+    border: 1px solid $career-dark !important;
+    box-shadow: 5px 5px 0 0 $career-green;
+  }
+
+  .crt-grid-post-v2 .crt-post-header,
+  .crt-post-c .crt-post-header {
+    position: inherit;
+    margin-bottom: 6px;
+    padding-top: 6px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 21px;
+    text-align: left;
+    color: $career-dark !important;
+    border-bottom: 3px dashed $career-green;
+
+    @media #{$m-to-m} {
+      font-size: 19px;
+      border-bottom-width: 2px;
+    }
+  }
+
+  .crt-post-c .crt-post-text {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: left;
+    color: $career-dark !important;
+
+    @media #{$m-to-m} {
+      padding-bottom: 20px;
+    }
+  }
+
+  .crt-grid-post-v2 .crt-post-header .crt-social-icon,
+  .crt-post-c .crt-post-header .crt-social-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+
+  .crt-post .crt-post-fullname a {
+    color: $career-green;
+  }
+
+  .crt-post .crt-post-footer {
+    padding-left: 20px;
+    text-align: left;
+    background-color: $career-dark;
+    border-top: 0;
+
+    a,
+    span {
+      opacity: 1;
+      color: $career-green;
+    }
+  }
+
+  .crt-post .crt-post-date {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  .crt-grid-post-v2 .crt-post-footer .crt-post-share,
+  .crt-post-c .crt-post-footer .crt-post-share {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    > a {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $career-green;
+    }
+
+    > a + a {
+      margin-left: 5px;
+    }
+  }
+
+  .crt-post .crt-post-footer .crt-post-share a i {
+    color: $career-green;
+  }
+
+  .crt-grid-post-v2 .crt-post-footer .crt-post-share a i::before,
+  .crt-post-c .crt-post-footer .crt-post-share a i::before {
+    margin: 0;
+  }
+
+  .crt-post .crt-post-footer .crt-post-username,
+  .crt-post .crt-post-footer .crt-post-userimage {
+    display: none;
+  }
+
+  .crt-load-more-container {
+    margin-top: 20px;
+  }
+
+  .crt-load-more-container .crt-load-more {
+    @extend .button-career;
+
+    border: 0;
+  }
+}
+
+/* stylelint-enable */

@@ -1,0 +1,88 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a homepage layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+set classes = [
+'layout--homepage',
+]
+%}
+{% if content %}
+    <div{{ attributes.addClass(classes) }}>
+
+    {% if content.header %}
+        <div class="layout__region layout__region--header">
+            {{ content.header }}
+        </div>
+    {% endif %}
+
+    {% if content.countdown %}
+      <div id="homepage-region-countdown" class="layout__region layout__region--countdown" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container container--wide">
+          {{ content.countdown }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if content.exhibition %}
+        <div id="homepage-region-exhibition" class="layout__region layout__region--exhibition" data-aos="fade-up" data-aos-duration="1500">
+          <div class="container container--small">
+            {{ content.exhibition }}
+          </div>
+        </div>
+    {% endif %}
+
+    {% if content.facts %}
+        <div id="homepage-region-facts" class="layout__region layout__region--facts">
+            {{ content.facts }}
+        </div>
+      {% endif %}
+
+      {% if content.sections %}
+        <div id="homepage-region-sections" class="layout__region layout__region--sections">
+            {{ content.sections }}
+        </div>
+      {% endif %}
+
+      {% if content.program %}
+        <div id="homepage-region-program" class="layout__region layout__region--program" data-aos="fade-up" data-aos-duration="1500">
+          <div class="container container--small">
+            {{ content.program }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.participate %}
+        <div id="homepage-region-participate" class="layout__region layout__region--participate" data-aos="fade-up" data-aos-duration="1500">
+          <div class="container">
+            {{ content.participate }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.news %}
+        <div id="homepage-region-news" class="layout__region layout__region--news" data-aos="fade-up" data-aos-duration="1500">
+          <div class="container container--wide">
+            {{ content.news }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.social_media %}
+        <div id="homepage-region-social-media" class="layout__region layout__region--social-media">
+          <div class="container container--wide">
+            {{ content.social_media }}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+{% endif %}

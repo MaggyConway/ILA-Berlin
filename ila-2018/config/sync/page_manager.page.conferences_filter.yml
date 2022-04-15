@@ -1,0 +1,12 @@
+uuid: 74fb494b-835b-4274-8294-16a1b036787a
+langcode: en
+status: true
+dependencies: {  }
+id: conferences_filter
+label: Conferences
+description: ''
+use_admin_theme: false
+path: /conference-speakers
+access_logic: and
+access_conditions: {  }
+parameters: {  }

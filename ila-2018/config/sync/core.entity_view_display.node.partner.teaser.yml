@@ -1,0 +1,37 @@
+uuid: d04a7726-96b9-43ac-86c5-59a1c73591d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.partner.field_image_media
+    - field.field.node.partner.field_parh_contact_person
+    - field.field.node.partner.field_partner_category
+    - field.field.node.partner.field_partner_hall_stand
+    - field.field.node.partner.field_partner_image
+    - field.field.node.partner.field_partner_taxonomy
+    - field.field.node.partner.field_url
+    - node.type.partner
+  module:
+    - user
+id: node.partner.teaser
+targetEntityType: node
+bundle: partner
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_contact_persons: true
+  field_image_media: true
+  field_parh_contact_person: true
+  field_partner_category: true
+  field_partner_hall_stand: true
+  field_partner_image: true
+  field_partner_taxonomy: true
+  field_url: true
+  langcode: true

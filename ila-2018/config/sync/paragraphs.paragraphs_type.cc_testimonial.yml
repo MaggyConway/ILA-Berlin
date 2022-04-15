@@ -1,0 +1,9 @@
+uuid: 5b006b65-9dd7-4d27-a2b6-37d7dd0f3632
+langcode: en
+status: true
+dependencies: {  }
+id: cc_testimonial
+label: 'CareerCenter -- Testimonial'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

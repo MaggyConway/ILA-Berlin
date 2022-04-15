@@ -1,0 +1,22 @@
+uuid: 10d4c66d-faa2-42f3-b586-62429f76c7d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: fapgoS0niAJQiSC-WTFrkRQhfmTLISJjbXQ0BW_BXSI
+id: node.field_number
+field_name: field_number
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

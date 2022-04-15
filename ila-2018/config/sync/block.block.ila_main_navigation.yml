@@ -1,0 +1,27 @@
+uuid: ee05ddb4-36d9-47ea-be28-d063207ed0d9
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ila
+_core:
+  default_config_hash: M9Hdnq2k80QO8MYwL8y6hXhtMd5SxmBNuAfrGY5uNns
+id: ila_main_navigation
+theme: ila
+region: header_bottom
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

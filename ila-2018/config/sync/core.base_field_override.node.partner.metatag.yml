@@ -1,0 +1,18 @@
+uuid: 89050549-ffd2-4ac6-ab3b-ff6913296ab6
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.partner
+id: node.partner.metatag
+field_name: metatag
+entity_type: node
+bundle: partner
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

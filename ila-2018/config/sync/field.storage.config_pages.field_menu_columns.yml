@@ -1,0 +1,25 @@
+uuid: 1fa1a807-9445-4fac-8b40-d538f574cf80
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - entity_reference_revisions
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: config_pages.field_menu_columns
+field_name: field_menu_columns
+entity_type: config_pages
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

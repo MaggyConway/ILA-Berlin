@@ -1,0 +1,21 @@
+uuid: 94c21395-7c89-4885-b25e-bcc0c3832f39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_column_body
+    - paragraphs.paragraphs_type.infographic_box_column
+  module:
+    - text
+id: paragraph.infographic_box_column.field_infographic_column_body
+field_name: field_infographic_column_body
+entity_type: paragraph
+bundle: infographic_box_column
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

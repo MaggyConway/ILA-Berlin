@@ -1,0 +1,40 @@
+uuid: a8a15469-d57c-44be-94a7-60c472fad0c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+    - field.field.block_content.image_fullscreen.field_image
+    - image.style.thumbnail
+  module:
+    - svg_image
+_core:
+  default_config_hash: z_oKvNFg-p3KN8mfHXfVEAIR81D-e1zO4VlTs64Tbws
+id: block_content.image_fullscreen.default
+targetEntityType: block_content
+bundle: image_fullscreen
+mode: default
+content:
+  field_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

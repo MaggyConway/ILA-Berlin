@@ -1,0 +1,9 @@
+uuid: b91148a2-450d-49b9-b154-4f441225beb0
+langcode: en
+status: true
+dependencies: {  }
+id: cc_link_box
+label: 'CareerCenter -- Link box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

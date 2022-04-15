@@ -1,0 +1,16 @@
+uuid: 8beb9150-e820-4582-b11c-1c914bae4259
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_stream_thumbnail_640x360_
+label: 'PT FL Stream Thumbnail (640x360)'
+effects:
+  7463c6e0-51a1-4c40-b505-d6ceabe43e7d:
+    uuid: 7463c6e0-51a1-4c40-b505-d6ceabe43e7d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360
+      anchor: center-center
+pipeline: image_optimiza

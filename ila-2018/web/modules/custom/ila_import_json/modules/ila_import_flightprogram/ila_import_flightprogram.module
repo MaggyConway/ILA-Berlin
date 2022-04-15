@@ -1,0 +1,24 @@
+<?php
+use Drupal\Core\Queue\QueueInterface;
+use GuzzleHttp\Exception\RequestException;
+use \Drupal\ila_import_json\ImportNode;
+
+/**
+ * Implements hook_cron().
+ */
+function ila_import_flightprogram_cron() {
+  $base_url = 'https://ila.ise-aviation.de/apex/datacirculator/ila/tagesprogramm/';
+  $response = \Drupal::httpClient()->get($base_url, array('auth' => array('datacirculation', 'f5r1MRMO7i4Mx7O3DuxN'), 'headers' => array('Accept' => 'text/plain')));
+  $data = $response->getBody();
+  $jsonout = json_decode($data, TRUE);
+  ila_import_flightprogram_run_cron($jsonout);
+}
+
+function ila_import_flightprogram_run_cron($data) {
+  /** @var QueueInterface $queue */
+  $queue = \Drupal::queue('flightprogram_queue_worker', TRUE);
+  foreach($data['items'] as $item) {
+    // Add to queue.
+    $queue->createItem($item);
+  }
+}

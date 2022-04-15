@@ -1,0 +1,9 @@
+uuid: c2692d90-f4f2-499b-a7ff-9ef163cec237
+langcode: de
+status: true
+dependencies: {  }
+id: kontakt_person
+label: 'Kontakt Person'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

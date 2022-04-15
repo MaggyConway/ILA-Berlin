@@ -1,0 +1,16 @@
+uuid: 606c477f-85ef-4f6b-9f2e-7a361ed2ce4b
+langcode: en
+status: true
+dependencies: {  }
+name: media_preview_image_mini
+label: 'Media preview image mini'
+effects:
+  471b659d-d099-4917-90c7-b5d74a6b796b:
+    uuid: 471b659d-d099-4917-90c7-b5d74a6b796b
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 180
+      height: 180
+      anchor: center-center
+pipeline: image_optimiza

@@ -1,0 +1,16 @@
+uuid: c8b5a3d5-5113-40b5-a700-7d9bbb8f53a1
+langcode: en
+status: true
+dependencies: {  }
+name: aussteller_cc_345x190_
+label: 'Aussteller CC (345x190)'
+effects:
+  cb3304fe-3f8a-4275-9d5d-7cedc4caf5e9:
+    uuid: cb3304fe-3f8a-4275-9d5d-7cedc4caf5e9
+    id: image_scale
+    weight: -10
+    data:
+      width: 240
+      height: null
+      upscale: false
+pipeline: image_optimiza

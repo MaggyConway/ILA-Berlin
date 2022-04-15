@@ -1,0 +1,9 @@
+uuid: 1d2a3c51-89e5-4a08-becc-339dd5a98177
+langcode: en
+status: true
+dependencies: {  }
+id: speaker
+label: Speaker
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

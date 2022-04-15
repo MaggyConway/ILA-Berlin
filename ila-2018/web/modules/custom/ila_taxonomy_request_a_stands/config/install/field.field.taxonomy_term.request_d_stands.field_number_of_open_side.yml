@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_number_of_open_side
+    - taxonomy.vocabulary.request_d_stands
+id: taxonomy_term.request_d_stands.field_number_of_open_side
+field_name: field_number_of_open_side
+entity_type: taxonomy_term
+bundle: request_d_stands
+label: 'number of open side'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,67 @@
+uuid: 0af84764-16a0-4fff-a473-237c5f05a26d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_video_messages.field_cc_anchor
+    - field.field.paragraph.fl_video_messages.field_paragraph_reference
+    - field.field.paragraph.fl_video_messages.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_video_messages
+  module:
+    - ds
+    - slick_paragraphs
+id: paragraph.fl_video_messages.default
+targetEntityType: paragraph
+bundle: fl_video_messages
+mode: default
+content:
+  field_paragraph_reference:
+    weight: 1
+    label: hidden
+    settings:
+      optionset: futurelab_video_messages
+      skin: default
+      view_mode: default
+      cache: 0
+      current_view_mode: default
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: slick_paragraphs_vanilla
+    region: content
+  field_paragraph_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: string
+    region: content
+hidden:
+  field_cc_anchor: true

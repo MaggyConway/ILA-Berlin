@@ -1,0 +1,20 @@
+uuid: 087dc0a8-5a9e-4887-ab35-25433c34f371
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+_core:
+  default_config_hash: xgpj_xtxNIYu_Y-xC31kvD-MLu08huqC22RS12BnmBY
+id: node.news.title
+field_name: title
+entity_type: node
+bundle: news
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

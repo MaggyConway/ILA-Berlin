@@ -1,0 +1,4 @@
+ila exhibitor ignore fields lock:
+  title: 'ILA Ingnore Fields locking'
+  description: 'Igrnores locking of the fields in Main exhibitor.'
+  restrict access: TRUE

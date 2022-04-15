@@ -1,0 +1,22 @@
+uuid: 160e8bc6-0efd-41df-9d88-5d5c20be30f5
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.status
+field_name: status
+entity_type: node
+bundle: future_lab
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

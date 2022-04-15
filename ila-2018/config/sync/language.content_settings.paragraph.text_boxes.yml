@@ -1,0 +1,18 @@
+uuid: 9be247f0-94cd-4142-940b-3d096148b84b
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.text_boxes
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.text_boxes
+target_entity_type_id: paragraph
+target_bundle: text_boxes
+default_langcode: site_default
+language_alterable: true

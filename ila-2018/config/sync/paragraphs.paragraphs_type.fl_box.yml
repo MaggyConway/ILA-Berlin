@@ -1,0 +1,9 @@
+uuid: d304171b-d5c7-4be5-bc25-c2298d82093e
+langcode: en
+status: true
+dependencies: {  }
+id: fl_box
+label: 'FL Box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+ila_homepage:
+  label: 'Homepage'
+  path: layouts/homepage
+  template: layout--homepage
+  category: 'ILA'
+  default_region: exhibition
+  regions:
+    header:
+      label: Header
+    countdown:
+      label: Countdown
+    exhibition:
+      label: Exhibition
+    facts:
+      label: Facts
+    sections:
+      label: Sections
+    program:
+      label: Program
+    participate:
+      label: Participate
+    news:
+      label: News
+    social_media:
+      label: Social Media

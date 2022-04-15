@@ -1,0 +1,33 @@
+uuid: e61a5346-f44d-44ef-a293-1bf022e86243
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_facebook_post.field_cc_facebook_post_body
+    - paragraphs.paragraphs_type.cc_facebook_post
+  module:
+    - text
+id: paragraph.cc_facebook_post.default
+targetEntityType: paragraph
+bundle: cc_facebook_post
+mode: default
+content:
+  field_cc_facebook_post_body:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

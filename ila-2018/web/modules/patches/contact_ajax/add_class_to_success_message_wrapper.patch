@@ -1,0 +1,21 @@
+Index: contact_ajax.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- contact_ajax.module	(date 1522077182000)
++++ contact_ajax.module	(date 1569312191000)
+@@ -243,7 +243,12 @@
+ 
+   $output = [
+     '#type' => 'container',
+-    '#attributes' => ['id' => $element_id],
++    '#attributes' => [
++      'id' => $element_id,
++      'class' => [
++        'success--submit-message',
++      ]
++    ],
+   ];
+ 
+   if (!$form_state->getErrors()) {

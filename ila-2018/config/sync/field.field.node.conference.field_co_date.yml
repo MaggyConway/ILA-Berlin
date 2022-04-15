@@ -1,0 +1,28 @@
+uuid: 5fda750d-8ca5-4709-b8b1-e1e6dd2a696f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_date
+    - node.type.conference
+    - taxonomy.vocabulary.conference_dates
+id: node.conference.field_co_date
+field_name: field_co_date
+entity_type: node
+bundle: conference
+label: 'Date (Deprecated, will be removed)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conference_dates: conference_dates
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

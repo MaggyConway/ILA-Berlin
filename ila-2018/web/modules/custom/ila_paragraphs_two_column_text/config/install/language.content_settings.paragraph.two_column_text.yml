@@ -1,0 +1,15 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.two_column_text
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.two_column_text
+target_entity_type_id: paragraph
+target_bundle: two_column_text
+default_langcode: site_default
+language_alterable: true

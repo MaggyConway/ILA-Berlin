@@ -1,0 +1,13 @@
+uuid: f3fa6ee9-cc98-45b9-b5ed-0a25bf643049
+langcode: en
+status: true
+dependencies: {  }
+name: company_list_optimiz
+label: 'Image Optimizator middle'
+processors:
+  44a84b7a-4d09-44b2-8f76-2442450856a9:
+    uuid: 44a84b7a-4d09-44b2-8f76-2442450856a9
+    id: resmushit
+    weight: '1'
+    data:
+      quality: '90'

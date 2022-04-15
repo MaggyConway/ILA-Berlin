@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: carousel
+label: 'Carousel (1100x650)'
+effects:
+  f58ed532-7dc6-4769-8197-8eeace46edab:
+    uuid: f58ed532-7dc6-4769-8197-8eeace46edab
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1100
+      height: 650

@@ -1,0 +1,20 @@
+uuid: cc500ed6-7664-4a89-a9ec-6154aeb9466f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.request_links
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 07MgNfjDDlp0zVQ3VdrL8WhGzAU5pJ9WA8tScvGa6ic
+id: block_content.request_links
+target_entity_type_id: block_content
+target_bundle: request_links
+default_langcode: site_default
+language_alterable: true

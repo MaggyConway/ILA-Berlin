@@ -1,0 +1,10 @@
+uuid: 85895407-dc93-4063-9701-3cae9dc2d9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_news_default
+label: 'CT News: Default'
+targetEntityType: media
+cache: true

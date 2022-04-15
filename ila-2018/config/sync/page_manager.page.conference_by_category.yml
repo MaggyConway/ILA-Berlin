@@ -1,0 +1,12 @@
+uuid: 3233fba6-8a43-4487-a5af-24bdd1b223ce
+langcode: en
+status: true
+dependencies: {  }
+id: conference_by_category
+label: 'Conference by category'
+description: ''
+use_admin_theme: false
+path: '/conferences/{term_name}'
+access_logic: and
+access_conditions: {  }
+parameters: {  }

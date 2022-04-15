@@ -1,0 +1,22 @@
+uuid: a1a36284-2917-473e-bab5-9c15e8022708
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.speaker
+id: node.speaker.promote
+field_name: promote
+entity_type: node
+bundle: speaker
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

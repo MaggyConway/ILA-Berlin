@@ -1,0 +1,9 @@
+uuid: b1a67922-d225-4461-9ae3-8224f0b7269c
+langcode: en
+status: true
+dependencies: {  }
+id: faq_group
+label: 'FAQ group'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 09929f74-09d9-448d-a910-1322232ec8c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.media_audio
+label: Media-Audio
+targetEntityType: node
+cache: true

@@ -1,0 +1,17 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+id: node.downloads.created
+field_name: created
+entity_type: node
+bundle: downloads
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

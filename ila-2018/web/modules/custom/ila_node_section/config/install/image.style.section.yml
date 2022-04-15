@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies: {  }
+name: section
+label: 'Section (360x510)'
+effects:
+  ff8854be-f207-43f7-82e0-48fd650a0941:
+    uuid: ff8854be-f207-43f7-82e0-48fd650a0941
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 510

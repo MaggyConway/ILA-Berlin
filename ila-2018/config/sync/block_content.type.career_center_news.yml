@@ -1,0 +1,8 @@
+uuid: 2d27ddc9-77b7-4792-985b-ec767bb40a53
+langcode: en
+status: true
+dependencies: {  }
+id: career_center_news
+label: 'CareerCenter -- News'
+revision: 0
+description: 'UP2Date block on the Career Center page. Contains Facebook and News elements.'

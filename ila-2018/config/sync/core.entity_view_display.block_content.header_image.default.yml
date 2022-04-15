@@ -1,0 +1,73 @@
+uuid: 2aa05e2a-3d78-4936-aed4-d5714200a56c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_image
+    - field.field.block_content.header_image.field_header_image_image
+    - field.field.block_content.header_image.field_header_image_title
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_header_image_title
+id: block_content.header_image.default
+targetEntityType: block_content
+bundle: header_image
+mode: default
+content:
+  field_header_image_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h1
+            fi-cl: header-image__title
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+hidden:
+  field_header_image_image: true
+  langcode: true

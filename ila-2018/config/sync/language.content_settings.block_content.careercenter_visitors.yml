@@ -1,0 +1,18 @@
+uuid: 8a7a9f1d-c000-4871-ac62-5a308a174724
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_visitors
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.careercenter_visitors
+target_entity_type_id: block_content
+target_bundle: careercenter_visitors
+default_langcode: site_default
+language_alterable: true

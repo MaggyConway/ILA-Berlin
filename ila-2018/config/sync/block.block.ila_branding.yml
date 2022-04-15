@@ -1,0 +1,25 @@
+uuid: c86dbac2-1e3c-4ac0-84cc-2e764e0ce53f
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ila
+_core:
+  default_config_hash: K_Mi6t-JmwkxRQR5knqTSN0hdfeSyjTOyqCdunpJIE4
+id: ila_branding
+theme: ila
+region: header_bottom
+weight: -13
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

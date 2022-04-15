@@ -1,0 +1,10 @@
+label: Panels
+variant_settings:
+  blocks:
+    7e007a1d-ca87-4740-988e-0829719a3742:
+      label: Media
+    5202fcdb-94c8-4050-a1da-fa49c6cfb104:
+      label: 'Media contact'
+    17a3f788-3418-43af-b651-eb9fca74979c:
+      label: 'Media - Description'
+  page_title: Media

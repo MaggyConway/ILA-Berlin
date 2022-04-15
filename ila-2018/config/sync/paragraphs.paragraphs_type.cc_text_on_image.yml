@@ -1,0 +1,9 @@
+uuid: d6f8c8a8-dccf-4402-b474-16a022ccd172
+langcode: en
+status: true
+dependencies: {  }
+id: cc_text_on_image
+label: 'CareerCenter -- Text on image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

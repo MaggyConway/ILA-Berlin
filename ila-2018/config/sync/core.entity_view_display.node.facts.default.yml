@@ -1,0 +1,50 @@
+uuid: e234021c-ae19-4294-8185-52c48f81b699
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.facts.field_facts_number
+    - field.field.node.facts.field_node_metatag
+    - field.field.node.facts.field_number
+    - node.type.facts
+  module:
+    - metatag
+    - text
+    - user
+_core:
+  default_config_hash: 05Sba_Fue-c-6SbWgNCgDKS4WankrUZ8apjmrhUyTag
+id: node.facts.default
+targetEntityType: node
+bundle: facts
+mode: default
+content:
+  field_facts_number:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_node_metatag:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_number:
+    weight: 101
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

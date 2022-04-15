@@ -1,0 +1,19 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.section
+  module:
+    - path
+id: node.section.path
+field_name: path
+entity_type: node
+bundle: section
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

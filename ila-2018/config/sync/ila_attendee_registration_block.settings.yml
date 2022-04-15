@@ -1,0 +1,13 @@
+confirmed: 1
+message:
+  register: 'You have already registered for this conference.'
+  email:
+    subject: test
+    body: test
+  email_attendee:
+    subject: 'ILA Berlin 2020 Conferences – Confirmation of registration'
+    body: "Dear @attendee_salutation @attendee_first_name @attendee_last_name,\r\n\r\nThank you for your registration to the conference. It has been forwarded to the organizer.\r\n\r\nPlease note that this confirmation is not binding. Under circumstances the organizer may be forced to reject applications – for example at an overbooking of the event.\r\n\r\nThe conference organizer will contact you and confirm respectively reject your\r\nparticipation. For questions about the event please get in touch with the contact person mentioned on the website of the conference."
+  email_host:
+    subject: 'Participant for your conference – @title'
+    body: "Dear @host_salutation @host_first_name @host_last_name,\r\n\r\nA participant has registered for your conference via the conference registration form. Our system has sent an automatic confirmation message to the participant. Please contact each participant individually if the participation is possible or not.   \r\n\r\nConference details:\r\n\r\nDate / Time: @conf_date, @conf_time\r\nTitle: @title\r\n\r\nParticipant: @attendee_salutation @attendee_first_name @attendee_last_name\r\nCompany: @attendee_company\r\nIndustry sectors: @attendee_branch\r\nStreet: @attendee_street\r\nPostcode / City: @attendee_zip_code @attendee_city\r\nCountry: @attendee_country\r\nEmail: @attendee_email\r\nPhone: @attendee_phone"
+  thanks: "Dear @user_name,<br>\r\n\r\nthank you very much for your registration.<br>\r\nYou will shortly receive a confirmation by E-Mail.<br>\r\nIf not please check also your spam folder.<br>"

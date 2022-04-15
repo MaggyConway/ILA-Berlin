@@ -1,0 +1,79 @@
+<?php
+/**
+ * @file contains custom functions and hooks.
+ */
+
+use Drupal\Core\Queue\QueueInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function ila_import_job_offer_cron() {
+  
+  $data = file_get_contents(drupal_get_path('module', 'ila_import_job_offer') . '/json_example/20180503_InsideGuidance_PortalExport_5aea6d224d92b3.5354294_formatted.json');
+  $jsonout = json_decode($data, TRUE);
+
+  foreach ($jsonout['included'] as $key => $item) {
+    if ($item['type'] == 'joboffer') {
+      $job_offers[] = $item;
+    }
+  }
+
+  $fields = [
+    'jobofferContactPerson',
+    'careerLevel',
+    'address',
+    'employment',
+    'images',
+  ];
+
+  foreach ($job_offers as $key_offer => $job_offer) {
+    foreach ($fields as $key_field => $field) {
+      if (isset($job_offer['relationships'][$field])) {
+        foreach ($jsonout['included'] as $included) {
+          if ($included['type'] == $job_offer['relationships'][$field]["data"][0]["type"]
+            && $included['id'] == $job_offer['relationships'][$field]["data"][0]["id"]) {
+            $job_offers[$key_offer]['relationships'][$field]["data"][0] = $included;
+            break;
+          }
+        }
+      }
+    }
+    if (isset($job_offers[$key_offer]["relationships"]["images"]["data"][0]["relationships"]["imageFiles"]["data"])) {
+      $last_image_file = array_pop($job_offers[$key_offer]["relationships"]["images"]["data"][0]["relationships"]["imageFiles"]["data"]);
+      foreach ($jsonout['included'] as $imageFile) {
+        if ($imageFile['type'] == $last_image_file["type"]
+          && $imageFile['id'] == $last_image_file["id"]) {
+          $job_offers[$key_offer]["relationships"]["images"]["data"][0] = $imageFile;
+          break;
+        }
+      }
+    }
+    foreach ($jsonout['data'] as $data) {
+      if (isset ($job_offer['relationships']['company']["data"][0]["id"])
+        && $data['type'] == 'company'
+        && $data['id'] == $job_offer['relationships']['company']["data"][0]["id"]) {
+        $job_offers[$key_offer]['relationships']['company']["data"][0] = $data;
+        break;
+      }
+    }
+  }
+
+  _ila_import_job_offer_run_cron($job_offers);
+  
+}
+
+/**
+ * Helper function to run import nodes.
+ * @param $data
+ */
+function _ila_import_job_offer_run_cron($data) {
+  /** @var QueueInterface $queue */
+  $queue = \Drupal::queue('job_offer_queue_worker', TRUE);
+  if ($queue->numberOfItems() == 0) {
+    foreach($data as $item) {
+      // Add to queue.
+      $queue->createItem($item);
+    }
+  }
+}

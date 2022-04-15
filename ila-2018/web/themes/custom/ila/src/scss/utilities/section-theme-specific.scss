@@ -1,0 +1,29 @@
+//
+// A shorthand for theme-specific scss.
+// Use it like:
+//   @include section-theme-specific('background-color', 'red', 'green', 'blue', 'red', 'green', 'blue', 'red')
+//
+// - optionally specify an other selector than '&'
+//
+@mixin section-theme-specific($property, $defense, $aviation, $space, $suppliers, $special, $conferences, $careercenter, $uas, $digital, $selector: '&') {
+  @at-root {
+    .node--style-green-defense#{&} { #{$property}: $defense }
+    .node--style-turquois-aviation#{&} { #{$property}: $aviation }
+    .node--style-blue-space#{&} { #{$property}: $space }
+    .node--style-yellow-suppliers#{&} { #{$property}: $suppliers }
+    .node--style-red-special#{&} { #{$property}: $special }
+    .node--style-purple-conferences#{&} { #{$property}: $conferences }
+    .node--style-green-careercenter#{&} { #{$property}: $careercenter }
+    .node--style-green-defense #{$selector} { #{$property}: $defense }
+    .node--style-turquois-aviation #{$selector} { #{$property}: $aviation }
+    .node--style-blue-space #{$selector} { #{$property}: $space }
+    .node--style-yellow-suppliers #{$selector} { #{$property}: $suppliers }
+    .node--style-red-special #{$selector} { #{$property}: $special }
+    .node--style-purple-conferences #{$selector} { #{$property}: $conferences }
+    .node--style-green-careercenter #{$selector} { #{$property}: $careercenter }
+    .node--style-apricot-uas #{$selector} { #{$property}: $uas }
+    .node--style-apricot-uas#{&} { #{$property}: $uas }
+    .node--style-mint-digital #{$selector} { #{$property}: $digital }
+    .node--style-mint-digital#{&} { #{$property}: $digital }
+  }
+}

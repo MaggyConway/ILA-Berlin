@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - contact_ajax
+third_party_settings:
+  contact_ajax:
+    enabled: true
+    prefix_id: ''
+    render_selector: ''
+    confirmation_type: 3
+    load_from_message:
+      value: "<p>Thank you for your message!</p>\r\n"
+      format: filtered_html
+id: contact
+label: Contact
+recipients:
+  - ila@messe-berlin.de
+reply: ''
+weight: 0
+message: ''
+redirect: ''

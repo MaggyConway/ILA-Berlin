@@ -1,0 +1,36 @@
+.group-header-wrapper {
+  margin-bottom: 60px;
+  padding: 20px 20px 27px;
+  background-color: #015a96;
+
+  @media #{$m-to-m} {
+    margin-bottom: 35px;
+  }
+
+  .fieldset-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media #{$m-to-m} {
+      flex-direction: column;
+    }
+  }
+
+  .field--name-field-fl-header-image {
+    @media #{$m-from-l} {
+      margin-right: 60px;
+    }
+
+    @media #{$m-to-m} {
+      margin-bottom: 20px;
+    }
+  }
+
+  .field--name-node-title {
+    h2 {
+      margin: 0;
+      line-height: 1.42;
+      color: $c-white;
+    }
+  }
+}

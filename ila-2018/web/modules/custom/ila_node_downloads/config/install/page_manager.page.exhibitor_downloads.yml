@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: exhibitor_downloads
+label: 'Exhibitor downloads'
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/downloads
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      press: press
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

@@ -1,0 +1,22 @@
+uuid: dc9a0363-a166-41dd-9e58-f1de7b7b451b
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_header_element
+id: paragraph.fl_header_element.status
+field_name: status
+entity_type: paragraph
+bundle: fl_header_element
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:text:aa0875c6-e372-4f10-a3ce-24fb83e13e90'
+  module:
+    - block_content
+  theme:
+    - ila
+id: ila_header_text
+theme: ila
+region: header_top
+weight: -7
+provider: null
+plugin: 'block_content:aa0875c6-e372-4f10-a3ce-24fb83e13e90'
+settings:
+  id: 'block_content:aa0875c6-e372-4f10-a3ce-24fb83e13e90'
+  label: 'Header text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

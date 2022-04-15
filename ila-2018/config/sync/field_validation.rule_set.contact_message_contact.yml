@@ -1,0 +1,21 @@
+uuid: 5da228a6-0d8e-450a-bb71-10d43d8bdbad
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JUUubnTrVCcFsGqE5MQWrI3hBt2XDy27eOU25S2Y5T0
+name: contact_message_contact
+label: 'contact_message contact validation'
+entity_type: contact_message
+bundle: contact
+field_validation_rules:
+  4a3c391e-c299-4a98-8bb2-ddfef017b15d:
+    uuid: 4a3c391e-c299-4a98-8bb2-ddfef017b15d
+    id: regex_field_validation_rule
+    title: 'Phone number'
+    weight: '2'
+    field_name: field_telephone
+    column: value
+    error_message: 'Phone number is invalid.'
+    data:
+      setting: '/^([+]?[0-9\s-]{3,25})*$/i'

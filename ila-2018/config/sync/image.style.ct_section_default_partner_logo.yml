@@ -1,0 +1,16 @@
+uuid: aa75a5f3-d1d0-4020-a73d-9b210b824168
+langcode: en
+status: true
+dependencies: {  }
+name: ct_section_default_partner_logo
+label: 'CT Section: Default - Partner Logo'
+effects:
+  2c0442e2-cd78-47ce-8681-06e79cb9c971:
+    uuid: 2c0442e2-cd78-47ce-8681-06e79cb9c971
+    id: image_scale
+    weight: 1
+    data:
+      width: 98
+      height: 45
+      upscale: false
+pipeline: image_optimiza

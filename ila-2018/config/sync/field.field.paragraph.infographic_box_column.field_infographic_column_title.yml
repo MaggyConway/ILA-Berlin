@@ -1,0 +1,19 @@
+uuid: a79b809c-288e-45f6-9c7e-99b3547e92f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_column_title
+    - paragraphs.paragraphs_type.infographic_box_column
+id: paragraph.infographic_box_column.field_infographic_column_title
+field_name: field_infographic_column_title
+entity_type: paragraph
+bundle: infographic_box_column
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

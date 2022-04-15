@@ -1,0 +1,11 @@
+id: link_back
+label: 'Link Back'
+ui_limit: ''
+properties:
+  content:
+    value: '<a href="#" class="link-history-back">Back</a>'
+    format: plain_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

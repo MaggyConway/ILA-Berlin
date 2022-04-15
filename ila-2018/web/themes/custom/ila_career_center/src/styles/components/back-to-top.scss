@@ -1,0 +1,60 @@
+.back-to-top {
+  position: fixed;
+  z-index: 2;
+  right: 55px;
+  bottom: 120px;
+  margin-top: auto;
+  margin-right: 40px;
+  margin-bottom: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+
+  &__link {
+    background-color: rgba($c-white, .3);
+    background-size: 13px;
+    animation: pulse ease 2s infinite;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($c-white, .3);
+    }
+
+    @extend .round-btn;
+    @extend .round-btn--top;
+  }
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .contextual {
+    top: -10px;
+    right: 10px;
+  }
+
+  @media screen and (max-width: 880px) {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position-y: center;
+  }
+
+  50% {
+    background-position-y: 6px;
+  }
+
+  100% {
+    background-position-y: center;
+  }
+}

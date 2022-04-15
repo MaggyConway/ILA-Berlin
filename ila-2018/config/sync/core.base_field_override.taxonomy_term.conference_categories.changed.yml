@@ -1,0 +1,18 @@
+uuid: 6332deef-3fb4-47c9-bbca-3d4d45a0317b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_categories
+id: taxonomy_term.conference_categories.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: conference_categories
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

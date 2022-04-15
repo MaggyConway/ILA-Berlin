@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_request_fb1_type_of_partic
+field_name: field_request_fb1_type_of_partic
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Daily display flights'
+    -
+      value: '2'
+      label: 'Sales flights'
+    -
+      value: '3'
+      label: 'Sightseeing- or shuttle flights'
+    -
+      value: '4'
+      label: 'Static presentation only'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

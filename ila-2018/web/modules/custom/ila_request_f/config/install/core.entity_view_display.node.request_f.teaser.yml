@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.request_f.field_booking_conference_rooms
+    - field.field.node.request_f.field_product_group
+    - field.field.node.request_f.field_product_group_index
+    - field.field.node.request_f.field_registration_conferences
+    - field.field.node.request_f.field_request_f_additional_eq
+    - field.field.node.request_f.field_request_f_comments
+    - field.field.node.request_f.field_request_f_conference_topic
+    - field.field.node.request_f.field_request_f_date
+    - field.field.node.request_f.field_request_f_following_servic
+    - field.field.node.request_f.field_request_f_withdraw_from
+    - node.type.request_f
+  module:
+    - user
+id: node.request_f.teaser
+targetEntityType: node
+bundle: request_f
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_booking_conference_rooms: true
+  field_product_group: true
+  field_product_group_index: true
+  field_registration_conferences: true
+  field_request_f_additional_eq: true
+  field_request_f_comments: true
+  field_request_f_conference_topic: true
+  field_request_f_date: true
+  field_request_f_following_servic: true
+  field_request_f_withdraw_from: true
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 490f045d-2a43-4cc4-91cb-20d1f0e3b406
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.page_description
+    - field.storage.block_content.field_sub_title
+_core:
+  default_config_hash: T_sLOS_jl0z3EZrj0GF_Adm_Emll8_oykqcitN9TN5c
+id: block_content.page_description.field_sub_title
+field_name: field_sub_title
+entity_type: block_content
+bundle: page_description
+label: 'Sub title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

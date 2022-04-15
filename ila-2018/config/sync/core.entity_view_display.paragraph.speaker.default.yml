@@ -1,0 +1,44 @@
+uuid: f2d4a809-3f14-46b0-b390-120c7bf9faff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.speaker.field_description
+    - field.field.paragraph.speaker.field_name
+    - paragraphs.paragraphs_type.speaker
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - 'dynamic_token_field:paragraph-formatted_speaker'
+    fields:
+      'dynamic_token_field:paragraph-formatted_speaker':
+        plugin_id: 'dynamic_token_field:paragraph-formatted_speaker'
+        weight: 0
+        label: hidden
+        formatter: default
+id: paragraph.speaker.default
+targetEntityType: paragraph
+bundle: speaker
+mode: default
+content: {  }
+hidden:
+  field_description: true
+  field_name: true

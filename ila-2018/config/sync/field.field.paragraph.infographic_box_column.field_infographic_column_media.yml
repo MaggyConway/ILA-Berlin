@@ -1,0 +1,28 @@
+uuid: fb3d2e75-d7b5-481f-bd50-b44d3b3100a0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_column_media
+    - media.type.image
+    - paragraphs.paragraphs_type.infographic_box_column
+id: paragraph.infographic_box_column.field_infographic_column_media
+field_name: field_infographic_column_media
+entity_type: paragraph
+bundle: infographic_box_column
+label: 'Bild (Media)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

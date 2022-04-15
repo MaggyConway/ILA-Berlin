@@ -1,0 +1,50 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.downloads.body
+    - field.field.node.downloads.field_file_private
+    - field.field.node.downloads.field_image
+    - node.type.downloads
+  module:
+    - ds
+    - ila_file_download_formatter
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_file_private
+        - 'dynamic_token_field:node-file_info_short'
+    fields:
+      'dynamic_token_field:node-file_info_short':
+        plugin_id: 'dynamic_token_field:node-file_info_short'
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.downloads.token
+targetEntityType: node
+bundle: downloads
+mode: token
+content:
+  field_file_private:
+    weight: 0
+    label: hidden
+    settings:
+      link_text: ''
+      custom_text: parent
+    third_party_settings: {  }
+    type: ila_download_link
+    region: content
+hidden:
+  body: true
+  field_image: true
+  langcode: true
+  links: true

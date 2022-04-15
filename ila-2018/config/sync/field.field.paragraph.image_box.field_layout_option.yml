@@ -1,0 +1,21 @@
+uuid: ed056156-b236-465b-8e7b-60cee515175a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout_option
+    - paragraphs.paragraphs_type.image_box
+  module:
+    - options
+id: paragraph.image_box.field_layout_option
+field_name: field_layout_option
+entity_type: paragraph
+bundle: image_box
+label: 'Layout option'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,104 @@
+uuid: 56f59090-c575-47c5-84bd-210fbae0559e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.downloads.body
+    - field.field.node.downloads.field_download_category
+    - field.field.node.downloads.field_downloads_hide_from_view
+    - field.field.node.downloads.field_downloads_show_on_print
+    - field.field.node.downloads.field_file_private
+    - field.field.node.downloads.field_image
+    - field.field.node.downloads.field_node_metatag
+    - image.style.original_image
+    - node.type.downloads
+  module:
+    - ds
+    - ila_file_download_formatter
+    - metatag
+    - svg_image
+    - text
+    - user
+_core:
+  default_config_hash: 32dWc8uUOwxuKVNwUGP-TxCio-Xz3Ag0YhYH7HMGkaU
+id: node.downloads.default
+targetEntityType: node
+bundle: downloads
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_download_category:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_downloads_hide_from_view:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_downloads_show_on_print:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_file_private:
+    weight: 3
+    label: hidden
+    settings:
+      link_text: Download
+      label_source: parent
+      target: ''
+    third_party_settings: {  }
+    type: ila_download_link
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: original_image
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_node_metatag:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  langcode: true

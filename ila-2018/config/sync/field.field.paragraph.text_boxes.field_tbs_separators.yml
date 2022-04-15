@@ -1,0 +1,21 @@
+uuid: 855d7661-786d-4bdd-b56b-f0d4647a137f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tbs_separators
+    - paragraphs.paragraphs_type.text_boxes
+  module:
+    - options
+id: paragraph.text_boxes.field_tbs_separators
+field_name: field_tbs_separators
+entity_type: paragraph
+bundle: text_boxes
+label: Separators
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

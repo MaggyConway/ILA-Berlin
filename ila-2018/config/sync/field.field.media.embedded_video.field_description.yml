@@ -1,0 +1,21 @@
+uuid: 9a159185-3ff0-4f98-b9e1-0383346362c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.embedded_video
+  module:
+    - text
+id: media.embedded_video.field_description
+field_name: field_description
+entity_type: media
+bundle: embedded_video
+label: Beschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: 3a61f73b-7011-4035-a960-fd942068995c
+langcode: en
+status: true
+dependencies: {  }
+id: careercenter_exhibitors
+label: 'CareerCenter -- Exhibitors'
+revision: 0
+description: 'Contains a title, body and a number of images + optional link box.'

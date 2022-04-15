@@ -1,0 +1,12 @@
+uuid: cca7455a-8ecc-4a89-9314-214062d779fb
+langcode: en
+status: true
+dependencies: {  }
+id: conference_registration_confirmation
+label: 'Conference registration confirmation'
+description: ''
+use_admin_theme: false
+path: '/conference/{node_id}/attendee/confirm'
+access_logic: and
+access_conditions: {  }
+parameters: {  }

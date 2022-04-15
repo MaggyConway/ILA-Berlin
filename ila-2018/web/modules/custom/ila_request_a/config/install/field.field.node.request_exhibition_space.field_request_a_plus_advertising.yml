@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_a_plus_advertising
+    - node.type.request_exhibition_space
+  module:
+    - markup
+id: node.request_exhibition_space.field_request_a_plus_advertising
+field_name: field_request_a_plus_advertising
+entity_type: node
+bundle: request_exhibition_space
+label: 'Plus Advertising Box'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>plus Advertising Box</h3>\r\n\r\n<h4>mandatory for all main exhibitors</h4>\r\n\r\n<ul>\r\n\t<li>up to 20 m²: Starter Package 399 EUR</li>\r\n\t<li>from 21 to 80 m²: Classic Package 699 EUR</li>\r\n\t<li>from 81 m²: Premium Package 999 EUR</li>\r\n</ul>\r\n\r\n<p><a href=\"/sites/default/files/filefield_paths/ILA_2018_EN_Advertsing_box.pdf\" target=\"_blank\">Details Advertising Box</a></p>\r\n"
+    format: full_html
+field_type: markup

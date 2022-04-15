@@ -1,0 +1,42 @@
+uuid: a33f9b8d-c147-498a-97bb-7a5acf4a1120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exhibition.field_exhibition_description
+    - field.field.paragraph.exhibition.field_exhibition_image
+    - image.style.exhibition_container_image_s
+    - paragraphs.paragraphs_type.exhibition
+  module:
+    - ds
+    - svg_image
+    - text
+id: paragraph.exhibition.default
+targetEntityType: paragraph
+bundle: exhibition
+mode: default
+content:
+  field_exhibition_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_exhibition_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: exhibition_container_image_s
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+hidden: {  }

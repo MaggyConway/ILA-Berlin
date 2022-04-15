@@ -1,0 +1,7 @@
+name: 'ILA Facets Block'
+description: 'Render Facets in a single block.'
+package: 'ILA'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - facets:facets

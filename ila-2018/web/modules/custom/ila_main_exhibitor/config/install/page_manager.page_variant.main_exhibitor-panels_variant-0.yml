@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.main_exhibitor
+  content:
+    - 'block_content:page_description:f3834c1a-5e4b-4320-be5e-ce1b49214dd9'
+  module:
+    - block_content
+    - node
+    - panels
+id: main_exhibitor-panels_variant-0
+label: 'Angaben zum Hauptaussteller'
+variant: panels_variant
+variant_settings:
+  blocks:
+    0eab8b76-5512-4b5e-b74d-307359d17a46:
+      id: exhibitor_registration
+      label: 'Angaben zum Hauptaussteller'
+      provider: node
+      label_display: '0'
+      type: main_exhibitor
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: 0eab8b76-5512-4b5e-b74d-307359d17a46
+      context_mapping: {  }
+    61ebc672-f287-4ea4-91e0-1fd63e11f547:
+      id: 'block_content:f3834c1a-5e4b-4320-be5e-ce1b49214dd9'
+      label: 'MAIN EXHIBITOR '
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 61ebc672-f287-4ea4-91e0-1fd63e11f547
+      context_mapping: {  }
+  id: panels_variant
+  uuid: dac87cac-b286-46f6-9e4e-622dfd0b9126
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: main_exhibitor-panels_variant-0
+  builder: standard
+page: main_exhibitor
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

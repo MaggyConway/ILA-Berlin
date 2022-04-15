@@ -1,0 +1,19 @@
+uuid: 482f3e2d-e1a8-40ee-baba-0e22bcf1c2c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+id: paragraph.careercenter_title_text_images.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: careercenter_title_text_images
+label: Titel
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

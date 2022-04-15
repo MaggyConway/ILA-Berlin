@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight_in_kg_mtow_
+    - node.type.request_fb_1
+id: node.request_fb_1.field_weight_in_kg_mtow_
+field_name: field_weight_in_kg_mtow_
+entity_type: node
+bundle: request_fb_1
+label: 'Weight in kg (MTOW)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

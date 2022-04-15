@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - ila_core
+  theme:
+    - ila
+id: ila_language_switcher_full
+theme: ila
+region: header_bottom
+weight: -6
+provider: null
+plugin: 'ila_language_block:language_interface'
+settings:
+  id: 'ila_language_block:language_interface'
+  label: 'Language switcher (Full names)'
+  provider: ila_core
+  label_display: '0'
+  links_labels: full
+visibility: {  }

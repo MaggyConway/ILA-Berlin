@@ -1,0 +1,14 @@
+uuid: 713a3c5d-6770-4e9f-a3b3-fdf2560b298e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: atHELAKZ6WSfEaKsW3kqOW3ufKaI8hULq_tkQvu2zf4
+id: error_404
+label: 'Error 404'
+description: ''
+use_admin_theme: false
+path: /404
+access_logic: and
+access_conditions: {  }
+parameters: {  }

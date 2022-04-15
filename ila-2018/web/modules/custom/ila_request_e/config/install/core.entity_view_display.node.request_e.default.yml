@@ -1,0 +1,161 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_e.field_info
+    - field.field.node.request_e.field_product_group
+    - field.field.node.request_e.field_product_group_index
+    - field.field.node.request_e.field_req_e_stand_price_without
+    - field.field.node.request_e.field_request_e_comments
+    - field.field.node.request_e.field_request_e_depth_in_m
+    - field.field.node.request_e.field_request_e_following_servic
+    - field.field.node.request_e.field_request_e_individual_des
+    - field.field.node.request_e.field_request_e_plus_advertising
+    - field.field.node.request_e.field_request_e_plus_auma
+    - field.field.node.request_e.field_request_e_pref_stand_size
+    - field.field.node.request_e.field_request_e_total_in_m2
+    - field.field.node.request_e.field_request_e_width_in_m
+    - field.field.node.request_e.field_stand_price_including_cons
+    - field.field.node.request_e.field_stand_price_including_stan
+    - field.field.node.request_e.field_stand_price_without_s
+    - node.type.request_e
+  module:
+    - markup
+    - user
+id: node.request_e.default
+targetEntityType: node
+bundle: request_e
+mode: default
+content:
+  field_info:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_group_index:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_req_e_stand_price_without:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_request_e_comments:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_request_e_depth_in_m:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_e_following_servic:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_e_individual_des:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_e_plus_advertising:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_e_plus_auma:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_e_pref_stand_size:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_e_total_in_m2:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_e_width_in_m:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_stand_price_including_cons:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_stand_price_including_stan:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_stand_price_without_s:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

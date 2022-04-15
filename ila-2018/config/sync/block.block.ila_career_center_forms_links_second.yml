@@ -1,0 +1,27 @@
+uuid: ac1d383f-300c-4161-84d4-7368bb780428
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.forms
+  module:
+    - system
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: JK0akeibapk9ZocUWVsnZbbLnWdby16FEXyFgjH6Hm4
+id: ila_career_center_forms_links_second
+theme: ila_career_center
+region: header_top_main_nav
+weight: -8
+provider: null
+plugin: 'system_menu_block:forms'
+settings:
+  id: 'system_menu_block:forms'
+  label: Formulare
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

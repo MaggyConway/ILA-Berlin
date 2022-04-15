@@ -1,0 +1,21 @@
+uuid: c5b08c72-63c8-41b0-a506-e455eed56efa
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_text
+    - node.type.event
+  module:
+    - text
+id: node.event.field_teaser_text
+field_name: field_teaser_text
+entity_type: node
+bundle: event
+label: 'Teaser Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

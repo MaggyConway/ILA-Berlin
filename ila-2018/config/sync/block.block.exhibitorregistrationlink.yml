@@ -1,0 +1,25 @@
+uuid: 76b59025-50f3-4c2c-ad99-c221b8b9b4b5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:button_with_link:74bd752b-634a-471f-9b33-ae3138e72360'
+  module:
+    - block_content
+  theme:
+    - ila
+id: exhibitorregistrationlink
+theme: ila
+region: header_top
+weight: -12
+provider: null
+plugin: 'block_content:74bd752b-634a-471f-9b33-ae3138e72360'
+settings:
+  id: 'block_content:74bd752b-634a-471f-9b33-ae3138e72360'
+  label: 'Exhibitor registration link'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

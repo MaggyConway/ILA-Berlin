@@ -1,0 +1,20 @@
+uuid: 371fbe40-8473-45a4-854a-5c61e3220b8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - email_confirmer
+title: 'Queue: Delayed confirmation request dispatcher'
+id: ultimate_cron_queue_email_confirmer_requests
+weight: 10
+module: email_confirmer
+callback: 'ultimate_cron.queue_worker:queueCallback'
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '* * * * *'
+launcher:
+  id: serial
+logger:
+  id: database

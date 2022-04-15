@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function ila_request_c_element_info_alter(array &$types) {
+  if (isset($types['radios'])) {
+    $types['radios']['#process'][] = 'remove_radio_na';
+  }
+}
+
+/**
+ * Function to remove n/a element.
+ */
+function remove_radio_na($element) {
+  if (isset($element['#field_name']) && $element['#field_name'] == 'field_registration_outdoor_area') {
+    unset($element['_none']);
+  }
+  return $element;
+}

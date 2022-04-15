@@ -1,0 +1,19 @@
+uuid: 7177b85e-fef8-44d4-8b6f-53db731f1ff6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle_two
+    - node.type.section
+id: node.section.field_subtitle_two
+field_name: field_subtitle_two
+entity_type: node
+bundle: section
+label: 'Untertitel zwei'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

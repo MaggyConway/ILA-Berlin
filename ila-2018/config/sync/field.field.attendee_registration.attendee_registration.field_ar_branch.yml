@@ -1,0 +1,21 @@
+uuid: 56978399-60bd-45dd-914f-d44fc30f45b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_branch
+  module:
+    - ila_attendee_registration
+    - options
+id: attendee_registration.attendee_registration.field_ar_branch
+field_name: field_ar_branch
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Branch
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

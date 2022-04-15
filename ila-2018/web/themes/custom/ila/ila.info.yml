@@ -1,0 +1,16 @@
+name: ILA
+type: theme
+description: Custom sub theme of Classy
+core_version_requirement: ^8 || ^9
+base theme: classy
+libraries:
+  - ila/global-styling
+# Regions
+regions:
+  header_top: Header Top
+  header_bottom: Header Bottom
+  highlighted: Highlighted
+  content: Content
+  popup: Popup
+  footer_top: Footer Top
+  footer_bottom: Footer Bottom

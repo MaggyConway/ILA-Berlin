@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override to display a summary list.
+ */
+#}
+<style>{{ source('modules/custom/ila_data_export/css/main.css') }}</style>
+<h2>ILA Future Lab Program #AeroDays2020</h2>
+{% if content.data is not empty %}
+  <table>
+    <tr>
+      <th>{% trans %}Date{% endtrans %}</th>
+      <th>{% trans %}Event name and short description{% endtrans %}</th>
+      <th>{% trans %}Location{% endtrans %}</th>
+    </tr>
+  {% for item in content.data %}
+      <tr>
+        <td><p class="event-id">{{ item.event_date ? item.event_date : ''}}</p></td>
+        <td>
+          <h3 class="event-name">{{ item.event_name ? item.event_name : '' }}</h3>
+          <p class="event-teaser-text">{{ item.event_teaser_text ? item.event_teaser_text : '' }}</p>
+        </td>
+        <td><p class="event-location">{{ item.event_location ? item.event_location : '' }}</p></td>
+      </tr>
+  {% endfor %}
+  </table>
+{% endif %}
+
+

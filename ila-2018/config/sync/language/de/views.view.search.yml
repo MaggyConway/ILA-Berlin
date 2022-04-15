@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Suche
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Volltextsuche
+      empty:
+        area:
+          content:
+            value: "<p>Leider keine Treffer.</p>\r\n"
+            format: filtered_html

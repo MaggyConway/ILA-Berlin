@@ -1,0 +1,34 @@
+uuid: 2dea581a-5afd-4d1d-8314-0ad5584dd9f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text
+    - field.storage.block_content.field_paragraphs
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: B2HztVoeFFYZp8kUtMNZZAiktIA_XTnLUUPs7zFe49o
+id: block_content.text.field_paragraphs
+field_name: field_paragraphs
+entity_type: block_content
+bundle: text
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      text:
+        weight: 3
+        enabled: false
+      two_column_text:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

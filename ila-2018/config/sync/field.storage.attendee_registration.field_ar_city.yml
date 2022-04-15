@@ -1,0 +1,21 @@
+uuid: c725c84a-5c0d-43da-8e3b-71c14dd690ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+id: attendee_registration.field_ar_city
+field_name: field_ar_city
+entity_type: attendee_registration
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

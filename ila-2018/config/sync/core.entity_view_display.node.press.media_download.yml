@@ -1,0 +1,110 @@
+uuid: d9f1eff4-ab63-4f23-be9d-668338213517
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.media_download
+    - field.field.node.press.body
+    - field.field.node.press.field_category
+    - field.field.node.press.field_file
+    - field.field.node.press.field_image
+    - field.field.node.press.field_media_file_type_category
+    - field.field.node.press.field_node_metatag
+    - field.field.node.press.field_press_media_category
+    - image.style.media_preview
+    - node.type.press
+  module:
+    - ds
+    - field_group
+    - ila_file_download_formatter
+    - svg_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_image
+        - group_wrapper
+        - node_title
+        - node_post_date
+        - field_file
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 16
+        label: hidden
+        formatter: ds_post_date_ila_format
+      node_title:
+        plugin_id: node_title
+        weight: 15
+        label: hidden
+        formatter: default
+  field_group:
+    group_wrapper:
+      children:
+        - node_title
+        - node_post_date
+        - field_file
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: Wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: text-wrapper
+      label: Wrapper
+      region: content
+_core:
+  default_config_hash: VPrnv3xkYc1Nh0EaIsidfb7XNwNervOdjUVMVU2OLr4
+id: node.press.media_download
+targetEntityType: node
+bundle: press
+mode: media_download
+content:
+  field_file:
+    weight: 17
+    label: hidden
+    settings:
+      label_source: custom
+      link_text: Download
+      target: ''
+    third_party_settings: {  }
+    type: ila_download_link
+    region: content
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: media_preview
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_category: true
+  field_media_file_type_category: true
+  field_node_metatag: true
+  field_press_media_category: true
+  langcode: true
+  links: true

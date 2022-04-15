@@ -1,0 +1,10 @@
+uuid: 31df6a56-4b66-4eda-97d7-87d273ab46dc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eqe4y-poiUxMlDZbzoE8oTC67UgBzvAAP0kHjzRC_WM
+id: page_description
+label: 'Page title'
+revision: 0
+description: 'Page title (H1) with sub title field'

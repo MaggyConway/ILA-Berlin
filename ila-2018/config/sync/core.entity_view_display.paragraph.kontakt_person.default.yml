@@ -1,0 +1,56 @@
+uuid: 2a991dae-ce35-4b3f-8e0f-f8909ca14a3b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kontakt_person.field_cp_first_name
+    - field.field.paragraph.kontakt_person.field_cp_function
+    - field.field.paragraph.kontakt_person.field_cp_mail
+    - field.field.paragraph.kontakt_person.field_cp_name
+    - field.field.paragraph.kontakt_person.field_cp_phone
+    - paragraphs.paragraphs_type.kontakt_person
+id: paragraph.kontakt_person.default
+targetEntityType: paragraph
+bundle: kontakt_person
+mode: default
+content:
+  field_cp_first_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_function:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_mail:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_cp_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_phone:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

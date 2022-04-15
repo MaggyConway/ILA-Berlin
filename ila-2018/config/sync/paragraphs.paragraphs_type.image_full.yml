@@ -1,0 +1,9 @@
+uuid: 19207a41-9d64-4b91-88c8-f485f89ed45c
+langcode: de
+status: true
+dependencies: {  }
+id: image_full
+label: 'Bild (volle Breite)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

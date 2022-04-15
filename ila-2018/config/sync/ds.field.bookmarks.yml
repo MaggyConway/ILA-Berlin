@@ -1,0 +1,11 @@
+id: bookmarks
+label: Bookmarks
+ui_limit: conference|default
+properties:
+  content:
+    value: "<a href=\"\" rel=\"nofollow\" title=\"\">flag</a>\r\n"
+    format: plain_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

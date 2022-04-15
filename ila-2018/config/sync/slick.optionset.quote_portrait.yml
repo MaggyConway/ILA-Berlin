@@ -1,0 +1,70 @@
+uuid: c2af7eb6-c8d0-474e-ac5b-68c6f9dff1bd
+langcode: en
+status: false
+dependencies:
+  enforced:
+    module:
+      - slick
+_core:
+  default_config_hash: gTDd7BDk6y0QigF1mPqCRVvVNxctDTsmmlfvgKMljbw
+id: quote_portrait
+name: quote_portrait
+label: 'Quote portrait'
+weight: -10
+group: ''
+skin: ''
+breakpoints: 0
+optimized: false
+options:
+  options__active_tab: edit-options-settings
+  settings:
+    mobileFirst: false
+    asNavFor: ''
+    accessibility: true
+    adaptiveHeight: false
+    autoplay: false
+    autoplaySpeed: 3000
+    pauseOnHover: true
+    pauseOnDotsHover: false
+    arrows: true
+    prevArrow: Previous
+    nextArrow: Next
+    downArrow: false
+    downArrowTarget: ''
+    downArrowOffset: 0
+    centerMode: false
+    centerPadding: 50px
+    dots: true
+    dotsClass: slick-dots
+    appendDots: .slick__arrow
+    draggable: false
+    fade: true
+    focusOnSelect: false
+    infinite: true
+    initialSlide: 0
+    lazyLoad: ondemand
+    mouseWheel: false
+    randomize: false
+    respondTo: window
+    rtl: false
+    rows: 1
+    slidesPerRow: 1
+    slide: ''
+    slidesToShow: 1
+    slidesToScroll: 1
+    speed: 500
+    swipe: true
+    swipeToSlide: false
+    edgeFriction: 0.35
+    touchMove: true
+    touchThreshold: 5
+    useCSS: true
+    cssEase: ease
+    cssEaseBezier: ''
+    cssEaseOverride: ''
+    useTransform: true
+    easing: linear
+    variableWidth: false
+    vertical: false
+    verticalSwiping: false
+    waitForAnimate: true

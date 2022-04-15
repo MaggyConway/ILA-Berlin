@@ -1,0 +1,63 @@
+uuid: 024b0ad8-f803-4bb7-9555-279fcf4455a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_column_image
+    - paragraphs.paragraphs_type.infographic_box_column
+  module:
+    - content_translation
+    - filefield_paths
+    - image
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: '[date:custom:Y]-[date:custom:m]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+id: paragraph.infographic_box_column.field_infographic_column_image
+field_name: field_infographic_column_image
+entity_type: paragraph
+bundle: infographic_box_column
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,20 @@
+uuid: 197670c3-3dad-4bf3-82e3-5f122d74128c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+_core:
+  default_config_hash: kynDiFBe9ajVx7cKzuiJk7tP0W0M6-Looy_sQqWJ9Tw
+id: block_content.video.changed
+field_name: changed
+entity_type: block_content
+bundle: video
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

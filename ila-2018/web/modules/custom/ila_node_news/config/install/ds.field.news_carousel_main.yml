@@ -1,0 +1,19 @@
+id: news_carousel_main
+label: 'News carousel - Main'
+ui_limit: 'news|*'
+properties:
+  block: 'views_block:news_images-block_main'
+  use_block_title: false
+  config:
+    id: 'views_block:news_images-block_main'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: none
+    context_mapping: {  }
+type: block
+type_label: 'Block field'
+entities:
+  node: node
+langcode: de

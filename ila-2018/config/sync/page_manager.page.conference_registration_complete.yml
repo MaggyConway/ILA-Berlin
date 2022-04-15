@@ -1,0 +1,12 @@
+uuid: 993ef7c7-168d-4fb7-ab39-13560fde8f46
+langcode: en
+status: true
+dependencies: {  }
+id: conference_registration_complete
+label: 'Conference registration complete'
+description: ''
+use_admin_theme: false
+path: '/conference/{node_id}/attendee/complete'
+access_logic: and
+access_conditions: {  }
+parameters: {  }

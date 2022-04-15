@@ -1,0 +1,23 @@
+uuid: 8afcc99b-65f8-4124-ba85-bf4b00db4e7d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_url
+    - media.type.image
+  module:
+    - link
+id: media.image.field_url
+field_name: field_url
+entity_type: media
+bundle: image
+label: URL
+description: 'Für die Verlinkung des Bildes auf einer Logowall'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

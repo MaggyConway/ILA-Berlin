@@ -1,0 +1,31 @@
+uuid: db317d24-7ab2-4668-bb40-ee05d105743a
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_partial_validation
+    - user
+_core:
+  default_config_hash: BGH0yeS0OgNBw79yekA6qNz6y49-fwMVy1_m8KOfynU
+id: request_fh_1
+label: 'Request FB 1'
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/request_fb1
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: current_user
+  -
+    id: main_exhibitor
+    negate: false
+    context_mapping: {  }
+parameters: {  }

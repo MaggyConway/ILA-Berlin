@@ -1,0 +1,246 @@
+uuid: 19b27d70-22f6-4c71-83a4-faacd418e33f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.speaker.field_activities
+    - field.field.node.speaker.field_bio
+    - field.field.node.speaker.field_first_name
+    - field.field.node.speaker.field_linked_in
+    - field.field.node.speaker.field_portrait
+    - field.field.node.speaker.field_position
+    - field.field.node.speaker.field_sp_title
+    - field.field.node.speaker.field_surname
+    - field.field.node.speaker.field_top_speaker
+    - field.field.node.speaker.field_xing
+    - node.type.speaker
+  module:
+    - ds
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_main_information
+        - node_title
+        - 'dynamic_block_field:node-conferences_of_speaker'
+        - field_position
+        - group_biography
+        - field_linked_in
+        - group_biography_wrapper
+        - field_xing
+        - field_bio
+        - group_main_info_image
+        - field_activities
+        - group_main_info_name
+        - field_portrait
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-conferences_of_speaker':
+        plugin_id: 'dynamic_block_field:node-conferences_of_speaker'
+        weight: 1
+        label: hidden
+        formatter: default
+  field_group:
+    group_main_information:
+      children:
+        - group_main_info_image
+        - group_main_info_name
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Main Information'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapper--main-info
+      label: 'Main Information'
+      region: ds_content
+    group_main_info_image:
+      children:
+        - field_portrait
+      parent_name: group_main_information
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info--image
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main info - Image'
+      region: ds_content
+    group_main_info_name:
+      children:
+        - node_title
+        - field_position
+        - field_linked_in
+        - field_xing
+      parent_name: group_main_information
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info--name
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main info - Name'
+      region: ds_content
+    group_biography:
+      children:
+        - group_biography_wrapper
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--biography
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Biography
+      region: ds_content
+    group_biography_wrapper:
+      children:
+        - field_bio
+        - field_activities
+      parent_name: group_biography
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--biography--addtitional
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Biography wrapper'
+      region: ds_content
+id: node.speaker.default
+targetEntityType: node
+bundle: speaker
+mode: default
+content:
+  field_activities:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_bio:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_linked_in:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      target: _blank
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: ds_content
+  field_portrait:
+    type: entity_reference_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: ct_speaker_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: ds_content
+  field_position:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_xing:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      target: _blank
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: ds_content
+hidden:
+  addtoany: true
+  field_first_name: true
+  field_sp_title: true
+  field_surname: true
+  field_top_speaker: true
+  langcode: true
+  links: true

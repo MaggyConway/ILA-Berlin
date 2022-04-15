@@ -1,0 +1,19 @@
+uuid: ad813b0f-c4bc-4c95-8df8-b52ce2502e86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner_hall_stand
+    - node.type.partner
+id: node.partner.field_partner_hall_stand
+field_name: field_partner_hall_stand
+entity_type: node
+bundle: partner
+label: 'Hall stand'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

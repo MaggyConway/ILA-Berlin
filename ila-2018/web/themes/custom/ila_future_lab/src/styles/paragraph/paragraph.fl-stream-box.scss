@@ -1,0 +1,40 @@
+.paragraph--type--fl-stream-box {
+  margin: 0 auto 60px;
+  padding: 40px 80px 70px;
+  display: flex;
+  max-width: 1200px;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: $bg-box;
+  background-image: url('../../assets/images/yellow-stroke-top.svg'),
+    url('../../assets/images/bg-dots.png');
+  background-repeat: no-repeat, repeat-x;
+  background-position: 40% top, left top;
+
+  @media #{$m-to-m} {
+    padding: 30px 20px 50px;
+    flex-direction: column;
+  }
+
+  .field--name-field-title {
+    @extend .title;
+
+    @media #{$m-from-l} {
+      padding-left: 80px;
+      max-width: 350px;
+    }
+
+    @media #{$m-to-m} {
+      margin-bottom: 25px;
+      width: 100%;
+    }
+  }
+
+  .field--name-field-stream {
+    width: 100%;
+    max-width: 640px;
+    font-weight: 700;
+    color: $c-white;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .15);
+  }
+}

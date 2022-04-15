@@ -1,0 +1,18 @@
+uuid: e2e0404a-b200-4eff-9c18-1037b16e09ff
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_block_reference
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.fl_block_reference
+target_entity_type_id: paragraph
+target_bundle: fl_block_reference
+default_langcode: site_default
+language_alterable: true

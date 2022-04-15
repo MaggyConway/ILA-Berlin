@@ -1,0 +1,22 @@
+uuid: 448f613c-c460-4e2a-b622-3816b9435ac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.quote_portrait_container
+id: paragraph.quote_portrait_container.status
+field_name: status
+entity_type: paragraph
+bundle: quote_portrait_container
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

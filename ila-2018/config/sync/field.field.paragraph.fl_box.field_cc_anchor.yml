@@ -1,0 +1,19 @@
+uuid: afcf72cb-e264-47d7-b45f-51acddc7c816
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_anchor
+    - paragraphs.paragraphs_type.fl_box
+id: paragraph.fl_box.field_cc_anchor
+field_name: field_cc_anchor
+entity_type: paragraph
+bundle: fl_box
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

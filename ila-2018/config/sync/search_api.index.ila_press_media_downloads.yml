@@ -1,0 +1,185 @@
+uuid: 0a00a218-b932-4a5a-9ad6-8769f0ff9384
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+    - file
+    - search_api
+    - search_api_solr
+  config:
+    - field.storage.media.field_download_category
+    - field.storage.media.field_download_preview
+    - field.storage.media.field_media_file
+    - field.storage.media.field_media_image
+    - field.storage.media.field_press_info
+    - field.storage.media.field_show_on_downloads
+    - search_api.server.default_database
+id: ila_press_media_downloads
+name: 'ILA Press Media Downloads'
+description: ''
+read_only: false
+field_settings:
+  bundle:
+    label: Medientyp
+    datasource_id: 'entity:media'
+    property_path: bundle
+    type: string
+    dependencies:
+      module:
+        - media
+  field_download_category:
+    label: "Download Kategorie\t"
+    datasource_id: 'entity:media'
+    property_path: field_download_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_download_category
+  field_download_preview:
+    label: Vorschaubild
+    datasource_id: 'entity:media'
+    property_path: field_download_preview
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_download_preview
+  field_media_file:
+    label: Datei
+    datasource_id: 'entity:media'
+    property_path: field_media_file
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_file
+  field_media_image:
+    label: Image
+    datasource_id: 'entity:media'
+    property_path: field_media_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+  field_press_info:
+    label: 'Presseinformationen?'
+    datasource_id: 'entity:media'
+    property_path: field_press_info
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.media.field_press_info
+  field_show_on_downloads:
+    label: 'Auf Download Seite anzeigen?'
+    datasource_id: 'entity:media'
+    property_path: field_show_on_downloads
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.media.field_show_on_downloads
+  filemime:
+    label: 'Datei » Datei » MIME-Typ der Datei'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_file:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_file
+      module:
+        - file
+  filemime_1:
+    label: 'Image » Datei » MIME-Typ der Datei'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_image:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+      module:
+        - file
+  filesize:
+    label: 'Datei » Datei » Dateigröße'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_file:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_file
+      module:
+        - file
+  filesize_1:
+    label: 'Image » Datei » Dateigröße'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_image:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+      module:
+        - file
+  langcode:
+    label: Language
+    datasource_id: 'entity:media'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - media
+  mid:
+    label: ID
+    datasource_id: 'entity:media'
+    property_path: mid
+    type: integer
+    dependencies:
+      module:
+        - media
+  name:
+    label: Name
+    datasource_id: 'entity:media'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - media
+  status:
+    label: Published
+    datasource_id: 'entity:media'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - media
+datasource_settings:
+  'entity:media':
+    bundles:
+      default: false
+      selected:
+        - file
+        - image
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - bundle
+      - field_download_category
+      - filemime
+      - filemime_1
+      - langcode
+      - name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

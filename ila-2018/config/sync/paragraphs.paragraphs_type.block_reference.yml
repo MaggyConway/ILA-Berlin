@@ -1,0 +1,9 @@
+uuid: 764d730c-540f-4867-8e46-b5a415d59bcd
+langcode: en
+status: true
+dependencies: {  }
+id: block_reference
+label: 'Block Reference'
+icon_uuid: null
+description: 'A paragraph contains a reference to some block.'
+behavior_plugins: {  }

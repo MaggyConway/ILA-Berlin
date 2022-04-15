@@ -1,0 +1,28 @@
+uuid: 86e93e4b-5554-450e-a35c-9e5b8f1b3875
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dwn_link_downloads
+    - node.type.downloads
+    - paragraphs.paragraphs_type.dwn_link
+id: paragraph.dwn_link.field_dwn_link_downloads
+field_name: field_dwn_link_downloads
+entity_type: paragraph
+bundle: dwn_link
+label: Downloads
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      downloads: downloads
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

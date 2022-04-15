@@ -1,0 +1,25 @@
+name: 'Content - Media'
+description: 'Node - "Media" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - better_exposed_filters
+  - content_translation
+  - ds
+  - field
+  - field_group
+  - file
+  - filefield_paths
+  - ila_core
+  - ila_file_download_formatter
+  - ila_node_base
+  - ila_taxonomy_media_categories
+  - image
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+package: ILA

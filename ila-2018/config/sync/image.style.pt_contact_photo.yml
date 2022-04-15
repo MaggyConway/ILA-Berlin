@@ -1,0 +1,16 @@
+uuid: f5cbd2f9-a632-43c8-8296-a2e086305df0
+langcode: en
+status: true
+dependencies: {  }
+name: pt_contact_photo
+label: 'PT Contact photo'
+effects:
+  76e6307d-8fdb-4675-8529-40adb3e1cfc0:
+    uuid: 76e6307d-8fdb-4675-8529-40adb3e1cfc0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
+      anchor: center-center
+pipeline: ''

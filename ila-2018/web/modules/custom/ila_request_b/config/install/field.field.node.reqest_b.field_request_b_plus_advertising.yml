@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_b_plus_advertising
+    - node.type.reqest_b
+  module:
+    - markup
+id: node.reqest_b.field_request_b_plus_advertising
+field_name: field_request_b_plus_advertising
+entity_type: node
+bundle: reqest_b
+label: 'Plus Advertising Box'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>plus Advertising Box</h3>\r\n\r\n<h4>mandatory for all chalets</h4>\r\n\r\n<ul>\r\n\t<li>Premium Package 999 EUR</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+field_type: markup

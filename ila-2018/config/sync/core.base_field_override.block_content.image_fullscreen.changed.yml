@@ -1,0 +1,20 @@
+uuid: 0fe778a3-18fd-45ce-9773-1115e2448d40
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+_core:
+  default_config_hash: aE6oaDd8KfXoAuChu5Fx1g7HnInsj2QyJY6QQZIFbzg
+id: block_content.image_fullscreen.changed
+field_name: changed
+entity_type: block_content
+bundle: image_fullscreen
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

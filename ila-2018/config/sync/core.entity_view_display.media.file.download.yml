@@ -1,0 +1,122 @@
+uuid: 1abbb46d-c74a-4872-826b-4698ff43b94d
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.download
+    - field.field.media.file.field_download_category
+    - field.field.media.file.field_download_preview
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_press_info
+    - field.field.media.file.field_show_on_downloads
+    - image.style.media_preview
+    - media.type.file
+  module:
+    - ds
+    - file
+    - svg_image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_download_preview
+      right:
+        - name
+        - created
+        - field_media_file
+id: media.file.download
+targetEntityType: media
+bundle: file
+mode: download
+content:
+  created:
+    type: timestamp
+    weight: 2
+    region: right
+    label: hidden
+    settings:
+      date_format: ila_format
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_download_preview:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: media_preview
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: left
+  field_media_file:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: file_url_plain
+    region: right
+  name:
+    type: string
+    weight: 1
+    region: right
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  field_download_category: true
+  field_press_info: true
+  field_show_on_downloads: true
+  langcode: true
+  thumbnail: true
+  uid: true

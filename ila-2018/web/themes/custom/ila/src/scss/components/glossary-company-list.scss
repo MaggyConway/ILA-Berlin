@@ -1,0 +1,227 @@
+.view-glossary-of-company-list {
+  margin-bottom: 80px;
+  .form-item {
+    float: left !important;
+    label {
+      display: block !important;
+      &:before {
+        display: none !important;
+      }
+    }
+  }
+  .form-actions {
+    display: none;
+  }
+  .view-header {
+    width: 100%;
+    max-width: 1145px;
+    margin: 0 auto 0;
+    margin-bottom: 20px;
+    text-align: left;
+    #link-top {
+      padding-bottom: 10px;
+    }
+  }
+  .view-filters {
+    display: flex;
+    border-top: 1px solid #009cde;
+    border-bottom: 1px solid #009cde;
+    padding-top: 40px;
+    padding-bottom: 28px;
+    @include content-grid(45px);
+    padding-left: 0px;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 768px) {
+      padding: {
+        left: 22px;
+        right: 22px;
+      }
+    }
+
+    .form-wrapper {
+      margin: 0;
+      .form-radios {
+        display: flex;
+        flex-wrap: wrap;
+
+        .form-type-radio {
+
+          margin: 0;
+          margin-right: 20px;
+          margin-bottom: 5px;
+          .disable {
+            color: #979797;
+            pointer-events: none;
+          }
+          & > label {
+            padding: 0;
+            font-weight: 300;
+            line-height: 1.2;
+            color: #009cde;
+
+            &:before {
+              content: none;
+            }
+            &:hover {
+              cursor: pointer;
+              color: #2dccd3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    .views-table {
+      border-bottom: 1px solid #009cde;
+      display: block;
+      position: relative;
+      margin: 25px auto 5px;
+      max-width: 1145px;
+
+      tbody {
+        display: block;
+
+        tr {
+          display: block;
+          padding-top: 25px;
+          padding-left: 25px;
+          margin-bottom: 30px;
+
+          td {
+            display: block;
+            padding-right: 20px;
+            @media #{$m-to-m} {
+              padding-right: 25px;
+            }
+          }
+
+          &:nth-child(even) {
+            background-color: rgba(0, 156, 222, .1);
+          }
+          @media #{$m-to-m} {
+            height: auto;
+          }
+        }
+      }
+
+      caption, tbody {
+        @include content-grid(0);
+        width: 100%;
+        text-align: left;
+      }
+
+      caption {
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: #009cde;
+        padding-left: 0px;
+
+        .cl-group-filter-marker {
+          @media screen and (max-width: 768px) {
+            margin-left: 22px;
+          }
+        }
+
+        .back-to-top__link {
+          position: absolute;
+          bottom: 50px;
+          right: 40px;
+          z-index: 2;
+        }
+      }
+
+      tbody {
+        padding-left: 0px;
+        tr {
+          line-height: 1.2;
+          list-style: none;
+          position: relative;
+
+          @media #{$m-to-m} {
+            margin-left: 0px;
+          }
+        }
+      }
+
+      h3 {
+        color: $conferences-light;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+    }
+  }
+  .company-list-container {
+    padding-bottom: 25px;
+    .company-list-view-wrapper {
+      display: table;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+
+      .image-layout {
+        display: table-cell;
+        padding: {
+          bottom: 20px;
+          top: 20px;
+        }
+        text-align: center;
+        vertical-align: middle;
+        width: 400px;
+        background: white;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+          padding-right: 0;
+          width: 100%;
+        }
+      }
+      .text-layout {
+        display: table-cell;
+        padding-right: 20px;
+        padding-left: 40px;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+          padding-right: 0;
+          width: 100%;
+          padding-left: 0;
+          padding-top: 25px;
+        }
+        .text-first-column,
+        .text-second-column {
+          li {
+            list-style: none;
+            b {
+              font-weight: 500;
+            }
+          }
+        }
+        .text-first-column {
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.block-views-blockglossary-of-company-list-block-1 {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1145px;
+  margin: 80px auto 0;
+  h2 {
+    width: 100%;
+    max-width: 1145px;
+    margin: 0 auto 0;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+}

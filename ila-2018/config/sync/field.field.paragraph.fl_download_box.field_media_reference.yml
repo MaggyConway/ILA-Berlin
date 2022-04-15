@@ -1,0 +1,28 @@
+uuid: a8943218-f632-4680-b36a-81ddf14ded3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference
+    - media.type.image
+    - paragraphs.paragraphs_type.fl_download_box
+id: paragraph.fl_download_box.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+bundle: fl_download_box
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

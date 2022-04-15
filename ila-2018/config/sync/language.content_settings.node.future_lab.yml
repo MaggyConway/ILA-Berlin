@@ -1,0 +1,18 @@
+uuid: 1167fe06-922f-4ccb-99b2-bcb425a022fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.future_lab
+target_entity_type_id: node
+target_bundle: future_lab
+default_langcode: site_default
+language_alterable: true

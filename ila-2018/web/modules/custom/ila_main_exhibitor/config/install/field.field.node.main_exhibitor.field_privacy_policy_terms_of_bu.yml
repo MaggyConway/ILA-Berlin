@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_privacy_policy_terms_of_bu
+    - node.type.main_exhibitor
+  module:
+    - markup
+id: node.main_exhibitor.field_privacy_policy_terms_of_bu
+field_name: field_privacy_policy_terms_of_bu
+entity_type: node
+bundle: main_exhibitor
+label: 'Privacy policy, terms of business'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Privacy policy, terms of business and conditions of participation ILA 2018</h3>\r\n\r\n<p>We agree that the email address and fax number may be passed on to other companies in the Messe Berlin group, to their official partner companies in this country and abroad, and to foreign representatives, for the purposes stated in the data procetion regulations (see enclosure), and we may revoke this approval at any time. It may not be passed on to any other third parties.</p>\r\n"
+    format: full_html
+field_type: markup

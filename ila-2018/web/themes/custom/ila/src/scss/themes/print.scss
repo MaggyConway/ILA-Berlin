@@ -1,0 +1,195 @@
+@page {
+  margin: 0.5in;
+}
+@media print and (color) {
+  * {
+    webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .region-sticky {
+    display: none;
+  }
+}
+
+@media print {
+  .back-to-top__link {
+    display: none;
+  }
+  .messages--status {
+    display: none;
+  }
+  .region-sticky {
+    display: none;
+  }
+  .header.is-sticky {
+    display: none;
+  }
+  .region-content {
+    padding-top: 50px !important;
+  }
+  .header {
+    display: none;
+  }
+
+  .path-m-bdli-events-m {
+    .parallax-slider {
+      display: none;
+    }
+    .layout-content {
+      padding-top: 0 !important;
+    }
+    .layout-container {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      main {
+        background-image: none;
+      }
+    }
+    .view-header {
+      margin-bottom: 0;
+      .button-container {
+        display: none;
+      }
+      .print-info {
+        display: block;
+        .views-table {
+          margin-top: 20px;
+        }
+        p, td {
+          color: #000;
+          font-size: 9px;
+          text-transform: none;
+        }
+        th {
+          font-size: 10px;
+        }
+        .business {
+          td, th {
+            width: 33% !important;
+          }
+        }
+      }
+    }
+    .view-filters {
+      display: none;
+    }
+    .view-content {
+      .view-grouping {
+        .view-grouping-header {
+          padding-top: 20px;
+        }
+
+        .views-table {
+          width: 100%;
+          caption {
+            border-bottom: none;
+          }
+          thead {
+            display: block;
+            tr {
+              display: flex;
+            }
+          }
+          tbody {
+            tr {
+              display: flex;
+              td {
+                padding: 20px 0;
+                font-size: 7.5px;
+                h3 {
+                  font-size: 10px;
+                }
+                .bdli-event-title {
+                  font-size: 9px;
+                }
+                strong {
+                  font-size: 7.5px;
+                }
+              }
+            }
+          }
+          tr {
+            page-break-inside: avoid;
+            width: 100%;
+            .views-field-title {
+              width: 40% !important;
+            }
+            .views-field-field-ev-time {
+              width: 19% !important;
+            }
+            .views-field-field-ev-venue {
+              width: 19% !important;
+            }
+            .views-field-field-contact-persons {
+              width: 22% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    display: none;
+  }
+  .page-node-type-basic-page {
+    .bdli-button-container,
+    .view-header,
+    .view-filters,
+    .menu--section-nodes-menu {
+      display: none;
+    }
+    .layout-content {
+      padding-top: 0 !important;
+    }
+    .layout-container {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .views-table {
+      width: 100%;
+      caption {
+        border-bottom: none;
+      }
+      thead {
+        display: block;
+        tr {
+          display: flex;
+        }
+      }
+      tbody {
+        tr {
+          display: flex !important;
+          justify-content: space-between;
+          page-break-inside: avoid;
+          width: 100%;
+          td {
+            padding: 20px 0 !important;
+            font-size: 12px !important;
+            h3 {
+              font-size: 10px;
+            }
+            &.views-field-title {
+              width: 35% !important;
+            }
+            &.views-field-field-date-and-time{
+              width: 20% !important;
+            }
+            &.views-field-field-ev-venue {
+              width: 20% !important;
+              padding-right: 10px !important;
+            }
+            &.views-field-field-contact-persons {
+              width: 25% !important;
+              padding-right: 10px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

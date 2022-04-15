@@ -1,0 +1,16 @@
+uuid: 192ef557-6451-4e4a-9949-d6bf0db09b76
+langcode: de
+status: true
+dependencies: {  }
+name: banner_desktop
+label: 'Banner Desktop'
+effects:
+  66363e5f-d581-4a26-b8c5-a1a5fabc7851:
+    uuid: 66363e5f-d581-4a26-b8c5-a1a5fabc7851
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 728
+      height: 90
+      anchor: center-center
+pipeline: company_list_optimiz

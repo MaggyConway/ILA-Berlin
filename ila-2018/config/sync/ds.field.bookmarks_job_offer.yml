@@ -1,0 +1,11 @@
+id: bookmarks_job_offer
+label: 'Bookmarks Job offer'
+ui_limit: 'job_offer|*'
+properties:
+  content:
+    value: '[node:nid]'
+    format: plain_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

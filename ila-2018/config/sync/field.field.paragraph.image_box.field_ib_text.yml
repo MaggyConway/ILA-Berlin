@@ -1,0 +1,21 @@
+uuid: dd1c1fd5-2494-4e1f-bd6b-9873f92e32aa
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ib_text
+    - paragraphs.paragraphs_type.image_box
+  module:
+    - text
+id: paragraph.image_box.field_ib_text
+field_name: field_ib_text
+entity_type: paragraph
+bundle: image_box
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

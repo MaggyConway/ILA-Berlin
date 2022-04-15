@@ -1,0 +1,7 @@
+decoupled_submit:
+  version: VERSION
+  js:
+    js/decoupled-submit.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

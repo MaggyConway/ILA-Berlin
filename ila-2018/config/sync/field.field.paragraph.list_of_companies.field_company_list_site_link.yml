@@ -1,0 +1,23 @@
+uuid: 916f6a6e-571c-4ce6-b34f-82cba6c5e9a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_site_link
+    - paragraphs.paragraphs_type.list_of_companies
+  module:
+    - link
+id: paragraph.list_of_companies.field_company_list_site_link
+field_name: field_company_list_site_link
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company site link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

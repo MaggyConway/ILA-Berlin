@@ -1,0 +1,10 @@
+uuid: 1cf34914-88e9-46c1-ab62-1308c615db29
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YkfeTy_CRH3O1Z2z8oaW9I_4SzDqVdcQgXKEuRhGxDc
+name: 'Media categories'
+vid: media_categories
+description: ''
+weight: 0

@@ -1,0 +1,25 @@
+uuid: b25b23c4-ac73-4d23-ae9c-a80fecb31bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference
+    - paragraphs.paragraphs_type.fl_block_reference
+  module:
+    - block_field
+id: paragraph.fl_block_reference.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+bundle: fl_block_reference
+label: 'Block reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'simple_block:future_lab_social_feed': 'simple_block:future_lab_social_feed'
+field_type: block_field

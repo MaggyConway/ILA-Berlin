@@ -1,0 +1,24 @@
+uuid: b52adbb6-7fde-48ad-9ce3-396251da5a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_block_reference.field_block_reference
+    - field.field.paragraph.cc_block_reference.field_cc_anchor
+    - paragraphs.paragraphs_type.cc_block_reference
+  module:
+    - block_field
+id: paragraph.cc_block_reference.default
+targetEntityType: paragraph
+bundle: cc_block_reference
+mode: default
+content:
+  field_block_reference:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden:
+  field_cc_anchor: true

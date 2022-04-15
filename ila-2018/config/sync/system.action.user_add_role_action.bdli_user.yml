@@ -1,0 +1,14 @@
+uuid: 560f4ec3-cb5c-483c-bee9-33dc30cf4b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bdli_user
+  module:
+    - user
+id: user_add_role_action.bdli_user
+label: 'Add the BDLI User role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bdli_user

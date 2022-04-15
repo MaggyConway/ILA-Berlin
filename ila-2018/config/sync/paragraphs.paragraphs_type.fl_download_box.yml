@@ -1,0 +1,9 @@
+uuid: 4c906f41-ea41-41f1-b6bb-e47d116556a4
+langcode: en
+status: true
+dependencies: {  }
+id: fl_download_box
+label: 'FL Download Box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

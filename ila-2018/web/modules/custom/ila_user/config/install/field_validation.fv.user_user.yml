@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies: {  }
+name: user_user
+label: 'user user validation'
+entity_type: user
+bundle: user
+field_validation_rules:
+  e8188c4d-eec0-43a2-8198-09cd9377325b:
+    uuid: e8188c4d-eec0-43a2-8198-09cd9377325b
+    id: regex_field_validation_rule
+    title: 'Phone regexp'
+    weight: '2'
+    field_name: field_telephone
+    column: value
+    error_message: 'Phone number is invalid.'
+    data:
+      setting: '/^([+]?[0-9\s-]{3,25})*$/i'

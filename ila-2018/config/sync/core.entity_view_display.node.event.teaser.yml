@@ -1,0 +1,56 @@
+uuid: ceadda79-4069-4513-b6f9-d8b45a4b1251
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_career_center
+    - field.field.node.event.field_date_and_time
+    - field.field.node.event.field_ev_ila_nr
+    - field.field.node.event.field_ev_venue
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_node_export
+    - field.field.node.event.field_future_lab
+    - field.field.node.event.field_node_metatag
+    - field.field.node.event.field_press_category
+    - field.field.node.event.field_yoast_seo
+    - node.type.event
+  module:
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_career_center: true
+  field_co_add_to_my_calendar: true
+  field_date_and_time: true
+  field_ev_date: true
+  field_ev_ila_nr: true
+  field_ev_venue: true
+  field_event_category: true
+  field_event_node_export: true
+  field_future_lab: true
+  field_node_metatag: true
+  field_press_category: true
+  field_teaser_text: true
+  field_topic: true
+  field_yoast_seo: true
+  langcode: true

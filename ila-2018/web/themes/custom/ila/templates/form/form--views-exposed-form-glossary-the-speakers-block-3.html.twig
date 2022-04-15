@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<form{{ attributes }}>
+  <div class="speaker-filters">
+    <a href="#" class="link-history-back">{% trans %} Back {% endtrans %}</a>
+    <label class="filter-open-btn">{% trans %} Speaker filters {% endtrans %}</label>
+  </div>
+  {{ children }}
+</form>

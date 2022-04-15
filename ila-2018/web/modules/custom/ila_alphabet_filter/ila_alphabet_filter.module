@@ -1,0 +1,67 @@
+<?php
+
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\taxonomy\TermStorage;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\taxonomy\Entity\Term;
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ila_alphabet_filter_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state) {
+  if ($form['#id'] === 'views-exposed-form-glossary-of-company-list-block-1') {
+    $form['#attached']['library'][] = 'ila_alphabet_filter/alph_links.enable';
+    $connection = Database::getConnection();
+    $pager_data = $connection->select('paragraph__field_company_list_title', 'a');
+    $pager_data->fields('a', array('field_company_list_title_value'));
+    $pager_data->join('paragraph__field_list_of_companies_items', 'b', 'b.field_list_of_companies_items_target_id=a.entity_id');
+    $pager_final_data = $pager_data->execute()->fetchAll();
+    $company_titles = array();
+
+    foreach ($pager_final_data as $data) {
+      if (ctype_digit($data->field_company_list_title_value[0])) {
+        $company_titles[] = '#';
+      } else {
+        $company_titles[] = $data->field_company_list_title_value[0];
+      }
+    }
+    $form['#attached']['drupalSettings']['filter_fields']['values'] = array_values(array_unique($company_titles));
+    $form['#attached']['drupalSettings']['views_block_name']['value'] = $form['#id'];
+  }
+  
+  if ($form['#id'] === 'views-exposed-form-glossary-the-speakers-block-2') {
+    $form['#attached']['library'][] = 'ila_alphabet_filter/alph_links.enable';
+    $connection = Database::getConnection();
+    $pager_data = $connection->select('paragraph__field_name', 'a');
+    $pager_data->fields('a', array('field_name_value'));
+    $pager_data->join('node__field_co_speakers', 'b', 'b.field_co_speakers_target_id=a.entity_id');
+    $pager_final_data = $pager_data->execute()->fetchAll();
+    $speaker_titles = array();
+
+    foreach ($pager_final_data as $data) {
+      $speaker_titles[] = strtoupper($data->field_name_value[0]);
+    }
+    $form['#attached']['drupalSettings']['filter_fields']['values'] = array_values(array_unique($speaker_titles));
+    $form['#attached']['drupalSettings']['views_block_name']['value'] = $form['#id'];
+  }
+
+  if ($form['#id'] === 'views-exposed-form-glossary-the-speakers-block-3') {
+    $form['#attached']['library'][] = 'ila_alphabet_filter/alph_links.enable';
+    $connection = Database::getConnection();
+    $pager_data = $connection->select('node__field_surname', 'nfs');
+    $pager_data->fields('nfs', array('field_surname_value', 'entity_id'));
+    $pager_data->join('node_field_data', 'n', 'nfs.entity_id=n.nid');
+    $pager_data->condition('n.status', '1');
+    $pager_final_data = $pager_data->execute()->fetchAll();
+    $speaker_titles = array();
+
+    foreach ($pager_final_data as $data) {
+      $speaker_titles[] = strtoupper($data->field_surname_value[0]);
+    }
+    $form['#attached']['drupalSettings']['filter_fields']['values'] = array_values(array_unique($speaker_titles));
+    $form['#attached']['drupalSettings']['views_block_name']['value'] = $form['#id'];
+  }
+}

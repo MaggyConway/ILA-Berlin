@@ -1,0 +1,23 @@
+uuid: 5b3cf716-b307-40ab-8589-920781157b7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_field
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_block_reference
+field_name: field_block_reference
+entity_type: paragraph
+type: block_field
+settings: {  }
+module: block_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

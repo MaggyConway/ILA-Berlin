@@ -1,0 +1,105 @@
+uuid: c242d209-3d32-4739-a04c-6e1f9e4bc7b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.career_center_news
+    - field.field.block_content.career_center_news.field_cc_grid_components
+    - field.field.block_content.career_center_news.field_cc_news_anchor_id
+    - field.field.block_content.career_center_news.field_cc_news_components
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_accordion:
+      children:
+        - group_general
+        - group_content
+      parent_name: ''
+      weight: 0
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+      label: Accordion
+      region: content
+    group_general:
+      children:
+        - info
+        - langcode
+        - translation
+        - field_cc_news_anchor_id
+      parent_name: group_accordion
+      weight: 20
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: General
+      region: content
+    group_content:
+      children:
+        - field_cc_grid_components
+        - field_cc_news_components
+      parent_name: group_accordion
+      weight: 21
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Content
+      region: content
+id: block_content.career_center_news.default
+targetEntityType: block_content
+bundle: career_center_news
+mode: default
+content:
+  field_cc_news_anchor_id:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_news_components:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: cc_link_box
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_cc_grid_components: true

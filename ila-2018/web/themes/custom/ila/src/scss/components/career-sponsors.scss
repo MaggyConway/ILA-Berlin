@@ -1,0 +1,84 @@
+
+.block-block-content-careercenter_sponsors {
+  position: relative;
+  max-width: 1390px;
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 70px;
+
+  @media #{$m-to-sm} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .career-sponsors__content {
+    padding: 27px 39px 0;
+    border: 1px solid $career-border;	
+    background-color: $career-white;
+    box-shadow: 3px 3px 0 0 $career-green;
+
+    @media #{$m-to-sm} {
+      border: 0;	
+      box-shadow: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .field--name-field-cc-sponsors-first-line {
+    color: $career-dark;	
+    font-family: $career-font;
+    font-size: 24px;	
+    font-weight: bold;	
+    letter-spacing: 2px;	
+    line-height: 1.25;
+  }
+
+  .field--name-field-cc-sponsors-second-line {
+    color: $career-black;	
+    font-family: $career-font;	
+    font-size: 24px;	
+    font-weight: bold;	
+    letter-spacing: 2px;	
+    line-height: 1.25;	
+    text-shadow: 2px 2px 0 $career-green;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $career-dark;
+  }
+
+  .field--name-field-cc-sponsors-images {
+    padding: 45px 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > .field__item {
+      margin-bottom: 20px;
+      padding: 0 10px;
+      display: flex;
+
+      @media #{$m-to-sm} {
+        width: 100%;
+        margin-bottom: 40px;
+        padding-left: 40px;
+      }
+
+      img {
+        align-self: center;
+      }
+      &:first-child {
+        padding-left: 0;
+        @media #{$m-to-sm} {
+          padding-left: 40px;
+        }
+      }
+      &:last-child {
+        padding-right: 0;
+        @media #{$m-to-sm} {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

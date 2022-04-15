@@ -1,0 +1,82 @@
+uuid: de52a43c-c6f8-4e3a-ad7a-9eb7534da787
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_reference
+    - paragraphs.paragraphs_type.careercenter_view_reference
+  module:
+    - viewsreference
+id: paragraph.careercenter_view_reference.field_view_reference
+field_name: field_view_reference
+entity_type: paragraph
+bundle: careercenter_view_reference
+label: 'View reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    data_export: 0
+    entity_reference: 0
+    entity_browser: 0
+    feed: 0
+  preselect_views:
+    careercenter_content_list: careercenter_content_list
+    careercenter_events: careercenter_events
+    careercenter_job_offers: careercenter_job_offers
+    careercenter_media_list: careercenter_media_list
+    aircraft: 0
+    attendee_registration_confirmation_: 0
+    banner: 0
+    bdli_events: 0
+    block_content: 0
+    categories_conferences: 0
+    conferences: 0
+    content: 0
+    csv_main_exhibitor: 0
+    downloads: 0
+    editor_content_pages: 0
+    events: 0
+    event_categories: 0
+    facts: 0
+    files: 0
+    glossary_of_company_list: 0
+    glossary_the_speakers: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    news: 0
+    news_images: 0
+    paragraph_gallery: 0
+    partners: 0
+    press_logos_and_banner: 0
+    redirect: 0
+    request_b_chalets: 0
+    request_d_stands_including_construction_: 0
+    request_d_stands_without_stand_construction_: 0
+    request_e_stands_including_construction_: 0
+    request_e_stands_without_stand_construction_: 0
+    request_f_stands: 0
+    request_print: 0
+    request_s_areas: 0
+    sections: 0
+    stand_number: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+  enabled_settings:
+    offset: 0
+    argument: 0
+    title: 0
+    limit: 0
+    pager: 0
+field_type: viewsreference

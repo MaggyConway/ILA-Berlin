@@ -1,0 +1,20 @@
+uuid: 8e767fe4-9911-473e-bcc1-507501867de4
+langcode: en
+status: true
+dependencies: {  }
+name: node_conference
+label: 'node conference validation'
+entity_type: node
+bundle: conference
+field_validation_rules:
+  6db70062-3b31-4ee8-bf46-2f14e32f00ff:
+    uuid: 6db70062-3b31-4ee8-bf46-2f14e32f00ff
+    id: length_field_validation_rule
+    title: 'Conference teaser length'
+    weight: 1
+    field_name: field_co_teaser_text
+    column: value
+    error_message: 'The maximum length is 300 characters'
+    data:
+      min: '0'
+      max: '300'

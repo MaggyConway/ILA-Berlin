@@ -1,0 +1,21 @@
+uuid: 05894513-dd33-4eae-a1e9-dff3a66ceaa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_style
+    - node.type.basic_page
+  module:
+    - options
+id: node.basic_page.field_style
+field_name: field_style
+entity_type: node
+bundle: basic_page
+label: Style
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

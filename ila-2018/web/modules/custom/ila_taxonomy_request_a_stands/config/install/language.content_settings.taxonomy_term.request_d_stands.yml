@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.request_d_stands
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.request_d_stands
+target_entity_type_id: taxonomy_term
+target_bundle: request_d_stands
+default_langcode: site_default
+language_alterable: true

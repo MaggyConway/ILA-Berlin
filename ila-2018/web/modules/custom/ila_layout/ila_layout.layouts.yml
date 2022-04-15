@@ -1,0 +1,11 @@
+ila_one_col_bricks:
+  label: 'One Column - Bricks'
+  path: layouts/one_col_bricks
+  template: layout--one-col-bricks
+  category: 'ILA'
+  default_region: top
+  regions:
+    top:
+      label: Top
+    bottom:
+      label: Bottom

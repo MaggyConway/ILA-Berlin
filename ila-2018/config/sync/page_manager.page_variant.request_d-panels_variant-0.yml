@@ -1,0 +1,58 @@
+uuid: 96314460-a331-48c8-bd19-754092cc023f
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_d
+  content:
+    - 'block_content:page_description:b759eae2-6456-4ba6-90af-6a50d4cf0e5b'
+  module:
+    - block_content
+    - node
+    - panels
+_core:
+  default_config_hash: p866XZLVsFbPTOc678LcdhmEEx8KyFH1-9a3sNmoJPA
+id: request_d-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    172da1e4-678c-4460-95b6-3556b2f32a6b:
+      id: exhibitor_registration
+      label: 'Exhibitor registration'
+      provider: node
+      label_display: '0'
+      type: request_d
+      form_mode: default
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: 172da1e4-678c-4460-95b6-3556b2f32a6b
+      context_mapping: {  }
+    7fb49c53-e206-4298-9007-6d11fe66da98:
+      id: 'block_content:b759eae2-6456-4ba6-90af-6a50d4cf0e5b'
+      label: 'Registration International Suppliers Center (ISC)'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 7fb49c53-e206-4298-9007-6d11fe66da98
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 87b6ecb4-1153-471f-923c-c889435b6d7a
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: request_d-panels_variant-0
+  builder: standard
+page: request_d
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

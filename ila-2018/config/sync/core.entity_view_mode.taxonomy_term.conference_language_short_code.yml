@@ -1,0 +1,10 @@
+uuid: 7cfa6021-b4e7-4afc-9e78-f60c1c049a5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.conference_language_short_code
+label: 'Conference language short code'
+targetEntityType: taxonomy_term
+cache: true

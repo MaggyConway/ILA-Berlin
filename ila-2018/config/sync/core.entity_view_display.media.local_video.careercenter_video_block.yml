@@ -1,0 +1,55 @@
+uuid: 23212c08-8f1d-4300-a5a4-7768fa7af034
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.careercenter_video_block
+    - field.field.media.local_video.field_career_center
+    - field.field.media.local_video.field_description
+    - field.field.media.local_video.field_media_video_file
+    - media.type.local_video
+  module:
+    - ds
+    - file
+    - text
+id: media.local_video.careercenter_video_block
+targetEntityType: media
+bundle: local_video
+mode: careercenter_video_block
+content:
+  field_description:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_media_video_file:
+    type: file_video
+    weight: 0
+    label: hidden
+    settings:
+      controls: true
+      multiple_file_display_type: tags
+      width: 398
+      height: 223
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_career_center: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

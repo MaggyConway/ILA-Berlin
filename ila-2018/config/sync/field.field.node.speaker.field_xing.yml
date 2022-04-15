@@ -1,0 +1,23 @@
+uuid: e35f250d-31a4-4298-ac3e-bea7a45d3e6e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_xing
+    - node.type.speaker
+  module:
+    - link
+id: node.speaker.field_xing
+field_name: field_xing
+entity_type: node
+bundle: speaker
+label: XING
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

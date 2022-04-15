@@ -1,0 +1,16 @@
+uuid: 5ccc0fa1-9968-4a1f-a31a-135a0cccca10
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_testimonial
+label: 'PT FL Testimonial'
+effects:
+  a4a5fece-9ed9-444b-a411-9754b8847e10:
+    uuid: a4a5fece-9ed9-444b-a411-9754b8847e10
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 180
+      anchor: center-center
+pipeline: image_optimiza

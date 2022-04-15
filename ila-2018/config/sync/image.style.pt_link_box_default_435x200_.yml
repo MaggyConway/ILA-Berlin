@@ -1,0 +1,16 @@
+uuid: f4cc9df3-5ed4-49cd-9f87-56eeeaa1e01d
+langcode: en
+status: true
+dependencies: {  }
+name: pt_link_box_default_435x200_
+label: 'PT Link Box: Default (435x200)'
+effects:
+  d94203d2-d275-4267-b163-9f94ad907322:
+    uuid: d94203d2-d275-4267-b163-9f94ad907322
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 435
+      height: 200
+      anchor: center-center
+pipeline: image_optimiza

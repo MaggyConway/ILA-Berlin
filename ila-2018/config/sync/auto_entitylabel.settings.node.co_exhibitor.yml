@@ -1,0 +1,6 @@
+status: '1'
+pattern: 'co-exhibitor-[current-user:uid] ([node:created:short])'
+php: 0
+dependencies:
+  config:
+    - node.type.co_exhibitor

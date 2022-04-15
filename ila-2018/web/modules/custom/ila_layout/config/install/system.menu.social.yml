@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: social
+label: Social
+description: 'Links to social media'
+locked: false

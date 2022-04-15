@@ -1,0 +1,26 @@
+uuid: 0a03386b-7c89-48f7-aaaf-fda877ac80cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_header_image_container.field_cc_anchor
+    - field.field.paragraph.cc_header_image_container.field_paragraph_reference
+    - paragraphs.paragraphs_type.cc_header_image_container
+  module:
+    - entity_reference_revisions
+id: paragraph.cc_header_image_container.default
+targetEntityType: paragraph
+bundle: cc_header_image_container
+mode: default
+content:
+  field_paragraph_reference:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_cc_anchor: true

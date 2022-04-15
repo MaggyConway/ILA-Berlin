@@ -1,0 +1,8 @@
+uuid: 01cd1782-d5b8-4cf7-b408-e0082664ce26
+langcode: de
+status: true
+dependencies: {  }
+id: node__bdli_event
+label: 'Content: BDLI-Event'
+tags:
+  robots: 'noindex, nofollow, noarchive, nosnippet, noydir, noimageindex, notranslate'

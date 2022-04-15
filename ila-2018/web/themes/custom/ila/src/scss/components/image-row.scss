@@ -1,0 +1,32 @@
+.paragraph--type--image-row {
+  margin-bottom: 80px;
+  @media #{$m-to-s} {
+    margin-bottom: 30px;
+  }
+  .field--name-field-image-row-images,
+  .field--name-field-image-row-media {
+    display: flex;
+    @media #{$m-to-m} {
+      flex-wrap: wrap;
+    }
+
+    > .field__item {
+      flex-basis: 25%;
+      margin: 4px 4px 4px 0;
+      @media #{$m-to-m} {
+        flex-basis: 50%;
+        margin: 0;
+        padding: 2px;
+
+        img {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        @media #{$m-from-l} {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

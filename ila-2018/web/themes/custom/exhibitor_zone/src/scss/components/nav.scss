@@ -1,0 +1,135 @@
+.sidebar {
+  .menu {
+    padding-left: 10px;
+    padding-right: 35px;
+    &-item {
+      > a {
+        text-transform: uppercase;
+        color: $c-white;
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: 500;
+        font-size: 14px;
+        border-bottom: 1px solid $c-lightblue;
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: $c-lightblue;
+        }
+
+      }
+      &--active-trail {
+        > a {
+          color:  rgb(155, 255, 255);
+        }
+      }
+
+      &--expanded {
+        > a {
+          border-bottom: none;
+        }
+        .menu {
+          padding-left: 25px;
+          padding-right: 0;
+        }
+        .menu-item a {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          font-weight: 400;
+        }
+      }
+
+      .menu-item a {
+        border: none;
+        text-transform: initial;
+      }
+    }
+    .open {
+      > a {
+        background: transparent;
+        border-bottom: none;
+      }
+    }
+    .dropdown-menu {
+      position: static;
+      background-color: transparent;
+      border: none;
+      float: none;
+      box-shadow: none;
+      padding-left: 15px;
+      border-bottom: 1px solid $c-lightblue;
+      border-radius: 0;
+
+      a {
+        padding-left: 0;
+        padding-right: 0;
+        color: $c-white;
+
+        &:hover,
+        &:active {
+          background-color: transparent;
+          opacity: .85;
+        }
+      }
+    }
+  }
+}
+
+.exhibitor-locked {
+  .sidebar {
+    .nav {
+      > li {
+        > a {
+          &[data-drupal-link-system-path = "exhibitor-zone/main-exhibitor"] {
+            position: relative;
+            padding-left: 15px;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              width: 14px;
+              height: 14px;
+              margin-top: -8px;
+              background: url('../img/lock.png') no-repeat center;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  &--top {
+    display: flex;
+    height: 100%;
+
+    > li {
+      height: 100%;
+
+      &.active {
+        background-color: rgba($c-white, .3);
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: $c-white;
+        transition: .3s;
+        padding: 10px 20px;
+
+        &:hover,
+        &:focus {
+          opacity: .7;
+          background: none;
+        }
+      }
+    }
+  }
+}

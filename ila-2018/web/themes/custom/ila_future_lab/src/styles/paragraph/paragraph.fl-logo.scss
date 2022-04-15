@@ -1,0 +1,77 @@
+.paragraph--type--fl-logo {
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+
+  .field--name-field-media-reference-multiple {
+    display: flex;
+    justify-content: center;
+
+    .field__item {
+      margin: 0 15px;
+      max-width: 170px;
+
+      @media #{$m-to-2l} {
+        margin: 0 10px;
+        max-width: 150px;
+      }
+
+      @media #{$m-to-m} {
+        margin: 0 5px;
+        max-width: 100px;
+      }
+    }
+
+    @media #{$m-to-2l} {
+      flex-wrap: wrap;
+    }
+
+    @media #{$m-to-m} {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  .field--name-field-media-image {
+    align-items: center;
+
+    img,
+    svg {
+      transition: all .3s ease;
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .field--name-field-fl-logo-location {
+    margin: 0 15px;
+    max-width: 170px;
+    font-size: 21px;
+    line-height: 1.28;
+    font-weight: 900;
+    text-align: center;
+    color: #7e7e7e;
+
+    a {
+      color: #7e7e7e;
+    }
+
+    @media #{$m-to-m} {
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 100%;
+      order: -1;
+    }
+  }
+
+  @media #{$m-to-m} {
+    padding: 30px 0;
+    flex-direction: column;
+  }
+}

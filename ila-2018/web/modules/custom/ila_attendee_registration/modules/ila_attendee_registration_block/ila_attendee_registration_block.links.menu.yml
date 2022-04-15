@@ -1,0 +1,6 @@
+ila_attendee_registration_block.settings:
+  title: Attendee registration email settings
+  description: 'Configure the Message after registration on conference'
+  parent: system.admin_config_system
+  route_name: ila_attendee_registration_block.settings
+  weight: 100

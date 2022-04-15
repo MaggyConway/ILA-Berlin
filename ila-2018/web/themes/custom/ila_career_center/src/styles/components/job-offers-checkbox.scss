@@ -1,0 +1,72 @@
+/* stylelint-disable */
+
+.view-careercenter-job-offers {
+  .facets-widget-checkbox {
+    .facets-checkbox {
+      position: absolute;
+      opacity: 0;
+
+      &:hover + label::before {
+        background: rgba($color: #ffffff, $alpha: .2);
+      }
+
+      &:focus + label::before {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, .12);
+      }
+
+      &:disabled + label {
+        color: lighten($color: $career-dark, $amount: 30);
+        cursor: auto;
+      }
+
+      &:disabled + label::before {
+        background: lighten($color: $career-dark, $amount: 30);
+        border-color: lighten($color: $career-dark, $amount: 20);
+        box-shadow: none;
+      }
+
+      &:checked + label::after {
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        width: 15px;
+        height: 15px;
+        content: '';
+        background: url('../../assets/images/checkmark.svg') center/cover no-repeat;
+
+        @media #{$m-to-m} {
+          top: 3px;
+          left: 2px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      & + label {
+        position: relative;
+        padding: 0;
+        display: block;
+        cursor: pointer;
+      }
+
+      & + label::before {
+        margin-right: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: text-top;
+        content: '';
+        background: transparent;
+        border: 1px solid #ffffff;
+        transition: all .3s ease;
+
+        @media #{$m-to-m} {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable */

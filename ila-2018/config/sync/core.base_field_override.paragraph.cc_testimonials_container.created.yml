@@ -1,0 +1,18 @@
+uuid: 8b1daa7e-ef8f-4c04-a9eb-44e1b639531d
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_testimonials_container
+id: paragraph.cc_testimonials_container.created
+field_name: created
+entity_type: paragraph
+bundle: cc_testimonials_container
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

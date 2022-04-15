@@ -1,0 +1,21 @@
+uuid: b2b66420-960c-445b-ba06-7dc0434b4822
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_node_metatag
+    - node.type.career_center
+  module:
+    - metatag
+id: node.career_center.field_node_metatag
+field_name: field_node_metatag
+entity_type: node
+bundle: career_center
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

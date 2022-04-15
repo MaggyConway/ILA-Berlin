@@ -1,0 +1,10 @@
+uuid: d512c07f-f1e0-4697-a5fe-85e2ce2831f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_video_message_default
+label: 'PT FL Video Message: Default'
+targetEntityType: media
+cache: true

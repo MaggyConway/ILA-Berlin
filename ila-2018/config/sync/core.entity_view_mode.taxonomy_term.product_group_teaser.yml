@@ -1,0 +1,10 @@
+uuid: 66402aa8-8a45-4ca5-83d1-13b2a8148a87
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.product_group_teaser
+label: 'Product Group Teaser'
+targetEntityType: taxonomy_term
+cache: true

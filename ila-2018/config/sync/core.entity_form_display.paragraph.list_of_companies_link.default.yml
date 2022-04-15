@@ -1,0 +1,35 @@
+uuid: 17a66052-d369-41dd-80ba-97a1d2ac5f56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_of_companies_link.field_list_of_companies_items
+    - paragraphs.paragraphs_type.list_of_companies_link
+  module:
+    - paragraphs
+id: paragraph.list_of_companies_link.default
+targetEntityType: paragraph
+bundle: list_of_companies_link
+mode: default
+content:
+  field_list_of_companies_items:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: list_of_companies
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

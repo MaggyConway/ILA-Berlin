@@ -1,0 +1,161 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_d.field_info
+    - field.field.node.request_d.field_product_group
+    - field.field.node.request_d.field_product_group_index
+    - field.field.node.request_d.field_request_d_comments
+    - field.field.node.request_d.field_request_d_depth_in_m
+    - field.field.node.request_d.field_request_d_following_servic
+    - field.field.node.request_d.field_request_d_individual_des
+    - field.field.node.request_d.field_request_d_plus_advertising
+    - field.field.node.request_d.field_request_d_plus_auma
+    - field.field.node.request_d.field_request_d_pref_stand_size
+    - field.field.node.request_d.field_request_d_stands_without_s
+    - field.field.node.request_d.field_request_d_total_in_m2
+    - field.field.node.request_d.field_request_d_width_in_m
+    - field.field.node.request_d.field_stand_price
+    - field.field.node.request_d.field_stand_price_including_stan
+    - field.field.node.request_d.field_stand_price_without_stand_
+    - node.type.request_d
+  module:
+    - markup
+    - user
+id: node.request_d.default
+targetEntityType: node
+bundle: request_d
+mode: default
+content:
+  field_info:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_group_index:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_d_comments:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_request_d_depth_in_m:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_d_following_servic:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_d_individual_des:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_d_plus_advertising:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_d_plus_auma:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_d_pref_stand_size:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_d_stands_without_s:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_request_d_total_in_m2:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_d_width_in_m:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_stand_price:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_stand_price_including_stan:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_stand_price_without_stand_:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,26 @@
+uuid: b63f3a9e-6a79-4f3b-978d-f2d4d80aa94d
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_partial_validation
+    - user
+id: requests
+label: Requests
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/requests
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: true
+    context_mapping:
+      user: current_user
+  -
+    id: main_exhibitor
+    negate: false
+    context_mapping: {  }
+parameters: {  }

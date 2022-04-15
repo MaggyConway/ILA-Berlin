@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_salutation
+  module:
+    - options
+    - user
+id: user.user.field_salutation
+field_name: field_salutation
+entity_type: user
+bundle: user
+label: Salutation
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

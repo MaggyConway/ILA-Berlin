@@ -1,0 +1,33 @@
+uuid: 36900e3c-b1a9-431e-b6c3-11170e6bc433
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_link_list.field_link_list_links
+    - field.field.paragraph.cc_link_list.field_link_list_text
+    - paragraphs.paragraphs_type.cc_link_list
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.cc_link_list.default
+targetEntityType: paragraph
+bundle: cc_link_list
+mode: default
+content:
+  field_link_list_links:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_link_list_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,15 @@
+uuid: bec462bf-6110-42bc-a692-be29f50ab782
+langcode: de
+status: true
+dependencies:
+  module:
+    - video_embed_media
+id: embedded_video
+label: 'Video (embedded)'
+description: ''
+source: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

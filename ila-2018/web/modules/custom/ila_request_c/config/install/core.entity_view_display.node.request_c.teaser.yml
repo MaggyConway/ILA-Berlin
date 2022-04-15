@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.request_c.field__outdoor_area
+    - field.field.node.request_c.field_product_group
+    - field.field.node.request_c.field_product_group_index
+    - field.field.node.request_c.field_registration_outdoor_area
+    - field.field.node.request_c.field_request_c_comments
+    - field.field.node.request_c.field_request_c_depth_in_m
+    - field.field.node.request_c.field_request_c_plus_advertising
+    - field.field.node.request_c.field_request_c_plus_auma
+    - field.field.node.request_c.field_request_c_preferred_stand
+    - field.field.node.request_c.field_request_c_registration_inf
+    - field.field.node.request_c.field_request_c_registration_of
+    - field.field.node.request_c.field_request_c_total_in_m2
+    - field.field.node.request_c.field_request_c_we_will_show
+    - field.field.node.request_c.field_request_c_width_in_m
+    - node.type.request_c
+  module:
+    - user
+id: node.request_c.teaser
+targetEntityType: node
+bundle: request_c
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field__outdoor_area: true
+  field_product_group: true
+  field_product_group_index: true
+  field_registration_outdoor_area: true
+  field_request_c_comments: true
+  field_request_c_depth_in_m: true
+  field_request_c_plus_advertising: true
+  field_request_c_plus_auma: true
+  field_request_c_preferred_stand: true
+  field_request_c_registration_inf: true
+  field_request_c_registration_of: true
+  field_request_c_total_in_m2: true
+  field_request_c_we_will_show: true
+  field_request_c_width_in_m: true
+  langcode: true

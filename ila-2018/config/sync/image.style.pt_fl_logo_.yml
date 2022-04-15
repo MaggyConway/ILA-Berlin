@@ -1,0 +1,16 @@
+uuid: 7ad7690d-9df5-4fd8-a4f5-266b4fce3e85
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_logo_
+label: 'PT FL Logo'
+effects:
+  608b2844-29c1-4c5b-a5fd-eeae6cdccefb:
+    uuid: 608b2844-29c1-4c5b-a5fd-eeae6cdccefb
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: 120
+      upscale: false
+pipeline: image_optimiza

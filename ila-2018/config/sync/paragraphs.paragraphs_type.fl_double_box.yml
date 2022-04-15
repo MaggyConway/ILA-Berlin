@@ -1,0 +1,9 @@
+uuid: fd20daeb-9a6d-47e6-8665-9b2302194a2d
+langcode: en
+status: true
+dependencies: {  }
+id: fl_double_box
+label: 'FL Double Box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,41 @@
+uuid: a6282353-3c40-4c34-afdd-681a6cef2aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.section-nodes-menu
+  module:
+    - ctools
+    - system
+  theme:
+    - ila
+id: sectionnodesmenu
+theme: ila
+region: content
+weight: -9
+provider: null
+plugin: 'system_menu_block:section-nodes-menu'
+settings:
+  id: 'system_menu_block:section-nodes-menu'
+  label: 'Section nodes menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_page: basic_page
+      conference: conference
+      section: section
+      speaker: speaker
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/47\r\n/node/49\r\n/node/50\r\n/node/51\r\n/node/716"
+    negate: true
+    context_mapping: {  }

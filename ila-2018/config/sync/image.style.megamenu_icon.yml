@@ -1,0 +1,16 @@
+uuid: 777f2171-aef2-46d5-a19b-4684168dc866
+langcode: en
+status: true
+dependencies: {  }
+name: megamenu_icon
+label: 'Megamenu Icon'
+effects:
+  a148640f-3630-4eca-9dbd-2cf65c279c98:
+    uuid: a148640f-3630-4eca-9dbd-2cf65c279c98
+    id: image_scale
+    weight: 1
+    data:
+      width: 53
+      height: 53
+      upscale: false
+pipeline: image_optimiza

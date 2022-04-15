@@ -1,0 +1,8 @@
+uuid: 8cef7bc5-5602-4d69-91d7-7d2670a70f60
+langcode: en
+status: true
+dependencies: {  }
+name: 'Career level'
+vid: career_level
+description: 'The taxonomy which using in the content type Job Offer'
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 62fff4f5-0cdd-4022-ab9d-f50e30bd9ed0
+langcode: en
+status: true
+dependencies: {  }
+id: section-nodes-menu
+label: 'Section nodes menu'
+description: ''
+locked: false

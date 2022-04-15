@@ -1,0 +1,22 @@
+uuid: 2e9b0167-7c21-41c6-99d4-27805176ceb8
+langcode: de
+status: true
+dependencies:
+  module:
+    - ila_user
+  theme:
+    - ila
+_core:
+  default_config_hash: m6r7DQbIxceqXlwPq886dma6SlC4GfWajsbWBbtXw-I
+id: ila_user_login
+theme: ila
+region: popup
+weight: -6
+provider: null
+plugin: ila_user_login_block
+settings:
+  id: ila_user_login_block
+  label: Login
+  provider: ila_user
+  label_display: visible
+visibility: {  }

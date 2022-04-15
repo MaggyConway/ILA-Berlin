@@ -1,0 +1,18 @@
+uuid: cb2621b8-161d-48ca-b7c1-3ac030e2b738
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.megamenu
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: block_content.megamenu
+target_entity_type_id: block_content
+target_bundle: megamenu
+default_langcode: site_default
+language_alterable: false

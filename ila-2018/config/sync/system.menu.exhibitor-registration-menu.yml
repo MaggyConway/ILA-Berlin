@@ -1,0 +1,10 @@
+uuid: 20dd886a-be28-495d-a500-59c209bc3e00
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HSxyzu5HvLCcFSMC_30_fAcDM8sMwoRG5sh-gbcUEjo
+id: exhibitor-registration-menu
+label: 'Exhibitor registration menu'
+description: 'Links to main exhibitor registration page and etc'
+locked: false

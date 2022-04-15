@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_fb1_please_note
+    - node.type.request_fb_1
+  module:
+    - markup
+id: node.request_fb_1.field_request_fb1_please_note
+field_name: field_request_fb1_please_note
+entity_type: node
+bundle: request_fb_1
+label: 'Please take note of the flight operations charges (cf. Prices and fees ILA 2018 on page 62).'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Please take note of the flight operations charges (cf. Prices and fees ILA 2018 on page 62).</p>\r\n"
+    format: full_html
+field_type: markup

@@ -1,0 +1,5 @@
+name: ILA Media pages
+type: module
+description: Media pages related functionality.
+core_version_requirement: ^8 || ^9
+package: ILA

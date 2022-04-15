@@ -1,0 +1,48 @@
+uuid: 40f9cbe0-9b33-4abc-9d46-dc21d896bcbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.career_center.body
+    - field.field.node.career_center.field_blogpost
+    - field.field.node.career_center.field_node_metatag
+    - field.field.node.career_center.field_paragraph_reference
+    - node.type.career_center
+  module:
+    - ds
+    - entity_reference_revisions
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: null
+    regions:
+      content:
+        - field_paragraph_reference
+id: node.career_center.default
+targetEntityType: node
+bundle: career_center
+mode: default
+content:
+  field_paragraph_reference:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_blogpost: true
+  field_node_metatag: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

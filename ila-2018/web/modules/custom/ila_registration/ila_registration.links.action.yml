@@ -1,0 +1,48 @@
+entity.ila_registration.add_form:
+  route_name: entity.ila_registration.add_form
+  title: 'Add Registration'
+  appears_on:
+    - entity.ila_registration.collection
+entity.ila_registration_booth.add_form:
+  route_name: 'entity.ila_registration_booth.add_page'
+  title: 'Add Booth'
+  appears_on:
+    - entity.ila_registration_booth.collection
+entity.ila_registration_booth_type.add_form:
+  route_name: 'entity.ila_registration_booth_type.add_form'
+  title: 'Add Booth type'
+  appears_on:
+    - entity.ila_registration_booth_type.collection
+entity.ila_registration_company.add_form:
+  route_name: 'entity.ila_registration_company.add_page'
+  title: 'Add Company'
+  appears_on:
+    - entity.ila_registration_company.collection
+entity.ila_registration_company_type.add_form:
+  route_name: 'entity.ila_registration_company_type.add_form'
+  title: 'Add Company type'
+  appears_on:
+    - entity.ila_registration_company_type.collection
+
+entity.ila_registration_person.add_form:
+  route_name: 'entity.ila_registration_person.add_page'
+  title: 'Add Person'
+  appears_on:
+    - entity.ila_registration_person.collection
+entity.ila_registration_person_type.add_form:
+  route_name: 'entity.ila_registration_person_type.add_form'
+  title: 'Add Person type'
+  appears_on:
+    - entity.ila_registration_person_type.collection
+
+entity.ila_registration_exhibitor.add_form:
+  route_name: 'entity.ila_registration_exhibitor.add_page'
+  title: 'Add Exhibitor'
+  appears_on:
+    - entity.ila_registration_exhibitor.collection
+entity.ila_registration_exhibitor_type.add_form:
+  route_name: 'entity.ila_registration_exhibitor_type.add_form'
+  title: 'Add Exhibitor type'
+  appears_on:
+    - entity.ila_registration_exhibitor_type.collection
+

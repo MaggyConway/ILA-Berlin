@@ -1,0 +1,10 @@
+uuid: 945df456-04c4-4758-92d5-d8754c3405d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_testimonial_default
+label: 'PT FL Testimonial: Default'
+targetEntityType: media
+cache: true

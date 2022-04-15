@@ -1,0 +1,32 @@
+uuid: 9d9b6749-111e-447e-8375-6aade98525bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.simple_mega_menu.after
+    - field.field.simple_mega_menu.megamenu_main.field_block_1
+    - field.field.simple_mega_menu.megamenu_main.field_block_2
+    - field.field.simple_mega_menu.megamenu_main.field_block_3
+    - field.field.simple_mega_menu.megamenu_main.field_block_4
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_1
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_2
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_3
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_4
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+id: simple_mega_menu.megamenu_main.after
+targetEntityType: simple_mega_menu
+bundle: megamenu_main
+mode: after
+content: {  }
+hidden:
+  field_block_1: true
+  field_block_2: true
+  field_block_3: true
+  field_block_4: true
+  field_infoblock_1: true
+  field_infoblock_2: true
+  field_infoblock_3: true
+  field_infoblock_4: true
+  langcode: true
+  name: true
+  user_id: true

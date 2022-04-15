@@ -1,0 +1,19 @@
+uuid: a961cf1c-edbc-410d-87a4-1b8e48821289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_email
+    - paragraphs.paragraphs_type.list_of_companies
+id: paragraph.list_of_companies.field_company_list_email
+field_name: field_company_list_email
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

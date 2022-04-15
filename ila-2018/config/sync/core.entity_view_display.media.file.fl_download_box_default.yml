@@ -1,0 +1,49 @@
+uuid: a0a84e46-3cc2-4f32-a7be-a5aeb579655e
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.fl_download_box_default
+    - field.field.media.file.field_download_category
+    - field.field.media.file.field_download_preview
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_press_info
+    - field.field.media.file.field_show_on_downloads
+    - media.type.file
+  module:
+    - ds
+    - ila_file_download_formatter
+id: media.file.fl_download_box_default
+targetEntityType: media
+bundle: file
+mode: fl_download_box_default
+content:
+  field_media_file:
+    weight: 0
+    label: hidden
+    settings:
+      label_source: custom
+      link_text: 'Download as PDF'
+      target: _blank
+      download_file: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: ila_download_link
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_download_category: true
+  field_download_preview: true
+  field_press_info: true
+  field_show_on_downloads: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

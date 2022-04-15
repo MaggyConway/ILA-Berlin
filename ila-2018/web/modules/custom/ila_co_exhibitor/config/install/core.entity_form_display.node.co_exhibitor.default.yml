@@ -1,0 +1,388 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.co_exhibitor.field_coexhibitor_extra_info
+    - field.field.node.co_exhibitor.field_company_address
+    - field.field.node.co_exhibitor.field_company_alph_listing
+    - field.field.node.co_exhibitor.field_company_area_code
+    - field.field.node.co_exhibitor.field_company_cntry_code
+    - field.field.node.co_exhibitor.field_company_corr_language
+    - field.field.node.co_exhibitor.field_company_country_specific_d
+    - field.field.node.co_exhibitor.field_company_email
+    - field.field.node.co_exhibitor.field_company_fax
+    - field.field.node.co_exhibitor.field_company_homepage
+    - field.field.node.co_exhibitor.field_company_legal_form
+    - field.field.node.co_exhibitor.field_company_member_of_bdli
+    - field.field.node.co_exhibitor.field_company_name
+    - field.field.node.co_exhibitor.field_company_telephone
+    - field.field.node.co_exhibitor.field_listing_in_online_and_prin
+    - field.field.node.co_exhibitor.field_primary_area_code
+    - field.field.node.co_exhibitor.field_primary_cell_phone
+    - field.field.node.co_exhibitor.field_primary_country_code
+    - field.field.node.co_exhibitor.field_primary_countrycode
+    - field.field.node.co_exhibitor.field_primary_email
+    - field.field.node.co_exhibitor.field_primary_fax
+    - field.field.node.co_exhibitor.field_primary_first_name
+    - field.field.node.co_exhibitor.field_primary_job_title
+    - field.field.node.co_exhibitor.field_primary_last_name
+    - field.field.node.co_exhibitor.field_primary_salutation
+    - field.field.node.co_exhibitor.field_primary_telephone
+    - field.field.node.co_exhibitor.field_primary_title
+    - field.field.node.co_exhibitor.field_statement_concerning_milit
+    - node.type.co_exhibitor
+  module:
+    - address
+    - field_group
+    - markup
+    - telephone
+third_party_settings:
+  field_group:
+    group_company_data:
+      children:
+        - group_field_2_col
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: 'Company data (co-exhibitor)'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Company data (co-exhibitor)'
+    group_primary_contact_person:
+      children:
+        - group_field_2_col_0
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: false
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Primary contact person (co-exhibitor)'
+    group_three_column:
+      children:
+        - field_company_alph_listing
+        - field_company_corr_language
+        - field_company_member_of_bdli
+      parent_name: group_field_2_col
+      weight: 31
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-3-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Three column'
+    group_field_2_col:
+      children:
+        - field_company_name
+        - field_company_legal_form
+        - field_company_address
+        - field_company_country_specific_d
+        - field_company_cntry_code
+        - field_company_area_code
+        - field_company_telephone
+        - field_company_fax
+        - field_company_email
+        - field_company_homepage
+        - group_three_column
+      parent_name: group_company_data
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: field-2-col
+    group_field_2_col_0:
+      children:
+        - field_primary_salutation
+        - field_primary_title
+        - field_primary_first_name
+        - field_primary_last_name
+        - field_primary_job_title
+        - field_primary_country_code
+        - field_primary_area_code
+        - field_primary_telephone
+        - field_primary_email
+        - field_primary_cell_phone
+        - field_primary_fax
+      parent_name: group_primary_contact_person
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: field-2-col_0
+id: node.co_exhibitor.default
+targetEntityType: node
+bundle: co_exhibitor
+mode: default
+content:
+  field_coexhibitor_extra_info:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_company_address:
+    weight: 23
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_company_alph_listing:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_area_code:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_company_cntry_code:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_company_corr_language:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_company_country_specific_d:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c268bb0e-585d-49e9-8ab2-5b0e963c8382:
+          dependee: field_company_address
+          settings:
+            state: visible
+            condition: '!empty'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                address:
+                  country_code: ''
+                  langcode: en
+                  address_line1: ''
+                  locality: ''
+                  postal_code: ''
+                  given_name: null
+                  additional_name: null
+                  family_name: null
+                  organization: null
+                  address_line2: null
+                  sorting_code: null
+                  dependent_locality: null
+                  administrative_area: null
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: co_exhibitor
+  field_company_email:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_company_fax:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_company_homepage:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_legal_form:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_member_of_bdli:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_company_name:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_telephone:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_listing_in_online_and_prin:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_primary_area_code:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_cell_phone:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_country_code:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_primary_email:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_primary_fax:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_first_name:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_job_title:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_last_name:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_salutation:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_primary_telephone:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_title:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_statement_concerning_milit:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+hidden:
+  created: true
+  field_primary_countrycode: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  title: true
+  uid: true

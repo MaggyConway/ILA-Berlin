@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stand_registration_package
+    - node.type.request_exhibition_space
+  module:
+    - markup
+id: node.request_exhibition_space.field_stand_registration_package
+field_name: field_stand_registration_package
+entity_type: node
+bundle: request_exhibition_space
+label: 'Additional headers markup'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Stand price (without stand construction)</h3>\r\n\r\n<h4>stand type | number of open side | price per m²</h4>\r\n"
+    format: full_html
+field_type: markup

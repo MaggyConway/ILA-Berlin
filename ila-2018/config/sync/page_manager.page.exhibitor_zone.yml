@@ -1,0 +1,21 @@
+uuid: e19cabbe-4695-4efb-9923-219a07a167b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: exhibitor_zone
+label: 'Exhibitor zone'
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: true
+    context_mapping:
+      user: current_user
+parameters: {  }

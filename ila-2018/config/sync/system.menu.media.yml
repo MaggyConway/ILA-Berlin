@@ -1,0 +1,10 @@
+uuid: 76540dbe-482e-4941-8035-e73951a96996
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QUjtMh_9-FL_UrSAfPv-4yAa-LK8kXym3z7-ZXWCM4c
+id: media
+label: Media
+description: 'Links to media pages'
+locked: false

@@ -1,0 +1,54 @@
+uuid: 400caed5-9e93-416c-a497-3d7d3c41bbc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_entity_browser
+    - field.field.paragraph.cc_header_image_item_extended.field_cc_svg_tag_snippet
+    - field.field.paragraph.cc_header_image_item_extended.field_media_reference
+    - paragraphs.paragraphs_type.cc_header_image_item_extended
+  module:
+    - entity_browser
+    - paragraphs
+id: paragraph.cc_header_image_item_extended.default
+targetEntityType: paragraph
+bundle: cc_header_image_item_extended
+mode: default
+content:
+  field_cc_svg_tag_snippet:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: cc_svg_tag_snippet
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_media_reference:
+    weight: 0
+    settings:
+      entity_browser: image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: media_library
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

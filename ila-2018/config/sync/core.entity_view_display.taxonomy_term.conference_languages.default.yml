@@ -1,0 +1,31 @@
+uuid: c06d41ba-4a31-4156-8274-10fee96827a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.conference_languages.field_conference_language_prefix
+    - taxonomy.vocabulary.conference_languages
+  module:
+    - text
+id: taxonomy_term.conference_languages.default
+targetEntityType: taxonomy_term
+bundle: conference_languages
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_conference_language_prefix:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

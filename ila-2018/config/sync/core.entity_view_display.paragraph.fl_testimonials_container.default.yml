@@ -1,0 +1,88 @@
+uuid: 7200c778-7491-403d-b195-29bd219d36dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_testimonials_container.field_cc_anchor
+    - field.field.paragraph.fl_testimonials_container.field_paragraph_reference
+    - field.field.paragraph.fl_testimonials_container.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_testimonials_container
+  module:
+    - ds
+    - slick_paragraphs
+id: paragraph.fl_testimonials_container.default
+targetEntityType: paragraph
+bundle: fl_testimonials_container
+mode: default
+content:
+  field_paragraph_reference:
+    weight: 1
+    label: hidden
+    settings:
+      optionset: futurelab_testimonials_container
+      skin: default
+      view_mode: default
+      cache: 0
+      current_view_mode: default
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: slick_paragraphs_vanilla
+    region: content
+  field_paragraph_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: 'name="testimonials"'
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden:
+  field_cc_anchor: true

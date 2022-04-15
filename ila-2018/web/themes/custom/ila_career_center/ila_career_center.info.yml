@@ -1,0 +1,26 @@
+name: ILA Career Center
+type: theme
+description: Custom sub theme of ILA
+core_version_requirement: ^8 || ^9
+base theme: ila
+
+libraries:
+  - ila_career_center/global-styling-career-center
+
+libraries-override:
+  ila/global-styling:
+    css:
+      component:
+        dist/css/main.css: false
+    js:
+      dist/js/main.js: false
+# Regions
+regions:
+  header_top: Header Top
+  header_top_main_nav: Header Top Main Navigation
+  header_bottom: Header Bottom
+  highlighted: Highlighted
+  content: Content
+  popup: Popup
+  footer_top: Footer Top
+  footer_bottom: Footer Bottom

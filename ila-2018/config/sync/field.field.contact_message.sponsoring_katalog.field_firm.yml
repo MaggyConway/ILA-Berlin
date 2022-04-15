@@ -1,0 +1,19 @@
+uuid: 612e3fc6-d71b-4633-aa05-359e5d38c36e
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+    - field.storage.contact_message.field_firm
+id: contact_message.sponsoring_katalog.field_firm
+field_name: field_firm
+entity_type: contact_message
+bundle: sponsoring_katalog
+label: Firma
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

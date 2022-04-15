@@ -1,0 +1,19 @@
+uuid: 96632b2f-e6c5-4523-aa07-e2ac7d68d1c8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.speaker
+id: node.speaker.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: speaker
+label: Vorname
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

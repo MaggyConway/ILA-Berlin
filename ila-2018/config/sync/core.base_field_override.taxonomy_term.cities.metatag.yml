@@ -1,0 +1,18 @@
+uuid: e22d175e-2e89-4b77-bb82-3770ee8ed21d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cities
+id: taxonomy_term.cities.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: cities
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

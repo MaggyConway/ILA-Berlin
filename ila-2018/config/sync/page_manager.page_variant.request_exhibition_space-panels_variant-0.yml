@@ -1,0 +1,58 @@
+uuid: 2d656ad7-d556-4ffc-8eea-24c449a270a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_exhibition_space
+  content:
+    - 'block_content:page_description:89ab89a3-e1df-49da-8323-2c1ba34155a5'
+  module:
+    - block_content
+    - formblock
+    - panels
+_core:
+  default_config_hash: 3mdU4kwW3yM_Wq1qILcdG-XhessdYpbT7pKH79moGNQ
+id: request_exhibition_space-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    643fee2d-0330-4ff3-9ba4-b417a13ee95c:
+      id: formblock_node
+      label: 'Content form'
+      provider: node
+      label_display: '0'
+      type: request_exhibition_space
+      form_mode: default
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: 643fee2d-0330-4ff3-9ba4-b417a13ee95c
+      context_mapping: {  }
+    b3e779d4-5d20-403d-a431-323735b02a5f:
+      id: 'block_content:89ab89a3-e1df-49da-8323-2c1ba34155a5'
+      label: 'Registration of exhibition space'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: b3e779d4-5d20-403d-a431-323735b02a5f
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 939658f9-40a5-42a3-8519-20914c546305
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'Exhibition space (A)'
+  storage_type: page_manager
+  storage_id: request_exhibition_space-panels_variant-0
+  builder: standard
+page: request_exhibition_space
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

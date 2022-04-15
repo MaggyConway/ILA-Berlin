@@ -1,0 +1,19 @@
+uuid: d22d5b58-2882-4283-9d22-eaf3dd16b71a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_field
+    - simple_megamenu
+id: simple_mega_menu.field_block_3
+field_name: field_block_3
+entity_type: simple_mega_menu
+type: block_field
+settings: {  }
+module: block_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

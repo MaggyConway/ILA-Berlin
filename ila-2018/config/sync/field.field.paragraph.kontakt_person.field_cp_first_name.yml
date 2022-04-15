@@ -1,0 +1,19 @@
+uuid: c977497e-4c5b-4dba-85f6-94da11d05e17
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cp_first_name
+    - paragraphs.paragraphs_type.kontakt_person
+id: paragraph.kontakt_person.field_cp_first_name
+field_name: field_cp_first_name
+entity_type: paragraph
+bundle: kontakt_person
+label: Vorname
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

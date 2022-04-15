@@ -1,0 +1,32 @@
+uuid: 947042da-1dc6-4548-9030-88aed8bea191
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - media.type.embedded_video
+    - media.type.image
+    - media.type.local_video
+    - paragraphs.paragraphs_type.image_box
+id: paragraph.image_box.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: image_box
+label: 'Bild/Video (Media)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      embedded_video: embedded_video
+      local_video: local_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

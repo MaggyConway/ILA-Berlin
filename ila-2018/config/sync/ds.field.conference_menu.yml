@@ -1,0 +1,17 @@
+id: conference_menu
+label: 'Conference menu'
+ui_limit: ''
+properties:
+  block: 'system_menu_block:conference-menu'
+  use_block_title: false
+  config:
+    id: 'system_menu_block:conference-menu'
+    label: ''
+    provider: system
+    label_display: visible
+    level: 1
+    depth: 0
+type: block
+type_label: 'Block field'
+entities:
+  node: node

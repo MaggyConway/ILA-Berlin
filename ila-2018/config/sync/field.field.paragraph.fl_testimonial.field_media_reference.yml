@@ -1,0 +1,28 @@
+uuid: 1c22dde6-e916-4384-bfb1-b55aa730d3b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference
+    - media.type.image
+    - paragraphs.paragraphs_type.fl_testimonial
+id: paragraph.fl_testimonial.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+bundle: fl_testimonial
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

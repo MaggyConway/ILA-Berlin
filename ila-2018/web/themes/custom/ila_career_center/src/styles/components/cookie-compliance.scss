@@ -1,0 +1,88 @@
+/* stylelint-disable */
+
+div#sliding-popup {
+  background-color: $career-dark;
+
+  .eu-cookie-compliance-content {
+    margin-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1160px;
+  }
+
+  .eu-cookie-compliance-message {
+    max-width: 65%;
+
+    h2 {
+      max-width: 555px;
+      font-size: 20px;
+    }
+
+    p {
+      padding-bottom: 15px;
+      font-size: 15px;
+    }
+
+    h2,
+    p {
+      font-weight: normal;
+    }
+  }
+
+  .eu-cookie-compliance-buttons {
+    max-width: 35%;
+  }
+
+  .eu-cookie-compliance-agree-button,
+  .eu-cookie-compliance-more-button {
+    margin-top: 1em;
+    margin-right: 5px;
+    padding: 4px 8px;
+    display: block;
+    overflow: visible;
+    width: 155px;
+    height: 35px;
+    font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+      Arial, sans-serif;
+    font-weight: normal;
+    vertical-align: middle;
+    text-decoration: none;
+    text-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: inset none;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .eu-cookie-compliance-agree-button {
+    color: $career-green;
+    border: 1px solid $career-green;
+    transition: all .3s ease;
+
+    &:hover {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+  }
+
+  .eu-cookie-compliance-more-button {
+    text-decoration: underline;
+    color: #ffffff;
+    border: 0;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $career-green;
+    }
+  }
+}
+
+/* stylelint-enable */

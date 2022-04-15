@@ -1,0 +1,38 @@
+uuid: fbef5c80-eb87-4724-9479-8bf8a258270f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.career_center.body
+    - field.field.node.career_center.field_blogpost
+    - field.field.node.career_center.field_node_metatag
+    - field.field.node.career_center.field_paragraph_reference
+    - node.type.career_center
+  module:
+    - text
+    - user
+id: node.career_center.teaser
+targetEntityType: node
+bundle: career_center
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_blogpost: true
+  field_node_metatag: true
+  field_paragraph_reference: true
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: 3c4b00f7-d5d0-4fda-aec8-88a5b41fa566
+langcode: de
+status: false
+dependencies:
+  module:
+    - ila_user
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: m6r7DQbIxceqXlwPq886dma6SlC4GfWajsbWBbtXw-I
+id: ila_career_center_user_login
+theme: ila_career_center
+region: popup
+weight: -6
+provider: null
+plugin: ila_user_login_block
+settings:
+  id: ila_user_login_block
+  label: Login
+  provider: ila_user
+  label_display: visible
+visibility: {  }

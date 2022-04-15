@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vat_form
+    - node.type.main_exhibitor
+  module:
+    - markup
+id: node.main_exhibitor.field_vat_form
+field_name: field_vat_form
+entity_type: node
+bundle: main_exhibitor
+label: 'VAT form'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>VAT form: Companies registered outside of Germany need to send the signed VAT form together with the request.</p>\r\n\r\n<p>Statement concerning military weapons: Please send the filled form to Messe Berlin until April 3rd 2018.</p>\r\n"
+    format: full_html
+field_type: markup

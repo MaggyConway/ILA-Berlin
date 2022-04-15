@@ -1,0 +1,19 @@
+uuid: 973324f7-3421-4da9-a3d8-7130031326ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - paragraphs
+id: paragraph.field_company_list_country
+field_name: field_company_list_country
+entity_type: paragraph
+type: address_country
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

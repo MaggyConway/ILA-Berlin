@@ -1,0 +1,31 @@
+uuid: 1a5003ac-b93a-4e80-a910-dfb9f8c3678f
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.media
+  module:
+    - menu_block
+  theme:
+    - ila_career_center
+id: ila_career_center_media_2
+theme: ila_career_center
+region: header_bottom
+weight: -11
+provider: null
+plugin: 'menu_block:media'
+settings:
+  id: 'menu_block:media'
+  label: Media
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'media:'
+  suggestion: media
+  label_type: block
+  label_link: false
+visibility: {  }

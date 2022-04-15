@@ -1,0 +1,19 @@
+uuid: 9e9d71da-c7be-487d-82c1-f4c6a0f936f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_anchor
+    - paragraphs.paragraphs_type.fl_stream_box
+id: paragraph.fl_stream_box.field_cc_anchor
+field_name: field_cc_anchor
+entity_type: paragraph
+bundle: fl_stream_box
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

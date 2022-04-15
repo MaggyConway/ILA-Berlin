@@ -1,0 +1,21 @@
+uuid: f9dbe3bf-6d1f-467b-ad82-61eeefd6bc52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_text
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+  module:
+    - text
+id: paragraph.careercenter_title_text_images.field_cc_text
+field_name: field_cc_text
+entity_type: paragraph
+bundle: careercenter_title_text_images
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 3f1fb801-b14d-4cd4-bdd3-dd9bc1cc6ffb
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:text:a6ec2037-4b23-459c-93fc-ddc27bd0fdbe'
+  module:
+    - block_content
+  theme:
+    - ila
+id: logoparthercountry
+theme: ila
+region: header_bottom
+weight: -6
+provider: null
+plugin: 'block_content:a6ec2037-4b23-459c-93fc-ddc27bd0fdbe'
+settings:
+  id: 'block_content:a6ec2037-4b23-459c-93fc-ddc27bd0fdbe'
+  label: 'Logo parther country'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: 5931c66b-97f9-41a7-bdcc-a218a93d88b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+    - field.field.block_content.image_fullscreen.field_image
+    - image.style.fullscreen
+  module:
+    - svg_image
+_core:
+  default_config_hash: xYgaOGsF50zXFgilOfWM8Yr3ih1YIY-XA7RJwoVphfk
+id: block_content.image_fullscreen.default
+targetEntityType: block_content
+bundle: image_fullscreen
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: fullscreen
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

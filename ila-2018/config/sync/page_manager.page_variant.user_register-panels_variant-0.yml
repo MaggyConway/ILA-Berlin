@@ -1,0 +1,69 @@
+uuid: 4a1304e1-593c-46d9-8921-19b8e91782cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.user_register
+  content:
+    - 'block_content:page_description:ef79d72a-9a6e-473b-a700-4d98caf3161b'
+    - 'block_content:text:4cef915b-12d8-4845-baa9-37d3cb54826e'
+  module:
+    - block_content
+    - formblock
+    - panels
+_core:
+  default_config_hash: n6Iq_g2c0GHVgQUYrhlDffd2jdmGQc51v7-kQ19v3H8
+id: user_register-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    ef3d1758-37d2-4055-af00-a4aa79d54b4c:
+      id: formblock_user_register
+      label: 'User registration form'
+      provider: user
+      label_display: '0'
+      form_mode: register
+      region: content
+      weight: 0
+      uuid: ef3d1758-37d2-4055-af00-a4aa79d54b4c
+      context_mapping: {  }
+    79a57a00-1f09-489f-aec8-ed610794cc46:
+      id: 'block_content:ef79d72a-9a6e-473b-a700-4d98caf3161b'
+      label: Registration
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -1
+      uuid: 79a57a00-1f09-489f-aec8-ed610794cc46
+      context_mapping: {  }
+    2f749698-a35a-4401-b6a5-15898313bbdf:
+      id: 'block_content:4cef915b-12d8-4845-baa9-37d3cb54826e'
+      label: 'Registration - Contact us'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: 2f749698-a35a-4401-b6a5-15898313bbdf
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 31c368d4-bb1c-4a2d-bf27-641036631490
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: user_register-panels_variant-0
+  builder: standard
+page: user_register
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

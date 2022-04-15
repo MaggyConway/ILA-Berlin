@@ -1,0 +1,18 @@
+uuid: 92538943-652b-41cc-8327-3544742f41ef
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+id: paragraph.careercenter_title_text_images.created
+field_name: created
+entity_type: paragraph
+bundle: careercenter_title_text_images
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

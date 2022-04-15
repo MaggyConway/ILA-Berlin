@@ -1,0 +1,6 @@
+alph_links.enable:
+  version: VERSION
+  js:
+    js/alphabet_filter.js: {}
+  dependencies:
+    - core/jquery

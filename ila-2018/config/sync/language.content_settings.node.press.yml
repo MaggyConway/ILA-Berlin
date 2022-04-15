@@ -1,0 +1,20 @@
+uuid: c266f0a3-3a93-4a3f-8996-5460d8adee1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: RXmpb_JjdRiJGAfSfYcSletNdTwfffxdjiNHeF3SD9k
+id: node.press
+target_entity_type_id: node
+target_bundle: press
+default_langcode: site_default
+language_alterable: true

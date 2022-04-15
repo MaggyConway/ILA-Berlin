@@ -1,0 +1,9 @@
+uuid: 8ebc5bbd-d36a-4be4-884c-bd76fe7f6ee0
+langcode: de
+status: true
+dependencies: {  }
+id: slideshow
+label: Bildergalerie
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+uuid: 337f4b22-9dcf-4e88-b4e7-3858c9fa661b
+langcode: en
+status: true
+dependencies: {  }
+id: exhibition_container
+label: 'Exhibition container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

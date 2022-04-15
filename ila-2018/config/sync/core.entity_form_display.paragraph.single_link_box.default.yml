@@ -1,0 +1,38 @@
+uuid: 20cb0cba-0f19-4699-94e3-02673d58581b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_link_box.field_single_link_box_link
+    - paragraphs.paragraphs_type.single_link_box
+  module:
+    - link_attributes
+id: paragraph.single_link_box.default
+targetEntityType: paragraph
+bundle: single_link_box
+mode: default
+content:
+  field_single_link_box_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  translation:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

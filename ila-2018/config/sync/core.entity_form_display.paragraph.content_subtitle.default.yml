@@ -1,0 +1,49 @@
+uuid: b3866ded-97ba-4fa5-ac32-8f344d9092d3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_subtitle.field_cs_subtitle
+    - field.field.paragraph.content_subtitle.field_cs_text_left
+    - field.field.paragraph.content_subtitle.field_cs_text_right
+    - paragraphs.paragraphs_type.content_subtitle
+  module:
+    - text
+id: paragraph.content_subtitle.default
+targetEntityType: paragraph
+bundle: content_subtitle
+mode: default
+content:
+  field_cs_subtitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cs_text_left:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cs_text_right:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

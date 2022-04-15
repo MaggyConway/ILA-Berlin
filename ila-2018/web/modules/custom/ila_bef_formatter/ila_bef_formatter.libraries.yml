@@ -1,0 +1,6 @@
+bef_links.enable:
+  version: VERSION
+  js:
+    js/bef_links.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,28 @@
+uuid: 2e8b97c6-12fe-480f-9171-8eb833c60f55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infographic_box.field_infographic_box_background
+    - field.field.paragraph.infographic_box.field_infographic_box_bg_media
+    - field.field.paragraph.infographic_box.field_infographic_box_columns
+    - paragraphs.paragraphs_type.infographic_box
+  module:
+    - entity_reference_revisions
+id: paragraph.infographic_box.default
+targetEntityType: paragraph
+bundle: infographic_box
+mode: default
+content:
+  field_infographic_box_columns:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_infographic_box_background: true
+  field_infographic_box_bg_media: true

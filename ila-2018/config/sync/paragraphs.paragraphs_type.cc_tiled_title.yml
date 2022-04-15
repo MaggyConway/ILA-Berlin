@@ -1,0 +1,9 @@
+uuid: 93c50a19-1e94-43a2-a7af-ad45eda84c16
+langcode: en
+status: true
+dependencies: {  }
+id: cc_tiled_title
+label: 'CareerCenter -- Title'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

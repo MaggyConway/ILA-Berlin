@@ -1,0 +1,9 @@
+uuid: d9de9ac4-8c5f-44f3-a72d-fb6441f5cfdf
+langcode: en
+status: true
+dependencies: {  }
+id: cc_link_list_item
+label: 'CareerCenter -- Link list item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

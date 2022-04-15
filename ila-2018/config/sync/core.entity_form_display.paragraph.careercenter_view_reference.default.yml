@@ -1,0 +1,33 @@
+uuid: 682c260b-a81a-487c-befd-0a97d955ddcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careercenter_view_reference.field_cc_anchor
+    - field.field.paragraph.careercenter_view_reference.field_view_reference
+    - paragraphs.paragraphs_type.careercenter_view_reference
+  module:
+    - viewsreference
+id: paragraph.careercenter_view_reference.default
+targetEntityType: paragraph
+bundle: careercenter_view_reference
+mode: default
+content:
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view_reference:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

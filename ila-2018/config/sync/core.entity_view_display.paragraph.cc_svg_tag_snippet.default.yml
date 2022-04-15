@@ -1,0 +1,30 @@
+uuid: b2798065-6fe3-42ce-9cd1-b35e194f942b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_svg_tag_snippet.field_cc_svg_snippet
+    - paragraphs.paragraphs_type.cc_svg_tag_snippet
+  module:
+    - ds
+    - text
+id: paragraph.cc_svg_tag_snippet.default
+targetEntityType: paragraph
+bundle: cc_svg_tag_snippet
+mode: default
+content:
+  field_cc_svg_snippet:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: text_default
+    region: content
+hidden: {  }

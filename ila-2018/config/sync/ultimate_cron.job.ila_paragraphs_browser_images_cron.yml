@@ -1,0 +1,17 @@
+uuid: 10f5dfc1-7bb5-4c7f-9253-5557001945b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_paragraphs_browser_images
+title: 'Default cron handler'
+id: ila_paragraphs_browser_images_cron
+weight: 0
+module: ila_paragraphs_browser_images
+callback: ila_paragraphs_browser_images_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

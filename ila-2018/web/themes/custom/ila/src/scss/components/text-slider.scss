@@ -1,0 +1,98 @@
+.block-region-facts {
+  background-color: #2D73CD;
+  border-radius: 80px 80px 0px 0px;
+  padding: 80px 0;
+
+  @media screen and (max-width: 1300px) {
+    padding: 40px 20px;
+  }
+
+  .block-views-blockfacts-block-facts {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .view-facts {
+      > .view-content {
+        display: flex;
+
+        @media screen and (max-width: 1300px) {
+          flex-wrap: wrap;
+        }
+
+        > .views-row {
+          position: relative;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          &:last-child {
+            @media screen and (max-width: 1300px) {
+              margin-bottom: 0;
+            }
+          }
+
+          @media screen and (max-width: 1300px) {
+            flex-wrap: wrap;
+            flex: 50%;
+            margin-bottom: 40px;
+          }
+
+          @media screen and (max-width: 640px) {
+            flex: 100%;
+          }
+
+          &.fact--id-2,
+          &.fact--id-1 {
+            .views-field-field-facts-number { 
+              position: relative;
+              padding-right: 40px;
+
+              &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: "+";
+                display: block;
+                width: 50px;
+                height: 50px;
+                font-weight: 900;
+                font-size: 42px;
+                line-height: 49px;
+                color: #9BFFFF;
+              }
+            }
+          }
+
+          .views-field-field-facts-number {
+            font-weight: 900;
+            font-size: 69px;
+            line-height: 81px;
+            color: #9BFFFF;
+            margin-bottom: 17px;
+
+            @media screen and (max-width: 480px) {
+              font-size: 55px;
+              line-height: 64px;
+            }
+          }
+
+          .views-field-title {
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 42px;
+            color: #FFFFFF;
+
+            @media screen and (max-width: 480px) {
+              font-weight: bold;
+              font-size: 22px;
+              line-height: 31px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

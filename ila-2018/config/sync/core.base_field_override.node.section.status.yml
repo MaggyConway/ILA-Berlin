@@ -1,0 +1,24 @@
+uuid: 62d2c47b-3f5a-4b8e-beb9-3d2d50410270
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.section
+_core:
+  default_config_hash: 4LYEwoPbJJCIxi0oPlU_EHmPieZzamy5z0XW6pgDC1w
+id: node.section.status
+field_name: status
+entity_type: node
+bundle: section
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * The module install file.
+ */
+
+require_once __DIR__ . '/includes/ila_paragraph_browser_images.inc';
+
+/**
+ * Implements hook_install().
+ */
+function ila_paragraphs_browser_images_install() {
+  // Set images for paragraphs browser.
+  _ila_paragraphs_browser_images_update_paragraphs_browser_images();
+}

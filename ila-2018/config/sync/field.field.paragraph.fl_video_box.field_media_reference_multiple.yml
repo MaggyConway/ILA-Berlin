@@ -1,0 +1,30 @@
+uuid: 27d5c284-78d5-43a7-b4bd-50a36d174b27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference_multiple
+    - media.type.embedded_video
+    - media.type.local_video
+    - paragraphs.paragraphs_type.fl_video_box
+id: paragraph.fl_video_box.field_media_reference_multiple
+field_name: field_media_reference_multiple
+entity_type: paragraph
+bundle: fl_video_box
+label: Video
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      embedded_video: embedded_video
+      local_video: local_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: embedded_video
+field_type: entity_reference

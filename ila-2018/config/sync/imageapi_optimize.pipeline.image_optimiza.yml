@@ -1,0 +1,13 @@
+uuid: a6c630be-2121-4653-bf96-c3c64c8e297e
+langcode: en
+status: true
+dependencies: {  }
+name: image_optimiza
+label: 'Image Optimizator lower'
+processors:
+  5c763ff4-ba32-4805-a8c6-8f1162aa9666:
+    uuid: 5c763ff4-ba32-4805-a8c6-8f1162aa9666
+    id: resmushit
+    weight: '1'
+    data:
+      quality: '75'

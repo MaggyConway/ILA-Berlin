@@ -1,0 +1,7 @@
+popup_agree_button_message: 'Ja, ich stimme zu'
+popup_more_info_button_message: 'Weitere Informationen'
+popup_find_more_button_message: 'Weitere Informationen'
+popup_hide_button_message: Ausblenden
+popup_info:
+  value: '<h2>Wir nutzen Cookies auf unserer Seite um Ihnen den bestmöglichen Service zu gewährleisten</h2><p>Indem Sie auf einen Link auf dieser Seite klicken geben Sie Ihr Einverständnis dafür Cookies zu verwenden.</p>'
+popup_link: /node/49

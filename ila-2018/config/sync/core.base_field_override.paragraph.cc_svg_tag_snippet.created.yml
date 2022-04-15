@@ -1,0 +1,18 @@
+uuid: 74746fd1-a457-4b38-b986-e4af83346e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_svg_tag_snippet
+id: paragraph.cc_svg_tag_snippet.created
+field_name: created
+entity_type: paragraph
+bundle: cc_svg_tag_snippet
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

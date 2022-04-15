@@ -1,0 +1,9 @@
+uuid: 08a0afa9-8db5-40c6-924f-cb925a8b8b37
+langcode: en
+status: true
+dependencies: {  }
+id: fl_video_box_container
+label: 'FL Video Box Container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

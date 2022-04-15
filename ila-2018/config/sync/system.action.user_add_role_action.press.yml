@@ -1,0 +1,14 @@
+uuid: 09ec1974-15c6-479f-8c9e-1456a8c86eff
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.press
+  module:
+    - user
+id: user_add_role_action.press
+label: 'Add the Press role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: press

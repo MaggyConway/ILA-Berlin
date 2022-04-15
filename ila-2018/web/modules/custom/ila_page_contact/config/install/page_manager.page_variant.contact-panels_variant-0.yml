@@ -1,0 +1,80 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - page_manager.page.contact
+  content:
+    - 'block_content:page_description:0ba43e06-3d00-4937-9a0f-8c7bb8f3423d'
+    - 'block_content:text:1f2fe813-fab6-4fac-808b-e3be74f7f26e'
+    - 'block_content:text:eccaf669-b5fd-4190-8a57-54772b544922'
+  module:
+    - block_content
+    - contact_block
+    - panels
+id: contact-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    7371d3be-797a-4297-bf24-454356b443c4:
+      id: contact_block
+      label: 'Contact block'
+      provider: contact_block
+      label_display: '0'
+      contact_form: contact
+      region: top
+      weight: -8
+      uuid: 7371d3be-797a-4297-bf24-454356b443c4
+      context_mapping: {  }
+    595f37d5-0881-4a04-a9ee-a9c25f9a8de8:
+      id: 'block_content:0ba43e06-3d00-4937-9a0f-8c7bb8f3423d'
+      label: Contact
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -10
+      uuid: 595f37d5-0881-4a04-a9ee-a9c25f9a8de8
+      context_mapping: {  }
+    4173d015-19b8-422b-af72-01223e309b55:
+      id: 'block_content:1f2fe813-fab6-4fac-808b-e3be74f7f26e'
+      label: 'Contact - Contact details'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -9
+      uuid: 4173d015-19b8-422b-af72-01223e309b55
+      context_mapping: {  }
+    c354c009-e949-4a5d-a376-46056a3d8b8c:
+      id: 'block_content:eccaf669-b5fd-4190-8a57-54772b544922'
+      label: 'Contact - Description'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: bottom
+      weight: -1
+      uuid: c354c009-e949-4a5d-a376-46056a3d8b8c
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 4398019d-2bdb-4ee9-949f-1b269dc1b424
+  label: null
+  weight: 0
+  layout: ila_one_col_bricks
+  layout_settings: {  }
+  page_title: Contact
+  storage_type: page_manager
+  storage_id: contact-panels_variant-0
+  builder: standard
+page: contact
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

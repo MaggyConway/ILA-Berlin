@@ -1,0 +1,10 @@
+uuid: f7e78269-d42b-48a9-8bcd-012935e53b6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.media_video
+label: Media-Video
+targetEntityType: node
+cache: true

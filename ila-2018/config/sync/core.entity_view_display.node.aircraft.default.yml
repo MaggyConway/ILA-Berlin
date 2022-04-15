@@ -1,0 +1,144 @@
+uuid: bdb8b3b9-c85e-4891-b6de-c52747f929b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.aircraft.field_air_ac_type_long
+    - field.field.node.aircraft.field_air_category
+    - field.field.node.aircraft.field_air_country
+    - field.field.node.aircraft.field_air_display_time
+    - field.field.node.aircraft.field_air_final_departure
+    - field.field.node.aircraft.field_air_ila_nr
+    - field.field.node.aircraft.field_air_initial_arrival
+    - field.field.node.aircraft.field_air_length_m_
+    - field.field.node.aircraft.field_air_mtow_kg_
+    - field.field.node.aircraft.field_air_op_status
+    - field.field.node.aircraft.field_air_pub_name
+    - field.field.node.aircraft.field_air_span_m_
+    - node.type.aircraft
+  module:
+    - datetime
+    - datetime_range
+    - user
+id: node.aircraft.default
+targetEntityType: node
+bundle: aircraft
+mode: default
+content:
+  field_air_ac_type_long:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_air_category:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_air_country:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_air_display_time:
+    weight: 114
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_air_final_departure:
+    weight: 113
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_air_ila_nr:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_air_initial_arrival:
+    weight: 112
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_air_length_m_:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_air_mtow_kg_:
+    weight: 110
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_air_op_status:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_air_pub_name:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_air_span_m_:
+    weight: 109
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

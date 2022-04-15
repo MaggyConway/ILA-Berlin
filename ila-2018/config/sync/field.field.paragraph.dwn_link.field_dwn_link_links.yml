@@ -1,0 +1,23 @@
+uuid: 0968207e-2829-4eb9-9b02-31c57c7e87fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dwn_link_links
+    - paragraphs.paragraphs_type.dwn_link
+  module:
+    - link
+id: paragraph.dwn_link.field_dwn_link_links
+field_name: field_dwn_link_links
+entity_type: paragraph
+bundle: dwn_link
+label: 'Related Links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

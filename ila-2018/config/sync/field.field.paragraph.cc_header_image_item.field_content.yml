@@ -1,0 +1,21 @@
+uuid: 53dcdb1f-3ee6-4e26-98c8-0c35318369dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.cc_header_image_item
+  module:
+    - text
+id: paragraph.cc_header_image_item.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: cc_header_image_item
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

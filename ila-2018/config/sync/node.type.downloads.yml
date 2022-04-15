@@ -1,0 +1,19 @@
+uuid: 02ec06ad-7940-4c5b-9337-4ef97c9af53e
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: JsEZXqPsD5NVVbcVdqcSJIVwwteQWRBJWgtN5_n7Ze4
+name: Downloads
+type: downloads
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

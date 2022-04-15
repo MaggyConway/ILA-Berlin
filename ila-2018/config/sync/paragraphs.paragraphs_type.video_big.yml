@@ -1,0 +1,9 @@
+uuid: 95289a08-0a90-4b7e-8e47-5dca49a9f847
+langcode: de
+status: true
+dependencies: {  }
+id: video_big
+label: 'Video Big'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

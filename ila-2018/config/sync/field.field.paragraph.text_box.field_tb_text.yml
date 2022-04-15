@@ -1,0 +1,21 @@
+uuid: 4ef3e0c0-e781-4951-9f7c-17badbbe1fd8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tb_text
+    - paragraphs.paragraphs_type.text_box
+  module:
+    - text
+id: paragraph.text_box.field_tb_text
+field_name: field_tb_text
+entity_type: paragraph
+bundle: text_box
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

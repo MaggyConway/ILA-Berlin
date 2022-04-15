@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_area_code
+    - node.type.co_exhibitor
+  module:
+    - telephone
+id: node.co_exhibitor.field_primary_area_code
+field_name: field_primary_area_code
+entity_type: node
+bundle: co_exhibitor
+label: 'Area Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

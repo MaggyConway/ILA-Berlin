@@ -1,0 +1,21 @@
+display:
+  default:
+    display_options:
+      fields:
+        nothing:
+          alter:
+            text: '<h2 class="attendee-registration-title">Ihre Daten</h2>'
+        field_ar_last_name:
+          label: Teilnehmer
+        field_ar_company:
+          label: Unternehmen
+        field_ar_branch:
+          label: Branche
+        field_ar_street:
+          label: Straße
+        field_ar_0zip_code:
+          label: 'Postleitzahl, Stadt'
+        field_ar_country:
+          label: Land
+        field_ar_phone:
+          label: Telefon

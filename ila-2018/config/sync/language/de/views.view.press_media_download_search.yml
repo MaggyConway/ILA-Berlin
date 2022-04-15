@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      filters:
+        search_api_fulltext:
+          expose:
+            placeholder: Suchbegriff
+            label: Suchbegriff
+      header:
+        area_text_custom:
+          content: "<div class=\"conference-filters\">\r\n<a href=\"#\" class=\"link-history-back\">Zurück</a>\r\n<a href=\"#\" class=\"filter-open-btn\">Filter öffnen</a>\r\n</div>"
+      empty:
+        area:
+          content:
+            value: "<p>Leider keine Downloads gefunden.</p>\r\n"
+            format: full_html
+      fields:
+        field_media_image_1:
+          alter:
+            text: '<a href="{{ field_media_image_1 }}" download>Herunterladen</a>'
+      exposed_form:
+        options:
+          submit_button: Suche

@@ -1,0 +1,48 @@
+uuid: 64e3c779-9f70-419e-b1d7-e44ead3a09ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_portrait.field_media_portrait
+    - field.field.paragraph.quote_portrait.field_quote_author
+    - field.field.paragraph.quote_portrait.field_quote_body
+    - paragraphs.paragraphs_type.quote_portrait
+  module:
+    - ds
+    - text
+id: paragraph.quote_portrait.default
+targetEntityType: paragraph
+bundle: quote_portrait
+mode: default
+content:
+  field_media_portrait:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: pt_quote_portrait_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_quote_author:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_quote_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

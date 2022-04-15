@@ -1,0 +1,22 @@
+Index: masonry/js/masonry.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- masonry/js/masonry.js	(date 1551867161000)
++++ masonry/js/masonry.js	(date 1551867189000)
+@@ -18,6 +18,14 @@
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+         applyMasonry(true);
+       });
++  
++      $(document.querySelectorAll('[data-drupal-views-infinite-scroll-pager]')).find('a').on('click', function (e) {
++        $(document).once('infinite-scroll-ajax-complete').ajaxComplete(function(e) {
++          applyMasonry(true);
++          $('.masonry-layout').masonry('reloadItems');
++          $('.masonry-layout').masonry('layout');
++        });
++      });
+ 
+       /**
+        * Apply Masonry

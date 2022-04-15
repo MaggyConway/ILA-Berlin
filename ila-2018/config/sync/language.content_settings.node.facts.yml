@@ -1,0 +1,20 @@
+uuid: 3e183e9f-0f92-4752-9f28-2bc4141cd0d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.facts
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: yHRQ1VF_i1-CFPXnblpfJR8OA-DHy-I_P5B9UF7e4dU
+id: node.facts
+target_entity_type_id: node
+target_bundle: facts
+default_langcode: site_default
+language_alterable: true

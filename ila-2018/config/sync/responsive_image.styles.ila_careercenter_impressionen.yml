@@ -1,0 +1,24 @@
+uuid: ca37195a-11e7-412f-bc51-b7bab1eba862
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.cc_impressionen_width_295_phone_
+    - image.style.cc_impressionen_width_560
+  theme:
+    - ila_career_center
+id: ila_careercenter_impressionen
+label: 'ILA CareerCenter Impressionen'
+image_style_mappings:
+  -
+    breakpoint_id: ila_career_center.desktop_full_hd
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cc_impressionen_width_560
+  -
+    breakpoint_id: ila_career_center.phone
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cc_impressionen_width_295_phone_
+breakpoint_group: ila_career_center
+fallback_image_style: cc_impressionen_width_560

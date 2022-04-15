@@ -1,0 +1,16 @@
+uuid: ac6257c1-320f-4a14-9d8a-aa9f6f9fb793
+langcode: en
+status: true
+dependencies: {  }
+name: ct_job_offer_teaser_logo
+label: 'CT Job Offer: Teaser (Logo 110x110)'
+effects:
+  b5876248-4be7-402f-a681-c41da6f61a6c:
+    uuid: b5876248-4be7-402f-a681-c41da6f61a6c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 110
+      height: 110
+      anchor: center-center
+pipeline: image_optimiza

@@ -1,0 +1,19 @@
+uuid: ce820a1f-d49d-4957-a7b8-9e23a622f73e
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - user
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: GosLu_ZTXMEIoZu3Ija1Prk30V4BPbEpy_hzXIYl6qs
+id: user.user
+target_entity_type_id: user
+target_bundle: user
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,21 @@
+uuid: a8073119-239c-4842-b849-9e19af802d6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_testimonial_quote_auth
+    - paragraphs.paragraphs_type.cc_testimonial
+  module:
+    - text
+id: paragraph.cc_testimonial.field_cc_testimonial_quote_auth
+field_name: field_cc_testimonial_quote_auth
+entity_type: paragraph
+bundle: cc_testimonial
+label: 'Quote author'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

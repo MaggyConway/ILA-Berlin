@@ -1,0 +1,22 @@
+uuid: 934fcb49-567a-4ab2-9c83-08129090ca60
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_tiled_title
+id: paragraph.cc_tiled_title.status
+field_name: status
+entity_type: paragraph
+bundle: cc_tiled_title
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

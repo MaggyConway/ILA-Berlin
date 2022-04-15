@@ -1,0 +1,21 @@
+uuid: fe665a76-bbc5-43f9-9f9e-e59ba8a4ccc5
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+    - field.storage.contact_message.field_telephone
+  module:
+    - telephone
+id: contact_message.sponsoring_katalog.field_telephone
+field_name: field_telephone
+entity_type: contact_message
+bundle: sponsoring_katalog
+label: Telefon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

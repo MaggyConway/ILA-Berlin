@@ -1,0 +1,7 @@
+name: ILA Search Api Extensions
+type: module
+description: ILA Search Api Extensions
+package: ILA
+core_version_requirement: ^8 || ^9
+dependencies:
+ - search_api

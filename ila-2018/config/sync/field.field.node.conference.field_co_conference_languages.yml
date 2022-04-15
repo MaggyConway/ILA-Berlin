@@ -1,0 +1,29 @@
+uuid: b86c7b9f-cc20-4a51-920a-be6277d1115c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_conference_languages
+    - node.type.conference
+    - taxonomy.vocabulary.conference_languages
+id: node.conference.field_co_conference_languages
+field_name: field_co_conference_languages
+entity_type: node
+bundle: conference
+label: 'Conference languages'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conference_languages: conference_languages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

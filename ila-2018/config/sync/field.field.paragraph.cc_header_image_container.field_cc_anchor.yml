@@ -1,0 +1,19 @@
+uuid: d1e60f84-0a67-4714-9ed5-2d0c1a571c91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_anchor
+    - paragraphs.paragraphs_type.cc_header_image_container
+id: paragraph.cc_header_image_container.field_cc_anchor
+field_name: field_cc_anchor
+entity_type: paragraph
+bundle: cc_header_image_container
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

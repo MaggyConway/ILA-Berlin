@@ -1,0 +1,20 @@
+uuid: 2cb9aa7a-dc1b-4f5b-8bd9-8ba0669c2830
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_dates
+  module:
+    - text
+id: taxonomy_term.conference_dates.description
+field_name: description
+entity_type: taxonomy_term
+bundle: conference_dates
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

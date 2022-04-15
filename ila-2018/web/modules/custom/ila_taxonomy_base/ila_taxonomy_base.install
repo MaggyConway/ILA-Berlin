@@ -1,0 +1,16 @@
+<?php
+/**
+ * Set terms published status.
+ *
+ * @param $sandbox
+ */
+function ila_taxonomy_base_update_8101(&$sandbox) {
+  $connection = \Drupal::database();
+  if ($connection->schema()->fieldExists('taxonomy_term_field_data', 'status')) {
+    $connection->update('taxonomy_term_field_data')
+      ->fields([
+        'status' => 1,
+      ])
+      ->execute();
+  }
+}

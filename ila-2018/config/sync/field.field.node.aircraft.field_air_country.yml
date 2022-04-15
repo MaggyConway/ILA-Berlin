@@ -1,0 +1,19 @@
+uuid: 4e0f6523-56a8-473c-8c5c-9a1aeae30da7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_country
+    - node.type.aircraft
+id: node.aircraft.field_air_country
+field_name: field_air_country
+entity_type: node
+bundle: aircraft
+label: country
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

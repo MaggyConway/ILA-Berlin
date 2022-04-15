@@ -1,0 +1,8 @@
+uuid: 4f09136c-2094-4248-a763-8246384c8208
+langcode: en
+status: true
+dependencies: {  }
+id: video_and_more
+label: 'Video and more'
+revision: 0
+description: 'Video plus title/subtitle and a link.'

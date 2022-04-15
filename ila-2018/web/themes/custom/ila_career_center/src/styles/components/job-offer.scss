@@ -1,0 +1,461 @@
+/* stylelint-disable */
+
+.node--type-job-offer {
+  width: 100%;
+
+  .wrapper--top-links {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1080px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: $career-green;
+
+    @media screen and (max-width: 1121px) {
+      padding: 0 20px;
+    }
+
+    @media #{$m-to-m} {
+      padding: 0 10px;
+      font-size: 15px;
+    }
+
+    a {
+      color: $career-green;
+    }
+
+    .field--name-dynamic-token-fieldnode-link-back {
+      text-align: left;
+    }
+
+    .link-history-back {
+      padding: 10px 0;
+      display: block;
+
+      &::before {
+        margin-right: 10px;
+        display: inline-block;
+        width: 39px;
+        height: 18px;
+        vertical-align: middle;
+        content: '';
+        background: url('../../assets/images/long-arrow-left.svg') center/cover no-repeat;
+      }
+    }
+
+    .field--name-dynamic-block-fieldnode-my-bookmarks-job-offers {
+      text-align: right;
+    }
+  }
+
+  .wrapper--main-info-wrapper {
+    padding: 0 20px;
+    width: 100%;
+    background: url('../../assets/images/diagonal-lines-light.svg') repeat,
+      rgba($color: $career-green, $alpha: .4);
+
+    @media #{$m-to-m} {
+      padding: 0 10px;
+    }
+  }
+
+  .wrapper--main-info {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    max-width: 1080px;
+    background: #ffffff;
+    border: 1px solid $career-green;
+
+    @media #{$m-to-m} {
+      flex-direction: column;
+    }
+  }
+
+  .wrapper--main-info--group-left {
+    padding: 40px 40px 0;
+    width: 61.5%;
+    font-size: 16px;
+    border-right: 1px solid $career-green;
+
+    @media #{$m-from-l} {
+      position: relative;
+    }
+
+    @media #{$m-to-m} {
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      border-right: 0;
+      border-bottom: 1px solid $career-green;
+    }
+
+    .field--name-node-title {
+      h2 {
+        margin-bottom: 10px;
+        font-family: $career-font;
+        font-size: 62px;
+        line-height: 1;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $career-green;
+
+        @media #{$m-to-m} {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .field--name-field-job-offerer {
+      margin-bottom: 20px;
+
+      .field__label,
+      .field__item {
+        display: inline-block;
+      }
+
+      .field__label {
+        font-weight: 400;
+      }
+
+      a {
+        text-decoration: underline;
+        color: $career-dark;
+      }
+    }
+  }
+
+  .wrapper--main-info--group-left--details {
+    display: table;
+    width: 100%;
+
+    @media #{$m-from-l} {
+      margin-bottom: 60px;
+    }
+
+    @media #{$m-to-m} {
+      font-size: 11px;
+    }
+
+    > .field {
+      display: table-row;
+
+      &:nth-child(odd) {
+        background: #eeeeee;
+      }
+
+      &:nth-child(even) {
+        background: #ffffff;
+      }
+    }
+
+    .field__label {
+      padding: 20px 10px;
+      display: table-cell;
+      max-width: 30%;
+      font-size: 14px;
+      vertical-align: middle;
+      border-right: 2px solid #ffffff;
+
+      @media #{$m-to-m} {
+        font-size: 11px;
+      }
+    }
+
+    .field__item {
+      padding: 20px 10px;
+      display: table-cell;
+    }
+  }
+
+  .wrapper--main-info--group-left--bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $career-dark;
+
+    @media #{$m-to-m} {
+      padding: 0 10px;
+    }
+  }
+
+  .wrapper--main-info--group-right {
+    padding: 40px;
+    width: 38.5%;
+
+    @media #{$m-to-m} {
+      margin-bottom: 40px;
+      padding: 10px;
+      width: 100%;
+
+      &::after {
+        display: block;
+        clear: both;
+        content: '';
+      }
+    }
+
+    .field--name-field-job-logo {
+      margin: 0 auto 40px;
+      width: 100%;
+      text-align: center;
+
+      @media #{$m-to-m} {
+        margin: 0;
+        float: right;
+        width: 50%;
+      }
+
+      .field--name-field-media-image {
+        border: 1px solid #eeeeee;
+      }
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .field--name-field-job-contact {
+      font-size: 18px;
+
+      .field__label {
+        margin-bottom: 20px;
+        font-family: $career-font;
+        font-size: 32px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .field__item {
+        line-height: 2;
+      }
+    }
+
+    .field--name-dynamic-token-fieldnode-job-offer-mailto {
+      margin: 7px 0;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        font-size: 18px;
+        color: $career-dark;
+
+        @media #{$m-to-m} {
+          font-size: 14px;
+        }
+
+        &::before {
+          margin-right: 10px;
+          display: inline-block;
+          width: 21px;
+          height: 21px;
+          content: '';
+          background: url('../../assets/images/envelope.svg') center no-repeat $career-dark;
+          background-size: 13px;
+          border-radius: 4px;
+
+          @media #{$m-to-m} {
+            width: 14px;
+            height: 14px;
+            background-size: 8px;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+
+    a[href='mailto:'] {
+      display: none;
+    }
+  }
+
+  .wrapper--description,
+  .wrapper--requirements {
+    margin: 0 auto;
+    max-width: 1080px;
+
+    .field--name-field-job-description,
+    .field--name-field-job-requirements {
+      padding: 40px;
+      background: #eeeeee;
+
+      @media #{$m-to-m} {
+        padding: 15px 10px;
+      }
+
+      .field__label {
+        margin-bottom: 15px;
+        font-size: 24px;
+
+        @media #{$m-to-m} {
+          font-size: 19px;
+        }
+      }
+
+      .field__item {
+        font-size: 18px;
+
+        @media #{$m-to-m} {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .wrapper--description {
+    border-bottom: 20px solid $career-green;
+
+    @media #{$m-to-m} {
+      border-bottom-width: 13px;
+    }
+  }
+
+  .field--name-dynamic-token-fieldnode-job-offer-mailto-button-content {
+    position: absolute;
+    bottom: -7px;
+    left: 40px;
+
+    @media #{$m-to-m} {
+      left: 10px;
+    }
+
+    a {
+      padding: 12px 0;
+      display: inline-block;
+      min-width: 240px;
+      font-family: $career-font;
+      font-size: 25px;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 1px 1px 0 $career-dark;
+      color: $c-white;
+      background: $career-green;
+      box-shadow: 5px 5px 0 0 $career-dark;
+
+      @media screen and (max-width: 889px) {
+        min-width: 120px;
+        font-size: 19px;
+      }
+    }
+
+    a[href='mailto:'] {
+      display: none;
+    }
+  }
+
+  .flag {
+    a {
+      padding: 10px 20px;
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $career-green;
+      background-color: $career-dark;
+
+      @media #{$m-to-m} {
+        font-size: 12px;
+      }
+
+      &::after {
+        margin-left: 10px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: text-top;
+        content: '';
+        background: url('../../assets/images/star-icon.svg') center/cover no-repeat;
+        transition: all .3s ease;
+
+        @media #{$m-to-m} {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    &.action-unflag {
+      a::after {
+        background-image: url('../../assets/images/star-hover-icon.svg');
+      }
+    }
+  }
+
+  .addtoany_list.a2a_kit_size_32 > a {
+    font-size: 15px;
+
+    &::before {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: text-bottom;
+      content: '';
+      background: url('../../assets/images/share-icon.svg') center no-repeat, $career-green;
+      background-size: 12px;
+      border-radius: 4px;
+
+      @media #{$m-to-m} {
+        width: 12px;
+        height: 12px;
+        background-size: 8px;
+      }
+    }
+
+    @media #{$m-to-m} {
+      font-size: 12px;
+    }
+  }
+
+  .addtoany_list.a2a_kit_size_32 a > span {
+    width: auto;
+  }
+
+  .addtoany_list.a2a_kit_size_32 a > span:not(.share-text) {
+    display: none;
+  }
+
+  .addtoany_list a:hover span {
+    opacity: 1;
+  }
+
+  .share-text {
+    margin-left: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $career-green;
+  }
+
+  .wrapper--apply-now {
+    margin: 0 auto 60px;
+    padding: 40px 0;
+    max-width: 1080px;
+    background: url('../../assets/images/diagonal-lines-light.svg') repeat,
+      rgba($color: $career-green, $alpha: .4);
+
+    @media #{$m-to-m} {
+      margin-bottom: 20px;
+      padding: 23px 0;
+    }
+
+    .field--name-dynamic-token-fieldnode-job-offer-mailto-button-bottom {
+      display: flex;
+      justify-content: center;
+
+      a {
+        @extend .button-career;
+      }
+
+      a[href='mailto:'] {
+        display: none;
+      }
+    }
+  }
+}
+
+/* stylelint-enable */

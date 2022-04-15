@@ -1,0 +1,23 @@
+uuid: ecd8f582-0ab2-4bec-84fb-fb3a3742cfe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_career_center
+    - media.type.embedded_video
+id: media.embedded_video.field_career_center
+field_name: field_career_center
+entity_type: media
+bundle: embedded_video
+label: 'Career Center'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

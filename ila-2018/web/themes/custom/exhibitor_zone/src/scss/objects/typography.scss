@@ -1,0 +1,70 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: 700;
+  color: $c-blue;
+}
+
+p {
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.4;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+.h1 {
+  color: $c-darkblue;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+h2,
+.h2 {
+  font-weight: 200;
+  font-size: 20px;
+  color: $c-blue;
+}
+h3,
+.h3 {
+  font-size: 18px;
+  font-weight: 200;
+  color: $c-lightblue;
+}
+h4,
+.h4 {
+  font-size: 14px;
+  font-weight: 200;
+  color: $c-darkblue;
+}
+
+.block-block-content-page_description {
+  margin-bottom: 65px;
+   .field--name-block-description {
+      h1 {
+        margin-bottom: 7px;
+        text-transform: uppercase;
+      }
+    }
+    .field--name-field-sub-title {
+      @extend h2;
+    }
+
+}

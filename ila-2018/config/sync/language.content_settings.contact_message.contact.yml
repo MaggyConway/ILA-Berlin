@@ -1,0 +1,13 @@
+uuid: 61e61327-77fb-4802-b8f2-cfd693d472b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+_core:
+  default_config_hash: i2tvoxoBngCsmvYMmr6qf9E7L0v9JmIAEucL63aWT6A
+id: contact_message.contact
+target_entity_type_id: contact_message
+target_bundle: contact
+default_langcode: site_default
+language_alterable: false

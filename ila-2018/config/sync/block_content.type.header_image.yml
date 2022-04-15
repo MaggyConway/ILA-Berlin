@@ -1,0 +1,8 @@
+uuid: 57ad76bf-8e72-4c9b-ae23-62ce1971a1a3
+langcode: en
+status: true
+dependencies: {  }
+id: header_image
+label: 'CareerCenter -- Header image'
+revision: 0
+description: 'Contains a title and background image fields'

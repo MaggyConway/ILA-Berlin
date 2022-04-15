@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+id: error_404
+label: 'Error 404'
+description: ''
+use_admin_theme: false
+path: /404
+access_logic: and
+access_conditions: {  }
+parameters: {  }

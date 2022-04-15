@@ -1,0 +1,113 @@
+uuid: 526f7789-c46c-445b-838a-9d6d56b930b1
+langcode: de
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.file
+    - media.type.image
+    - media.type.local_video
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: embedd_browser
+label: 'Embedd Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '940'
+  link_text: 'Entitäten auswählen'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  a6a665b5-8bcb-4afa-9556-20951cc15b46:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Entitäten auswählen'
+      auto_select: false
+    uuid: a6a665b5-8bcb-4afa-9556-20951cc15b46
+    weight: 1
+    label: Bibliothek
+    id: view
+  72631017-4373-4bd2-833b-a29a6fe61bbc:
+    settings:
+      form_mode: default
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: 'jpg jpeg gif png svg'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: 72631017-4373-4bd2-833b-a29a6fe61bbc
+    weight: 2
+    label: 'Bild hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  1b845d50-e631-4160-9215-1b4ad3619465:
+    settings:
+      form_mode: default
+      media_type: file
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: 'txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: 1b845d50-e631-4160-9215-1b4ad3619465
+    weight: 3
+    label: 'Datei hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  46f2b313-3c36-419d-9b9c-72120bbbcb0f:
+    settings:
+      form_mode: default
+      media_type: audio
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: mp3
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: 46f2b313-3c36-419d-9b9c-72120bbbcb0f
+    weight: 4
+    label: 'Audio File hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  60a68aa8-6229-4139-95f7-4f89ad434237:
+    settings:
+      form_mode: default
+      media_type: local_video
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: mp4
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: 60a68aa8-6229-4139-95f7-4f89ad434237
+    weight: 5
+    label: 'Video File hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

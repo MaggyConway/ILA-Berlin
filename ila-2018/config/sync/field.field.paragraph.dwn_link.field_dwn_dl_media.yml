@@ -1,0 +1,28 @@
+uuid: 3fec6716-eac9-4a46-93a2-6ea67fa9a730
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dwn_dl_media
+    - media.type.file
+    - paragraphs.paragraphs_type.dwn_link
+id: paragraph.dwn_link.field_dwn_dl_media
+field_name: field_dwn_dl_media
+entity_type: paragraph
+bundle: dwn_link
+label: Downloads
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

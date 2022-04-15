@@ -1,0 +1,32 @@
+uuid: 05960da9-7278-4392-a68a-6f8d292dc705
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_partial_validation
+    - user
+_core:
+  default_config_hash: QAXgcQM1LyAiiECRn1S67LOUUiRLaEwldhWyIYKfuWQ
+id: co_exhibitor
+label: Co-exhibitor
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/co-exhibitor
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      press: press
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: current_user
+  -
+    id: main_exhibitor
+    negate: false
+    context_mapping: {  }
+parameters: {  }

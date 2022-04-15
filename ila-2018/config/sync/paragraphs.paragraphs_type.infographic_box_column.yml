@@ -1,0 +1,9 @@
+uuid: 4333bc99-f599-480c-89dc-fb7df074c17b
+langcode: en
+status: true
+dependencies: {  }
+id: infographic_box_column
+label: 'Infographic box column'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+uuid: 6637ecbe-e884-4082-aba4-f403c7084b13
+langcode: en
+status: true
+dependencies: {  }
+id: cc_news_block
+label: 'CareerCenter -- News block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,69 @@
+uuid: 4d5bea49-5ebf-44d3-8f96-b82915aeb847
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_link_box.field_cc_box_link_link
+    - field.field.paragraph.cc_link_box.field_cc_link_box_subtitle
+    - field.field.paragraph.cc_link_box.field_cc_link_box_symbol_class
+    - field.field.paragraph.cc_link_box.field_cc_link_box_title
+    - field.field.paragraph.cc_link_box.field_cc_link_box_use_awesome
+    - paragraphs.paragraphs_type.cc_link_box
+  module:
+    - conditional_fields
+    - link
+id: paragraph.cc_link_box.default
+targetEntityType: paragraph
+bundle: cc_link_box
+mode: default
+content:
+  field_cc_box_link_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_cc_link_box_subtitle:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_link_box_symbol_class:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: string_textfield
+    region: content
+  field_cc_link_box_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+    type: string_textfield
+    region: content
+  field_cc_link_box_use_awesome:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  translation:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

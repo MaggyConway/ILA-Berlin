@@ -1,0 +1,22 @@
+uuid: 5f531464-e3e4-4c7f-be5a-670063182676
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+_core:
+  default_config_hash: isAYruZGDE3wS5AmalIMyQxSZP4ojcU7Y8eZ_tYbrX4
+id: node.downloads.menu_link
+field_name: menu_link
+entity_type: node
+bundle: downloads
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

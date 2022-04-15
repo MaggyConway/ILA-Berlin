@@ -1,0 +1,28 @@
+uuid: 8bc40ba0-040d-4bef-b54d-5a42ac1a606b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_logo_media
+    - media.type.image
+    - paragraphs.paragraphs_type.list_of_companies
+id: paragraph.list_of_companies.field_company_list_logo_media
+field_name: field_company_list_logo_media
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company Logo (Media)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

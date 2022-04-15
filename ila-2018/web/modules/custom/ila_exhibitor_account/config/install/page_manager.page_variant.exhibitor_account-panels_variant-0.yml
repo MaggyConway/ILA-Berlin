@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.exhibitor_account
+  content:
+    - 'block_content:page_description:81679fa9-0fd1-4b3a-8991-c094ee349786'
+  module:
+    - block_content
+    - panels
+    - user
+id: exhibitor_account-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    7479bab6-38c2-4060-ab24-0be46ae4616e:
+      id: user_edit
+      label: 'Account data'
+      provider: user
+      label_display: '0'
+      region: content
+      weight: 0
+      uuid: 7479bab6-38c2-4060-ab24-0be46ae4616e
+      context_mapping: {  }
+    2103d63b-09b7-42e7-a155-24f1d047224e:
+      id: 'block_content:81679fa9-0fd1-4b3a-8991-c094ee349786'
+      label: 'ACCOUNT DATA'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 2103d63b-09b7-42e7-a155-24f1d047224e
+      context_mapping: {  }
+  id: panels_variant
+  uuid: cefd1ea5-df84-4e63-8c18-33fefcbd3509
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: exhibitor_account-panels_variant-0
+  builder: standard
+page: exhibitor_account
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

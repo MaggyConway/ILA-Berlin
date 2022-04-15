@@ -1,0 +1,52 @@
+uuid: ab19ce4a-5868-47f4-b256-b7d894288c36
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pt_fl_video_message_default
+    - field.field.media.local_video.field_career_center
+    - field.field.media.local_video.field_description
+    - field.field.media.local_video.field_media_video_file
+    - field.field.media.local_video.field_press_file
+    - field.field.media.local_video.field_preview_image
+    - media.type.local_video
+  module:
+    - ds
+    - file
+id: media.local_video.pt_fl_video_message_default
+targetEntityType: media
+bundle: local_video
+mode: pt_fl_video_message_default
+content:
+  field_media_video_file:
+    type: file_video
+    weight: 0
+    label: hidden
+    settings:
+      controls: true
+      multiple_file_display_type: tags
+      width: 343
+      height: 221
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_career_center: true
+  field_description: true
+  field_press_file: true
+  field_preview_image: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

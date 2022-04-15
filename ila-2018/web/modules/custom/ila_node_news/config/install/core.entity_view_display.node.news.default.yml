@@ -1,0 +1,182 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_city
+    - field.field.node.news.field_date_range
+    - field.field.node.news.field_downloads
+    - field.field.node.news.field_images
+    - field.field.node.news.field_links
+    - field.field.node.news.field_sub_title
+    - node.type.news
+  module:
+    - daterange_compact
+    - ds
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_publication_data:
+      children:
+        - field_date_range
+        - field_city
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__publication-data
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Publication data'
+    group_links_group:
+      children:
+        - field_downloads
+        - field_links
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__links-group
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Links group'
+    group_images:
+      children:
+        - 'dynamic_block_field:node-news_carousel_main'
+        - 'dynamic_block_field:node-news_carousel_thumbnail'
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Images
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - field_sub_title
+        - group_publication_data
+        - field_date_range
+        - body
+        - field_city
+        - group_links_group
+        - group_images
+        - ila_prev_next
+        - 'dynamic_block_field:node-news_carousel_main'
+        - field_downloads
+        - field_links
+        - 'dynamic_block_field:node-news_carousel_thumbnail'
+    fields:
+      ila_prev_next:
+        plugin_id: ila_prev_next
+        weight: 6
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+      'dynamic_block_field:node-news_carousel_main':
+        plugin_id: 'dynamic_block_field:node-news_carousel_main'
+        weight: 17
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-news_carousel_thumbnail':
+        plugin_id: 'dynamic_block_field:node-news_carousel_thumbnail'
+        weight: 18
+        label: hidden
+        formatter: default
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_city:
+    weight: 4
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_range:
+    weight: 3
+    label: hidden
+    settings:
+      format_type: medium
+    third_party_settings: {  }
+    type: daterange_compact
+    region: content
+  field_downloads:
+    type: entity_reference_entity_view
+    weight: 17
+    region: content
+    label: above
+    settings:
+      view_mode: token
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_links:
+    weight: 18
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_sub_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_images: true
+  langcode: true
+  links: true

@@ -1,0 +1,10 @@
+uuid: c75096f9-db1d-4367-b1c2-e59216c5bde0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_stream_thumbnail
+label: 'PT FL Stream Thumbnail'
+targetEntityType: media
+cache: true

@@ -1,0 +1,18 @@
+uuid: 0feabf1d-58e6-4f76-9a09-8d2c208c7507
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: simple_mega_menu.megamenu_main
+target_entity_type_id: simple_mega_menu
+target_bundle: megamenu_main
+default_langcode: site_default
+language_alterable: true

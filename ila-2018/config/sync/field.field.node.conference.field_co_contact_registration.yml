@@ -1,0 +1,21 @@
+uuid: de06cfd9-b79a-45ef-80a2-b79db8483808
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_contact_registration
+    - node.type.conference
+  module:
+    - text
+id: node.conference.field_co_contact_registration
+field_name: field_co_contact_registration
+entity_type: node
+bundle: conference
+label: 'Contact Person for Registration'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

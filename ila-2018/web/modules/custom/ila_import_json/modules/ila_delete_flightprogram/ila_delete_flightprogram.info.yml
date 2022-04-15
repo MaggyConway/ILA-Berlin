@@ -1,0 +1,7 @@
+name: Delete flightprogram nodes
+type: module
+description: Module for delete flightprogram nodes.
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - ila_import_json

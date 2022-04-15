@@ -1,0 +1,20 @@
+uuid: b0c12be1-18ce-4352-8892-d701ba884730
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+_core:
+  default_config_hash: BHp8W5qovokl7VYuIDcr9xIw6-ohmMWKsJrCimNz5Vg
+id: node.basic_page.title
+field_name: title
+entity_type: node
+bundle: basic_page
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

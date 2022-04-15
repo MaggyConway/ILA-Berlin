@@ -1,0 +1,13 @@
+simple_ics.service:
+  path: '/ila-download-ics/{start_date}/{end_date}'
+  defaults:
+    _controller: '\Drupal\ila_download_ics\Controller\IlaServiceController::download'
+  requirements:
+    _access: 'TRUE'
+simple_ics_node.service:
+  path: '/ila-download-node-ics/{date_field}/{nid}'
+  defaults:
+    _controller: '\Drupal\ila_download_ics\Controller\IlaServiceController::downloadEntityIcs'
+  requirements:
+    _access: 'TRUE'
+

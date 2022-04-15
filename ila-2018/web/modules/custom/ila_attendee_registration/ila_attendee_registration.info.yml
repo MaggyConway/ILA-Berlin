@@ -1,0 +1,5 @@
+name: ILA Attendee registration
+type: module
+description: Defines Attendee registration entity and related forms and pages
+core_version_requirement: ^8 || ^9
+package: ILA

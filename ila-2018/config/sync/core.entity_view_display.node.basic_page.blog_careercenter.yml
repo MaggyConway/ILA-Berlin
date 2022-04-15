@@ -1,0 +1,90 @@
+uuid: f976fbd3-6fba-4f66-a23c-4334d2f03f1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.blog_careercenter
+    - field.field.node.basic_page.field_node_metatag
+    - field.field.node.basic_page.field_paragraphs
+    - field.field.node.basic_page.field_parallax_background
+    - field.field.node.basic_page.field_style
+    - field.field.node.basic_page.field_sub_title
+    - field.field.node.basic_page.field_yoast_seo
+    - node.type.basic_page
+  module:
+    - ds
+    - field_group
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_post_date
+        - node_title
+        - node_link
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: ds_post_date_blog_careercenter
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+      node_link:
+        plugin_id: node_link
+        weight: 2
+        label: hidden
+        formatter: default
+  field_group:
+    group_subtitle_wrapper:
+      children: {  }
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: subtitle-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'subtitle wrapper'
+      region: hidden
+_core:
+  default_config_hash: raaXBrrtQCfM5HmVBbBGUkLFEspVSpnCA2vaIJ52YYE
+id: node.basic_page.blog_careercenter
+targetEntityType: node
+bundle: basic_page
+mode: blog_careercenter
+content: {  }
+hidden:
+  addtoany: true
+  field_node_metatag: true
+  field_paragraphs: true
+  field_parallax_background: true
+  field_style: true
+  field_sub_title: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

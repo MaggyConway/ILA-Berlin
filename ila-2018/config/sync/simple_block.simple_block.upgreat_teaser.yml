@@ -1,0 +1,11 @@
+uuid: d94b0093-5b95-4d0c-bafa-e0b9dad302f1
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: upgreat_teaser
+title: UPGREAT
+content:
+  value: "<h4>DIE ERSTE ILA BERLIN-TASCHENKOLLEKTION</h4>\r\n\r\n<drupal-entity data-embed-button=\"media_entity_embed\" data-entity-embed-display=\"view_mode:media.embedded_big\" data-entity-type=\"media\" data-entity-uuid=\"7ed02e61-8743-446c-8b19-72406385f969\"></drupal-entity>\r\n\r\n<p style=\"text-align:center;\">Jetzt neu: die erste ILA Berlin-Taschenkollektion <strong>UPGREAT 2019</strong></p>\r\n\r\n<p style=\"text-align:center;\"><a class=\"btn\" href=\"/de/upgreat\" title=\"Upgreat 2019\">Mehr</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: full_html

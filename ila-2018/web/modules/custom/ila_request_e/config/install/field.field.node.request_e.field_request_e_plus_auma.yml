@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_e_plus_auma
+    - node.type.request_e
+  module:
+    - markup
+id: node.request_e.field_request_e_plus_auma
+field_name: field_request_e_plus_auma
+entity_type: node
+bundle: request_e
+label: 'plus AUMA fee 0.60 EUR/m²'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>plus AUMA fee 0.60 EUR/m²</p>\r\n"
+    format: full_html
+field_type: markup

@@ -1,0 +1,246 @@
+uuid: b213091e-5f7c-4939-85d5-8f01f6f79a54
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.fl_conferences
+    - field.field.node.conference.field_co_add_to_my_calendar
+    - field.field.node.conference.field_co_category
+    - field.field.node.conference.field_co_conference_languages
+    - field.field.node.conference.field_co_conference_type
+    - field.field.node.conference.field_co_contact_person
+    - field.field.node.conference.field_co_contact_registration
+    - field.field.node.conference.field_co_date
+    - field.field.node.conference.field_co_date_and_time
+    - field.field.node.conference.field_co_downloads
+    - field.field.node.conference.field_co_enable_registration
+    - field.field.node.conference.field_co_fee
+    - field.field.node.conference.field_co_host
+    - field.field.node.conference.field_co_invitation_only
+    - field.field.node.conference.field_co_location
+    - field.field.node.conference.field_co_logos
+    - field.field.node.conference.field_co_more_info
+    - field.field.node.conference.field_co_programm
+    - field.field.node.conference.field_co_registration_on_conf
+    - field.field.node.conference.field_co_slideshow
+    - field.field.node.conference.field_co_teaser_text
+    - field.field.node.conference.field_co_top_conference
+    - field.field.node.conference.field_date_and_time
+    - field.field.node.conference.field_event_category
+    - field.field.node.conference.field_node_metatag
+    - field.field.node.conference.field_speakers
+    - field.field.node.conference.field_topic
+    - field.field.node.conference.field_yoast_seo
+    - node.type.conference
+  module:
+    - addtocalendar
+    - daterange_compact
+    - ds
+    - field_group
+    - ila_attendee_registration
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_wrapper
+        - field_date_and_time
+        - field_co_location
+        - field_co_add_to_my_calendar
+        - node_title
+        - field_co_teaser_text
+        - group_left
+        - group_middle
+        - group_right
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+  field_group:
+    group_left:
+      children:
+        - field_date_and_time
+      parent_name: group_wrapper
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: left-column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Left
+      region: ds_content
+    group_middle:
+      children:
+        - node_title
+        - field_co_teaser_text
+      parent_name: group_wrapper
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: middle-column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Middle
+      region: ds_content
+    group_right:
+      children:
+        - field_co_location
+      parent_name: group_wrapper
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: right-column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+      region: ds_content
+    group_wrapper:
+      children:
+        - group_left
+        - group_middle
+        - group_right
+      parent_name: ''
+      weight: 0
+      format_type: link
+      format_settings:
+        target: entity
+        custom_uri: ''
+        target_attribute: _blank
+        id: ''
+        classes: wrapper-columns
+      label: Wrapper
+      region: ds_content
+id: node.conference.fl_conferences
+targetEntityType: node
+bundle: conference
+mode: fl_conferences
+content:
+  field_co_add_to_my_calendar:
+    type: add_to_calendar
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_co_location:
+    type: string
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_co_teaser_text:
+    type: a_trimmed_formatter
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_date_and_time:
+    type: daterange_compact
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      format_type: medium
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: blue
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'ILA Berlin 2020 – the most innovative trade event for the aerospace industry'
+          atc_organizer_email:
+            field: token
+            tokenized: ila@messe-berlin.de
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  field_co_category: true
+  field_co_conference_languages: true
+  field_co_conference_type: true
+  field_co_contact_person: true
+  field_co_contact_registration: true
+  field_co_date: true
+  field_co_date_and_time: true
+  field_co_downloads: true
+  field_co_enable_registration: true
+  field_co_fee: true
+  field_co_host: true
+  field_co_invitation_only: true
+  field_co_logos: true
+  field_co_more_info: true
+  field_co_programm: true
+  field_co_registration_on_conf: true
+  field_co_slideshow: true
+  field_co_top_conference: true
+  field_event_category: true
+  field_node_metatag: true
+  field_speakers: true
+  field_topic: true
+  field_yoast_seo: true
+  flag_flag: true
+  langcode: true
+  links: true

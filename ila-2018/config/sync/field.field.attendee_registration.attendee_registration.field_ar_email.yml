@@ -1,0 +1,20 @@
+uuid: 510e7db1-0a15-499f-8b8d-f3f444c311de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_email
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_email
+field_name: field_ar_email
+entity_type: attendee_registration
+bundle: attendee_registration
+label: E-mail
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

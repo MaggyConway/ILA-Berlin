@@ -1,0 +1,160 @@
+uuid: eba48c44-06f5-4e9b-888e-fe0088468757
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.body
+    - field.field.node.news.field_categories
+    - field.field.node.news.field_cc_news
+    - field.field.node.news.field_city
+    - field.field.node.news.field_date_range
+    - field.field.node.news.field_downloads
+    - field.field.node.news.field_images
+    - field.field.node.news.field_links
+    - field.field.node.news.field_media_images
+    - field.field.node.news.field_media_teaser_image
+    - field.field.node.news.field_news_ausstellar_highlight
+    - field.field.node.news.field_node_metatag
+    - field.field.node.news.field_paragraphs
+    - field.field.node.news.field_sub_title
+    - field.field.node.news.field_teaser_text
+    - field.field.node.news.field_yoast_seo
+    - node.type.news
+  module:
+    - ds
+    - field_group
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_teaser_image
+        - 'dynamic_token_field:node-creation_date_with_location_news'
+        - node_title
+        - field_city
+        - group_publication_data
+        - field_teaser_text
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      'dynamic_token_field:node-creation_date_with_location_news':
+        plugin_id: 'dynamic_token_field:node-creation_date_with_location_news'
+        weight: 0
+        label: hidden
+        formatter: default
+  field_group:
+    group_publication_data:
+      children:
+        - 'dynamic_token_field:node-creation_date_with_location_news'
+        - field_city
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__publication-data
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Publication data'
+      region: content
+_core:
+  default_config_hash: N7Xc7YuTqkVMO-yOnd-c7_Gs0-ZbpNvorHKWTgjR7Z4
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  field_city:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_media_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: ct_news_teaser
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_teaser_text:
+    type: text_trimmed
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 1200
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_categories: true
+  field_cc_news: true
+  field_date_range: true
+  field_downloads: true
+  field_images: true
+  field_links: true
+  field_media_images: true
+  field_news_ausstellar_highlight: true
+  field_node_metatag: true
+  field_paragraphs: true
+  field_sub_title: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

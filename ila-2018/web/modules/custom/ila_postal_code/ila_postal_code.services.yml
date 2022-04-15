@@ -1,0 +1,5 @@
+services:
+  ila_postal_code.postal_code_rewrite:
+    class: Drupal\ila_postal_code\EventSubscriber\PostalCodeRewrite
+    tags:
+      - { name: event_subscriber }

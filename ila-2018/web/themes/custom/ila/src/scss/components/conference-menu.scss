@@ -1,0 +1,55 @@
+.menu--conference-menu {
+  .page-node-type-conference & ,.path-conference & {
+    @include content-grid(60px);
+    margin-top: 45px;
+  }
+  width: 100%;
+  margin-bottom: 60px;
+  margin-top: 45px;
+  .menu {
+    margin: 0;
+    border-top: 1px solid $conferences-light;
+    border-bottom: 1px solid $conferences-light;
+    padding: 18px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    
+    @media #{$m-to-m} {
+      padding: 18px 5%;
+    }
+
+    @media #{$m-to-m} {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .menu__item {
+      display: inline-block;
+
+      margin-right: 10px;
+      margin-left: 10px;
+      @media #{$m-to-m} {
+        margin: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        color: $conferences-dark;
+        font-size: 15px;	
+        font-weight: 900;	
+        line-height: 2.6666;
+        text-transform: uppercase;
+        display: block;
+        &:hover {
+          color: $conferences-link;
+        }
+      }
+    }
+  }
+}

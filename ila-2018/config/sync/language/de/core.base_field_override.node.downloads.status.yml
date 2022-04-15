@@ -1,0 +1,5 @@
+label: Veröffentlichungsstatus
+description: 'Ein boolescher Wert, der angibt, ob ein Inhalt veröffentlicht ist oder nicht.'
+settings:
+  on_label: Ja
+  off_label: Nein

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_by_accepting_the_condition
+    - node.type.main_exhibitor
+  module:
+    - markup
+id: node.main_exhibitor.field_by_accepting_the_condition
+field_name: field_by_accepting_the_condition
+entity_type: node
+bundle: main_exhibitor
+label: 'By accepting the conditions of participation exhibitors agree'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>By accepting the conditions of participation exhibitors agree to present only those products and services which do not infringe the commercial property rights of third parties (patents, trade marks, registered designs, utility models) and/or the copyrights of third parties.</p>\r\n"
+    format: full_html
+field_type: markup

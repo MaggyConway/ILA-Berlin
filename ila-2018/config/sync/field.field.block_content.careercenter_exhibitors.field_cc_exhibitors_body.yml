@@ -1,0 +1,106 @@
+uuid: b908b31b-3bed-4822-a97d-7fa424a5c2fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_exhibitors
+    - field.storage.block_content.field_cc_exhibitors_body
+    - paragraphs.paragraphs_type.cc_text_box
+  module:
+    - entity_reference_revisions
+id: block_content.careercenter_exhibitors.field_cc_exhibitors_body
+field_name: field_cc_exhibitors_body
+entity_type: block_content
+bundle: careercenter_exhibitors
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cc_text_box: cc_text_box
+    target_bundles_drag_drop:
+      block_reference:
+        weight: 27
+        enabled: false
+      cc_facebook_post:
+        weight: 28
+        enabled: false
+      cc_link_box:
+        weight: 29
+        enabled: false
+      cc_link_list:
+        weight: 30
+        enabled: false
+      cc_link_list_item:
+        weight: 31
+        enabled: false
+      cc_news_block:
+        weight: 32
+        enabled: false
+      cc_text_box:
+        enabled: true
+        weight: 33
+      cc_text_on_image:
+        weight: 34
+        enabled: false
+      cc_tiled_title:
+        weight: 35
+        enabled: false
+      content_subtitle:
+        weight: 36
+        enabled: false
+      dwn_link:
+        weight: 37
+        enabled: false
+      image_box:
+        weight: 38
+        enabled: false
+      image_full:
+        weight: 39
+        enabled: false
+      image_row:
+        weight: 40
+        enabled: false
+      infographic_box:
+        weight: 41
+        enabled: false
+      infographic_box_column:
+        weight: 42
+        enabled: false
+      link_box:
+        weight: 43
+        enabled: false
+      link_box_container:
+        weight: 44
+        enabled: false
+      quote:
+        weight: 45
+        enabled: false
+      request_link:
+        weight: 46
+        enabled: false
+      slideshow:
+        weight: 47
+        enabled: false
+      text:
+        weight: 48
+        enabled: false
+      text_box:
+        weight: 49
+        enabled: false
+      text_boxes:
+        weight: 50
+        enabled: false
+      title_text:
+        weight: 51
+        enabled: false
+      two_column_text:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

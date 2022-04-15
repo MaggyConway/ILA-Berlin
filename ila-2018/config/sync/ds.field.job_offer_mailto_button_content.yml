@@ -1,0 +1,11 @@
+id: job_offer_mailto_button_content
+label: 'Job offer mailto button content'
+ui_limit: job_offer|default
+properties:
+  content:
+    value: '[node:field_job_email]'
+    format: plain_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

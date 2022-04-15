@@ -1,0 +1,49 @@
+uuid: 45f5e25e-2d45-482c-b8cb-63135529b431
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_text_image_box.field_cc_anchor
+    - field.field.paragraph.fl_text_image_box.field_cc_link
+    - field.field.paragraph.fl_text_image_box.field_cc_text
+    - field.field.paragraph.fl_text_image_box.field_media_reference
+    - field.field.paragraph.fl_text_image_box.field_title
+    - paragraphs.paragraphs_type.fl_text_image_box
+  module:
+    - link
+    - text
+id: paragraph.fl_text_image_box.default
+targetEntityType: paragraph
+bundle: fl_text_image_box
+mode: default
+content:
+  field_cc_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cc_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_cc_anchor: true
+  field_media_reference: true

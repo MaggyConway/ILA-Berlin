@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.request_b_chalets.field_area
+    - field.field.taxonomy_term.request_b_chalets.field_chalet_type
+    - field.field.taxonomy_term.request_b_chalets.field_price
+    - taxonomy.vocabulary.request_b_chalets
+  module:
+    - text
+id: taxonomy_term.request_b_chalets.default
+targetEntityType: taxonomy_term
+bundle: request_b_chalets
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_area:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_chalet_type:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_price:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

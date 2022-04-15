@@ -1,0 +1,87 @@
+entity.ila_registration.canonical:
+  route_name: entity.ila_registration.canonical
+  base_route: entity.ila_registration.canonical
+  title: 'View'
+
+entity.ila_registration.edit_form:
+  route_name: entity.ila_registration.edit_form
+  base_route: entity.ila_registration.canonical
+  title: 'Edit'
+
+entity.ila_registration.delete_form:
+  route_name:  entity.ila_registration.delete_form
+  base_route:  entity.ila_registration.canonical
+  title: Delete
+  weight: 10
+
+# Booth routing definition
+
+entity.ila_registration_booth.canonical:
+  route_name: entity.ila_registration_booth.canonical
+  base_route: entity.ila_registration_booth.canonical
+  title: 'View'
+
+entity.ila_registration_booth.edit_form:
+  route_name: entity.ila_registration_booth.edit_form
+  base_route: entity.ila_registration_booth.canonical
+  title: 'Edit'
+
+entity.ila_registration_booth.delete_form:
+  route_name:  entity.ila_registration_booth.delete_form
+  base_route:  entity.ila_registration_booth.canonical
+  title: Delete
+  weight: 10
+# Company routing definition
+
+entity.ila_registration_company.canonical:
+  route_name: entity.ila_registration_company.canonical
+  base_route: entity.ila_registration_company.canonical
+  title: 'View'
+
+entity.ila_registration_company.edit_form:
+  route_name: entity.ila_registration_company.edit_form
+  base_route: entity.ila_registration_company.canonical
+  title: 'Edit'
+
+entity.ila_registration_company.delete_form:
+  route_name:  entity.ila_registration_company.delete_form
+  base_route:  entity.ila_registration_company.canonical
+  title: Delete
+  weight: 10
+
+# Person routing definition
+
+entity.ila_registration_person.canonical:
+  route_name: entity.ila_registration_person.canonical
+  base_route: entity.ila_registration_person.canonical
+  title: 'View'
+
+entity.ila_registration_person.edit_form:
+  route_name: entity.ila_registration_person.edit_form
+  base_route: entity.ila_registration_person.canonical
+  title: 'Edit'
+
+entity.ila_registration_person.delete_form:
+  route_name:  entity.ila_registration_person.delete_form
+  base_route:  entity.ila_registration_person.canonical
+  title: Delete
+  weight: 10
+
+# Exhibitor routing definition
+
+entity.ila_registration_exhibitor.canonical:
+  route_name: entity.ila_registration_exhibitor.canonical
+  base_route: entity.ila_registration_exhibitor.canonical
+  title: 'View'
+
+entity.ila_registration_exhibitor.edit_form:
+  route_name: entity.ila_registration_exhibitor.edit_form
+  base_route: entity.ila_registration_exhibitor.canonical
+  title: 'Edit'
+
+entity.ila_registration_exhibitor.delete_form:
+  route_name:  entity.ila_registration_exhibitor.delete_form
+  base_route:  entity.ila_registration_exhibitor.canonical
+  title: Delete
+  weight: 10
+

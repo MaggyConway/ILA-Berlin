@@ -1,0 +1,20 @@
+uuid: 7f915b94-2122-46f8-9ded-21a4f9cc4673
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_dates
+  module:
+    - path
+id: taxonomy_term.conference_dates.path
+field_name: path
+entity_type: taxonomy_term
+bundle: conference_dates
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

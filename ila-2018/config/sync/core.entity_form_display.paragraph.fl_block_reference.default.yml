@@ -1,0 +1,36 @@
+uuid: 0ada2808-ae04-404c-b106-dec1fbd838ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_block_reference.field_block_reference
+    - field.field.paragraph.fl_block_reference.field_cc_anchor
+    - paragraphs.paragraphs_type.fl_block_reference
+  module:
+    - block_field
+id: paragraph.fl_block_reference.default
+targetEntityType: paragraph
+bundle: fl_block_reference
+mode: default
+content:
+  field_block_reference:
+    weight: 1
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_fb1_herewith_conf
+    - node.type.request_fb_1
+id: node.request_fb_1.field_request_fb1_herewith_conf
+field_name: field_request_fb1_herewith_conf
+entity_type: node
+bundle: request_fb_1
+label: 'Herewith we confirm that the insurance requirements of ICAO and the conditions for ILA participation will be met.'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

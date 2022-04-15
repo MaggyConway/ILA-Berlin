@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.facts
+id: node.facts.field_number
+field_name: field_number
+entity_type: node
+bundle: facts
+label: Number
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: integer

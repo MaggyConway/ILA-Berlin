@@ -1,0 +1,19 @@
+theme: ila
+defaults:
+  sender: ila_mailer
+  formatter: ila_mailer
+modules:
+  swiftmailer:
+    none:
+      formatter: swiftmailer
+      sender: swiftmailer
+  ila_send_mail_individual_user:
+    none:
+      formatter: ila_individual_user_mailer
+      sender: ila_individual_user_mailer
+  ila_attendee_registration_block:
+    none:
+      formatter: ila_attendee_registration_mail
+      sender: ila_attendee_registration_mail
+_core:
+  default_config_hash: 64LU75RdzlSfkiiUC4Eu9sKHY8bk3Ahqsrlmdz9G4xk

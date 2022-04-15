@@ -1,0 +1,18 @@
+uuid: 59963556-0567-4c92-aa0e-d25568a3e5b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.job_offer
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.job_offer
+target_entity_type_id: node
+target_bundle: job_offer
+default_langcode: site_default
+language_alterable: true

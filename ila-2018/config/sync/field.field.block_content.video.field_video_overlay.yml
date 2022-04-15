@@ -1,0 +1,28 @@
+uuid: 0a773394-856a-4e6d-9c1d-aa38ae1c66ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.field_video_overlay
+    - media.type.embedded_video
+id: block_content.video.field_video_overlay
+field_name: field_video_overlay
+entity_type: block_content
+bundle: video
+label: 'Video Overlay'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      embedded_video: embedded_video
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

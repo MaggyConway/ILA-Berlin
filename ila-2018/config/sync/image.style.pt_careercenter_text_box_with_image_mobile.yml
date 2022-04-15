@@ -1,0 +1,16 @@
+uuid: c038352e-dbbe-424a-bd28-838cfdd80a6c
+langcode: en
+status: true
+dependencies: {  }
+name: pt_careercenter_text_box_with_image_mobile
+label: 'PT CareerCenter Text box with image: mobile'
+effects:
+  0f760f7f-847a-4d19-a37c-a969bb4d57a8:
+    uuid: 0f760f7f-847a-4d19-a37c-a969bb4d57a8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 530
+      anchor: center-center
+pipeline: image_optimiza

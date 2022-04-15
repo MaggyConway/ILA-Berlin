@@ -1,0 +1,22 @@
+uuid: b702a46e-f4d2-4794-8060-dc5b5ec3bf93
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_header_image_item_extended
+id: paragraph.cc_header_image_item_extended.status
+field_name: status
+entity_type: paragraph
+bundle: cc_header_image_item_extended
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

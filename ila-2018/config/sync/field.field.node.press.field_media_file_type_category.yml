@@ -1,0 +1,21 @@
+uuid: 4e7f76e8-71ff-4b72-8d26-f06d290170ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_file_type_category
+    - node.type.press
+  module:
+    - options
+id: node.press.field_media_file_type_category
+field_name: field_media_file_type_category
+entity_type: node
+bundle: press
+label: 'File Type / Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

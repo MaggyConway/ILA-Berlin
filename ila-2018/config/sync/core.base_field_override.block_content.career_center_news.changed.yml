@@ -1,0 +1,18 @@
+uuid: 524bffae-cf3b-48f6-9468-5044c9a51255
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.career_center_news
+id: block_content.career_center_news.changed
+field_name: changed
+entity_type: block_content
+bundle: career_center_news
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

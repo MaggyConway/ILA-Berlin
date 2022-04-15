@@ -1,0 +1,151 @@
+<?php
+/**
+ * @file Contains hooks and custom functions.
+ */
+
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Cache\Cache;
+use Drupal\node\Entity\Node;
+
+
+/**
+ * Implements hook_token_info().
+ */
+function ila_node_news_token_info() {
+  $token = [
+    'date-range-custom' => [
+      'name' => t('Date range custom'),
+      'description' => t('Date range custom.'),
+    ],
+  ];
+  
+  return [
+    'tokens' => [
+      'node' => $token,
+    ],
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function ila_node_news_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  $format = 'Y-m-d';
+  if ($type == 'node' && isset($data['node']) && !empty($data['node'])) {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'date-range-custom':
+          $node = $data['node'];
+          $field_date_range = $node->get('field_date_range')->getValue();
+          if (!empty($field_date_range[0])) {
+            if ($field_date_range[0]['value'] != $field_date_range[0]['end_value']) {
+              $start_date_time = DrupalDateTime::createFromFormat($format, $field_date_range[0]['value']);
+              $end_date_time = DrupalDateTime::createFromFormat($format, $field_date_range[0]['end_value']);
+              $start_date_time = $start_date_time->format('d.');
+              $end_date_time = $end_date_time->format('d. F Y');
+  
+              $replacements[$original] = $start_date_time . ' - ' . $end_date_time;
+            }
+            else {
+              $end_date_time = DrupalDateTime::createFromFormat($format, $field_date_range[0]['end_value']);
+              $end_date_time = $end_date_time->format('d. F Y');
+  
+              $replacements[$original] = $end_date_time;
+            }
+          }
+          
+          break;
+      }
+    }
+  }
+  
+  return $replacements;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ila_node_news_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['#id']) && $form['#id'] == 'views-exposed-form-news-page-aussteller-highlights') {
+
+    $options = &drupal_static(__FUNCTION__);
+    if (is_null($options)) {
+      $cid = 'ila_node_news:news:year';
+      $data = \Drupal::cache()->get($cid);
+      if (!$data) {
+        $options = [];
+        //$options['all'] = new TranslatableMarkup('- All -');
+        $query = \Drupal::entityQuery('node');
+        $query->condition('type', 'news')
+          ->condition('status', 1)
+          ->sort('field_date_range', 'ASC');
+        $result = $query->execute();
+        if ($result) {
+          $nodes = Node::loadMultiple($result);
+          foreach ($nodes as $node) {
+            $date = $node->get('field_date_range')->getValue();
+            if ($date) {
+              $date = new DrupalDateTime($date[0]['value'], new DateTimeZone('UTC'));
+              $year = $date->format('Y');
+              if (!isset($options[$year])) {
+                $options[$year] = $year;
+              }
+            }
+          }
+        }
+
+        $cache_tags = ['node:news:year'];
+        \Drupal::cache()->set($cid, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+      }
+      else {
+        $options = $data->data;
+      }
+    }
+
+    $form['year'] = [
+      '#title' => new TranslatableMarkup('Date'),
+      '#type' => 'checkboxes',
+      '#options' => $options,
+      '#multiple' =>TRUE,
+      '#weight' => '-1',
+      '#attributes' => [
+        'class' => ['filter-by-year'],
+      ],
+    ];
+
+    $get_year = \Drupal::request()->query->get('year');
+    if (!empty($get_year)) {
+      $form["actions"]["reset"]["#access"] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function ila_node_news_node_presave(EntityInterface $entity) {
+  $bundle = $entity->bundle();
+  if ($bundle == 'news') {
+    // Check if a news updated has a new year, and invalidate the
+    // options cached used in the custom views filter for filtering by year.
+    $cid = 'ila_node_news:news:year';
+    $data = \Drupal::cache()->get($cid);
+    if ($data) {
+      $options = $data->data;
+      $date = $entity->get('field_date_range')->getValue();
+      if ($date) {
+        $date = new DrupalDateTime($date[0]['value'], new DateTimeZone('UTC'));
+        $year = $date->format('Y');
+        if (!isset($options[$year])) {
+          Cache::invalidateTags(['node:news:year']);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+uuid: 2ff72c46-8f6b-4d2c-aee6-6ab02ea1c54c
+langcode: en
+status: true
+dependencies: {  }
+id: ila_cc_even_calendar
+label: 'ILA CC Even Calendar'
+date_settings:
+  default_pattern: d.m.Y
+  separator: '-'
+  same_month_start_pattern: ''
+  same_month_end_pattern: ''
+  same_year_start_pattern: ''
+  same_year_end_pattern: ''
+datetime_settings:
+  default_pattern: 'd.m.y // H:i'
+  separator: '-'
+  same_day_start_pattern: 'd.m.y // H:i'
+  same_day_end_pattern: 'H:i'

@@ -1,0 +1,22 @@
+uuid: 72b10402-f1c6-49ec-b3dd-24263deac01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_categories
+  module:
+    - path
+_core:
+  default_config_hash: sZUeq2oHDnWd8AKmmtbrpAwtG77RRI8biV-vrVtINUk
+id: taxonomy_term.media_categories.path
+field_name: path
+entity_type: taxonomy_term
+bundle: media_categories
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

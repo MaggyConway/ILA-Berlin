@@ -1,0 +1,22 @@
+ila_attendee_registration_block.confirm:
+  path: '/conference/{node_id}/attendee/confirm'
+  defaults:
+    requirements:
+      _permission: 'view content'
+ila_attendee_registration_block.register:
+  path: '/conference/{node_id}/attendee/register'
+  defaults:
+    requirements:
+      _permission: 'view content'
+ila_attendee_registration_block.complete:
+  path: '/conference/{node_id}/attendee/complete'
+  defaults:
+    requirements:
+      _permission: 'view content'
+ila_attendee_registration_block.settings:
+  path: '/admin/structure/attendee_registration/settings/attendee-settings'
+  defaults:
+    _form: '\Drupal\ila_attendee_registration_block\Plugin\Form\AttendeeRegistrationSettingsForm'
+    _title:  'Attendee Registration Settings'
+  requirements:
+    _permission: 'administer site configuration'

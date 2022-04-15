@@ -1,0 +1,19 @@
+uuid: 680e318f-c184-4d58-b3a9-4bb4405e2dbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_ac_type_long
+    - node.type.aircraft
+id: node.aircraft.field_air_ac_type_long
+field_name: field_air_ac_type_long
+entity_type: node
+bundle: aircraft
+label: 'ac type long'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: fdf1b702-6535-40c1-a0eb-9d726dc689e1
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+id: block_content.image_fullscreen.status
+field_name: status
+entity_type: block_content
+bundle: image_fullscreen
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

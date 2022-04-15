@@ -1,0 +1,22 @@
+uuid: 83525c09-02f0-4e70-b11d-3e01de954908
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.facts
+  module:
+    - path
+_core:
+  default_config_hash: gTimdEYx3w3iUEvoDD4hCyS5iwYMTX01qS-AcLper7E
+id: node.facts.path
+field_name: path
+entity_type: node
+bundle: facts
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

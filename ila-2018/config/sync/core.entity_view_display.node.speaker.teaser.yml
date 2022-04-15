@@ -1,0 +1,86 @@
+uuid: 27d1fd4c-55a7-4427-b2f7-95f2e3d1f306
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.speaker.field_activities
+    - field.field.node.speaker.field_bio
+    - field.field.node.speaker.field_first_name
+    - field.field.node.speaker.field_linked_in
+    - field.field.node.speaker.field_portrait
+    - field.field.node.speaker.field_position
+    - field.field.node.speaker.field_sp_title
+    - field.field.node.speaker.field_surname
+    - field.field.node.speaker.field_top_speaker
+    - field.field.node.speaker.field_xing
+    - node.type.speaker
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_portrait
+        - node_title
+        - field_position
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.speaker.teaser
+targetEntityType: node
+bundle: speaker
+mode: teaser
+content:
+  field_portrait:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: pt_view_reference_top_speakers
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_position:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_activities: true
+  field_bio: true
+  field_first_name: true
+  field_linked_in: true
+  field_sp_title: true
+  field_surname: true
+  field_top_speaker: true
+  field_xing: true
+  langcode: true
+  links: true

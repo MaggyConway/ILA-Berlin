@@ -1,0 +1,22 @@
+uuid: 3cea762d-6a54-4772-99b2-2fa9651c5bdc
+langcode: de
+status: true
+dependencies:
+  module:
+    - lia_back_to_top
+  theme:
+    - ila
+_core:
+  default_config_hash: McXwKY01jrhpdHcIDIoOCh4YGfVJu0znnK2rawmE2lc
+id: ila_back_to_top
+theme: ila
+region: footer_top
+weight: 0
+provider: null
+plugin: lia_back_to_top
+settings:
+  id: lia_back_to_top
+  label: 'Back to top link'
+  provider: lia_back_to_top
+  label_display: '0'
+visibility: {  }

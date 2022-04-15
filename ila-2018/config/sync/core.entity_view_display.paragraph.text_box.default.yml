@@ -1,0 +1,74 @@
+uuid: 75b41509-f8de-4e3d-b0b0-f5f71139cd61
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_box.field_tb_text
+    - field.field.paragraph.text_box.field_tb_title
+    - paragraphs.paragraphs_type.text_box
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_tb_title
+        - field_tb_text
+id: paragraph.text_box.default
+targetEntityType: paragraph
+bundle: text_box
+mode: default
+content:
+  field_tb_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tb_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: 'field field--name-field-tb-title field--type-string field--label-hidden field__item'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

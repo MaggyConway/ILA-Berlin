@@ -1,0 +1,88 @@
+uuid: 042651d4-4ae7-4b06-b9db-b778f310fdb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_list_links
+    - paragraphs.paragraphs_type.cc_link_list
+    - paragraphs.paragraphs_type.cc_link_list_item
+  module:
+    - entity_reference_revisions
+id: paragraph.cc_link_list.field_link_list_links
+field_name: field_link_list_links
+entity_type: paragraph
+bundle: cc_link_list
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cc_link_list_item: cc_link_list_item
+    target_bundles_drag_drop:
+      cc_link_box:
+        weight: 21
+        enabled: false
+      cc_link_list:
+        weight: 22
+        enabled: false
+      cc_link_list_item:
+        enabled: true
+        weight: 23
+      cc_text_box:
+        weight: 24
+        enabled: false
+      content_subtitle:
+        weight: 25
+        enabled: false
+      image_box:
+        weight: 26
+        enabled: false
+      image_full:
+        weight: 27
+        enabled: false
+      image_row:
+        weight: 28
+        enabled: false
+      infographic_box:
+        weight: 29
+        enabled: false
+      infographic_box_column:
+        weight: 30
+        enabled: false
+      link_box:
+        weight: 31
+        enabled: false
+      link_box_container:
+        weight: 32
+        enabled: false
+      quote:
+        weight: 33
+        enabled: false
+      request_link:
+        weight: 34
+        enabled: false
+      slideshow:
+        weight: 35
+        enabled: false
+      text:
+        weight: 36
+        enabled: false
+      text_box:
+        weight: 37
+        enabled: false
+      text_boxes:
+        weight: 38
+        enabled: false
+      title_text:
+        weight: 39
+        enabled: false
+      two_column_text:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

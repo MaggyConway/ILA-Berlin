@@ -1,0 +1,22 @@
+uuid: 35f43183-ffa1-4099-8e8c-2a54d8b0a7e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - exhibitor_zone
+_core:
+  default_config_hash: pZ0cIlXhaLN_HSr2tz50AQSu_aU1zq8Pu6p6809JPjk
+id: exhibitor_zone_main_page_content
+theme: exhibitor_zone
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

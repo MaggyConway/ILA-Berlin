@@ -1,0 +1,6 @@
+name: ILA Decoupled submit
+description: Defines 'Decoupled submit button' block that contains actions container decoupled from the page form.
+
+type: module
+core_version_requirement: ^8 || ^9
+package: ILA

@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.co_exhibitor.field_coexhibitor_extra_info
+    - field.field.node.co_exhibitor.field_company_address
+    - field.field.node.co_exhibitor.field_company_alph_listing
+    - field.field.node.co_exhibitor.field_company_area_code
+    - field.field.node.co_exhibitor.field_company_cntry_code
+    - field.field.node.co_exhibitor.field_company_corr_language
+    - field.field.node.co_exhibitor.field_company_country_specific_d
+    - field.field.node.co_exhibitor.field_company_email
+    - field.field.node.co_exhibitor.field_company_fax
+    - field.field.node.co_exhibitor.field_company_homepage
+    - field.field.node.co_exhibitor.field_company_legal_form
+    - field.field.node.co_exhibitor.field_company_member_of_bdli
+    - field.field.node.co_exhibitor.field_company_name
+    - field.field.node.co_exhibitor.field_company_telephone
+    - field.field.node.co_exhibitor.field_primary_area_code
+    - field.field.node.co_exhibitor.field_primary_cell_phone
+    - field.field.node.co_exhibitor.field_primary_country_code
+    - field.field.node.co_exhibitor.field_primary_countrycode
+    - field.field.node.co_exhibitor.field_primary_email
+    - field.field.node.co_exhibitor.field_primary_fax
+    - field.field.node.co_exhibitor.field_primary_first_name
+    - field.field.node.co_exhibitor.field_primary_job_title
+    - field.field.node.co_exhibitor.field_primary_last_name
+    - field.field.node.co_exhibitor.field_primary_salutation
+    - field.field.node.co_exhibitor.field_primary_telephone
+    - field.field.node.co_exhibitor.field_primary_title
+    - node.type.co_exhibitor
+  module:
+    - user
+id: node.co_exhibitor.teaser
+targetEntityType: node
+bundle: co_exhibitor
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_coexhibitor_extra_info: true
+  field_company_address: true
+  field_company_alph_listing: true
+  field_company_area_code: true
+  field_company_cntry_code: true
+  field_company_corr_language: true
+  field_company_country_specific_d: true
+  field_company_email: true
+  field_company_fax: true
+  field_company_homepage: true
+  field_company_legal_form: true
+  field_company_member_of_bdli: true
+  field_company_name: true
+  field_company_telephone: true
+  field_primary_area_code: true
+  field_primary_cell_phone: true
+  field_primary_country_code: true
+  field_primary_countrycode: true
+  field_primary_email: true
+  field_primary_fax: true
+  field_primary_first_name: true
+  field_primary_job_title: true
+  field_primary_last_name: true
+  field_primary_salutation: true
+  field_primary_telephone: true
+  field_primary_title: true
+  langcode: true

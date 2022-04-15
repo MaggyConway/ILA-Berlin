@@ -1,0 +1,6 @@
+status: '1'
+pattern: 'request-c-[current-user:uid] ([node:created:short])'
+php: 0
+dependencies:
+  config:
+    - node.type.request_c

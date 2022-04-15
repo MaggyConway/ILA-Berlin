@@ -1,0 +1,24 @@
+uuid: 07f179b7-4ef6-415f-b81f-52befc4c1b19
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press
+_core:
+  default_config_hash: tRogr5OH8UDtDmzr9bfBUeEf-WD-BdDmJX5SDyoW4Hs
+id: node.press.status
+field_name: status
+entity_type: node
+bundle: press
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

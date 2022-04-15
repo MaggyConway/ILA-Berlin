@@ -1,0 +1,214 @@
+uuid: 4f9d5bca-74d3-4d9b-b616-258dd6c08ce8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_file
+    - field.storage.node.field_image
+    - field.storage.node.field_media_file_type_category
+    - field.storage.node.field_press_media_category
+    - search_api.server.default_database
+  module:
+    - node
+    - file
+    - search_api
+    - ila_search_api
+    - search_api_solr
+id: ila_press_media
+name: 'ILA Press Media'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_file:
+    label: Datei
+    datasource_id: 'entity:node'
+    property_path: field_file
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_file
+  field_image:
+    label: Vorschaubild
+    datasource_id: 'entity:node'
+    property_path: field_image
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_image
+  field_media_file_type_category:
+    label: 'File Type / Category'
+    datasource_id: 'entity:node'
+    property_path: field_media_file_type_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_media_file_type_category
+  field_press_media_category:
+    label: 'Press Media Category'
+    datasource_id: 'entity:node'
+    property_path: field_press_media_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_press_media_category
+  filemime:
+    label: 'Datei » Datei » MIME-Typ der Datei'
+    datasource_id: 'entity:node'
+    property_path: 'field_file:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_file
+      module:
+        - file
+  filesize:
+    label: 'Datei » Datei » Dateigröße'
+    datasource_id: 'entity:node'
+    property_path: 'field_file:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_file
+      module:
+        - file
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  status_1:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Titel
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - press
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ila_conferences_start_date: {  }
+  hierarchy:
+    fields:
+      field_press_media_category: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  aggregated_field: {  }
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - field_file
+      - field_media_file_type_category
+      - field_press_media_category
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - title
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    ignored: ._-
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - field_file
+      - field_media_file_type_category
+      - field_press_media_category
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

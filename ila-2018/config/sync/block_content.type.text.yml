@@ -1,0 +1,10 @@
+uuid: 5d7d54ba-7a57-4ccf-8704-cce66e3a8e0a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ATxXdfbp2KQ8My0R2EaZh-nqGCWKijCvB4sevmjHbww
+id: text
+label: Text
+revision: 0
+description: 'Text only block type (Paragraphs included)'

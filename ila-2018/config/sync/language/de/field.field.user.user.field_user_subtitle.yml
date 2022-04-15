@@ -1,0 +1,4 @@
+settings:
+  markup:
+    value: '<h3 class="account-data-warning">Prüfen und ändern Sie Ihre Account-Einstellungen</h3>'
+    format: plain_html

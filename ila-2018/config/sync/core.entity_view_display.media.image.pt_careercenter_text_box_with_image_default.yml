@@ -1,0 +1,64 @@
+uuid: 6c2de975-d851-4ff9-89d9-746ebdde8045
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pt_careercenter_text_box_with_image_default
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - media.type.image
+    - responsive_image.styles.ila_careercenter_pt_text_box_with_image
+  module:
+    - ds
+    - responsive_image
+id: media.image.pt_careercenter_text_box_with_image_default
+targetEntityType: media
+bundle: image
+mode: pt_careercenter_text_box_with_image_default
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: ila_careercenter_pt_text_box_with_image
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: responsive_image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  field_url: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

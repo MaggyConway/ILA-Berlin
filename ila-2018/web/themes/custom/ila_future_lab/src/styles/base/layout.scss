@@ -1,0 +1,54 @@
+$container-gutter: 15px;
+$container: 1130px + $container-gutter * 2;
+$container-small: 890px + $container-gutter * 2;
+$container-wide: 1350 + $container-gutter * 2;
+$col-gutter: $container-gutter;
+
+.clearfix {
+  @include clearfix;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-gutter;
+  padding-left: $container-gutter;
+  display: block;
+  width: auto;
+  max-width: $container;
+
+  &--small {
+    max-width: $container-small;
+  }
+
+  &--wide {
+    max-width: $container-wide;
+  }
+}
+
+.row {
+  @include clearfix;
+
+  margin-right: -$col-gutter;
+  margin-left: -$col-gutter;
+  display: block;
+}
+
+.col {
+  padding-right: $col-gutter;
+  padding-left: $col-gutter;
+  display: block;
+  float: left;
+}
+
+.layout-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}

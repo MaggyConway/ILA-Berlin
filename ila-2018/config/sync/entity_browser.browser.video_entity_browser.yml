@@ -1,0 +1,64 @@
+uuid: e67ae953-6bce-4684-9d2c-324de30d6c99
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.local_video
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - entity_browser_entity_form
+    - media
+    - views
+name: video_entity_browser
+label: 'Video Entity Browser'
+display: modal
+display_configuration:
+  width: '1280'
+  height: '940'
+  link_text: 'Select video'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  db8b940e-5887-44cf-8346-5f09255d6106:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_5
+      submit_text: 'Select video'
+      auto_select: false
+    uuid: db8b940e-5887-44cf-8346-5f09255d6106
+    weight: 1
+    label: Bibliothek
+    id: view
+  f7f4b934-0b66-43ea-b5a7-cda186fdfcb6:
+    settings:
+      form_mode: media_library
+      media_type: local_video
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 100M
+      extensions: mp4
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select video'
+    uuid: f7f4b934-0b66-43ea-b5a7-cda186fdfcb6
+    weight: 2
+    label: 'Video hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  6062c70e-e555-49ae-a97a-b9f5ae297bbb:
+    settings:
+      entity_type: media
+      bundle: embedded_video
+      form_mode: media_library
+      submit_text: 'Create video embed'
+    uuid: 6062c70e-e555-49ae-a97a-b9f5ae297bbb
+    weight: 3
+    label: 'Ein remote Video hinzufügen'
+    id: entity_form

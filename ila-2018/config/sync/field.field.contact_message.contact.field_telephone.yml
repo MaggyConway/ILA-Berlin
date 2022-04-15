@@ -1,0 +1,23 @@
+uuid: 21ce18e5-6751-4b32-8e79-32905fbc1783
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_telephone
+  module:
+    - telephone
+_core:
+  default_config_hash: Gh_fHYQnLisQKgoQRiKSxdO1ExT31RMkIVCMLMw77WQ
+id: contact_message.contact.field_telephone
+field_name: field_telephone
+entity_type: contact_message
+bundle: contact
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

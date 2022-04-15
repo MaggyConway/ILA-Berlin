@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.request_fb_1
+  module:
+    - path
+id: node.request_fb_1.path
+field_name: path
+entity_type: node
+bundle: request_fb_1
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,22 @@
+uuid: 1eb1923a-1869-4879-a736-bea0200711c9
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: WTJ4GaCWyrLyDp8RaXXnV1E5h1WnqxebL_cKmw3MiUU
+id: ila_career_center_main_page_content
+theme: ila_career_center
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

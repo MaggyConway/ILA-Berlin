@@ -1,0 +1,36 @@
+uuid: 4e59f4cd-d996-4585-ac3b-6982f9b8adf1
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.aviation-summit
+  module:
+    - menu_block
+    - system
+  theme:
+    - ila_future_lab
+id: aviationsummit
+theme: ila_future_lab
+region: header_bottom
+weight: -9
+provider: null
+plugin: 'menu_block:aviation-summit'
+settings:
+  id: 'menu_block:aviation-summit'
+  label: 'Aviation Summit'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'aviation-summit:'
+  suggestion: aviation_summit
+  label_type: block
+  label_link: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/5271
+    negate: false

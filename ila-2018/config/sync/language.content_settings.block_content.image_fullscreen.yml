@@ -1,0 +1,20 @@
+uuid: 12900464-1922-4126-9fec-23b627770005
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: pW2b_hFaotjcD2XyYUauAkjHfMzuMoqHUVZ9-uh9d20
+id: block_content.image_fullscreen
+target_entity_type_id: block_content
+target_bundle: image_fullscreen
+default_langcode: site_default
+language_alterable: false

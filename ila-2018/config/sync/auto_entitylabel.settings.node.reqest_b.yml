@@ -1,0 +1,6 @@
+status: '1'
+pattern: 'request-b-[current-user:uid] ([node:created:short])'
+php: 0
+dependencies:
+  config:
+    - node.type.reqest_b

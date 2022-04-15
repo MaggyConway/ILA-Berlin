@@ -1,0 +1,48 @@
+/* Normalize css */
+@import '~normalize.css/normalize.css';
+
+/* Fonts */
+@import '../assets/fonts/main.css';
+
+/* Setup */
+@import './settings/variables';
+
+/* Mixins */
+@import './settings/mixins';
+
+/* Base styles */
+@import './base/elements';
+@import './base/typography';
+@import './base/buttons';
+@import './base/layout';
+
+/* Components */
+@import './components/header';
+@import './components/header-top';
+@import './components/footer';
+@import './components/footer.nav';
+@import './components/nav';
+@import './components/mega-menu';
+@import './components/mobile-menu-cc';
+@import './components/back-to-top';
+@import './paragraph/paragraph.header-image';
+@import './paragraph/paragraph.reference';
+@import './paragraph/paragraph.blog';
+@import './paragraph/paragraph.news';
+@import './paragraph/paragraph.video';
+@import './components/social-feed';
+@import './paragraph/paragraph.testimonials';
+@import './paragraph/paragraph.impressionen';
+@import './paragraph/paragraph.text-images';
+@import './paragraph/paragraph.text-images-left';
+@import './paragraph/paragraph.text-images-right';
+@import './paragraph/paragraph.logo-well';
+@import './paragraph/paragraph.event';
+@import './paragraph/paragraph.text-box';
+@import './components/job-offer';
+@import './paragraph/paragraph.title';
+@import './paragraph/paragraph.job-offers';
+@import './components/job-offers-checkbox';
+@import './components/cookie-compliance';
+@import './components/marked-job-offers';
+@import './paragraph/paragraph.marked-job-offers';

@@ -1,0 +1,43 @@
+uuid: cec0751d-f910-4414-87c1-7e0af1c9be9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_logo.field_cc_anchor
+    - field.field.paragraph.fl_logo.field_fl_logo_location
+    - field.field.paragraph.fl_logo.field_media_reference_multiple
+    - paragraphs.paragraphs_type.fl_logo
+  module:
+    - ds
+id: paragraph.fl_logo.default
+targetEntityType: paragraph
+bundle: fl_logo
+mode: default
+content:
+  field_fl_logo_location:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_reference_multiple:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: pt_fl_logo_default
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_cc_anchor: true

@@ -1,0 +1,27 @@
+uuid: b9e38979-3d03-4fab-8f28-cb8fceb8640c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.navigation.field_navigation_links
+    - paragraphs.paragraphs_type.navigation
+  module:
+    - link
+id: paragraph.navigation.default
+targetEntityType: paragraph
+bundle: navigation
+mode: default
+content:
+  field_navigation_links:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

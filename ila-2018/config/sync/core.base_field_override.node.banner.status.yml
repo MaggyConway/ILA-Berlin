@@ -1,0 +1,22 @@
+uuid: 0705e1f4-06d6-4161-b2c0-ec00810a6b72
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.banner
+id: node.banner.status
+field_name: status
+entity_type: node
+bundle: banner
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

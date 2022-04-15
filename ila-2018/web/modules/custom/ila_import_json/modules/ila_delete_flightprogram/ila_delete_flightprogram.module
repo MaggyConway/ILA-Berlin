@@ -1,0 +1,60 @@
+<?php
+use Drupal\Core\Cron;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Queue\QueueInterface;
+use Drupal\ila_import_json\ImportNode;
+use Drupal\node\Entity\Node;
+use GuzzleHttp\Exception\RequestException;
+
+/**
+ * Implements hook_cron().
+ */
+function ila_delete_flightprogram_cron() {
+  $connection = Database::getConnection();
+  $base_url = 'https://ila.ise-aviation.de/apex/datacirculator/ila/tagesprogramm/';
+  $response = \Drupal::httpClient()->get($base_url, array('auth' => array('datacirculation', 'f5r1MRMO7i4Mx7O3DuxN'), 'headers' => array('Accept' => 'text/plain')));
+  $data = $response->getBody();
+  $jsonout = json_decode($data, TRUE);
+  $vid = 'event_category';
+  $term_name = 'Flightprogram Today';
+  $taxonomy = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadByProperties(['name' => $term_name, 'vid' => $vid]);
+  if (isset($taxonomy)) {
+    foreach ($taxonomy as $key => $term) {
+      $query = $connection->select('node__field_ev_ila_nr', 'nr')
+        ->fields('nr', array('entity_id'));
+      $query->addJoin('left','taxonomy_index','ti','nr.entity_id=ti.nid');
+      $query->condition('ti.tid', $term->id(), 'IN');
+      $data = $query->execute();
+      $results = $data->fetchAll();
+      $delete = 1;
+      $delete_nodes = array();
+      foreach ($results as $result) {
+        foreach ($jsonout['items'] as $item) {
+          $node = Node::load($result->entity_id);
+          if ($node->field_ev_ila_nr->value == $item['ila-nr.']) {
+            $delete = 0;
+          }
+        }
+        if ($delete) {
+          $delete_nodes[] = $result->entity_id;
+        }
+        $delete = 1;
+      }
+
+      ila_delete_flightprogram_run_cron($delete_nodes);
+    }
+  }
+}
+
+function ila_delete_flightprogram_run_cron($data) {
+  /** @var QueueInterface $queue */
+  $queue = \Drupal::queue('delete_flightprogram_queue_worker', TRUE);
+  if (isset($data)) {
+    foreach ($data as $item) {
+      // Add to queue.
+      $queue->createItem($item);
+    }
+  }
+}

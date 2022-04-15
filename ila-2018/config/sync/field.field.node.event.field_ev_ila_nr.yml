@@ -1,0 +1,23 @@
+uuid: 54d9eda6-efc5-43a3-8e24-5b1cabc8eff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ev_ila_nr
+    - node.type.event
+id: node.event.field_ev_ila_nr
+field_name: field_ev_ila_nr
+entity_type: node
+bundle: event
+label: 'Ila nr'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

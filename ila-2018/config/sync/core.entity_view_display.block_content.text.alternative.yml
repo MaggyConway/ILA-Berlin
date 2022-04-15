@@ -1,0 +1,100 @@
+uuid: fa7fcf10-331b-40dd-8b3a-7caeba9b1427
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text
+    - core.entity_view_mode.block_content.alternative
+    - field.field.block_content.text.body
+    - field.field.block_content.text.field_css_class
+    - field.field.block_content.text.field_paragraphs
+    - field.field.block_content.text.field_sub_title
+    - field.field.block_content.text.field_title
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_title
+        - field_sub_title
+        - body
+        - field_paragraphs
+_core:
+  default_config_hash: GIMVqFJtBODTIQ1q68lqO0Uq7PLCF2XQhyt1d6qWW9s
+id: block_content.text.alternative
+targetEntityType: block_content
+bundle: text
+mode: alternative
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sub_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h1
+            fi-cl: h2
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden:
+  field_css_class: true
+  langcode: true

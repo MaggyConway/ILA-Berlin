@@ -1,0 +1,26 @@
+uuid: ff8f7337-81b3-4013-8363-fc2c70a67db8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_svg_tag_snippet.field_cc_svg_snippet
+    - paragraphs.paragraphs_type.cc_svg_tag_snippet
+  module:
+    - text
+id: paragraph.cc_svg_tag_snippet.default
+targetEntityType: paragraph
+bundle: cc_svg_tag_snippet
+mode: default
+content:
+  field_cc_svg_snippet:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

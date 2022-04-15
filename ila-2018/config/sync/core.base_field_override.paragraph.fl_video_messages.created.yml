@@ -1,0 +1,18 @@
+uuid: e59a6a45-f961-4ba9-92d4-9a5469d7e06b
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_video_messages
+id: paragraph.fl_video_messages.created
+field_name: created
+entity_type: paragraph
+bundle: fl_video_messages
+label: 'Geschrieben am'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

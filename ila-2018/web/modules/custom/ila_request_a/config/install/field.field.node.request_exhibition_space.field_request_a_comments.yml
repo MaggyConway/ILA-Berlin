@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_a_comments
+    - node.type.request_exhibition_space
+id: node.request_exhibition_space.field_request_a_comments
+field_name: field_request_a_comments
+entity_type: node
+bundle: request_exhibition_space
+label: Comments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,21 @@
+uuid: 5e557a52-6424-4cf3-9221-8af0d06e935d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_phone_num
+    - paragraphs.paragraphs_type.list_of_companies
+  module:
+    - telephone
+id: paragraph.list_of_companies.field_company_list_phone_num
+field_name: field_company_list_phone_num
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company telephone number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,7 @@
+third_party_settings:
+  contact_ajax:
+    load_from_message:
+      value: "<p>Vielen Dank für Ihre Nachricht.</p>\r\n"
+      format: filtered_html
+label: Kontakt
+reply: "Vielen Dank für Ihre Nachricht und Ihr Interesse an der ILA Berlin 2020. Dies ist eine automatische Bestätigung, bitte nicht antworten.\r\n\r\nWir werden Ihr Anliegen schnellst möglich bearbeiten.\r\n\r\nVerpassen Sie keine Neuigkeiten rund um die ILA Berlin. Folgen Sie uns gerne auf unseren Social Media Kanälen und melden Sie sich für unseren neuen Newsletter unter www.ila-berlin.de/newsletter an.\r\n\r\nWir freuen uns Sie im Mai auf der ILA begrüßen zu dürfen!\r\n\r\nIhr ILA Berlin Team"

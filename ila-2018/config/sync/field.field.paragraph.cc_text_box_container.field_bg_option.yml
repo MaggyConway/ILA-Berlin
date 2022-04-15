@@ -1,0 +1,23 @@
+uuid: 01b42637-28d8-4f74-b833-0cf35c9e5b75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bg_option
+    - paragraphs.paragraphs_type.cc_text_box_container
+  module:
+    - options
+id: paragraph.cc_text_box_container.field_bg_option
+field_name: field_bg_option
+entity_type: paragraph
+bundle: cc_text_box_container
+label: 'Mit Raute?'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: no-hash
+default_value_callback: ''
+settings: {  }
+field_type: list_string

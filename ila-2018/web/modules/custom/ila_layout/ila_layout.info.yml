@@ -1,0 +1,14 @@
+name: Layout
+description: 'Layout, menu and theme configuration.'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block
+  - block_content
+  - ila_core
+  - ila_user
+  - language
+  - lia_back_to_top
+  - system
+  - user
+package: ILA

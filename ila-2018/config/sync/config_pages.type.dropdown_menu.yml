@@ -1,0 +1,17 @@
+uuid: a3e8689b-89a1-4c3e-a0a7-75654f093175
+langcode: en
+status: true
+dependencies: {  }
+id: dropdown_menu
+label: 'Dropdown menu'
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: ''
+  weight: 0
+  description: ''
+token: false

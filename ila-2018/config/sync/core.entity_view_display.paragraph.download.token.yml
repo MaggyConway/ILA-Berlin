@@ -1,0 +1,55 @@
+uuid: d7b2f6db-7537-4d2f-a242-63c46e2c9cbe
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.download.field_file
+    - paragraphs.paragraphs_type.download
+  module:
+    - ds
+    - file
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_file
+        - 'dynamic_token_field:paragraph-file_info_short_paragraph'
+    fields:
+      'dynamic_token_field:paragraph-file_info_short_paragraph':
+        plugin_id: 'dynamic_token_field:paragraph-file_info_short_paragraph'
+        weight: 1
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: paragraph.download.token
+targetEntityType: paragraph
+bundle: download
+mode: token
+content:
+  field_file:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: file_default
+    region: content
+hidden: {  }

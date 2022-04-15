@@ -1,0 +1,21 @@
+uuid: 473cf7e3-3b72-478f-88f3-cd6c945d8ba6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_salutation
+  module:
+    - ila_attendee_registration
+    - options
+id: attendee_registration.attendee_registration.field_ar_salutation
+field_name: field_ar_salutation
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Salutation
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

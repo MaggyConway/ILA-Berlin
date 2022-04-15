@@ -1,0 +1,58 @@
+uuid: 44219f88-9421-46bb-8b35-7895a97b5ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_c
+  content:
+    - 'block_content:page_description:5969e955-30c4-40ca-b213-3b217bea0c5b'
+  module:
+    - block_content
+    - node
+    - panels
+_core:
+  default_config_hash: ufSg2PXNMH6ATfibg95saYc1CS4HG93QfzTjhR7NDDc
+id: request_c-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    56136048-9ca8-4564-b41b-7b468e4d6486:
+      id: exhibitor_registration
+      label: 'Exhibitor registration'
+      provider: node
+      label_display: '0'
+      type: request_c
+      form_mode: default
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: 56136048-9ca8-4564-b41b-7b468e4d6486
+      context_mapping: {  }
+    59aa8535-58eb-4c42-9a03-9c1afe7dc1f5:
+      id: 'block_content:5969e955-30c4-40ca-b213-3b217bea0c5b'
+      label: 'REGISTRATION OF EXHIBITION SPACE, BUILDING, MOCKUPS IN OUTDOOR AREA'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 59aa8535-58eb-4c42-9a03-9c1afe7dc1f5
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 93e4a2c0-851c-4329-861c-5a6a6a366af4
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'REGISTRATION OF EXHIBITION SPACE, BUILDING, MOCKUPS IN OUTDOOR AREA'
+  storage_type: page_manager
+  storage_id: request_c-panels_variant-0
+  builder: standard
+page: request_c
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

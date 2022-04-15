@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+id: user_register
+label: 'User register'
+description: ''
+use_admin_theme: false
+path: /user/register
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,21 @@
+uuid: 7301c1dd-1fbb-47f4-8dd0-dc515c3b4b2c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cs_text_left
+    - paragraphs.paragraphs_type.content_subtitle
+  module:
+    - text
+id: paragraph.content_subtitle.field_cs_text_left
+field_name: field_cs_text_left
+entity_type: paragraph
+bundle: content_subtitle
+label: 'Text links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

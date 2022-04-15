@@ -1,0 +1,19 @@
+uuid: 162ad4aa-5568-47d7-9093-36dd3e9ac5ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_starting_date
+    - node.type.job_offer
+id: node.job_offer.field_job_starting_date
+field_name: field_job_starting_date
+entity_type: node
+bundle: job_offer
+label: 'Starting date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

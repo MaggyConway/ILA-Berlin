@@ -1,0 +1,16 @@
+uuid: 0ecc2990-2ca2-4ec5-b724-24cdd6b4c3e0
+langcode: en
+status: true
+dependencies: {  }
+name: fl_header_i
+label: 'FL Header Image'
+effects:
+  cba30095-d81c-4d32-bce6-2fecb5d7edc5:
+    uuid: cba30095-d81c-4d32-bce6-2fecb5d7edc5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 255
+      height: 155
+      anchor: center-center
+pipeline: image_optimiza

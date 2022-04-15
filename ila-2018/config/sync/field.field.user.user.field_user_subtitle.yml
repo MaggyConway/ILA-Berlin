@@ -1,0 +1,25 @@
+uuid: f120420e-c3a1-48d7-8c51-455bdfa8430f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_subtitle
+  module:
+    - markup
+    - user
+id: user.user.field_user_subtitle
+field_name: field_user_subtitle
+entity_type: user
+bundle: user
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: '<h3 class="account-data-warning">Check and change your account data</h3>'
+    format: plain_html
+field_type: markup

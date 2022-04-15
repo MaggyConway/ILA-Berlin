@@ -1,0 +1,26 @@
+uuid: 64b74afd-3ec8-4a4d-9a37-8593ee9b0268
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_header.field_cc_anchor
+    - field.field.paragraph.fl_header.field_paragraph_reference
+    - paragraphs.paragraphs_type.fl_header
+  module:
+    - entity_reference_revisions
+id: paragraph.fl_header.default
+targetEntityType: paragraph
+bundle: fl_header
+mode: default
+content:
+  field_paragraph_reference:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_cc_anchor: true

@@ -1,0 +1,18 @@
+uuid: ae23f0a6-fbb3-4eff-aa8b-ca37ad675fa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_visitors
+id: block_content.careercenter_visitors.metatag
+field_name: metatag
+entity_type: block_content
+bundle: careercenter_visitors
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

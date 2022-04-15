@@ -1,0 +1,16 @@
+uuid: c29612aa-7b10-4f7f-bac2-187c30f2a2ca
+langcode: de
+status: true
+dependencies: {  }
+name: speaker_portrait
+label: 'Speaker Portrait'
+effects:
+  45777acd-afb0-46cd-9ede-c58b33325be7:
+    uuid: 45777acd-afb0-46cd-9ede-c58b33325be7
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 95
+      height: 95
+      anchor: center-center
+pipeline: image_optimiza

@@ -1,0 +1,137 @@
+uuid: ff376f6f-106c-4197-9faa-9fc9b2b70167
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.bdli_event.body
+    - field.field.node.bdli_event.field_co_add_to_my_calendar
+    - field.field.node.bdli_event.field_contact_persons
+    - field.field.node.bdli_event.field_date_and_time
+    - field.field.node.bdli_event.field_ev_venue
+    - field.field.node.bdli_event.field_ila_event
+    - node.type.bdli_event
+  module:
+    - addtocalendar
+    - conditional_fields
+    - datetime_range
+    - paragraphs
+    - path
+    - text
+id: node.bdli_event.default
+targetEntityType: node
+bundle: bdli_event
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_co_add_to_my_calendar:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: add_to_calendar_widget_type
+    region: content
+  field_contact_persons:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: kontakt_person
+    third_party_settings: {  }
+    region: content
+  field_date_and_time:
+    weight: 1
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: daterange_default
+    region: content
+  field_ev_venue:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_ila_event: true

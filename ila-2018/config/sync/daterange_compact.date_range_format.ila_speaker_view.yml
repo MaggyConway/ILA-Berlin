@@ -1,0 +1,18 @@
+uuid: f36538cf-9719-4653-8c28-1e2df2340df2
+langcode: en
+status: true
+dependencies: {  }
+id: ila_speaker_view
+label: 'ILA Speaker view'
+date_settings:
+  default_pattern: 'l, j. F Y'
+  separator: '-'
+  same_month_start_pattern: ''
+  same_month_end_pattern: ''
+  same_year_start_pattern: ''
+  same_year_end_pattern: ''
+datetime_settings:
+  default_pattern: 'l, j. F Y'
+  separator: '-'
+  same_day_start_pattern: 'l, j. F Y'
+  same_day_end_pattern: ''

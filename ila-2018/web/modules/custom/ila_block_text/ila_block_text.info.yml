@@ -1,0 +1,13 @@
+name: 'Block - Text'
+description: 'Block content - "Text" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - ds
+  - entity_reference_revisions
+  - field
+  - ila_block_base
+  - paragraphs
+  - text
+package: ILA

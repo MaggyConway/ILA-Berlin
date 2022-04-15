@@ -1,0 +1,20 @@
+uuid: 7420d0b6-ba3d-4161-b05d-eb717b74f09b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+_core:
+  default_config_hash: j6YLfuLqMP4_4Cn-Og645jSUBGVstnr-tRhw_ixAnJE
+id: block_content.video.info
+field_name: info
+entity_type: block_content
+bundle: video
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

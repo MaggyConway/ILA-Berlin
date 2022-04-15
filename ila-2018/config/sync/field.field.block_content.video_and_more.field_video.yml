@@ -1,0 +1,45 @@
+uuid: 4bb63ee0-453f-47cd-9bf2-39699e9b5b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_and_more
+    - field.storage.block_content.field_video
+  module:
+    - filefield_paths
+    - video
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: ''
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+id: block_content.video_and_more.field_video
+field_name: field_video
+entity_type: block_content
+bundle: video_and_more
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

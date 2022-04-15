@@ -1,0 +1,11 @@
+id: creation_date_with_location_news
+label: 'Creation date with location (News)'
+ui_limit: "news|default\r\nnews|teaser"
+properties:
+  content:
+    value: '[node:date-range-custom]'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

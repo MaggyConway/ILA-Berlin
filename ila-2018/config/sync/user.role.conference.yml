@@ -1,0 +1,32 @@
+uuid: 440f6601-3952-4658-946c-87ddff93af90
+langcode: en
+status: true
+dependencies: {  }
+id: conference
+label: Conference
+weight: 6
+is_admin: null
+permissions:
+  - 'access speaker_upload_only entity browser pages'
+  - 'create content translations'
+  - 'create image media'
+  - 'create speaker content'
+  - 'delete own image media'
+  - 'delete own speaker content'
+  - 'display eu cookie compliance popup'
+  - 'dropzone upload files'
+  - 'edit own conference content'
+  - 'edit own image media'
+  - 'edit own speaker content'
+  - 'publish any node type conference'
+  - 'publish editable node type conference'
+  - 'publish own node type conference'
+  - 'translate conference node'
+  - 'unpublish any node type conference'
+  - 'unpublish editable node type conference'
+  - 'unpublish own node type conference'
+  - 'update media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view speaker revisions'
+  - 'view the administration theme'

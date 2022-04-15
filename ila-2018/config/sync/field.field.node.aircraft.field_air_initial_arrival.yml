@@ -1,0 +1,21 @@
+uuid: 7f9b2e6e-fd69-4d44-9adc-07fecd97ce03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_initial_arrival
+    - node.type.aircraft
+  module:
+    - datetime
+id: node.aircraft.field_air_initial_arrival
+field_name: field_air_initial_arrival
+entity_type: node
+bundle: aircraft
+label: 'initial arrival'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

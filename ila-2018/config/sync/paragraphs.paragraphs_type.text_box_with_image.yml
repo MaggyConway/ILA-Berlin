@@ -1,0 +1,10 @@
+uuid: 18c1722b-6f43-4478-884f-2da98cc02ef4
+langcode: en
+status: true
+dependencies: {  }
+id: text_box_with_image
+label: 'Text box with image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

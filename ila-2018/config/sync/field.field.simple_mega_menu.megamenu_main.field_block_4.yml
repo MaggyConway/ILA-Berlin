@@ -1,0 +1,24 @@
+uuid: bf52825d-c489-4546-ba63-f3f085bdf2a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.simple_mega_menu.field_block_4
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - block_field
+id: simple_mega_menu.megamenu_main.field_block_4
+field_name: field_block_4
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: 'Block 4'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

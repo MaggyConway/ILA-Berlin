@@ -1,0 +1,38 @@
+.main-menu {
+  @include list-reset;
+
+  padding: 28px 40px;
+  display: inline-block;
+  width: 100%;
+  color: $c-white;
+  border-bottom: 1px solid;
+
+  &__item {
+    margin-right: 40px;
+    margin-left: 40px;
+    display: inline-block;
+
+    > a {
+      font-size: 20px;
+      line-height: 56px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $c-blue-sky;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    @media screen and (max-width: 975px) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

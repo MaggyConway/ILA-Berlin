@@ -1,0 +1,30 @@
+uuid: ab6ea5ea-5a29-4cff-9468-86919e2d9a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.twitter_feed.field_twitter_description
+    - field.field.paragraph.twitter_feed.field_twitter_text
+    - paragraphs.paragraphs_type.twitter_feed
+  module:
+    - text
+id: paragraph.twitter_feed.default
+targetEntityType: paragraph
+bundle: twitter_feed
+mode: default
+content:
+  field_twitter_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_twitter_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

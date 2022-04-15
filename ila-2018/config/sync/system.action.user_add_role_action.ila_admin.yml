@@ -1,0 +1,14 @@
+uuid: 1b91de6f-4fd1-41f2-bd89-d752c58fe7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ila_admin
+  module:
+    - user
+id: user_add_role_action.ila_admin
+label: 'Add the ILA Admin role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: ila_admin

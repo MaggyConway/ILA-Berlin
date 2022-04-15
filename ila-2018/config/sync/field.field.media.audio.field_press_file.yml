@@ -1,0 +1,23 @@
+uuid: 4d5770bb-126f-42f4-ba28-bb1bddad5996
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_press_file
+    - media.type.audio
+id: media.audio.field_press_file
+field_name: field_press_file
+entity_type: media
+bundle: audio
+label: 'Im Presse Bereich anzeigen '
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

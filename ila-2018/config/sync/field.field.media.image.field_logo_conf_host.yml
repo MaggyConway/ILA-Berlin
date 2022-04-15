@@ -1,0 +1,23 @@
+uuid: e2c1cf53-405c-4e2a-b8c3-9be00089976f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_logo_conf_host
+    - media.type.image
+id: media.image.field_logo_conf_host
+field_name: field_logo_conf_host
+entity_type: media
+bundle: image
+label: 'Logo Konferenz Veranstalter'
+description: 'Für die Ausgabe des Bildes auf der Konferenzen Logowall bitte anklicken.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 79bfed77-4977-47aa-9e44-a23022c840ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_exhibitors
+    - field.storage.block_content.field_cc_exhibitors_anchor_id
+id: block_content.careercenter_exhibitors.field_cc_exhibitors_anchor_id
+field_name: field_cc_exhibitors_anchor_id
+entity_type: block_content
+bundle: careercenter_exhibitors
+label: 'Anchor ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

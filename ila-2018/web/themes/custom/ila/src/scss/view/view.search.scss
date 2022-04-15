@@ -1,0 +1,45 @@
+.view-search {
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  max-width: 1145px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  min-height: 40vh;
+
+  .views-row {
+    margin-top: 30px;
+    border-bottom: 1px solid #009cde;
+    padding-bottom: 20px;
+  }
+
+  .field--name-node-title {
+    padding-left: 0;
+    font-size: 15px;
+
+    h2 {
+      font-size: inherit;
+      font-weight: 100;
+    }
+  }
+
+  .view-filters {
+
+    .form--inline {
+      display: flex;
+      align-items: baseline;
+
+      .form-item.form-item-search-api-fulltext {
+        height: 2em;
+        margin-bottom: 1em;
+        width: 100%
+      }
+
+      .form-actions {
+        margin-top: 1em;
+      }
+    }
+  }
+}

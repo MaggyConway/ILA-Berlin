@@ -1,0 +1,70 @@
+uuid: c9df2446-2db1-4e41-8e72-04f4e20ff929
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conferences_bookmarks
+    - system.menu.conference-menu
+    - views.view.conferences
+  content:
+    - 'block_content:page_description:dae37d59-c77e-41d5-b9df-011d810ab90a'
+  module:
+    - block_content
+    - panels
+    - system
+    - views
+id: conferences_bookmarks-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    08cb31a7-4fda-47b4-a962-fc439b87d2b7:
+      id: 'views_block:conferences-block_4'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 08cb31a7-4fda-47b4-a962-fc439b87d2b7
+      context_mapping: {  }
+    b208fea0-2247-44e0-bd9e-9c75b7376e45:
+      id: 'system_menu_block:conference-menu'
+      label: 'Conference menu'
+      provider: system
+      label_display: '0'
+      level: 1
+      depth: 0
+      expand_all_items: false
+      region: content
+      weight: 0
+      uuid: b208fea0-2247-44e0-bd9e-9c75b7376e45
+      context_mapping: {  }
+    29e076fe-bf67-4260-b902-9f3b94867e76:
+      id: 'block_content:dae37d59-c77e-41d5-b9df-011d810ab90a'
+      label: Bookmarks
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 29e076fe-bf67-4260-b902-9f3b94867e76
+      context_mapping: {  }
+  id: panels_variant
+  uuid: d12bcfd8-ff52-42a4-a9b9-0df4a9905814
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: conferences_bookmarks-panels_variant-0
+  builder: standard
+page: conferences_bookmarks
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

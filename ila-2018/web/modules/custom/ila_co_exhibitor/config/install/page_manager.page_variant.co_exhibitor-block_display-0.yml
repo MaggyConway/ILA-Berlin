@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.co_exhibitor
+  content:
+    - 'block_content:page_description:19ffb87f-f3b7-4327-9977-d596a383e7da'
+  module:
+    - block_content
+    - node
+    - panels
+id: co_exhibitor-block_display-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    cad3d2de-ce8b-49bd-ac05-e40d638c6b62:
+      id: formblock_node
+      label: 'Anmeldung Mitaussteller'
+      provider: node
+      label_display: '0'
+      type: co_exhibitor
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: cad3d2de-ce8b-49bd-ac05-e40d638c6b62
+      context_mapping: {  }
+    02bdde2d-ae28-4cab-a954-4ce3bdb2acc8:
+      id: 'block_content:19ffb87f-f3b7-4327-9977-d596a383e7da'
+      label: 'Registration co-exhibitor'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 02bdde2d-ae28-4cab-a954-4ce3bdb2acc8
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 05eb824a-ad86-45d6-a9ff-868d1a40afb3
+  label: null
+  weight: 0
+  page_title: Co-exhibitor
+  layout: layout_onecol
+  layout_settings: {  }
+  storage_type: page_manager
+  storage_id: co_exhibitor-block_display-0
+  builder: standard
+page: co_exhibitor
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

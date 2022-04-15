@@ -1,0 +1,272 @@
+uuid: b16f8f44-61ad-4f27-a092-98b1748e0df0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tbs_paragraph_ref
+    - paragraphs.paragraphs_type.block_reference
+    - paragraphs.paragraphs_type.text_box
+    - paragraphs.paragraphs_type.text_box_with_image
+    - paragraphs.paragraphs_type.text_boxes
+  module:
+    - entity_reference_revisions
+id: paragraph.text_boxes.field_tbs_paragraph_ref
+field_name: field_tbs_paragraph_ref
+entity_type: paragraph
+bundle: text_boxes
+label: 'Text Boxes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text_box: text_box
+      block_reference: block_reference
+      text_box_with_image: text_box_with_image
+    target_bundles_drag_drop:
+      block_reference:
+        enabled: true
+        weight: 18
+      career_center_visitors_news:
+        weight: 85
+        enabled: false
+      careercenter_header_title:
+        weight: 82
+        enabled: false
+      careercenter_title_text_images:
+        weight: 83
+        enabled: false
+      careercenter_view_reference:
+        weight: 84
+        enabled: false
+      cc_block_reference:
+        weight: 86
+        enabled: false
+      cc_facebook_post:
+        weight: 87
+        enabled: false
+      cc_header_image_container:
+        weight: 88
+        enabled: false
+      cc_header_image_item:
+        weight: 89
+        enabled: false
+      cc_header_image_item_extended:
+        weight: 90
+        enabled: false
+      cc_link_box:
+        weight: 91
+        enabled: false
+      cc_link_list:
+        weight: 92
+        enabled: false
+      cc_link_list_item:
+        weight: 93
+        enabled: false
+      cc_news_block:
+        weight: 94
+        enabled: false
+      cc_svg_tag_snippet:
+        weight: 95
+        enabled: false
+      cc_testimonial:
+        weight: 96
+        enabled: false
+      cc_testimonials_container:
+        weight: 97
+        enabled: false
+      cc_text_box:
+        weight: 98
+        enabled: false
+      cc_text_box_container:
+        weight: 99
+        enabled: false
+      cc_text_box_with_image:
+        weight: 100
+        enabled: false
+      cc_text_on_image:
+        weight: 101
+        enabled: false
+      cc_tiled_title:
+        weight: 102
+        enabled: false
+      contact:
+        weight: 103
+        enabled: false
+      content_subtitle:
+        weight: -24
+        enabled: false
+      download:
+        weight: 105
+        enabled: false
+      dwn_link:
+        weight: 106
+        enabled: false
+      exhibition:
+        weight: 107
+        enabled: false
+      exhibition_container:
+        weight: 108
+        enabled: false
+      faq:
+        weight: 109
+        enabled: false
+      faq_group:
+        weight: 110
+        enabled: false
+      fl_block_reference:
+        weight: 111
+        enabled: false
+      fl_box:
+        weight: 112
+        enabled: false
+      fl_double_box:
+        weight: 113
+        enabled: false
+      fl_double_box_container:
+        weight: 114
+        enabled: false
+      fl_download_box:
+        weight: 115
+        enabled: false
+      fl_dynamic_block:
+        weight: 116
+        enabled: false
+      fl_header:
+        weight: 117
+        enabled: false
+      fl_header_element:
+        weight: 118
+        enabled: false
+      fl_logo:
+        weight: 119
+        enabled: false
+      fl_stream_box:
+        weight: 120
+        enabled: false
+      fl_svg_tag_snippet:
+        weight: 121
+        enabled: false
+      fl_testimonial:
+        weight: 122
+        enabled: false
+      fl_testimonials_container:
+        weight: 123
+        enabled: false
+      fl_text_image_box:
+        weight: 124
+        enabled: false
+      fl_video_box:
+        weight: 125
+        enabled: false
+      fl_video_box_container:
+        weight: 126
+        enabled: false
+      fl_video_message:
+        weight: 127
+        enabled: false
+      fl_video_messages:
+        weight: 128
+        enabled: false
+      image_box:
+        weight: -19
+        enabled: false
+      image_full:
+        weight: -23
+        enabled: false
+      image_row:
+        weight: 20
+        enabled: false
+      info_box:
+        weight: 134
+        enabled: false
+      infographic_box:
+        weight: 21
+        enabled: false
+      infographic_box_column:
+        weight: 22
+        enabled: false
+      kontakt_person:
+        weight: 135
+        enabled: false
+      link_box:
+        weight: -15
+        enabled: false
+      link_box_container:
+        weight: -16
+        enabled: false
+      list_of_companies:
+        weight: 138
+        enabled: false
+      list_of_companies_link:
+        weight: 139
+        enabled: false
+      menu_block:
+        weight: 140
+        enabled: false
+      menu_column:
+        weight: 141
+        enabled: false
+      menu_link:
+        weight: 142
+        enabled: false
+      navigation:
+        weight: 143
+        enabled: false
+      quote:
+        weight: 25
+        enabled: false
+      quote_portrait:
+        weight: 145
+        enabled: false
+      quote_portrait_container:
+        weight: 146
+        enabled: false
+      request_link:
+        weight: -22
+        enabled: false
+      single_link_box:
+        weight: 148
+        enabled: false
+      slideshow:
+        weight: -14
+        enabled: false
+      speaker:
+        weight: 150
+        enabled: false
+      text:
+        weight: -21
+        enabled: false
+      text_box:
+        enabled: true
+        weight: -18
+      text_box_with_image:
+        enabled: true
+        weight: 154
+      text_boxes:
+        weight: -25
+        enabled: false
+      title_image_text:
+        weight: 155
+        enabled: false
+      title_text:
+        weight: -20
+        enabled: false
+      twitter_feed:
+        weight: 157
+        enabled: false
+      two_column_text:
+        weight: -17
+        enabled: false
+      video_big:
+        weight: 159
+        enabled: false
+      view_reference:
+        weight: 160
+        enabled: false
+field_type: entity_reference_revisions

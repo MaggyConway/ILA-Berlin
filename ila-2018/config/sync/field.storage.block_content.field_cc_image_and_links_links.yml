@@ -1,0 +1,21 @@
+uuid: b24c6719-3881-4df1-926a-2fac2629ed9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_cc_image_and_links_links
+field_name: field_cc_image_and_links_links
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

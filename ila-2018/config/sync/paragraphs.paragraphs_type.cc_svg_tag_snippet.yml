@@ -1,0 +1,9 @@
+uuid: 711d79b1-2e30-4a92-893c-91018948bd5f
+langcode: en
+status: true
+dependencies: {  }
+id: cc_svg_tag_snippet
+label: 'CareerCenter -- SVG tag snippet'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

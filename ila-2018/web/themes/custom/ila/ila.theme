@@ -1,0 +1,619 @@
+<?php
+
+/**
+ * @file
+ * Custom theme prerpocessors and etc.
+ */
+use Drupal\Core\Link;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media\Entity\Media;
+use Drupal\views\Entity;
+use Drupal\views\Views;
+use Drupal\views\ViewEntityInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\node\NodeInterface;
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_html(&$variables) {
+  $variables['attributes']['class'][] = 'conferences-bubble';
+
+  if (isset($variables['root_path'])) {
+    if ($variables['root_path'] == 'm_BDLI-Events_m') {
+      $robots = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'robots',
+          'content' => 'noindex',
+        ],
+      ];
+      $variables['page']['#attached']['html_head'][] = [$robots, 'title'];
+    }
+  }
+}
+
+/**
+ * Implements ila_preprocess_HOOK().
+ */
+function ila_preprocess_block(&$variables) {
+  $block = $variables['elements'];
+  $blockType = $block['#configuration']['provider'];
+
+  if ($blockType == "block_content" && isset($block['content']['#bundle'])) {
+    if ($block['content']['#bundle'] == 'text') {
+      $css_class = $block['content']['#block_content']->field_css_class->getValue();
+      if (isset($css_class[0]['value'])) {
+        $variables['attributes']['class'] = $css_class[0]['value'];
+      }
+    }
+
+    return;
+  }
+
+  // Add 'id' to the CareerCenter blocks.
+  if ($blockType === 'block_content') {
+    if (!isset($block['content']['#block_content'])) {
+      return;
+    }
+    $block_content = $block['content']['#block_content'];
+    $career_center_blocks = [
+      'careercenter_grid' => 'field_cc_grid_anchor_id',
+      'career_center_news' => 'field_cc_news_anchor_id',
+      'careercenter_exhibitors' => 'field_cc_exhibitors_anchor_id',
+      'careercenter_visitors' => 'field_cc_visitors_anchor_id',
+      'careercenter_image_and_links' => 'field_cc_image_and_links_anchor',
+      'careercenter_sponsors' => 'field_cc_sponsors_anchor_id',
+    ];
+
+    $block_bundle = $block_content->bundle();
+    if (!isset($career_center_blocks[$block_bundle])) {
+      return;
+    }
+
+    $anchor_field_name = $career_center_blocks[$block_bundle];
+    if (!$block_content->hasField($anchor_field_name)) {
+      return;
+    }
+    if (!$anchor_id = $block_content->get($anchor_field_name)->getValue()) {
+      return;
+    }
+
+    $variables['content'] = [
+      'anchor' => [
+        '#type' => 'markup',
+        '#markup' => '<span class="' . str_replace('_', '-', $block_bundle) . '__anchor" id="' . $anchor_id[0]['value'] . '"></span>',
+      ],
+    ] + $variables['content'];
+  }
+
+  if (isset($block['content']['#view_id'])) {
+    if ($block['content']['#view_id'] == 'events') {
+      $variables['attributes']['class'][] = 'events-view';
+    }
+    if ($block['content']['#view_id'] == 'partners') {
+      $variables['attributes']['class'][] = 'partners-view';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph__image_box().
+ */
+function ila_preprocess_paragraph__image_box(array &$variables) {
+  _ila_set_element_style_class($variables, 'paragraph', 'field_ib_style');
+  _ila_set_element_style_class($variables, 'paragraph', 'field_layout_option');
+}
+
+/**
+ * Implements hook_preprocess_paragraph__infographic_box().
+ */
+function ila_preprocess_paragraph__infographic_box(array &$variables) {
+  // @todo remove deprecated field
+  $image_url = _ila_get_image_field_url($variables['paragraph'], 'field_infographic_box_background', FieldStorageConfig::loadByName($variables['paragraph']->getEntityType()->id(),'field_infographic_box_background')->getSetting('target_type'));
+  if ($image_url === FALSE) {
+    $image_url = _ila_get_image_field_url($variables['paragraph'], 'field_infographic_box_bg_media', FieldStorageConfig::loadByName($variables['paragraph']->getEntityType()->id(),'field_infographic_box_bg_media')->getSetting('target_type'));
+    if ($image_url === FALSE) {
+      return;
+    }
+  }
+
+  if (!isset($variables['attributes']['style'])) {
+    $variables['attributes']['style'] = '';
+  }
+  $variables['attributes']['style'] .= '; background-image: url(' . $image_url . ');';
+}
+
+/**
+ * Implements hook_preprocess_field__node__field_section_banner_image().
+ */
+function ila_preprocess_field__node__field_section_banner_image(array &$variables) {
+  //@todo Remove this hook after deleting field.
+  if (!isset($variables['items'][0]['content']['#item'])) {
+    return;
+  }
+
+  $field_value = $variables['items'][0]['content']['#item']->getValue();
+
+  if (!isset($field_value['target_id'])) {
+    return;
+  }
+  if (!$image_file = File::load($field_value['target_id'])) {
+    return;
+  }
+
+  if (!isset($variables['attributes']['style'])) {
+    $variables['attributes']['style'] = '';
+  }
+  $variables['attributes']['style'] .= '; background-image: url(' . $image_file->createFileUrl(FALSE) . ');';
+  $variables['attributes']['id'] = 'section-header';
+}
+
+/**
+ * Implements hook_preprocess_field__node__field_section_banner_image().
+ */
+function ila_preprocess_field__node__field_section_banner_image_media(array &$variables) {
+  if (!isset($variables["element"]["#object"])) {
+    return;
+  }
+  $image_url = _ila_get_image_field_url($variables["element"]["#object"], 'field_section_banner_image_media', FieldStorageConfig::loadByName($variables["element"]["#object"]->getEntityType()->id(),'field_section_banner_image_media')->getSetting('target_type'));
+  if ($image_url === FALSE) {
+    return;
+  }
+  if (!isset($variables['attributes']['style'])) {
+    $variables['attributes']['style'] = '';
+  }
+  $variables['attributes']['style'] .= '; background-image: url(' . $image_url . ');';
+  $variables['attributes']['id'] = 'section-header';
+}
+
+/**
+ * Implements hook_preprocess_layout().
+ */
+function ila_preprocess_layout(array &$variables) {
+  // Add '{entity_type}--type-{entity_bundle}' class to the the layout template.
+  if (!isset($variables['content']['#entity'], $variables['content']['#entity_type'])) {
+    return;
+  }
+
+  $entity = $variables['content']['#entity'];
+  $entity_type = $variables['content']['#entity_type'];
+  $entity_bundle = str_replace('_', '-', $entity->bundle());
+  $entity_view_mode = $variables['content']['#view_mode'];
+
+  if ($entity_type === 'paragraph') {
+    $entity_bundle = '-' . $entity_bundle;
+  }
+
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+  $variables['attributes']['class'][] = $entity_type . '--type-' . $entity_bundle;
+
+  // Add 'node--style-*' class.
+  if ($entity_type === 'node' && in_array($entity->bundle(), ['section', 'basic_page'])
+  && $entity_view_mode != 'global_search_result') {
+    if ($field_value = $entity->get('field_style')->getValue()) {
+      $variables['attributes']['class'][] = 'node--style-' . $field_value[0]['value'];
+    }
+  }
+}
+
+/**
+ * Returns the URL string for the image field of the given entity.
+ */
+function _ila_get_image_field_url(ContentEntityInterface $entity, string $field_name, $target_type = NULL) {
+  
+  if ($target_type) {
+    switch ($target_type) {
+      case 'media':
+        $field_value = $entity->get($field_name)->getValue();
+        if (isset($field_value[0]['target_id'])) {
+          if ($media_entity = Media::load($field_value[0]['target_id'])) {
+            $field_media_image = $media_entity->get('field_media_image')->getValue();
+            if (isset($field_media_image[0]['target_id'])) {
+              if ($image_file = File::load($field_media_image[0]['target_id'])) {
+                return $image_file->createFileUrl(FALSE);
+              }
+            }
+          }
+        }
+        break;
+        
+      case 'file':
+        $field_value = $entity->get($field_name)->getValue();
+        if (isset($field_value[0]['target_id'])) {
+          if ($image_file = File::load($field_value[0]['target_id'])) {
+            return $image_file->createFileUrl(FALSE);
+          }
+        }
+      break;
+    }
+    
+    return FALSE;
+  }
+  else {
+    $field_value = $entity->get($field_name)->getValue();
+    if (isset($field_value[0]['target_id'])) {
+      if ($image_file = File::load($field_value[0]['target_id'])) {
+        return $image_file->createFileUrl(FALSE);
+      }
+    }
+  
+    return FALSE;
+  }
+}
+
+/**
+ * Set the element class depending on the value of the given field.
+ */
+function _ila_set_element_style_class(array &$variables, string $element_type, string $style_field_name) {
+  $element = $variables[$element_type];
+
+  $style_name = 'none';
+  if ($style_field = $element->get($style_field_name)) {
+    if ($style_value = $style_field->getValue()) {
+      $style_name = $style_value[0]['value'];
+    }
+  }
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+  $variables['attributes']['class'][] = $element_type . '--style-' . $style_name;
+}
+
+/**
+ * Implements hook_preprocess_paragraph__text_boxes().
+ */
+function ila_preprocess_paragraph__text_boxes(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->hasField('field_tbs_separators')) {
+    return;
+  }
+  if (!$field_value = $paragraph->get('field_tbs_separators')->getValue()) {
+    return;
+  }
+
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+  $variables['attributes']['class'][] = 'field--separators-' . $field_value[0]['value'];
+}
+
+/**
+ * Implements hook_preprocess_views_view_unformatted__sections__block_1().
+ */
+function ila_preprocess_views_view_unformatted__sections__block_1(&$variables) {
+
+  if (!isset($variables['rows'])) {
+    return;
+  }
+  $view_rows = $variables['rows'];
+  foreach ($view_rows as $key => $row) {
+    $node = $row['content']['#row']->_entity;
+    if ($node->hasField('field_background_section') && !empty($node->get('field_background_section')->getValue())) {
+      $color = $node->get('field_background_section')->getValue();
+      $variables['rows'][$key]['content']['hex'] = $color[0]['color'];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field__node__field_file__press().
+ */
+function ila_preprocess_field__node__field_file__press(&$variables) {
+
+  $view_mode = $variables['element']['#view_mode'];
+
+  $file = $variables['element']['#items'];
+  $fid = $file->target_id;
+  $file_entity = Drupal\file\Entity\File::load($fid);
+
+  if ($view_mode == 'media_image' || $view_mode == 'media_audio') {
+    $variables['file_type'] =  pathinfo($file_entity->getFileUri())['extension'];
+    $variables['file_size'] = _humanFileSize($file_entity->getSize());
+  }
+
+  if ($variables['element']['#view_mode'] == 'media_image') {
+    $style = ImageStyle::load('media_preview');
+    $url = $style->buildUrl($file_entity->getFileUri());
+    $variables['image_style_url'] = $url;
+  }
+}
+
+/*
+ * Get human readable file size
+ */
+function _humanFileSize($size) {
+  $filesizename = array(" Bytes", " KB", " MB", " GB", " TB", " PB", " EB", " ZB", " YB");
+  return $size ? round($size / pow(1024, ($i = floor(log($size, 1024)))), 2) . $filesizename[$i] : '0 Bytes';
+}
+
+/*
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_block__block_content_header_image(array &$variables) {
+  $image_url = _ila_get_image_field_url($variables['content']['#entity'], 'field_header_image_image');
+  if ($image_url === FALSE) {
+    return;
+  }
+
+  if (!isset($variables['attributes']['style'])) {
+    $variables['attributes']['style'] = '';
+  }
+  $variables['attributes']['style'] .= '; background-image: url(' . $image_url . ');';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_paragraph__cc_text_on_image(array &$variables) {
+  $image_url = _ila_get_image_field_url($variables['paragraph'], 'field_cc_text_on_image_image');
+  if ($image_url === FALSE) {
+    return;
+  }
+
+  if (!isset($variables['attributes']['style'])) {
+    $variables['attributes']['style'] = '';
+  }
+  $variables['attributes']['style'] .= '; background-image: url(' . $image_url . ');';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_block__block_content_careercenter_image_and_links(array &$variables) {
+  $image_url = _ila_get_image_field_url($variables['content']['#block_content'], 'field_cc_image_and_links_image');
+  if ($image_url === FALSE) {
+    return;
+  }
+
+  if (!isset($variables['attributes']['style'])) {
+    $variables['attributes']['style'] = '';
+  }
+  $variables['attributes']['style'] .= '; background-image: url(' . $image_url . ');';
+}
+
+/**
+ * Implements hook_preprocess_paragraph__cc_link_box().
+ */
+function ila_preprocess_paragraph__cc_link_box(array &$variables) {
+  if (!isset($variables['paragraph'])) {
+    return;
+  }
+
+  $fontawesome_switcher_field = 'field_cc_link_box_use_awesome';
+  $fontawesome_class_field = 'field_cc_link_box_symbol_class';
+  $title_field = 'field_cc_link_box_title';
+
+  $paragraph = $variables['paragraph'];
+
+  if (!$paragraph->hasField($fontawesome_switcher_field) || !$paragraph->hasField($fontawesome_class_field)) {
+    return;
+  }
+  $switcher_value = $paragraph->get($fontawesome_switcher_field)->getValue();
+  if (empty($switcher_value)) {
+    return;
+  }
+  if ($switcher_value[0]['value'] === '0') {
+    return;
+  }
+  if (!$fontawesome_class = $paragraph->get($fontawesome_class_field)->getValue()) {
+    return;
+  }
+
+  $fontawesome_class = $fontawesome_class[0]['value'];
+  $variables['content'][$title_field] = [
+    '#type' => 'markup',
+    '#markup' => '<i class="link-box__fa-title fa ' . $fontawesome_class . '" aria-hidden="true"></i>',
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_paragraph__info_box(array &$variables) {
+  // @todo remove deprecated field
+  $image_url = _ila_get_image_field_url($variables['paragraph'], 'field_info_box_background_image', FieldStorageConfig::loadByName($variables['paragraph']->getEntityType()->id(),'field_info_box_background_image')->getSetting('target_type'));
+  if ($image_url === FALSE) {
+    $image_url = _ila_get_image_field_url($variables['paragraph'], 'field_info_box_bg_media', FieldStorageConfig::loadByName($variables['paragraph']->getEntityType()->id(),'field_info_box_bg_media')->getSetting('target_type'));
+    if ($image_url === FALSE) {
+      return;
+    }
+  }
+  
+  if ($image_url === FALSE) {
+    return;
+  }
+
+  $variables['content'] = [
+    'background-image' => [
+      '#type' => 'inline_template',
+      '#template' => '{{ content | raw }}',
+      '#context' => [
+        'content' => '<div class="info-box__background-image" style="background-image: url(' . $image_url . ')"></div>',
+      ],
+    ],
+  ] + $variables['content'];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_html__node(array &$variables) {
+  $parallax_bg_field_name = 'field_parallax_background';
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $variables['html_attributes']->setAttribute('class', ['html--background-no-parallax']);
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
+
+  if (!$node->hasField($parallax_bg_field_name)) {
+    return;
+  }
+  $parallax_background_field = $node->get($parallax_bg_field_name)->getValue();
+  if (!isset($parallax_background_field[0]['value'])) {
+    return;
+  }
+  $parallax_value = $parallax_background_field['0']['value'];
+
+  if ($parallax_background_field['0']['value'] === '1') {
+    $variables['html_attributes']->setAttribute('class', ['html--background-parallax']);
+  }
+
+  if ($node->id() == '868') {
+    $variables['attributes']['class'] = 'career-center-visitors';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_html__ila_news(array &$variables) {
+  $variables['html_attributes']->setAttribute('class', ['html--background-no-parallax']);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_menu__section_nodes_menu(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    if (!isset($item['url'])) {
+      continue;
+    }
+    $url_attributes = $item['url']->getOption('attributes');
+    if (isset($url_attributes['class'])) {
+      $item['attributes']->addClass($url_attributes['class']);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_html__media__images(array &$variables) {
+  $variables['html_attributes']->setAttribute('class', ['html--background-no-parallax']);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_html__media__audio_video(array &$variables) {
+  $variables['html_attributes']->setAttribute('class', ['html--background-no-parallax']);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_field__field_co_registration_on_conf(array &$variables) {
+  $node = $variables['element']['#object'];
+  $trigger_field_name = 'field_co_enable_registration';
+  if (!$node->hasField($trigger_field_name) && empty($node->get($trigger_field_name))) {
+    return;
+  }
+  if ($node->get($trigger_field_name)->getValue()[0]['value'] === '0') {
+    $variables['label_hidden'] = TRUE;
+    $variables['items'][0]['content'] = [
+      '#type' => 'hidden',
+    ];
+
+    return;
+  }
+
+  $variables['#cache']['max-age'] = 0;
+  // For anonymous.
+  if (\Drupal::currentUser()->isAnonymous()) {
+    $user_is_first_timer = isset($_COOKIE['Drupal_visitor_' . 'Drupal_registration_FirstTimer']);
+    if ($user_is_first_timer) {
+      $variables['items'][0]['content'] = [
+        '#type' => 'markup',
+        '#markup' => t('You have already registered on this conference.'),
+      ];
+
+      return;
+    }
+  }
+
+  // Check if current user has already registered to this conference.
+  $result = \Drupal::entityQuery('attendee_registration')
+    ->condition('user_id', \Drupal::currentUser()->id())
+    ->condition('field_ar_registration_confirmed', TRUE)
+    ->condition('field_ar_conference', $variables['element']['#object']->id())
+    ->execute();
+
+
+  if (!empty($result) && !\Drupal::currentUser()->isAnonymous()) {
+    $variables['items'][0]['content'] = [
+      '#type' => 'markup',
+      '#markup' => t('You have already registered on this conference.'),
+    ];
+
+    return;
+  }
+
+  foreach ($variables['items'] as $key => $item) {
+    if (!empty($variables['items'][$key]['content']['#title'])) {
+      $variables['label'] = t('Registration via the organizer');
+
+      return;
+    }
+
+    $options = [];
+
+    $node = $variables['element']['#object'];
+    if (!empty($node)) {
+      $node_id = $node->id();
+      $host = \Drupal::request()->getSchemeAndHttpHost();
+      $internal_url = $host . Url::fromRoute('ila_attendee_registration_block.register', ['node_id' => $node_id])->toString();
+    }
+
+    $link = '';
+    if (isset($internal_url) && $internal_url) {
+      $link = Drupal\Core\Link::fromTextAndUrl(t('to the registration form'), Url::fromUri($internal_url, $options));
+    }
+    $variables['items'][$key]['content']['#title'] = $link;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK() for contact form suggestion.
+ */
+function ila_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+  $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK() for contact form suggestion.
+ */
+function ila_theme_suggestions_slick_thumbnail_alter(array &$suggestions, array $variables) {
+  $settings = $variables['element']['#settings'] ? $variables['element']['#settings'] : [];
+  if (!empty($settings)) {
+    if (isset($settings['entity_type_id'])) {
+      $suggestions[] = 'slick_thumbnail__entity_type_' . $settings['entity_type_id'];
+    }
+    if (isset($settings['entity_id']) && isset($settings['entity_type_id'])) {
+      $entity = \Drupal::entityTypeManager()->getStorage($settings['entity_type_id'])->load($settings['entity_id']);
+      $suggestions[] = 'slick_thumbnail__entity_type_' . $settings['entity_type_id'] . '__entity_name_' . $entity->bundle();
+      $suggestions[] = 'slick_thumbnail__entity_type_' . $settings['entity_type_id'] . '__entity_name_' . $entity->bundle() . '__' . $entity->bundle() . '_' . $settings['entity_id'];
+    }
+
+  }
+}
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_preprocess_page(&$variables) {
+  $path_components = explode('/',\Drupal::service('path.current')->getPath());
+  if (in_array('attendee', $path_components)) {
+    if (isset($path_components[3]) && isset($path_components[4])
+      && !empty($path_components[3]) && !empty($path_components[4])) {
+      $variables['page_type'] = $path_components[3] . '-' . $path_components[4];
+    }
+  }
+}

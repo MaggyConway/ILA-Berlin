@@ -1,0 +1,21 @@
+uuid: 53c1f7b6-459d-40be-bbbe-619a0a82a052
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - node.type.speaker
+  module:
+    - text
+id: node.speaker.field_bio
+field_name: field_bio
+entity_type: node
+bundle: speaker
+label: Vita
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

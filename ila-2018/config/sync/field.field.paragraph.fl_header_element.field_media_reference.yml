@@ -1,0 +1,28 @@
+uuid: ff9c90f8-d755-423e-a74d-1026322b9d8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference
+    - media.type.image
+    - paragraphs.paragraphs_type.fl_header_element
+id: paragraph.fl_header_element.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+bundle: fl_header_element
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

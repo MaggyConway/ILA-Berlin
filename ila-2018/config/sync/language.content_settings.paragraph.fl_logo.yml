@@ -1,0 +1,18 @@
+uuid: 38433da3-593f-427e-80c4-b362ed137266
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_logo
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.fl_logo
+target_entity_type_id: paragraph
+target_bundle: fl_logo
+default_langcode: site_default
+language_alterable: true

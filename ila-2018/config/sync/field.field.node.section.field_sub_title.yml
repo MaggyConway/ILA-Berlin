@@ -1,0 +1,21 @@
+uuid: e140e047-ffe5-4951-824b-c852b5756be7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.section
+_core:
+  default_config_hash: OjN_7mXSjrQLpgihzyyyvO_D4MVphPbt0K8nlmzww1Q
+id: node.section.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: section
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

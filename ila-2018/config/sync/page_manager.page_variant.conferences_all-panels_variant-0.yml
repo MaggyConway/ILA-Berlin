@@ -1,0 +1,52 @@
+uuid: a6ccc173-db0b-432e-a406-6032a730f78b
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conferences_all
+    - simple_block.simple_block.conference_2020
+    - views.view.conferences_search_api
+  module:
+    - panels
+    - simple_block
+    - views
+id: conferences_all-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    a863454b-ebfc-4997-a2cf-b0d119af84ed:
+      id: 'simple_block:conference_2020'
+      label: 'Conference 2020'
+      provider: simple_block
+      label_display: visible
+      region: content
+      weight: -2
+      uuid: a863454b-ebfc-4997-a2cf-b0d119af84ed
+      context_mapping: {  }
+    0630cef6-7b86-4fa3-8d9d-0fe1c5c96a94:
+      id: 'views_block:conferences_search_api-conferences_search_api'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 2
+      uuid: 0630cef6-7b86-4fa3-8d9d-0fe1c5c96a94
+      context_mapping: {  }
+  id: panels_variant
+  uuid: a2ddb9cb-3e69-44a4-9bda-75b3b35c255f
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'Conferences 2018'
+  storage_type: page_manager
+  storage_id: conferences_all-panels_variant-0
+  builder: standard
+page: conferences_all
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

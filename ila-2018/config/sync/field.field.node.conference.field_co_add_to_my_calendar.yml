@@ -1,0 +1,57 @@
+uuid: 527eb9cb-39a1-4f49-8890-d27971896ff2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_add_to_my_calendar
+    - node.type.conference
+  module:
+    - addtocalendar
+id: node.conference.field_co_add_to_my_calendar
+field_name: field_co_add_to_my_calendar
+entity_type: node
+bundle: conference
+label: 'Add to my calendar'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Add to my Calendar'
+  off_label: 'Add to Calendar Disabled'
+  addtocalendar_show: 1
+  addtocalendar_settings:
+    style: blue
+    atc_title:
+      field: title
+      tokenized: Title
+    atc_description:
+      field: field_co_programm
+      tokenized: Description
+    atc_location:
+      field: field_co_location
+      tokenized: Location
+    atc_organizer:
+      field: field_co_host
+      tokenized: 'ILA Berlin 2020 – the most innovative trade event for the aerospace industry'
+    atc_organizer_email:
+      field: token
+      tokenized: ila@messe-berlin.de
+    atc_date_start:
+      field: field_date_and_time
+      tokenized: ''
+    atc_date_end:
+      field: field_date_and_time
+      tokenized: ''
+    atc_privacy: public
+    data_secure: auto
+    data_calendars:
+      iCalendar: iCalendar
+      'Google Calendar': 'Google Calendar'
+      Outlook: Outlook
+      'Outlook Online': 'Outlook Online'
+      'Yahoo! Calendar': 'Yahoo! Calendar'
+field_type: add_to_calendar_field

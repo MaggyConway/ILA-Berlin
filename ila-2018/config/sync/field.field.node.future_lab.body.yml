@@ -1,0 +1,23 @@
+uuid: 65d094d4-c551-42a1-b1d3-ba5182d5a1d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.future_lab
+  module:
+    - text
+id: node.future_lab.body
+field_name: body
+entity_type: node
+bundle: future_lab
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

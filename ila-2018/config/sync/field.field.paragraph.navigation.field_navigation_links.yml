@@ -1,0 +1,23 @@
+uuid: 9ae54cc9-3107-48c8-91ae-6dae9345eb42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_navigation_links
+    - paragraphs.paragraphs_type.navigation
+  module:
+    - link
+id: paragraph.navigation.field_navigation_links
+field_name: field_navigation_links
+entity_type: paragraph
+bundle: navigation
+label: Links
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

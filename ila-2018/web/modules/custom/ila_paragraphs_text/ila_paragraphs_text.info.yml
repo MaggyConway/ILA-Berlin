@@ -1,0 +1,12 @@
+name: 'Paragraphs - Text'
+description: 'Paragraphs - "Text" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - content_translation
+  - field
+  - ila_paragraphs_base
+  - language
+  - paragraphs
+  - text
+package: ILA

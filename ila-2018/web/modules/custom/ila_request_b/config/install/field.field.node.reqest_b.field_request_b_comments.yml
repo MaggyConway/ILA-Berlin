@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_b_comments
+    - node.type.reqest_b
+id: node.reqest_b.field_request_b_comments
+field_name: field_request_b_comments
+entity_type: node
+bundle: reqest_b
+label: Comments
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

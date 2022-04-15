@@ -1,0 +1,18 @@
+uuid: d9bf193f-a520-4778-8eef-c4ca2e82b952
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_svg_tag_snippet
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.fl_svg_tag_snippet
+target_entity_type_id: paragraph
+target_bundle: fl_svg_tag_snippet
+default_langcode: site_default
+language_alterable: true

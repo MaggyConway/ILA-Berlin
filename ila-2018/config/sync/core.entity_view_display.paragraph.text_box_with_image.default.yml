@@ -1,0 +1,115 @@
+uuid: e0e95863-2d61-46ff-a17b-f18d3b9d382d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_box_with_image.field_tb_bild
+    - field.field.paragraph.text_box_with_image.field_tb_text
+    - field.field.paragraph.text_box_with_image.field_tb_title
+    - paragraphs.paragraphs_type.text_box_with_image
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_text_and_image_wrapper:
+      children:
+        - field_tb_text
+        - field_tb_bild
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: text-and-image-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: text-and-image-wrapper
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_tb_title
+        - group_text_and_image_wrapper
+        - field_tb_text
+        - field_tb_bild
+id: paragraph.text_box_with_image.default
+targetEntityType: paragraph
+bundle: text_box_with_image
+mode: default
+content:
+  field_tb_bild:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: pt_text_box
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_tb_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tb_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: 'field field--name-field-tb-title field--type-string field--label-hidden field__item'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

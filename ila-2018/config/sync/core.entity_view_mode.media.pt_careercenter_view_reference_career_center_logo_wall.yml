@@ -1,0 +1,10 @@
+uuid: 044e7e04-057a-4bde-af11-70a512093bb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_careercenter_view_reference_career_center_logo_wall
+label: 'PT CareerCenter View reference: Career Center Logo Wall'
+targetEntityType: media
+cache: true

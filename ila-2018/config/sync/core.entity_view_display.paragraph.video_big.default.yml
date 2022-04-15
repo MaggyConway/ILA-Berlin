@@ -1,0 +1,59 @@
+uuid: 5fedf9f1-7f41-4ac1-b0e7-0ca2ee87747c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_big.field_html
+    - field.field.paragraph.video_big.field_subtitle
+    - field.field.paragraph.video_big.field_title
+    - field.field.paragraph.video_big.field_video
+    - paragraphs.paragraphs_type.video_big
+  module:
+    - ds
+    - text
+id: paragraph.video_big.default
+targetEntityType: paragraph
+bundle: video_big
+mode: default
+content:
+  field_html:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_subtitle:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: pt_video_big_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

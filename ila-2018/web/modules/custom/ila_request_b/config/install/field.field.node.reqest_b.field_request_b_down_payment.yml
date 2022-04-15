@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_b_down_payment
+    - node.type.reqest_b
+  module:
+    - markup
+id: node.reqest_b.field_request_b_down_payment
+field_name: field_request_b_down_payment
+entity_type: node
+bundle: reqest_b
+label: 'Down payment'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Down payment</h3>\r\n\r\n<p>Upon chalet registration the customer has to play 10,000 EUR right away, regardless of the placement. The customer will be charged with this amount by Messe Berlin with a down payment invoice immediately after registration.</p>\r\n"
+    format: full_html
+field_type: markup

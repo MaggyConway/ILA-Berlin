@@ -1,0 +1,16 @@
+uuid: d088cefd-1055-4fe5-b5a4-59421d1a72e4
+langcode: en
+status: true
+dependencies: {  }
+name: cc_impressionen_width_295_phone_
+label: 'CC Impressionen width 295 (Phone)'
+effects:
+  51d7b635-f937-43fb-a2bb-9fd0f500db61:
+    uuid: 51d7b635-f937-43fb-a2bb-9fd0f500db61
+    id: image_scale
+    weight: 1
+    data:
+      width: 295
+      height: 280
+      upscale: false
+pipeline: image_optimiza

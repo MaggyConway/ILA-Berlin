@@ -1,0 +1,38 @@
+uuid: 26f6bc80-bb25-4797-a3ea-3781a93f9a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_tiled_title.field_cc_tiled_title_subtitle
+    - field.field.paragraph.cc_tiled_title.field_cc_tiled_title_title
+    - paragraphs.paragraphs_type.cc_tiled_title
+id: paragraph.cc_tiled_title.default
+targetEntityType: paragraph
+bundle: cc_tiled_title
+mode: default
+content:
+  field_cc_tiled_title_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_tiled_title_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

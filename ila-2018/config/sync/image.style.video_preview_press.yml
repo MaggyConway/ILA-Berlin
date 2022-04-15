@@ -1,0 +1,16 @@
+uuid: 41df4270-efd3-4cfb-b267-91372670a4f5
+langcode: de
+status: true
+dependencies: {  }
+name: video_preview_press
+label: 'Video Preview Press'
+effects:
+  080689e5-3c6f-45f7-8f98-89d5ad04a399:
+    uuid: 080689e5-3c6f-45f7-8f98-89d5ad04a399
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 455
+      height: 290
+      anchor: center-center
+pipeline: image_optimiza

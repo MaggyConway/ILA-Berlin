@@ -1,0 +1,21 @@
+uuid: 58961609-35ad-4885-a446-f5e12466ebbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+id: attendee_registration.field_ar_last_name
+field_name: field_ar_last_name
+entity_type: attendee_registration
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

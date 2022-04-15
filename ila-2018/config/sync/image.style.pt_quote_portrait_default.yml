@@ -1,0 +1,16 @@
+uuid: 3ad3bc07-9ec0-4e1a-b687-bc0f04de4777
+langcode: en
+status: true
+dependencies: {  }
+name: pt_quote_portrait_default
+label: 'PT Quote portrait: Default'
+effects:
+  92e4d9b9-372b-4073-9b4f-4fd83b13ec72:
+    uuid: 92e4d9b9-372b-4073-9b4f-4fd83b13ec72
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 245
+      height: 245
+      anchor: center-center
+pipeline: image_optimiza

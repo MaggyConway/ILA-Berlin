@@ -1,0 +1,9 @@
+uuid: 55d991c2-8c4b-4603-9740-88e055a9d4ff
+langcode: en
+status: true
+dependencies: {  }
+id: title_image_text
+label: 'Title image text (Megamenu Footer)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+uuid: d81cac09-af4d-48b6-a943-1363c4deecff
+langcode: en
+status: true
+dependencies: {  }
+id: fl_double_box_container
+label: 'FL Double Box Container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

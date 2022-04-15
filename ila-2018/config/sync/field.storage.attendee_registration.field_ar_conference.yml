@@ -1,0 +1,20 @@
+uuid: 8271962e-782c-481c-989c-9cea7a259026
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+    - node
+id: attendee_registration.field_ar_conference
+field_name: field_ar_conference
+entity_type: attendee_registration
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

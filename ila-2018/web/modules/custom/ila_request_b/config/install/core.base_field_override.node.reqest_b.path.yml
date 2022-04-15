@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reqest_b
+  module:
+    - path
+id: node.reqest_b.path
+field_name: path
+entity_type: node
+bundle: reqest_b
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_conferences
+    - node.type.request_f
+id: node.request_f.field_registration_conferences
+field_name: field_registration_conferences
+entity_type: node
+bundle: request_f
+label: 'booking conference rooms in ILA ConferenceCenter (half day)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: request_f_stands
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 5ada7a99-9fd4-4d03-aa3e-b0e68957f4bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exhibition_container.field_exhibition_paragraph
+    - paragraphs.paragraphs_type.exhibition_container
+  module:
+    - paragraphs
+id: paragraph.exhibition_container.default
+targetEntityType: paragraph
+bundle: exhibition_container
+mode: default
+content:
+  field_exhibition_paragraph:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

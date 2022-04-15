@@ -1,0 +1,287 @@
+.block-block-content-careercenter_exhibitors {
+  margin-bottom: 70px;
+  .field--name-field-cc-exhibitors-title {
+    max-width: 1390px;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @media #{$m-to-sm} {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .paragraph--type-cc-tiled-title {
+      display: inline-block;
+      margin-top: -65px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .career-exhibitors__content {
+    max-width: 1390px;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    //flex-wrap: wrap;
+
+    @media #{$m-to-m} {
+      flex-wrap: wrap;
+    }
+
+    @media #{$m-to-sm} {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .field--name-field-cc-exhibitors-body {
+    max-width: 550px;
+    width: 100%;
+    flex-basis: 550px;
+    position: relative;
+    padding: 45px 70px 20px 90px;
+
+    @media #{$m-to-2l} {
+      max-width: 500px;
+      flex-basis: 500px;
+      padding-left: 10px;
+      padding-right: 55px;
+    }
+
+    @media #{$m-to-l} {
+      max-width: 100%;
+      flex-basis: auto;
+      width: 50%;
+    }
+
+    @media #{$m-to-m} {
+      width: 100%;
+    }
+
+    @media #{$m-to-sm} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media #{$m-to-s} {
+      padding-bottom: 50px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -9999px;
+      bottom: 0;
+      background: $career-dark;
+      right: 0;
+      top: -42px;
+      box-shadow: 7px -3px 0px -3px $career-green;
+      z-index: 0;
+      height: calc(100% + 42px);
+
+      @media #{$m-to-sm} {
+        left: -15px;
+        right: -15px;
+      }
+    }
+
+    .paragraph--type-cc-text-box {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      max-width: 372px;
+      padding-bottom: 0;
+      padding-top: 0;
+      position: relative;
+      margin-bottom: 55px;
+
+      @media #{$m-to-sm} {
+        max-width: 100%;
+      }
+
+      @media #{$m-to-s} {
+        padding: 0;
+      }
+
+      .text-box__title {
+        color: $career-green;
+        text-shadow: none;
+        position: relative;
+      }
+
+      .field--name-field-cc-text-box-text {
+        color: $career-white;
+        border-top: 1px solid $career-white;
+      }
+    }
+  }
+
+  .career-exhibitors__images-and-link-wrapp {
+    //width: 50%;
+    // width: calc(100% - 550px);
+    width: 100%;
+    max-width: 792px;
+    flex-basis: 792px;
+    position: relative;
+
+    @media #{$m-to-2l} {
+      max-width: 842px;
+      flex-basis: 842px;
+    }
+    @media #{$m-to-l} {
+      max-width: 100%;
+      flex-basis: auto;
+      width: 50%;
+    }
+      @media #{$m-to-m} {
+        width: 100%;
+        //height: 600px;
+        margin-top: -40px;
+      }
+    @media #{$m-to-s} {
+      height: auto;
+      margin-top: -70px;
+    }
+  }
+
+  .field--name-field-cc-exhibitors-images {
+    width: 100%;
+    height: 85%;
+    position: absolute;   
+    
+    @media #{$m-to-m} {
+      height: auto;
+      position: relative;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -42px;
+      bottom: 0;
+      right: 9999px;
+      background: $career-dark;
+      width: 9999px;
+      z-index: 0;
+      height: calc(100% + 42px);
+
+      @media #{$m-to-m} {
+        content: none;
+      }
+    }
+
+    >.field__item {
+      position: absolute;
+
+      @media #{$m-to-m} {
+        position: static;
+        img {
+          min-width: 100%;
+        }
+      }
+      &:nth-child(1) {
+        left: 50px;
+        z-index: 0;
+        top: -115px;
+        box-shadow: 3px 3px 0 0 $career-green;
+        @media #{$m-to-2l} {
+          top: -70px;
+        }
+        @media #{$m-to-l} {
+          top: 0;
+          left: 0;
+        }
+        @media #{$m-to-m} {
+          position: static;
+          margin-left: -15px;
+          width: 90%;
+        }
+      }
+      &:nth-child(2) {
+        z-index: 1;
+        position: absolute;
+        top: 25%;
+        left: -50px;
+        box-shadow: 3px 3px 0 $career-black;
+
+        @media #{$m-to-l} {
+          display: none;
+        }
+        
+      }
+      &:nth-child(3) {
+        top: 160px;
+        z-index: 2;
+        right: 0;
+        box-shadow: 3px 3px 0 0 $career-green;
+
+        @media #{$m-to-xl} {
+          max-width: 430px;
+        }
+
+        @media #{$m-to-2l} {
+          max-width: 390px;
+        }
+
+        @media #{$m-to-l} {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .field--name-field-cc-exhibitors-link-box {
+    max-width: 360px;
+    position: absolute;
+    width: 100%;
+    top: 340px;
+    left: 50%;
+    transform: translateX(-56%);
+    z-index: 2;
+
+    @media #{$m-to-2l} {
+      transform: translateX(-50%);
+    }
+
+    @media #{$m-to-l} {
+      top: auto;
+      bottom: calc(15% + 50px);
+    }
+
+    @media #{$m-to-m} {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-top: -40px;
+    }
+
+    .paragraph--type--cc-link-box {
+      background-color: black;
+
+      @media #{$m-to-sm} {
+        min-height: 233px;
+      }
+      &:hover {
+        background: $career-green;
+    
+        &::before {
+          background: $career-black;	
+        } 
+        &::after {
+          border-left: 8px solid $career-black;
+        }
+        
+        .field--name-field-cc-link-box-title, .text-box__title {
+          color: $career-black;
+        }
+        .field--name-field-cc-link-box-subtitle {
+          color: $career-black;
+        }
+      }
+    }
+  }
+}

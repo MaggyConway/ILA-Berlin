@@ -1,0 +1,10 @@
+uuid: b64b93ef-30bb-4c13-b06f-3ea7dcc4a30d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_news_teaser
+label: 'CT News: Teaser'
+targetEntityType: media
+cache: true

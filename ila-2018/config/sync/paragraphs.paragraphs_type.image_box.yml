@@ -1,0 +1,9 @@
+uuid: f0693170-d76b-4bec-a53f-83649b2b611e
+langcode: de
+status: true
+dependencies: {  }
+id: image_box
+label: 'Bild & Video Box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

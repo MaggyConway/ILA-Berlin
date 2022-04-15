@@ -1,0 +1,12 @@
+uuid: 4917bc78-3852-4e71-ab04-d968385595a4
+langcode: de
+status: true
+dependencies: {  }
+id: bdli_events_paris
+label: 'BDLI Events Paris'
+description: ''
+use_admin_theme: false
+path: /bdli-events-paris
+access_logic: and
+access_conditions: {  }
+parameters: {  }

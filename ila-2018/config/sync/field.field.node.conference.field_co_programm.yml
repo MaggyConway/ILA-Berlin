@@ -1,0 +1,24 @@
+uuid: 2feb23ec-3ddd-4805-afee-773c5f4211df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_programm
+    - node.type.conference
+  module:
+    - text
+id: node.conference.field_co_programm
+field_name: field_co_programm
+entity_type: node
+bundle: conference
+label: 'Conference Programm'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<p>Coming soon</p>\r\n"
+    format: filtered_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

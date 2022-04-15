@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_c_we_will_show
+    - node.type.request_c
+id: node.request_c.field_request_c_we_will_show
+field_name: field_request_c_we_will_show
+entity_type: node
+bundle: request_c
+label: 'We will show aircrafts at ILA 2018'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,43 @@
+unprotected_forms:
+  - user_login_form
+  - search_form
+  - search_block_form
+  - views_exposed_form
+  - honeypot_settings_form
+protect_all_forms: false
+log: false
+element_name: url
+time_limit: 5
+expire: 300
+form_settings:
+  user_register_form: true
+  user_pass: true
+  contact_message_contact_form: true
+  contact_message_personal_form: false
+  contact_message_sponsoring_katalog_form: true
+  node_aircraft_form: false
+  node_banner_form: false
+  node_basic_page_form: false
+  node_bdli_event_form: false
+  node_career_center_form: false
+  node_co_exhibitor_form: false
+  node_conference_form: true
+  node_downloads_form: false
+  node_event_form: false
+  node_facts_form: false
+  node_job_offer_form: false
+  node_main_exhibitor_form: false
+  node_news_form: false
+  node_partner_form: false
+  node_press_form: false
+  node_reqest_b_form: false
+  node_request_c_form: false
+  node_request_d_form: false
+  node_request_e_form: false
+  node_request_exhibition_space_form: false
+  node_request_f_form: false
+  node_request_fb_1_form: false
+  node_section_form: false
+  node_speaker_form: false
+_core:
+  default_config_hash: 9bVDfWSa_In6VzTXmy04jJ_3ZQobihKjO9isuuUCPaw

@@ -1,0 +1,23 @@
+uuid: e43577ab-470d-421d-b2e4-257c335a570b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_url
+    - node.type.banner
+  module:
+    - link
+id: node.banner.field_banner_url
+field_name: field_banner_url
+entity_type: node
+bundle: banner
+label: URL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

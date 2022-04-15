@@ -1,0 +1,16 @@
+Index: src/Plugin/Field/FieldFormatter/AddToCalendar.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Plugin/Field/FieldFormatter/AddToCalendar.php	(date 1556528104000)
++++ src/Plugin/Field/FieldFormatter/AddToCalendar.php	(date 1556528144000)
+@@ -80,7 +80,7 @@
+       $service = \Drupal::service('addtocalendar.apiwidget');
+       $config_values = [
+         'atcStyle' => $settings['addtocalendar_settings']['style'],
+-        'atcDisplayText' => $this->fieldDefinition->getSetting('on_label'),
++        'atcDisplayText' => $this->t('@add_to_calendar_label', ['@add_to_calendar_label' => $this->fieldDefinition->getSetting('on_label')]),
+         'atcTitle' => $this->getProperValue($settings['addtocalendar_settings']['atc_title'], $entity),
+         'atcDescription' => $this->getProperValue($settings['addtocalendar_settings']['atc_description'], $entity),
+         'atcLocation' => $this->getProperValue($settings['addtocalendar_settings']['atc_location'], $entity),

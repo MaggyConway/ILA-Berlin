@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p>Stay up-to-date with ILA News</p>\r\n"
+            format: filtered_html
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'weitere News laden'
+  page_aussteller_highlights:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h1>AUSSTELLER HIGHLIGHTS</h1>\r\n<h4>Erfahren Sie schon heute, was Sie auf der ILA Berlin 2018 sehen werden</h4>"
+            format: plain_html

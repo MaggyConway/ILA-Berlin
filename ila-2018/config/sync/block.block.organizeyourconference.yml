@@ -1,0 +1,36 @@
+uuid: 058c758b-7fee-461f-8b14-fa078bf3a800
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.conferences_disrupter
+  module:
+    - simple_block
+    - system
+    - user
+  theme:
+    - ila
+id: organizeyourconference
+theme: ila
+region: content
+weight: -12
+provider: null
+plugin: 'simple_block:conferences_disrupter'
+settings:
+  id: 'simple_block:conferences_disrupter'
+  label: 'Konferenz organisieren'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/488
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

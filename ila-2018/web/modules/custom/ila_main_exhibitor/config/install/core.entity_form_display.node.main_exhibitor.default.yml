@@ -1,0 +1,2079 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.main_exhibitor.field_agency_additional_info
+    - field.field.node.main_exhibitor.field_agency_address
+    - field.field.node.main_exhibitor.field_agency_area_code
+    - field.field.node.main_exhibitor.field_agency_company_name
+    - field.field.node.main_exhibitor.field_agency_country_code
+    - field.field.node.main_exhibitor.field_agency_country_specific_da
+    - field.field.node.main_exhibitor.field_agency_email
+    - field.field.node.main_exhibitor.field_agency_fax
+    - field.field.node.main_exhibitor.field_agency_homepage
+    - field.field.node.main_exhibitor.field_agency_legal_form
+    - field.field.node.main_exhibitor.field_agency_telephone
+    - field.field.node.main_exhibitor.field_agent_area_code
+    - field.field.node.main_exhibitor.field_agent_cell_phone
+    - field.field.node.main_exhibitor.field_agent_country_code
+    - field.field.node.main_exhibitor.field_agent_email
+    - field.field.node.main_exhibitor.field_agent_fax
+    - field.field.node.main_exhibitor.field_agent_first_name
+    - field.field.node.main_exhibitor.field_agent_job_title
+    - field.field.node.main_exhibitor.field_agent_last_name
+    - field.field.node.main_exhibitor.field_agent_salutation
+    - field.field.node.main_exhibitor.field_agent_telephone
+    - field.field.node.main_exhibitor.field_agent_title
+    - field.field.node.main_exhibitor.field_by_accepting_the_condition
+    - field.field.node.main_exhibitor.field_catalog_company_address
+    - field.field.node.main_exhibitor.field_catalog_company_alph_list
+    - field.field.node.main_exhibitor.field_catalog_company_area_code
+    - field.field.node.main_exhibitor.field_catalog_company_cntr_code
+    - field.field.node.main_exhibitor.field_catalog_company_cntry_code
+    - field.field.node.main_exhibitor.field_catalog_company_country_sp
+    - field.field.node.main_exhibitor.field_catalog_company_data_edit
+    - field.field.node.main_exhibitor.field_catalog_company_email
+    - field.field.node.main_exhibitor.field_catalog_company_fax
+    - field.field.node.main_exhibitor.field_catalog_company_homepage
+    - field.field.node.main_exhibitor.field_catalog_company_name
+    - field.field.node.main_exhibitor.field_catalog_company_telephone
+    - field.field.node.main_exhibitor.field_company_address
+    - field.field.node.main_exhibitor.field_company_alph_listing
+    - field.field.node.main_exhibitor.field_company_area_code
+    - field.field.node.main_exhibitor.field_company_cntry_code
+    - field.field.node.main_exhibitor.field_company_corr_language
+    - field.field.node.main_exhibitor.field_company_country_specific_d
+    - field.field.node.main_exhibitor.field_company_email
+    - field.field.node.main_exhibitor.field_company_fax
+    - field.field.node.main_exhibitor.field_company_homepage
+    - field.field.node.main_exhibitor.field_company_legal_form
+    - field.field.node.main_exhibitor.field_company_member_of_bdli
+    - field.field.node.main_exhibitor.field_company_name
+    - field.field.node.main_exhibitor.field_company_telephone
+    - field.field.node.main_exhibitor.field_invoice_address
+    - field.field.node.main_exhibitor.field_invoice_area_code
+    - field.field.node.main_exhibitor.field_invoice_company_name
+    - field.field.node.main_exhibitor.field_invoice_country_code
+    - field.field.node.main_exhibitor.field_invoice_email
+    - field.field.node.main_exhibitor.field_invoice_fax
+    - field.field.node.main_exhibitor.field_invoice_legal_form
+    - field.field.node.main_exhibitor.field_invoice_primary_salut
+    - field.field.node.main_exhibitor.field_invoice_rec_salutation
+    - field.field.node.main_exhibitor.field_invoice_recipient_address
+    - field.field.node.main_exhibitor.field_invoice_recipient_area_cod
+    - field.field.node.main_exhibitor.field_invoice_recipient_cellphon
+    - field.field.node.main_exhibitor.field_invoice_recipient_cntrycod
+    - field.field.node.main_exhibitor.field_invoice_recipient_country_
+    - field.field.node.main_exhibitor.field_invoice_recipient_email
+    - field.field.node.main_exhibitor.field_invoice_recipient_fax
+    - field.field.node.main_exhibitor.field_invoice_recipient_fname
+    - field.field.node.main_exhibitor.field_invoice_recipient_job_titl
+    - field.field.node.main_exhibitor.field_invoice_recipient_lname
+    - field.field.node.main_exhibitor.field_invoice_recipient_telephon
+    - field.field.node.main_exhibitor.field_invoice_recipient_title
+    - field.field.node.main_exhibitor.field_invoice_same_as_company
+    - field.field.node.main_exhibitor.field_invoice_telephone
+    - field.field.node.main_exhibitor.field_invoicing_country_specific
+    - field.field.node.main_exhibitor.field_listing_in_online_and_prin
+    - field.field.node.main_exhibitor.field_markup_invoice_recipient
+    - field.field.node.main_exhibitor.field_markup_invoicing_address
+    - field.field.node.main_exhibitor.field_markup_order_on_behalf
+    - field.field.node.main_exhibitor.field_mdirector_area_code
+    - field.field.node.main_exhibitor.field_mdirector_cell_phone
+    - field.field.node.main_exhibitor.field_mdirector_country_code
+    - field.field.node.main_exhibitor.field_mdirector_email
+    - field.field.node.main_exhibitor.field_mdirector_fax
+    - field.field.node.main_exhibitor.field_mdirector_first_name
+    - field.field.node.main_exhibitor.field_mdirector_job_title
+    - field.field.node.main_exhibitor.field_mdirector_last_name
+    - field.field.node.main_exhibitor.field_mdirector_salutation
+    - field.field.node.main_exhibitor.field_mdirector_telephone
+    - field.field.node.main_exhibitor.field_mdirector_title
+    - field.field.node.main_exhibitor.field_press_area_code
+    - field.field.node.main_exhibitor.field_press_cell_phone
+    - field.field.node.main_exhibitor.field_press_country_code
+    - field.field.node.main_exhibitor.field_press_email
+    - field.field.node.main_exhibitor.field_press_fax
+    - field.field.node.main_exhibitor.field_press_first_name
+    - field.field.node.main_exhibitor.field_press_job_title
+    - field.field.node.main_exhibitor.field_press_last_name
+    - field.field.node.main_exhibitor.field_press_salutation
+    - field.field.node.main_exhibitor.field_press_telephone
+    - field.field.node.main_exhibitor.field_press_title
+    - field.field.node.main_exhibitor.field_primary_address
+    - field.field.node.main_exhibitor.field_primary_area_code
+    - field.field.node.main_exhibitor.field_primary_cell_phone
+    - field.field.node.main_exhibitor.field_primary_country_code
+    - field.field.node.main_exhibitor.field_primary_email
+    - field.field.node.main_exhibitor.field_primary_fax
+    - field.field.node.main_exhibitor.field_primary_first_name
+    - field.field.node.main_exhibitor.field_primary_job_title
+    - field.field.node.main_exhibitor.field_primary_last_name
+    - field.field.node.main_exhibitor.field_primary_telephone
+    - field.field.node.main_exhibitor.field_privacy_policy_terms_of_bu
+    - field.field.node.main_exhibitor.field_protocol_area_code
+    - field.field.node.main_exhibitor.field_protocol_cell_phone
+    - field.field.node.main_exhibitor.field_protocol_country_code
+    - field.field.node.main_exhibitor.field_protocol_email
+    - field.field.node.main_exhibitor.field_protocol_fax
+    - field.field.node.main_exhibitor.field_protocol_first_name
+    - field.field.node.main_exhibitor.field_protocol_job_title
+    - field.field.node.main_exhibitor.field_protocol_last_name
+    - field.field.node.main_exhibitor.field_protocol_salutation
+    - field.field.node.main_exhibitor.field_protocol_telephone
+    - field.field.node.main_exhibitor.field_protocol_title
+    - field.field.node.main_exhibitor.field_statement_concerning_milit
+    - field.field.node.main_exhibitor.field_vat_form
+    - field.field.node.main_exhibitor.field_we_acknowledge_that_my_req
+    - field.field.node.main_exhibitor.field_we_acknowledge_that_the_fo
+    - field.field.node.main_exhibitor.field_we_agree
+    - field.field.node.main_exhibitor.field_we_are_agency
+    - field.field.node.main_exhibitor.field_we_hereby_accept
+    - node.type.main_exhibitor
+  module:
+    - address
+    - conditional_fields
+    - field_group
+    - markup
+    - telephone
+third_party_settings:
+  field_group:
+    group_main_exhibitor_a:
+      children:
+        - group_company_data_a
+        - group_catalog_address_
+        - group_invoice_data_a
+        - group_primary_contact_person
+        - group_managing_director
+        - group_press_manager
+        - group_responsible_for_protocol
+        - group_agency
+        - group_terms_and_conditions_agree
+      parent_name: ''
+      weight: 3
+      format_type: accordion
+      format_settings:
+        label: 'Main Exhibitor'
+        effect: none
+        id: ''
+        classes: ''
+      label: 'Main Exhibitor'
+    group_company_data_a:
+      children:
+        - field_company_name
+        - field_company_legal_form
+        - field_company_address
+        - field_company_country_specific_d
+        - field_company_cntry_code
+        - field_company_area_code
+        - field_company_telephone
+        - field_company_fax
+        - field_company_email
+        - field_company_homepage
+        - group_three_column
+      parent_name: group_main_exhibitor_a
+      weight: 20
+      format_type: accordion_item
+      format_settings:
+        label: 'Company data'
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Company data'
+    group_catalog_address_:
+      children:
+        - field_catalog_company_data_edit
+        - field_catalog_company_name
+        - field_catalog_company_address
+        - field_catalog_company_country_sp
+        - field_catalog_company_cntry_code
+        - field_catalog_company_area_code
+        - field_catalog_company_telephone
+        - field_catalog_company_fax
+        - field_catalog_company_email
+        - field_catalog_company_alph_list
+        - field_catalog_company_homepage
+      parent_name: group_main_exhibitor_a
+      weight: 21
+      format_type: accordion_item
+      format_settings:
+        label: 'Catalog address'
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Catalog address'
+    group_invoice_data_a:
+      children:
+        - field_invoice_same_as_company
+        - group_invoicing_address
+        - group_invoice_recipient
+      parent_name: group_main_exhibitor_a
+      weight: 22
+      format_type: accordion_item
+      format_settings:
+        label: 'Invoice data'
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Invoice data'
+    group_invoicing_address:
+      children:
+        - field_markup_invoicing_address
+        - field_invoice_company_name
+        - field_invoice_legal_form
+        - field_invoice_address
+        - field_invoicing_country_specific
+        - field_invoice_country_code
+        - field_invoice_area_code
+        - field_invoice_telephone
+        - field_invoice_fax
+        - field_invoice_email
+      parent_name: group_invoice_data_a
+      weight: 118
+      format_type: html_element
+      format_settings:
+        label: 'Invoicing address'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapp-2-cols
+      label: 'Invoicing address'
+    group_invoice_recipient:
+      children:
+        - field_markup_invoice_recipient
+        - field_invoice_rec_salutation
+        - field_invoice_recipient_title
+        - field_invoice_recipient_fname
+        - field_invoice_recipient_lname
+        - field_invoice_recipient_job_titl
+        - field_invoice_recipient_cntrycod
+        - field_invoice_recipient_area_cod
+        - field_invoice_recipient_telephon
+        - field_invoice_recipient_email
+        - field_invoice_recipient_fax
+        - field_invoice_recipient_cellphon
+      parent_name: group_invoice_data_a
+      weight: 119
+      format_type: html_element
+      format_settings:
+        label: 'Invoice recipient'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapp-2-cols
+      label: 'Invoice recipient'
+    group_primary_contact_person:
+      children:
+        - field_invoice_primary_salut
+        - field_primary_first_name
+        - field_primary_last_name
+        - field_primary_job_title
+        - field_primary_country_code
+        - field_primary_area_code
+        - field_primary_telephone
+        - field_primary_email
+        - field_primary_fax
+        - field_primary_cell_phone
+      parent_name: group_main_exhibitor_a
+      weight: 23
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Primary contact person'
+    group_managing_director:
+      children:
+        - field_mdirector_salutation
+        - field_mdirector_title
+        - field_mdirector_first_name
+        - field_mdirector_last_name
+        - field_mdirector_job_title
+        - field_mdirector_country_code
+        - field_mdirector_area_code
+        - field_mdirector_telephone
+        - field_mdirector_email
+        - field_mdirector_fax
+        - field_mdirector_cell_phone
+      parent_name: group_main_exhibitor_a
+      weight: 24
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Managing Director'
+    group_press_manager:
+      children:
+        - field_press_salutation
+        - field_press_title
+        - field_press_first_name
+        - field_press_last_name
+        - field_press_job_title
+        - field_press_country_code
+        - field_press_area_code
+        - field_press_telephone
+        - field_press_email
+        - field_press_fax
+        - field_press_cell_phone
+      parent_name: group_main_exhibitor_a
+      weight: 25
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Press Manager'
+    group_responsible_for_protocol:
+      children:
+        - field_protocol_salutation
+        - field_protocol_title
+        - field_protocol_first_name
+        - field_protocol_last_name
+        - field_protocol_job_title
+        - field_protocol_country_code
+        - field_protocol_area_code
+        - field_protocol_telephone
+        - field_protocol_email
+        - field_protocol_fax
+        - field_protocol_cell_phone
+      parent_name: group_main_exhibitor_a
+      weight: 26
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Responsible for protocol'
+    group_company_data_agency_:
+      children:
+        - title
+        - field_agency_company_name
+        - field_agency_legal_form
+        - field_agency_address
+        - field_agency_country_specific_da
+        - field_agency_country_code
+        - field_agency_area_code
+        - field_agency_telephone
+        - field_agency_fax
+        - field_agency_email
+        - field_agency_homepage
+      parent_name: group_agency
+      weight: 28
+      format_type: html_element
+      format_settings:
+        label: 'Company data (agency)'
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapp-2-cols
+      label: 'Company data (agency)'
+    group_agent_external_responsible:
+      children:
+        - field_agent_salutation
+        - field_agent_title
+        - field_agent_first_name
+        - field_agent_last_name
+        - field_agent_job_title
+        - field_agent_country_code
+        - field_agent_area_code
+        - field_agent_telephone
+        - field_agent_email
+        - field_agent_fax
+        - field_agent_cell_phone
+      parent_name: group_agency
+      weight: 29
+      format_type: html_element
+      format_settings:
+        label: 'Agent (external responsible representative)'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapp-2-cols
+        required_fields: false
+      label: 'Agent (external responsible representative)'
+    group_agency:
+      children:
+        - group_company_data_agency_
+        - group_agent_external_responsible
+      parent_name: group_main_exhibitor_a
+      weight: 27
+      format_type: accordion_item
+      format_settings:
+        label: Agency
+        formatter: closed
+        id: ''
+        classes: ''
+        required_fields: false
+      label: Agency
+    group_three_column:
+      children:
+        - field_company_alph_listing
+        - field_company_corr_language
+        - field_company_member_of_bdli
+      parent_name: group_company_data_a
+      weight: 38
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-3-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Three column'
+    group_terms_and_conditions_agree:
+      children:
+        - field_privacy_policy_terms_of_bu
+        - field_we_agree
+        - group_we_order_according_to_the_
+        - group_additional_documents_vat_f
+        - field_statement_concerning_milit
+        - field_listing_in_online_and_prin
+      parent_name: group_main_exhibitor_a
+      weight: 28
+      format_type: accordion_item
+      format_settings:
+        label: 'Terms and conditions – agreement'
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: field-group-accordion-item--privacy
+      label: 'Terms and conditions – agreement'
+    group_we_order_according_to_the_:
+      children:
+        - field_we_hereby_accept
+        - field_by_accepting_the_condition
+        - field_we_acknowledge_that_my_req
+      parent_name: group_terms_and_conditions_agree
+      weight: 138
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'We order according to the conditions of participation and requirements.'
+    group_additional_documents_vat_f:
+      children:
+        - field_we_acknowledge_that_the_fo
+        - field_vat_form
+      parent_name: group_terms_and_conditions_agree
+      weight: 139
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Additional documents: VAT form and military weapons'
+id: node.main_exhibitor.default
+targetEntityType: node
+bundle: main_exhibitor
+mode: default
+content:
+  field_agency_additional_info:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        1954a7b6-478c-4d4c-bc2b-5b3e3a1cfb19:
+          dependee: field_we_are_agency
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textarea
+    region: content
+  field_agency_address:
+    weight: 5
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_agency_area_code:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agency_company_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_agency_country_code:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_agency_country_specific_da:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        2f442819-d5c9-4be2-87f0-4b6e9f5eec30:
+          dependee: field_agency_address
+          settings:
+            state: visible
+            condition: '!empty'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                address:
+                  country_code: ''
+                  langcode: en
+                  address_line1: ''
+                  locality: ''
+                  postal_code: ''
+                  given_name: null
+                  additional_name: null
+                  family_name: null
+                  organization: null
+                  address_line2: null
+                  sorting_code: null
+                  dependent_locality: null
+                  administrative_area: null
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+  field_agency_email:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_agency_fax:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agency_homepage:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_agency_legal_form:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_agency_telephone:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agent_area_code:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agent_cell_phone:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agent_country_code:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_agent_email:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_agent_fax:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agent_first_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_agent_job_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_agent_last_name:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_agent_salutation:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_agent_telephone:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_agent_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_by_accepting_the_condition:
+    weight: 142
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_catalog_company_address:
+    weight: 23
+    settings:
+      default_country: null
+    third_party_settings:
+      conditional_fields:
+        dea5bce3-2bb1-4da0-973c-13e2bd9b33e2:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: address_default
+    region: content
+  field_catalog_company_alph_list:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        cd571a6a-1bed-49fa-b303-7e5b02a5a5ea:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_catalog_company_area_code:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        274d5e59-ce57-4a78-ac25-3ca4425db382:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_catalog_company_cntry_code:
+    third_party_settings:
+      conditional_fields:
+        39ec8c5e-1949-4d5f-9816-1b11d93cbe0c:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    weight: 25
+    settings: {  }
+    type: options_select
+    region: content
+  field_catalog_company_country_sp:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        923f4e3b-a3be-44e1-a481-14e638eccf78:
+          dependee: field_catalog_company_address
+          settings:
+            state: visible
+            condition: '!empty'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                address:
+                  country_code: ''
+                  langcode: en
+                  given_name: null
+                  additional_name: null
+                  family_name: null
+                  organization: null
+                  address_line1: null
+                  address_line2: null
+                  postal_code: null
+                  sorting_code: null
+                  dependent_locality: null
+                  locality: null
+                  administrative_area: null
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+        2f906341-d944-4e0d-ac2c-7c729d86c8d6:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+  field_catalog_company_data_edit:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_catalog_company_email:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        48aad2c6-760c-4a57-a607-ef9e326ba270:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+        ef89ca9c-d24c-4630-9fa6-84ff5d0a413d:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+        65778d33-bde0-47eb-8b09-25588e120511:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: email_default
+    region: content
+  field_catalog_company_fax:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        70c46592-ce0e-4c3c-a0e7-4b21997980bc:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_catalog_company_homepage:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        91d75168-1d7d-4a21-a91b-568597d0803d:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_catalog_company_name:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c7731ff8-77e2-4ac9-89ac-672ab386e0ae:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_catalog_company_telephone:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        0ccd666e-0b02-4aed-92b4-31cb404b6c70:
+          dependee: field_catalog_company_data_edit
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_company_address:
+    weight: 30
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_company_alph_listing:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_area_code:
+    weight: 33
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_company_cntry_code:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_company_corr_language:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_company_country_specific_d:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        2d3525d9-05f7-40e5-b8b4-8a8e1a554897:
+          dependee: field_company_address
+          settings:
+            state: visible
+            condition: '!empty'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                address:
+                  country_code: ''
+                  langcode: en
+                  address_line1: ''
+                  postal_code: ''
+                  given_name: null
+                  additional_name: null
+                  family_name: null
+                  organization: null
+                  address_line2: null
+                  sorting_code: null
+                  dependent_locality: null
+                  locality: null
+                  administrative_area: null
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+  field_company_email:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_company_fax:
+    weight: 35
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_company_homepage:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_legal_form:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_member_of_bdli:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_company_name:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_telephone:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_invoice_address:
+    weight: 123
+    settings:
+      default_country: null
+    third_party_settings:
+      conditional_fields:
+        cbacb1f5-c0f3-4836-8cc4-8353c545fc1a:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: address_default
+    region: content
+  field_invoice_area_code:
+    weight: 126
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        12dc040a-33d7-4b09-a14f-0e240845c12f:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoice_company_name:
+    weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        1401e4d6-53c5-44b7-b3a2-046abedec537:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_invoice_country_code:
+    weight: 125
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        52c64394-ce5a-4617-bfb8-9cd73feef1b5:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: options_select
+    region: content
+  field_invoice_email:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        6286dbe0-2fc0-42f0-b20b-d870f71c099f:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: email_default
+    region: content
+  field_invoice_fax:
+    weight: 128
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        0bad7bf1-95c1-440a-8bd4-6fa2ea10d93c:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoice_legal_form:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        70511643-59f4-4ec2-a079-38bb57426890:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_invoice_primary_salut:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_invoice_rec_salutation:
+    weight: 24
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        97a0ffc4-62af-40b3-a583-194a034afd6c:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: options_select
+    region: content
+  field_invoice_recipient_area_cod:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        e37cbef8-53f2-44f6-bc89-a2a40d0d2d6b:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoice_recipient_cellphon:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        88c8610d-f2c5-410a-b5ee-9452d3161184:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoice_recipient_cntrycod:
+    third_party_settings:
+      conditional_fields:
+        a49b2990-2375-42a3-b185-9bb9b62fa372:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    weight: 29
+    settings: {  }
+    type: options_select
+    region: content
+  field_invoice_recipient_email:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        039c9914-23f7-4720-85bc-e599012f15b1:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: email_default
+    region: content
+  field_invoice_recipient_fax:
+    weight: 33
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        eecfa16b-7f07-4cea-9b4c-4cce1e090bce:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoice_recipient_fname:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        2b1dafda-b57f-4e0a-8656-bfb321463502:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_invoice_recipient_job_titl:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        6d43e5d8-f422-469d-b2f4-6b90bb42a573:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_invoice_recipient_lname:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        42e75d2c-c4d5-4a7a-bc1f-d1c82454d22f:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_invoice_recipient_telephon:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        ef19422b-86cb-422c-b90c-7bc35e6aaa3e:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoice_recipient_title:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        f6733b1a-c58c-4fc1-827c-4c97bd6a7883:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: string_textfield
+    region: content
+  field_invoice_same_as_company:
+    weight: 117
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_invoice_telephone:
+    weight: 127
+    settings:
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        d825b79d-afb2-4b64-a001-314c12dd48ca:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form: {  }
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: telephone_default
+    region: content
+  field_invoicing_country_specific:
+    type: string_textfield
+    weight: 124
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        c7c7137c-9774-4e73-a2ef-435988244c17:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+  field_listing_in_online_and_prin:
+    weight: 141
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_markup_invoice_recipient:
+    weight: 23
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        e1b2688a-e004-41f1-9e45-5767c028d822:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: markup
+    region: content
+  field_markup_invoicing_address:
+    weight: 120
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        993c1281-eb07-46e3-b451-a4b72ebcefd3:
+          dependee: field_invoice_same_as_company
+          settings:
+            state: visible
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: 1
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: main_exhibitor
+    type: markup
+    region: content
+  field_markup_order_on_behalf:
+    weight: 0
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: markup
+    region: content
+  field_mdirector_area_code:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_mdirector_cell_phone:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_mdirector_country_code:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mdirector_email:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_mdirector_fax:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_mdirector_first_name:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mdirector_job_title:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mdirector_last_name:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mdirector_salutation:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mdirector_telephone:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_mdirector_title:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_press_area_code:
+    weight: 101
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_press_cell_phone:
+    weight: 105
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_press_country_code:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_press_email:
+    weight: 103
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_press_fax:
+    weight: 104
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_press_first_name:
+    weight: 97
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_press_job_title:
+    weight: 99
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_press_last_name:
+    weight: 98
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_press_salutation:
+    weight: 95
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_press_telephone:
+    weight: 102
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_press_title:
+    weight: 96
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_area_code:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_cell_phone:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_country_code:
+    type: options_select
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_primary_email:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_primary_fax:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_primary_first_name:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_job_title:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_last_name:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_telephone:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_privacy_policy_terms_of_bu:
+    weight: 136
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_protocol_area_code:
+    weight: 112
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_protocol_cell_phone:
+    weight: 116
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_protocol_country_code:
+    weight: 111
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_protocol_email:
+    weight: 114
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_protocol_fax:
+    weight: 115
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_protocol_first_name:
+    weight: 108
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_protocol_job_title:
+    weight: 110
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_protocol_last_name:
+    weight: 109
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_protocol_salutation:
+    weight: 106
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_protocol_telephone:
+    weight: 113
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_protocol_title:
+    weight: 107
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_statement_concerning_milit:
+    weight: 140
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_vat_form:
+    weight: 145
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_we_acknowledge_that_my_req:
+    weight: 143
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_we_acknowledge_that_the_fo:
+    weight: 144
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_we_agree:
+    weight: 137
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_we_are_agency:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_we_hereby_accept:
+    weight: 141
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_catalog_company_cntr_code: true
+  field_invoice_recipient_address: true
+  field_invoice_recipient_country_: true
+  field_primary_address: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

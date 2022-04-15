@@ -1,0 +1,11 @@
+id: formatted_speaker
+label: 'Formatted speaker'
+ui_limit: ''
+properties:
+  content:
+    value: "[paragraph:field_name]\r\n[paragraph:field_description]"
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  paragraph: paragraph

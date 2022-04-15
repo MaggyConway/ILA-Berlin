@@ -1,0 +1,10 @@
+uuid: a67f19d7-1c3e-44cb-9917-cc5437455d95
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_view_reference_top_speakers
+label: 'PT View reference: Top speakers'
+targetEntityType: media
+cache: true

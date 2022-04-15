@@ -1,0 +1,9 @@
+uuid: e6baec67-b9d8-4f6d-bb8f-6df70277c2e7
+langcode: de
+status: true
+dependencies: {  }
+id: text_boxes
+label: Boxes
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

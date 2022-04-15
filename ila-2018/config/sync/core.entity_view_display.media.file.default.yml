@@ -1,0 +1,65 @@
+uuid: 29ea6aee-d3ed-4b91-8426-c69f148064ea
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.file.field_download_category
+    - field.field.media.file.field_download_preview
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_press_info
+    - field.field.media.file.field_show_on_downloads
+    - media.type.file
+  module:
+    - ds
+    - pdf
+id: media.file.default
+targetEntityType: media
+bundle: file
+mode: default
+content:
+  field_media_file:
+    weight: 1
+    label: hidden
+    settings:
+      keep_pdfjs: '1'
+      width: 100%
+      height: 1400px
+      page: ''
+      zoom: ''
+      custom_zoom: ''
+      pagemode: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: pdf_default
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_download_category: true
+  field_download_preview: true
+  field_press_info: true
+  field_show_on_downloads: true
+  langcode: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,28 @@
+uuid: a6551b35-d368-4dc7-ab0c-bc56453a53ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference_multiple
+    - media.type.image
+    - paragraphs.paragraphs_type.fl_logo
+id: paragraph.fl_logo.field_media_reference_multiple
+field_name: field_media_reference_multiple
+entity_type: paragraph
+bundle: fl_logo
+label: Logos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

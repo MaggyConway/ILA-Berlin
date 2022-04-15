@@ -1,0 +1,20 @@
+uuid: 463797a8-dfef-44e3-a21d-d80be680380d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.section
+_core:
+  default_config_hash: QyRUamAHs5BNmiOPu2Ck2mH5TdT_TlXQeF0hxFKABJk
+id: node.section.created
+field_name: created
+entity_type: node
+bundle: section
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

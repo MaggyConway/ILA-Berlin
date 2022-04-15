@@ -1,0 +1,184 @@
+.paragraph--orientation-image-left {
+  padding: 175px 20px 40px;
+  display: flex;
+  width: 100%;
+  max-width: 1255px;
+
+  @media #{$m-to-m} {
+    padding: 0 10px 40px;
+    flex-direction: column;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    font-family: $career-font;
+    font-size: 280px;
+    line-height: .7;
+    font-weight: 900;
+    content: 'ILA';
+    color: $career-dark;
+    transform: translate(-50%, 100%);
+
+    @media #{$m-to-m} {
+      display: none;
+    }
+  }
+
+  .wrapper--background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin: auto;
+    width: 69%;
+    height: 69%;
+    background: url('../../img/diagonal-lines.svg') repeat, $career-dark;
+    border-left: 20px solid $career-green;
+    transform: translateX(-50%) rotate(-45deg);
+    // transform-origin: 50% 50%;
+
+    @media #{$m-to-4xl} {
+      width: 900px;
+      height: 900px;
+    }
+
+    @media #{$m-to-m} {
+      top: 50px;
+      bottom: auto;
+      width: 427px;
+      height: 427px;
+      border: 0;
+    }
+
+    // @media screen and (max-width: 426px) {
+    //   width: 375px;
+    //   height: 375px;
+    // }
+
+    // @media screen and (max-width: 374px) {
+    //   width: 320px;
+    //   height: 320px;
+    // }
+  }
+
+  .wrapper--field-title {
+    position: absolute;
+    top: 410px;
+    right: 10px;
+    width: 40%;
+    transform: translateY(-100%);
+
+    @media #{$m-to-m} {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+      transform: none;
+    }
+  }
+
+  .wrapper--tti-images {
+    width: 60%;
+    height: 1000px;
+
+    @media #{$m-to-4xl} {
+      width: 50%;
+    }
+
+    @media #{$m-to-m} {
+      width: 100%;
+      height: auto;
+      order: 1;
+      background-color: $career-dark;
+    }
+  }
+
+  .wrapper--content {
+    margin-top: 240px;
+    width: 40%;
+
+    @media #{$m-to-4xl} {
+      width: 50%;
+    }
+
+    @media #{$m-to-m} {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+
+  .field--name-field-cc-tti-images {
+    @media #{$m-to-m} {
+      margin-right: -10px;
+      margin-bottom: -80px;
+      margin-left: -10px;
+    }
+
+    > .field__item {
+      position: absolute;
+      overflow: hidden;
+      max-width: 100%;
+
+      @media #{$m-to-m} {
+        position: relative;
+      }
+
+      &:nth-child(1) {
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 320px;
+        height: 420px;
+
+        @media #{$m-to-m} {
+          width: 50%;
+          height: auto;
+        }
+      }
+
+      &:nth-child(2) {
+        z-index: 2;
+        top: 240px;
+        left: 240px;
+        width: 400px;
+        height: 460px;
+
+        @media #{$m-to-4xl} {
+          right: 0;
+          left: auto;
+        }
+
+        @media #{$m-to-m} {
+          top: -100px;
+          margin-left: auto;
+          width: 60%;
+          height: auto;
+        }
+      }
+
+      &:nth-child(3) {
+        z-index: 3;
+        top: 620px;
+        left: 0;
+        width: 480px;
+        height: 380px;
+
+        @media #{$m-to-m} {
+          top: -150px;
+          width: 74%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .wrapper--mobile-link {
+    .field--name-field-cc-link {
+      top: -50%;
+    }
+  }
+}

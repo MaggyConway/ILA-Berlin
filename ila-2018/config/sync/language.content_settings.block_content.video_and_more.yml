@@ -1,0 +1,16 @@
+uuid: 8bed99a2-e373-49b0-a263-dc8efc56526c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_and_more
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.video_and_more
+target_entity_type_id: block_content
+target_bundle: video_and_more
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,14 @@
+uuid: b8b6d90e-3b0d-4a1b-b420-5b8936471ea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.main_exhibitor
+  module:
+    - user
+id: user_remove_role_action.main_exhibitor
+label: 'Remove the Main Exhibitor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: main_exhibitor

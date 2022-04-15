@@ -1,0 +1,4 @@
+settings:
+  markup:
+    format: full_html
+    value: "<h3>Bitte geben Sie an ob Sie im eigenen Namen oder im Auftrag des Hauptausstellers anmelden.*</h3>\r\n"

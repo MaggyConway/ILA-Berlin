@@ -1,0 +1,19 @@
+uuid: c96f5113-2bca-41f4-91db-3d6cc2dccf54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.fl_video_message
+id: paragraph.fl_video_message.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: fl_video_message
+label: Subtitle
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

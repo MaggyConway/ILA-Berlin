@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_request_fb1_aircraft_cat
+field_name: field_request_fb1_aircraft_cat
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: transport/commuter
+    -
+      value: '2'
+      label: business/corporate
+    -
+      value: '3'
+      label: private/sport/training
+    -
+      value: '4'
+      label: 'military trainer'
+    -
+      value: '5'
+      label: 'military combat'
+    -
+      value: '6'
+      label: 'special mission'
+    -
+      value: '7'
+      label: 'technology demonstrator'
+    -
+      value: '8'
+      label: helicopter/rotorcraft
+    -
+      value: '9'
+      label: 'powered sailplane'
+    -
+      value: '10'
+      label: sailplane
+    -
+      value: '11'
+      label: 'ultra/micro light'
+    -
+      value: '12'
+      label: vintage/oldtimer
+    -
+      value: '13'
+      label: balloon
+    -
+      value: '14'
+      label: kite
+    -
+      value: '15'
+      label: blimp/airship
+    -
+      value: '16'
+      label: UAS
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

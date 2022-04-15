@@ -1,0 +1,53 @@
+/* ==========================================================================
+  Base styles
+========================================================================== */
+
+/* stylelint-disable-next-line */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $secondary-font;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
+  word-wrap: break-word;
+  color: $main-text-color;
+  overflow-wrap: break-word;
+
+  @media #{$m-to-m} {
+    font-size: $main-font-size-mobile;
+  }
+}
+
+main {
+  font-family: $main-font;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+object,
+input,
+textarea {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+}

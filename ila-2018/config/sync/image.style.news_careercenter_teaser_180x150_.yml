@@ -1,0 +1,16 @@
+uuid: 0213c53c-8882-4742-9feb-0992d12bdb86
+langcode: en
+status: true
+dependencies: {  }
+name: news_careercenter_teaser_180x150_
+label: 'News CareerCenter Teaser (180x150)'
+effects:
+  4120bbfb-f37b-42a6-8869-413f31ae2626:
+    uuid: 4120bbfb-f37b-42a6-8869-413f31ae2626
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 150
+      anchor: center-center
+pipeline: image_optimiza

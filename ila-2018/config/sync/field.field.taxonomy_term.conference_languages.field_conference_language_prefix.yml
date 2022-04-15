@@ -1,0 +1,19 @@
+uuid: 613d024f-6290-4e9c-953d-ad5be175d986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_conference_language_prefix
+    - taxonomy.vocabulary.conference_languages
+id: taxonomy_term.conference_languages.field_conference_language_prefix
+field_name: field_conference_language_prefix
+entity_type: taxonomy_term
+bundle: conference_languages
+label: 'Conference language prefix'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

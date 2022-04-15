@@ -1,0 +1,56 @@
+uuid: 522af6a9-e22b-4ba3-8f18-166645580efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.career_center_faq
+  content:
+    - 'block_content:faq:35d9141a-c774-4369-8a45-c1a9ab808870'
+    - 'block_content:header_image:11f628e2-4a36-4167-bea6-7c858adcac4c'
+  module:
+    - block_content
+    - panels
+id: career_center_faq-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    2b3880df-b6cf-4673-beee-34f2c49f44d2:
+      id: 'block_content:11f628e2-4a36-4167-bea6-7c858adcac4c'
+      label: Header
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 2b3880df-b6cf-4673-beee-34f2c49f44d2
+      context_mapping: {  }
+    ed2e4533-d928-4e29-96d2-68f4bdeb3155:
+      id: 'block_content:35d9141a-c774-4369-8a45-c1a9ab808870'
+      label: FAQ
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: ed2e4533-d928-4e29-96d2-68f4bdeb3155
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 649deedc-c115-4d8b-aac7-64afcab81339
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: career_center_faq-panels_variant-0
+  builder: standard
+page: career_center_faq
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

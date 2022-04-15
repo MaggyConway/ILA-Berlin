@@ -1,0 +1,58 @@
+uuid: 31d604cf-d2ab-4d01-8120-d8a3ecc6e491
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_e
+  content:
+    - 'block_content:page_description:405ca847-5056-40e5-ae65-5ad3a5ae599a'
+  module:
+    - block_content
+    - node
+    - panels
+_core:
+  default_config_hash: 8TYY3CtwnMs44FbB5VFZRji8c2GNZ5-bDA217F9tMLw
+id: request_e-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    e6dc3874-060e-4343-b298-067a1f9f3c6a:
+      id: exhibitor_registration
+      label: 'Exhibitor registration'
+      provider: node
+      label_display: '0'
+      type: request_e
+      form_mode: default
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: e6dc3874-060e-4343-b298-067a1f9f3c6a
+      context_mapping: {  }
+    d68f3e90-2555-44c1-9c63-37b1163969b1:
+      id: 'block_content:405ca847-5056-40e5-ae65-5ad3a5ae599a'
+      label: 'Registration CareerCenter'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: d68f3e90-2555-44c1-9c63-37b1163969b1
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 1a8f1906-23cb-4733-9d09-0f4a2f9c29eb
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'REGISTRATION CAREERCENTER (E)'
+  storage_type: page_manager
+  storage_id: request_e-panels_variant-0
+  builder: standard
+page: request_e
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

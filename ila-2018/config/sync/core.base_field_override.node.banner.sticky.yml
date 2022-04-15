@@ -1,0 +1,22 @@
+uuid: 384aca73-25c1-4852-9db4-7e3b1d023f03
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.banner
+id: node.banner.sticky
+field_name: sticky
+entity_type: node
+bundle: banner
+label: 'Oben in Listen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

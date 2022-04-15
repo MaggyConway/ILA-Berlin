@@ -1,0 +1,28 @@
+uuid: ed6883b5-13f6-4fc4-82fb-a4d2e8632415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_document_single
+    - media.type.file
+    - paragraphs.paragraphs_type.fl_download_box
+id: paragraph.fl_download_box.field_media_document_single
+field_name: field_media_document_single
+entity_type: paragraph
+bundle: fl_download_box
+label: 'Media Document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

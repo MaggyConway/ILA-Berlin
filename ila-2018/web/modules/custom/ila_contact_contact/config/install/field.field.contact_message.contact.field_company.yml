@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_company
+id: contact_message.contact.field_company
+field_name: field_company
+entity_type: contact_message
+bundle: contact
+label: Company
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

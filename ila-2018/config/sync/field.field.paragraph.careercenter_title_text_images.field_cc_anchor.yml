@@ -1,0 +1,19 @@
+uuid: f715b524-38a9-45eb-9ba5-3136fb34d5fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_anchor
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+id: paragraph.careercenter_title_text_images.field_cc_anchor
+field_name: field_cc_anchor
+entity_type: paragraph
+bundle: careercenter_title_text_images
+label: Anchor
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

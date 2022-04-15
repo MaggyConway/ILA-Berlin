@@ -1,0 +1,18 @@
+id: conference_bubble
+label: 'Conference bubble'
+ui_limit: conference|default
+properties:
+  block: 'block_content:df65dd78-95ed-4710-a8e0-127241d60681'
+  use_block_title: false
+  config:
+    id: 'block_content:df65dd78-95ed-4710-a8e0-127241d60681'
+    label: ''
+    provider: block_content
+    label_display: visible
+    status: true
+    info: ''
+    view_mode: default
+type: block
+type_label: 'Block field'
+entities:
+  node: node

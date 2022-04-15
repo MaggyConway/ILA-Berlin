@@ -1,0 +1,31 @@
+uuid: 1a8211fc-c5c7-4eae-ba41-b392c306e61e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:text:4c512488-2ce7-4e87-8b27-5b09120c7618'
+  module:
+    - block_content
+    - system
+  theme:
+    - exhibitor_zone
+id: printrequestprintbutton
+theme: exhibitor_zone
+region: sticky
+weight: -5
+provider: null
+plugin: 'block_content:4c512488-2ce7-4e87-8b27-5b09120c7618'
+settings:
+  id: 'block_content:4c512488-2ce7-4e87-8b27-5b09120c7618'
+  label: 'Print request: Print button'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/exhibitor-zone/request_a/print\r\n/exhibitor-zone/request_b/print\r\n/exhibitor-zone/request_c/print\r\n/exhibitor-zone/request_d/print\r\n/exhibitor-zone/request_e/print\r\n/exhibitor-zone/request_f/print\r\n/exhibitor-zone/request_fb1/print\r\n/exhibitor-zone/co-exhibitor/print"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,119 @@
+uuid: a09e388a-86aa-41d8-9c0c-f952ccfc3a46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_sponsors
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_anchor_id
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_first_line
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_images
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_second_line
+    - image.style.thumbnail
+  module:
+    - field_group
+    - svg_image
+third_party_settings:
+  field_group:
+    group_ac:
+      children:
+        - group_general
+        - group_content
+      parent_name: ''
+      weight: 0
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+      label: Accordion
+      region: content
+    group_general:
+      children:
+        - info
+        - langcode
+        - translation
+        - field_cc_sponsors_anchor_id
+      parent_name: group_ac
+      weight: 4
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: General
+      region: content
+    group_content:
+      children:
+        - field_cc_sponsors_first_line
+        - field_cc_sponsors_second_line
+        - field_cc_sponsors_images
+      parent_name: group_ac
+      weight: 5
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Content
+      region: content
+id: block_content.careercenter_sponsors.default
+targetEntityType: block_content
+bundle: careercenter_sponsors
+mode: default
+content:
+  field_cc_sponsors_anchor_id:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_sponsors_first_line:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_sponsors_images:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cc_sponsors_second_line:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

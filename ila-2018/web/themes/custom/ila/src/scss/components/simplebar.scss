@@ -1,0 +1,13 @@
+.simplebar-track.simplebar-vertical {
+  width: 5px;
+  background-color: #DDDDDD;
+}
+
+.simplebar-scrollbar {
+  right: 0;
+  width: 5px;
+
+  &::before {
+    border-radius: 0;
+  }
+}

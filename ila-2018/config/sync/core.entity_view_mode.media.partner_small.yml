@@ -1,0 +1,10 @@
+uuid: a74a41ef-f14a-41e4-bde9-7af96fe18755
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.partner_small
+label: 'Partner small'
+targetEntityType: media
+cache: true

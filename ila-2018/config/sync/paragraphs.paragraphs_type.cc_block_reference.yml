@@ -1,0 +1,9 @@
+uuid: 9ca7a2d3-c9d2-45fb-a8f5-039a9d957df5
+langcode: en
+status: true
+dependencies: {  }
+id: cc_block_reference
+label: 'CareerCenter -- Block reference'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

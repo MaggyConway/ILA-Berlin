@@ -1,0 +1,28 @@
+Index: core/modules/taxonomy/taxonomy.install
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- core/modules/taxonomy/taxonomy.install	(revision 94bfb9e5db60879f5c57b80accbcccc85d364e20)
++++ core/modules/taxonomy/taxonomy.install	(date 1547634747000)
+@@ -176,13 +176,13 @@
+   else {
+     $status->setInitialValue(TRUE);
+   }
+-  $definition_update_manager->installFieldStorageDefinition('status', 'taxonomy_term', 'taxonomy_term', $status);
+-
+-  // Uninstall the 'content_translation_status' field if needed.
+-  if ($has_content_translation_status_field) {
+-    $content_translation_status = $definition_update_manager->getFieldStorageDefinition('content_translation_status', 'taxonomy_term');
+-    $definition_update_manager->uninstallFieldStorageDefinition($content_translation_status);
+-  }
++//  $definition_update_manager->installFieldStorageDefinition('status', 'taxonomy_term', 'taxonomy_term', $status);
++//
++//  // Uninstall the 'content_translation_status' field if needed.
++//  if ($has_content_translation_status_field) {
++//    $content_translation_status = $definition_update_manager->getFieldStorageDefinition('content_translation_status', 'taxonomy_term');
++//    $definition_update_manager->uninstallFieldStorageDefinition($content_translation_status);
++//  }
+ 
+   return t('The publishing status field has been added to taxonomy terms.');
+ }

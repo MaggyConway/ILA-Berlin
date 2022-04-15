@@ -1,0 +1,14 @@
+uuid: 17253146-232e-49bc-9169-8ebe1f1af654
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WOc5fxG6yFYO29RvFQbhStSh1IYn4W4DqBo3SkWnbPA
+id: media
+label: Media
+description: ''
+use_admin_theme: false
+path: /media
+access_logic: and
+access_conditions: {  }
+parameters: {  }

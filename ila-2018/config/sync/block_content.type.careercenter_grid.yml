@@ -1,0 +1,8 @@
+uuid: 2a7f66d8-0bba-49e5-9913-5ce0efced000
+langcode: en
+status: true
+dependencies: {  }
+id: careercenter_grid
+label: 'CareerCenter -- Grid'
+revision: 0
+description: ''

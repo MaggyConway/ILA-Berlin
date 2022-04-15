@@ -1,0 +1,28 @@
+uuid: 112eb2f9-01fe-4c25-9499-50458accb92a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fl_header_image
+    - media.type.image
+    - node.type.future_lab
+id: node.future_lab.field_fl_header_image
+field_name: field_fl_header_image
+entity_type: node
+bundle: future_lab
+label: 'Header image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

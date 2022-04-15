@@ -1,0 +1,125 @@
+uuid: be43b1d5-d4ff-4d0a-9649-6f56e4c176ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_download_box.field_cc_anchor
+    - field.field.paragraph.fl_download_box.field_cc_text
+    - field.field.paragraph.fl_download_box.field_media_document_single
+    - field.field.paragraph.fl_download_box.field_media_reference
+    - field.field.paragraph.fl_download_box.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_download_box
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - field_paragraph_title
+        - group_left
+        - group_right
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-main
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrapper
+      region: content
+    group_left:
+      children:
+        - field_media_reference
+      parent_name: group_wrapper
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-left
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Left
+      region: content
+    group_right:
+      children:
+        - field_cc_text
+        - field_media_document_single
+      parent_name: group_wrapper
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-right
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+      region: content
+id: paragraph.fl_download_box.default
+targetEntityType: paragraph
+bundle: fl_download_box
+mode: default
+content:
+  field_cc_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_document_single:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: fl_download_box_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_media_reference:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: fl_download_box_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_paragraph_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_cc_anchor: true

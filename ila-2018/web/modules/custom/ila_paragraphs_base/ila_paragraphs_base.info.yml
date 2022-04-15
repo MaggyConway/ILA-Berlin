@@ -1,0 +1,12 @@
+name: 'Paragraphs - Base'
+description: 'Paragraphs entity type common configuration.'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - content_translation
+  - field
+  - ila_paragraphs_text
+  - language
+  - paragraphs
+  - text
+package: ILA

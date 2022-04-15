@@ -1,0 +1,22 @@
+uuid: e41b4795-2c10-492c-98dc-4c44993b92d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_svg_tag_snippet.field_cc_svg_snippet
+    - paragraphs.paragraphs_type.fl_svg_tag_snippet
+  module:
+    - text
+id: paragraph.fl_svg_tag_snippet.default
+targetEntityType: paragraph
+bundle: fl_svg_tag_snippet
+mode: default
+content:
+  field_cc_svg_snippet:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

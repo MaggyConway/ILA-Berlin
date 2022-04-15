@@ -1,0 +1,78 @@
+uuid: fe36f502-3cfa-46fd-89f8-30f5244030d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_entity_browser
+    - field.field.paragraph.fl_download_box.field_cc_anchor
+    - field.field.paragraph.fl_download_box.field_cc_text
+    - field.field.paragraph.fl_download_box.field_media_document_single
+    - field.field.paragraph.fl_download_box.field_media_reference
+    - field.field.paragraph.fl_download_box.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_download_box
+  module:
+    - entity_browser
+    - text
+id: paragraph.fl_download_box.default
+targetEntityType: paragraph
+bundle: fl_download_box
+mode: default
+content:
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media_document_single:
+    type: entity_browser_entity_reference
+    weight: 4
+    settings:
+      entity_browser: file_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: media_library
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    region: content
+  field_media_reference:
+    weight: 2
+    settings:
+      entity_browser: image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: media_library
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_paragraph_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

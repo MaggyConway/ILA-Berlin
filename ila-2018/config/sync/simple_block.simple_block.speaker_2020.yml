@@ -1,0 +1,11 @@
+uuid: fede7350-290f-4c44-98a7-55ba801d2d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+id: speaker_2020
+title: 'Speaker 2020'
+content:
+  value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>\r\n"
+  format: filtered_html

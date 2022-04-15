@@ -1,0 +1,22 @@
+uuid: a5798700-2d34-4186-b57b-ac16f1d31c80
+langcode: en
+status: true
+dependencies: {  }
+name: media_low_quality_
+label: 'Media (low quality)'
+effects:
+  3434d71d-215c-4238-8563-3774a4c34834:
+    uuid: 3434d71d-215c-4238-8563-3774a4c34834
+    id: image_convert
+    weight: -9
+    data:
+      extension: jpeg
+  53c864a6-5c9d-43d7-ba63-43caff359a0d:
+    uuid: 53c864a6-5c9d-43d7-ba63-43caff359a0d
+    id: image_scale
+    weight: -10
+    data:
+      width: 800
+      height: null
+      upscale: false
+pipeline: image_optimiza

@@ -1,0 +1,55 @@
+uuid: 652ff771-1606-415d-8de2-f0b38001cb60
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.file.field_download_category
+    - field.field.media.file.field_download_preview
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_press_info
+    - field.field.media.file.field_show_on_downloads
+    - media.type.file
+  module:
+    - ds
+    - file
+id: media.file.media_library
+targetEntityType: media
+bundle: file
+mode: media_library
+content:
+  created:
+    type: timestamp
+    weight: 1
+    region: content
+    label: above
+    settings:
+      date_format: blog_careercenter
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_media_file:
+    weight: 0
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden:
+  addtoany: true
+  field_download_category: true
+  field_download_preview: true
+  field_press_info: true
+  field_show_on_downloads: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,20 @@
+uuid: ef04a794-31a8-4c6f-852f-67407271d241
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_last_name
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_last_name
+field_name: field_ar_last_name
+entity_type: attendee_registration
+bundle: attendee_registration
+label: 'Last name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

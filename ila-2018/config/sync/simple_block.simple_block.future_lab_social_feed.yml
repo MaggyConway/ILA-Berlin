@@ -1,0 +1,11 @@
+uuid: 5552e7b8-3198-4911-97d1-3df9adfad59e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: future_lab_social_feed
+title: 'FutureLAB social feed'
+content:
+  value: "<div id=\"curator-feed-future-lab-layout\"></div>\r\n\r\n<script type=\"text/javascript\">\r\n/* curator-feed-future-lab-layout */\r\n(function(){\r\nvar i, e, d = document, s = \"script\";i = d.createElement(\"script\");i.async = 1;\r\ni.src = \"https://cdn.curator.io/published/31ac88cc-6e83-4284-8dfc-1562cd80a63c.js\";\r\ne = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);\r\n})();\r\n</script>"
+  format: full_html

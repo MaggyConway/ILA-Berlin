@@ -1,0 +1,19 @@
+uuid: 70f828bc-0cb9-4594-b641-3b81bcf72475
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: ca4xx2X6GhuNJQBrsp-KMfk5ZPFWQsThNbFf-tolVDg
+name: Section
+type: section
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

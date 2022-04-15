@@ -1,0 +1,22 @@
+name: Core
+description: 'Common site configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - ckeditor
+  - content_translation
+  - daterange_compact
+  - editor
+  - email_confirmer
+  - features
+  - file
+  - filter
+  - image
+  - language
+  - menu_link_content
+  - page_manager
+  - redirect
+  - slick
+  - user
+  - views
+package: ILA

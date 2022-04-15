@@ -1,0 +1,10 @@
+uuid: bc7c269b-ce0b-496b-ad7a-c916018074ae
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8bCrI908RAuQrvIeVFfE0f1H9a6pWr-rQVkIqrl3QCM
+id: image
+label: Image
+revision: 0
+description: 'Image only block type'

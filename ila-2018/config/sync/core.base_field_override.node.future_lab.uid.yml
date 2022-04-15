@@ -1,0 +1,20 @@
+uuid: 51ef6eeb-84c7-45ce-a051-4ea26ec5f44f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.uid
+field_name: uid
+entity_type: node
+bundle: future_lab
+label: 'Authored by'
+description: 'Der Benutzername des Autors.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

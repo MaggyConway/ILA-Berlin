@@ -1,0 +1,8 @@
+name: Video - Popup formatter
+description: 'Display video field player in the colorbox popup'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - video
+  - colorbox
+package: 'ILA'

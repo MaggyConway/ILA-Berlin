@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains small adjustments for the default content.
+ */
+
+require_once __DIR__ . '/includes/ila_paragraph_browser_images.inc';
+
+use Drupal\image\Entity\ImageStyle;
+
+/**
+ * Implements hook_ENTITY_TYPE_load().
+ */
+function ila_paragraphs_browser_images_paragraphs_type_load($entities) {
+  foreach ($entities as $entity) {
+    if (!isset($entity->third_party_settings['paragraphs_browser']['image_path']) ||
+      empty($entity->third_party_settings['paragraphs_browser']['image_path'])
+    ) {
+      $img_dir = 'public://paragraphs_browser_images';
+      $original_img_uri = $img_dir . '/' . $entity->id . '.png';
+      if (file_exists($original_img_uri)) {
+        $imagestyle = ImageStyle::load('medium');
+        if (!is_null($imagestyle)) {
+          $styled_img_uri = $imagestyle->buildUri($original_img_uri);
+          if (!file_exists($styled_img_uri)) {
+            $imagestyle->createDerivative($original_img_uri, $styled_img_uri);
+          }
+          $entity->setThirdPartySetting('paragraphs_browser', 'image_path', $styled_img_uri);
+        }
+      }
+    }
+  }
+}

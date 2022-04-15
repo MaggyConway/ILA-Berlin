@@ -1,0 +1,10 @@
+uuid: c1d9c607-1a6d-4b13-a7ec-bba3cacb7144
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_section_default
+label: 'CT Section: Default'
+targetEntityType: media
+cache: true

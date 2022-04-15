@@ -1,0 +1,35 @@
+uuid: 1d6c0e26-4ec1-4e70-ab46-9f8c91f38771
+langcode: de
+status: true
+dependencies:
+  config:
+    - page_manager.page.bdli_events
+    - views.view.bdli_events
+  module:
+    - views
+id: bdli_events-block_display-0
+label: 'Block page'
+variant: block_display
+variant_settings:
+  blocks:
+    39a0bc57-35d5-4671-a16c-daa709c19bab:
+      id: 'views_block:bdli_events-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 0
+      uuid: 39a0bc57-35d5-4671-a16c-daa709c19bab
+      context_mapping: {  }
+  id: block_display
+  uuid: 3d152491-7c53-481d-9838-3a926e3f9994
+  label: null
+  weight: 0
+  page_title: 'BDLI Events'
+page: bdli_events
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

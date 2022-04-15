@@ -1,0 +1,9 @@
+uuid: 33da5595-0323-48bb-b483-e5aa133bf5ac
+langcode: en
+status: true
+dependencies: {  }
+id: cc_facebook_post
+label: 'CareerCenter -- Facebook post'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

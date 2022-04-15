@@ -1,0 +1,85 @@
+.paragraph--type--twitter-feed {
+  @include content-grid (60px);
+
+  .field--name-field-tbs-title {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+    @include section-theme-specific('font-size', 20px, 20px, 20px, 20px, 20px, 20px, 2em, 20px, 20px);
+
+    font-weight: 900;
+    line-height: 1.1764;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+  }
+
+  &.field--separators {
+    &-bottom {
+      padding-bottom: 5px;
+      position: relative;
+
+      &::before {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+    }
+
+    &-top {
+      padding-top: 45px;
+      position: relative;
+
+      &::before {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        top: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+    }
+
+    &-both {
+      padding: {
+        bottom: 5px;
+        top: 45px;
+      }
+      position: relative;
+
+      &::before {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        top: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+
+      &::after {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+    }
+  }
+  .field--name-field-twitter-text {
+    float: right;
+    width: 61%;
+  }
+  .field--name-field-twitter-description {
+    width: 30%;
+  }
+}

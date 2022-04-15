@@ -1,0 +1,14 @@
+uuid: 50592831-e52b-48a8-aefc-9a2ed289571c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: i-yOJGY-YC5iYorVHFurjBm006uhz3zB6ap6uewT__o
+id: homepage
+label: Internet
+description: ''
+use_admin_theme: false
+path: /home
+access_logic: and
+access_conditions: {  }
+parameters: {  }

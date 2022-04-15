@@ -1,0 +1,18 @@
+uuid: 97aff342-a6f4-4acc-8c7a-0e27d0147051
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_facebook_post
+id: paragraph.cc_facebook_post.created
+field_name: created
+entity_type: paragraph
+bundle: cc_facebook_post
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

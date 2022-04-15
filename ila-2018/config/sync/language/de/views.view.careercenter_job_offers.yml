@@ -1,0 +1,43 @@
+display:
+  cc_count_marked_job_offers:
+    display_options:
+      header:
+        result:
+          content: '<a href="/bookmarks">Mein Merkzettel (@total)</a>'
+  default:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Mehr laden'
+  careercenter_job_offers_search:
+    display_options:
+      header:
+        area_text_custom:
+          content: "<div class=\"jobs-header\">\r\nJobs\r\n<span class=\"show-filters\" href=\"#\">Filter anzeigen</span>\r\n</div>\r\n"
+      empty:
+        area:
+          content:
+            value: "<p>Keine Stellenangebote gefunden.</p>\r\n"
+            format: filtered_html
+  cc_marked_job_offers:
+    display_options:
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Mehr laden'
+  cc_marked_job_offers_page:
+    display_options:
+      header:
+        area_text_custom_1:
+          content: '<a href="#" class="link-history-back">Zurück</a>'
+      pager:
+        options:
+          views_infinite_scroll:
+            button_text: 'Mehr laden'
+      empty:
+        area:
+          content:
+            value: "<p>Dein Merkzettel ist leer.</p>\r\n"
+            format: filtered_html
+      title: Merkzettel

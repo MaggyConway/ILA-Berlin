@@ -1,0 +1,218 @@
+uuid: acf131a1-fc53-4cc9-bcfc-590714c28cc2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_sl_images_media
+    - field.field.paragraph.slideshow.field_sls_image
+    - image.style.section_slideshow
+    - image.style.section_slideshow_thumbnail
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - ds
+    - slick
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_sl_images_media:
+    type: slick_media
+    weight: 1
+    label: hidden
+    settings:
+      optionset: section_main
+      optionset_thumbnail: section_thumbnails
+      skin: default
+      skin_thumbnail: ''
+      image_style: section_slideshow
+      thumbnail_style: section_slideshow_thumbnail
+      responsive_image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      box_style: ''
+      box_media_style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      view_mode: default
+      ratio: ''
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      thumbnail_caption: ''
+      class: ''
+      cache: 0
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      vanilla: false
+      background: false
+      caption:
+        field_cc_impressionen: '0'
+        field_cc_logo_wall: '0'
+        field_logo_conf_host: '0'
+        field_media_image: '0'
+        field_url: '0'
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      preserve_keys: false
+      visible_items: 0
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+      icon: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      id: ''
+      overlay: ''
+      use_theme_field: false
+      fx: ''
+      _uri: ''
+      sizes: ''
+      grid_header: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_sls_image:
+    type: slick_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      style: ''
+      optionset: section_main
+      optionset_thumbnail: section_thumbnails
+      skin: default
+      skin_thumbnail: ''
+      image_style: section_slideshow
+      thumbnail_style: section_slideshow_thumbnail
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      box_style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      grid_header: ''
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      iframe_lazy: true
+      icon: ''
+      view_mode: ''
+      box_media_style: ''
+      responsive_image_style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            prefix: '<div class="section__slideshow-wrapper">'
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: div
+            ow-cl: section__slideshow-wrapper
+            ow-at: ''
+            ow-def-at: '1'
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: '</div>'
+            lbw: 0
+            lb-col: false
+            ow: 0
+            ow-def-cl: 0
+            fis: 0
+            fis-def-at: 0
+            fi: 0
+            fi-def-at: 0
+hidden:
+  search_api_excerpt: true

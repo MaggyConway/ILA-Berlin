@@ -1,0 +1,22 @@
+uuid: 7a9dded3-69f5-434d-bc8e-b0f5202a83d2
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_svg_tag_snippet
+id: paragraph.fl_svg_tag_snippet.status
+field_name: status
+entity_type: paragraph
+bundle: fl_svg_tag_snippet
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

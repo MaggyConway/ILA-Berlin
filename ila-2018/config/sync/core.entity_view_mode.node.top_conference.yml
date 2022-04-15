@@ -1,0 +1,10 @@
+uuid: b1ced543-b819-40c4-9433-9395ebfd927c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.top_conference
+label: 'Top conference'
+targetEntityType: node
+cache: true

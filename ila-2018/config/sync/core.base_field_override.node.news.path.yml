@@ -1,0 +1,22 @@
+uuid: c7a5e94c-67e1-47c2-bc45-7ed136ceac3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - path
+_core:
+  default_config_hash: gHjTioU038L-zZzZ9NBpd9D4C9WCwet4ltbXIQZkens
+id: node.news.path
+field_name: path
+entity_type: node
+bundle: news
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

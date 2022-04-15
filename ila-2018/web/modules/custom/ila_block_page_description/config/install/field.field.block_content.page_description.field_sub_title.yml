@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.page_description
+    - field.storage.block_content.field_sub_title
+id: block_content.page_description.field_sub_title
+field_name: field_sub_title
+entity_type: block_content
+bundle: page_description
+label: 'Sub title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

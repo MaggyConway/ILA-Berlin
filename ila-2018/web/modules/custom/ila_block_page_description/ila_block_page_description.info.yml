@@ -1,0 +1,12 @@
+name: 'Block - Page description'
+description: 'Block content - "Page description" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - ds
+  - field
+  - ila_block_base
+  - ila_block_text
+  - text
+package: ILA

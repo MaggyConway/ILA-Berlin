@@ -1,0 +1,10 @@
+uuid: 38641849-39d7-4f90-8fbe-7424f05bc746
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Qodq6jMRPUOjVJ0UlbCSMelHJHhNPtbwRapmBZaeNZI
+id: video
+label: Video
+revision: 0
+description: 'Video only block type'

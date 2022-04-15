@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+id: downloads
+label: Downloads
+description: ''
+use_admin_theme: false
+path: /downloads
+access_logic: and
+access_conditions: {  }
+parameters: {  }

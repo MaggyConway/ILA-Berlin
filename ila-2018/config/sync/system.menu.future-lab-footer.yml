@@ -1,0 +1,8 @@
+uuid: 585cce0c-9376-4d62-ad5e-75746fa6d5f1
+langcode: en
+status: true
+dependencies: {  }
+id: future-lab-footer
+label: 'Future LAB (Footer)'
+description: ''
+locked: false

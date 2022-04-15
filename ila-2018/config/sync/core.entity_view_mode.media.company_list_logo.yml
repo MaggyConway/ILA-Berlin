@@ -1,0 +1,10 @@
+uuid: 924caa32-7d30-4c41-b290-8cec1b0ad3c9
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.company_list_logo
+label: 'Company List Logo'
+targetEntityType: media
+cache: true

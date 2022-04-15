@@ -1,0 +1,19 @@
+uuid: 412e3604-4995-4474-aa8e-9c4b24e78c9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_sponsors
+    - field.storage.block_content.field_cc_sponsors_anchor_id
+id: block_content.careercenter_sponsors.field_cc_sponsors_anchor_id
+field_name: field_cc_sponsors_anchor_id
+entity_type: block_content
+bundle: careercenter_sponsors
+label: 'Anchor ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

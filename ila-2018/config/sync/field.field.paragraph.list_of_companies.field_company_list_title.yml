@@ -1,0 +1,19 @@
+uuid: 6014ad56-f6bd-48e4-b7cb-9dc870d17fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_title
+    - paragraphs.paragraphs_type.list_of_companies
+id: paragraph.list_of_companies.field_company_list_title
+field_name: field_company_list_title
+entity_type: paragraph
+bundle: list_of_companies
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+langcode: de
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+description: ''
+use_admin_theme: false
+path: /contact
+access_logic: and
+access_conditions: {  }
+parameters: {  }

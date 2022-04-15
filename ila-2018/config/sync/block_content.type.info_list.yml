@@ -1,0 +1,10 @@
+uuid: 72daaa13-3d03-4c45-a6c5-cd510b457004
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: C94eQmxKq4Q6xSTY1zLrhaj4LjYHcozgnrAy0z1hoCI
+id: info_list
+label: 'Info list'
+revision: 0
+description: ''

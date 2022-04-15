@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: image_fullscreen
+label: 'Image (Fullscreen)'
+revision: 0
+description: 'Full screen image block type'

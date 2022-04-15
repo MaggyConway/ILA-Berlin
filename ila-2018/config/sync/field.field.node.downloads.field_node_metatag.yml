@@ -1,0 +1,23 @@
+uuid: ac1f280f-30b7-4db9-99f7-20f4b7ef85ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_node_metatag
+    - node.type.downloads
+  module:
+    - metatag
+id: node.downloads.field_node_metatag
+field_name: field_node_metatag
+entity_type: node
+bundle: downloads
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

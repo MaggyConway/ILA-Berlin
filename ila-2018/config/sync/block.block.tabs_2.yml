@@ -1,0 +1,29 @@
+uuid: c1c4ee3e-26d6-4b98-8cb5-521a9d8f04e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - ila_future_lab
+id: tabs_2
+theme: ila_future_lab
+region: header_top
+weight: -13
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      future_lab: future_lab
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

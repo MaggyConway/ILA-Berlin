@@ -1,0 +1,17 @@
+uuid: 15d889fa-8059-429d-9938-bfa6505de484
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: default_database
+name: 'Default Database'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

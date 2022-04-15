@@ -1,0 +1,98 @@
+uuid: b1f3392f-e42e-441a-bfe3-5b0c923d038f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.bdli_event.body
+    - field.field.node.bdli_event.field_co_add_to_my_calendar
+    - field.field.node.bdli_event.field_contact_persons
+    - field.field.node.bdli_event.field_date_and_time
+    - field.field.node.bdli_event.field_ev_venue
+    - field.field.node.bdli_event.field_ila_event
+    - node.type.bdli_event
+  module:
+    - addtocalendar
+    - daterange_compact
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - body
+        - field_date_and_time
+        - field_ev_time
+        - field_ev_venue
+        - field_contact_persons
+        - field_event_category
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.bdli_event.default
+targetEntityType: node
+bundle: bdli_event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_co_add_to_my_calendar:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: add_to_calendar
+    region: content
+  field_contact_persons:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_date_and_time:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: daterange_compact
+    region: content
+  field_ev_venue:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  addtoany: true
+  field_ila_event: true
+  langcode: true
+  links: true

@@ -1,0 +1,27 @@
+uuid: d234d7fc-44d7-4619-84b4-cb9ab5923903
+langcode: de
+status: false
+dependencies:
+  content:
+    - 'block_content:text:aa0875c6-e372-4f10-a3ce-24fb83e13e90'
+  module:
+    - block_content
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: IvXirKIf_doik1IOoytQaqt1tEAj3ZXz86JP8gVVTsQ
+id: ila_career_center_header_text
+theme: ila_career_center
+region: header_top
+weight: -8
+provider: null
+plugin: 'block_content:aa0875c6-e372-4f10-a3ce-24fb83e13e90'
+settings:
+  id: 'block_content:aa0875c6-e372-4f10-a3ce-24fb83e13e90'
+  label: 'Header text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

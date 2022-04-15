@@ -1,0 +1,7 @@
+name: ILA Formatter with fixed langcode
+description: 'Adds formatter for Entity Reference field that ignores provided langcode'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - field
+package: ILA

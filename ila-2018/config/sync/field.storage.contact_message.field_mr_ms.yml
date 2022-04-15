@@ -1,0 +1,31 @@
+uuid: ac1572cc-d816-44c4-9b5e-093d4e9c116c
+langcode: de
+status: true
+dependencies:
+  module:
+    - contact
+    - field_permissions
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: contact_message.field_mr_ms
+field_name: field_mr_ms
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: herr
+      label: Herr
+    -
+      value: frau
+      label: Frau
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 1866f3c5-53c1-4472-950c-beb1017de0b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.career_center
+id: node_type_career_center
+entity_type_id: node_type
+entity_id: career_center
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

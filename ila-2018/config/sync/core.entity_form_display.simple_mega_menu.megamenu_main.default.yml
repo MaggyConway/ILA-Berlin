@@ -1,0 +1,198 @@
+uuid: 2cc0f436-5601-4637-ac6a-1ef02c917c48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.simple_mega_menu.megamenu_main.field_block_1
+    - field.field.simple_mega_menu.megamenu_main.field_block_2
+    - field.field.simple_mega_menu.megamenu_main.field_block_3
+    - field.field.simple_mega_menu.megamenu_main.field_block_4
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_1
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_2
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_3
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_4
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - block_field
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_col_1:
+      children:
+        - field_block_1
+        - field_infoblock_1
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Col 1'
+      region: content
+    group_col_2:
+      children:
+        - field_block_2
+        - field_infoblock_2
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Col 2'
+      region: content
+    group_col_3:
+      children:
+        - field_block_3
+        - field_infoblock_3
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Col 3'
+      region: content
+    group_col_4:
+      children:
+        - field_block_4
+        - field_infoblock_4
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Col 4'
+      region: content
+id: simple_mega_menu.megamenu_main.default
+targetEntityType: simple_mega_menu
+bundle: megamenu_main
+mode: default
+content:
+  field_block_1:
+    weight: 2
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_2:
+    weight: 3
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_3:
+    weight: 4
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_4:
+    weight: 5
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_infoblock_1:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: title_image_text
+    third_party_settings: {  }
+    region: content
+  field_infoblock_2:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: title_image_text
+    third_party_settings: {  }
+    region: content
+  field_infoblock_3:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: title_image_text
+    third_party_settings: {  }
+    region: content
+  field_infoblock_4:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: title_image_text
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

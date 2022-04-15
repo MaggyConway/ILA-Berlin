@@ -1,0 +1,19 @@
+uuid: a36c6b1e-be4a-4def-9a30-3dd9bd9adb42
+langcode: en
+status: true
+dependencies: {  }
+id: megamenu_main
+label: 'Megamenu main'
+targetMenu:
+  main: main
+  media: media
+  admin: '0'
+  devel: '0'
+  exhibitor-registration-menu: '0'
+  exhibitor-top-menu: '0'
+  footer: '0'
+  forms: '0'
+  section-nodes-menu: '0'
+  social: '0'
+  tools: '0'
+  account: '0'

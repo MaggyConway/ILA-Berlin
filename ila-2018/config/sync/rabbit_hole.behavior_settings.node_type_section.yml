@@ -1,0 +1,14 @@
+uuid: 16356cc6-b304-4a5c-9416-fb736bce41a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.section
+id: node_type_section
+entity_type_id: node_type
+entity_id: section
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

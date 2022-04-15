@@ -1,0 +1,22 @@
+uuid: c5143fb7-d3f1-4a6d-987a-5019161c3968
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.download
+id: paragraph.download.status
+field_name: status
+entity_type: paragraph
+bundle: download
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

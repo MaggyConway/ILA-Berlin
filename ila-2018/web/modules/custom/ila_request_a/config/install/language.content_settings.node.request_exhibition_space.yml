@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.request_exhibition_space
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.request_exhibition_space
+target_entity_type_id: node
+target_bundle: request_exhibition_space
+default_langcode: site_default
+language_alterable: false

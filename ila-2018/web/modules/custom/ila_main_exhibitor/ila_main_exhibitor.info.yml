@@ -1,0 +1,43 @@
+name: 'Content - Main Exhibitor'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - address
+  - block
+  - block_content
+  - conditional_fields
+  - content_translation
+  - csv_serialization
+  - datetime
+  - field
+  - field_group
+  - field_validation
+  - ila_co_exhibitor
+  - ila_exhibitor_registration
+  - ila_field_langcode
+  - ila_node_base
+  - ila_request_a
+  - ila_request_b
+  - ila_request_c
+  - ila_request_d
+  - ila_request_e
+  - ila_request_f
+  - ila_request_fb_1
+  - ila_taxonomy_request_a_stands
+  - language
+  - link
+  - markup
+  - menu_ui
+  - node
+  - options
+  - page_manager
+  - panels
+  - path
+  - rest
+  - serialization
+  - system
+  - taxonomy
+  - telephone
+  - user
+  - views
+  - views_data_export

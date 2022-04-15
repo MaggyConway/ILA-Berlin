@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.request_links
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.request_links
+target_entity_type_id: block_content
+target_bundle: request_links
+default_langcode: site_default
+language_alterable: true

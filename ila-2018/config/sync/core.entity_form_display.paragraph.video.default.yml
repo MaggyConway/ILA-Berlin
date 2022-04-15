@@ -1,0 +1,53 @@
+uuid: 9cbb12ec-cccc-4d85-8250-55cf60afd4fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_video_external
+    - field.field.paragraph.video.field_video_local
+    - paragraphs.paragraphs_type.video
+  module:
+    - video
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_external:
+    weight: 3
+    settings:
+      allowed_providers:
+        vimeo: vimeo
+        youtube: youtube
+        dailymotion: 0
+        vine: 0
+        instagram: 0
+        facebook: 0
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      uri_scheme: public
+    third_party_settings: {  }
+    type: video_embed
+    region: content
+  field_video_local:
+    weight: 2
+    settings:
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      uri_scheme: public
+      file_extensions: 'mp4 ogv webm'
+      max_filesize: ''
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: video_upload
+    region: content
+hidden:
+  created: true
+  status: true

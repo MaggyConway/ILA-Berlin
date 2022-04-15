@@ -1,0 +1,194 @@
+/* Colors */
+$c-white: #ffffff;
+$c-black: #353a45;
+$c-blue: #1d428a;
+$c-blue-normal: #009cde;
+$c-blue-light: #2dccd3;
+
+$c-yellow: #fdcf09;
+$c-light-grey: #636667;
+$c-dark-gray: #222538;
+$c-gray: #eae9e9;
+$c-blue-dark: #00529c;
+
+$bg-footer-top: $c-light-grey;
+$bg-footer-bottom: $c-dark-gray;
+
+/* Fonts */
+$f-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+  Arial, sans-serif;
+
+$dosis: 'Dosis', $f-sans-serif;
+$roboto: 'Roboto', $f-sans-serif;
+
+/* Backgrounds and colors */
+$bg-box: $c-gray;
+$bg-button: $c-yellow;
+$title-color: $c-blue-dark;
+
+/* Base variables */
+$main-font: $dosis;
+$secondary-font: $roboto;
+$main-font-size: 21px;
+$main-font-size-mobile: 16px;
+$main-font-weight: 400;
+$main-line-height: 1.4;
+$heading-font: $dosis;
+$heading-line-height: 1.1;
+$main-bg: $c-white;
+$main-text-color: $c-black;
+$secondary-text-color: $c-white;
+$link-color: $c-black;
+$default-transition-time: .3s;
+$default-transition: all $default-transition-time ease;
+
+/* Media variables */
+$m-3xl: screen and
+  (
+    min-width: 1921px,
+  );
+$m-to-xxl: screen and
+  (
+    max-width: 1920px,
+  );
+$m-from-xxl: screen and
+  (
+    min-width: 1280px,
+  );
+$m-xxl: screen and
+  (
+    min-width: 1280px,
+  )
+  and
+  (
+    max-width: 1920px,
+  );
+$m-to-xl: screen and
+  (
+    max-width: 1279px,
+  );
+$m-to-4xl: screen and
+  (
+    max-width: 1135px,
+  );
+$m-from-xl: screen and
+  (
+    min-width: 1024px,
+  );
+$m-xl: screen and
+  (
+    min-width: 1024px,
+  )
+  and
+  (
+    max-width: 1279px,
+  );
+$m-to-2l: screen and
+  (
+    max-width: 1023px,
+  );
+$m-from-2l: screen and
+  (
+    min-width: 860px,
+  );
+$m-2l: screen and
+  (
+    min-width: 860px,
+  )
+  and
+  (
+    max-width: 1023px,
+  );
+$m-to-l: screen and
+  (
+    max-width: 859px,
+  );
+$m-from-l: screen and
+  (
+    min-width: 768px,
+  );
+$m-l: screen and
+  (
+    min-width: 768px,
+  )
+  and
+  (
+    max-width: 859px,
+  );
+$m-to-m: screen and
+  (
+    max-width: 767px,
+  );
+$m-from-lm: screen and
+  (
+    min-width: 600px,
+  );
+$m-lm: screen and
+  (
+    min-width: 600px,
+  )
+  and
+  (
+    max-width: 767px,
+  );
+$m-to-sm: screen and
+  (
+    max-width: 600px,
+  );
+$m-sm: screen and
+  (
+    min-width: 480px,
+  )
+  and
+  (
+    max-width: 600px,
+  );
+$m-from-m: screen and
+  (
+    min-width: 480px,
+  );
+$m-m: screen and
+  (
+    min-width: 480px,
+  )
+  and
+  (
+    max-width: 768px,
+  );
+$m-to-s: screen and
+  (
+    max-width: 479px,
+  );
+$m-from-s: screen and
+  (
+    min-width: 321px,
+  );
+$m-s: screen and
+  (
+    min-width: 321px,
+  )
+  and
+  (
+    max-width: 479px,
+  );
+$m-xs: screen and
+  (
+    max-width: 320px,
+  );
+$m-xl-xxl: screen and
+  (
+    min-width: 600px,
+  )
+  and
+  (
+    max-width: 900px,
+  );
+
+$m-retina2x: screen and
+    (
+      min-resolution: 120dpi,
+    ),
+  screen and
+    (
+      min-resolution: 1.25dppx,
+    );

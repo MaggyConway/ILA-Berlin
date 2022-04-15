@@ -1,0 +1,160 @@
+uuid: aac09c09-8bf6-41d5-b0f7-c9574114e3c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.career_center_news
+    - field.storage.block_content.field_cc_news_components
+    - paragraphs.paragraphs_type.cc_facebook_post
+    - paragraphs.paragraphs_type.cc_link_box
+    - paragraphs.paragraphs_type.cc_link_list
+    - paragraphs.paragraphs_type.cc_news_block
+    - paragraphs.paragraphs_type.cc_text_box
+    - paragraphs.paragraphs_type.cc_text_on_image
+    - paragraphs.paragraphs_type.cc_tiled_title
+  module:
+    - entity_reference_revisions
+id: block_content.career_center_news.field_cc_news_components
+field_name: field_cc_news_components
+entity_type: block_content
+bundle: career_center_news
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cc_link_box: cc_link_box
+      cc_link_list: cc_link_list
+      cc_tiled_title: cc_tiled_title
+      cc_text_box: cc_text_box
+      cc_text_on_image: cc_text_on_image
+      cc_facebook_post: cc_facebook_post
+      cc_news_block: cc_news_block
+    target_bundles_drag_drop:
+      block_reference:
+        weight: 24
+        enabled: false
+      cc_link_box:
+        enabled: true
+        weight: 25
+      cc_link_list:
+        enabled: true
+        weight: 26
+      cc_link_list_item:
+        weight: 27
+        enabled: false
+      cc_tiled_title:
+        enabled: true
+        weight: 27
+      cc_text_box:
+        enabled: true
+        weight: 28
+      cc_text_on_image:
+        enabled: true
+        weight: 29
+      cc_facebook_post:
+        enabled: true
+        weight: 29
+      content_subtitle:
+        weight: 30
+        enabled: false
+      dwn_link:
+        weight: 31
+        enabled: false
+      image_box:
+        weight: 32
+        enabled: false
+      cc_news_block:
+        enabled: true
+        weight: 33
+      image_full:
+        weight: 33
+        enabled: false
+      image_row:
+        weight: 34
+        enabled: false
+      infographic_box:
+        weight: 35
+        enabled: false
+      infographic_box_column:
+        weight: 36
+        enabled: false
+      link_box:
+        weight: 37
+        enabled: false
+      link_box_container:
+        weight: 38
+        enabled: false
+      quote:
+        weight: 39
+        enabled: false
+      request_link:
+        weight: 40
+        enabled: false
+      slideshow:
+        weight: 41
+        enabled: false
+      text:
+        weight: 42
+        enabled: false
+      text_box:
+        weight: 43
+        enabled: false
+      text_boxes:
+        weight: 44
+        enabled: false
+      title_text:
+        weight: 45
+        enabled: false
+      two_column_text:
+        weight: 46
+        enabled: false
+      download:
+        weight: 51
+        enabled: false
+      exhibition:
+        weight: 53
+        enabled: false
+      exhibition_container:
+        weight: 54
+        enabled: false
+      faq:
+        weight: 55
+        enabled: false
+      faq_group:
+        weight: 56
+        enabled: false
+      info_box:
+        weight: 62
+        enabled: false
+      kontakt_person:
+        weight: 63
+        enabled: false
+      list_of_companies:
+        weight: 66
+        enabled: false
+      list_of_companies_link:
+        weight: 67
+        enabled: false
+      navigation:
+        weight: 68
+        enabled: false
+      single_link_box:
+        weight: 71
+        enabled: false
+      speaker:
+        weight: 73
+        enabled: false
+      title_image_text:
+        weight: 77
+        enabled: false
+      twitter_feed:
+        weight: 79
+        enabled: false
+field_type: entity_reference_revisions

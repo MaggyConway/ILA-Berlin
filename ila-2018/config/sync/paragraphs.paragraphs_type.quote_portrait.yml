@@ -1,0 +1,9 @@
+uuid: 0318e4c1-2403-4c6e-b07b-debc1bd4a654
+langcode: en
+status: true
+dependencies: {  }
+id: quote_portrait
+label: 'Quote portrait'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

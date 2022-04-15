@@ -1,0 +1,23 @@
+uuid: 9f75a506-7873-47cb-a202-c2316c078ab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_cc_impressionen
+    - media.type.image
+id: media.image.field_cc_impressionen
+field_name: field_cc_impressionen
+entity_type: media
+bundle: image
+label: 'Career Center Impressionen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

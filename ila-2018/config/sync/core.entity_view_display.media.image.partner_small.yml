@@ -1,0 +1,77 @@
+uuid: 282179c2-bc69-4686-874f-3c35b9866f42
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.partner_small
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - image.style.partners_logo_style_2
+    - media.type.image
+  module:
+    - ds
+    - svg_image
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_image
+id: media.image.partner_small
+targetEntityType: media
+bundle: image
+mode: partner_small
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: partners_logo_style_2
+      image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  field_url: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

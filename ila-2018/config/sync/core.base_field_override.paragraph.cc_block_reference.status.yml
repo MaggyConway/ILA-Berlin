@@ -1,0 +1,22 @@
+uuid: b77d042f-b61d-4595-b4ea-b4f2a1b101a0
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_block_reference
+id: paragraph.cc_block_reference.status
+field_name: status
+entity_type: paragraph
+bundle: cc_block_reference
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

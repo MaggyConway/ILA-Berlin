@@ -1,0 +1,21 @@
+uuid: 0327c38b-2eb5-4752-974c-0d795ca02497
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lb_text
+    - paragraphs.paragraphs_type.link_box
+  module:
+    - text
+id: paragraph.link_box.field_lb_text
+field_name: field_lb_text
+entity_type: paragraph
+bundle: link_box
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

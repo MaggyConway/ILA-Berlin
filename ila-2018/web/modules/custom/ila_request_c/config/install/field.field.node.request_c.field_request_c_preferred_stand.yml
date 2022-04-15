@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_c_preferred_stand
+    - node.type.request_c
+  module:
+    - markup
+id: node.request_c.field_request_c_preferred_stand
+field_name: field_request_c_preferred_stand
+entity_type: node
+bundle: request_c
+label: 'Preferred stand size'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Preferred stand size</h3>\r\n"
+    format: full_html
+field_type: markup

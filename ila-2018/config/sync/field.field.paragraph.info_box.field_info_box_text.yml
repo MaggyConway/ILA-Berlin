@@ -1,0 +1,21 @@
+uuid: deda3ca0-04c3-49c4-a573-ae83538f3d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info_box_text
+    - paragraphs.paragraphs_type.info_box
+  module:
+    - text
+id: paragraph.info_box.field_info_box_text
+field_name: field_info_box_text
+entity_type: paragraph
+bundle: info_box
+label: 'Text (Box)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

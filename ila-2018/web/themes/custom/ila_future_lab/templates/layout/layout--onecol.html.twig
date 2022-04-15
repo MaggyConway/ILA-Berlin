@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+  'layout',
+  'layout--onecol',
+]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="layout__region layout__region--content">
+      {% if title_suffix %}
+        {{ title_suffix }}
+      {% endif %}
+      {% if show_header %}
+      <div class="group-header-wrapper">
+        {{ content.content.group_header }}
+      </div>
+      {% endif %}
+      {{ content.content|without('field_show_header', 'group_header') }}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,7 @@
+back_to_top:
+  version: VERSION
+  js:
+    js/back-to-top.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

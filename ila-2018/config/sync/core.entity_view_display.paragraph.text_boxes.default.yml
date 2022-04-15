@@ -1,0 +1,97 @@
+uuid: 18526956-8f56-4523-86e1-39bd868fcf97
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_boxes.field_tbs_intro_text
+    - field.field.paragraph.text_boxes.field_tbs_paragraph_ref
+    - field.field.paragraph.text_boxes.field_tbs_separators
+    - field.field.paragraph.text_boxes.field_tbs_title
+    - paragraphs.paragraphs_type.text_boxes
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_text_and_into_wrapper:
+      children:
+        - field_tbs_title
+        - field_tbs_intro_text
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: text-and-intro-wrapper
+        show_empty_fields: false
+      label: 'Text and intro wrapper'
+id: paragraph.text_boxes.default
+targetEntityType: paragraph
+bundle: text_boxes
+mode: default
+content:
+  field_tbs_intro_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tbs_paragraph_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tbs_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: tbs__title
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden:
+  field_tbs_separators: true
+  search_api_excerpt: true

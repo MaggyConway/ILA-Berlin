@@ -1,0 +1,10 @@
+uuid: a158692b-f3b7-4df9-9794-e3c0c6207391
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_section_default_partner_logo
+label: 'CT Section: Default - Partner Logo'
+targetEntityType: media
+cache: true

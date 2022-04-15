@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ila_format
+label: 'ILA Format'
+locked: false
+pattern: 'j. F Y'

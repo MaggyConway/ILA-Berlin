@@ -1,0 +1,23 @@
+uuid: b01e795f-890f-4a29-ba96-3fe055e1a556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_offerer
+    - node.type.job_offer
+  module:
+    - link
+id: node.job_offer.field_job_offerer
+field_name: field_job_offerer
+entity_type: node
+bundle: job_offer
+label: Offerer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

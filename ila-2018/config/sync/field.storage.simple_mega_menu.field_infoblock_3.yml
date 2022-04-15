@@ -1,0 +1,21 @@
+uuid: 9dfaa9a2-779b-45bf-bfcb-ee0100acf07c
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - simple_megamenu
+id: simple_mega_menu.field_infoblock_3
+field_name: field_infoblock_3
+entity_type: simple_mega_menu
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

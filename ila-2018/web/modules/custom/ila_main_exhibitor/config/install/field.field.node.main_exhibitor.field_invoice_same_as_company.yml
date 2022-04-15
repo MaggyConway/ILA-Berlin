@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invoice_same_as_company
+    - node.type.main_exhibitor
+id: node.main_exhibitor.field_invoice_same_as_company
+field_name: field_invoice_same_as_company
+entity_type: node
+bundle: main_exhibitor
+label: 'same as company data'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

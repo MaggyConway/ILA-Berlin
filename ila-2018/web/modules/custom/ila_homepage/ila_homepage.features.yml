@@ -1,0 +1,3 @@
+excluded:
+  - views.view.news
+required: true

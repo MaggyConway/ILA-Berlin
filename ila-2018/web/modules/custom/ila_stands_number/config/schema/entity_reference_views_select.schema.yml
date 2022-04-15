@@ -1,0 +1,3 @@
+field.widget.settings.ila_erviews_options_buttons:
+  type: mapping
+  label: 'Ila Entity Reference Views Select Check boxes/radio buttons format settings'

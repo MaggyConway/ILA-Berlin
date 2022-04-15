@@ -1,0 +1,29 @@
+uuid: b13e6180-0162-416c-b347-3153f3c84e10
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_press_category
+    - media.type.image
+    - taxonomy.vocabulary.press_media_category
+id: media.image.field_press_category
+field_name: field_press_category
+entity_type: media
+bundle: image
+label: 'Presse Kategorie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      press_media_category: press_media_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,27 @@
+uuid: ca2e170f-aed3-49f9-8772-7b07a2d3c613
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - ila_future_lab
+_core:
+  default_config_hash: kcyrUWBI7AyuFSUkGfnoOXCZNn9oJvENy_M4N9VIevc
+id: ila_future_lab_social
+theme: ila_future_lab
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: Social
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

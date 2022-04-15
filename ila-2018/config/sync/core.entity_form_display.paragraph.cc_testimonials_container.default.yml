@@ -1,0 +1,59 @@
+uuid: a071999b-e6f6-4736-999c-0ebe6c6586cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_testimonials_container.field_cc_anchor
+    - field.field.paragraph.cc_testimonials_container.field_container_title
+    - field.field.paragraph.cc_testimonials_container.field_paragraph_reference
+    - paragraphs.paragraphs_type.cc_testimonials_container
+  module:
+    - paragraphs_previewer
+id: paragraph.cc_testimonials_container.default
+targetEntityType: paragraph
+bundle: cc_testimonials_container
+mode: default
+content:
+  field_cc_anchor:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_container_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_reference:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: cc_testimonial
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+    third_party_settings: {  }
+    type: paragraphs_previewer
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

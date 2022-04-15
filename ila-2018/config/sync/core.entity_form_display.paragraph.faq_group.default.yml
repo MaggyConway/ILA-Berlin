@@ -1,0 +1,57 @@
+uuid: eef9bbdb-3731-4945-a077-e327a926963f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_group.field_faq_group_faq
+    - field.field.paragraph.faq_group.field_faq_group_image
+    - field.field.paragraph.faq_group.field_faq_group_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.faq_group
+  module:
+    - faqfield
+    - svg_image
+id: paragraph.faq_group.default
+targetEntityType: paragraph
+bundle: faq_group
+mode: default
+content:
+  field_faq_group_faq:
+    weight: 3
+    settings:
+      answer_widget: text_format
+      question_title: Question
+      answer_title: Answer
+      advanced:
+        question_length: 255
+        question_size: 100
+        question_rows: 0
+        answer_rows: 3
+    third_party_settings: {  }
+    type: faqfield_default
+    region: content
+  field_faq_group_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_faq_group_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

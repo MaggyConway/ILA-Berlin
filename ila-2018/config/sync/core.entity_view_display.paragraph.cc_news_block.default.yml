@@ -1,0 +1,83 @@
+uuid: 9a8314ec-764b-4fed-bda9-302282dbbc62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_news_block.field_cc_news_block_body
+    - field.field.paragraph.cc_news_block.field_cc_news_block_date
+    - field.field.paragraph.cc_news_block.field_cc_news_block_title
+    - paragraphs.paragraphs_type.cc_news_block
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_cc_news_block_title
+        - field_cc_news_block_body
+id: paragraph.cc_news_block.default
+targetEntityType: paragraph
+bundle: cc_news_block
+mode: default
+content:
+  field_cc_news_block_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_cc_news_block_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: news_block__title
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+hidden:
+  field_cc_news_block_date: true

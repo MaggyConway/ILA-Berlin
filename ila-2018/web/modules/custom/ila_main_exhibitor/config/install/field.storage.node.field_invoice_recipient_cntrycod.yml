@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_invoice_recipient_cntrycod
+field_name: field_invoice_recipient_cntrycod
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ila_country_codes_allowed_values_function
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

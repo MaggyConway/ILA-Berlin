@@ -1,0 +1,10 @@
+ignored_config_entities:
+  - system.performance
+  - advagg.settings
+  - advagg_cdn.settings
+  - advagg_css_minify.settings
+  - advagg_js_minify.settings
+  - advagg_old_ie_compatibility.settings
+  - advagg_mod.settings
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

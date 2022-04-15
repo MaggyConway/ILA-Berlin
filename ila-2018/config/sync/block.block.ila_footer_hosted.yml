@@ -1,0 +1,27 @@
+uuid: 2a635611-042e-494b-a959-07628f9fbe14
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:text:ce4e5afd-ea99-47fa-a3cc-df9f444cf0e5'
+  module:
+    - block_content
+  theme:
+    - ila
+_core:
+  default_config_hash: dWi1PdWBi3F41f4NJmTU9dT8DPIfgNj3AhYvw4Tmkzk
+id: ila_footer_hosted
+theme: ila
+region: footer_top
+weight: -4
+provider: null
+plugin: 'block_content:ce4e5afd-ea99-47fa-a3cc-df9f444cf0e5'
+settings:
+  id: 'block_content:ce4e5afd-ea99-47fa-a3cc-df9f444cf0e5'
+  label: 'Footer - Hosted by'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

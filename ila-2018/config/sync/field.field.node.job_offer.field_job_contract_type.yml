@@ -1,0 +1,29 @@
+uuid: 2139e86a-7e85-4e16-b6f0-c447682d52b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_contract_type
+    - node.type.job_offer
+    - taxonomy.vocabulary.contract_type
+id: node.job_offer.field_job_contract_type
+field_name: field_job_contract_type
+entity_type: node
+bundle: job_offer
+label: 'Contract type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contract_type: contract_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

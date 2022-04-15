@@ -1,0 +1,32 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Suche
+          reset_button_label: Zurücksetzen
+      fields:
+        field_ev_venue:
+          label: Ort
+        field_contact_persons:
+          label: Kontakt
+        body:
+          alter:
+            text: "{{ title }}\r\n{{ body }}"
+        title:
+          alter:
+            text: "<div class=\"bdli-event-title\">{{ title }}</div>\r\n<div class=\"bdli-event-body\">{{ body }}</div>"
+      header:
+        area:
+          content:
+            value: "<h2>Ereigniskalender</h2>\r\n<p>Mit diesem digitalen Kalender bieten wir Ihnen einen schnellen Überblick über Ereignisse auf der Paris Air Show. Die Listung umfasst dem BDLI bekannte und für unsere Mitglieder relevante Termine, sie erhebt keinen Anspruch auf Vollständigkeit. Er soll Sie bei Ihrer Messebesuchsplanung unterstützen. Bitte nutzen Sie die Filterfunktion nach Kategorie oder Datum bzw. nutzen Sie die Volltextsuche.</p><p>Ihre Veranstaltung können Sie gern Frau Alexandra Friedhoff, friedhoff@bdli.de, zur Aufnahme in den Kalender melden.</p>\r\n<div class=\"button-container\"><button href=\"#print\" class=\"print-button\" onclick=\"window.print();\">\r\n\tPrint\r\n</button></div>"
+            format: plain_html
+      filters:
+        combine:
+          expose:
+            label: Suchbegriff
+      empty:
+        area:
+          content:
+            value: "<p>Keine Ereignisse gefunden.</p>\r\n"
+            format: filtered_html

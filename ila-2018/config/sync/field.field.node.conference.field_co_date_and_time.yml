@@ -1,0 +1,21 @@
+uuid: 4781e37d-3324-40a0-8451-214620e18466
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_date_and_time
+    - node.type.conference
+  module:
+    - datetime_range
+id: node.conference.field_co_date_and_time
+field_name: field_co_date_and_time
+entity_type: node
+bundle: conference
+label: 'Date and Time (deprecated, will be removed)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

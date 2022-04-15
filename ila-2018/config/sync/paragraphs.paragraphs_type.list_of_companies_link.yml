@@ -1,0 +1,9 @@
+uuid: 4f4e0a8d-8438-4e5c-be7f-1ef024826026
+langcode: en
+status: true
+dependencies: {  }
+id: list_of_companies_link
+label: 'List of companies items'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

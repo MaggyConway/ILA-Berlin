@@ -1,0 +1,231 @@
+/* Colors */
+$c-white: #ffffff;
+$c-black: #000000;
+$c-blue: #1d428a;
+$c-blue-normal: #009cde;
+$c-blue-light: #2dccd3;
+$c-blue-sky: rgba(161, 237, 246, 1);
+$c-purple: #1d428a;
+
+$aviation: rgb(42, 210, 201);
+$space: rgb(72, 92, 199);
+$international: rgb(238, 220, 0);
+$defence: rgb(143, 153, 62);
+$special: rgb(224, 78, 57);
+
+$space-dark: #0c2340;
+$space-light: #485cc7;
+$space-background: rgba(72, 92, 199, .1);
+
+$defense-dark: #3e4827;
+$defense-light: #8f993e;
+$defense-background: rgba(143, 153, 62, .1);
+
+$aviation-dark: #009f8e;
+$aviation-light: #00c7b1;
+$aviation-background: rgba(0, 199, 177, .1);
+
+$suppliers-dark: #685c20;
+$suppliers-light: #baa601;
+$suppliers-background: rgba(238, 220, 0, .1);
+
+$special-dark: #d0006f;
+$special-light: #e04e39;
+$special-background: rgba(224, 78, 57, .1);
+
+$conferences-dark: #2e1a47;
+$conferences-light: #991e66;
+$conferences-background: #eae8ed;
+$conferences-link: #673f9a;
+
+$career-dark: #222538;
+$career-background-dark: rgba(34, 37, 56, .8);
+$career-white: #ffffff;
+$career-black: #000000;
+$career-green: #72ff2e;
+$career-green-background: rgba(114, 255, 46, .8);
+$career-light-green: #4fd20e;
+$career-dark-green: #3b8f09;
+$career-green-background2: rgba(114, 255, 46, .7);
+$career-border: #9b9b9b;
+
+$uas-light: #f6bd9d;
+$uas-dark: #b47260;
+
+$space-background-link-box: #ffffff;
+$defense-background-link-box: $defense-background;
+$aviation-background-link-box: #ffffff;
+$suppliers-background-link-box: $suppliers-background;
+$special-background-link-box: $special-background;
+$conferences-background-link-box: rgb(234, 232, 237);
+$usa-background-link-box: rgba($uas-dark, .1);
+
+/* Fonts */
+$f-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+  Arial, sans-serif;
+$career-font: 'Saira Extra Condensed', sans-serif;
+
+/* Base variables */
+$main-font: $f-sans-serif;
+$main-font-size: 15px;
+$main-font-weight: 300;
+$main-line-height: 1.4;
+$heading-font: $f-sans-serif;
+$heading-line-height: 1.1;
+$main-bg: $c-white;
+$main-text-color: $career-dark;
+$secondary-text-color: $c-white;
+$link-color: $c-blue-light;
+$default-transition-time: .3s;
+$default-transition: all $default-transition-time ease;
+
+/* Media variables */
+$m-3xl: screen and
+  (
+    min-width: 1921px,
+  );
+$m-to-xxl: screen and
+  (
+    max-width: 1920px,
+  );
+$m-from-xxl: screen and
+  (
+    min-width: 1280px,
+  );
+$m-xxl: screen and
+  (
+    min-width: 1280px,
+  )
+  and
+  (
+    max-width: 1920px,
+  );
+$m-to-xl: screen and
+  (
+    max-width: 1279px,
+  );
+$m-to-4xl: screen and
+  (
+    max-width: 1135px,
+  );
+$m-from-xl: screen and
+  (
+    min-width: 1024px,
+  );
+$m-xl: screen and
+  (
+    min-width: 1024px,
+  )
+  and
+  (
+    max-width: 1279px,
+  );
+$m-to-2l: screen and
+  (
+    max-width: 1023px,
+  );
+$m-from-2l: screen and
+  (
+    min-width: 860px,
+  );
+$m-2l: screen and
+  (
+    min-width: 860px,
+  )
+  and
+  (
+    max-width: 1023px,
+  );
+$m-to-l: screen and
+  (
+    max-width: 859px,
+  );
+$m-from-l: screen and
+  (
+    min-width: 768px,
+  );
+$m-l: screen and
+  (
+    min-width: 768px,
+  )
+  and
+  (
+    max-width: 859px,
+  );
+$m-to-m: screen and
+  (
+    max-width: 767px,
+  );
+$m-from-lm: screen and
+  (
+    min-width: 600px,
+  );
+$m-lm: screen and
+  (
+    min-width: 600px,
+  )
+  and
+  (
+    max-width: 767px,
+  );
+$m-to-sm: screen and
+  (
+    max-width: 600px,
+  );
+$m-sm: screen and
+  (
+    min-width: 480px,
+  )
+  and
+  (
+    max-width: 600px,
+  );
+$m-from-m: screen and
+  (
+    min-width: 480px,
+  );
+$m-m: screen and
+  (
+    min-width: 480px,
+  )
+  and
+  (
+    max-width: 768px,
+  );
+$m-to-s: screen and
+  (
+    max-width: 479px,
+  );
+$m-from-s: screen and
+  (
+    min-width: 321px,
+  );
+$m-s: screen and
+  (
+    min-width: 321px,
+  )
+  and
+  (
+    max-width: 479px,
+  );
+$m-xs: screen and
+  (
+    max-width: 320px,
+  );
+$m-xl-xxl: screen and
+  (
+    min-width: 600px,
+  )
+  and
+  (
+    max-width: 900px,
+  );
+
+$m-retina2x: screen and
+    (
+      min-resolution: 120dpi,
+    ),
+  screen and
+    (
+      min-resolution: 1.25dppx,
+    );

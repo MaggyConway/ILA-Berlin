@@ -1,0 +1,52 @@
+uuid: cf5dd141-9a0a-4952-b356-c9a5c589ac58
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conferences_filter
+    - simple_block.simple_block.speaker_2020
+    - views.view.glossary_the_speakers
+  module:
+    - panels
+    - simple_block
+    - views
+id: conferences_filter-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    9c9665bd-f62e-4760-9666-953b4364d291:
+      id: 'views_block:glossary_the_speakers-block_3'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: bottom
+      weight: 0
+      uuid: 9c9665bd-f62e-4760-9666-953b4364d291
+      context_mapping: {  }
+    9461b156-a409-4acf-be98-08ecb94d83eb:
+      id: 'simple_block:speaker_2020'
+      label: 'Speaker 2020'
+      provider: simple_block
+      label_display: visible
+      region: top
+      weight: 0
+      uuid: 9461b156-a409-4acf-be98-08ecb94d83eb
+      context_mapping: {  }
+  id: panels_variant
+  uuid: abfa5db6-ea77-4af9-bff4-93cdc33159cb
+  label: null
+  weight: 0
+  layout: ila_one_col_bricks
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: conferences_filter-panels_variant-0
+  builder: standard
+page: conferences_filter
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

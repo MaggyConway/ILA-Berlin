@@ -1,0 +1,18 @@
+uuid: 3ef22c0b-ced8-4ef4-9ef4-66913ffafa32
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.careercenter_view_reference
+id: paragraph.careercenter_view_reference.created
+field_name: created
+entity_type: paragraph
+bundle: careercenter_view_reference
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

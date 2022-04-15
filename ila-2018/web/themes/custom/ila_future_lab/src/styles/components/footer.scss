@@ -1,0 +1,134 @@
+.footer {
+  position: relative;
+
+  &::before {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 240px;
+    content: '';
+    background-image: url('../../assets/images/footer-bg.svg');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: contain;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 140px;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100px;
+    content: '';
+    background-color: $bg-footer-top;
+
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  &__top {
+    background-color: $bg-footer-top;
+  }
+
+  &__bottom {
+    background-color: $bg-footer-bottom;
+  }
+}
+
+.region-footer-top {
+  @extend .container;
+  @extend .container--wide;
+
+  padding-top: 55px;
+  padding-bottom: 45px;
+  display: flex;
+  align-items: stretch;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.region-footer-bottom {
+  @extend .container;
+  @extend .container--wide;
+
+  padding-top: 20px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column-reverse;
+  }
+}
+
+/* stylelint-disable */
+
+#block-ila-future-lab-footer-organized,
+#block-ila-footer-organized {
+  .field--name-body {
+    img {
+      margin-top: 15px;
+      max-width: 230px;
+
+      @media screen and (max-width: 640px) {
+        margin-bottom: 15px;
+      }
+
+      + img {
+        margin-left: 70px;
+
+        @media screen and (max-width: 880px) {
+          margin-left: 30px;
+        }
+
+        @media screen and (max-width: 640px) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+#block-ila-footer-hosted,
+#block-ila-future-lab-footer-hosted {
+  margin-right: 150px;
+  margin-left: auto;
+
+  @media screen and (max-width: 880px) {
+    margin-right: 80px;
+    min-width: 95px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+}
+
+#block-ila-future-lab-footer-organized,
+#block-ila-footer-organized,
+#block-ila-footer-hosted,
+#block-ila-future-lab-footer-hosted {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $c-white;
+}
+
+/* stylelint-enable */

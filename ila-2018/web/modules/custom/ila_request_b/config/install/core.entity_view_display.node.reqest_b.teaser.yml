@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.reqest_b.field_chalet_rental_fee
+    - field.field.node.reqest_b.field_chalet_rental_fee_excludin
+    - field.field.node.reqest_b.field_download_chalet_specificat
+    - field.field.node.reqest_b.field_product_group
+    - field.field.node.reqest_b.field_product_group_index
+    - field.field.node.reqest_b.field_request_b_comments
+    - field.field.node.reqest_b.field_request_b_deadline_chalet
+    - field.field.node.reqest_b.field_request_b_down_payment
+    - field.field.node.reqest_b.field_request_b_following_servic
+    - field.field.node.reqest_b.field_request_b_plus_advertising
+    - node.type.reqest_b
+  module:
+    - user
+id: node.reqest_b.teaser
+targetEntityType: node
+bundle: reqest_b
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_chalet_rental_fee: true
+  field_chalet_rental_fee_excludin: true
+  field_download_chalet_specificat: true
+  field_product_group: true
+  field_product_group_index: true
+  field_request_b_comments: true
+  field_request_b_deadline_chalet: true
+  field_request_b_down_payment: true
+  field_request_b_following_servic: true
+  field_request_b_plus_advertising: true
+  langcode: true

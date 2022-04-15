@@ -1,0 +1,8 @@
+uuid: c2912e40-0319-409f-b363-26b75cbf282b
+langcode: de
+status: true
+dependencies: {  }
+name: 'Partner Category'
+vid: partner_category
+description: ''
+weight: 0

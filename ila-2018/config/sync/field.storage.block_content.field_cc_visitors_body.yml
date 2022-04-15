@@ -1,0 +1,21 @@
+uuid: 54a6b6e2-1ac0-4dda-95b8-f2a401a31ee6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_cc_visitors_body
+field_name: field_cc_visitors_body
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

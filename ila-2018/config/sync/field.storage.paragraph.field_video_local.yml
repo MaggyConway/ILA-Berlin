@@ -1,0 +1,31 @@
+uuid: b9f6d393-8c66-4614-b554-b1fd8b8cfda4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - paragraphs
+    - video
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_video_local
+field_name: field_video_local
+entity_type: paragraph
+type: video
+settings:
+  default_video:
+    uuid: null
+    data: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: video
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

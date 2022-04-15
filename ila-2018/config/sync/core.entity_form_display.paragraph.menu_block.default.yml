@@ -1,0 +1,38 @@
+uuid: c34e3df6-20bb-4388-af2a-42e96bad13e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.menu_block.field_menu_block_title
+    - field.field.paragraph.menu_block.field_menu_links
+    - paragraphs.paragraphs_type.menu_block
+  module:
+    - paragraphs
+id: paragraph.menu_block.default
+targetEntityType: paragraph
+bundle: menu_block
+mode: default
+content:
+  field_menu_block_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_menu_links:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

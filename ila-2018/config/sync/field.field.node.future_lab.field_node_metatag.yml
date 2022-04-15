@@ -1,0 +1,21 @@
+uuid: 15851e2b-82d0-4e38-8a41-bee54982823e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_node_metatag
+    - node.type.future_lab
+  module:
+    - metatag
+id: node.future_lab.field_node_metatag
+field_name: field_node_metatag
+entity_type: node
+bundle: future_lab
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

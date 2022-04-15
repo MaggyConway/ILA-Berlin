@@ -1,0 +1,199 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
+
+/**
+ * Function for get values as body or subject for twig email file.
+ *
+ * @param $variables
+ */
+function template_preprocess_ila_send_mail_individual_user(&$variables) {
+  $variables['subject'] = $variables['message']['subject'];
+  $variables['body'] = $variables['message']['body'];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ila_send_mail_individual_user_theme($existing, $type, $theme, $path) {
+  return array(
+    'ila_send_mail_individual_user' => array(
+      'variables' => array(
+        'message' => array(),
+      ),
+      'mail theme' => TRUE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK() for swiftmailer.
+ */
+function ila_send_mail_individual_user_theme_suggestions_ila_send_mail_individual_user(array $variables) {
+  $suggestions = [];
+  $suggestions[] = 'ila_send_mail_individual_user';
+  if (isset($variables['message'])) {
+      $suggestions[] = 'ila_send_mail_individual_user__' . $variables['message']['module'];
+      $suggestions[] = 'ila_send_mail_individual_user__' . $variables['message']['module'] . '__' . $variables['message']['key'];
+  }
+  return $suggestions;
+}
+
+/**
+ * Implements hook_mail().
+ */
+function ila_send_mail_individual_user_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  $message['from'] = \Drupal::config('system.site')->get('mail');
+
+  switch ($key) {
+    case 'node_update_alert':
+      $message['subject'] = t($params['message_subject'], array('@title' => $params['node_title']), $options);
+      $message['body'][] = Html::escape(t($params['message_body'],
+        array('@link' => $params['edit_link'],
+          '@user_first_name' => $params['user_first_name'],
+          '@user_last_name' => $params['user_last_name'],
+          '@user_salutation' => $params['user_salutation'],
+        ),
+        $options));
+      break;
+
+    case 'conference_changed':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function ila_send_mail_individual_user_entity_update(Drupal\Core\Entity\EntityInterface $entity, $key ='update') {
+  if ($entity->getEntityTypeId() !== 'node' || $entity->bundle() !== 'conference') {
+    return;
+  }
+
+  _ila_send_mail_individual_user_send_mail_on_any_node_change($entity);
+
+  $owner = $entity->getOwner();
+  if (!$revision_id = $entity->getLoadedRevisionId()) {
+    return;
+  }
+  $original_node = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadRevision($revision_id);
+  // Register the owner change.
+  if ($original_node->getOwner()->id() === $owner->id()) {
+    return;
+  }
+  _ila_send_mail_individual_user_generate_message($entity, $owner);
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function ila_send_mail_individual_user_entity_insert(Drupal\Core\Entity\EntityInterface $entity, $key = 'insert') {
+  if ($entity->getEntityTypeId() !== 'node' || $entity->bundle() !== 'conference') {
+    return;
+  }
+  $owner = $entity->getOwner();
+  _ila_send_mail_individual_user_generate_message($entity, $owner);
+}
+
+/*
+ * Implements custom function _ila_send_mail_individual_user_generate_message
+ */
+function _ila_send_mail_individual_user_generate_message($entity, $owner) {
+  $config = \Drupal::config('ila_send_mail_individual_user.settings');
+  $langcode = $owner->getPreferredLangcode();
+
+  $owner_roles = $owner->getRoles();
+  $email = $owner->getEmail();
+  if (!in_array("conference", $owner_roles)) {
+    return;
+  }
+
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $edit_url = $entity->url('edit-form', array('absolute'=>TRUE));
+
+  $module = 'ila_send_mail_individual_user';
+  $key = 'node_update_alert';
+  $to = $email; // email to be sent to this Email ID
+
+  $params['message_subject'] = $config->get('message.subject');
+  $params['message_body'] = $config->get('message.body');
+  $params['node_title'] = $entity->label();
+  $params['edit_link'] = $edit_url;
+  $params['user_first_name'] = $owner->get('field_first_name')->getValue()[0]['value'];
+  $params['user_last_name'] = $owner->get('field_last_name')->getValue()[0]['value'];
+  $params['user_salutation'] = t($owner->get('field_salutation')->getValue()[0]['value'], array(), array('langcode' => $langcode));
+
+  $send = TRUE;
+
+  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+  if (!$result['result']) {
+    $message = t('There was a problem sending alert email notification to @email for creating ticket @id.', array('@email' => $to, '@id' => $entity->id()));
+    //drupal dblog
+    \Drupal::logger('ila_send_mail_individual_user alert')->error($message);
+    return;
+  }
+  $message = t('An email notification has been sent to @email for creating node @id.', array('@email' => $to, '@id' => $entity->id()));
+  //drupal dblog
+  \Drupal::logger('ila_send_mail_individual_user alert')->notice($message);
+}
+
+/**
+ * Sends notification email to ILA admins on conferences node changed.
+ */
+function _ila_send_mail_individual_user_send_mail_on_any_node_change(Node $node) {
+  $recipients = ['muenzing@ila-berlin.de', 'danisch@messe-berlin.com'];
+  $subject = t('Die Konferenz [node:title] wurde bearbeitet');
+  $body = t('Die Konferenz <strong>[node:title]</strong> wurde bearbeitet und kann unter [node:url] geprüft werden.');
+
+  $title = $node->label();
+  $url = $node->toUrl('edit-form', ['absolute' => TRUE]);
+
+  $mail_manager = \Drupal::service('plugin.manager.mail');
+  $parameters = [];
+  $parameters['subject'] = str_replace('[node:title]', $title, $subject);
+  $parameters['body'] = str_replace('[node:title]', $title, str_replace('[node:url]', $url->toString(), $body));
+
+  foreach ($recipients as $recipient) {
+    $mail_manager->mail('ila_send_mail_individual_user', 'conference_changed', $recipient, 'de', $parameters, NULL, TRUE);
+  }
+}
+
+/*
+ * Implements hook_form_alter
+ */
+function ila_send_mail_individual_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id != 'node_conference_edit_form') {
+    return;
+  }
+  $config = \Drupal::config('ila_send_mail_individual_user.settings');
+
+  $disabled_fields = $config->get('disabled_fields');
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+
+  if (isset($form['field_co_registration_on_conf']['widget'][0]['title'])) {
+    $form['field_co_registration_on_conf']['widget'][0]['title'] = [
+      '#type' => 'value',
+      '#value' => 'placeholder',
+    ];
+  }
+
+  if (!in_array('conference', $roles) || in_array('ila_admin', $roles)) {
+    return;
+  }
+  $form['revision_log']['#access'] = false;
+  $form['revision']['#access'] = false;
+
+  foreach ($disabled_fields as $field) {
+    $form[$field]['#disabled'] = 'disabled';
+  }
+}

@@ -1,0 +1,35 @@
+uuid: 055dc66a-e08b-456a-815f-296c3ef7a3c9
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - ila
+_core:
+  default_config_hash: 8QbSEV02Fwn-sOlNJVNBCyCsgfkwOaJoIpbUtKILuxQ
+id: ila_messages
+theme: ila
+region: highlighted
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Status-Nachrichten
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/51\r\n/node/50"
+    negate: true
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      editor: editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

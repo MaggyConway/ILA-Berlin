@@ -1,0 +1,20 @@
+uuid: 23b7b5b5-00dc-435e-a39b-e679ae9af9d9
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cities
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: eZlVzL7ig6ZroOg0gP8lo6CPQtGvU4hAwB9fzIXUDUk
+id: taxonomy_term.cities
+target_entity_type_id: taxonomy_term
+target_bundle: cities
+default_langcode: site_default
+language_alterable: false

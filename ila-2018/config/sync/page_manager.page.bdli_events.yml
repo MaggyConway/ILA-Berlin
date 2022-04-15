@@ -1,0 +1,12 @@
+uuid: c5bc39a7-e21e-4dc7-8646-0d37b328d520
+langcode: de
+status: true
+dependencies: {  }
+id: bdli_events
+label: 'BDLI Events'
+description: ''
+use_admin_theme: false
+path: /m_BDLI-Events_m
+access_logic: and
+access_conditions: {  }
+parameters: {  }

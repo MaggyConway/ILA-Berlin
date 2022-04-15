@@ -1,0 +1,5 @@
+name: "Ila Optional link widget"
+description: Contains a custom link widget that acceptsa an empty URL field.
+package: ILA
+type: module
+core_version_requirement: ^8 || ^9

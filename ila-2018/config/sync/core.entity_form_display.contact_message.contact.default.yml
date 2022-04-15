@@ -1,0 +1,84 @@
+uuid: 140d9a9d-c080-40df-81d6-d42f1e648ac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.field.contact_message.contact.field_company
+    - field.field.contact_message.contact.field_last_name
+    - field.field.contact_message.contact.field_subject
+    - field.field.contact_message.contact.field_surname
+    - field.field.contact_message.contact.field_telephone
+  module:
+    - telephone
+_core:
+  default_config_hash: G-avjKbj3H27tqthKS6TZDK_uxgm5EyyqTU7uEbSXaA
+id: contact_message.contact.default
+targetEntityType: contact_message
+bundle: contact
+mode: default
+content:
+  field_company:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: Company
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subject:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_surname:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 3
+    settings:
+      placeholder: Telephone
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  mail:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 6
+    settings:
+      rows: 12
+      placeholder: Message
+    region: content
+    third_party_settings: {  }
+hidden:
+  copy: true
+  name: true
+  preview: true
+  subject: true

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stand_price_including_stan
+    - node.type.request_e
+  module:
+    - markup
+id: node.request_e.field_stand_price_including_stan
+field_name: field_stand_price_including_stan
+entity_type: node
+bundle: request_e
+label: 'Stand price (including construction)'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h2>Stand price (including construction)</h2>\r\n<p>&nbsp;</p>\r\n<h4>Type | Area | Price per m²</h4>\r\n"
+    format: full_html
+field_type: markup

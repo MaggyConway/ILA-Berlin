@@ -1,0 +1,12 @@
+label: Panels
+variant_settings:
+  blocks:
+    7371d3be-797a-4297-bf24-454356b443c4:
+      label: 'Contact block'
+    595f37d5-0881-4a04-a9ee-a9c25f9a8de8:
+      label: Contact
+    4173d015-19b8-422b-af72-01223e309b55:
+      label: 'Contact - Contact details'
+    c354c009-e949-4a5d-a376-46056a3d8b8c:
+      label: 'Contact - Description'
+  page_title: Contact

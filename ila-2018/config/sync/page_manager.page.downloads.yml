@@ -1,0 +1,14 @@
+uuid: 5266afe8-e90d-4f80-a117-52667d23ba7f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fn2GCcp9_ZNIH5t6Ro93wZZCq418yApjxVghn__x_V0
+id: downloads
+label: Downloads
+description: ''
+use_admin_theme: false
+path: /downloads-old
+access_logic: and
+access_conditions: {  }
+parameters: {  }

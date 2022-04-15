@@ -1,0 +1,85 @@
+uuid: 0e39625c-3bfe-48ea-bc51-b9bcd6770668
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pt_careercenter_view_reference_career_center_logo_wall
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - image.style.aussteller_cc_345x190_
+    - media.type.image
+  module:
+    - ds
+    - link
+    - svg_image
+id: media.image.pt_careercenter_view_reference_career_center_logo_wall
+targetEntityType: media
+bundle: image
+mode: pt_careercenter_view_reference_career_center_logo_wall
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: aussteller_cc_345x190_
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '345'
+        height: '190'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_url:
+    type: link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  addtoany: true
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

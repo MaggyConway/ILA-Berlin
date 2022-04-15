@@ -1,0 +1,19 @@
+uuid: d220b002-9845-4fec-b494-45ba940a6606
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_city
+    - paragraphs.paragraphs_type.list_of_companies
+id: paragraph.list_of_companies.field_company_list_city
+field_name: field_company_list_city
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company City'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

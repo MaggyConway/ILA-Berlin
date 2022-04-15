@@ -1,0 +1,23 @@
+uuid: 31e47399-6430-4107-a31a-017f0c216773
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_salutation
+  module:
+    - options
+    - user
+_core:
+  default_config_hash: RIDg2QVHo18YeFyNOt10ApVBgyLJktwblMdujJD3kb4
+id: user.user.field_salutation
+field_name: field_salutation
+entity_type: user
+bundle: user
+label: Salutation
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

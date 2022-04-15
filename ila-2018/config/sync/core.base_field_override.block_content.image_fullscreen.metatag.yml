@@ -1,0 +1,18 @@
+uuid: 2d6118b9-176f-45e6-9c55-156d686c3ce6
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+id: block_content.image_fullscreen.metatag
+field_name: metatag
+entity_type: block_content
+bundle: image_fullscreen
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

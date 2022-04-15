@@ -1,0 +1,112 @@
+uuid: 4bd0337b-5bd3-4791-968a-cd0d2390cbc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_groups
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.faq_group
+  module:
+    - entity_reference_revisions
+id: paragraph.faq.field_faq_groups
+field_name: field_faq_groups
+entity_type: paragraph
+bundle: faq
+label: Groups
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      faq_group: faq_group
+    target_bundles_drag_drop:
+      faq:
+        weight: 29
+        enabled: false
+      block_reference:
+        weight: 30
+        enabled: false
+      cc_facebook_post:
+        weight: 31
+        enabled: false
+      cc_link_box:
+        weight: 32
+        enabled: false
+      cc_link_list:
+        weight: 33
+        enabled: false
+      cc_link_list_item:
+        weight: 34
+        enabled: false
+      cc_news_block:
+        weight: 35
+        enabled: false
+      cc_text_box:
+        weight: 36
+        enabled: false
+      cc_text_on_image:
+        weight: 37
+        enabled: false
+      cc_tiled_title:
+        weight: 38
+        enabled: false
+      content_subtitle:
+        weight: 39
+        enabled: false
+      dwn_link:
+        weight: 40
+        enabled: false
+      faq_group:
+        enabled: true
+        weight: 41
+      image_box:
+        weight: 42
+        enabled: false
+      image_full:
+        weight: 43
+        enabled: false
+      image_row:
+        weight: 44
+        enabled: false
+      infographic_box:
+        weight: 45
+        enabled: false
+      infographic_box_column:
+        weight: 46
+        enabled: false
+      link_box:
+        weight: 47
+        enabled: false
+      link_box_container:
+        weight: 48
+        enabled: false
+      quote:
+        weight: 49
+        enabled: false
+      request_link:
+        weight: 50
+        enabled: false
+      slideshow:
+        weight: 51
+        enabled: false
+      text:
+        weight: 52
+        enabled: false
+      text_box:
+        weight: 53
+        enabled: false
+      text_boxes:
+        weight: 54
+        enabled: false
+      title_text:
+        weight: 55
+        enabled: false
+      two_column_text:
+        weight: 56
+        enabled: false
+field_type: entity_reference_revisions

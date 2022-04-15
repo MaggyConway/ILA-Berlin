@@ -1,0 +1,22 @@
+uuid: 60fcf59c-78b8-421b-9962-b558ea1c2408
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_video_messages
+id: paragraph.fl_video_messages.status
+field_name: status
+entity_type: paragraph
+bundle: fl_video_messages
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

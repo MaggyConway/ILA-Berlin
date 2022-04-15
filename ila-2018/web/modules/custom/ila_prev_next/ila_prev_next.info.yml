@@ -1,0 +1,7 @@
+name: 'Previous - Next links'
+description: 'Provide DS field with prev-next links based on publication date.'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - ds
+package: ILA

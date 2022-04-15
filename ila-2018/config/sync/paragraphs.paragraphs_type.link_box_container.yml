@@ -1,0 +1,9 @@
+uuid: 5d5e2df9-1ea8-4a66-ae6e-0117ed07af0b
+langcode: de
+status: true
+dependencies: {  }
+id: link_box_container
+label: 'Link box container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

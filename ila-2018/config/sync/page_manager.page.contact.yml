@@ -1,0 +1,14 @@
+uuid: d7a76fc9-f924-464b-a997-e8855205f198
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QiugFaUX9gnNchUKfDNAbKsjkdO9Qei7X6INaGHSoSs
+id: contact
+label: Contact
+description: ''
+use_admin_theme: false
+path: /contact
+access_logic: and
+access_conditions: {  }
+parameters: {  }

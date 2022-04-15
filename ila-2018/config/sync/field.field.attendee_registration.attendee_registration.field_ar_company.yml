@@ -1,0 +1,20 @@
+uuid: d3f45541-5e99-4281-a6ec-b75980aa8818
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_company
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_company
+field_name: field_ar_company
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Company
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

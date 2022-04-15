@@ -1,0 +1,205 @@
+<?php
+
+/**
+ * @file
+ * Main module file.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Alter listed forms to cancel redirection to the edited entity after
+ * submission.
+ */
+function ila_exhibitor_registration_form_alter(array &$form, FormStateInterface $form_state, string $form_id) {
+  // Hardcoded forms. Bad.
+  $forms = [
+    'node_main_exhibitor_form',
+    'user_form',
+  ];
+
+  if (array_search($form_id, $forms) === FALSE) {
+    return;
+  }
+
+  if (isset($form['revision_information'])) {
+    $form['revision_information']['#access'] = FALSE;
+  }
+
+  $user_roles = \Drupal::currentUser()->getRoles();
+  if (!in_array("administrator", $user_roles) && !in_array('editor', $user_roles)) {
+    $user_id = \Drupal::currentUser()->id();
+    if ($user_id != 1) {
+      $form['account']['mail']['#attributes']['disabled'] = TRUE;
+      $form['#validate'][] = 'ila_email_change_validation';
+    }
+  }
+
+  if (isset($form['actions']) && !in_array("ila_admin", $user_roles)) {
+    foreach ($form['actions'] as &$action) {
+      if (!isset($action['#submit'])) {
+        continue;
+      }
+      $action['#value'] = new TranslatableMarkup('Save');
+      $action['#submit'][] = 'ila_exhibitor_registration_main_exhibitor_copy_fields_submit';
+    }
+  }
+}
+
+
+/**
+ * Custom validation wich doen't allow to edit email address.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function ila_email_change_validation(&$form, FormStateInterface $form_state) {
+  $element = $form['account']['mail'];
+  $default_value = isset($element['#default_value']) ? $element['#default_value'] : NULL;
+  $value = $form_state->getValue($element['#parents']);
+  if ($default_value != $value) {
+    $form_state->setError($element, t("You cannot change the email address."));
+  }
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function ila_exhibitor_registration_block_view_alter(array &$build, $block) {
+  // Turn off caching for the Exhibitor Registration menu.
+  if ($block->getConfiguration()['id'] === 'system_menu_block:exhibitor-registration-menu') {
+    $build['#cache']['max-age'] = 0;
+    $build['#block']->mergeCacheMaxAge(0);
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ *
+ * Checks if embedded views are not empty. If empty -- hides them.
+ */
+function ila_exhibitor_registration_preprocess_views_view(&$variables) {
+  $views_to_check = [
+    'request_page_a',
+    'request_page_b',
+    'request_page_c',
+    'request_page_d',
+    'request_page_e',
+    'request_page_f',
+    'request_page_fb1',
+    'co_exhibitor_page',
+  ];
+
+  if (array_search($variables['view']->current_display, $views_to_check) === FALSE) {
+    return;
+  }
+
+  foreach ($variables['footer'] as $footer_key => $footer_item) {
+    if (!isset($footer_item['#view'], $footer_item['#rows'][0]['#rows'][0]['#row'])) {
+      continue;
+    }
+
+    $footer_view = $footer_item['#view'];
+    $view_is_empty = TRUE;
+    $row_values = $footer_item['#rows'][0]['#rows'][0]['#row'];
+
+    foreach ($footer_view->field as $view_field) {
+      if (!empty($view_field->getValue($row_values))) {
+        $view_is_empty = FALSE;
+
+        break;
+      }
+    }
+
+    if ($view_is_empty) {
+      unset($variables['footer'][$footer_key]);
+    }
+  }
+}
+
+/**
+ * Submit callback for main exhibitor form: copies fields if checkboxes are set.
+ */
+function ila_exhibitor_registration_main_exhibitor_copy_fields_submit(array $form, FormStateInterface $form_state) {
+  $same_as_company_map = _ila_exhibitor_registration_get_same_as_company_map();
+  foreach ($same_as_company_map as $data) {
+    if (!isset($data['is set'], $data['fields'])) {
+      continue;
+    }
+
+    // Works only with checkbox widget.
+    $checkbox_value = $form_state->getValue($data['is set']);
+    if (isset($checkbox_value['value']) && $checkbox_value['value'] === 0) {
+      continue;
+    }
+
+    foreach ($data['fields'] as $source_name => $target_name) {
+      $form_state->setValue($target_name, $form_state->getValue($source_name));
+    }
+  }
+
+  // Save changes to the node.
+  if ($node_form = $form_state->getFormObject()) {
+    $node_form->buildEntity($form, $form_state)->save();
+  }
+}
+
+/**
+ * Returns data on how the 'same as company' fields are connected.
+ */
+function _ila_exhibitor_registration_get_same_as_company_map() {
+  return [
+    [
+      'is set' => 'field_catalog_company_data_edit',
+      'fields' => [
+        'field_company_name' => 'field_catalog_company_name',
+        'field_company_address' => 'field_catalog_company_address',
+        'field_company_country_specific_d' => 'field_catalog_company_country_sp',
+        'field_company_cntry_code' => 'field_catalog_company_cntry_code',
+        'field_company_area_code' => 'field_catalog_company_area_code',
+        'field_company_telephone' => 'field_catalog_company_telephone',
+        'field_company_fax' => 'field_catalog_company_fax',
+        'field_company_email' => 'field_catalog_company_email',
+        'field_company_alph_listing' => 'field_catalog_company_alph_list',
+        'field_company_homepage' => 'field_catalog_company_homepage',
+      ],
+    ],
+    [
+      'is set' => 'field_invoice_same_as_company',
+      'fields' => [
+        'field_company_name' => 'field_invoice_company_name',
+        'field_company_legal_form' => 'field_invoice_legal_form',
+        'field_company_address' => 'field_invoice_address',
+        'field_company_country_specific_d' => 'field_invoicing_country_specific',
+        'field_company_cntry_code' => 'field_invoice_country_code',
+        'field_company_area_code' => 'field_invoice_area_code',
+        'field_company_telephone' => 'field_invoice_telephone',
+        'field_company_fax' => 'field_invoice_fax',
+        'field_company_email' => 'field_invoice_email',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Hides unnecessary elements from co-exhibitor page.
+ */
+function ila_exhibitor_registration_form_node_co_exhibitor_form_alter(array &$form, FormStateInterface $form_alter) {
+  $elements_to_hide = [
+    'revision',
+    'revision_information',
+    'revision_log',
+  ];
+
+  foreach ($elements_to_hide as $element_name) {
+    if (isset($form[$element_name])) {
+      $form[$element_name]['#access'] = FALSE;
+    }
+  }
+}

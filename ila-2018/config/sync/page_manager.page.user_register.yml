@@ -1,0 +1,14 @@
+uuid: d8fbe5a2-f75d-439f-9293-6575c0ea4b71
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vOWbz-B3QFI90dd43CYnY4kLcSE2uy1bXQ_ubPfdilg
+id: user_register
+label: 'User register'
+description: ''
+use_admin_theme: false
+path: /user/register
+access_logic: and
+access_conditions: {  }
+parameters: {  }

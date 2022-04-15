@@ -1,0 +1,100 @@
+uuid: 474e4204-cb4e-4864-a71e-5e3defb2f69c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_testimonial.field_cc_text
+    - field.field.paragraph.fl_testimonial.field_media_reference
+    - field.field.paragraph.fl_testimonial.field_title
+    - paragraphs.paragraphs_type.fl_testimonial
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_left:
+      children:
+        - field_media_reference
+      parent_name: group_wrapper
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-left
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Left
+      region: content
+    group_right:
+      children:
+        - field_cc_text
+        - field_title
+      parent_name: group_wrapper
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-right
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+      region: content
+    group_wrapper:
+      children:
+        - group_left
+        - group_right
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Wrapper
+      region: content
+id: paragraph.fl_testimonial.default
+targetEntityType: paragraph
+bundle: fl_testimonial
+mode: default
+content:
+  field_cc_text:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_reference:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: pt_fl_testimonial_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

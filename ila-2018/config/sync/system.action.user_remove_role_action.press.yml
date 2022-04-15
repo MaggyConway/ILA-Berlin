@@ -1,0 +1,14 @@
+uuid: f7f4a328-0ebf-4cb4-a0b3-9823a5655ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.press
+  module:
+    - user
+id: user_remove_role_action.press
+label: 'Remove the Press role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: press

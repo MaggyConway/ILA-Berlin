@@ -1,0 +1,21 @@
+uuid: b1aa84c7-de93-4fc3-b8dc-dd9ac1c84b47
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_company
+_core:
+  default_config_hash: sb1ZFPYL-bImSwXtKR7ppjPOFi_QOJUMeXgyR-gsfo4
+id: contact_message.contact.field_company
+field_name: field_company
+entity_type: contact_message
+bundle: contact
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

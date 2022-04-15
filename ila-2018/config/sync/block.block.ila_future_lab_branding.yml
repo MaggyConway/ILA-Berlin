@@ -1,0 +1,25 @@
+uuid: 8c05d11b-31dd-47d5-a306-0b1066838767
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ila_future_lab
+_core:
+  default_config_hash: K_Mi6t-JmwkxRQR5knqTSN0hdfeSyjTOyqCdunpJIE4
+id: ila_future_lab_branding
+theme: ila_future_lab
+region: header_top_main_nav
+weight: -11
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,57 @@
+uuid: 41e0d756-07bb-4a93-a28a-99ff48d65523
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_add_to_my_calendar
+    - node.type.bdli_event
+  module:
+    - addtocalendar
+id: node.bdli_event.field_co_add_to_my_calendar
+field_name: field_co_add_to_my_calendar
+entity_type: node
+bundle: bdli_event
+label: Kalendereintrag
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Kalendereintrag
+  off_label: 'Add to Calendar Disabled'
+  addtocalendar_show: 1
+  addtocalendar_settings:
+    style: blue
+    atc_title:
+      field: title
+      tokenized: Title
+    atc_description:
+      field: body
+      tokenized: Description
+    atc_location:
+      field: field_ev_venue
+      tokenized: Location
+    atc_organizer:
+      field: field_contact_persons
+      tokenized: 'ILA Berlin 2020 – die führende Innovationsmesse der Luft- und Raumfahrt'
+    atc_organizer_email:
+      field: field_contact_persons
+      tokenized: ila@messe-berlin.de
+    atc_date_start:
+      field: field_date_and_time
+      tokenized: ''
+    atc_date_end:
+      field: field_date_and_time
+      tokenized: ''
+    atc_privacy: public
+    data_secure: auto
+    data_calendars:
+      iCalendar: iCalendar
+      'Google Calendar': 'Google Calendar'
+      Outlook: Outlook
+      'Outlook Online': 'Outlook Online'
+      'Yahoo! Calendar': 'Yahoo! Calendar'
+field_type: add_to_calendar_field

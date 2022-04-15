@@ -1,0 +1,27 @@
+uuid: 9ff44264-133c-4b45-aa78-1c8997bb10ba
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: M9Hdnq2k80QO8MYwL8y6hXhtMd5SxmBNuAfrGY5uNns
+id: ila_career_center_main_navigation
+theme: ila_career_center
+region: header_top_main_nav
+weight: -12
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Menu
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

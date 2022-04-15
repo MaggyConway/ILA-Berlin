@@ -1,0 +1,32 @@
+uuid: 8d0aaa96-eb49-467e-9e4a-264467b28d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference
+    - media.type.embedded_video
+    - media.type.image
+    - media.type.local_video
+    - paragraphs.paragraphs_type.link_box
+id: paragraph.link_box.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+bundle: link_box
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      embedded_video: embedded_video
+      local_video: local_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

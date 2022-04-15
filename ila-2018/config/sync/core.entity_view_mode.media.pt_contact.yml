@@ -1,0 +1,10 @@
+uuid: 5019e474-24cd-4a6c-be97-42d11f272509
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_contact
+label: 'PT Contact'
+targetEntityType: media
+cache: true

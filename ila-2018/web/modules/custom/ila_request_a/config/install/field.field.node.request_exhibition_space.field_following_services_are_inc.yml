@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_following_services_are_inc
+    - node.type.request_exhibition_space
+  module:
+    - markup
+id: node.request_exhibition_space.field_following_services_are_inc
+field_name: field_following_services_are_inc
+entity_type: node
+bundle: request_exhibition_space
+label: 'Following services are included'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Following services are included:</h3>\r\n\r\n<ul>\r\n\t<li>Exhibitor passes: until 20 m² stand space 3 passes, 1 extra pass for each additional 10 m²</li>\r\n\t<li>Energy lump sum, infrastructure services, hall security service</li>\r\n</ul>\r\n"
+    format: full_html
+field_type: markup

@@ -1,0 +1,22 @@
+services:
+  facebook: facebook
+  twitter: twitter
+  linkedin: linkedin
+  whatsapp: 0
+  facebook_messenger: 0
+  email: 0
+  pinterest: 0
+  digg: 0
+  stumbleupon: 0
+  slashdot: 0
+  tumblr: 0
+  reddit: 0
+  evernote: 0
+  print: 0
+  copy: 0
+width: 20px
+radius: 3px
+facebook_app_id: ''
+iconset: social-icons--no-color
+print_css: ''
+node_field: 1

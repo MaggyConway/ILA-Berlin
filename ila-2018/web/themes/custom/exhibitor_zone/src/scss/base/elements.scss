@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+/* stylelint-disable selector-no-universal  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* stylelint-enable selector-no-universal */
+
+html,
+body {
+  font-family: $main-font;
+  font-size: $main-font-size;
+  font-weight: $main-font-weight;
+  line-height: $main-line-height;
+  color: $main-text-color;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+body {
+  background: $main-bg;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+object,
+input,
+textarea {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.ajax-progress-fullscreen,
+.ui-dialog .ajax-progress-throbber {
+  left: 49%; /* LTR */
+  position: fixed;
+  top: 48.5%;
+  z-index: 1000;
+  background: url(../img/loading-spinner-ILA_V4@3x.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 7px;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  opacity: 0.9;
+  padding: 4px;
+}

@@ -1,0 +1,7 @@
+name: ILA Attendee registration block
+type: module
+description: Defines a block for attendee registration creation
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - ila_attendee_registration

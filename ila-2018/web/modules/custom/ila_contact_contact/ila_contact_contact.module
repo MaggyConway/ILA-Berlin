@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * @file
+ * Module hooks implementations.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function ila_contact_contact_form_contact_message_contact_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  unset($form['actions']['preview']);
+
+  $form['name']['#attributes']['placeholder'] = t('Name');
+  $form['mail']['#attributes']['placeholder'] = t('E-Mail');
+
+  $placeholder_fields = ['field_company', 'message'];
+  foreach ($placeholder_fields as $field_name) {
+    $placeholder = $form[$field_name]['widget'][0]['value']['#placeholder'];
+    $form[$field_name]['widget'][0]['value']['#placeholder'] = t($placeholder, [], ['context' => 'contact_' . $field_name . '_placeholder']);
+  }
+}
+
+/**
+ * Implements hook_mail_alter().
+ */
+function ila_contact_contact_mail_alter(array &$message) {
+  if ($message['id'] !== 'contact_page_mail') {
+    return;
+  }
+
+  if (!isset($message['params']['contact_message'])) {
+    return;
+  }
+
+  $new_message = '';
+  $ordered_data = [];
+  $contact_message = $message['params']['contact_message'];
+  if ($contact_message instanceof EntityInterface) {
+    $ordered_data = _get_fields_order_from_display_settings($contact_message);
+    foreach ($ordered_data as $field) {
+      $new_message .= '<p><strong>' . $field['label'] . ':</strong> ' . $field['info'] . '</p>';
+    }
+    $message_body = $contact_message->get('message')->getString();
+    if ($contact_message->hasField('field_subject')) {
+      $message['subject'] = $contact_message->get('field_subject')->getString();
+    }
+    $new_message .= '<p><strong>' . t('Message') . ':</strong><br>' . $message_body . '</p>';
+    array_pop($message['body']);
+    $message['body'][] = Markup::create($new_message);
+  }
+}
+
+/**
+ * Helper function to getting fields weight from manage display settings.
+ *
+ * @param $contact_message
+ *   Contact message entity.
+ *
+ * @return array
+ *   Return ordered values.
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function _get_fields_order_from_display_settings($contact_message) {
+  $entityType = $contact_message->getEntityType()->id();
+  $bundle = $contact_message->bundle();
+  $display = \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load($entityType . '.' . $bundle . '.default');
+  $displayFields = $display->getComponents();
+  foreach ($displayFields as $key => $fieldConfig) {
+    $field = $contact_message->get($key);
+    if ($field) {
+      $fieldDefinition = $field->getFieldDefinition();
+      $data[$key] = [
+        'label' => $fieldDefinition->getLabel(),
+        'info' => $field->getString(),
+        'weight' => $fieldConfig['weight'],
+      ];
+    }
+  }
+  uasort($data, 'compare_weight');
+
+ return $data;
+}
+
+/**
+ * Helper cmp function
+ *
+ * @param $a
+ *   Weight for the first item.
+ * @param $b
+ *   Weight for the second item.
+ *
+ * @return int
+ */
+function compare_weight($a, $b) {
+  return strnatcmp($a['weight'], $b['weight']);
+}

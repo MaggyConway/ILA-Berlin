@@ -1,0 +1,112 @@
+/* stylelint-disable */
+
+.footer-menu {
+  @include list-reset;
+
+  &__item {
+    margin-right: 30px;
+    display: inline-block;
+
+    &:last-of-type {
+      @media screen and (max-width: 480px) {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      color: $c-white;
+      transition: .3s;
+
+      &:hover,
+      &:focus {
+        color: $c-blue-normal;
+        outline: none;
+      }
+    }
+  }
+}
+
+.menu--social {
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    @include list-reset;
+
+    font-size: 0;
+
+    &__item {
+      margin-left: 20px;
+      display: inline-block;
+
+      a {
+        display: block;
+        width: 33px;
+        height: 33px;
+        color: $c-white;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+          color: $c-blue-light;
+          outline: none;
+        }
+
+        &.icon-twitter {
+          background: url('../../img/svg/twitter.svg') center no-repeat;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../img/svg/twitter-hover.svg');
+          }
+        }
+
+        &.icon-facebook {
+          background: url('../../img/svg/facebook.svg') center no-repeat;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../img/svg/facebook-hover.svg');
+          }
+        }
+
+        &.icon-instagram {
+          background: url('../../img/svg/instagram.svg') center no-repeat;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../img/svg/instagram-hover.svg');
+          }
+        }
+
+        &.icon-youtube {
+          background: url('../../img/svg/youtube.svg') center no-repeat;
+          background-size: 19px auto;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../img/svg/youtube-hover.svg');
+          }
+        }
+
+        &.icon-linkedin {
+          background: url('../../img/svg/linkedin.svg') center no-repeat;
+          background-size: 15px auto;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../img/svg/linkedin-hover.svg');
+          }
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable */

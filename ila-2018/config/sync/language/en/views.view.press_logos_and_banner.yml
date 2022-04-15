@@ -1,0 +1,11 @@
+display:
+  block_downloads_available:
+    display_options:
+      empty:
+        area:
+          content:
+            value: "<p>No Downloads available.</p>\r\n"
+            format: filtered_html
+  default:
+    display_options:
+      title: 'press logos & banner'

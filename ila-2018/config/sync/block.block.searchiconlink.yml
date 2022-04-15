@@ -1,0 +1,22 @@
+uuid: e74ddfcd-26cb-4e1b-ad7e-1a91ad150a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.search_icon_link
+  module:
+    - simple_block
+  theme:
+    - ila
+id: searchiconlink
+theme: ila
+region: header_top
+weight: -9
+provider: null
+plugin: 'simple_block:search_icon_link'
+settings:
+  id: 'simple_block:search_icon_link'
+  label: 'Search icon link'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

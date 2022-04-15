@@ -1,0 +1,27 @@
+uuid: ea4eb9e4-50b0-4ff4-b824-8f26c5a619fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - exhibitor_zone
+id: decoupledsubmitbutton
+theme: exhibitor_zone
+region: sticky
+weight: -4
+provider: null
+plugin: decoupled_submit_button
+settings:
+  id: decoupled_submit_button
+  label: 'Requests: Print button'
+  provider: node
+  label_display: '0'
+  form_selector: .node-form
+visibility:
+  request_path:
+    id: request_path
+    pages: "/exhibitor-zone/request_a\r\n/exhibitor-zone/request_b\r\n/exhibitor-zone/request_c\r\n/exhibitor-zone/request_d\r\n/exhibitor-zone/request_e\r\n/exhibitor-zone/request_f\r\n/exhibitor-zone/request_fb1\r\n/exhibitor-zone/co-exhibitor\r\n/exhibitor-zone/main-exhibitor"
+    negate: false
+    context_mapping: {  }

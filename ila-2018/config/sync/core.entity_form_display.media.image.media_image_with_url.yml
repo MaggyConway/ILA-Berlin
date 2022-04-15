@@ -1,0 +1,81 @@
+uuid: 93568caf-4c74-44cf-bd49-80ae60b91b35
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_image_with_url
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - image.style.thumbnail
+    - media.type.image
+  module:
+    - link
+    - svg_image
+id: media.image.media_image_with_url
+targetEntityType: media
+bundle: image
+mode: media_image_with_url
+content:
+  field_media_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_url:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  path: true
+  status: true
+  uid: true

@@ -1,0 +1,31 @@
+uuid: 8e19c2c9-ecaf-436b-9ef5-9153b2e6d23d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - ila_future_lab
+id: mainnavigation
+theme: ila_future_lab
+region: header_top_main_nav
+weight: -10
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: Menu
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 2
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: main
+  label_type: block
+  label_link: false
+visibility: {  }

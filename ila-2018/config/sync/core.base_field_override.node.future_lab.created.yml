@@ -1,0 +1,18 @@
+uuid: 851bbd1d-b91a-437f-a856-bb0e2b747267
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.created
+field_name: created
+entity_type: node
+bundle: future_lab
+label: 'Geschrieben am'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

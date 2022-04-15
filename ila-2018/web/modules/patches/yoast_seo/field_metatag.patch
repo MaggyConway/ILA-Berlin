@@ -1,0 +1,51 @@
+diff -Naur a/src/YoastSeoFieldManager.php b/src/YoastSeoFieldManager.php
+--- a/src/YoastSeoFieldManager.php	2021-07-13 10:06:25.000000000 +0200
++++ b/src/YoastSeoFieldManager.php	2021-07-13 10:09:09.000000000 +0200
+@@ -255,9 +255,9 @@
+     $form_after_build['#attached']['drupalSettings']['yoast_seo']['tokens']['[site:name]'] = \Drupal::config('system.site')->get('name');
+     $form_after_build['#attached']['drupalSettings']['yoast_seo']['tokens']['[site:slogan]'] = \Drupal::config('system.site')->get('slogan');
+
+-    $is_default_meta_title = !empty($form_after_build['field_meta_tags']['widget'][0]['basic']['title']['#default_value']) ? TRUE : FALSE;
++    $is_default_meta_title = !empty($form_after_build['field_node_metatag']['widget'][0]['basic']['title']['#default_value']) ? TRUE : FALSE;
+     $is_default_keyword = !empty($form_after_build['field_yoast_seo']['widget'][0]['yoast_seo']['focus_keyword']['#default_value']) ? TRUE : FALSE;
+-    $is_default_meta_description = !empty($form_after_build['field_meta_tags']['widget'][0]['basic']['description']['#default_value']) ? TRUE : FALSE;
++    $is_default_meta_description = !empty($form_after_build['field_node_metatag']['widget'][0]['basic']['description']['#default_value']) ? TRUE : FALSE;
+     $body_exists = !empty($body_element['#default_value']) ? TRUE : FALSE;
+
+     // The path default value.
+@@ -268,17 +268,17 @@
+     }
+
+     $form_after_build['#attached']['drupalSettings']['yoast_seo']['default_text'] = [
+-      'meta_title' => $is_default_meta_title ? $form_after_build['field_meta_tags']['widget'][0]['basic']['title']['#default_value'] : '',
++      'meta_title' => $is_default_meta_title ? $form_after_build['field_node_metatag']['widget'][0]['basic']['title']['#default_value'] : '',
+       'keyword' => $is_default_keyword ? $form_after_build['field_yoast_seo']['widget'][0]['yoast_seo']['focus_keyword']['#default_value'] : '',
+-      'meta_description' => $is_default_meta_description ? $form_after_build['field_meta_tags']['widget'][0]['basic']['description']['#default_value'] : '',
++      'meta_description' => $is_default_meta_description ? $form_after_build['field_node_metatag']['widget'][0]['basic']['description']['#default_value'] : '',
+       $body_field => $body_exists ? $body_element['#default_value'] : '',
+       'path' => $path,
+     ];
+
+     // FIELDS
+     // Add Metatag fields.
+-    $form_after_build['#attached']['drupalSettings']['yoast_seo']['fields']['meta_title'] = $form_after_build['field_meta_tags']['widget'][0]['basic']['title']['#id'];
+-    $form_after_build['#attached']['drupalSettings']['yoast_seo']['fields']['meta_description'] = $form_after_build['field_meta_tags']['widget'][0]['basic']['description']['#id'];
++    $form_after_build['#attached']['drupalSettings']['yoast_seo']['fields']['meta_title'] = $form_after_build['field_node_metatag']['widget'][0]['basic']['title']['#id'];
++    $form_after_build['#attached']['drupalSettings']['yoast_seo']['fields']['meta_description'] = $form_after_build['field_node_metatag']['widget'][0]['basic']['description']['#id'];
+
+     // Placeholders.
+     $form_after_build['#attached']['drupalSettings']['yoast_seo']['placeholder_text'] = [
+diff -Naur a/src/YoastSeoManager.php b/src/YoastSeoManager.php
+--- a/src/YoastSeoManager.php	2021-07-13 10:06:25.000000000 +0200
++++ b/src/YoastSeoManager.php	2021-07-13 10:08:24.000000000 +0200
+@@ -62,8 +62,8 @@
+   public function attachYoastSeoFields($entity_type, $bundle) {
+     // Attach metatag field to the target content.
+     $metatag_field = array(
+-      'field_name' => 'field_meta_tags',
+-      'field_label' => 'Meta tags',
++      'field_name' => 'field_node_metatag',
++      'field_label' => 'Metatags',
+       'storage_type' => 'metatag',
+       'translatable' => TRUE,
+     );

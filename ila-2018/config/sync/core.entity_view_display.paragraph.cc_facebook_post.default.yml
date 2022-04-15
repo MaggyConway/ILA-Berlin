@@ -1,0 +1,22 @@
+uuid: 156a861c-2be9-4eb0-a0c7-bc269aa7df2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_facebook_post.field_cc_facebook_post_body
+    - paragraphs.paragraphs_type.cc_facebook_post
+  module:
+    - text
+id: paragraph.cc_facebook_post.default
+targetEntityType: paragraph
+bundle: cc_facebook_post
+mode: default
+content:
+  field_cc_facebook_post_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

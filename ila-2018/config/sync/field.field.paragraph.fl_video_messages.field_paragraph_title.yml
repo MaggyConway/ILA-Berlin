@@ -1,0 +1,21 @@
+uuid: 2a91b4f6-e8f8-40af-a4fb-f0a9904013d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_video_messages
+id: paragraph.fl_video_messages.field_paragraph_title
+field_name: field_paragraph_title
+entity_type: paragraph
+bundle: fl_video_messages
+label: Title
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Video Messages'
+default_value_callback: ''
+settings: {  }
+field_type: string

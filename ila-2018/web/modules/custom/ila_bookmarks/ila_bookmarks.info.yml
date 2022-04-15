@@ -1,0 +1,7 @@
+name: 'ILA Custom Bookmarks'
+description: 'Create Bookmark for node conferences'
+type: module
+core_version_requirement: ^8 || ^9
+dependences:
+  - field
+package: ILA

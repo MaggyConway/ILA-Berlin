@@ -1,0 +1,155 @@
+.ui-widget {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $main-text-color;
+}
+
+.ui-widget-content {
+  color: $main-text-color;
+  p {
+    a {
+      color: #337ab7;
+    }
+  }
+}
+
+.ui-accordion {
+  margin-bottom: 30px;
+
+  .wrapp-2-cols {
+    h3 {
+      min-width: 100%;
+    }
+  }
+
+  .ui-accordion-header {
+    color: $c-blue;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+
+    &:after {
+      margin-bottom: 8px;
+    }
+  }
+
+  .ui-state-default {
+    border: none;
+    background: none;
+    border-bottom: 1px solid $c-blue;
+    border-top: 1px solid $c-blue;
+    margin-top: -1px;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .ui-accordion-header-icon {
+      background: none;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-left-color: $c-blue;
+      border-right: none;
+      right: 0.5em;
+      left: auto;
+      transition: .3s;
+      margin-top: -5px;
+    }
+    
+    > a {
+      color: $c-blue;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 0;
+
+      &:after {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .ui-state-active {
+    border-bottom: none;
+    outline: none;
+    
+    .ui-accordion-header-icon {
+      transform: rotate(90deg);
+      transform-origin: center;
+    }
+  }
+  .ui-widget-content {
+    border: none;
+  }
+  .ui-accordion-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: hidden;
+  }
+  .form-inline {
+    .control-label {
+      margin-bottom: 5px;
+    }
+    .form-control {
+      display: block;
+      width: 100%;
+    }
+  }
+  .field-group-accordion-item--privacy,.field-group-error {
+    .control-label {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 1.2;
+      color: rgb(51, 51, 51);
+      font-weight: 400;
+      font-family: Arial,sans-serif;
+    }
+    .form-checkbox {
+      margin-top: 2px;
+    }
+    h3 {
+      margin-top: 15px;
+    }
+    .field--widget-options-buttons {
+      margin: 0;
+      legend {
+        span.fieldset-legend {
+          color: $main-text-color;
+        }
+      }
+      .form-type-checkbox {
+        margin: 5px 10px;
+        display: inline-block;
+      }
+    }
+    #edit-field-we-hereby-accept--wrapper,
+    #edit-field-we-acknowledge-that-my-req--wrapper,
+    #edit-field-we-acknowledge-that-the-fo--wrapper {
+      .form-item {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      legend {
+        display: none;
+      }
+    }
+  }
+  .form-item-field-we-hereby-accept-1,
+  .form-item-field-we-acknowledge-that-my-req-1,
+  .form-item-field-we-acknowledge-that-the-fo-1 {
+    label {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 1.2;
+      color: rgb(51, 51, 51);
+      font-weight: 400;
+      font-family: Arial,sans-serif;
+    }
+  }
+}

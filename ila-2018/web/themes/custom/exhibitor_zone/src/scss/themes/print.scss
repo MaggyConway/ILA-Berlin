@@ -1,0 +1,341 @@
+@page {
+  margin: 0.5in;
+}
+.for-print {
+  padding-top: 0 !important;
+  .alert {
+    display: none;
+  }
+  .main-container {
+    padding-top: 0;
+    padding-left: 0;
+    max-width: 900px;
+    padding-bottom: 100px;
+    width: 900px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .print-request-header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: centr;
+
+    .instructions {
+      text-transform: uppercase;
+      color: $c-blue !important;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: normal;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 143px;
+        border-bottom: 1px solid $c-blue;
+        margin-top: 10px;
+      }
+    }
+
+    .ila-logo {
+      // background: url(../img/print_logo.png) no-repeat center !important;
+      width: 174px;
+      height: 87px;
+      // background-size: contain !important;
+      -webkit-print-color-adjust: exact;
+
+      // @media print {
+      //   content: url(../img/print_logo.png);
+      // }
+    }
+  }
+  .print-request-node-title {
+    position: relative;
+    bottom: 64px;
+    .node-title {
+      float: left;
+    }
+  }
+  .registration-info {
+    width: 100%;
+    margin-bottom: 50px;
+
+    caption {
+      padding: 0 5px;
+    }
+
+    td {
+      border: 1px solid $c-darkblue;
+      vertical-align: top;
+      padding: 5px;
+      font-size: 12px;
+      font-weight: 600;
+
+      &.cell-blank,
+      &.cell-werbebox {
+        width: 200px;
+      }
+      .stand-type {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+      }
+      .stand-type-item {
+        position: relative;
+        padding-left: 10px;
+        display: inline-block;
+        margin-right: 5px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          top: 50%;
+          left: 0;
+          margin-top: -5px;
+          border: 1px solid $c-darkblue;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .request-table-title {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $c-darkblue !important;
+    margin-bottom: 5px;
+  }
+  .request-table-subtitle {
+    font-size: 18px;
+    font-weight: 200;
+    color: $c-darkblue !important;
+    margin-bottom: 30px;
+  }
+  .table-striped {
+    margin-bottom: 50px;
+    th {
+      background-color: $c-darkblue !important;
+      color: $c-white !important;
+      text-transform: uppercase;
+      width: 150px;
+      text-align: left;
+
+      &.views-field-nothing-1 {
+        width: 400px;
+      }
+
+      &.views-field-field-product-group {
+        width: 350px;
+      }
+    }
+    tr {
+      background: none;
+      border-bottom: 1px solid $c-darkblue;
+    }
+    td {
+      text-align: left;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.6;
+
+      &.views-field-nothing-1 {
+        padding-bottom: 60px;
+      }
+    }
+  }
+  .view-id-request_print {
+    > .view-footer {
+      margin-left: -12px;
+      margin-right: -12px;
+      display: block;
+      font-size: 0;
+      min-width: 100%;
+
+      .view-display-id-invoicing_address {
+        > .view-footer {
+          margin: {
+            left: 0;
+            right: 0;
+            top: 13px;
+          }
+        }
+      }
+
+      > .view-request-print {
+        display: inline-block;
+        vertical-align: top;
+        page-break-inside: avoid;
+        font-size: initial;
+        width: 50%;
+        margin-bottom: 30px;
+        padding: 0 20px;
+
+        &.view-display-id-under_table_block {
+          margin-bottom: 0;
+          margin-top: -45px;
+          position: relative;
+          width: 100%;
+
+          // I'm so sorry.
+          .views-field-field-we-are-agency {
+            position: absolute;
+            top: -35px;
+          }
+        }
+
+        &.view-display-id-footer_block {
+          width: 100%;
+        }
+
+        &.view-display-id-footer_block_co_exhibitor {
+          width: 100%;
+        }
+
+        .data-title {
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 1.4;
+          color: $c-darkblue !important;
+          text-transform: uppercase;
+        }
+
+        .title-same-as-company-data {
+          margin: {
+            bottom: 10px;
+            top: -10px;
+          }
+        }
+
+        .data-description {
+          font-style: italic;
+          font-size: 12px;
+          margin-bottom: 10px;
+
+          span {
+            font-weight: 700;
+          }
+        }
+
+        .views-field {
+          display: flex;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1.6;
+          margin-bottom: 5px;
+          .views-label {
+            flex: 1 1 100px;
+            margin-right: 10px;
+          }
+          .field-content {
+            flex: 1 1 70%;
+          }
+          .address {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.6;
+          }
+          .plus-vat {
+            font-weight: 200;
+          }
+        }
+      }
+
+      > .print-request-footer {
+        padding-left: 20px;
+      }
+
+      > .layout--onecol {
+        width: 100%;
+      }
+    }
+  }
+  .factual-accuracy-confirmation {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .print-request-footer {
+    width: 100%;
+  }
+  .print-request-footer-row {
+    .footer-blanks {
+      display: flex;
+      padding-top: 70px;
+    }
+    .place-date-blank,
+    .stamp-signature-blank {
+      flex: 1 1 40%;
+      border-top: 1px solid $c-darkblue;
+      margin-right: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $c-darkblue !important;
+      font-weight: bold;
+    }
+    .stamp-signature-blank {
+      flex: 1 1 60%;
+      border-top: 1px solid $c-darkblue;
+    }
+  }
+
+  .views-field-field-co-exhibitor-product-group {
+    font-size: 15px;
+    margin: {
+      bottom: 25px;
+      top: -25px;
+    }
+
+    .views-label-field-co-exhibitor-product-group,
+    > .field-content {
+      display: inline;
+    }
+  }
+}
+
+.print-agreements {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-bottom: 35px;
+
+  .print-agreement {
+    margin-bottom: 25px;
+  }
+
+  .print-agreement-header {
+    font-family: 'Roboto-Bold', 'Roboto Bold', 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    color: #1D428A;
+    margin-bottom: 15px;
+  }
+
+  .print-agreement-for-email,
+  .print-agreement-for-fax {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
+@media print and (color) {
+  * {
+    webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .region-sticky {
+    display: none;
+  }
+}
+
+@media print {
+  .region-sticky {
+    display: none;
+  }
+}

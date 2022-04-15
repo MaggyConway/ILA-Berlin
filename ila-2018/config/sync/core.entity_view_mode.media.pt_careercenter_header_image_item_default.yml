@@ -1,0 +1,10 @@
+uuid: 655f4a6b-0715-4c44-ad13-9728f0da1a6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_careercenter_header_image_item_default
+label: 'PT CareerCenter Header image item: default'
+targetEntityType: media
+cache: true

@@ -1,0 +1,21 @@
+uuid: 9910276f-d51f-4e6f-a49a-f4eced921409
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_cc_sponsors_anchor_id
+field_name: field_cc_sponsors_anchor_id
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

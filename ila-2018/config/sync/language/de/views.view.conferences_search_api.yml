@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      header:
+        area_text_custom:
+          content: "<div class=\"conference-filters\">\r\n<a href=\"#\" class=\"link-history-back\">Zurück</a>\r\n<a href=\"#\" class=\"filter-open-btn\">Filter öffnen</a>\r\n</div>"
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Suche
+      empty:
+        area_text_custom:
+          content: "<h3>Leider keine Konferenzen gefunden.</h3>\r\n<p>Öffnen Sie den Filter und klicken Sie auf <b>Zurücksetzen</b> um zur Übersicht zurück zu gelangen</p>"
+      exposed_form:
+        options:
+          submit_button: Suche

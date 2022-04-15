@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      fields:
+        nothing:
+          alter:
+            text: "<div class=\"flipper vertical\" ontouchstart=\"this.classList.toggle('hover');\">\r\n<div class=\"front-side\">{{ field_partner_image }}</div>\r\n<div class=\"back-side\">\r\n<div class=\"partner-title item\">{{ title }}</div>\r\n<div class=\"partner-body item\">{{ body }}</div>\r\n<div class=\"partner-hall-stand item\">{{ field_partner_hall_stand }}</div>\r\n<div class=\"contact-persons-info item\">{{ field_parh_contact_person }}</div>\r\n</div>\r\n</div>"
+  block_4:
+    display_options:
+      title: 'Industrie Partner'
+  block_5:
+    display_options:
+      title: 'Kooperations Partner'
+  block_6:
+    display_options:
+      title: 'Medien Partner'

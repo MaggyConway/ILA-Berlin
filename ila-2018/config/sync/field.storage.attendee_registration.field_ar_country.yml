@@ -1,0 +1,19 @@
+uuid: edc4372c-587a-45b4-899d-684e1cc1c7f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - ila_attendee_registration
+id: attendee_registration.field_ar_country
+field_name: field_ar_country
+entity_type: attendee_registration
+type: address_country
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

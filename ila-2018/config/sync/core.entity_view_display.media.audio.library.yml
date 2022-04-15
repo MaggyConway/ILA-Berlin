@@ -1,0 +1,48 @@
+uuid: e5115b43-32fc-4eec-b11d-b0d55e957877
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.library
+    - field.field.media.audio.field_description
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - file
+    - text
+id: media.audio.library
+targetEntityType: media
+bundle: audio
+mode: library
+content:
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_audio_file:
+    type: file_audio
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  thumbnail: true
+  uid: true

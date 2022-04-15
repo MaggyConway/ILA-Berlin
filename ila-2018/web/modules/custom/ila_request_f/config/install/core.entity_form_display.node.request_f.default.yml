@@ -1,0 +1,166 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_f.field_booking_conference_rooms
+    - field.field.node.request_f.field_product_group
+    - field.field.node.request_f.field_product_group_index
+    - field.field.node.request_f.field_registration_conferences
+    - field.field.node.request_f.field_request_f_additional_eq
+    - field.field.node.request_f.field_request_f_comments
+    - field.field.node.request_f.field_request_f_conference_topic
+    - field.field.node.request_f.field_request_f_date
+    - field.field.node.request_f.field_request_f_following_servic
+    - field.field.node.request_f.field_request_f_withdraw_from
+    - node.type.request_f
+  module:
+    - entity_reference_views_select
+    - field_group
+    - ila_grouped_options
+    - markup
+third_party_settings:
+  field_group:
+    group_plus_advertising_box:
+      children:
+        - field_request_f_following_servic
+        - field_request_f_additional_eq
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: 'Plus Advertising Box'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'field-group--advertise wrapp-2-cols'
+      label: 'Plus Advertising Box'
+    group_wrapper:
+      children:
+        - group_wrapper_0
+        - field_request_f_comments
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: wrapper
+    group_wrapper_0:
+      children:
+        - field_request_f_conference_topic
+        - field_request_f_date
+      parent_name: group_wrapper
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: wrapper_0
+id: node.request_f.default
+targetEntityType: node
+bundle: request_f
+mode: default
+content:
+  field_booking_conference_rooms:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: grouped_options
+    region: content
+  field_product_group_index:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_registration_conferences:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
+    region: content
+  field_request_f_additional_eq:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_f_comments:
+    weight: 23
+    settings:
+      rows: 5
+      placeholder: 'Please insert your comments here.'
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_request_f_conference_topic:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_request_f_date:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_request_f_following_servic:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_f_withdraw_from:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

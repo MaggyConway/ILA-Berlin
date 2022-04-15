@@ -1,0 +1,205 @@
+uuid: 90b57df5-5801-40a8-8347-25d97fb1b9a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_address
+    - field.field.user.user.field_company
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_salutation
+    - field.field.user.user.field_telephone
+    - field.field.user.user.field_title
+    - field.field.user.user.field_user_subtitle
+  module:
+    - address
+    - field_group
+    - path
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_contact_person:
+      children:
+        - group_contact_wrapper
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Contact person'
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Contact person'
+      region: content
+    group_main_exhibitor:
+      children:
+        - field_company
+        - field_address
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Main exhibitor'
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Main exhibitor'
+      region: content
+    group_password:
+      children:
+        - group_password_wrapper
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: Password
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: Password
+      region: content
+    group_contact_wrapper:
+      children:
+        - field_salutation
+        - field_title
+        - field_first_name
+        - field_last_name
+        - field_telephone
+        - account
+      parent_name: group_contact_person
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: contact_wrapper
+      region: content
+    group_password_wrapper:
+      children: {  }
+      parent_name: group_password
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: password_wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'wrapp-2-cols password'
+      label: password_wrapper
+      region: content
+_core:
+  default_config_hash: pKakJXHbdL_8bIasgNcrHFcoRrXSTpvMwW61cRpYw7o
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_company:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_first_name:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_salutation:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_telephone:
+    weight: 25
+    settings:
+      placeholder: Telephone
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_title:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  google_analytics:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  contact: true
+  field_user_subtitle: true
+  langcode: true
+  language: true
+  timezone: true

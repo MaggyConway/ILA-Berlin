@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * This is the primary module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ila_facets_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.facets_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Render Facets in a single block.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ila_facets_block_theme($existing, $type, $theme, $path) {
+  return [
+    'ila_facets_block' => [
+      'variables' => [
+        'show_title' => TRUE,
+        'facets' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_facets_block_preprocess_facets_item_list__ila_dropdown__speakers(&$variables) {
+  chosen_attach_library($variables);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_load().
+ */
+function ila_facets_block_node_load($entities) {
+  foreach ($entities as $key_entity => $entity) {
+    if ($entity->getType() == 'career_center' || $entity->getType() == 'basic_page') {
+      $_SESSION['cc_node_ids'][$key_entity] = $key_entity;
+    }
+  }
+}

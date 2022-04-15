@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_we_are_agency
+    - node.type.main_exhibitor
+id: node.main_exhibitor.field_we_are_agency
+field_name: field_we_are_agency
+entity_type: node
+bundle: main_exhibitor
+label: 'We herewith order on behalf of the main exhibitor.'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

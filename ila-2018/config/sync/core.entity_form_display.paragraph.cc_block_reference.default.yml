@@ -1,0 +1,28 @@
+uuid: 807b31ed-2551-4db6-b93e-8fe60a0c4d07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_block_reference.field_block_reference
+    - field.field.paragraph.cc_block_reference.field_cc_anchor
+    - paragraphs.paragraphs_type.cc_block_reference
+  module:
+    - block_field
+id: paragraph.cc_block_reference.default
+targetEntityType: paragraph
+bundle: cc_block_reference
+mode: default
+content:
+  field_block_reference:
+    weight: 0
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+hidden:
+  created: true
+  field_cc_anchor: true
+  status: true
+  uid: true

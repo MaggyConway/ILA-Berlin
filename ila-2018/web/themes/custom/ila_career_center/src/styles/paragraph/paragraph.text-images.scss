@@ -1,0 +1,112 @@
+.paragraph--type--careercenter-title-text-images {
+  position: relative;
+  margin: 30px auto;
+
+  .field--name-field-title {
+    font-family: $career-font;
+    font-size: 130px;
+    line-height: .7;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $career-green;
+
+    @media #{$m-to-4xl} {
+      font-size: 80px;
+    }
+
+    @media #{$m-to-m} {
+      font-size: 60px;
+      text-align: center;
+    }
+  }
+
+  .field--name-field-cc-tti-images {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      border: 1px solid #ffffff;
+    }
+  }
+
+  .wrapper--content {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #ffffff;
+    background: $career-dark;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-transform: uppercase;
+      color: $career-green;
+    }
+  }
+
+  .field--name-field-cc-text {
+    padding: 1.6em;
+    padding-bottom: 90px;
+  }
+
+  .field--name-field-cc-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    a {
+      position: relative;
+      padding: 15px 0;
+      display: block;
+      font-family: $career-font;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 1px 1px 0 $career-dark;
+      color: #ffffff;
+      background-color: $career-green;
+      box-shadow: 5px 5px 0 0 $career-dark;
+
+      @media #{$m-to-m} {
+        font-size: 19px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        content: url('../../assets/images/long-arrow-right.svg');
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .wrapper--mobile-link {
+    display: none;
+    order: 1;
+
+    @media #{$m-to-m} {
+      display: block;
+    }
+
+    .field--name-field-cc-link {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  /* stylelint-disable */
+
+  .wrapper--content {
+    .field--name-field-cc-link {
+      @media #{$m-to-m} {
+        display: none;
+      }
+    }
+  }
+
+  /* stylelint-enable */
+}

@@ -1,0 +1,11 @@
+id: file_info_short_paragraph
+label: 'File info - Short (Paragraph)'
+ui_limit: ''
+properties:
+  content:
+    value: '[paragraph:field_file:entity:size]'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  paragraph: paragraph

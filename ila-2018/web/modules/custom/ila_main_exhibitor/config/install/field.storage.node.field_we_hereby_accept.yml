@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_we_hereby_accept
+field_name: field_we_hereby_accept
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'We hereby accept the data protection regulations, the Terms of Business and Conditions of Participation ILA 2018 for Messe Berlin Trade Fairs and Exhibitons (also named conditions of participation and requirements). Place of perfomance and court of jurisdiction: Berlin, Germany.*'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

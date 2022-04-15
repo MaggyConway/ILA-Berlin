@@ -1,0 +1,48 @@
+uuid: be6cf758-a29b-4be9-9051-3b6c149cbf53
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_style
+field_name: field_style
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: turquois-aviation
+      label: 'Türkis (Aviation)'
+    -
+      value: blue-space
+      label: 'Blau (Space)'
+    -
+      value: green-defense
+      label: 'Grün (Defense&Security)'
+    -
+      value: yellow-suppliers
+      label: 'Gelb (Suppliers)'
+    -
+      value: red-special
+      label: 'Rot (Special Features)'
+    -
+      value: purple-conferences
+      label: 'Lila (Conferences)'
+    -
+      value: green-careercenter
+      label: 'green (Career Center)'
+    -
+      value: apricot-uas
+      label: 'apricot (UAS)'
+    -
+      value: mint-digital
+      label: 'ILA goes digital'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

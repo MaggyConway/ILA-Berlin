@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invoice_legal_form
+    - node.type.main_exhibitor
+id: node.main_exhibitor.field_invoice_legal_form
+field_name: field_invoice_legal_form
+entity_type: node
+bundle: main_exhibitor
+label: 'Invoice Legal form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

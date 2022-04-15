@@ -1,0 +1,10 @@
+uuid: 94dc315f-bce5-4efd-ac64-081bfb6d8016
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_image_with_url
+label: 'Media Image with URL'
+targetEntityType: media
+cache: true

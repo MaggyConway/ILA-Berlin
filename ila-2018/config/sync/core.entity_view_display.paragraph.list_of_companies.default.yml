@@ -1,0 +1,34 @@
+uuid: 3fe5ec4d-8bb9-433b-9b23-0b96ccce1577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_of_companies.field_company_list_address
+    - field.field.paragraph.list_of_companies.field_company_list_city
+    - field.field.paragraph.list_of_companies.field_company_list_country
+    - field.field.paragraph.list_of_companies.field_company_list_email
+    - field.field.paragraph.list_of_companies.field_company_list_label
+    - field.field.paragraph.list_of_companies.field_company_list_logo
+    - field.field.paragraph.list_of_companies.field_company_list_logo_media
+    - field.field.paragraph.list_of_companies.field_company_list_phone_num
+    - field.field.paragraph.list_of_companies.field_company_list_postal_code
+    - field.field.paragraph.list_of_companies.field_company_list_site_link
+    - field.field.paragraph.list_of_companies.field_company_list_title
+    - paragraphs.paragraphs_type.list_of_companies
+id: paragraph.list_of_companies.default
+targetEntityType: paragraph
+bundle: list_of_companies
+mode: default
+content: {  }
+hidden:
+  field_company_list_address: true
+  field_company_list_city: true
+  field_company_list_country: true
+  field_company_list_email: true
+  field_company_list_label: true
+  field_company_list_logo: true
+  field_company_list_logo_media: true
+  field_company_list_phone_num: true
+  field_company_list_postal_code: true
+  field_company_list_site_link: true
+  field_company_list_title: true

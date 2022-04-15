@@ -1,0 +1,20 @@
+uuid: 6d8abef3-a372-41dc-a036-091943c70616
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press
+_core:
+  default_config_hash: EgHaMdmEE9pvJiEYd5TdD4HnrSXroM4KyzyZAEh45jU
+id: node.press.changed
+field_name: changed
+entity_type: node
+bundle: press
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

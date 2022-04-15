@@ -1,0 +1,21 @@
+uuid: 338f3648-f7ca-4a0c-990d-63af1ca82033
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.audio
+  module:
+    - text
+id: media.audio.field_description
+field_name: field_description
+entity_type: media
+bundle: audio
+label: Beschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

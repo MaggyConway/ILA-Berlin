@@ -1,0 +1,10 @@
+uuid: 1d3b14dd-9ea8-4e61-9ecb-2ead2dafcede
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.video_overlay
+label: 'Video Overlay'
+targetEntityType: media
+cache: true

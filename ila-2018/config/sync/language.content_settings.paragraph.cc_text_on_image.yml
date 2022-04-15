@@ -1,0 +1,18 @@
+uuid: 99176bd8-a91e-48aa-ba3d-3a69849f9af3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_text_on_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.cc_text_on_image
+target_entity_type_id: paragraph
+target_bundle: cc_text_on_image
+default_langcode: site_default
+language_alterable: true

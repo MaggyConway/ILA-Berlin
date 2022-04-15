@@ -1,0 +1,19 @@
+uuid: e04d1341-2000-47f8-bee8-5e31d91f6bd7
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_last_name
+id: contact_message.contact.field_last_name
+field_name: field_last_name
+entity_type: contact_message
+bundle: contact
+label: Nachname
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+name: 'Page - Contact'
+description: 'Page "Contact" configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - contact_block
+  - ila_contact_contact
+  - page_manager
+  - panels
+package: ILA

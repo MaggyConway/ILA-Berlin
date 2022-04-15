@@ -1,0 +1,21 @@
+uuid: 2ae3e05e-665b-459f-8e85-d43bfb796d56
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - user
+_core:
+  default_config_hash: 11sJg-bbeZI3e9u-izMyOwsL7ZcmhfMe3KPbKxRpJ10
+id: user.field_address
+field_name: field_address
+entity_type: user
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

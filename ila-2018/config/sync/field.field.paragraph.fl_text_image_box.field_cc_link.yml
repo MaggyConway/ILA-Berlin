@@ -1,0 +1,23 @@
+uuid: 1ddf484c-b247-4ea9-815e-ff5737b71e3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_link
+    - paragraphs.paragraphs_type.fl_text_image_box
+  module:
+    - link
+id: paragraph.fl_text_image_box.field_cc_link
+field_name: field_cc_link
+entity_type: paragraph
+bundle: fl_text_image_box
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

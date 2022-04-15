@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_stand_type
+    - taxonomy.vocabulary.request_a_stands
+id: taxonomy_term.request_a_stands.field_stand_type
+field_name: field_stand_type
+entity_type: taxonomy_term
+bundle: request_a_stands
+label: 'stand type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

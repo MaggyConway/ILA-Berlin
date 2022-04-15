@@ -1,0 +1,114 @@
+.block-views-blockglossary-the-speakers-block-3 {
+  h2 {
+    width: 100%;
+    max-width: 1145px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .view-glossary-the-speakers {
+    .view-content {
+      .views-table {
+        tbody {
+          tr {
+            display: flex;
+            align-items: center;
+
+            &::before {
+              display: none;
+            }
+
+            a {
+              color: $conferences-link;
+              text-decoration: underline;
+
+              @media #{$m-to-m} {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .views-field-field-portrait {
+      margin-right: 30px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .views-field-nothing {
+      margin-right: 70px;
+      padding-right: 20px;
+      flex-grow: 1;
+      position: relative;
+
+      @media #{$m-to-m} {
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+
+    .views-field-title {
+      font-weight: 700;
+    }
+
+    .views-field-node {
+      margin-top: 15px;
+
+      a {
+        @media #{$m-to-m} {
+          font-weight: 400;
+        }
+      }
+    }
+
+    .views-field-linked-in,
+    .views-field-xing {
+      position: absolute;
+      right: 0;
+
+      @media #{$m-to-m} {
+        bottom: 0;
+      }
+
+      a {
+        display: block;
+        width: 16px;
+        height: 16px;
+        font-size: 0;
+      }
+    }
+
+    .views-field-linked-in {
+      top: 0;
+
+      a {
+        background: url('../img/linkedin-icon.svg') center/100% no-repeat;
+      }
+
+      @media #{$m-to-m} {
+        right: 20px;
+        top: auto;
+      }
+    }
+
+    .views-field-xing {
+      top: 19px;
+
+      a {
+        background: url('../img/xing-icon.svg') center/100% no-repeat;
+      }
+
+      @media #{$m-to-m} {
+        right: 0;
+        top: auto;
+      }
+    }
+  }
+}

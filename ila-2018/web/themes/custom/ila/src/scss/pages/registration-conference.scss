@@ -1,0 +1,294 @@
+.path-conference {
+
+  .layout-container {
+    background: #ffffff;
+  }
+
+  .page-type--attendee-register,
+  .page-type--attendee-confirm,
+  .page-type--attendee-complete {
+
+    .layout-content {
+      padding-top: 108px;
+      min-height: 72vh;
+
+      @media screen and (max-width: 975px) {
+        padding-top: 105px;
+      }
+      @media screen and (max-width: 609px) {
+        padding-top: 64px;
+      }
+
+      .region-content {
+        padding-top: 120px;
+        @media #{$m-to-s} {
+          padding-top: 60px;
+        }
+      }
+    }
+
+    .view-conferences {
+
+      max-width: none;
+
+      .view-content {
+        & > .views-row {
+          border: none;
+
+          .views-field-title {
+            @include content-grid(0);
+            flex-basis: initial;
+            display: block;
+            width: 75%;
+            margin: 0;
+            padding: 0;
+
+            h1, a {
+              max-width: 690px;
+              color: $conferences-dark;
+              font-size: 40px;
+              font-weight: 900;
+              line-height: 1.175;
+              position: relative;
+              z-index: 1;
+              margin-bottom: 10px;
+              display: block;
+              text-transform: uppercase;
+              padding-right: 30px;
+
+              @media #{$m-to-s} {
+                font-size: 24px;
+              }
+            }
+          }
+
+          .views-field-field-date-and-time {
+            @include content-grid(20px);
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.176;
+            color: $conferences-light;
+            margin-bottom: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      &.view-display-id-block_5 {
+        max-width: 1145px;
+
+        .view-content {
+          margin: 0;
+
+          & > .views-row {
+            display: block;
+          }
+        }
+      }
+
+      &.view-display-id-block_6 {
+        padding: 0;
+
+        .view-content {
+          margin: 0;
+
+          & > .views-row {
+
+          }
+        }
+      }
+    }
+
+    .group-co-venue {
+      margin-bottom: 35px;
+    }
+
+    .node--type-conference {
+      position: relative;
+      a {
+        color: $conferences-link;
+
+        &:hover {
+          color: $conferences-dark;
+        }
+      }
+    }
+
+    .field__label, h2 {
+      color: $conferences-light;
+      text-transform: uppercase;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    .attendee-registration-title {
+      margin-bottom: 25px;
+    }
+
+    .block-attendee-registration {
+      @include content-grid(40px);
+      h2 {
+        margin-bottom: 15px;
+      }
+      .attendee-registration-form {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 890px;
+        > .form-wrapper {
+          width: 50%;
+          //flex: 0 1 50%;
+          margin-bottom: 5px;
+
+          @media #{$m-to-sm} {
+            width: 100%;
+            max-width: 400px;
+          }
+
+          &:nth-last-child(even) {
+            padding-right: 10px;
+            @media #{$m-to-sm} {
+              padding-right: 0;
+            }
+          }
+          &:nth-last-child(odd) {
+            padding-left: 10px;
+            @media #{$m-to-sm} {
+              padding-left: 0;
+            }
+          }
+
+          &.field--name-field-ar-salutation {
+            width: 100%;
+            flex: 0 1 100%;
+            padding: 0;
+            .form-select {
+              width: calc(50% - 10px);
+              padding-right: 10px;
+              @media #{$m-to-sm} {
+                width: 100%;
+                padding-right: 0;
+              }
+            }
+          }
+        }
+        .form-item {
+          input {
+            border-bottom: 1px dashed $conferences-light;
+          }
+          .form-select {
+            background: url(../img/svg/arrow-down-conference.svg) no-repeat 97% 50%;
+            background-size: 13px;
+            border-bottom: 1px dashed $conferences-light;
+          }
+        }
+        .required {
+          padding-right: 21px;
+          background-image: url(../img/required.svg);
+          background-repeat: no-repeat;
+          background-position: top right;
+          background-size: 8px;
+        }
+        .form-actions {
+          margin-top: 40px;
+          input {
+            min-width: 100px;
+            color: $conferences-light;
+            border: 1px solid currentColor;
+            border-radius: initial;
+
+            &:hover, &:focus {
+              color: $conferences-dark !important;
+              border-radius: initial;
+            }
+          }
+        }
+      }
+    }
+    .attendee-registration--your-data {
+      @include content-grid(0);
+      .views-field {
+        margin-bottom: 22px;
+        display: flex;
+
+        @media #{$m-to-s} {
+          flex-wrap: wrap;
+        }
+        .views-label {
+          display: inline-block;
+          width: 115px;
+          flex: 0 0 115px;
+          @media #{$m-to-s} {
+            width: 100%;
+            flex: 0 0 100%;
+          }
+        }
+        .field-content {
+          display: inline-block;
+          padding-left: 15px;
+          @media #{$m-to-s} {
+            width: 100%;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .block-attendee-registration-confirm {
+      @include content-grid(40px);
+    }
+    .attendee-registration-confirm {
+      margin-top: 20px;
+      .form-type-checkbox {
+        input {
+          width: auto;
+        }
+        label {
+          display: inline-block;
+          font-weight: 300;
+          padding-left: 15px;
+        }
+      }
+      .form-actions {
+        padding: 0;
+        margin-top: 40px;
+        display: inline-block;
+        input {
+          min-width: 100px;
+          color: $conferences-light;
+          border: 1px solid currentColor;
+          border-radius: initial;
+          &:hover, &:focus  {
+            color: $conferences-dark !important;
+            border-radius: initial;
+          }
+        }
+      }
+      .link-edit-data {
+        display: inline-block;
+        font-weight: 700;
+        padding: 11px 18px 13px;
+        border: 1px solid currentColor;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        background: none;
+        min-width: 100px;
+        color: $conferences-light;
+        margin-right: 15px;
+        margin-top: 40px;
+        font-family: sans-serif;
+        font-size: 14px;
+        line-height: 1.15;
+
+        &:hover, &:focus {
+          color: $conferences-dark;
+        }
+      }
+    }
+    .block-attendee-registration-complete {
+      @include content-grid(40px);
+    }
+  }
+
+}

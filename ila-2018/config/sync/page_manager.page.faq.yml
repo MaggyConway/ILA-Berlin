@@ -1,0 +1,23 @@
+uuid: bfbaa1fc-ae14-4599-a676-c5b274a46765
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: DdEcN19_y6mu0ccuNyAtW6v6we9fM8DyLiBfFO3mPrI
+id: faq
+label: FAQ
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/faq
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

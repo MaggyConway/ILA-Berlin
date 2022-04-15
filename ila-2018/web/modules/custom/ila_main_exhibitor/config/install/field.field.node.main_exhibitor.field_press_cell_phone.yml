@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_cell_phone
+    - node.type.main_exhibitor
+  module:
+    - telephone
+id: node.main_exhibitor.field_press_cell_phone
+field_name: field_press_cell_phone
+entity_type: node
+bundle: main_exhibitor
+label: 'Press Cell phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

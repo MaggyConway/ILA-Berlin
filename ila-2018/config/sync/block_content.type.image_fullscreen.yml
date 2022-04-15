@@ -1,0 +1,10 @@
+uuid: 692d9104-621a-41e7-a754-6a47f9b18a44
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: q3WBRCPiDdjpgU1oRXmIJ-7wCtyvTa7r0JMoJZ-FLk0
+id: image_fullscreen
+label: 'Image (Fullscreen)'
+revision: 0
+description: 'Full screen image block type'

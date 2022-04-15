@@ -1,0 +1,227 @@
+uuid: 1fa8d774-4a6f-4da8-a710-1df7ac8a1038
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_location
+    - field.storage.node.field_job_career_level
+    - field.storage.node.field_job_contract_type
+    - field.storage.node.field_job_offerer
+    - field.storage.node.field_job_requirements
+    - field.storage.node.field_job_starting_date
+    - search_api.server.default_database
+  module:
+    - node
+    - search_api
+    - ila_search_api
+    - search_api_solr
+id: ila_job_offers
+name: 'ILA Job Offers'
+description: ''
+read_only: false
+field_settings:
+  address_line1:
+    label: 'Location » The first line of the address block.'
+    datasource_id: 'entity:node'
+    property_path: 'field_job_location:address_line1'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_location
+  country_code:
+    label: 'Location » The two-letter country code.'
+    datasource_id: 'entity:node'
+    property_path: 'field_job_location:country_code'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_location
+  field_job_career_level:
+    label: 'Career level'
+    datasource_id: 'entity:node'
+    property_path: field_job_career_level
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_career_level
+  field_job_contract_type:
+    label: 'Contract type'
+    datasource_id: 'entity:node'
+    property_path: field_job_contract_type
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_contract_type
+  field_job_offerer:
+    label: Offerer
+    datasource_id: 'entity:node'
+    property_path: field_job_offerer
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_offerer
+  field_job_requirements:
+    label: Requirements
+    datasource_id: 'entity:node'
+    property_path: field_job_requirements
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_requirements
+  field_job_starting_date:
+    label: 'Starting date'
+    datasource_id: 'entity:node'
+    property_path: field_job_starting_date
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_starting_date
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  postal_code:
+    label: 'Location » The postal code.'
+    datasource_id: 'entity:node'
+    property_path: 'field_job_location:postal_code'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_job_location
+  revision_timestamp:
+    label: 'Revision create time'
+    datasource_id: 'entity:node'
+    property_path: revision_timestamp
+    type: date
+    dependencies:
+      module:
+        - node
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: text
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - job_offer
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ila_conferences_start_date: {  }
+  hierarchy:
+    fields:
+      field_job_career_level: taxonomy_term-parent
+      field_job_contract_type: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  aggregated_field: {  }
+  transliteration:
+    all_fields: false
+    fields:
+      - address_line1
+      - country_code
+      - field_job_career_level
+      - field_job_contract_type
+      - field_job_offerer
+      - field_job_requirements
+      - field_job_starting_date
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  tokenizer:
+    all_fields: false
+    fields:
+      - address_line1
+      - country_code
+      - field_job_career_level
+      - field_job_contract_type
+      - field_job_offerer
+      - field_job_requirements
+      - field_job_starting_date
+      - postal_code
+      - title
+      - type
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    ignored: ._-
+  ignorecase:
+    all_fields: false
+    fields:
+      - address_line1
+      - country_code
+      - field_job_career_level
+      - field_job_contract_type
+      - field_job_offerer
+      - field_job_requirements
+      - field_job_starting_date
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

@@ -1,0 +1,128 @@
+/* stylelint-disable */
+
+#block-futurelabfooter .menu {
+  @include list-reset;
+
+  &__item {
+    margin-right: 70px;
+    display: inline-block;
+
+    &:last-of-type {
+      @media screen and (max-width: 480px) {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+      color: $c-white;
+      transition: .3s;
+
+      &:hover,
+      &:focus {
+        // color: $c-blue-normal;
+        outline: none;
+      }
+    }
+  }
+}
+
+.menu--social {
+  @media screen and (max-width: 480px) {
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    @include list-reset;
+
+    font-size: 0;
+
+    &__item {
+      margin-left: 20px;
+      display: inline-block;
+
+      a {
+        display: block;
+        width: 33px;
+        height: 33px;
+        color: $c-white;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        transition: .3s;
+
+        &:hover,
+        &:focus {
+          color: $c-blue-light;
+          outline: none;
+        }
+
+        &.icon-twitter {
+          background: url('../../assets/images/twitter.svg') center no-repeat;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../assets/images/twitter-hover.svg');
+          }
+        }
+
+        &.icon-facebook {
+          background: url('../../assets/images/facebook.svg') center no-repeat;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../assets/images/facebook-hover.svg');
+          }
+        }
+
+        &.icon-instagram {
+          background: url('../../assets/images/instagram.svg') center no-repeat;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../assets/images/instagram-hover.svg');
+          }
+        }
+
+        &.icon-youtube {
+          background: url('../../assets/images/youtube.svg') center no-repeat;
+          background-size: 19px auto;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../assets/images/youtube-hover.svg');
+          }
+        }
+
+        &.icon-linkedin {
+          background: url('../../assets/images/linkedin.svg') center no-repeat;
+          background-size: 15px auto;
+
+          &:hover,
+          &:focus {
+            background-image: url('../../assets/images/linkedin-hover.svg');
+          }
+        }
+      }
+    }
+  }
+}
+
+.back-to-top {
+  &__link {
+    display: block;
+    width: 33px;
+    height: 33px;
+    font-size: 0;
+    background-image: url('../../assets/images/arrow-up.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+  }
+}
+
+/* stylelint-enable */

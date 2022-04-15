@@ -1,0 +1,241 @@
+display:
+  page_2:
+    display_options:
+      filters:
+        status_1:
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: veröffentlicht
+              2:
+                title: unveröffentlicht
+          expose:
+            label: status
+        field_media_file_type_category_value:
+          expose:
+            label: 'Datei Typ / Kategorie'
+      fields:
+        field_image:
+          label: Vorschaubild
+        type:
+          label: Inhaltstyp
+        field_press_media_category:
+          label: 'Press Media Kategorie'
+        field_media_file_type_category:
+          label: 'Datei Typ / Kategorie'
+        uid:
+          label: 'geschrieben von'
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten
+        node_bulk_form:
+          action_title: Aktion
+        status:
+          settings:
+            format_custom_true: veröffentlicht
+            format_custom_false: unveröffentlicht
+  page_3:
+    display_options:
+      filters:
+        type_1:
+          expose:
+            label: Inhaltstyp
+        status_1:
+          expose:
+            label: ''
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: veröffentlicht
+              2:
+                title: unveröffentlicht
+        title:
+          expose:
+            label: Titel
+      fields:
+        type:
+          label: Inhaltstyp
+        uid:
+          label: 'geschrieben von'
+        status:
+          settings:
+            format_custom_true: veröffentlicht
+            format_custom_false: unveröffentlicht
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten
+  page_4:
+    display_options:
+      fields:
+        type:
+          label: Inhaltstyp
+        field_download_category:
+          label: Kategorie
+        field_downloads_hide_from_view:
+          label: 'auf Download Seite'
+          settings:
+            format_custom_true: nein
+            format_custom_false: ja
+        uid:
+          label: 'geschrieben von'
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten
+        status:
+          settings:
+            format_custom_true: veröffentlicht
+            format_custom_false: unveröffentlicht
+      filters:
+        title:
+          expose:
+            label: Titel
+        field_download_category_target_id:
+          expose:
+            label: Kategorie
+        status_1:
+          expose:
+            label: Status
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: veröffentlicht
+              2:
+                title: unveröffentlicht
+        field_downloads_hide_from_view_value:
+          group_info:
+            label: 'Auf Download Seite?'
+            group_items:
+              1:
+                title: ausgeschlossen
+              2:
+                title: eingeschlossen
+  default:
+    display_options:
+      fields:
+        node_bulk_form:
+          action_title: Aktion
+        type:
+          label: Inhaltstyp
+        uid:
+          label: 'geschrieben von'
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten
+      filters:
+        status_1:
+          expose:
+            label: Status
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: veröffentlicht
+              2:
+                title: unveröffentlicht
+      exposed_form:
+        options:
+          submit_button: anwenden
+          reset_button_label: zurücksetzen
+          exposed_sorts_label: sortieren
+          sort_asc_label: aufsteigend
+          sort_desc_label: absteigend
+  page_5:
+    display_title: Konferenzen
+    display_options:
+      title: Konferenzen
+      menu:
+        title: Konferenzen
+      filters:
+        title:
+          expose:
+            label: Titel
+        status_1:
+          expose:
+            label: Status
+          group_info:
+            label: Status
+      fields:
+        node_bulk_form:
+          action_title: Aktion
+        uid:
+          label: 'geschrieben von'
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten
+  page_6:
+    display_options:
+      filters:
+        title:
+          expose:
+            label: Titel
+        status_1:
+          expose:
+            label: Status
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: veröffentlicht
+              2:
+                title: unveröffentlicht
+      fields:
+        node_bulk_form:
+          action_title: Aktion
+        uid:
+          label: 'geschrieben von'
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten
+  page_7:
+    display_options:
+      filters:
+        title:
+          expose:
+            label: Titel
+        status_1:
+          expose:
+            label: Status
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: veröffentlicht
+              2:
+                title: unervöffentlicht
+        field_event_category_target_id:
+          expose:
+            label: 'Event Kategorie'
+      fields:
+        node_bulk_form:
+          action_title: Aktion
+        field_event_category:
+          label: 'Event Kategorie'
+        uid:
+          label: 'geschrieben von'
+        created:
+          label: 'geschrieben am'
+        changed:
+          label: 'geändert am'
+        operations:
+          label: bearbeiten

@@ -1,0 +1,20 @@
+uuid: c8d1461f-c052-4d30-978c-0dcf3f9ddba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_position
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_position
+field_name: field_ar_position
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Position
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

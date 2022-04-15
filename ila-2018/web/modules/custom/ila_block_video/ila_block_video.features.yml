@@ -1,0 +1,4 @@
+excluded:
+  - field.storage.block_content.field_image
+  - field.storage.block_content.field_video
+required: true

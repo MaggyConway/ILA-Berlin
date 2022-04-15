@@ -1,0 +1,19 @@
+uuid: ac9a8dbd-d50c-4651-b7bc-4795fba519ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_and_more
+    - field.storage.block_content.field_sub_title
+id: block_content.video_and_more.field_sub_title
+field_name: field_sub_title
+entity_type: block_content
+bundle: video_and_more
+label: 'Sub title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

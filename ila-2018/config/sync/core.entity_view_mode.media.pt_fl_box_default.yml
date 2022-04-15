@@ -1,0 +1,10 @@
+uuid: 0026e46e-f17b-44c7-8bf8-dbdb4934b8e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_box_default
+label: 'PT FL Box: Default'
+targetEntityType: media
+cache: true

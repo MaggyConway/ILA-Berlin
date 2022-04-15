@@ -1,0 +1,247 @@
+uuid: eb86c8b7-71a3-4fdb-9759-8622b79422a7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_career_center
+    - field.storage.node.field_co_add_to_my_calendar
+    - field.storage.node.field_co_conference_languages
+    - field.storage.node.field_co_location
+    - field.storage.node.field_co_programm
+    - field.storage.node.field_co_teaser_text
+    - field.storage.node.field_date_and_time
+    - field.storage.node.field_ev_venue
+    - field.storage.node.field_event_category
+    - field.storage.node.field_future_lab
+    - field.storage.node.field_press_category
+    - field.storage.node.field_teaser_text
+    - field.storage.node.field_topic
+    - search_api.server.default_database
+  module:
+    - content_translation
+    - node
+    - search_api
+    - ila_search_api
+    - search_api_solr
+id: ila_events_and_conferences
+name: 'ILA Events and Conferences'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  content_translation_source:
+    label: Übersetzungsquelle
+    datasource_id: 'entity:node'
+    property_path: content_translation_source
+    type: string
+    dependencies:
+      module:
+        - content_translation
+  field_career_center:
+    label: 'Career Center'
+    datasource_id: 'entity:node'
+    property_path: field_career_center
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_career_center
+  field_co_add_to_my_calendar:
+    label: Kalendereintrag
+    datasource_id: 'entity:node'
+    property_path: field_co_add_to_my_calendar
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_add_to_my_calendar
+  field_co_add_to_my_calendar_1:
+    label: Kalendereintrag
+    datasource_id: 'entity:node'
+    property_path: field_co_add_to_my_calendar
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_add_to_my_calendar
+  field_co_conference_languages:
+    label: 'Konferenz Sprachen'
+    datasource_id: 'entity:node'
+    property_path: field_co_conference_languages
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_co_conference_languages
+  field_co_location:
+    label: Ort
+    datasource_id: 'entity:node'
+    property_path: field_co_location
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_location
+  field_co_programm:
+    label: Konferenzprogramm
+    datasource_id: 'entity:node'
+    property_path: field_co_programm
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_programm
+  field_co_teaser_text:
+    label: 'Konferenz Teaser Text'
+    datasource_id: 'entity:node'
+    property_path: field_co_teaser_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_teaser_text
+  field_date_and_time:
+    label: 'Datum und Uhrzeit'
+    datasource_id: 'entity:node'
+    property_path: field_date_and_time
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_and_time
+  field_ev_venue:
+    label: Ort
+    datasource_id: 'entity:node'
+    property_path: field_ev_venue
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_ev_venue
+  field_event_category:
+    label: 'Kategorie (Event Terms)'
+    datasource_id: 'entity:node'
+    property_path: field_event_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_category
+  field_future_lab:
+    label: 'Future Lab'
+    datasource_id: 'entity:node'
+    property_path: field_future_lab
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_future_lab
+  field_press_category:
+    label: 'Presse Kategorie'
+    datasource_id: 'entity:node'
+    property_path: field_press_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_press_category
+  field_teaser_text:
+    label: 'Teaser Text'
+    datasource_id: 'entity:node'
+    property_path: field_teaser_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_teaser_text
+  field_topic:
+    label: Thema
+    datasource_id: 'entity:node'
+    property_path: field_topic
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_topic
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  title:
+    label: Titel
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - conference
+        - event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ila_conferences_start_date: {  }
+  hierarchy:
+    fields:
+      field_career_center: taxonomy_term-parent
+      field_event_category: taxonomy_term-parent
+      field_future_lab: taxonomy_term-parent
+      field_press_category: taxonomy_term-parent
+      field_topic: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  aggregated_field: {  }
+  entity_status: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - content_translation_source
+      - field_career_center
+      - field_co_conference_languages
+      - field_co_location
+      - field_co_programm
+      - field_co_teaser_text
+      - field_ev_venue
+      - field_event_category
+      - field_future_lab
+      - field_press_category
+      - field_teaser_text
+      - field_topic
+      - langcode
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

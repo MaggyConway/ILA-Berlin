@@ -1,0 +1,64 @@
+uuid: c75580f8-6974-46fe-8ebc-2e86c4ac1375
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.megamenu
+    - field.field.block_content.megamenu.field_block_1
+    - field.field.block_content.megamenu.field_block_2
+    - field.field.block_content.megamenu.field_block_3
+    - field.field.block_content.megamenu.field_block_4
+  module:
+    - block_field
+id: block_content.megamenu.default
+targetEntityType: block_content
+bundle: megamenu
+mode: default
+content:
+  field_block_1:
+    weight: 27
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_2:
+    weight: 28
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_3:
+    weight: 29
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_4:
+    weight: 30
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,7 @@
+request_fb_1:
+  version: VERSION
+  js:
+    js/request-fb1.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

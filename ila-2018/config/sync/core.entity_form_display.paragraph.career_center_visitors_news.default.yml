@@ -1,0 +1,35 @@
+uuid: cc255657-2571-47f7-aaf4-d3cc5694ef91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.career_center_visitors_news.field_visitors_news_container
+    - paragraphs.paragraphs_type.career_center_visitors_news
+  module:
+    - paragraphs
+id: paragraph.career_center_visitors_news.default
+targetEntityType: paragraph
+bundle: career_center_visitors_news
+mode: default
+content:
+  field_visitors_news_container:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: cc_news_block
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

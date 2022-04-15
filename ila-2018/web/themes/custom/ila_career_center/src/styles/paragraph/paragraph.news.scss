@@ -1,0 +1,254 @@
+.paragraph-content--view-display-id-ila_news_career_center {
+  margin: 30px 0;
+  padding: 0 20px;
+  width: 100%;
+
+  @media #{$m-to-m} {
+    margin: 0;
+    padding: 0;
+  }
+
+  .view-careercenter-content-list {
+    position: relative;
+    margin-top: 20px;
+    margin-right: 90px;
+    margin-left: 90px;
+    background: #ffffff;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: block;
+      content: '';
+
+      @media #{$m-to-m} {
+        width: 50%;
+      }
+    }
+
+    &::before {
+      top: 40px;
+      left: 0;
+      width: 53%;
+      background: url('../../assets/images/diagonal-lines-light.svg') repeat,
+        rgba(114, 255, 46, .4);
+
+      @media #{$m-to-m} {
+        top: 20px;
+      }
+    }
+
+    &::after {
+      right: 0;
+      bottom: 100px;
+      width: 47%;
+      background: url('../../assets/images/diagonal-lines-light-scale.svg') repeat,
+        rgba(114, 255, 46, .4);
+
+      @media #{$m-to-m} {
+        bottom: 70px;
+      }
+    }
+
+    @media #{$m-to-2l} {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+
+    @media #{$m-to-m} {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .view-header {
+    position: relative;
+    z-index: 2;
+    top: -20px;
+    right: 0;
+    left: 0;
+    margin-bottom: 40px;
+    width: 100%;
+
+    .news-header {
+      margin: 0 auto;
+      padding: 7px;
+      width: 100%;
+      max-width: 400px;
+      font-family: $career-font;
+      font-size: 62px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      color: $career-dark;
+      background: $career-green;
+
+      @media #{$m-to-m} {
+        max-width: 120px;
+        font-size: 32px;
+      }
+    }
+  }
+
+  .view-content {
+    position: relative;
+    z-index: 2;
+    margin: 0 -90px;
+
+    @media #{$m-to-2l} {
+      margin: 0 -30px;
+    }
+
+    @media #{$m-to-m} {
+      margin: 0;
+    }
+
+    .views-row {
+      position: relative;
+      margin: 0 40px 40px;
+      width: calc(100% / 3 - 80px);
+      background: $c-white;
+      border: 1px solid $career-dark;
+      box-shadow: 5px 5px 0 0 $career-green;
+
+      @media #{$m-to-xl} {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: calc(100% / 3 - 40px);
+      }
+
+      @media #{$m-to-2l} {
+        margin-right: 10px;
+        margin-left: 10px;
+        width: calc(100% - 20px);
+      }
+    }
+
+    .node--type-news {
+      padding: 20px 30px;
+      height: 100%;
+    }
+
+    .layout__region--content {
+      @media #{$m-to-m} {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .views-infinite-scroll-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .field--name-field-media-teaser-image {
+    position: relative;
+    margin-top: -40px;
+    margin-right: 20px;
+    margin-left: -60px;
+    display: inline-block;
+    overflow: hidden;
+    width: 65%;
+    max-width: 180px;
+    max-height: 150px;
+
+    @media #{$m-to-4xl} {
+      width: auto;
+    }
+
+    @media #{$m-to-m} {
+      margin-top: -20px;
+      margin-bottom: -20px;
+      margin-left: -30px;
+      max-width: 130px;
+      max-height: 100%;
+    }
+  }
+
+  .field--name-node-title {
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 700;
+    vertical-align: top;
+    color: $career-dark;
+
+    @media #{$m-to-m} {
+      font-size: 17px;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-size: 21px;
+
+      @media #{$m-to-m} {
+        font-size: 17px;
+      }
+    }
+
+    a {
+      display: block;
+      color: $career-dark;
+    }
+  }
+
+  .field--name-field-media-teaser-image + .field--name-node-title {
+    width: 45%;
+
+    @media #{$m-to-4xl} {
+      width: auto;
+    }
+  }
+
+  .field--name-field-teaser-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    width: 100%;
+    font-size: 15px;
+    color: $career-dark;
+    border-top: 3px solid $career-green;
+
+    a {
+      display: block;
+      color: $career-dark;
+    }
+
+    @media #{$m-to-m} {
+      display: none;
+    }
+  }
+
+  .field--name-node-link {
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 45px;
+      height: 25px;
+      font-size: 0;
+      background: url('../../assets/images/long-arrow-right.svg') center no-repeat;
+    }
+  }
+
+  .pager {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 41px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .button {
+    @extend .button-career;
+  }
+}

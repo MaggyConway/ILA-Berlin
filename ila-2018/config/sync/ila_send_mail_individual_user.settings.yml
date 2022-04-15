@@ -1,0 +1,6 @@
+message:
+  subject: 'ILA Berlin 2020 | Conference created: @title'
+  body: "\r\nDear Sir / Madam\r\n\r\nYou can now edit your own conference page (de/en): @link\r\n\r\nPlease do not hesitate to contact us."
+disabled_fields: {  }
+_core:
+  default_config_hash: iNT89UeOEssObv043_Up5UuWkMkUzrMz5nxyQEIAKMQ

@@ -1,0 +1,21 @@
+uuid: 34c079b9-6d52-4cef-978e-bcad0809a2af
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_if_text
+    - paragraphs.paragraphs_type.image_full
+  module:
+    - text
+id: paragraph.image_full.field_if_text
+field_name: field_if_text
+entity_type: paragraph
+bundle: image_full
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

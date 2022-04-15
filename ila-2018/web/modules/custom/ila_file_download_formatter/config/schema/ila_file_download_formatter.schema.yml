@@ -1,0 +1,10 @@
+field.formatter.settings.ila_download_link:
+  type: mapping
+  label: 'Download link text'
+  mapping:
+    label_source:
+      type: string
+      label: 'Label source'
+    link_text:
+      type: string
+      label: 'Link text'

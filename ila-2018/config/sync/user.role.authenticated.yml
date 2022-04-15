@@ -1,0 +1,34 @@
+uuid: ea297e11-ff86-4ed3-82ba-8903cd405309
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iicZXek7-gWO0JkMKmSY22lxwyCAaAxXphkVM7VT-3I
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access email confirmation'
+  - 'access site-wide contact form'
+  - 'add attendee registration entities'
+  - 'create co_exhibitor content'
+  - 'create main_exhibitor content'
+  - 'create reqest_b content'
+  - 'create request_c content'
+  - 'create request_d content'
+  - 'create request_e content'
+  - 'create request_exhibition_space content'
+  - 'create request_f content'
+  - 'create request_fb_1 content'
+  - 'display eu cookie compliance popup'
+  - 'edit own co_exhibitor content'
+  - 'edit own main_exhibitor content'
+  - 'flag flag'
+  - 'unflag flag'
+  - 'use text format filtered_html'
+  - 'view config_pages entity'
+  - 'view field_date_and_time'
+  - 'view media'
+  - 'view published simple mega menu entities'

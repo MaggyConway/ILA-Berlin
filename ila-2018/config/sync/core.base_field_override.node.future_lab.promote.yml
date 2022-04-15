@@ -1,0 +1,22 @@
+uuid: 7d6a7b98-cd4b-4604-a7f8-ba8aaf830af2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.promote
+field_name: promote
+entity_type: node
+bundle: future_lab
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

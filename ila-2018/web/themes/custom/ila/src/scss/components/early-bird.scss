@@ -1,0 +1,58 @@
+.layout__region--header .block-early-bird {
+  position: absolute;
+  bottom: 10vh;
+  left: auto;
+  right: 8vw;
+
+  @media #{$m-to-sm} {
+    bottom: calc(10vh + 270px) !important;
+    right: 8vw !important;
+  }
+
+  @media #{$m-xl-xxl} {
+    position: absolute;
+    bottom: 37vh;
+    right: 0vh;
+  }
+
+  .early-bird {
+    .desktop-image {
+
+      @media #{$m-to-sm} {
+        display: none;
+      }
+
+    }
+
+    .mobile-image {
+      display: none;
+
+      @media #{$m-to-sm} {
+        position: relative;
+        left: 44px;
+        display: block;
+      }
+    }
+  }
+}
+
+.layout__region--header {
+  .block-simple-blockticket-shop {
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    bottom: 57vH;
+    right: 58vw;
+    @media (min-width: 600px) {
+      bottom: 37vH;
+      right: 45vw;
+    }
+    @media (min-width: 900px) {
+      bottom: 10vH;
+      right: 40vw;
+    }
+    @media (min-width: 1200px) {
+      right: 25vw;
+    }
+  }
+}

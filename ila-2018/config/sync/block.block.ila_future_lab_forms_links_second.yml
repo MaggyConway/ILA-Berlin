@@ -1,0 +1,27 @@
+uuid: 92830ac6-9bde-41b5-b1ab-a2619f5b5987
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.forms
+  module:
+    - system
+  theme:
+    - ila_future_lab
+_core:
+  default_config_hash: JK0akeibapk9ZocUWVsnZbbLnWdby16FEXyFgjH6Hm4
+id: ila_future_lab_forms_links_second
+theme: ila_future_lab
+region: header_top_main_nav
+weight: -5
+provider: null
+plugin: 'system_menu_block:forms'
+settings:
+  id: 'system_menu_block:forms'
+  label: Formulare
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

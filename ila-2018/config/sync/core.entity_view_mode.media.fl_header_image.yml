@@ -1,0 +1,10 @@
+uuid: 253efc79-f0e0-4512-9712-e95b915c8922
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.fl_header_image
+label: 'FL Header Image'
+targetEntityType: media
+cache: true

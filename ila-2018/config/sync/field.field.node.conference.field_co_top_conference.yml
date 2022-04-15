@@ -1,0 +1,23 @@
+uuid: aef56df6-0706-426e-bcb1-3f2dcd6173cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_top_conference
+    - node.type.conference
+id: node.conference.field_co_top_conference
+field_name: field_co_top_conference
+entity_type: node
+bundle: conference
+label: 'Top Conference'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

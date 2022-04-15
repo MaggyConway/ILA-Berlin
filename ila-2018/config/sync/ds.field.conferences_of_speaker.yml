@@ -1,0 +1,19 @@
+id: conferences_of_speaker
+label: 'Conferences of speaker'
+ui_limit: 'speaker|*'
+properties:
+  block: 'views_block:conferences-block_7'
+  use_block_title: true
+  add_block_wrappers: true
+  config:
+    id: 'views_block:conferences-block_7'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: none
+    context_mapping: {  }
+type: block
+type_label: 'Block field'
+entities:
+  node: node

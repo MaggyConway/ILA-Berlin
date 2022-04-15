@@ -1,0 +1,28 @@
+uuid: 73c37aca-eb91-47fd-85cc-083ee5f2991b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sl_images_media
+    - media.type.image
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.field_sl_images_media
+field_name: field_sl_images_media
+entity_type: paragraph
+bundle: slideshow
+label: 'Bilder (Media)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

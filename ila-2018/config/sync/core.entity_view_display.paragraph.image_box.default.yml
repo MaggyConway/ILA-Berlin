@@ -1,0 +1,118 @@
+uuid: 5a51db5f-d4c9-4435-8ecb-89f451fa35b9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_box.field_ib_image
+    - field.field.paragraph.image_box.field_ib_style
+    - field.field.paragraph.image_box.field_ib_text
+    - field.field.paragraph.image_box.field_layout_option
+    - field.field.paragraph.image_box.field_media
+    - field.field.paragraph.image_box.field_title
+    - image.style.original_image
+    - paragraphs.paragraphs_type.image_box
+  module:
+    - ds
+    - field_group
+    - svg_image
+    - text
+third_party_settings:
+  field_group:
+    group_image_box_wrapper:
+      children:
+        - field_ib_image
+        - field_media
+        - field_ib_text
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: image-box-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: image-box-wrapper
+      region: content
+    group_image_box_title:
+      children:
+        - field_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        element: h2
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: image-box-title
+id: paragraph.image_box.default
+targetEntityType: paragraph
+bundle: image_box
+mode: default
+content:
+  field_ib_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: original_image
+      image_link: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_ib_text:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_media:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: pt_bild_video_box_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_ib_style: true
+  field_layout_option: true
+  search_api_excerpt: true

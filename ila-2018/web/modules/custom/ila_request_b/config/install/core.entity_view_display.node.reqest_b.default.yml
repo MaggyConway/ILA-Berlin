@@ -1,0 +1,100 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.reqest_b.field_chalet_rental_fee
+    - field.field.node.reqest_b.field_chalet_rental_fee_excludin
+    - field.field.node.reqest_b.field_download_chalet_specificat
+    - field.field.node.reqest_b.field_product_group
+    - field.field.node.reqest_b.field_product_group_index
+    - field.field.node.reqest_b.field_request_b_comments
+    - field.field.node.reqest_b.field_request_b_deadline_chalet
+    - field.field.node.reqest_b.field_request_b_down_payment
+    - field.field.node.reqest_b.field_request_b_following_servic
+    - field.field.node.reqest_b.field_request_b_plus_advertising
+    - node.type.reqest_b
+  module:
+    - markup
+    - user
+id: node.reqest_b.default
+targetEntityType: node
+bundle: reqest_b
+mode: default
+content:
+  field_chalet_rental_fee:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_chalet_rental_fee_excludin:
+    weight: 110
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_download_chalet_specificat:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_group_index:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_comments:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_request_b_deadline_chalet:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_down_payment:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_following_servic:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_b_plus_advertising:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

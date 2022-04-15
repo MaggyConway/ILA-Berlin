@@ -1,0 +1,11 @@
+uuid: 35688330-55f7-4504-ba15-f245b1be021b
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: ticket_shop
+title: 'Ticket Shop'
+content:
+  value: "<drupal-entity data-embed-button=\"media_entity_embed\" data-entity-embed-display=\"view_mode:media.embedded\" data-entity-embed-display-settings=\"\" data-entity-type=\"media\" data-entity-uuid=\"2cbe42af-ea80-476f-8661-b9afc0f7ce9b\"></drupal-entity>\r\n"
+  format: full_html

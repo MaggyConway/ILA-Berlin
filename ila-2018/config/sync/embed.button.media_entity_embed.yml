@@ -1,0 +1,36 @@
+uuid: ff68f968-6d77-427b-bc3a-b17d02888503
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.embedded_big
+    - entity_browser.browser.embedd_browser
+    - media.type.audio
+    - media.type.embedded_video
+    - media.type.file
+    - media.type.image
+    - media.type.local_video
+  module:
+    - entity_embed
+    - media
+_core:
+  default_config_hash: uDFr71znDwk7GjuKOoGMVNXOEuC0_cse0NdhYARcWu0
+label: 'Media Entity Embed'
+id: media_entity_embed
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - audio
+    - image
+    - file
+    - embedded_video
+    - local_video
+  display_plugins:
+    - 'view_mode:media.embedded'
+    - 'view_mode:media.embedded_big'
+  entity_browser: embedd_browser
+  entity_browser_settings:
+    display_review: true
+icon_uuid: null

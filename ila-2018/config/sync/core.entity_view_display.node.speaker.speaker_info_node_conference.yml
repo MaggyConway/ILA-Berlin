@@ -1,0 +1,119 @@
+uuid: 8dd9226c-6be3-4dab-ab3e-b1170565fc5f
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.speaker_info_node_conference
+    - field.field.node.speaker.field_activities
+    - field.field.node.speaker.field_bio
+    - field.field.node.speaker.field_first_name
+    - field.field.node.speaker.field_linked_in
+    - field.field.node.speaker.field_portrait
+    - field.field.node.speaker.field_position
+    - field.field.node.speaker.field_sp_title
+    - field.field.node.speaker.field_surname
+    - field.field.node.speaker.field_top_speaker
+    - field.field.node.speaker.field_xing
+    - node.type.speaker
+  module:
+    - ds
+    - link
+    - user
+id: node.speaker.speaker_info_node_conference
+targetEntityType: node
+bundle: speaker
+mode: speaker_info_node_conference
+content:
+  field_first_name:
+    type: string
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_linked_in:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      target: _blank
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+  field_portrait:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: ct_speaker_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_position:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sp_title:
+    type: string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_surname:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_xing:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      target: _blank
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: content
+hidden:
+  addtoany: true
+  field_activities: true
+  field_bio: true
+  field_top_speaker: true
+  langcode: true
+  links: true

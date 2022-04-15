@@ -1,0 +1,21 @@
+uuid: 34f74273-436c-4144-a12b-a7bd5ae6b7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_display_time
+    - node.type.aircraft
+  module:
+    - datetime_range
+id: node.aircraft.field_air_display_time
+field_name: field_air_display_time
+entity_type: node
+bundle: aircraft
+label: 'Display Time'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

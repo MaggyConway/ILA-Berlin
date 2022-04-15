@@ -1,0 +1,820 @@
+uuid: ff8c9ff4-6078-4e22-93ce-8eb106a5f830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_paragraphs
+    - field.storage.paragraph.field_block_reference_text
+    - field.storage.paragraph.field_body
+    - field.storage.paragraph.field_cc_link_box_subtitle
+    - field.storage.paragraph.field_cc_link_box_title
+    - field.storage.paragraph.field_cc_news_block_body
+    - field.storage.paragraph.field_cc_news_block_title
+    - field.storage.paragraph.field_cc_text
+    - field.storage.paragraph.field_cc_text_box_text
+    - field.storage.paragraph.field_cc_text_box_title
+    - field.storage.paragraph.field_cc_text_on_image_text
+    - field.storage.paragraph.field_cc_tiled_title_subtitle
+    - field.storage.paragraph.field_cc_tiled_title_title
+    - field.storage.node.field_co_location
+    - field.storage.node.field_co_more_info
+    - field.storage.node.field_co_programm
+    - field.storage.node.field_co_teaser_text
+    - field.storage.paragraph.field_company_list_title
+    - field.storage.paragraph.field_container_title
+    - field.storage.paragraph.field_cs_subtitle
+    - field.storage.paragraph.field_cs_text_left
+    - field.storage.paragraph.field_cs_text_right
+    - field.storage.paragraph.field_description
+    - field.storage.paragraph.field_exhibition_description
+    - field.storage.paragraph.field_faq_group_title
+    - field.storage.paragraph.field_faq_subtitle
+    - field.storage.paragraph.field_faq_title
+    - field.storage.paragraph.field_ib_text
+    - field.storage.paragraph.field_if_text
+    - field.storage.node.field_info_box
+    - field.storage.paragraph.field_info_text
+    - field.storage.paragraph.field_infographic_column_title
+    - field.storage.paragraph.field_lb_subtitle
+    - field.storage.paragraph.field_lb_text
+    - field.storage.paragraph.field_lb_title
+    - field.storage.paragraph.field_left_column
+    - field.storage.paragraph.field_link_list_text
+    - field.storage.paragraph.field_name
+    - field.storage.paragraph.field_quote_body
+    - field.storage.paragraph.field_right_column
+    - field.storage.node.field_section_page_body
+    - field.storage.paragraph.field_subtitle
+    - field.storage.paragraph.field_tb_text
+    - field.storage.paragraph.field_tb_title
+    - field.storage.paragraph.field_tbs_paragraph_ref
+    - field.storage.paragraph.field_tbs_title
+    - field.storage.node.field_teaser_text
+    - field.storage.node.field_text_left
+    - field.storage.node.field_text_right
+    - field.storage.paragraph.field_tit_text
+    - field.storage.paragraph.field_tit_title
+    - field.storage.paragraph.field_twitter_description
+    - field.storage.paragraph.field_twitter_text
+    - search_api.server.default_database
+  module:
+    - node
+    - paragraphs
+    - search_api
+    - ila_search_api
+    - search_api_solr
+id: ila_global_search
+name: 'ILA Global Search'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Beschreibung
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_block_reference_text:
+    label: 'Paragraphs » Paragraph » text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_block_reference_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_block_reference_text
+      module:
+        - paragraphs
+  field_body:
+    label: 'Paragraphs » Paragraph » Body'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_body'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_body
+      module:
+        - paragraphs
+  field_cc_link_box_subtitle:
+    label: 'Paragraphs » Paragraph » Subtitle'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_link_box_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_link_box_subtitle
+      module:
+        - paragraphs
+  field_cc_link_box_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_link_box_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_link_box_title
+      module:
+        - paragraphs
+  field_cc_news_block_body:
+    label: 'Paragraphs » Paragraph » Body'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_news_block_body'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_news_block_body
+      module:
+        - paragraphs
+  field_cc_news_block_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_news_block_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_news_block_title
+      module:
+        - paragraphs
+  field_cc_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_text
+      module:
+        - paragraphs
+  field_cc_text_box_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_text_box_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_text_box_text
+      module:
+        - paragraphs
+  field_cc_text_box_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_text_box_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_text_box_title
+      module:
+        - paragraphs
+  field_cc_text_on_image_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_text_on_image_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_text_on_image_text
+      module:
+        - paragraphs
+  field_cc_tiled_title_subtitle:
+    label: 'Paragraphs » Paragraph » Subtitle'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_tiled_title_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_tiled_title_subtitle
+      module:
+        - paragraphs
+  field_cc_tiled_title_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cc_tiled_title_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cc_tiled_title_title
+      module:
+        - paragraphs
+  field_co_location:
+    label: Location
+    datasource_id: 'entity:node'
+    property_path: field_co_location
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_location
+  field_co_more_info:
+    label: 'More Information'
+    datasource_id: 'entity:node'
+    property_path: field_co_more_info
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_more_info
+  field_co_programm:
+    label: 'Conference Programm'
+    datasource_id: 'entity:node'
+    property_path: field_co_programm
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_programm
+  field_co_teaser_text:
+    label: 'Conference teaser text'
+    datasource_id: 'entity:node'
+    property_path: field_co_teaser_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_teaser_text
+  field_company_list_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_company_list_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_company_list_title
+      module:
+        - paragraphs
+  field_container_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_container_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_container_title
+      module:
+        - paragraphs
+  field_cs_subtitle:
+    label: 'Paragraphs » Paragraph » Subtitle'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cs_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cs_subtitle
+      module:
+        - paragraphs
+  field_cs_text_left:
+    label: 'Paragraphs » Paragraph » Text left'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cs_text_left'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cs_text_left
+      module:
+        - paragraphs
+  field_cs_text_right:
+    label: 'Paragraphs » Paragraph » Text right'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_cs_text_right'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_cs_text_right
+      module:
+        - paragraphs
+  field_description:
+    label: 'Paragraphs » Paragraph » Position/Company'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_description
+      module:
+        - paragraphs
+  field_exhibition_description:
+    label: 'Paragraphs » Paragraph » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_exhibition_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_exhibition_description
+      module:
+        - paragraphs
+  field_faq_group_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_faq_group_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_faq_group_title
+      module:
+        - paragraphs
+  field_faq_subtitle:
+    label: 'Paragraphs » Paragraph » Subtitle'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_faq_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_faq_subtitle
+      module:
+        - paragraphs
+  field_faq_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_faq_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_faq_title
+      module:
+        - paragraphs
+  field_ib_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_ib_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_ib_text
+      module:
+        - paragraphs
+  field_if_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_if_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_if_text
+      module:
+        - paragraphs
+  field_info_box:
+    label: 'Info Box'
+    datasource_id: 'entity:node'
+    property_path: field_info_box
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_info_box
+  field_info_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_info_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_info_text
+      module:
+        - paragraphs
+  field_infographic_column_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_infographic_column_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_infographic_column_title
+      module:
+        - paragraphs
+  field_lb_subtitle:
+    label: 'Paragraphs » Paragraph » Subtitle'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_lb_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_lb_subtitle
+      module:
+        - paragraphs
+  field_lb_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_lb_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_lb_text
+      module:
+        - paragraphs
+  field_lb_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_lb_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_lb_title
+      module:
+        - paragraphs
+  field_left_column:
+    label: 'Paragraphs » Paragraph » Left column'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_left_column'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_left_column
+      module:
+        - paragraphs
+  field_link_list_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_link_list_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_link_list_text
+      module:
+        - paragraphs
+  field_name:
+    label: 'Paragraphs » Paragraph » Name, Title, First Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_name
+      module:
+        - paragraphs
+  field_quote_body:
+    label: 'Paragraphs » Paragraph » Body'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_quote_body'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_quote_body
+      module:
+        - paragraphs
+  field_right_column:
+    label: 'Paragraphs » Paragraph » Right column'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_right_column'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_right_column
+      module:
+        - paragraphs
+  field_section_page_body:
+    label: 'Page body'
+    datasource_id: 'entity:node'
+    property_path: field_section_page_body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_section_page_body
+  field_subtitle:
+    label: 'Paragraphs » Paragraph » Subtitle'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_subtitle
+      module:
+        - paragraphs
+  field_tb_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_tb_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_tb_text
+      module:
+        - paragraphs
+  field_tb_title:
+    label: 'Paragraphs » Paragraph » Titel'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_tb_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_tb_title
+      module:
+        - paragraphs
+  field_tbs_paragraph_ref:
+    label: 'Paragraphs » Paragraph » Text Boxes'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_tbs_paragraph_ref'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_tbs_paragraph_ref
+      module:
+        - paragraphs
+  field_tbs_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_tbs_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_tbs_title
+      module:
+        - paragraphs
+  field_teaser_text:
+    label: 'Teaser text'
+    datasource_id: 'entity:node'
+    property_path: field_teaser_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_teaser_text
+  field_text_left:
+    label: 'Text left'
+    datasource_id: 'entity:node'
+    property_path: field_text_left
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_text_left
+  field_text_right:
+    label: 'Text right'
+    datasource_id: 'entity:node'
+    property_path: field_text_right
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_text_right
+  field_tit_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_tit_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_tit_text
+      module:
+        - paragraphs
+  field_tit_title:
+    label: 'Paragraphs » Paragraph » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_tit_title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_tit_title
+      module:
+        - paragraphs
+  field_twitter_description:
+    label: 'Paragraphs » Paragraph » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_twitter_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_twitter_description
+      module:
+        - paragraphs
+  field_twitter_text:
+    label: 'Paragraphs » Paragraph » Text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_twitter_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_twitter_text
+      module:
+        - paragraphs
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - basic_page
+        - career_center
+        - conference
+        - event
+        - future_lab
+        - section
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ila_conferences_start_date: {  }
+  html_filter:
+    all_fields: true
+    fields:
+      - body
+      - field_block_reference_text
+      - field_body
+      - field_cc_link_box_subtitle
+      - field_cc_link_box_title
+      - field_cc_news_block_body
+      - field_cc_news_block_title
+      - field_cc_text
+      - field_cc_text_box_text
+      - field_cc_text_box_title
+      - field_cc_text_on_image_text
+      - field_cc_tiled_title_subtitle
+      - field_cc_tiled_title_title
+      - field_co_location
+      - field_co_more_info
+      - field_co_programm
+      - field_co_teaser_text
+      - field_company_list_title
+      - field_container_title
+      - field_cs_subtitle
+      - field_cs_text_left
+      - field_cs_text_right
+      - field_description
+      - field_exhibition_description
+      - field_faq_group_title
+      - field_faq_subtitle
+      - field_faq_title
+      - field_ib_text
+      - field_if_text
+      - field_info_box
+      - field_info_text
+      - field_infographic_column_title
+      - field_lb_subtitle
+      - field_lb_text
+      - field_lb_title
+      - field_left_column
+      - field_link_list_text
+      - field_name
+      - field_quote_body
+      - field_right_column
+      - field_section_page_body
+      - field_subtitle
+      - field_tb_text
+      - field_tb_title
+      - field_tbs_title
+      - field_teaser_text
+      - field_text_left
+      - field_text_right
+      - field_tit_text
+      - field_tit_title
+      - field_twitter_description
+      - field_twitter_text
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - body
+      - field_block_reference_text
+      - field_body
+      - field_cc_link_box_subtitle
+      - field_cc_link_box_title
+      - field_cc_news_block_body
+      - field_cc_news_block_title
+      - field_cc_text
+      - field_cc_text_box_text
+      - field_cc_text_box_title
+      - field_cc_text_on_image_text
+      - field_cc_tiled_title_subtitle
+      - field_cc_tiled_title_title
+      - field_co_location
+      - field_co_more_info
+      - field_co_programm
+      - field_co_teaser_text
+      - field_company_list_title
+      - field_container_title
+      - field_cs_subtitle
+      - field_cs_text_left
+      - field_cs_text_right
+      - field_description
+      - field_exhibition_description
+      - field_faq_group_title
+      - field_faq_subtitle
+      - field_faq_title
+      - field_ib_text
+      - field_if_text
+      - field_info_box
+      - field_info_text
+      - field_infographic_column_title
+      - field_lb_subtitle
+      - field_lb_text
+      - field_lb_title
+      - field_left_column
+      - field_link_list_text
+      - field_name
+      - field_quote_body
+      - field_right_column
+      - field_section_page_body
+      - field_subtitle
+      - field_tb_text
+      - field_tb_title
+      - field_tbs_title
+      - field_teaser_text
+      - field_text_left
+      - field_text_right
+      - field_tit_text
+      - field_tit_title
+      - field_twitter_description
+      - field_twitter_text
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: lifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_fh_1
+  content:
+    - 'block_content:page_description:7a4835df-f10f-48ad-8302-3cbe0de951dd'
+  module:
+    - block_content
+    - node
+    - panels
+id: request_fh_1-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    49b87b4e-735d-407e-b279-1922ef92e2c6:
+      id: exhibitor_registration
+      label: 'Exhibitor registration'
+      provider: node
+      label_display: '0'
+      type: request_fb_1
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: 49b87b4e-735d-407e-b279-1922ef92e2c6
+      context_mapping: {  }
+    b0193a9a-0a58-45b4-bee6-d7ef6069a152:
+      id: 'block_content:7a4835df-f10f-48ad-8302-3cbe0de951dd'
+      label: 'REGISTRATION OF AIRCRAFTS'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: b0193a9a-0a58-45b4-bee6-d7ef6069a152
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 92b3f83c-69e2-43fc-93c3-306b2cbf1212
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'Registration Aircrafts (FB1)'
+  storage_type: page_manager
+  storage_id: request_fh_1-panels_variant-0
+  builder: standard
+page: request_fh_1
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,16 @@
+uuid: ce621eb2-34ee-4f42-adb2-0c34805719f8
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_double_box_default
+label: 'PT FL Double Box: Default'
+effects:
+  48967bce-1aa3-47b6-9f01-4e87b85c3322:
+    uuid: 48967bce-1aa3-47b6-9f01-4e87b85c3322
+    id: image_scale
+    weight: 1
+    data:
+      width: 253
+      height: 153
+      upscale: false
+pipeline: image_optimiza

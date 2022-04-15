@@ -1,0 +1,48 @@
+uuid: 3730c4fa-63a0-4581-adf5-d678af2f1e2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+    - options
+id: attendee_registration.field_ar_branch
+field_name: field_ar_branch
+entity_type: attendee_registration
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Civil Aviation'
+      label: 'Civil Aviation'
+    -
+      value: Infra-structure
+      label: Infra-structure
+    -
+      value: 'Maintenance, Furbishing and Technical Services'
+      label: 'Maintenance, Furbishing and Technical Services'
+    -
+      value: 'Military Aviation and Defense Technology'
+      label: 'Military Aviation and Defense Technology'
+    -
+      value: 'Organizations and associations'
+      label: 'Organizations and associations'
+    -
+      value: 'Research and development'
+      label: 'Research and development'
+    -
+      value: Services
+      label: Services
+    -
+      value: 'Space-related Industry'
+      label: 'Space-related Industry'
+    -
+      value: Systems/Materials/Equipment
+      label: Systems/Materials/Equipment
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 4fd4fce4-a95f-4f16-a8dd-c4450e50d4e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.facts
+_core:
+  default_config_hash: 5hamuDly43ea90av89tbIA7ulXCUzcw_HN1RrhMq9Js
+id: node.facts.created
+field_name: created
+entity_type: node
+bundle: facts
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

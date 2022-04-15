@@ -1,0 +1,18 @@
+uuid: 9c4bf87e-529f-4d19-b662-f35838a5a0a9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: E5G5X7q9h_8OY8M8kCAxw7hiFUq6O3G2ReWT0_t6-pA
+name: carousel_thumbnail
+label: 'Carousel thumbnail (95x95)'
+effects:
+  74456cee-6b0e-4dbc-b02a-8c84c5515299:
+    uuid: 74456cee-6b0e-4dbc-b02a-8c84c5515299
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 95
+      height: 95
+      anchor: center-center
+pipeline: image_optimiza

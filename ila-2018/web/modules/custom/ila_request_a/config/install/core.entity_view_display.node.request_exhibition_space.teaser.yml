@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.request_exhibition_space.field_field_request_a_plus_auma
+    - field.field.node.request_exhibition_space.field_following_services_are_inc
+    - field.field.node.request_exhibition_space.field_product_group
+    - field.field.node.request_exhibition_space.field_product_group_index
+    - field.field.node.request_exhibition_space.field_request_a_comments
+    - field.field.node.request_exhibition_space.field_request_a_depth_in_m
+    - field.field.node.request_exhibition_space.field_request_a_plus_advertising
+    - field.field.node.request_exhibition_space.field_request_a_total_in_m2
+    - field.field.node.request_exhibition_space.field_request_a_width_in_m
+    - field.field.node.request_exhibition_space.field_request_preferred_size
+    - field.field.node.request_exhibition_space.field_stand_number
+    - field.field.node.request_exhibition_space.field_stand_registration_package
+    - field.field.node.request_exhibition_space.field_stand_size_depth
+    - field.field.node.request_exhibition_space.field_stand_size_total
+    - field.field.node.request_exhibition_space.field_stand_size_width
+    - node.type.request_exhibition_space
+  module:
+    - user
+id: node.request_exhibition_space.teaser
+targetEntityType: node
+bundle: request_exhibition_space
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_field_request_a_plus_auma: true
+  field_following_services_are_inc: true
+  field_product_group: true
+  field_product_group_index: true
+  field_request_a_comments: true
+  field_request_a_depth_in_m: true
+  field_request_a_plus_advertising: true
+  field_request_a_total_in_m2: true
+  field_request_a_width_in_m: true
+  field_request_preferred_size: true
+  field_stand_number: true
+  field_stand_registration_package: true
+  field_stand_size_depth: true
+  field_stand_size_total: true
+  field_stand_size_width: true
+  langcode: true

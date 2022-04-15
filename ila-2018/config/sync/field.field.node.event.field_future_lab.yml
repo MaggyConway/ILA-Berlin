@@ -1,0 +1,28 @@
+uuid: 90e63cde-7b63-4d6a-aa7e-4179ff3de577
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_future_lab
+    - node.type.event
+    - taxonomy.vocabulary.future_lab
+id: node.event.field_future_lab
+field_name: field_future_lab
+entity_type: node
+bundle: event
+label: 'Future Lab'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      future_lab: future_lab
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

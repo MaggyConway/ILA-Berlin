@@ -1,0 +1,16 @@
+uuid: 7f8ef2f7-eceb-4df4-a137-20ccb8ccda00
+langcode: de
+status: true
+dependencies: {  }
+name: entity_browser
+label: 'Entity Browser'
+effects:
+  3151ee74-ee74-4a31-b430-1a2b8f0905f1:
+    uuid: 3151ee74-ee74-4a31-b430-1a2b8f0905f1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-center
+pipeline: image_optimiza

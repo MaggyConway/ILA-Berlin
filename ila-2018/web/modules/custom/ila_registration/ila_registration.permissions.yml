@@ -1,0 +1,145 @@
+# Registration entity type
+administer registration entities:
+  title: 'Administer Registration entities'
+  description: 'Allow to access the administration form to configure Registration entities.'
+  restrict access: true
+
+access registration overview:
+  title: 'Access the Registration overview page'
+  restrict access: true
+
+add registration entities:
+  title: 'Create new Registration entities'
+
+delete own registration entities:
+  title: 'Delete own Registration entities'
+
+delete any registration entities:
+  title: 'Delete any Registration entities'
+
+edit own registration entities:
+  title: 'Edit own Registration entities'
+
+edit any registration entities:
+  title: 'Edit any Registration entities'
+
+view own registration entities:
+  title: 'View own Registration entities'
+
+view any registration entities:
+  title: 'View any published Registration entities'
+
+# Booth entity type
+administer booth entities:
+  title: 'Administer Booth entities'
+  description: 'Allow to access the administration form to configure Booth entities.'
+  restrict access: true
+
+access booth overview:
+  title: 'Access the Booth overview page'
+  restrict access: true
+
+add booth entities:
+  title: 'Create new Booth entities'
+
+delete own booth entities:
+  title: 'Delete own Booth entities'
+
+delete any booth entities:
+  title: 'Delete any Booth entities'
+
+edit own booth entities:
+  title: 'Edit own Booth entities'
+
+edit any booth entities:
+  title: 'Edit any Booth entities'
+
+view own booth entities:
+  title: 'View own Booth entities'
+
+view any booth entities:
+  title: 'View any Booth entities'
+
+# Company entity type
+add company entities:
+  title: 'Create new Company entities'
+
+administer company entities:
+  title: 'Administer Company entities'
+  description: 'Allow to access the administration form to configure Company entities.'
+  restrict access: true
+
+access company overview:
+  title: 'Access the Company overview page'
+  restrict access: true
+
+delete own company entities:
+  title: 'Delete own Company entities'
+
+delete any company entities:
+  title: 'Delete any Company entities'
+
+edit own company entities:
+  title: 'Edit own Company entities'
+
+edit any company entities:
+  title: 'Edit any Company entities'
+
+view own company entities:
+  title: 'View own Company entities'
+
+view any company entities:
+  title: 'View any Company entities'
+
+# Person entity type
+add person entities:
+  title: 'Create new Person entities'
+
+administer person entities:
+  title: 'Administer Person entities'
+  description: 'Allow to access the administration form to configure Person entities.'
+  restrict access: true
+
+access person overview:
+  title: 'Access the Person overview page'
+  restrict access: true
+
+delete own person entities:
+  title: 'Delete own Person entities'
+
+delete any person entities:
+  title: 'Delete any Person entities'
+
+edit own person entities:
+  title: 'Edit own Person entities'
+
+edit any person entities:
+  title: 'Edit any Person entities'
+
+view own person entities:
+  title: 'View own Person entities'
+
+view any person entities:
+  title: 'View any Person entities'
+add exhibitor entities:
+  title: 'Create new Exhibitor entities'
+
+administer exhibitor entities:
+  title: 'Administer Exhibitor entities'
+  description: 'Allow to access the administration form to configure Exhibitor entities.'
+  restrict access: true
+
+delete exhibitor entities:
+  title: 'Delete Exhibitor entities'
+
+edit exhibitor entities:
+  title: 'Edit Exhibitor entities'
+
+access exhibitor overview:
+  title: 'Access the Exhibitor overview page'
+
+view published exhibitor entities:
+  title: 'View published Exhibitor entities'
+
+view unpublished exhibitor entities:
+  title: 'View unpublished Exhibitor entities'

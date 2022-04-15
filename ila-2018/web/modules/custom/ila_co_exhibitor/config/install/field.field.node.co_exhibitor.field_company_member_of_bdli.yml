@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_member_of_bdli
+    - node.type.co_exhibitor
+id: node.co_exhibitor.field_company_member_of_bdli
+field_name: field_company_member_of_bdli
+entity_type: node
+bundle: co_exhibitor
+label: 'Member of BDLI'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ja
+  off_label: Nein
+field_type: boolean

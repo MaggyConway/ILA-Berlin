@@ -1,0 +1,23 @@
+uuid: 60146e0e-11ed-46ae-9db3-4e00c63e7922
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_press_file
+    - media.type.local_video
+id: media.local_video.field_press_file
+field_name: field_press_file
+entity_type: media
+bundle: local_video
+label: 'Im Presse Bereich anzeigen '
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

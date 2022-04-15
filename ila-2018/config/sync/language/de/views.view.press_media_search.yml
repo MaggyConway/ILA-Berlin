@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Suche
+      filters:
+        search_api_fulltext:
+          expose:
+            placeholder: Suchbegriff
+      empty:
+        area_text_custom:
+          content: 'Leider keine Bilder gefunden.'
+      header:
+        area_text_custom:
+          content: "<div class=\"conference-filters\">\r\n<a href=\"#\" class=\"link-history-back\">Zurück</a>\r\n<a href=\"#\" class=\"filter-open-btn\">Zu den Kategorien</a>\r\n</div>"

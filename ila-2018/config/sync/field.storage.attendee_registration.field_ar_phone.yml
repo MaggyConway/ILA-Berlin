@@ -1,0 +1,19 @@
+uuid: fd5d5a9e-f338-4147-b8fd-1caeda13afd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+    - telephone
+id: attendee_registration.field_ar_phone
+field_name: field_ar_phone
+entity_type: attendee_registration
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+status: '1'
+pattern: 'main-exhibitor-[current-user:uid] ([node:created:short])'
+php: 0
+dependencies:
+  config:
+    - node.type.main_exhibitor

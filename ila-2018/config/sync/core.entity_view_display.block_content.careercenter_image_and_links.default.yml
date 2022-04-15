@@ -1,0 +1,29 @@
+uuid: 55e7c799-76f7-4604-8c12-8f3a4b9282e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_image_and_links
+    - field.field.block_content.careercenter_image_and_links.field_cc_image_and_links_anchor
+    - field.field.block_content.careercenter_image_and_links.field_cc_image_and_links_image
+    - field.field.block_content.careercenter_image_and_links.field_cc_image_and_links_links
+  module:
+    - entity_reference_revisions
+id: block_content.careercenter_image_and_links.default
+targetEntityType: block_content
+bundle: careercenter_image_and_links
+mode: default
+content:
+  field_cc_image_and_links_links:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  field_cc_image_and_links_anchor: true
+  field_cc_image_and_links_image: true
+  langcode: true

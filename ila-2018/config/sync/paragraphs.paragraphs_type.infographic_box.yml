@@ -1,0 +1,9 @@
+uuid: 7c7b84b4-4e13-45c1-91e9-0a531bf5bd93
+langcode: en
+status: true
+dependencies: {  }
+id: infographic_box
+label: 'Infographic box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

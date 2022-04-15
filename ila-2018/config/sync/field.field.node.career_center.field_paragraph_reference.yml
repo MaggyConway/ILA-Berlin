@@ -1,0 +1,205 @@
+uuid: deb8302a-9db1-4f06-b144-89e08c2aecfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_reference
+    - node.type.career_center
+    - paragraphs.paragraphs_type.careercenter_header_title
+    - paragraphs.paragraphs_type.careercenter_title_text_images
+    - paragraphs.paragraphs_type.careercenter_view_reference
+    - paragraphs.paragraphs_type.cc_block_reference
+    - paragraphs.paragraphs_type.cc_header_image_container
+    - paragraphs.paragraphs_type.cc_testimonials_container
+    - paragraphs.paragraphs_type.cc_text_box_container
+  module:
+    - entity_reference_revisions
+id: node.career_center.field_paragraph_reference
+field_name: field_paragraph_reference
+entity_type: node
+bundle: career_center
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      careercenter_view_reference: careercenter_view_reference
+      cc_testimonials_container: cc_testimonials_container
+      cc_header_image_container: cc_header_image_container
+      careercenter_title_text_images: careercenter_title_text_images
+      cc_block_reference: cc_block_reference
+      careercenter_header_title: careercenter_header_title
+      cc_text_box_container: cc_text_box_container
+    target_bundles_drag_drop:
+      cc_header_image_item:
+        weight: 46
+        enabled: false
+      block_reference:
+        weight: 47
+        enabled: false
+      career_center_visitors_news:
+        weight: 48
+        enabled: false
+      careercenter_view_reference:
+        enabled: true
+        weight: 49
+      cc_facebook_post:
+        weight: 49
+        enabled: false
+      cc_testimonials_container:
+        enabled: true
+        weight: 50
+      cc_header_image_container:
+        enabled: true
+        weight: 50
+      careercenter_title_text_images:
+        enabled: true
+        weight: 51
+      cc_block_reference:
+        enabled: true
+        weight: 51
+      cc_link_box:
+        weight: 51
+        enabled: false
+      cc_link_list:
+        weight: 52
+        enabled: false
+      cc_link_list_item:
+        weight: 53
+        enabled: false
+      cc_news_block:
+        weight: 54
+        enabled: false
+      cc_text_box:
+        weight: 55
+        enabled: false
+      cc_text_box_with_image:
+        weight: 55
+        enabled: false
+      careercenter_header_title:
+        enabled: true
+        weight: 56
+      cc_text_on_image:
+        weight: 56
+        enabled: false
+      cc_tiled_title:
+        weight: 57
+        enabled: false
+      content_subtitle:
+        weight: 58
+        enabled: false
+      download:
+        weight: 59
+        enabled: false
+      dwn_link:
+        weight: 60
+        enabled: false
+      exhibition:
+        weight: 61
+        enabled: false
+      exhibition_container:
+        weight: 62
+        enabled: false
+      cc_testimonial:
+        weight: 62
+        enabled: false
+      faq:
+        weight: 63
+        enabled: false
+      cc_header_image_item_extended:
+        weight: 64
+        enabled: false
+      faq_group:
+        weight: 64
+        enabled: false
+      image_box:
+        weight: 65
+        enabled: false
+      image_full:
+        weight: 66
+        enabled: false
+      image_row:
+        weight: 67
+        enabled: false
+      info_box:
+        weight: 68
+        enabled: false
+      cc_svg_tag_snippet:
+        weight: 69
+        enabled: false
+      infographic_box:
+        weight: 69
+        enabled: false
+      infographic_box_column:
+        weight: 70
+        enabled: false
+      kontakt_person:
+        weight: 71
+        enabled: false
+      link_box:
+        weight: 72
+        enabled: false
+      cc_text_box_container:
+        enabled: true
+        weight: 73
+      link_box_container:
+        weight: 73
+        enabled: false
+      list_of_companies:
+        weight: 74
+        enabled: false
+      list_of_companies_link:
+        weight: 75
+        enabled: false
+      navigation:
+        weight: 76
+        enabled: false
+      quote:
+        weight: 77
+        enabled: false
+      quote_portrait:
+        weight: 78
+        enabled: false
+      quote_portrait_container:
+        weight: 79
+        enabled: false
+      request_link:
+        weight: 80
+        enabled: false
+      single_link_box:
+        weight: 81
+        enabled: false
+      slideshow:
+        weight: 82
+        enabled: false
+      speaker:
+        weight: 83
+        enabled: false
+      text:
+        weight: 84
+        enabled: false
+      text_box:
+        weight: 85
+        enabled: false
+      text_boxes:
+        weight: 86
+        enabled: false
+      title_image_text:
+        weight: 87
+        enabled: false
+      title_text:
+        weight: 88
+        enabled: false
+      twitter_feed:
+        weight: 89
+        enabled: false
+      two_column_text:
+        weight: 90
+        enabled: false
+field_type: entity_reference_revisions

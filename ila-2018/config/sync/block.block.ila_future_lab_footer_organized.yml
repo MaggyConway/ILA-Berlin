@@ -1,0 +1,27 @@
+uuid: 48fbf405-5b49-405e-97b6-3a384ba64b41
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:text:f324fd32-76e6-46c0-be31-c07e233346e3'
+  module:
+    - block_content
+  theme:
+    - ila_future_lab
+_core:
+  default_config_hash: EIhtzNxMGagQu2fFZ1wPU1JoD6W94aaxiKXJFSifHvs
+id: ila_future_lab_footer_organized
+theme: ila_future_lab
+region: footer_top
+weight: -5
+provider: null
+plugin: 'block_content:f324fd32-76e6-46c0-be31-c07e233346e3'
+settings:
+  id: 'block_content:f324fd32-76e6-46c0-be31-c07e233346e3'
+  label: 'Footer - Organized by'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

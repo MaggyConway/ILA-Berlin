@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.media
+  module:
+    - system
+  theme:
+    - ila
+id: ila_media_links_second
+theme: ila
+region: header_bottom
+weight: -5
+provider: null
+plugin: 'system_menu_block:media'
+settings:
+  id: 'system_menu_block:media'
+  label: Medien
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

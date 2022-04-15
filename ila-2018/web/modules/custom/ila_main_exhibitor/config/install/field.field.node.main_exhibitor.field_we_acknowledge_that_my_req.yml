@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_we_acknowledge_that_my_req
+    - node.type.main_exhibitor
+  module:
+    - options
+id: node.main_exhibitor.field_we_acknowledge_that_my_req
+field_name: field_we_acknowledge_that_my_req
+entity_type: node
+bundle: main_exhibitor
+label: 'We acknowledge that my request'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

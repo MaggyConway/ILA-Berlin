@@ -1,0 +1,21 @@
+uuid: 95b9c5f0-c720-47be-be6b-82dd8feadc26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activities
+    - node.type.speaker
+  module:
+    - text
+id: node.speaker.field_activities
+field_name: field_activities
+entity_type: node
+bundle: speaker
+label: Occupation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

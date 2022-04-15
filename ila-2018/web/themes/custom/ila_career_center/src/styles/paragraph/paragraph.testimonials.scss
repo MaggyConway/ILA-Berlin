@@ -1,0 +1,256 @@
+.paragraph--type--cc-testimonials-container {
+  position: relative;
+  margin: 70px 40px 30px;
+  padding-bottom: 80px;
+  background: url('../../img/diagonal-lines.svg') repeat, $career-dark;
+  border-bottom: 20px solid $career-green;
+
+  @media #{$m-to-m} {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -20px;
+    left: 25px;
+    display: block;
+    font-family: $career-font;
+    font-size: 130px;
+    font-weight: 900;
+    text-transform: uppercase;
+    content: 'Testimonials';
+    color: $career-dark;
+
+    @media #{$m-to-m} {
+      font-size: 90px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    display: block;
+    width: 50%;
+    height: 100px;
+    content: '';
+    background: #ffffff;
+
+    @media #{$m-to-m} {
+      display: none;
+    }
+  }
+
+  .field--name-field-container-title {
+    position: absolute;
+    top: -35px;
+    left: 240px;
+    font-family: $career-font;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $career-dark;
+    background-color: #ffffff;
+
+    @media screen and (max-width: 1330px) {
+      position: relative;
+      display: inline-block;
+    }
+
+    @media screen and (min-width: 768px) and(max-width: 1024px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media #{$m-to-m} {
+      top: 0;
+      left: 0;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+  }
+
+  .slick__slider {
+    margin: 0 -40px;
+  }
+
+  .paragraph--type--cc-testimonial {
+    margin: 0 40px 40px;
+    display: flex;
+    align-items: flex-end;
+
+    @media #{$m-to-l} {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .field--name-field-cc-testimonial-quote {
+    margin-bottom: 6px;
+    padding: 20px 20px 10px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #ffffff;
+    background-color: $career-dark;
+    border-bottom: 20px solid $career-green;
+
+    @media #{$m-to-m} {
+      font-size: 14px;
+      line-height: 1.6;
+      font-style: italic;
+      border-bottom-width: 13px;
+    }
+
+    p {
+      &::before {
+        content: '\201E';
+      }
+
+      &::after {
+        content: '\201C';
+      }
+    }
+  }
+
+  .wrapper--author-image {
+    @media screen and (min-width: 1331px) {
+      flex-shrink: 0;
+    }
+
+    @media screen and (max-width: 1330px) {
+      width: 40%;
+    }
+
+    @media #{$m-to-l} {
+      width: 100%;
+    }
+
+    @media #{$m-to-m} {
+      display: none;
+    }
+  }
+
+  .wrapper--author-content {
+    @media screen and (min-width: 1331px) {
+      flex-grow: 1;
+    }
+
+    @media screen and (max-width: 1330px) {
+      width: 60%;
+    }
+
+    @media #{$m-to-l} {
+      width: 100%;
+    }
+
+    .field--name-field-cc-testimonial-quote {
+      @media #{$m-to-m} {
+        display: none;
+      }
+    }
+  }
+
+  .field--name-field-cc-testimonial-quote-auth {
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 1;
+    color: #ffffff;
+
+    @media #{$m-to-m} {
+      font-size: 13px;
+    }
+  }
+
+  .field--name-field-media-image {
+    img {
+      border: 1px solid #ffffff;
+    }
+  }
+
+  .slick__arrow {
+    top: auto;
+    bottom: -42px;
+
+    @media #{$m-to-m} {
+      bottom: -80px;
+    }
+  }
+
+  .slick-arrow {
+    top: auto;
+    bottom: 0;
+    background: $career-green;
+    border-radius: 0;
+    transform: translateY(0%);
+
+    &::before {
+      margin: 0 auto;
+      display: block;
+      width: calc(70% - 8px);
+      height: 3px;
+      opacity: 1;
+      content: '';
+      background: $career-dark;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-color: transparent $career-dark;
+    }
+  }
+
+  .slick-next {
+    left: calc(50% + 2px);
+    transform: translateX(100%);
+
+    @media #{$m-to-m} {
+      right: 10px;
+      left: auto;
+      transform: none;
+    }
+
+    &::after {
+      right: 0;
+      border-width: 7px 0 7px 8px;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  .slick-prev {
+    left: 50%;
+
+    @media #{$m-to-m} {
+      right: 12px;
+      left: auto;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      left: 0;
+      border-width: 7px 8px 7px 0;
+      transform: translate(100%, -50%);
+    }
+  }
+
+  .wrapper--mobile {
+    display: none;
+    width: 100%;
+
+    @media #{$m-to-m} {
+      display: block;
+    }
+
+    .field--name-field-media-reference {
+      margin-right: 10px;
+      float: left;
+    }
+  }
+}

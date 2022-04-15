@@ -1,0 +1,77 @@
+cookie_lifetime: 100
+domain: ''
+domains_option: 1
+domains_list: ''
+eu_only: null
+eu_only_js: null
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+exclude_admin_theme: false
+langcode: en
+popup_agreed:
+  value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
+  format: plain_html
+popup_agree_button_message: 'OK, I agree'
+popup_agreed_enabled: false
+popup_bg_hex: 159be8
+popup_clicking_confirmation: false
+popup_scrolling_confirmation: false
+popup_delay: 1000
+popup_enabled: true
+popup_find_more_button_message: 'More info'
+popup_height: null
+popup_hide_agreed: false
+popup_hide_button_message: Hide
+popup_info:
+  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By clicking any link on this page you are giving your consent for us to set cookies.</p>'
+  format: plain_html
+mobile_popup_info:
+  value: ''
+  format: filtered_html
+mobile_breakpoint: 768
+popup_link: /node/49
+popup_link_new_window: false
+popup_position: false
+fixed_top_position: true
+popup_text_hex: ffffff
+popup_width: 100%
+use_bare_css: false
+disagree_do_not_show_popup: false
+reload_page: false
+cookie_name: ''
+exclude_uid_1: false
+better_support_for_screen_readers: false
+use_mobile_message: false
+_core:
+  default_config_hash: OlBvbDcm2PUT2i28p3oNpuKaUKbbK4qjfrAyYxvd0B8
+cookie_session: 0
+method: default
+disagree_button_label: ''
+disabled_javascripts: ''
+consent_storage_method: null
+withdraw_message:
+  value: ''
+  format: plain_html
+withdraw_action_button_label: ''
+withdraw_tab_button_label: ''
+withdraw_enabled: false
+popup_info_template: legacy
+enable_save_preferences_button: true
+save_preferences_button_label: 'Save preferences'
+accept_all_categories_button_label: 'Accept all cookies'
+withdraw_button_on_info_popup: false
+domain_all_sites: false
+uuid: 22ac7e4f-7925-465c-a38b-94ea59096c53
+show_more_info: true
+popup_more_info_button_message: 'Give me more info'
+reload_options: 0
+reload_routes_list: ''
+containing_element: body
+settings_tab_enabled: false
+automatic_cookies_removal: true
+set_cookie_session_zero_on_disagree: 0
+cookie_policy_version: 1.0.0
+cookie_value_disagreed: '0'
+cookie_value_agreed_show_thank_you: '1'
+cookie_value_agreed: '2'
+accessibility_focus: false
+allowed_cookies: ''

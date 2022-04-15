@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_request_name
+    - paragraphs.paragraphs_type.request_link
+id: paragraph.request_link.field_request_name
+field_name: field_request_name
+entity_type: paragraph
+bundle: request_link
+label: 'Request Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

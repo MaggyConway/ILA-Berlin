@@ -1,0 +1,25 @@
+uuid: 9536c6aa-9d11-4f91-8eda-606fc64ce36f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.news
+  module:
+    - link
+_core:
+  default_config_hash: U0DvQv4RtMdLWdj4-9Hs_qogP0rXnIkdu_qPQuRgJq8
+id: node.news.field_links
+field_name: field_links
+entity_type: node
+bundle: news
+label: 'Related Links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

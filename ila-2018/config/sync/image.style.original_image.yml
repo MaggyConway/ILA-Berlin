@@ -1,0 +1,8 @@
+uuid: 33d6b68b-cf27-4dc7-8256-4e4b09140a11
+langcode: en
+status: true
+dependencies: {  }
+name: original_image
+label: 'Original image'
+effects: {  }
+pipeline: image_optimiza

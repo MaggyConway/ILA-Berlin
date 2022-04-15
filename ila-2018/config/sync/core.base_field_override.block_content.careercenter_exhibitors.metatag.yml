@@ -1,0 +1,18 @@
+uuid: 801ace65-41a7-44e3-9acf-342a0cb923a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_exhibitors
+id: block_content.careercenter_exhibitors.metatag
+field_name: metatag
+entity_type: block_content
+bundle: careercenter_exhibitors
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

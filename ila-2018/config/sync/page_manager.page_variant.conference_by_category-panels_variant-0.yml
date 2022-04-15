@@ -1,0 +1,114 @@
+uuid: f69e8027-6005-446d-9ec8-1d787bdaa042
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conference_by_category
+    - system.menu.conference-menu
+    - views.view.categories_conferences
+    - views.view.conferences
+  content:
+    - 'block_content:text:df65dd78-95ed-4710-a8e0-127241d60681'
+  module:
+    - block_content
+    - panels
+    - system
+    - views
+id: conference_by_category-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    4e7956d1-e26e-4b03-a5f6-16f1e787539b:
+      id: 'views_block:conferences-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: ds_content
+      weight: 1
+      uuid: 4e7956d1-e26e-4b03-a5f6-16f1e787539b
+      context_mapping: {  }
+    9c356fb9-bc0d-4eb2-a858-353b78ef41e6:
+      id: 'views_block:conferences-block_3'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: ds_content
+      weight: 2
+      uuid: 9c356fb9-bc0d-4eb2-a858-353b78ef41e6
+      context_mapping: {  }
+    14f7eeae-b64d-4cc2-993c-1db56da83461:
+      id: 'system_menu_block:conference-menu'
+      label: 'Conference menu'
+      provider: system
+      label_display: '0'
+      level: 1
+      depth: 0
+      expand_all_items: false
+      region: ds_content
+      weight: 0
+      uuid: 14f7eeae-b64d-4cc2-993c-1db56da83461
+      context_mapping: {  }
+    c8c934f2-8857-4827-bbe1-2f6250fa6c3a:
+      id: 'views_block:categories_conferences-block_3'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: ds_content
+      weight: -1
+      uuid: c8c934f2-8857-4827-bbe1-2f6250fa6c3a
+      context_mapping: {  }
+    8271165f-abb6-4609-b9dc-7b60f4909830:
+      id: 'views_block:categories_conferences-block_4'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: ds_content
+      weight: 0
+      uuid: 8271165f-abb6-4609-b9dc-7b60f4909830
+      context_mapping: {  }
+    18a51ac8-df01-4d81-b1dc-1bb34a141b66:
+      id: 'block_content:df65dd78-95ed-4710-a8e0-127241d60681'
+      label: 'Conference bubble'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: default
+      region: ds_content
+      weight: 0
+      uuid: 18a51ac8-df01-4d81-b1dc-1bb34a141b66
+      context_mapping: {  }
+  id: panels_variant
+  uuid: be2ed3ec-8919-456a-b10b-53fd141f1eeb
+  label: null
+  weight: 0
+  layout: ds_1col_wrapper
+  layout_settings:
+    wrappers:
+      ds_content: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class:
+        conference-filtered: conference-filtered
+      ds_content: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: conference_by_category-panels_variant-0
+  builder: standard
+page: conference_by_category
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

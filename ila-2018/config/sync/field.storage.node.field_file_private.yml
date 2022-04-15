@@ -1,0 +1,29 @@
+uuid: 5c0ccbcc-af5a-49f9-b5a0-d80733961946
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: sIpU_HpSinqchhrG9ewKVaDS3dBHWt6Guql7Gbbx6cs
+id: node.field_file_private
+field_name: field_file_private
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: private
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

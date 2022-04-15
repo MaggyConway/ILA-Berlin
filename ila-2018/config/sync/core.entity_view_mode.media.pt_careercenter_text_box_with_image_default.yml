@@ -1,0 +1,10 @@
+uuid: e83490d8-1a24-4178-a12e-6a675552be08
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_careercenter_text_box_with_image_default
+label: 'PT CareerCenter Text box with image: Default'
+targetEntityType: media
+cache: true

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_f_additional_eq
+    - node.type.request_f
+  module:
+    - markup
+id: node.request_f.field_request_f_additional_eq
+field_name: field_request_f_additional_eq
+entity_type: node
+bundle: request_f
+label: 'Additional equipment'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Additional equipment</h3>\r\n\r\n<ul>\r\n\t<li>Additional conference equipment and service can be ordered from Messe Berlin and will be charged invidually.</li>\r\n</ul>\r\n"
+    format: full_html
+field_type: markup

@@ -1,0 +1,37 @@
+uuid: bb37d56a-9da2-47eb-983e-c73f2cbbcd64
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.conference_language_short_code
+    - field.field.taxonomy_term.conference_languages.field_conference_language_prefix
+    - taxonomy.vocabulary.conference_languages
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_conference_language_prefix
+id: taxonomy_term.conference_languages.conference_language_short_code
+targetEntityType: taxonomy_term
+bundle: conference_languages
+mode: conference_language_short_code
+content:
+  field_conference_language_prefix:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true
+  langcode: true

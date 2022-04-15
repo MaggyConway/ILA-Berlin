@@ -1,0 +1,9 @@
+uuid: 58b87c4e-ce4f-4d4d-87f2-35fefcb18968
+langcode: en
+status: true
+dependencies: {  }
+id: career_center_visitors_news
+label: 'Career Center Visitors News'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

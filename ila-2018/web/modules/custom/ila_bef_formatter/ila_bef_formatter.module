@@ -1,0 +1,187 @@
+<?php
+
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\taxonomy\TermStorage;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Returns all Press nodes that belong to given taxonomy term.
+ */
+function ila_bef_formatter_find_press_nodes_of_taxonomy_term(int $tid) {
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'press')
+    ->condition('field_press_media_category.target_id', $tid);
+
+  return $query->execute();
+}
+
+/**
+ * Helper function: returns list of all taxonomy terms from given vocabulary.
+ */
+function ila_bef_formatter_get_vocabulary_tree(string $vid, TermStorage $term_storage = NULL) {
+  if ($term_storage === NULL) {
+    $term_storage = \Drupal::service('entity_type.manager')->getStorage('taxonomy_term');
+  }
+
+  $terms_list = $term_storage->loadTree($vid);
+
+  // Reorganize the list so it is possible to search by taxonomy term ID.
+  $output = [];
+  foreach ($terms_list as $key => $item) {
+    $output[$item->tid] = $item;
+  }
+
+  return $output;
+}
+
+/**
+ * Check if given term has children.
+ */
+function ila_bef_formatter_term_has_children(int $tid, TermStorage $term_storage = NULL) {
+  if ($term_storage === NULL) {
+    $term_storage = \Drupal::service('entity_type.manager')->getStorage('taxonomy_term');
+  }
+
+  return !empty($term_storage->loadChildren($tid));
+}
+
+/**
+ * Check if given taxonomy term has attachend nodes.
+ */
+function ila_bef_formatter_term_has_attached_nodes(int $tid) {
+  return !empty(ila_bef_formatter_find_press_nodes_of_taxonomy_term($tid));
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ila_bef_formatter_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state) {
+  if ($form['#id'] !== 'views-exposed-form-media-block-6') {
+    if ($form['#id'] === 'views-exposed-form-media-block-4') {
+      $form['#attached']['library'][] = 'ila_bef_formatter/bef_links.enable';
+    }
+    return;
+  }
+
+  $vocabulary_id = 'press_media_category';
+  $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $form['#attached']['library'][] = 'ila_bef_formatter/bef_links.enable';
+
+  $user_input = $form_state->getUserInput();
+  if (!isset($user_input['field_press_media_category_target_id'])) {
+    return;
+  }
+
+  $filter_id = $user_input['field_press_media_category_target_id'];
+  // Basic validation.
+  if ($filter_id !== 'All' && ((int) $filter_id) <= 0) {
+    return;
+  }
+
+  $term_storage = \Drupal::service('entity_type.manager')->getStorage('taxonomy_term');
+  if (!$vocabulary_terms = ila_bef_formatter_get_vocabulary_tree($vocabulary_id, $term_storage)) {
+    return;
+  }
+
+  if ($filter_id === 'All') {
+    $filter_id = reset($vocabulary_terms)->tid;
+  }
+
+  if (!$taxonomy_term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($filter_id)) {
+    return;
+  }
+
+  $search_flag = \Drupal::request()->query->get('image_filter') !== NULL;
+
+  // Redirect to child filter.
+  $filter_id_children = $term_storage->loadChildren($filter_id);
+  if (!empty($filter_id_children) && !$search_flag) {
+    reset($filter_id_children);
+    $filter_id = key($filter_id_children);
+
+    $query = ['field_press_media_category_target_id' => $filter_id];
+    $redirect_url = Url::fromRoute('<current>')->setOption('query', $query)->toString();
+    $response = new RedirectResponse($redirect_url);
+    $response->send();
+  }
+
+  $lists = [];
+  // Works only with 2-leveled menus.
+  foreach ($vocabulary_terms as $term) {
+    $active = FALSE;
+    $level = $term->depth + 1;
+    $tid = $term->tid;
+
+    if (!ila_bef_formatter_term_has_attached_nodes((int) $tid) && !ila_bef_formatter_term_has_children($tid)) {
+      continue;
+    }
+
+    // If all sub-categories are empty and filter itself doesn't have any nodes
+    // -- hide.
+    if ($level === 1 && !(ila_bef_formatter_term_has_attached_nodes($tid))) {
+      $empty_subcategories = TRUE;
+      foreach ($term_storage->loadChildren($tid) as $term_id => $value) {
+        if (ila_bef_formatter_term_has_attached_nodes($term_id)) {
+          $empty_subcategories = FALSE;
+
+          break;
+        }
+      }
+
+      if ($empty_subcategories) {
+        continue;
+      }
+    }
+
+    if ($level > 1) {
+      if (!in_array($filter_id, $term->parents) && !isset($term_storage->loadChildren($term->parents[0])[$filter_id])) {
+        continue;
+      }
+    }
+
+    if (isset($term_storage->loadChildren($tid)[$filter_id]) || $tid === $filter_id) {
+      $active = TRUE;
+    }
+
+    // If searching:
+    if ($search_flag) {
+      // Do not show subcategories.
+      if ($level === 2) {
+        continue;
+      }
+
+      // And do not highlight any filter.
+      if ($active) {
+        $active = FALSE;
+      }
+    }
+
+    // Get translated term name.
+    $term_name = Term::Load($term->tid)->getTranslation($current_language)->getName();
+
+    $line = '<li class="filter-tab filter-tab-' . $tid . ' level' . $level . ($active ? ' active' : '') . '">';
+    $line .= '<a href="" id="' . $tid . '">' . $term_name . '</a>';
+    $line .= '</li>';
+
+    $lists[$level][$tid] = $line;
+  }
+
+  $markup_list = '<div class="media-image-filter-lists">';
+  foreach ($lists as $key => $list) {
+    $markup_list .= '<div class="media-image-level' . $key . '-area">';
+    $markup_list .= '<ul>';
+    foreach ($list as $key_l => $link) {
+      $markup_list .= $link;
+    }
+    $markup_list .= '</ul>';
+    $markup_list .= '</div>';
+  }
+  $markup_list .= '</div>';
+
+  $form['list_links-1'] = [
+    '#markup' => $markup_list,
+  ];
+}

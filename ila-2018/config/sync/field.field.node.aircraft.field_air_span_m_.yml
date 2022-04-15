@@ -1,0 +1,23 @@
+uuid: 4c788d27-512d-4381-9409-9c7f144cb0c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_span_m_
+    - node.type.aircraft
+id: node.aircraft.field_air_span_m_
+field_name: field_air_span_m_
+entity_type: node
+bundle: aircraft
+label: 'span [m]'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

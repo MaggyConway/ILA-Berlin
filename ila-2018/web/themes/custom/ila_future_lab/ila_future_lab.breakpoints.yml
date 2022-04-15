@@ -1,0 +1,30 @@
+ila_future_lab.phone:
+  label: Phone
+  mediaQuery: 'all and (max-width: 599px)'
+  weight: 0
+  multipliers:
+    - 1x
+ila_future_lab.tablet_portrait:
+  label: Tablet portrait
+  mediaQuery: 'all and (min-width: 600px) and (max-width: 900px)'
+  weight: 1
+  mutipliers:
+    - 1x
+ila_future_lab.tablet_landscape:
+  label: Tablet landscape
+  mediaQuery: 'all and (min-width: 901px) and (max-width: 1200px)'
+  weight: 2
+  multipliers:
+    - 1x
+ila_future_lab.desktop:
+  label: Desktop
+  mediaQuery: 'all and (min-width: 1201px) and (max-width: 1800px)'
+  weight: 3
+  multipliers:
+    - 1x
+ila_future_lab.desktop_full_hd:
+  label: Desktop full-hd
+  mediaQuery: 'all and (min-width: 1801px)'
+  weight: 4
+  multipliers:
+    - 1x

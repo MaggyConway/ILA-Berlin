@@ -1,0 +1,83 @@
+uuid: 9ccbf3af-2cf0-45a8-a628-59196d27b7af
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.local_video.field_career_center
+    - field.field.media.local_video.field_description
+    - field.field.media.local_video.field_media_video_file
+    - field.field.media.local_video.field_press_file
+    - field.field.media.local_video.field_preview_image
+    - media.type.local_video
+  module:
+    - ds
+    - media_entity_video
+    - svg_image
+    - text
+id: media.local_video.default
+targetEntityType: media
+bundle: local_video
+mode: default
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_video_file:
+    type: video_player_html5
+    weight: 1
+    label: hidden
+    settings:
+      video_attributes: controls
+      provide_download_link: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_press_file:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_preview_image:
+    weight: 4
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_career_center: true
+  langcode: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

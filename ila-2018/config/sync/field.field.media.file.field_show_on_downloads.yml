@@ -1,0 +1,23 @@
+uuid: b9d00b33-de4d-4a09-8307-89670842a29e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_show_on_downloads
+    - media.type.file
+id: media.file.field_show_on_downloads
+field_name: field_show_on_downloads
+entity_type: media
+bundle: file
+label: 'Auf Download Seite anzeigen?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

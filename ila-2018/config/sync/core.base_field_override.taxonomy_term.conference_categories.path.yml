@@ -1,0 +1,20 @@
+uuid: 69b546db-1bbc-46ee-a1ce-43a4a7c35b51
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_categories
+  module:
+    - path
+id: taxonomy_term.conference_categories.path
+field_name: path
+entity_type: taxonomy_term
+bundle: conference_categories
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

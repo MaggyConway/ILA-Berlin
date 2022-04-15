@@ -1,0 +1,11 @@
+uuid: 5bddb0e6-36c1-40f3-b6fd-ed4ea4b2224d
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+id: contact_message.sponsoring_katalog
+target_entity_type_id: contact_message
+target_bundle: sponsoring_katalog
+default_langcode: site_default
+language_alterable: false

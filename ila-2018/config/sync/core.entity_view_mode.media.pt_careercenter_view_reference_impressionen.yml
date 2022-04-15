@@ -1,0 +1,10 @@
+uuid: f9c36a80-9f30-4612-8760-16456209b4fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_careercenter_view_reference_impressionen
+label: 'PT CareerCenter View reference: Impressionen'
+targetEntityType: media
+cache: true

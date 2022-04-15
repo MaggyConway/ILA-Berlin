@@ -1,0 +1,27 @@
+uuid: 2846f405-9a1e-4a8b-a732-cc2a0b3e301a
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: wV9WF3OzgAlWxmyh4AcvHc63EpmsM_Ebia0rDj82C20
+id: main_exhibitor
+label: 'Main exhibitor'
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/main-exhibitor
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      press: press
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

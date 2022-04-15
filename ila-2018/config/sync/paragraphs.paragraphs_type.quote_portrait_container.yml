@@ -1,0 +1,9 @@
+uuid: e0d1cd7e-4328-43c5-a32c-6ca72699b1aa
+langcode: en
+status: true
+dependencies: {  }
+id: quote_portrait_container
+label: 'Quote portrait container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

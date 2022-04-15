@@ -1,0 +1,91 @@
+uuid: 2f45da49-f2ed-4a2d-8dbd-ad02667239bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.media_audio_video
+    - views.view.media
+  content:
+    - 'block_content:text:9845bdda-cc17-4cae-ba35-5831ec6cdccd'
+    - 'block_content:text:ab0e0017-2ee0-4bb1-baa1-27b0a9868ec8'
+  module:
+    - block_content
+    - panels
+    - views
+id: media_audio_video-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    71f74c82-0d49-40d8-9f50-85864755d68c:
+      id: 'views_block:media-block_3'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 71f74c82-0d49-40d8-9f50-85864755d68c
+      context_mapping: {  }
+    cae8051b-0d4c-4c6f-9d19-369389c225cb:
+      id: 'views_block:media-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: cae8051b-0d4c-4c6f-9d19-369389c225cb
+      context_mapping: {  }
+    51ef1c73-f648-47ff-b899-9989e4950fd3:
+      id: 'block_content:ab0e0017-2ee0-4bb1-baa1-27b0a9868ec8'
+      label: 'Media - Description'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 3
+      uuid: 51ef1c73-f648-47ff-b899-9989e4950fd3
+      context_mapping: {  }
+    dec7ee7b-32c2-4900-8b40-f52e8d64a747:
+      id: 'block_content:9845bdda-cc17-4cae-ba35-5831ec6cdccd'
+      label: 'Media contact'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 2
+      uuid: dec7ee7b-32c2-4900-8b40-f52e8d64a747
+      context_mapping: {  }
+    f3ca3582-72af-4713-93e2-7829fc86ff70:
+      id: 'views_block:media-block_4'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: -1
+      uuid: f3ca3582-72af-4713-93e2-7829fc86ff70
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 4d94c863-dbf9-4121-bcaf-54b04629bcc1
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: media_audio_video-panels_variant-0
+  builder: standard
+page: media_audio_video
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

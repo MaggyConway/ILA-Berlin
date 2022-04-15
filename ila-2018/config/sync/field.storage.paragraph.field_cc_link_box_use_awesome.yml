@@ -1,0 +1,18 @@
+uuid: 192d9881-fc7b-4e81-b00c-c6bb61185215
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_cc_link_box_use_awesome
+field_name: field_cc_link_box_use_awesome
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

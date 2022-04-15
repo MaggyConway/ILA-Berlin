@@ -1,0 +1,4 @@
+message:
+  subject: 'ILA Berlin 2020 | Conference created: @title'
+  body: 'You can now create your own conference page @link'
+disabled_fields: ''

@@ -1,0 +1,10 @@
+uuid: 1df6c0d6-146e-401b-a5ec-1704495ac4ec
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bvAgBNBi9AzaoCi3fx41fVR7SlakrRh3H-vX4VOgdYQ
+name: Cities
+vid: cities
+description: ''
+weight: 0

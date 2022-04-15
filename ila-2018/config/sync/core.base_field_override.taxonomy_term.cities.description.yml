@@ -1,0 +1,22 @@
+uuid: 9f805051-184c-4120-8d15-27ffb457e435
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cities
+  module:
+    - text
+_core:
+  default_config_hash: HeligGoi2V2yJpKx2NaQTUyIGt3UxWUp8na3ywmEVfk
+id: taxonomy_term.cities.description
+field_name: description
+entity_type: taxonomy_term
+bundle: cities
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

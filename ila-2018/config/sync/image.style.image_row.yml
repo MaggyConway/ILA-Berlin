@@ -1,0 +1,16 @@
+uuid: e49bc79a-5f9c-479b-a534-c3b761fd237c
+langcode: en
+status: true
+dependencies: {  }
+name: image_row
+label: 'Image row (540x480)'
+effects:
+  34264a70-3b94-4400-827c-feeb637aa944:
+    uuid: 34264a70-3b94-4400-827c-feeb637aa944
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 540
+      height: 480
+      anchor: center-center
+pipeline: image_optimiza

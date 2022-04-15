@@ -1,0 +1,22 @@
+uuid: 3440ca8c-f169-4bde-acee-dd13e867452b
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ila
+_core:
+  default_config_hash: WTJ4GaCWyrLyDp8RaXXnV1E5h1WnqxebL_cKmw3MiUU
+id: ila_main_page_content
+theme: ila
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

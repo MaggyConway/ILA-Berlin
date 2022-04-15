@@ -1,0 +1,22 @@
+uuid: b02b4c7b-20a1-4cca-ac4b-1191fec5f2bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.infographic_box
+id: paragraph.infographic_box.status
+field_name: status
+entity_type: paragraph
+bundle: infographic_box
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

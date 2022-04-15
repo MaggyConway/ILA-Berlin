@@ -1,0 +1,18 @@
+uuid: cc16ab32-27cf-477b-98dc-34b2be9f7f48
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dwn_link
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.dwn_link
+target_entity_type_id: paragraph
+target_bundle: dwn_link
+default_langcode: site_default
+language_alterable: true

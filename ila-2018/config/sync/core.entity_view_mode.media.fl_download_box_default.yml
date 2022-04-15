@@ -1,0 +1,10 @@
+uuid: be18d323-80a8-4fbc-9a03-1a5d03d06e0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.fl_download_box_default
+label: 'PT FL Download Box: Default'
+targetEntityType: media
+cache: true

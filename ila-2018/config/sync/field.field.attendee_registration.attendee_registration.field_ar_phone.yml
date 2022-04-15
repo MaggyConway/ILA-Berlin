@@ -1,0 +1,21 @@
+uuid: d4a64da8-ca06-4287-8e07-7baa8bb69c07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_phone
+  module:
+    - ila_attendee_registration
+    - telephone
+id: attendee_registration.attendee_registration.field_ar_phone
+field_name: field_ar_phone
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Phone
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

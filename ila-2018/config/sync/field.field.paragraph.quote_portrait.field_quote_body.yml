@@ -1,0 +1,21 @@
+uuid: 110e09ab-0702-40c7-bed1-7ab79acbd126
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_body
+    - paragraphs.paragraphs_type.quote_portrait
+  module:
+    - text
+id: paragraph.quote_portrait.field_quote_body
+field_name: field_quote_body
+entity_type: paragraph
+bundle: quote_portrait
+label: Quote
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

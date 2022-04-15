@@ -1,0 +1,46 @@
+uuid: 77eead9c-76a3-4204-a6a4-2715dd7c4900
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_grid
+    - field.field.block_content.careercenter_grid.field_cc_grid_components
+  module:
+    - paragraphs
+id: block_content.careercenter_grid.default
+targetEntityType: block_content
+bundle: careercenter_grid
+mode: default
+content:
+  field_cc_grid_components:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

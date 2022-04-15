@@ -1,0 +1,28 @@
+.block-simple-blockconferences-disrupter {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  z-index: 1;
+  @media screen and (min-width: 400px) {
+    top: 5%;
+  }
+  a {
+    display: block;
+    width: 130px;
+    height: 0;
+    padding-top: 130px;
+    overflow: hidden;
+    background-size: 130px !important;
+    @media screen and (min-width: 768px) {
+      width: 240px;
+      padding-top: 240px;
+      background-size: 240px !important;
+    }
+    &.en {
+      background: url(./../img/plan_conferences_en.png) top left no-repeat;
+    }
+    &.de {
+      background: url(./../img/plan_conferences_de.png) top left no-repeat;
+    }
+  }
+}

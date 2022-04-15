@@ -1,0 +1,16 @@
+uuid: 99139fd4-29dc-4dff-a8fd-6247587df4ac
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_header_element_default
+label: 'PT FL Header Element: Default'
+effects:
+  747bdd24-1568-45e0-a2a6-c1730704bb7b:
+    uuid: 747bdd24-1568-45e0-a2a6-c1730704bb7b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 720
+      anchor: center-center
+pipeline: image_optimiza

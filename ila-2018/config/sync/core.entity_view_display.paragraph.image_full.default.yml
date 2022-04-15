@@ -1,0 +1,63 @@
+uuid: 3ced2363-2497-4d3b-b1cb-3db119b68966
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_full.field_if_image
+    - field.field.paragraph.image_full.field_if_text
+    - field.field.paragraph.image_full.field_media
+    - image.style.original_image
+    - paragraphs.paragraphs_type.image_full
+  module:
+    - ds
+    - svg_image
+    - text
+id: paragraph.image_full.default
+targetEntityType: paragraph
+bundle: image_full
+mode: default
+content:
+  field_if_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: original_image
+      image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_if_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

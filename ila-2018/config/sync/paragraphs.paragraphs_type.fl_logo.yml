@@ -1,0 +1,9 @@
+uuid: 2efc606c-7ef9-4cdf-a584-462595283990
+langcode: en
+status: true
+dependencies: {  }
+id: fl_logo
+label: 'FL Logo'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

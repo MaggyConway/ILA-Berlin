@@ -1,0 +1,6 @@
+name: ILA paragraph browser images
+description: Automaticly imports a set of content items previously exported
+package: Custom
+
+type: module
+core_version_requirement: ^8 || ^9

@@ -1,0 +1,14 @@
+uuid: 0faba6b2-a9f8-4d71-8e20-a4d12ef88715
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.conference_editor
+  module:
+    - user
+id: user_remove_role_action.conference_editor
+label: 'Remove the Conference Editor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: conference_editor

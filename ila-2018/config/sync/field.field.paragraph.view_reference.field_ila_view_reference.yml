@@ -1,0 +1,83 @@
+uuid: a9050be1-0266-4178-9423-062d27f45bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ila_view_reference
+    - paragraphs.paragraphs_type.view_reference
+  module:
+    - viewsreference
+id: paragraph.view_reference.field_ila_view_reference
+field_name: field_ila_view_reference
+entity_type: paragraph
+bundle: view_reference
+label: 'ILA view reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    entity_browser: 0
+    attachment: 0
+    feed: 0
+  preselect_views:
+    conferences_archive: conferences_archive
+    conferences_search_api: conferences_search_api
+    downloads_media: downloads_media
+    events_conferences_search: events_conferences_search
+    ila_content_list: ila_content_list
+    ila_media_list: ila_media_list
+    press_media_download_search: press_media_download_search
+    press_media_entity_search: press_media_entity_search
+    press_media_search: press_media_search
+    search: search
+    aircraft: 0
+    attendee_registration_confirmation_: 0
+    banner: 0
+    bdli_events: 0
+    bdli_events_search: 0
+    block_content: 0
+    careercenter_content_list: 0
+    careercenter_events: 0
+    careercenter_job_offers: 0
+    careercenter_media_list: 0
+    categories_conferences: 0
+    conferences: 0
+    content: 0
+    downloads: 0
+    editor_content_pages: 0
+    events: 0
+    facts: 0
+    files: 0
+    fl_partners: 0
+    fl_program: 0
+    glossary_of_company_list: 0
+    glossary_the_speakers: 0
+    media: 0
+    media_entity_browser: 0
+    media_library: 0
+    news: 0
+    news_images: 0
+    paragraph_gallery: 0
+    partners: 0
+    press_logos_and_banner: 0
+    redirect: 0
+    sections: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+  enabled_settings:
+    argument: argument
+    pager: 0
+    offset: 0
+    limit: 0
+    title: 0
+field_type: viewsreference

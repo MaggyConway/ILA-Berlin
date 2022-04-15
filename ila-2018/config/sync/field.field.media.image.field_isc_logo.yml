@@ -1,0 +1,23 @@
+uuid: 49f6099e-6dba-49a6-8639-28ac2f137ee9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_isc_logo
+    - media.type.image
+id: media.image.field_isc_logo
+field_name: field_isc_logo
+entity_type: media
+bundle: image
+label: 'ISC Logo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

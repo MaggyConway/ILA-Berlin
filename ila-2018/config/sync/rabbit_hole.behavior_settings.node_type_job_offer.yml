@@ -1,0 +1,14 @@
+uuid: ab82c4c7-8270-4a86-bb74-901389292bea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.job_offer
+id: node_type_job_offer
+entity_type_id: node_type
+entity_id: job_offer
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

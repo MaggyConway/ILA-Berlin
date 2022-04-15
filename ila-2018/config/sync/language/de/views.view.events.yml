@@ -1,0 +1,36 @@
+display:
+  default:
+    display_options:
+      title: Eventkalender
+      empty:
+        area:
+          content:
+            value: '<p>Keine Ereignisse gefunden.</p>'
+            format: plain_html
+      exposed_form:
+        options:
+          submit_button: Suche
+          reset_button_label: Zurücksetzen
+  block_2:
+    display_options:
+      fields:
+        changed:
+          alter:
+            text: 'Der ILA Eventkalender wird ständig aktualisiert, bitte schauen Sie wieder vorbei. (Letzte Aktualisierung {{ changed }})'
+  block_3:
+    display_options:
+      title: 'Presse Events'
+    display_title: 'Presse Events'
+  block_4:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h2>Hall 2 / Booth 204</h2>\r\n"
+            format: filtered_html
+  block_8:
+    display_options:
+      title: Eventkalender
+  block_9:
+    display_options:
+      title: Flugprogramm

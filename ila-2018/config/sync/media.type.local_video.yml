@@ -1,0 +1,13 @@
+uuid: ae252e76-a8bc-49f7-b50c-f915ee972b94
+langcode: de
+status: true
+dependencies: {  }
+id: local_video
+label: 'Video (lokal)'
+description: ''
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file
+field_map: {  }

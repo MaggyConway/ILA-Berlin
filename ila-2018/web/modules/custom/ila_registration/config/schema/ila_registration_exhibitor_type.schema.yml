@@ -1,0 +1,12 @@
+ila_registration.ila_registration_exhibitor_type.*:
+  type: config_entity
+  label: 'Exhibitor type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

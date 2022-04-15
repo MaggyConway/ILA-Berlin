@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function ila_request_fb_1_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_request_fb_1_form') {
+    $form['#attached']['library'][] = 'ila_request_fb_1/request_fb_1';
+    // Override boolean field title (limit length on field label).
+    $form['field_request_fb1_herewith_conf']['widget']['value']['#title'] = t('Herewith we confirm that the insurance requirements of ICAO and the conditions for ILA participation will be met. For details concerning insurance coverage and other flight operations information, refer to the forms which will be sent separately. Documents of coverage at least for the period from the day of arrival to the day of departure will be presented at the latest upon arrival. Aircraft without correct documents may be refused. The applicant certifies that all participating crews will adhere to the flight operation procedures for ILA.');
+  }
+
+  return $form;
+}

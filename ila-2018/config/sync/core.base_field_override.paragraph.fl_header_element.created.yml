@@ -1,0 +1,18 @@
+uuid: 5ec3d7d0-fc03-414c-99f9-060599c196e3
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fl_header_element
+id: paragraph.fl_header_element.created
+field_name: created
+entity_type: paragraph
+bundle: fl_header_element
+label: 'Geschrieben am'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

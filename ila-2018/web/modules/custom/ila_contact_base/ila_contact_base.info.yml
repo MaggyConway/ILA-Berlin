@@ -1,0 +1,10 @@
+name: 'Contact - Base'
+description: 'Contact entity type common configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - contact
+  - field
+  - language
+  - telephone
+package: ILA

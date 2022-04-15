@@ -1,0 +1,45 @@
+/* Normalize css */
+@import '~normalize.css/normalize.css';
+
+/* Fonts */
+@import '../assets/fonts/main.css';
+
+/* Setup */
+@import './settings/variables';
+
+/* Mixins */
+@import './settings/mixins';
+
+/* Base styles */
+@import './base/elements';
+@import './base/typography';
+@import './base/buttons';
+@import './base/layout';
+
+/* Components */
+@import './components/header/header';
+@import './components/header/header-top';
+@import './components/header/mega-menu';
+@import './components/header/mobile-menu';
+@import './components/footer';
+@import './components/footer.nav';
+@import './components/title';
+@import './components/slick-themes';
+@import './components/social-feed';
+@import './components/cookie-popup';
+@import './components/node.future-lab';
+@import './components/group-header';
+
+/* Paragraphs */
+@import './paragraph/paragraph.fl-header';
+@import './paragraph/paragraph.fl-logo';
+@import './paragraph/paragraph.fl-box';
+@import './paragraph/paragraph.fl-video-messages';
+@import './paragraph/paragraph.fl-testimonials';
+@import './paragraph/paragraph.fl-video-box';
+@import './paragraph/paragraph.fl-double-box.scss';
+@import './paragraph/paragraph.fl-download-box';
+@import './paragraph/paragraph.fl-stream-box';
+@import './paragraph/paragraph.fl-dynamic-block-program';
+@import './paragraph/paragraph.fl-text-image-box';
+@import './paragraph/paragraph.fl-dynamic-block-partners.scss';

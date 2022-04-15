@@ -1,0 +1,23 @@
+uuid: 2d556a93-9e68-4797-8d0a-3495fc75eaae
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.download.field_file
+    - paragraphs.paragraphs_type.download
+  module:
+    - file
+id: paragraph.download.preview
+targetEntityType: paragraph
+bundle: download
+mode: preview
+content:
+  field_file:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+hidden: {  }

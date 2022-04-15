@@ -1,0 +1,10 @@
+name: 'Exhibitor Account'
+description: 'Contains configuration for the Account page from exhibitor zone.'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - node
+  - page_manager
+  - panels
+  - user

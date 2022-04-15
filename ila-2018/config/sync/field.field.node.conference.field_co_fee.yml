@@ -1,0 +1,21 @@
+uuid: ded7a9dd-49c2-4ae6-8892-80630a691f04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_fee
+    - node.type.conference
+id: node.conference.field_co_fee
+field_name: field_co_fee
+entity_type: node
+bundle: conference
+label: 'Attendance Fee'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 'Coming soon'
+default_value_callback: ''
+settings: {  }
+field_type: string

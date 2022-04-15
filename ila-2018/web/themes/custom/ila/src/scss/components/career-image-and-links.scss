@@ -1,0 +1,98 @@
+.block-block-content-careercenter_image_and_links {
+  position: relative;
+  //height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 435px;
+  margin-bottom: 120px; 
+  margin-top: 150px; 
+  //padding-top: 80px;
+
+  @media #{$m-to-sm} {
+    height: 350px;
+  }
+  @media #{$m-to-s} {
+    height: 200px;
+  }
+  
+  .field--name-field-cc-image-and-links-links {
+    position: relative;
+    max-width: 1140px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    > .field__item {
+      max-width: 340px;
+      width: 100%;
+      padding: 9px;
+
+      &:nth-child(1) {
+        position: absolute;
+        top: -130px;
+        left: 0;
+        .paragraph--type--cc-link-box {
+
+          @media #{$m-to-sm} {
+            min-height: 195px;
+          }
+          
+          background-color: $career-background-dark;
+
+          &:hover {
+            background: $career-green-background;
+          }
+        }
+      }
+      &:nth-child(2) {
+        position: absolute;
+        bottom: -55px;
+        right: 0;
+
+        @media #{$m-to-sm} {
+          bottom: -80px;
+        }
+        
+        .paragraph--type--cc-link-box {
+
+          @media #{$m-to-sm} {
+            min-height: 145px;
+          }
+
+          background-color: $career-green-background;
+
+          .field--name-field-cc-link-box-title, .text-box__title {
+            color: $career-dark;
+          }
+          .field--name-field-cc-link-box-subtitle {
+            color: $career-dark;
+          }
+          &::before {
+            background: $career-dark;	
+          } 
+          &::after {
+            border-left: 8px solid $career-dark;
+          }
+
+          &:hover {
+            background-color: $career-background-dark;
+            &::before {
+              background: $career-green;	
+            } 
+            &::after {
+              border-left: 8px solid $career-green;
+            }
+            
+            .field--name-field-cc-link-box-title, .text-box__title {
+              color: $career-green;
+            }
+            .field--name-field-cc-link-box-subtitle {
+              color: $career-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}

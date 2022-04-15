@@ -1,0 +1,20 @@
+uuid: e0aa428e-1e39-498e-a6f2-55c286b48f33
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.page_description
+_core:
+  default_config_hash: ujYe4vIefAK1SUQXP-7J8F-eDhAMmlgwaWg3chXI450
+id: block_content.page_description.changed
+field_name: changed
+entity_type: block_content
+bundle: page_description
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

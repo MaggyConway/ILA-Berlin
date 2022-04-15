@@ -1,0 +1,22 @@
+uuid: d475ab3d-5779-4dd9-a51d-3fc9ddfb70c8
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_testimonials_container
+id: paragraph.cc_testimonials_container.status
+field_name: status
+entity_type: paragraph
+bundle: cc_testimonials_container
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

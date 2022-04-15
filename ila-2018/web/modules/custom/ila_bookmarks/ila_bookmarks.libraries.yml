@@ -1,0 +1,7 @@
+ila_bookmarks:
+  version: 1.x
+  js:
+    js/ila_bookmarks.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

@@ -1,0 +1,6 @@
+excluded:
+  - views.view.sections
+  - field.field.node.section.field_image
+  - field.storage.node.field_image
+  - page_manager.page_variant.homepage-panels_variant-1
+required: true

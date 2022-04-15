@@ -1,0 +1,44 @@
+.paragraph--type--navigation {
+  .field--name-field-navigation-links {
+    align-items: stretch;
+    border-top: 1px solid $c-blue-normal;
+    border-bottom: 1px solid $c-blue-normal;
+    padding: 20px 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+
+    @media #{$m-to-m} {
+      display: block;
+    }
+
+    .field__item {
+      margin: 0;
+
+      a {
+        color: $c-blue-normal;
+        padding: 0;
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 2.667;
+        text-transform: uppercase;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+          color: $c-blue;
+        }
+      }
+    }
+
+    &:first-child a {
+      padding-left: 0;
+    }
+
+    &:last-child a {
+      padding-right: 0;
+    }
+  }
+}

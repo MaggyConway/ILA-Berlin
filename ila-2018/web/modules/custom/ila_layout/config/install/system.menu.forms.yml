@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: forms
+label: Forms
+description: 'Links to site forms'
+locked: false

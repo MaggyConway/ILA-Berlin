@@ -1,0 +1,16 @@
+uuid: d0b4d8c7-ca4a-49fc-b377-b3ab98d96c98
+langcode: en
+status: true
+dependencies: {  }
+name: faq_group
+label: 'FAQ group'
+effects:
+  b7bf00f9-60e6-4860-a48f-5accf8b4a292:
+    uuid: b7bf00f9-60e6-4860-a48f-5accf8b4a292
+    id: image_scale
+    weight: 1
+    data:
+      width: 500
+      height: null
+      upscale: false
+pipeline: image_optimiza

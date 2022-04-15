@@ -1,0 +1,19 @@
+Index: auto_height.install
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auto_height.install b/auto_height.install
+--- a/auto_height.install	(revision e06ac56b279bad2767e04e031869976beb43241d)
++++ b/auto_height.install	(date 1634119123400)
+@@ -17,7 +17,7 @@
+     $installed = file_exists($path);
+     if (!$installed) {
+       // display a warning message..
+-      drupal_set_message(t('The jQuery AutoHeight plugin is missing. <a href="https://raw.githubusercontent.com/monocult/jquery-autoheight/master/jquery.autoheight.js" rel="external">Download the plugin</a> and place it in /libraries/autoheight/jquery.autoheight.js'), 'warning');
++        \Drupal::messenger()->addMessage(t('The jQuery AutoHeight plugin is missing. <a href="https://raw.githubusercontent.com/monocult/jquery-autoheight/master/jquery.autoheight.js" rel="external">Download the plugin</a> and place it in /libraries/autoheight/jquery.autoheight.js'), 'warning');
+     }
+   }
+   else if ($phase == 'runtime') {
+
+

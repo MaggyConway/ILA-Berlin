@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Module hooks implementations.
+ */
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_node_map_element_form_alter().
+ */
+function ila_node_downloads_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\node\NodeForm $form_object */
+  $form_object = $form_state->getFormObject();
+  $entity = $form_object->getEntity();
+
+  if ($entity->bundle() == 'downloads') {
+    $form['options']['#open'] = TRUE;
+    $form['promote']['widget']['value']['#title'] = t('Available for anonymous users');
+
+    unset($form['sticky']);
+  }
+}
+
+/**
+ * Implements hook_entity_access().
+ */
+function ila_node_downloads_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  /** @var \Drupal\file\Entity\File $file */
+  if ($entity->getEntityTypeId() == 'file' && $operation == 'download') {
+    if ($node = ila_node_downloads_get_file_node($entity)) {
+      if (!ila_node_downloads_is_available_for_anonymous($node)) {
+        return $account->isAuthenticated()
+          ? AccessResult::allowed()
+          : AccessResult::forbidden();
+      }
+    }
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Check if file entity is a part of private field.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $file
+ *   File entity to check.
+ *
+ * @return NodeInterface|null
+ *   Node object or NULL.
+ */
+function ila_node_downloads_get_file_node(EntityInterface $file) {
+  /** @var \Drupal\file\FileInterface $file */
+  $references = file_get_file_references($file);
+
+  if (isset($references['field_file_private']['node'])) {
+    return reset($references['field_file_private']['node']);
+  }
+
+  return NULL;
+}
+
+function ila_node_downloads_is_available_for_anonymous(NodeInterface $node) {
+  return $node->get('promote')->value;
+}

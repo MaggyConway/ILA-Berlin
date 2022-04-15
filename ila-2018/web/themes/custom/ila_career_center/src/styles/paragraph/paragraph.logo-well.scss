@@ -1,0 +1,142 @@
+.paragraph-content--view-display-id-cc_logo_wall,
+.paragraph-content--view-display-id-cc_partner_wall {
+  margin: 30px 40px;
+
+  .logo-wall-header,
+  .partner-wall-header {
+    font-family: $career-font;
+    font-size: 62px;
+    line-height: 1.5;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222538;
+
+    @media #{$m-to-m} {
+      font-size: 22px;
+    }
+  }
+
+  /* stylelint-disable */
+
+  .media--view-mode-pt-careercenter-view-reference-career-center-logo-wall {
+    position: relative;
+    padding: 7px;
+    height: 190px;
+
+    /*&::after {
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 1px;
+      height: 90%;
+      content: '';
+      background-color: rgba(0, 0, 0, .1);
+      transform: translateY(-50%);
+    }*/
+
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto;
+      transition: all .3s ease;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      filter: grayscale(100%);
+      max-height: 170px;
+      width: auto;
+    }
+
+    @media #{$m-to-m} {
+      padding: 10px;
+    }
+  }
+
+  .slick-slide {
+    > div + div {
+      .media--view-mode-pt-careercenter-view-reference-career-center-logo-wall {
+        border-top: 1px solid rgba(0, 0, 0, .1);
+      }
+    }
+
+    .slick__slide:last-child {
+      .media--view-mode-pt-careercenter-view-reference-career-center-logo-wall::after {
+        display: none;
+      }
+    }
+  }
+
+  /* stylelint-enable */
+
+  .slick--view--careercenter-media-list {
+    padding-bottom: 35px;
+  }
+
+  .slick__arrow {
+    top: auto;
+    bottom: 0;
+  }
+
+  .slick-arrow {
+    top: auto;
+    bottom: 0;
+    background: rgba(34, 37, 56, .2);
+    border-radius: 0;
+    transform: translateY(0%);
+
+    &::before {
+      margin: 0 auto;
+      display: block;
+      width: calc(70% - 8px);
+      height: 3px;
+      opacity: 1;
+      content: '';
+      background: $career-dark;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-color: transparent $career-dark;
+    }
+  }
+
+  .slick-next {
+    &::after {
+      right: 0;
+      border-width: 7px 0 7px 8px;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  .slick-prev {
+    right: 2px;
+    left: auto;
+    transform: translate(-100%, 0);
+
+    &::after {
+      left: 0;
+      border-width: 7px 8px 7px 0;
+      transform: translate(100%, -50%);
+    }
+  }
+
+  @media #{$m-to-m} {
+    margin: 30px 20px;
+  }
+}

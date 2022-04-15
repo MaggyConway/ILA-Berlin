@@ -1,0 +1,19 @@
+uuid: 0db86eec-6f1a-48ad-9a4e-be738ac310c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_joboffer_external_image_id
+    - media.type.image
+id: media.image.field_joboffer_external_image_id
+field_name: field_joboffer_external_image_id
+entity_type: media
+bundle: image
+label: 'JobOffer External image Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

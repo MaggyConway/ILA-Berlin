@@ -1,0 +1,23 @@
+uuid: 4b8b189c-8390-4f95-a674-950556ca7017
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cc_news
+    - node.type.news
+id: node.news.field_cc_news
+field_name: field_cc_news
+entity_type: node
+bundle: news
+label: 'CareerCenter News'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

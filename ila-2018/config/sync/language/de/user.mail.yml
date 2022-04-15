@@ -1,0 +1,25 @@
+cancel_confirm:
+  subject: 'Antrag auf Löschung von Benutzerkonto [user:name] auf [site:name]'
+password_reset:
+  body: "<p>Sehr geehrte(r) [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>vielen Dank für Ihr Interesse an der ILA Berlin 2020 und Ihre Registrierung.</p>\r\n<p>Bitte bestätigen Sie Ihre E-Mail-Adresse durch das Klicken auf folgenden LInk:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>Das Bestätigen Ihrer E-Mail-Adresse soll verhindern, dass Anmeldungen durch Dritte erfolgen und dient so Ihrem eigenen Schutz.</p>"
+  subject: 'ILA 2020 – Ihr Account wurde aktiviert'
+register_admin_created:
+  body: "<p>Sehr geehrte(r) [user:field_first_name] [user:field_last_name],</p>\r\n\r\n<p>Das ILA Team hat für Sie einen Account erstellt, mit dem Sie ihre Konferenz bearbeiten können. Sie können sich jetzt mit einem Klick auf den folgenden Link anmelden oder diesen alternativ in Ihren Browser kopieren:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n\r\n<p>Dieser Link kann nur einmal verwendet werden und leitet Sie zu einer Seite, auf der Sie ein neues Passwort vergeben können.</p>\r\n\r\n<p>Nachdem Sie Ihr Passwort festgelegt haben, können Sie sich zukünftig auf [site:login-url] mit den folgenden Zugangsdaten anmelden:</p>\r\n\r\n<p>Benutzername: [user:name]<br>\r\nPasswort: Ihr Passwort</p>\r\n\r\n<p>Viele Grüße\r\nDas Team von [site:name]</p>"
+  subject: 'ILA Berlin 2020 | Login Konferenz Editor'
+register_no_approval_required:
+  body: "<p>Sehr geehrte(r) [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>vielen Dank für Ihr Interesse an der ILA Berlin 2020 und Ihre Registrierung.</p>\r\n<p>Bitte bestätigen Sie Ihre E-Mail-Adresse durch das Klicken auf folgenden LInk:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>Das Bestätigen Ihrer E-Mail-Adresse soll verhindern, dass Anmeldungen durch Dritte erfolgen und dient so Ihrem eigenen Schutz.</p>\r\n\r\n"
+  subject: 'Kontodetails für [user:display-name] auf [site:name]'
+register_pending_approval:
+  body: "<p>[user:display-name],</p>\r\n\r\n<p>vielen Dank für die Registrierung auf [site:name]. Ihr Antrag für ein Benutzerkonto wird aktuell geprüft. Sobald eine Freigabe erfolgt ist, erhalten Sie eine weitere E-Mail mit Informationen zum Login, Setzen Ihres Passwortes sowie weitere Details.</p>"
+  subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+register_pending_approval_admin:
+  body: "<p>[user:display-name] hat einen Antrag auf ein Benutzerkonto gestellt.</p>\r\n\r\n<p>[user:edit-url]</p>"
+  subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+status_activated:
+  body: "<p>Sehr geehrte(r) [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>vielen Dank für Ihr Interesse an der ILA Berlin 2020 und Ihre Registrierung.</p>\r\n\r\n<p>Bitte bestätigen Sie Ihre E-Mail-Adresse durch das Klicken auf folgenden Link:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>Das Bestätigen Ihrer E-Mail-Adresse soll verhindern, dass Anmeldungen durch Dritte erfolgen und dient so Ihrem eigenen Schutz.</p>"
+status_blocked:
+  body: "<p>[user:display-name],</p>\r\n\r\n<p>Ihr Benutzerkonto auf [site:name] wurde gesperrt.</p>\r\n\r\n"
+  subject: 'Details für Benutzerkonto [user:name] auf [site:name] (gesperrt)'
+status_canceled:
+  body: "<p>[user:display-name],</p>\r\n\r\n<p>Ihr Benutzerkonto auf [site:name] wurde gelöscht.</p>\r\n\r\n"
+  subject: 'Details für Benutzerkonto [user:display-name] auf [site:name] (abgebrochen)'

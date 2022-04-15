@@ -1,0 +1,7 @@
+name: ILA jQuery Countdown Timer
+type: module
+description: This module provides a block with a jQuery countdown timer
+package: ILA
+dependencies:
+  - block
+core_version_requirement: ^8 || ^9

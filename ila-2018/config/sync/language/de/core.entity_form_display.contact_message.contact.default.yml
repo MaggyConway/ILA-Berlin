@@ -1,0 +1,10 @@
+content:
+  field_company:
+    settings:
+      placeholder: Company
+  field_telephone:
+    settings:
+      placeholder: Telefon
+  message:
+    settings:
+      placeholder: Message

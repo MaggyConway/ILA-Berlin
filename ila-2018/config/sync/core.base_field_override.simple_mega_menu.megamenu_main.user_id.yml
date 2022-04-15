@@ -1,0 +1,20 @@
+uuid: 479ceb60-548c-498d-afa7-f86e876c5a97
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+id: simple_mega_menu.megamenu_main.user_id
+field_name: user_id
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: 'Authored by'
+description: 'The user ID of author of the Simple mega menu entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

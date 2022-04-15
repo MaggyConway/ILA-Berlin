@@ -1,0 +1,9 @@
+uuid: d527d6fd-ce2b-4012-9064-6b7b0d482300
+langcode: en
+status: true
+dependencies: {  }
+id: careercenter_title_text_images
+label: 'CareerCenter -- Title/Text/Images'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

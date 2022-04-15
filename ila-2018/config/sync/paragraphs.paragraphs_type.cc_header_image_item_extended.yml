@@ -1,0 +1,9 @@
+uuid: f2347422-8c96-4a8a-9f87-25128c397d2c
+langcode: en
+status: true
+dependencies: {  }
+id: cc_header_image_item_extended
+label: 'CareerCenter -- Header image item (Extended)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

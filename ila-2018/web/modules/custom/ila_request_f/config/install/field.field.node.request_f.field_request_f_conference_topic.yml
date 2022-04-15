@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_f_conference_topic
+    - node.type.request_f
+id: node.request_f.field_request_f_conference_topic
+field_name: field_request_f_conference_topic
+entity_type: node
+bundle: request_f
+label: 'Conference topic'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

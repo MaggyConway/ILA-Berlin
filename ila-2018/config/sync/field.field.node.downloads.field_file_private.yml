@@ -1,0 +1,48 @@
+uuid: 7c524f80-cdf5-477d-9ec1-681569dfa318
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_private
+    - node.type.downloads
+  module:
+    - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'node/[node:content-type:machine-name]/[node:nid]/field_file_private'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+_core:
+  default_config_hash: sgDcmjar4en3nw-zEXU1EzPWOHDy0OiDAgrK3dWIjTw
+id: node.downloads.field_file_private
+field_name: field_file_private
+entity_type: node
+bundle: downloads
+label: File
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'zip pdf txt png eps jpg xls xlsx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,53 @@
+uuid: 8c364d0d-e48a-4121-ac0e-3dc76077a177
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: image_entity_browser
+label: 'Image Entity Browser'
+display: modal
+display_configuration:
+  width: '1280'
+  height: '940'
+  link_text: 'Select image'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  1e22bf2d-132f-4202-8733-ba7a440fb944:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_2
+      submit_text: 'Select Image'
+      auto_select: false
+    uuid: 1e22bf2d-132f-4202-8733-ba7a440fb944
+    weight: 1
+    label: Bibliothek
+    id: view
+  1af90a22-35b9-4494-981a-4d9b1fd4d570:
+    settings:
+      form_mode: media_library
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png svg'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select Image'
+    uuid: 1af90a22-35b9-4494-981a-4d9b1fd4d570
+    weight: 2
+    label: 'Bild hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

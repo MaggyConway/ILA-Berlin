@@ -1,0 +1,23 @@
+uuid: e8552a17-d1c6-442f-b6fe-b8b703723521
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_link_box_use_awesome
+    - paragraphs.paragraphs_type.cc_link_box
+id: paragraph.cc_link_box.field_cc_link_box_use_awesome
+field_name: field_cc_link_box_use_awesome
+entity_type: paragraph
+bundle: cc_link_box
+label: 'Use fontawesome symbol'
+description: 'Use symbol from fontawesome set instead of title. If checked, value in the ''Title'' field is ignored.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

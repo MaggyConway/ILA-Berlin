@@ -1,0 +1,225 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_fb_1.field_aircraft_type
+    - field.field.node.request_fb_1.field_overall_length_in_m
+    - field.field.node.request_fb_1.field_product_group
+    - field.field.node.request_fb_1.field_product_group_index
+    - field.field.node.request_fb_1.field_registration
+    - field.field.node.request_fb_1.field_registration_aircrafts
+    - field.field.node.request_fb_1.field_request_fb1_aircraft_cat
+    - field.field.node.request_fb_1.field_request_fb1_amount_of_plan
+    - field.field.node.request_fb_1.field_request_fb1_date_arrival
+    - field.field.node.request_fb_1.field_request_fb1_date_departure
+    - field.field.node.request_fb_1.field_request_fb1_herewith_conf
+    - field.field.node.request_fb_1.field_request_fb1_please_note
+    - field.field.node.request_fb_1.field_request_fb1_plus_advert
+    - field.field.node.request_fb_1.field_request_fb1_required_serv
+    - field.field.node.request_fb_1.field_request_fb1_type_of_partic
+    - field.field.node.request_fb_1.field_weight_in_kg_mtow_
+    - field.field.node.request_fb_1.field_wing_or_rotor_span_in_m
+    - node.type.request_fb_1
+  module:
+    - datetime
+    - field_group
+    - ila_grouped_options
+    - markup
+third_party_settings:
+  field_group:
+    group_plus_advertising_box:
+      children:
+        - field_request_fb1_please_note
+        - field_request_fb1_plus_advert
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'field-group--advertise wrapp-2-cols'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Plus Advertising Box'
+    group_wrapper:
+      children:
+        - field_aircraft_type
+        - field_weight_in_kg_mtow_
+        - field_registration
+        - field_overall_length_in_m
+        - field_wing_or_rotor_span_in_m
+        - field_request_fb1_aircraft_cat
+        - field_request_fb1_amount_of_plan
+        - field_request_fb1_date_arrival
+        - field_request_fb1_date_departure
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrapper
+    group_wrapper_0:
+      children:
+        - field_request_fb1_type_of_partic
+        - field_request_fb1_required_serv
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapp-2-cols
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: wrapper_0
+id: node.request_fb_1.default
+targetEntityType: node
+bundle: request_fb_1
+mode: default
+content:
+  field_aircraft_type:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_overall_length_in_m:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_product_group:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: grouped_options
+    region: content
+  field_product_group_index:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_registration:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_registration_aircrafts:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_fb1_aircraft_cat:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_request_fb1_amount_of_plan:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_request_fb1_date_arrival:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_request_fb1_date_departure:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_request_fb1_herewith_conf:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_request_fb1_please_note:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_fb1_plus_advert:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_fb1_required_serv:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_request_fb1_type_of_partic:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_weight_in_kg_mtow_:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_wing_or_rotor_span_in_m:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  translation: true
+  uid: true

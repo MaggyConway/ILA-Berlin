@@ -1,0 +1,8 @@
+uuid: f6bf4ee5-0422-43bd-9611-f7dc5ae7dc19
+langcode: en
+status: true
+dependencies: {  }
+id: careercenter_image_and_links
+label: 'CareerCenter -- Image and links'
+revision: 0
+description: ''

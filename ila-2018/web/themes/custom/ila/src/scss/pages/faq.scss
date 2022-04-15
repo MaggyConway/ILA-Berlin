@@ -1,0 +1,25 @@
+.path-faq {
+  .layout-container {
+    background: #ffffff;
+  }
+  .layout-content {
+    padding-top: 150px;
+
+    .region-content {
+      @media screen and (max-width: 975px) {
+        padding-top: 80px !important;
+      }
+      @media screen and (max-width: 609px) {
+        padding-top: 50px !important;
+      }
+    }
+
+    @media screen and (max-width: 975px) {
+      padding-top: 105px;
+    }
+    @media screen and (max-width: 609px) {
+      padding-top: 103px;
+    }
+  }
+}
+

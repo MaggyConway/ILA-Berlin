@@ -1,0 +1,18 @@
+uuid: f6247849-be1a-4ea2-befd-9551ee41d5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_facebook_post
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.cc_facebook_post
+target_entity_type_id: paragraph
+target_bundle: cc_facebook_post
+default_langcode: site_default
+language_alterable: true

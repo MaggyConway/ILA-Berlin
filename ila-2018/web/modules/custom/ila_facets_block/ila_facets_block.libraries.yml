@@ -1,0 +1,18 @@
+ila_facets_block.facets.ila-checkbox-widget:
+  version: VERSION
+  js:
+    js/ila-checkbox-widget.js: {}
+    js/list.min.js: {}
+    js/ila-checkbox-search-widget.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+ila_facets_block.facets.ila-dropdown-widget:
+  version: VERSION
+  js:
+    js/ila-dropdown-widget.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once

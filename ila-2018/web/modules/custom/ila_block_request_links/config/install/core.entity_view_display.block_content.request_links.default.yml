@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.request_links
+    - field.field.block_content.request_links.field_request
+    - field.field.block_content.request_links.field_title
+  module:
+    - entity_reference_revisions
+id: block_content.request_links.default
+targetEntityType: block_content
+bundle: request_links
+mode: default
+content:
+  field_request:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

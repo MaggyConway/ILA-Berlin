@@ -1,0 +1,21 @@
+uuid: f0fe7923-b6c4-4a3d-9522-792e0c6a4013
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+    - field.storage.contact_message.field_mr_ms
+  module:
+    - options
+id: contact_message.sponsoring_katalog.field_mr_ms
+field_name: field_mr_ms
+entity_type: contact_message
+bundle: sponsoring_katalog
+label: 'Herr / Frau'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,41 @@
+/* stylelint-disable */
+
+#block-futurelab-mobile-menu,
+#block-aviationsummit-mobile-menu {
+  margin: 0 auto 30px;
+  padding: 20px 0 20px 40px;
+  width: calc(100% - 20px);
+  text-transform: uppercase;
+  color: $c-yellow;
+  background: $c-black;
+
+  > h2 {
+    margin-bottom: 8px;
+  }
+
+  ul.menu {
+    margin: 0;
+
+    li {
+      margin-bottom: 8px;
+      list-style-type: none;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    color: $c-yellow;
+
+    @media screen and (max-width: 975px) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.user-logged-in .header .header__top.opened .region-header-top-main-nav {
+  max-height: calc(100vh - 253px);
+}
+
+/* stylelint-enable */

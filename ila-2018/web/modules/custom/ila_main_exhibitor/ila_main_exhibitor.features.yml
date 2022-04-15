@@ -1,0 +1,3 @@
+excluded:
+  - field.storage.node.field_catalog_company_cntr_code
+required: true

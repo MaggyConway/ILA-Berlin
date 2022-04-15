@@ -1,0 +1,64 @@
+uuid: 4278b553-d1a2-4908-b1e1-650bd49ec4c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_entity_browser
+    - field.field.paragraph.infographic_box.field_infographic_box_background
+    - field.field.paragraph.infographic_box.field_infographic_box_bg_media
+    - field.field.paragraph.infographic_box.field_infographic_box_columns
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.infographic_box
+  module:
+    - entity_browser
+    - paragraphs
+    - svg_image
+id: paragraph.infographic_box.default
+targetEntityType: paragraph
+bundle: infographic_box
+mode: default
+content:
+  field_infographic_box_background:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_infographic_box_bg_media:
+    type: entity_browser_entity_reference
+    weight: 1
+    settings:
+      entity_browser: image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: library
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    region: content
+  field_infographic_box_columns:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

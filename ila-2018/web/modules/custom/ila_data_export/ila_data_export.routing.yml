@@ -1,0 +1,7 @@
+ila_export_programs_pdf.data:
+  path: '/ila-export/{entity_type}/{tag}/pdf'
+  defaults:
+    _controller: '\Drupal\ila_data_export\Controller\IlaExportProgramsController::exportPdf'
+    _title: 'Export Programs'
+  requirements:
+    _permission: 'access content'

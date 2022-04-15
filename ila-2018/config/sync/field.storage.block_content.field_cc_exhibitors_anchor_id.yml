@@ -1,0 +1,21 @@
+uuid: 5145401b-2f8b-4e6b-b2bd-9dc3a4a3e7cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_cc_exhibitors_anchor_id
+field_name: field_cc_exhibitors_anchor_id
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

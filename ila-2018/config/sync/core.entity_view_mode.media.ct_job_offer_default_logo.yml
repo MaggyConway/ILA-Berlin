@@ -1,0 +1,10 @@
+uuid: 4e45b1df-21fb-49f4-b57d-2891ad3df49f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_job_offer_default_logo
+label: 'CT Job Offer: Default (Logo 319x139) '
+targetEntityType: media
+cache: true

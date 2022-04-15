@@ -1,0 +1,19 @@
+uuid: ff534f52-5f5a-49b2-af1f-cf0446aad4c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_co_contact_registration
+field_name: field_co_contact_registration
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: a780bad3-c821-40bc-90cf-98c3e0364434
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: zekJRp4Pan3CSYkKUfFB1JR7yQFePlW-lEq9AgR5pYQ
+id: node.field_downloads_show_on_print
+field_name: field_downloads_show_on_print
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

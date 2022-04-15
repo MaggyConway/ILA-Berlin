@@ -1,0 +1,38 @@
+uuid: f379f582-ff77-40d5-aa52-9ee9b64b14e2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careercenter_header_title.field_cc_anchor
+    - field.field.paragraph.careercenter_header_title.field_titel
+    - paragraphs.paragraphs_type.careercenter_header_title
+id: paragraph.careercenter_header_title.default
+targetEntityType: paragraph
+bundle: careercenter_header_title
+mode: default
+content:
+  field_cc_anchor:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titel:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

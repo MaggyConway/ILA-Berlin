@@ -1,0 +1,16 @@
+uuid: 586d0ba5-193b-4f73-9e7f-6380eb363238
+langcode: de
+status: true
+dependencies: {  }
+name: embedded_small
+label: 'embedded small'
+effects:
+  60263d1f-5401-43cc-abf0-9db0f5d2013a:
+    uuid: 60263d1f-5401-43cc-abf0-9db0f5d2013a
+    id: image_scale
+    weight: 1
+    data:
+      width: 545
+      height: null
+      upscale: true
+pipeline: image_optimiza

@@ -1,0 +1,11 @@
+uuid: 1a571e35-c806-4349-93ee-e6178f14c6d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: career_center_social_feed
+title: 'Career Center social feed'
+content:
+  value: "<div id=\"curator-feed-cc-feed\"></div>\r\n<script type=\"text/javascript\">\r\n(function(){\r\nvar i, e, d = document, s = \"script\";i = d.createElement(\"script\");i.async = 1;\r\ni.src = \"https://cdn.curator.io/published/08e79784-973a-46ce-9b1d-18811388446b.js\";\r\ne = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);\r\n})();\r\n</script>\r\n"
+  format: full_html

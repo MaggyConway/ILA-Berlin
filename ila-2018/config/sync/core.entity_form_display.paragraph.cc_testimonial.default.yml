@@ -1,0 +1,58 @@
+uuid: de48437e-cedf-420a-a375-0e77e486284d
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_entity_browser
+    - field.field.paragraph.cc_testimonial.field_cc_testimonial_quote
+    - field.field.paragraph.cc_testimonial.field_cc_testimonial_quote_auth
+    - field.field.paragraph.cc_testimonial.field_media_reference
+    - paragraphs.paragraphs_type.cc_testimonial
+  module:
+    - entity_browser
+    - text
+id: paragraph.cc_testimonial.default
+targetEntityType: paragraph
+bundle: cc_testimonial
+mode: default
+content:
+  field_cc_testimonial_quote:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cc_testimonial_quote_auth:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media_reference:
+    weight: 0
+    settings:
+      entity_browser: image_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: media_library
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

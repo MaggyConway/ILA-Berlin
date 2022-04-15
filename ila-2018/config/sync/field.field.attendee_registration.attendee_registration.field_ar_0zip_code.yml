@@ -1,0 +1,20 @@
+uuid: 2ec35659-f0df-4929-a2c3-01f559fb6746
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_0zip_code
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_0zip_code
+field_name: field_ar_0zip_code
+entity_type: attendee_registration
+bundle: attendee_registration
+label: 'Zip code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

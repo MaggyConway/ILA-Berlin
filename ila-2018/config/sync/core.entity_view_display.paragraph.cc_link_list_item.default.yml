@@ -1,0 +1,36 @@
+uuid: 2cc640a8-8fca-460f-b919-8e86288c864a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_link_list_item.field_cc_link_list_item_link
+    - field.field.paragraph.cc_link_list_item.field_cc_link_list_item_title
+    - paragraphs.paragraphs_type.cc_link_list_item
+  module:
+    - link
+    - text
+id: paragraph.cc_link_list_item.default
+targetEntityType: paragraph
+bundle: cc_link_list_item
+mode: default
+content:
+  field_cc_link_list_item_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cc_link_list_item_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

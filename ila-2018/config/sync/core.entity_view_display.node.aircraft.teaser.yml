@@ -1,0 +1,45 @@
+uuid: b1f2703b-4c27-4af8-8703-669231b56a4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.aircraft.field_air_ac_type_long
+    - field.field.node.aircraft.field_air_category
+    - field.field.node.aircraft.field_air_country
+    - field.field.node.aircraft.field_air_display_time
+    - field.field.node.aircraft.field_air_final_departure
+    - field.field.node.aircraft.field_air_ila_nr
+    - field.field.node.aircraft.field_air_initial_arrival
+    - field.field.node.aircraft.field_air_length_m_
+    - field.field.node.aircraft.field_air_mtow_kg_
+    - field.field.node.aircraft.field_air_op_status
+    - field.field.node.aircraft.field_air_pub_name
+    - field.field.node.aircraft.field_air_span_m_
+    - node.type.aircraft
+  module:
+    - user
+id: node.aircraft.teaser
+targetEntityType: node
+bundle: aircraft
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_air_ac_type_long: true
+  field_air_category: true
+  field_air_country: true
+  field_air_display_time: true
+  field_air_final_departure: true
+  field_air_ila_nr: true
+  field_air_initial_arrival: true
+  field_air_length_m_: true
+  field_air_mtow_kg_: true
+  field_air_op_status: true
+  field_air_pub_name: true
+  field_air_span_m_: true
+  langcode: true

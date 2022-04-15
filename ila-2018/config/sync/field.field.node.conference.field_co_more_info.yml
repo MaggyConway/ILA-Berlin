@@ -1,0 +1,21 @@
+uuid: 5cfa0b6b-b34f-49c9-a79a-424eff0fae9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_more_info
+    - node.type.conference
+  module:
+    - text
+id: node.conference.field_co_more_info
+field_name: field_co_more_info
+entity_type: node
+bundle: conference
+label: 'More Information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

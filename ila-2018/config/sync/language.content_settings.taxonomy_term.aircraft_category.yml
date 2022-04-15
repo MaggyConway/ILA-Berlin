@@ -1,0 +1,18 @@
+uuid: 2229017f-655f-4329-92e7-8cfb4d759d10
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aircraft_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.aircraft_category
+target_entity_type_id: taxonomy_term
+target_bundle: aircraft_category
+default_langcode: site_default
+language_alterable: false

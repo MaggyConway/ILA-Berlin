@@ -1,0 +1,5 @@
+third_party_settings:
+  contact_ajax:
+    load_from_message:
+      value: "<p>Thank you for your message!</p>\r\n"
+label: Contact

@@ -1,0 +1,16 @@
+uuid: c83f6b64-f5bb-493c-b9aa-aad4ae57f41b
+langcode: en
+status: true
+dependencies: {  }
+name: cc_impressionen_width_560
+label: 'CC Impressionen width 560'
+effects:
+  dc30f545-697d-4ac0-9e2d-c8cb646822f0:
+    uuid: dc30f545-697d-4ac0-9e2d-c8cb646822f0
+    id: image_scale
+    weight: 1
+    data:
+      width: 560
+      height: 380
+      upscale: false
+pipeline: image_optimiza

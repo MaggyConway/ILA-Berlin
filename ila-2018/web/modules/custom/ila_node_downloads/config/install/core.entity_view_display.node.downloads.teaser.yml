@@ -1,0 +1,107 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.downloads.body
+    - field.field.node.downloads.field_file_private
+    - field.field.node.downloads.field_image
+    - image.style.media_preview
+    - node.type.downloads
+  module:
+    - ds
+    - field_group
+    - ila_file_download_formatter
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_image
+        - group_wrapper
+        - node_title
+        - node_post_date
+        - 'dynamic_token_field:node-file_info_full'
+        - field_file_private
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h2
+          class: ''
+          link: false
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_ila_format
+      'dynamic_token_field:node-file_info_full':
+        plugin_id: 'dynamic_token_field:node-file_info_full'
+        weight: 4
+        label: hidden
+        formatter: default
+  field_group:
+    group_wrapper:
+      children:
+        - node_title
+        - node_post_date
+        - 'dynamic_token_field:node-file_info_full'
+        - field_file_private
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: text-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrapper
+id: node.downloads.teaser
+targetEntityType: node
+bundle: downloads
+mode: teaser
+content:
+  field_file_private:
+    type: ila_download_link
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      label_source: custom
+      link_text: Download
+      target: _blank
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: media_preview
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true
+  links: true

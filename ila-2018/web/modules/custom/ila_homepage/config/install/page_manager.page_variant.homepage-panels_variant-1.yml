@@ -1,0 +1,157 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - views.view.facts
+    - views.view.news
+    - views.view.sections
+  content:
+    - 'block_content:image_fullscreen:789aabbe-9c46-4059-bd78-fc16afdc2b4d'
+    - 'block_content:text:3cfdc787-56aa-4b39-a29a-7f135fea2338'
+    - 'block_content:text:529322a2-a5d4-4a86-85e1-4834f38ba0c8'
+    - 'block_content:text:a684a3d4-8c3e-46fc-b213-034f28caa220'
+    - 'block_content:text:cf766206-b14a-4cdc-9838-35b669b83581'
+    - 'block_content:text:e550698c-ab15-4bdc-8b59-fe7a7c355547'
+    - 'block_content:video:8779790c-a95a-4cb3-80aa-e14c2d07e05d'
+  module:
+    - block_content
+    - panels
+    - views
+id: homepage-panels_variant-1
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    a75310f4-366b-440a-b83b-1b9215148816:
+      id: 'block_content:529322a2-a5d4-4a86-85e1-4834f38ba0c8'
+      label: 'Homepage - Header - Text'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header
+      weight: -3
+      uuid: a75310f4-366b-440a-b83b-1b9215148816
+      context_mapping: {  }
+    ab429dbc-213d-4530-9594-fc1516d21dae:
+      id: 'block_content:3cfdc787-56aa-4b39-a29a-7f135fea2338'
+      label: 'ILA Berlin 2018'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: exhibition
+      weight: -10
+      uuid: ab429dbc-213d-4530-9594-fc1516d21dae
+      context_mapping: {  }
+    ea533bae-2111-42e0-84ed-39bf81726e0b:
+      id: 'block_content:e550698c-ab15-4bdc-8b59-fe7a7c355547'
+      label: Program
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: program
+      weight: 0
+      uuid: ea533bae-2111-42e0-84ed-39bf81726e0b
+      context_mapping: {  }
+    1940fc97-107c-4ad8-82b3-d0bfff075b4c:
+      id: 'views_block:news-block_news'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: news
+      weight: 0
+      uuid: 1940fc97-107c-4ad8-82b3-d0bfff075b4c
+      context_mapping: {  }
+    ee439856-c2ad-46eb-91e3-6f56beef59c9:
+      id: 'block_content:789aabbe-9c46-4059-bd78-fc16afdc2b4d'
+      label: 'Homepage - Participate - Image'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: participate
+      weight: 0
+      uuid: ee439856-c2ad-46eb-91e3-6f56beef59c9
+      context_mapping: {  }
+    27e35bac-3a49-4d36-8315-b5e89270b18d:
+      id: 'block_content:a684a3d4-8c3e-46fc-b213-034f28caa220'
+      label: Participate
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: participate
+      weight: 0
+      uuid: 27e35bac-3a49-4d36-8315-b5e89270b18d
+      context_mapping: {  }
+    81647950-40d7-42b1-8fdf-4b88ed8075dc:
+      id: 'views_block:facts-block_facts'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: facts
+      weight: -4
+      uuid: 81647950-40d7-42b1-8fdf-4b88ed8075dc
+      context_mapping: {  }
+    9730fafb-e5e7-4af6-974b-e95fa6c0ffbf:
+      id: 'views_block:sections-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: sections
+      weight: -4
+      uuid: 9730fafb-e5e7-4af6-974b-e95fa6c0ffbf
+      context_mapping: {  }
+    39ae16c7-dd8a-4181-b52a-e0001516d804:
+      id: 'block_content:8779790c-a95a-4cb3-80aa-e14c2d07e05d'
+      label: 'Homepage - Header - Video'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header
+      weight: -4
+      uuid: 39ae16c7-dd8a-4181-b52a-e0001516d804
+      context_mapping: {  }
+    2c167087-08ec-477b-ba25-fff38e519298:
+      id: 'block_content:cf766206-b14a-4cdc-9838-35b669b83581'
+      label: 'Early Bird Block'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header
+      weight: 0
+      uuid: 2c167087-08ec-477b-ba25-fff38e519298
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 8e0dd44c-5a30-4310-8dfb-cd06bbde6e33
+  label: null
+  weight: 0
+  layout: ila_homepage
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-1
+  builder: standard
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

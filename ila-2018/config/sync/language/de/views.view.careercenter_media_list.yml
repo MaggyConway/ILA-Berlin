@@ -1,0 +1,17 @@
+label: 'CareerCenter Media Inhalte'
+display:
+  careercenter_media_list_video:
+    display_title: 'CareerCenter Videos'
+  cc_impressionen:
+    display_title: 'CareerCenter Bilder (impressionen)'
+  cc_logo_wall:
+    display_title: 'CareerCenter Logo Wall'
+    display_options:
+      header:
+        area_text_custom:
+          content: '<div class="logo-wall-header">Aussteller 2020</div>'
+  cc_partner_wall:
+    display_options:
+      header:
+        area_text_custom:
+          content: '<div class="partner-wall-header">Partner & Sponsoren</div>'

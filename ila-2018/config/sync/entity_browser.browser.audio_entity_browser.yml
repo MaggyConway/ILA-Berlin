@@ -1,0 +1,53 @@
+uuid: f3725327-ecec-4db0-9925-2327596d9518
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: audio_entity_browser
+label: 'Audio Entity Browser'
+display: modal
+display_configuration:
+  width: '1280'
+  height: '940'
+  link_text: 'Select audio'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  0209c545-d14e-4270-838c-64fe86d837dc:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_3
+      submit_text: 'Select audio'
+      auto_select: false
+    uuid: 0209c545-d14e-4270-838c-64fe86d837dc
+    weight: 1
+    label: Bibliothek
+    id: view
+  c9b32e51-e56d-48e8-915f-06dafc9dca0c:
+    settings:
+      form_mode: media_library
+      media_type: audio
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 100M
+      extensions: mp3
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select audio'
+    uuid: c9b32e51-e56d-48e8-915f-06dafc9dca0c
+    weight: 2
+    label: 'Audio hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

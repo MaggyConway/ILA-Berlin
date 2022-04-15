@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media categories'
+vid: media_categories
+description: ''
+hierarchy: 0
+weight: 0

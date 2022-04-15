@@ -1,0 +1,10 @@
+uuid: f3fa2330-f3f4-4d9a-9d8c-ee5711c2168b
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.embedded_big
+label: 'Embedded Big'
+targetEntityType: media
+cache: true

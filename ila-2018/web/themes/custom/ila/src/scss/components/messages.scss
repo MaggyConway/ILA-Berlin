@@ -1,0 +1,13 @@
+.messages {
+  position: relative;
+  width: 100%;
+  font-weight: 500;
+  z-index: 1;
+}
+.path-frontpage {
+  .messages {
+    z-index: 5;
+    position: absolute;
+    top: 41px;
+  }
+}

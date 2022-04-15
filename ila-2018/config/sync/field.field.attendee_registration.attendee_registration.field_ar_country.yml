@@ -1,0 +1,22 @@
+uuid: 6a03b920-999a-4435-b29d-709c13f3fe35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_country
+  module:
+    - address
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_country
+field_name: field_ar_country
+entity_type: attendee_registration
+bundle: attendee_registration
+label: Country
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

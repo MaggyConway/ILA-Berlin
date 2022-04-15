@@ -1,0 +1,22 @@
+uuid: c6f7cfb6-3fe5-4f2d-b951-fd240d98e62f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+_core:
+  default_config_hash: QNWFA3SHml0bGvj7kiMJdJ7AifmIhn3cNuEXnZugImY
+id: node.downloads.uid
+field_name: uid
+entity_type: node
+bundle: downloads
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

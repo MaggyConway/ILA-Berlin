@@ -1,0 +1,12 @@
+uuid: 0634c636-7d7c-4293-a315-60d5d2072198
+langcode: en
+status: true
+dependencies: {  }
+id: career_center_faq
+label: 'Career Center FAQ'
+description: ''
+use_admin_theme: false
+path: /career-center/faq
+access_logic: and
+access_conditions: {  }
+parameters: {  }

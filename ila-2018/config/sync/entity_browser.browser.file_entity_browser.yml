@@ -1,0 +1,53 @@
+uuid: 50768ee2-e249-4b35-b147-3768f519d76b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: file_entity_browser
+label: 'File Entity Browser'
+display: modal
+display_configuration:
+  width: '1280'
+  height: '940'
+  link_text: 'Select file'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  edd8c833-a39a-4888-afdc-50b0e5264bc9:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_4
+      submit_text: 'Select file'
+      auto_select: false
+    uuid: edd8c833-a39a-4888-afdc-50b0e5264bc9
+    weight: 1
+    label: Bibliothek
+    id: view
+  1641547c-3bbd-4885-8f24-26cd9b5af712:
+    settings:
+      form_mode: default
+      media_type: file
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 100M
+      extensions: 'doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select file'
+    uuid: 1641547c-3bbd-4885-8f24-26cd9b5af712
+    weight: 2
+    label: 'Datei hochladen'
+    id: dropzonejs_media_entity_inline_entity_form

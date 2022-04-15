@@ -1,0 +1,19 @@
+uuid: 7387ab41-cd4b-4311-a6ea-33b3c014dd07
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_image_and_links
+    - field.storage.block_content.field_cc_image_and_links_anchor
+id: block_content.careercenter_image_and_links.field_cc_image_and_links_anchor
+field_name: field_cc_image_and_links_anchor
+entity_type: block_content
+bundle: careercenter_image_and_links
+label: 'Anchor ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

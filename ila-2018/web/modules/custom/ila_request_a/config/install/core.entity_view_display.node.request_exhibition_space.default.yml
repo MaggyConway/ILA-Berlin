@@ -1,0 +1,144 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_exhibition_space.field_field_request_a_plus_auma
+    - field.field.node.request_exhibition_space.field_following_services_are_inc
+    - field.field.node.request_exhibition_space.field_product_group
+    - field.field.node.request_exhibition_space.field_product_group_index
+    - field.field.node.request_exhibition_space.field_request_a_comments
+    - field.field.node.request_exhibition_space.field_request_a_depth_in_m
+    - field.field.node.request_exhibition_space.field_request_a_plus_advertising
+    - field.field.node.request_exhibition_space.field_request_a_total_in_m2
+    - field.field.node.request_exhibition_space.field_request_a_width_in_m
+    - field.field.node.request_exhibition_space.field_request_preferred_size
+    - field.field.node.request_exhibition_space.field_stand_number
+    - field.field.node.request_exhibition_space.field_stand_registration_package
+    - field.field.node.request_exhibition_space.field_stand_size_depth
+    - field.field.node.request_exhibition_space.field_stand_size_total
+    - field.field.node.request_exhibition_space.field_stand_size_width
+    - node.type.request_exhibition_space
+  module:
+    - ds
+    - markup
+    - user
+id: node.request_exhibition_space.default
+targetEntityType: node
+bundle: request_exhibition_space
+mode: default
+content:
+  field_field_request_a_plus_auma:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_following_services_are_inc:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_group_index:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_a_comments:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_request_a_depth_in_m:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_a_plus_advertising:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_a_total_in_m2:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_a_width_in_m:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_preferred_size:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_stand_number:
+    weight: 8
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_label
+    region: content
+  field_stand_registration_package:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_stand_size_depth: true
+  field_stand_size_total: true
+  field_stand_size_width: true
+  langcode: true

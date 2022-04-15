@@ -1,0 +1,16 @@
+uuid: 91003218-ee39-4df4-97a0-bee4c0f9cca4
+langcode: en
+status: true
+dependencies: {  }
+name: fl_download_box_default
+label: 'FL Download Box: Default'
+effects:
+  caded763-c012-4d1e-b469-5f7b5d9f1948:
+    uuid: caded763-c012-4d1e-b469-5f7b5d9f1948
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 300
+      anchor: center-center
+pipeline: image_optimiza

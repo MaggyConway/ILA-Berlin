@@ -1,0 +1,22 @@
+uuid: dfe6bd3c-ce9f-4d74-880c-a9c7c25cd91a
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+id: simple_mega_menu.megamenu_main.status
+field_name: status
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: 'Publishing status'
+description: 'A boolean indicating whether the Simple mega menu is published.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

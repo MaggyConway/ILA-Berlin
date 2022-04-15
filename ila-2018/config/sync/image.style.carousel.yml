@@ -1,0 +1,18 @@
+uuid: 9ae78f55-b47a-46a0-a3bb-b345ff601245
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-_rpjtd8Frj15ZM57pGKyIhuQG4zKS2CLP8hWnMnZLM'
+name: carousel
+label: 'Carousel (1100x650)'
+effects:
+  f58ed532-7dc6-4769-8197-8eeace46edab:
+    uuid: f58ed532-7dc6-4769-8197-8eeace46edab
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1100
+      height: 650
+      anchor: center-center
+pipeline: image_optimiza

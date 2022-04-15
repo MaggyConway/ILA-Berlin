@@ -1,0 +1,21 @@
+uuid: 65df9c56-82b3-4c25-b9bd-cb3ea7c201f1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_right
+    - node.type.section
+  module:
+    - text
+id: node.section.field_text_right
+field_name: field_text_right
+entity_type: node
+bundle: section
+label: 'Text rechts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: 46ada9a6-70a3-4902-afb3-59ba53e77df5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_range
+    - node.type.news
+  module:
+    - datetime_range
+_core:
+  default_config_hash: MWiDFaVqThRFlFqCRZn0k2Du_Vho8ni6HwldKBH_ebA
+id: node.news.field_date_range
+field_name: field_date_range
+entity_type: node
+bundle: news
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

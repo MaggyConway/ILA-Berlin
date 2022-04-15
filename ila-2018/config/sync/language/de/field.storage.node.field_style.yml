@@ -1,0 +1,14 @@
+settings:
+  allowed_values:
+    -
+      label: 'Türkis (Aviation)'
+    -
+      label: 'Blau (Space)'
+    -
+      label: 'Grün (Defense&Security)'
+    -
+      label: 'Gelb (Suppliers)'
+    -
+      label: 'Rot (Special Features)'
+    -
+      label: 'Lila (Conferences)'

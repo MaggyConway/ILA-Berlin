@@ -1,0 +1,8 @@
+uuid: 3fc68e46-6b56-4ad7-b4b1-c9d71f5ed1be
+langcode: de
+status: true
+dependencies: {  }
+name: 'Career Center Categories'
+vid: career_center_categories
+description: ''
+weight: 0

@@ -1,0 +1,105 @@
+footer {
+  color: $c-white;
+
+  .footer__top {
+    background-color: #1B457B;
+    padding: 40px 15px 30px 15px;
+
+    .region-footer-top {
+      display: flex;
+      max-width: 1380px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media screen and (max-width: 640px) {
+        flex-wrap: wrap;
+      }
+
+      #block-ila-footer-organized {
+        margin-right: auto;
+
+        @media screen and (max-width: 640px) {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 40px;
+        }
+
+        .layout__region--content {
+          .field--name-body {
+            img {
+              width: 273px;
+
+              &[alt="Messe Berlin"] {
+                width: 209px;
+                margin-left: 60px;
+
+                @media screen and (max-width: 640px) {
+                  display: block;
+                  margin-top: 30px;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #block-ila-footer-hosted {
+      img {
+        width: 69px;
+      }
+    }
+  }
+
+  .footer__bottom {
+    background-color: #112D4F;
+    padding: 35px 15px 35px 15px;
+
+    .region-footer-bottom {
+      display: flex;
+      align-items: center;
+      max-width: 1380px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media screen and (max-width: 640px) {
+        align-items: flex-start;
+      }
+
+      #block-ila-footer-links {
+        margin-right: auto;
+
+        .footer-menu {
+          @media screen and (max-width: 640px) {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .footer-menu__item {
+            @media screen and (max-width: 640px) {
+              margin-right: 0;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+
+      #block-ila-social {
+        @media screen and (max-width: 640px) {
+          width: 110px;
+        }
+
+        .menu {
+          @media screen and (max-width: 640px) {
+            flex-wrap: wrap;
+          }
+
+          .menu__item {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

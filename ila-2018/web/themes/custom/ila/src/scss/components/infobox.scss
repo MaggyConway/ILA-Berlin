@@ -1,0 +1,159 @@
+.field--name-field-info-box {
+  position: relative;
+  max-width: 585px;
+  background-color: #FFFFFF;
+  padding: 40px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: black; /* darker segement color */
+  @media #{$m-to-m} {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    background-image: url(../img/i-icon-space.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 35px;
+    top: 20px;
+    // transition: 0.6s;
+    // transform-style: preserve-3d;
+    animation: flipicon 6s ease infinite;
+    @media #{$m-to-m} {
+      top: 1px;
+    }
+  }
+
+  // &:hover::before {
+  //   transform: rotateY(360deg);
+  // }
+
+  .infobox__content {
+    border-top: 1px solid black; /* darker segement color */
+    border-bottom: 1px solid black; /* darker segement color */
+    padding: 40px 20px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 30px;
+    @media #{$m-to-s} {
+      padding-left: 5px;
+    }
+    li {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@keyframes flipicon {
+  from {
+    transform: rotateY(0);
+  }
+
+  20% {
+    transform: rotateY(360deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.paragraph--type--info-box {
+  margin-bottom: 20px;
+  min-height: 500px;
+  padding-top: 400px;
+  position: relative;
+
+  @media #{$m-to-m} {
+    min-height: 250px;
+    padding-top: 250px;
+  }
+
+  .info-box__background-image {
+    background-size: cover;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+
+    @media #{$m-to-m} {
+      height: 250px;
+    }
+  }
+
+  .field--name-field-info-text {
+    max-width: 1145px;
+    padding:15px;
+    color: $c-blue;
+    font-size: 17px;
+    font-weight: 300;
+    @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-dark, $career-dark, $uas-dark, $digital-dark);
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 525px;
+      width: 100%;
+      left: 50%;
+      padding:0 15px;
+      transform: 5;
+      transform: translate(-50%);
+      p {
+        max-width: 350px;
+        width: 100%;
+        @media (min-width: 1024px) {
+          max-width: 435px;
+        }
+      }
+    }
+  }
+
+  .field--name-field-info-box-text {
+    @extend .field--name-field-info-box;
+
+    margin: {
+      bottom: 10px;
+      left: 50%;
+    }
+    position: relative;
+    z-index: 1;
+
+    @media #{$m-to-m} {
+      margin: {
+        left: 0;
+        top: 20px;
+      }
+      padding-top: 10px;
+    }
+
+    .infobox__content {
+      @media #{$m-to-m} {
+        padding: {
+          left: 15px;
+          right: 15px;
+        }
+      }
+    }
+
+    &::before {
+      @media #{$m-to-m} {
+        top: -8px;
+      }
+    }
+  }
+}

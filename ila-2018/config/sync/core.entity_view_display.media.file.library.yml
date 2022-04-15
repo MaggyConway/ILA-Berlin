@@ -1,0 +1,45 @@
+uuid: 1dd60f0f-91a1-4de7-bb37-dc7ee8730a33
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.library
+    - field.field.media.file.field_download_category
+    - field.field.media.file.field_download_preview
+    - field.field.media.file.field_media_file
+    - field.field.media.file.field_press_info
+    - field.field.media.file.field_show_on_downloads
+    - media.type.file
+  module:
+    - file
+id: media.file.library
+targetEntityType: media
+bundle: file
+mode: library
+content:
+  field_media_file:
+    weight: 1
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_download_category: true
+  field_download_preview: true
+  field_press_info: true
+  field_show_on_downloads: true
+  langcode: true
+  thumbnail: true
+  uid: true

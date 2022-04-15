@@ -1,0 +1,21 @@
+uuid: 5fa27615-00e8-47bf-ab02-d34ce9c69cf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_text
+    - paragraphs.paragraphs_type.fl_download_box
+  module:
+    - text
+id: paragraph.fl_download_box.field_cc_text
+field_name: field_cc_text
+entity_type: paragraph
+bundle: fl_download_box
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

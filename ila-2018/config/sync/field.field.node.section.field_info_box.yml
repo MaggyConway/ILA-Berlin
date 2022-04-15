@@ -1,0 +1,21 @@
+uuid: 06d6ecec-e2f9-42ad-bec4-691665aae088
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info_box
+    - node.type.section
+  module:
+    - text
+id: node.section.field_info_box
+field_name: field_info_box
+entity_type: node
+bundle: section
+label: 'Info Box'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

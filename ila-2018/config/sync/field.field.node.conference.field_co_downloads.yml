@@ -1,0 +1,82 @@
+uuid: 937cede7-8c75-4ccc-94ef-b51b2a48ca43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_downloads
+    - node.type.conference
+    - paragraphs.paragraphs_type.download
+  module:
+    - entity_reference_revisions
+id: node.conference.field_co_downloads
+field_name: field_co_downloads
+entity_type: node
+bundle: conference
+label: Downloads
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      download: download
+    target_bundles_drag_drop:
+      content_subtitle:
+        weight: 19
+        enabled: false
+      download:
+        enabled: true
+        weight: 20
+      image_box:
+        weight: 21
+        enabled: false
+      image_full:
+        weight: 22
+        enabled: false
+      image_row:
+        weight: 23
+        enabled: false
+      infographic_box:
+        weight: 24
+        enabled: false
+      infographic_box_column:
+        weight: 25
+        enabled: false
+      link_box:
+        weight: 26
+        enabled: false
+      link_box_container:
+        weight: 27
+        enabled: false
+      quote:
+        weight: 28
+        enabled: false
+      request_link:
+        weight: 29
+        enabled: false
+      slideshow:
+        weight: 30
+        enabled: false
+      speaker:
+        weight: 31
+        enabled: false
+      text:
+        weight: 32
+        enabled: false
+      text_box:
+        weight: 33
+        enabled: false
+      text_boxes:
+        weight: 34
+        enabled: false
+      title_text:
+        weight: 35
+        enabled: false
+      two_column_text:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

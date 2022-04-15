@@ -1,0 +1,22 @@
+uuid: e9c60046-6b3c-4dfd-b55a-1cb3ad9b6cfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.site_header_text
+  module:
+    - simple_block
+  theme:
+    - ila_future_lab
+id: ila_future_lab_siteheadertext
+theme: ila_future_lab
+region: header_top
+weight: -12
+provider: null
+plugin: 'simple_block:site_header_text'
+settings:
+  id: 'simple_block:site_header_text'
+  label: 'Site header - Text'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

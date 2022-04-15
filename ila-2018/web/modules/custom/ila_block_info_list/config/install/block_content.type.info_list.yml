@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: info_list
+label: 'Info list'
+revision: 0
+description: ''

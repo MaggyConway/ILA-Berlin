@@ -1,0 +1,20 @@
+uuid: a8254277-72e7-4afd-8700-a49c4be78aae
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+_core:
+  default_config_hash: x2zDz-x7WpzL6hHvVJwnr4h4Gsxy_fFbCsAZfOr4T50
+id: node.downloads.title
+field_name: title
+entity_type: node
+bundle: downloads
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

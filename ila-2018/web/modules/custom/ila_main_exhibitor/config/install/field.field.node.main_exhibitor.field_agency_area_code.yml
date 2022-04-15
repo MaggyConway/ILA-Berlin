@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency_area_code
+    - node.type.main_exhibitor
+  module:
+    - telephone
+id: node.main_exhibitor.field_agency_area_code
+field_name: field_agency_area_code
+entity_type: node
+bundle: main_exhibitor
+label: 'Area Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

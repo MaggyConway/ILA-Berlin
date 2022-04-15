@@ -1,0 +1,21 @@
+uuid: b079f6f0-3fff-438d-b548-c1bf1710adaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_text
+    - paragraphs.paragraphs_type.fl_testimonial
+  module:
+    - text
+id: paragraph.fl_testimonial.field_cc_text
+field_name: field_cc_text
+entity_type: paragraph
+bundle: fl_testimonial
+label: Qoute
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

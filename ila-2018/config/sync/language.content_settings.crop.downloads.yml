@@ -1,0 +1,11 @@
+uuid: 1c132f41-d4e1-4597-8736-9752397c7073
+langcode: de
+status: true
+dependencies:
+  config:
+    - crop.type.downloads
+id: crop.downloads
+target_entity_type_id: crop
+target_bundle: downloads
+default_langcode: site_default
+language_alterable: false

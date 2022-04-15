@@ -1,0 +1,7 @@
+label: Panels
+variant_settings:
+  blocks:
+    6fc60790-47a9-4f92-8d8b-c4e86e489d07:
+      label: 'Error 404'
+    2a866b92-39da-43e7-845d-c690f7c955ae:
+      label: 'Error 404 - Image'

@@ -1,0 +1,416 @@
+uuid: b7212922-8c77-4512-b372-5111c7f4880c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.job_offer.body
+    - field.field.node.job_offer.field_job_career_level
+    - field.field.node.job_offer.field_job_contact
+    - field.field.node.job_offer.field_job_contact_person_email
+    - field.field.node.job_offer.field_job_contract_type
+    - field.field.node.job_offer.field_job_description
+    - field.field.node.job_offer.field_job_email
+    - field.field.node.job_offer.field_job_external_offer_id
+    - field.field.node.job_offer.field_job_location
+    - field.field.node.job_offer.field_job_logo
+    - field.field.node.job_offer.field_job_offerer
+    - field.field.node.job_offer.field_job_requirements
+    - field.field.node.job_offer.field_job_starting_date
+    - node.type.job_offer
+  module:
+    - ds
+    - field_group
+    - ila_node_job_offer
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_top_links
+        - 'dynamic_token_field:node-link_back'
+        - 'dynamic_token_field:node-job_offer_mailto_button_content'
+        - group_main_information_wrapper
+        - 'dynamic_block_field:node-my_bookmarks_job_offers'
+        - addtoany
+        - group_main_information
+        - 'dynamic_token_field:node-bookmarks_job_offer'
+        - field_job_description
+        - group_description
+        - group_main_info_group_left
+        - group_requirements
+        - field_job_requirements
+        - group_main_info_group_right
+        - group_apply_now
+        - 'dynamic_token_field:node-job_offer_mailto_button_bottom'
+        - node_title
+        - field_job_offerer
+        - field_job_logo
+        - field_job_contact
+        - group_jobpost_details
+        - 'dynamic_token_field:node-job_offer_mailto'
+        - group_main_info_group_left_botto
+        - field_job_location
+        - field_job_contract_type
+        - field_job_starting_date
+        - field_job_career_level
+    fields:
+      'dynamic_token_field:node-bookmarks_job_offer':
+        plugin_id: 'dynamic_token_field:node-bookmarks_job_offer'
+        weight: 2
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      'dynamic_token_field:node-job_offer_mailto':
+        plugin_id: 'dynamic_token_field:node-job_offer_mailto'
+        weight: 8
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-job_offer_mailto_button_bottom':
+        plugin_id: 'dynamic_token_field:node-job_offer_mailto_button_bottom'
+        weight: 5
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-job_offer_mailto_button_content':
+        plugin_id: 'dynamic_token_field:node-job_offer_mailto_button_content'
+        weight: 0
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-link_back':
+        plugin_id: 'dynamic_token_field:node-link_back'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 5
+        label: hidden
+        formatter: default
+      'dynamic_block_field:node-my_bookmarks_job_offers':
+        plugin_id: 'dynamic_block_field:node-my_bookmarks_job_offers'
+        weight: 1
+        label: hidden
+        formatter: default
+  field_group:
+    group_main_information:
+      children:
+        - group_main_info_group_left
+        - group_main_info_group_right
+      parent_name: group_main_information_wrapper
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Main Information'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: wrapper--main-info
+      label: 'Main Information'
+      region: ds_content
+    group_main_info_group_left:
+      children:
+        - node_title
+        - field_job_offerer
+        - group_jobpost_details
+        - group_main_info_group_left_botto
+      parent_name: group_main_information
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info--group-left
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main info - Group left'
+      region: ds_content
+    group_main_info_group_right:
+      children:
+        - field_job_logo
+        - field_job_contact
+        - 'dynamic_token_field:node-job_offer_mailto'
+      parent_name: group_main_information
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info--group-right
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main info - Group right'
+      region: ds_content
+    group_jobpost_details:
+      children:
+        - field_job_location
+        - field_job_contract_type
+        - field_job_starting_date
+        - field_job_career_level
+      parent_name: group_main_info_group_left
+      weight: 7
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info--group-left--details
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Jobpost Details'
+      region: ds_content
+    group_description:
+      children:
+        - field_job_description
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--description
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Description
+      region: ds_content
+    group_requirements:
+      children:
+        - field_job_requirements
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--requirements
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Requirements
+      region: ds_content
+    group_main_info_group_left_botto:
+      children:
+        - 'dynamic_token_field:node-job_offer_mailto_button_content'
+        - addtoany
+        - 'dynamic_token_field:node-bookmarks_job_offer'
+      parent_name: group_main_info_group_left
+      weight: 8
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info--group-left--bottom
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main info - Group left Bottom'
+      region: ds_content
+    group_top_links:
+      children:
+        - 'dynamic_token_field:node-link_back'
+        - 'dynamic_block_field:node-my_bookmarks_job_offers'
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--top-links
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Links'
+      region: ds_content
+    group_apply_now:
+      children:
+        - 'dynamic_token_field:node-job_offer_mailto_button_bottom'
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--apply-now
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Apply now'
+      region: ds_content
+    group_main_information_wrapper:
+      children:
+        - group_main_information
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper--main-info-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main Information wrapper'
+      region: ds_content
+id: node.job_offer.default
+targetEntityType: node
+bundle: job_offer
+mode: default
+content:
+  addtoany:
+    weight: 1
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  field_job_career_level:
+    weight: 17
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_job_contact:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_job_contract_type:
+    weight: 15
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_job_description:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_job_location:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: ila_address_default
+    region: ds_content
+  field_job_logo:
+    type: entity_reference_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: ct_job_offer_default_logo
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: ds_content
+  field_job_offerer:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: 'Job offer from'
+            lb-col: false
+            classes: {  }
+    type: link
+    region: ds_content
+  field_job_requirements:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_job_starting_date:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  body: true
+  field_job_contact_person_email: true
+  field_job_email: true
+  field_job_external_offer_id: true
+  langcode: true
+  links: true

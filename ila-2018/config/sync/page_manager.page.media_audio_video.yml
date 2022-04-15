@@ -1,0 +1,12 @@
+uuid: 3cfde6b0-dd64-459b-9b22-a007d53eec2e
+langcode: en
+status: true
+dependencies: {  }
+id: media_audio_video
+label: Media
+description: ''
+use_admin_theme: false
+path: /media/audio_video
+access_logic: and
+access_conditions: {  }
+parameters: {  }

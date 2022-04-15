@@ -1,0 +1,24 @@
+uuid: 0dd12ae3-b330-46e2-963f-81c8906ddc9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.megamenu
+    - field.storage.block_content.field_block_3
+  module:
+    - block_field
+id: block_content.megamenu.field_block_3
+field_name: field_block_3
+entity_type: block_content
+bundle: megamenu
+label: 'Block 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

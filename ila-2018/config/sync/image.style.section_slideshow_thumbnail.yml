@@ -1,0 +1,16 @@
+uuid: 06b168d3-cf7d-40fd-8926-67ccbb80fd1d
+langcode: en
+status: true
+dependencies: {  }
+name: section_slideshow_thumbnail
+label: 'Section - Slideshow thumbnail (96x96)'
+effects:
+  bda10fc8-fa16-48b5-a1ae-1209ef7f713d:
+    uuid: bda10fc8-fa16-48b5-a1ae-1209ef7f713d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 96
+      height: 96
+      anchor: center-center
+pipeline: image_optimiza

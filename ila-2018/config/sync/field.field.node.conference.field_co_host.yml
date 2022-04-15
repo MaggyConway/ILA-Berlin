@@ -1,0 +1,19 @@
+uuid: 0aab357e-f165-4d3f-82eb-8a7058845bf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_host
+    - node.type.conference
+id: node.conference.field_co_host
+field_name: field_co_host
+entity_type: node
+bundle: conference
+label: Host
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

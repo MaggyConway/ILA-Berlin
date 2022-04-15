@@ -1,0 +1,22 @@
+uuid: 2b538edd-7c2c-47a9-9738-87bf560312ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.sticky
+field_name: sticky
+entity_type: node
+bundle: future_lab
+label: 'Oben in Listen'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

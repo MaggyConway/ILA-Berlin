@@ -1,0 +1,21 @@
+uuid: ec2800fa-51a6-4f25-9c0d-cbd0bf2e8329
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_and_time
+    - node.type.bdli_event
+  module:
+    - datetime_range
+id: node.bdli_event.field_date_and_time
+field_name: field_date_and_time
+entity_type: node
+bundle: bdli_event
+label: 'Date and Time'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

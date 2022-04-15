@@ -1,0 +1,19 @@
+uuid: 4e5b1b23-693c-4b0b-b040-ba1c204d03a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_anchor
+    - paragraphs.paragraphs_type.fl_testimonials_container
+id: paragraph.fl_testimonials_container.field_cc_anchor
+field_name: field_cc_anchor
+entity_type: paragraph
+bundle: fl_testimonials_container
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

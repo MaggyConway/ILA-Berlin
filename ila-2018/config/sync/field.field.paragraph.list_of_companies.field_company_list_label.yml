@@ -1,0 +1,19 @@
+uuid: 4affa0e4-7595-4141-8602-9c2579e9570a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_label
+    - paragraphs.paragraphs_type.list_of_companies
+id: paragraph.list_of_companies.field_company_list_label
+field_name: field_company_list_label
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

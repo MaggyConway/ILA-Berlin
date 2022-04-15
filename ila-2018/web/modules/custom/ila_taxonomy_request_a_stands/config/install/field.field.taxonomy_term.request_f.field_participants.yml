@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_participants
+    - taxonomy.vocabulary.request_f
+id: taxonomy_term.request_f.field_participants
+field_name: field_participants
+entity_type: taxonomy_term
+bundle: request_f
+label: participants
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

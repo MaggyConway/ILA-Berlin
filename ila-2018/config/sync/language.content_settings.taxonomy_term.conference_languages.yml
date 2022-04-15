@@ -1,0 +1,18 @@
+uuid: 285b8d0b-b95d-4532-99a7-7de65fcfac80
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_languages
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.conference_languages
+target_entity_type_id: taxonomy_term
+target_bundle: conference_languages
+default_langcode: site_default
+language_alterable: false

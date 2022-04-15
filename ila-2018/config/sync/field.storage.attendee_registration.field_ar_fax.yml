@@ -1,0 +1,19 @@
+uuid: 3c531b0c-a5ca-4fce-b0ed-ac3bae93ac8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration
+    - telephone
+id: attendee_registration.field_ar_fax
+field_name: field_ar_fax
+entity_type: attendee_registration
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

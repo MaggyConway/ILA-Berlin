@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function ila_request_d_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_request_d_form') {
+    $form['#attached']['library'][] = 'ila_request_d/request_d';
+    $form['#validate'][] = '_ila_request_d_radio_validate';
+    unset($form['field_stand_price_without_stand_']['widget']['#options']['_none']);
+    unset($form['field_request_d_stands_without_s']['widget']['#options']['_none']);
+  }
+
+  return $form;
+}
+
+/**
+ * Implements custom validation for radio button _ila_request_d_radio_validate().
+ */
+function _ila_request_d_radio_validate(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+
+  $price_without_stand = $form_state->getValue('field_stand_price_without_stand_');
+  $stands_without_s = $form_state->getValue('field_request_d_stands_without_s');
+
+  $price_without_stand_val = $price_without_stand[0]['target_id'];
+  $stands_without_s_val = $stands_without_s[0]['target_id'];
+
+  if($price_without_stand_val == null && $stands_without_s_val == null){
+    $form_state->setErrorByName('field_request_d_stands_without_s', t('@name field is required.', array('@name' =>$form['field_request_d_stands_without_s']['widget']['#title'])));
+    $form_state->setErrorByName('field_stand_price_without_stand_', t('@name field is required.', array('@name' =>$form['field_stand_price_without_stand_']['widget']['#title'])));
+  }
+
+  if($price_without_stand_val != null && $stands_without_s_val != null){
+    $form_state->setErrorByName('field_request_d_stands_without_s', t('@name: this field cannot hold more than 1 values.', array('@name' =>$form['field_request_d_stands_without_s']['widget']['#title'])));
+    $form_state->setErrorByName('field_stand_price_without_stand_', t('@name: this field cannot hold more than 1 values.', array('@name' =>$form['field_stand_price_without_stand_']['widget']['#title'])));
+  }
+}

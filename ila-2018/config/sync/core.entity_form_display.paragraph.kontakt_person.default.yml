@@ -1,0 +1,65 @@
+uuid: 9cd4b021-4db3-4b61-a116-11c6fdbbcc43
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kontakt_person.field_cp_first_name
+    - field.field.paragraph.kontakt_person.field_cp_function
+    - field.field.paragraph.kontakt_person.field_cp_mail
+    - field.field.paragraph.kontakt_person.field_cp_name
+    - field.field.paragraph.kontakt_person.field_cp_phone
+    - paragraphs.paragraphs_type.kontakt_person
+id: paragraph.kontakt_person.default
+targetEntityType: paragraph
+bundle: kontakt_person
+mode: default
+content:
+  field_cp_first_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_function:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_mail:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_cp_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_phone:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

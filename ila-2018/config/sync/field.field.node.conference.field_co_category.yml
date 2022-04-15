@@ -1,0 +1,28 @@
+uuid: 15ad0658-9eaa-4b9b-9260-b58e9c2b6f78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_category
+    - node.type.conference
+    - taxonomy.vocabulary.conference_categories
+id: node.conference.field_co_category
+field_name: field_co_category
+entity_type: node
+bundle: conference
+label: 'Category (deprecated, will be removed)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conference_categories: conference_categories
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

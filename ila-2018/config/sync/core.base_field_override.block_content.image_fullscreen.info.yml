@@ -1,0 +1,20 @@
+uuid: 02bb24b1-6c2b-42f4-a9c5-2308fac4b602
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+_core:
+  default_config_hash: ukcmo8n9J0x44evqqoZmv1RKXsCiO7eCd3sS9MzrT5I
+id: block_content.image_fullscreen.info
+field_name: info
+entity_type: block_content
+bundle: image_fullscreen
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

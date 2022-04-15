@@ -1,0 +1,10 @@
+uuid: 99dc5e21-8361-40d9-ad57-6716b357a8a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_news_news_careercenter
+label: 'CT News: News CareerCenter'
+targetEntityType: media
+cache: true

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_b_following_servic
+    - node.type.reqest_b
+  module:
+    - markup
+id: node.reqest_b.field_request_b_following_servic
+field_name: field_request_b_following_servic
+entity_type: node
+bundle: reqest_b
+label: 'Following services are included'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Following services are included</h3>\r\n\r\n<p>Exhibitor passes:</p>\r\n\r\n<ul>\r\n\t<li>Singel chalet - 11 passes</li>\r\n\t<li>Double chalet - 21 passes</li>\r\n\t<li>Triple chalet - 31 passes</li>\r\n</ul>\r\n\r\n<p>Energy lump sum, infrastructure services</p>\r\n\r\n<p>Two VIP parking passes per unit for two vehicles, including use of VIP gate and parking permits.</p>\r\n"
+    format: full_html
+field_type: markup

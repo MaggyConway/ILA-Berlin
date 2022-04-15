@@ -1,0 +1,11 @@
+uuid: 9500e928-35e6-4fd9-9167-4ffce88cfc93
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: search_icon_link
+title: 'Search icon link'
+content:
+  value: "<div class=\"search-link-wrapper\"><a class=\"search-link\" href=\"/en/search\">Search</a></div>\r\n"
+  format: full_html

@@ -1,0 +1,22 @@
+uuid: cb63ed61-c6ec-4fe8-80ea-64d460a12f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cities
+  module:
+    - path
+_core:
+  default_config_hash: wnjRueEEkZlUc5nPKTeENEPjVkMakBbr2RKOvS_xu5A
+id: taxonomy_term.cities.path
+field_name: path
+entity_type: taxonomy_term
+bundle: cities
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

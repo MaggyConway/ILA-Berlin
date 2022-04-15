@@ -1,0 +1,10 @@
+uuid: 9483d6dc-336c-428d-a3a2-4a6ae1c5b796
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.fl_conferences
+label: 'FL Conferences'
+targetEntityType: node
+cache: true

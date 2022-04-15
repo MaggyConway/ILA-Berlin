@@ -1,0 +1,108 @@
+uuid: b00c015c-982e-4714-9a8c-5bf542cc0c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.media_video
+    - field.field.node.press.body
+    - field.field.node.press.field_category
+    - field.field.node.press.field_file
+    - field.field.node.press.field_image
+    - field.field.node.press.field_media_file_type_category
+    - field.field.node.press.field_node_metatag
+    - field.field.node.press.field_press_media_category
+    - node.type.press
+  module:
+    - ds
+    - field_group
+    - ila_file_download_formatter
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - body
+        - 'dynamic_token_field:node-video_data_ct_media_'
+        - field_file
+        - group_background_section
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-video_data_ct_media_':
+        plugin_id: 'dynamic_token_field:node-video_data_ct_media_'
+        weight: 2
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_group:
+    group_background_section:
+      children:
+        - field_file
+      parent_name: ''
+      weight: 3
+      format_type: background_image
+      format_settings:
+        id: ''
+        classes: ''
+        image: field_image
+        image_style: image_row
+        hide_if_missing: false
+      label: 'Background section'
+      region: content
+_core:
+  default_config_hash: VPrnv3xkYc1Nh0EaIsidfb7XNwNervOdjUVMVU2OLr4
+id: node.press.media_video
+targetEntityType: node
+bundle: press
+mode: media_video
+content:
+  body:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_file:
+    type: ila_download_link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      label_source: custom
+      link_text: Download
+      target: ''
+      download_file: '1'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  addtoany: true
+  field_category: true
+  field_image: true
+  field_media_file_type_category: true
+  field_node_metatag: true
+  field_press_media_category: true
+  langcode: true
+  links: true

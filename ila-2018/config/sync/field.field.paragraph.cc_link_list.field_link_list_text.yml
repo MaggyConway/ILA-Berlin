@@ -1,0 +1,21 @@
+uuid: 21884858-3e61-477b-93f9-8b2a43d8d74c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_list_text
+    - paragraphs.paragraphs_type.cc_link_list
+  module:
+    - text
+id: paragraph.cc_link_list.field_link_list_text
+field_name: field_link_list_text
+entity_type: paragraph
+bundle: cc_link_list
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

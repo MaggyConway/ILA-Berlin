@@ -1,0 +1,16 @@
+uuid: 4feb666b-6c60-4691-986b-9f2254b247c9
+langcode: en
+status: true
+dependencies: {  }
+name: ct_job_offer_default_logo
+label: 'CT Job Offer: Default (Logo 319x139) '
+effects:
+  fc07d682-11d3-4ce4-aa6e-231bd455181d:
+    uuid: fc07d682-11d3-4ce4-aa6e-231bd455181d
+    id: image_scale
+    weight: 2
+    data:
+      width: 319
+      height: 139
+      upscale: false
+pipeline: image_optimiza

@@ -1,0 +1,21 @@
+uuid: 4c2bae13-416e-4043-bad8-c8ec7e4627fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fl_logo_location
+    - paragraphs.paragraphs_type.fl_logo
+id: paragraph.fl_logo.field_fl_logo_location
+field_name: field_fl_logo_location
+entity_type: paragraph
+bundle: fl_logo
+label: Location
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Berlin, Germany 13-17 May 2020'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: media
+label: Media
+description: 'Links to media pages'
+locked: false

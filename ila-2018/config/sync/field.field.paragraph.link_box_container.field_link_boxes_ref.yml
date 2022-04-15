@@ -1,0 +1,64 @@
+uuid: 76ab39c5-4eb2-45f3-8b17-125d1c2aace7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_boxes_ref
+    - paragraphs.paragraphs_type.link_box
+    - paragraphs.paragraphs_type.link_box_container
+  module:
+    - entity_reference_revisions
+id: paragraph.link_box_container.field_link_boxes_ref
+field_name: field_link_boxes_ref
+entity_type: paragraph
+bundle: link_box_container
+label: 'What we are excited about'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      link_box: link_box
+    target_bundles_drag_drop:
+      link_box_container:
+        weight: 13
+        enabled: false
+      content_subtitle:
+        weight: 14
+        enabled: false
+      image_box:
+        weight: 15
+        enabled: false
+      image_full:
+        weight: 16
+        enabled: false
+      link_box:
+        enabled: true
+        weight: 17
+      request_link:
+        weight: 18
+        enabled: false
+      slideshow:
+        weight: 19
+        enabled: false
+      text:
+        weight: 20
+        enabled: false
+      text_box:
+        weight: 21
+        enabled: false
+      text_boxes:
+        weight: 22
+        enabled: false
+      title_text:
+        weight: 23
+        enabled: false
+      two_column_text:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

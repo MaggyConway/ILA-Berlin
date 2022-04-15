@@ -1,0 +1,23 @@
+uuid: e1f3e2e6-e069-462e-9863-a09634031914
+langcode: de
+status: true
+dependencies:
+  module:
+    - ila_core
+  theme:
+    - ila
+_core:
+  default_config_hash: 7MoceqID_JcOz6BOpnySOOZHFyXN4wskJKpidHHYDKM
+id: ila_language_switcher
+theme: ila
+region: header_top
+weight: -8
+provider: null
+plugin: 'ila_language_block:language_interface'
+settings:
+  id: 'ila_language_block:language_interface'
+  label: 'Language switcher (Short codes)'
+  provider: ila_core
+  label_display: '0'
+  links_labels: code
+visibility: {  }

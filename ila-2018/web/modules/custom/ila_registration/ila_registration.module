@@ -1,0 +1,137 @@
+<?php
+
+/**
+ * @file
+ * Contains ila_registration.module.
+ */
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function ila_registration_query_ila_registration_company_access_alter(Drupal\Core\Database\Query\AlterableInterface $query) {
+  /** @var \Drupal\Core\Entity\Query\QueryInterface $query */
+  $current_user = \Drupal::currentUser();
+  if (!$current_user->hasPermission('edit any company entities')) {
+    $query->condition('uid', $current_user->id());
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ila_registration_theme() {
+  $theme = [];
+
+  $theme['ila_registration_booth'] = [
+    'render element' => 'elements',
+    'file' => 'ila_registration_booth.page.inc',
+    'template' => 'ila_registration_booth',
+  ];
+  $theme['ila_registration_booth_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'ila_registration_booth.page.inc',
+  ];
+  $theme['ila_registration_company'] = [
+    'render element' => 'elements',
+    'file' => 'ila_registration_company.page.inc',
+    'template' => 'ila_registration_company',
+  ];
+  $theme['ila_registration_company_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'ila_registration_company.page.inc',
+  ];
+  $theme['ila_registration_person'] = [
+    'render element' => 'elements',
+    'file' => 'ila_registration_person.page.inc',
+    'template' => 'ila_registration_person',
+  ];
+  $theme['ila_registration_person_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'ila_registration_person.page.inc',
+  ];
+  $theme['ila_registration_exhibitor'] = [
+    'render element' => 'elements',
+    'file' => 'ila_registration_exhibitor.page.inc',
+    'template' => 'ila_registration_exhibitor',
+  ];
+  $theme['ila_registration_exhibitor_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'ila_registration_exhibitor.page.inc',
+  ];
+
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function ila_registration_theme_suggestions_ila_registration_booth(array $variables) {
+  $suggestions = [];
+
+  $entity = $variables['elements']['#ila_registration_booth'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'ila_registration_booth__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_booth__' . $entity->bundle();
+  $suggestions[] = 'ila_registration_booth__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_booth__' . $entity->id();
+  $suggestions[] = 'ila_registration_booth__' . $entity->id() . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function ila_registration_theme_suggestions_ila_registration_company(array $variables) {
+  $suggestions = [];
+
+  $entity = $variables['elements']['#ila_registration_company'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'ila_registration_company__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_company__' . $entity->bundle();
+  $suggestions[] = 'ila_registration_company__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_company__' . $entity->id();
+  $suggestions[] = 'ila_registration_company__' . $entity->id() . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function ila_registration_theme_suggestions_ila_registration_person(array $variables) {
+  $suggestions = [];
+
+  $entity = $variables['elements']['#ila_registration_person'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'ila_registration_person__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_person__' . $entity->bundle();
+  $suggestions[] = 'ila_registration_person__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_person__' . $entity->id();
+  $suggestions[] = 'ila_registration_person__' . $entity->id() . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function ila_registration_theme_suggestions_ila_registration_exhibitor(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#ila_registration_exhibitor'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'ila_registration_exhibitor__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_exhibitor__' . $entity->bundle();
+  $suggestions[] = 'ila_registration_exhibitor__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'ila_registration_exhibitor__' . $entity->id();
+  $suggestions[] = 'ila_registration_exhibitor__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

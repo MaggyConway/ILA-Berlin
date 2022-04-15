@@ -1,0 +1,9 @@
+uuid: d5f9090b-b793-40a2-9621-4a9d7437b35e
+langcode: en
+status: true
+dependencies: {  }
+id: fl_stream_box
+label: 'FL Stream Box'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+uuid: 7714d175-0a0a-40a8-94a6-1f5f5fc53a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+id: conference_2020
+title: 'Conference 2020'
+content:
+  value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>\r\n"
+  format: filtered_html

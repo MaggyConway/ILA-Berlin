@@ -1,0 +1,18 @@
+uuid: 9e9e16ec-5358-4b6c-8ff1-a716ad30d60d
+langcode: de
+status: true
+dependencies: {  }
+id: short
+label: Short
+date_settings:
+  default_pattern: d.m.Y
+  separator: '-'
+  same_month_start_pattern: d
+  same_month_end_pattern: d.m.Y
+  same_year_start_pattern: d.m.
+  same_year_end_pattern: d.m.Y
+datetime_settings:
+  default_pattern: 'd.m.y // H:i'
+  separator: ' - '
+  same_day_start_pattern: 'd.m.y // H:i'
+  same_day_end_pattern: 'H:i'

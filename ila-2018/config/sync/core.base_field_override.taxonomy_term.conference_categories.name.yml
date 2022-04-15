@@ -1,0 +1,18 @@
+uuid: 5a256065-46db-42f6-aa7a-54d4d9bac657
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.conference_categories
+id: taxonomy_term.conference_categories.name
+field_name: name
+entity_type: taxonomy_term
+bundle: conference_categories
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

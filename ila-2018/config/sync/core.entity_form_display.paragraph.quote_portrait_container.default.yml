@@ -1,0 +1,35 @@
+uuid: 0ec72da5-f86d-4a62-8872-7bf98b4635e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_portrait_container.field_quote_portrait
+    - paragraphs.paragraphs_type.quote_portrait_container
+  module:
+    - paragraphs
+id: paragraph.quote_portrait_container.default
+targetEntityType: paragraph
+bundle: quote_portrait_container
+mode: default
+content:
+  field_quote_portrait:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: quote_portrait
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

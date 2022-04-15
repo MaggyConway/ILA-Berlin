@@ -1,0 +1,84 @@
+uuid: e79369e0-71a8-4628-8c6e-09ab4bffe1b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.global_search_result
+    - field.field.node.future_lab.body
+    - field.field.node.future_lab.field_fl_header_image
+    - field.field.node.future_lab.field_paragraph_reference
+    - field.field.node.future_lab.field_show_header
+    - node.type.future_lab
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - node_title
+        - body
+        - search_api_excerpt
+        - node_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+id: node.future_lab.global_search_result
+targetEntityType: node
+bundle: future_lab
+mode: global_search_result
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  search_api_excerpt:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_fl_header_image: true
+  field_node_metatag: true
+  field_paragraph_reference: true
+  field_show_header: true
+  langcode: true
+  links: true

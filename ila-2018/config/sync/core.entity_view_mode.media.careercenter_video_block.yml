@@ -1,0 +1,10 @@
+uuid: cb03d745-0ffa-4f87-a121-19c796184c0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.careercenter_video_block
+label: 'CareerCenter -- Video block'
+targetEntityType: media
+cache: true

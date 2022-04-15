@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_fb1_required_serv
+    - node.type.request_fb_1
+id: node.request_fb_1.field_request_fb1_required_serv
+field_name: field_request_fb1_required_serv
+entity_type: node
+bundle: request_fb_1
+label: 'Required services and Ground Service Equipment (GSE)'
+description: 'Please specify your needed GSE and services as detailed as possible.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

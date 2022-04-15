@@ -1,0 +1,39 @@
+uuid: 9758ebb2-8bbf-4f5a-a373-ecec23610121
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.exhibitor-registration-menu
+  module:
+    - system
+    - user
+  theme:
+    - exhibitor_zone
+_core:
+  default_config_hash: yUKnol7sWA3TEaYtFs4BEeUguTyFzCtahdqqpywvz0Y
+id: exhibitorregistrationmenu_2
+theme: exhibitor_zone
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:exhibitor-registration-menu'
+settings:
+  id: 'system_menu_block:exhibitor-registration-menu'
+  label: 'Exhibitor registration menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      press: press
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

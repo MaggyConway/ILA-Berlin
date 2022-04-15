@@ -1,0 +1,9 @@
+uuid: 341f5095-3da4-4d13-b017-a02aba235400
+langcode: en
+status: true
+dependencies: {  }
+id: fl_svg_tag_snippet
+label: 'FL SVG tag snippet'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

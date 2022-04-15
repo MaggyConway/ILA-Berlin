@@ -1,0 +1,20 @@
+uuid: 6aff5241-fd6b-40a6-8b39-ff1f66318b72
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cities
+_core:
+  default_config_hash: MVz5utXReR79gkU-FGOeb8asvdSTqb00xeiwNkr0uqA
+id: taxonomy_term.cities.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: cities
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

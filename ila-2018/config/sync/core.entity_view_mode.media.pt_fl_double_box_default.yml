@@ -1,0 +1,10 @@
+uuid: 0832f75e-8477-4bb1-862c-6a4de115f4c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_double_box_default
+label: 'PT FL Double Box: Default'
+targetEntityType: media
+cache: true

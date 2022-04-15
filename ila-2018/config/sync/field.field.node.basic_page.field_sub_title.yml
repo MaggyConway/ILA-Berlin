@@ -1,0 +1,21 @@
+uuid: 9038e853-0882-46c8-b962-ef712b6db7d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.basic_page
+_core:
+  default_config_hash: vzKIskZWwCXAAEBWTvIZsBeM34VsraR2QkxiiDUejlc
+id: node.basic_page.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: basic_page
+label: 'Sub title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

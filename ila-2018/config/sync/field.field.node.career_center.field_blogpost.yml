@@ -1,0 +1,23 @@
+uuid: e8e29472-2dd3-4350-931a-39fb733eedf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blogpost
+    - node.type.career_center
+id: node.career_center.field_blogpost
+field_name: field_blogpost
+entity_type: node
+bundle: career_center
+label: Blogpost
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

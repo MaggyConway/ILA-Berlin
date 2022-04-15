@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_we_acknowledge_that_my_req
+field_name: field_we_acknowledge_that_my_req
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'We acknowledge that my request needs to be signed and send by fax to +49 30 3038 - 2053 or by email to exhibitor@ila-berlin.de.*'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

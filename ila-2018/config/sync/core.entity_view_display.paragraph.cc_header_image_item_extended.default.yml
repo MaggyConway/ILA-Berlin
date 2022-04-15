@@ -1,0 +1,42 @@
+uuid: bcb98abf-a617-4049-9dfd-7739474a0b05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_header_image_item_extended.field_cc_svg_tag_snippet
+    - field.field.paragraph.cc_header_image_item_extended.field_media_reference
+    - paragraphs.paragraphs_type.cc_header_image_item_extended
+  module:
+    - ds
+    - entity_reference_revisions
+id: paragraph.cc_header_image_item_extended.default
+targetEntityType: paragraph
+bundle: cc_header_image_item_extended
+mode: default
+content:
+  field_cc_svg_tag_snippet:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_media_reference:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: pt_careercenter_header_image_item_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

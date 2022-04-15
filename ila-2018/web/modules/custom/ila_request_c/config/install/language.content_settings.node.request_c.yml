@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.request_c
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.request_c
+target_entity_type_id: node
+target_bundle: request_c
+default_langcode: site_default
+language_alterable: true

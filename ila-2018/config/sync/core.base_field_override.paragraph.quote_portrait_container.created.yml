@@ -1,0 +1,18 @@
+uuid: bc1ade54-7e46-4b45-b1a4-26439a9c3194
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.quote_portrait_container
+id: paragraph.quote_portrait_container.created
+field_name: created
+entity_type: paragraph
+bundle: quote_portrait_container
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

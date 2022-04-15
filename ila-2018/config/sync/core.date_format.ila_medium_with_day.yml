@@ -1,0 +1,8 @@
+uuid: ff950e3a-e22c-4a6e-8bcd-442c0b8f169e
+langcode: en
+status: true
+dependencies: {  }
+id: ila_medium_with_day
+label: 'ILA Format with day'
+locked: false
+pattern: 'l, j. F Y'

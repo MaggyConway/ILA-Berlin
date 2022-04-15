@@ -1,0 +1,114 @@
+.layout__region--countdown {
+  background: linear-gradient(45deg, rgba(50,203,210,1) 0%, rgba(90,255,255,1) 100%);
+}
+
+.block-region-countdown {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .block-ila-jquery-countdown-timer {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 20px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    img {
+      margin-right: 77px;
+    }
+
+    .countdown-timer-content {
+      max-width: 100%;
+    }
+
+    #lottie {
+      > svg {
+        max-width: 275px;
+        width: 100%;
+        margin-right: 77px;
+
+        @media #{$m-to-s} {
+          max-height: 150px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .countdown-timer {
+      display: flex;
+      align-items: flex-start;
+      color: #ffffff;
+      text-align: center;
+
+      .count, .colon {
+        font-size: 72px;
+        line-height: 1.32;
+        font-weight: bold;
+        display: block;
+
+        @media #{$m-to-l} {
+          font-size: 48px;
+        }
+
+        @media #{$m-to-s} {
+          font-size: 24px;
+        }
+
+        @media screen and (max-width: 374px) {
+          font-size: 18px;
+        }
+      }
+
+      .colon {
+        margin: 0 65px;
+
+        @media #{ $m-to-4xl } {
+          margin: 0 48px;
+        }
+
+        @media #{$m-to-l} {
+          margin: 0 32px;
+        }
+
+        @media #{$m-to-s} {
+          margin: 0 14px;
+        }
+
+        @media screen and (max-width: 374px) {
+          margin: 0 8px;
+        }
+      }
+
+      .label {
+        font-size: 17px;
+        line-height: 1.353;
+        text-transform: uppercase;
+        font-weight: 300;
+
+      }
+    }
+
+    h2 {
+      margin-bottom: 25px;
+
+      @media #{$m-to-l} {
+        font-size: 28px;
+      }
+
+      @media #{$m-to-s} {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+#jquery-countdown-timer {
+  @media #{$m-to-s} {
+    display: flex;
+    justify-content: center;
+  }
+}

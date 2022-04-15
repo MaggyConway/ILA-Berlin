@@ -1,0 +1,16 @@
+name: 'Content - Basic page'
+description: 'Node - "Basic page" content type'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - ds
+  - entity_reference_revisions
+  - field
+  - ila_node_base
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - text
+  - user
+package: ILA

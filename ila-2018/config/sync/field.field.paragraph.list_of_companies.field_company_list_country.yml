@@ -1,0 +1,22 @@
+uuid: 0893c5c6-88cc-4b34-8e81-fb55f2f21ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_list_country
+    - paragraphs.paragraphs_type.list_of_companies
+  module:
+    - address
+id: paragraph.list_of_companies.field_company_list_country
+field_name: field_company_list_country
+entity_type: paragraph
+bundle: list_of_companies
+label: 'Company Country'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

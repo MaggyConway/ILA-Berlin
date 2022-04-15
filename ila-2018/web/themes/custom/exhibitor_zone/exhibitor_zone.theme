@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Custom theme prerpocessors and etc.
+ */
+
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function exhibitor_zone_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // If current page is routed to 'Print request' view, use special template.
+  if (_exhibitor_zone_routed_to_print_request_view()) {
+    $suggestions[] = 'page__view_print_request';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function exhibitor_zone_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  // If current page is routed to 'Print request' view, use special template.
+  if (_exhibitor_zone_routed_to_print_request_view()) {
+    $suggestions[] = 'html__view_print_request';
+  }
+}
+
+/**
+ * Checks if current URL is routed to Print Request view page.
+ */
+function _exhibitor_zone_routed_to_print_request_view() {
+  $route_name = \Drupal::request()->attributes->get('_route');
+  $view_route = 'view.request_print';
+
+  return substr($route_name, 0, strlen($view_route)) === $view_route;
+}
+
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * Override part of text by picture tag.
+ */
+//function exhibitor_zone_preprocess_paragraph(&$variables) {
+//  $paragraph = $variables['elements']['#paragraph'];
+//  $type = $paragraph->getType();
+//
+//  if ($type == 'request_link') {
+//    $link = $paragraph->get('field_link')
+//      ->first()
+//      ->getValue();
+//    $variables['wrap_link'] = Url::fromUri($link['uri'], $link['options']);
+//  }
+//}
+
+
+/**
+ * Preprocess variables for html templates.
+ * @param $variables
+ */
+function exhibitor_zone_preprocess_html(&$variables) {
+  $variables['path_info']['args'] = FALSE;
+  // @todo: remove lang prefix.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $path = \Drupal::request()->getRequestUri();
+  $path = str_replace("/" . $language, "", "$path");
+  $path_args = explode('/', $path);
+  if (count($path_args) >= 3) {
+    $variables['path_info']['args'] = Html::cleanCssIdentifier(ltrim($path, '/'));
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function exhibitor_zone_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function exhibitor_zone_preprocess_datetime_form(array &$variables) {
+  if (!isset($variables['element']['date'], $variables['content']['date'])) {
+    return;
+  }
+  $variables['element']['date']['#title_display'] = 'none';
+  $variables['content']['date']['#title_display'] = 'none';
+}

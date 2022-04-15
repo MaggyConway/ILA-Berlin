@@ -1,0 +1,136 @@
+uuid: a5337583-523b-48e3-a29c-022e8049ecb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_of_companies_items
+    - paragraphs.paragraphs_type.list_of_companies
+    - paragraphs.paragraphs_type.list_of_companies_link
+  module:
+    - entity_reference_revisions
+id: paragraph.list_of_companies_link.field_list_of_companies_items
+field_name: field_list_of_companies_items
+entity_type: paragraph
+bundle: list_of_companies_link
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      list_of_companies: list_of_companies
+    target_bundles_drag_drop:
+      block_reference:
+        weight: 37
+        enabled: false
+      cc_facebook_post:
+        weight: 38
+        enabled: false
+      cc_link_box:
+        weight: 39
+        enabled: false
+      cc_link_list:
+        weight: 40
+        enabled: false
+      cc_link_list_item:
+        weight: 41
+        enabled: false
+      cc_news_block:
+        weight: 42
+        enabled: false
+      cc_text_box:
+        weight: 43
+        enabled: false
+      cc_text_on_image:
+        weight: 44
+        enabled: false
+      cc_tiled_title:
+        weight: 45
+        enabled: false
+      content_subtitle:
+        weight: 46
+        enabled: false
+      download:
+        weight: 47
+        enabled: false
+      dwn_link:
+        weight: 48
+        enabled: false
+      faq:
+        weight: 49
+        enabled: false
+      faq_group:
+        weight: 50
+        enabled: false
+      image_box:
+        weight: 51
+        enabled: false
+      image_full:
+        weight: 52
+        enabled: false
+      image_row:
+        weight: 53
+        enabled: false
+      infographic_box:
+        weight: 54
+        enabled: false
+      infographic_box_column:
+        weight: 55
+        enabled: false
+      info_box:
+        weight: 56
+        enabled: false
+      link_box:
+        weight: 57
+        enabled: false
+      link_box_container:
+        weight: 58
+        enabled: false
+      list_of_companies:
+        enabled: true
+        weight: 59
+      list_of_companies_link:
+        weight: 60
+        enabled: false
+      navigation:
+        weight: 61
+        enabled: false
+      quote:
+        weight: 62
+        enabled: false
+      request_link:
+        weight: 63
+        enabled: false
+      single_link_box:
+        weight: 64
+        enabled: false
+      slideshow:
+        weight: 65
+        enabled: false
+      speaker:
+        weight: 66
+        enabled: false
+      text:
+        weight: 67
+        enabled: false
+      text_box:
+        weight: 68
+        enabled: false
+      text_boxes:
+        weight: 69
+        enabled: false
+      title_image_text:
+        weight: 70
+        enabled: false
+      title_text:
+        weight: 71
+        enabled: false
+      two_column_text:
+        weight: 72
+        enabled: false
+field_type: entity_reference_revisions

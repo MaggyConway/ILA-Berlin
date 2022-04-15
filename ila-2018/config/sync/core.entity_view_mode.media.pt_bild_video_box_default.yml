@@ -1,0 +1,10 @@
+uuid: 46a7d90e-3616-46b9-890b-712beec5c9b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_bild_video_box_default
+label: 'PT Bild & Video Box: Default'
+targetEntityType: media
+cache: true

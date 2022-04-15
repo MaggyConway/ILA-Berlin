@@ -1,0 +1,170 @@
+uuid: a1ccc8f7-bbf0-4c66-b0b7-2847d3871407
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.simple_mega_menu.before
+    - field.field.simple_mega_menu.megamenu_main.field_block_1
+    - field.field.simple_mega_menu.megamenu_main.field_block_2
+    - field.field.simple_mega_menu.megamenu_main.field_block_3
+    - field.field.simple_mega_menu.megamenu_main.field_block_4
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_1
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_2
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_3
+    - field.field.simple_mega_menu.megamenu_main.field_infoblock_4
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - block_field
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_col_1:
+      children:
+        - field_block_1
+        - field_infoblock_1
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Col 1'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'mega-column mega-column-1'
+      label: 'Col 1'
+      region: content
+    group_col_2:
+      children:
+        - field_block_2
+        - field_infoblock_2
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Col 2'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'mega-column mega-column-2'
+      label: 'Col 2'
+      region: content
+    group_col_3:
+      children:
+        - field_block_3
+        - field_infoblock_3
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Col 3'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'mega-column mega-column-3'
+      label: 'Col 3'
+      region: content
+    group_col_4:
+      children:
+        - field_block_4
+        - field_infoblock_4
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: 'Col 4'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'mega-column mega-column-4'
+      label: 'Col 4'
+      region: content
+id: simple_mega_menu.megamenu_main.before
+targetEntityType: simple_mega_menu
+bundle: megamenu_main
+mode: before
+content:
+  field_block_1:
+    type: block_field
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_block_2:
+    type: block_field
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_block_3:
+    type: block_field
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_block_4:
+    type: block_field
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_infoblock_1:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_infoblock_2:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_infoblock_3:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_infoblock_4:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  name: true
+  user_id: true

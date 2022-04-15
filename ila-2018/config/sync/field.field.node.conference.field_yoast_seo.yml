@@ -1,0 +1,21 @@
+uuid: 4910c7ae-f765-4165-bfc8-782d45fdf3d2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.conference
+  module:
+    - yoast_seo
+id: node.conference.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: conference
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

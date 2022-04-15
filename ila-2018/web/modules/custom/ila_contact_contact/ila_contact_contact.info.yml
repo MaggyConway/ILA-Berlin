@@ -1,0 +1,13 @@
+name: 'Contact - Contact'
+description: 'Contact - "Contact" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - contact
+  - contact_ajax
+  - field
+  - field_validation
+  - ila_contact_base
+  - language
+  - telephone
+package: ILA

@@ -1,0 +1,29 @@
+uuid: 903441b1-174d-43e4-a3f7-c52c4b6c038d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_career_level
+    - node.type.job_offer
+    - taxonomy.vocabulary.career_level
+id: node.job_offer.field_job_career_level
+field_name: field_job_career_level
+entity_type: node
+bundle: job_offer
+label: 'Career level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      career_level: career_level
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,16 @@
+uuid: e9c28c92-8630-4e4a-9a7e-272b08b589ca
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_box
+label: 'PT FL Box'
+effects:
+  3bee551d-faa9-4fed-b467-ba7107d0c729:
+    uuid: 3bee551d-faa9-4fed-b467-ba7107d0c729
+    id: image_scale
+    weight: 1
+    data:
+      width: 240
+      height: 115
+      upscale: false
+pipeline: image_optimiza

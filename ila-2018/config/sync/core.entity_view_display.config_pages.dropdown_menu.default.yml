@@ -1,0 +1,25 @@
+uuid: 49e1fd59-2a85-476e-91b9-9148f719a071
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.dropdown_menu
+    - field.field.config_pages.dropdown_menu.field_menu_columns
+  module:
+    - entity_reference_revisions
+id: config_pages.dropdown_menu.default
+targetEntityType: config_pages
+bundle: dropdown_menu
+mode: default
+content:
+  field_menu_columns:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,31 @@
+uuid: f0c83898-226e-49f5-8f42-1b73a0c23b97
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:text:df65dd78-95ed-4710-a8e0-127241d60681'
+  module:
+    - block_content
+    - system
+  theme:
+    - ila_career_center
+id: ila_career_center_conferencebubble
+theme: ila_career_center
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:df65dd78-95ed-4710-a8e0-127241d60681'
+settings:
+  id: 'block_content:df65dd78-95ed-4710-a8e0-127241d60681'
+  label: 'Conference bubble'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: default
+visibility:
+  request_path:
+    id: request_path
+    pages: "*/conferences\r\n*/conferences/285\r\n*/conferences/277\r\n*/conference/1517"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: page_description
+label: 'Page title'
+revision: 0
+description: 'Page title (H1) with sub title field'

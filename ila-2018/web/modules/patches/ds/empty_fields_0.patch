@@ -1,0 +1,18 @@
+Index: ds/src/Plugin/DsField/TokenBase.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ds/src/Plugin/DsField/TokenBase.php	(date 1552386162000)
++++ ds/src/Plugin/DsField/TokenBase.php	(date 1552386322000)
+@@ -59,6 +59,10 @@
+     $langcode = $this->languageManager->getCurrentLanguage()->getId();
+     $value = $this->token->replace($content, [$this->getEntityTypeId() => $this->entity()], ['langcode' => $langcode, 'clear' => TRUE]);
+ 
++    if($value == ''){
++      return [];
++    }
++
+     return [
+       '#type' => 'processed_text',
+       '#text' => $value,

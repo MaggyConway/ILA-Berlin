@@ -1,0 +1,10 @@
+uuid: 80042937-91c3-4e94-98a9-8355124f0bc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_quote_portrait_default
+label: 'PT Quote portrait: Default'
+targetEntityType: media
+cache: true

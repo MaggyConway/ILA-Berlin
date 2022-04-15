@@ -1,0 +1,29 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.downloads
+  module:
+    - system
+    - views
+  theme:
+    - exhibitor_zone
+id: views_block__downloads_block_downloads_print_request_page
+theme: exhibitor_zone
+region: sticky
+weight: -6
+provider: null
+plugin: 'views_block:downloads-block_downloads_print_request_page'
+settings:
+  id: 'views_block:downloads-block_downloads_print_request_page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/exhibitor-zone/request_a/print\r\n/exhibitor-zone/request_b/print\r\n/exhibitor-zone/request_c/print\r\n/exhibitor-zone/request_d/print\r\n/exhibitor-zone/request_e/print\r\n/exhibitor-zone/request_f/print\r\n/exhibitor-zone/request_fb1/print\r\n/exhibitor-zone/co-exhibitor/print"
+    negate: false
+    context_mapping: {  }

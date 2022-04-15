@@ -1,0 +1,78 @@
+.paragraph--type--infographic-box {
+  padding: 60px 0;
+  margin: 0 auto 60px;
+  //background: linear-gradient(225deg, #E04E39 0%, #D0006F 100%);
+  @include section-theme-specific('background-image', linear-gradient(-225deg, rgba($defense-light , 0.8) 0%, rgba($defense-dark, 0.8) 100%), linear-gradient(-225deg, rgba($aviation-light, 0.8) 0%, rgba($aviation-dark, 0.8) 100%), linear-gradient(-225deg, rgba($space-light, 0.8) 0%, rgba($space-dark, 0.8) 100%), linear-gradient(-225deg, rgba($suppliers-light, 0.8) 0%, rgba($suppliers-dark, 0.8) 100%), linear-gradient(-225deg, rgba($special-light, 0.8) 0%, rgba($special-dark, 0.8) 100%), linear-gradient(-225deg, rgba($conferences-light, 0.8) 0%, rgba($conferences-dark, 0.8) 100%), linear-gradient(-225deg, rgba($career-dark-green , 0.8) 0%, rgba($career-light-green, 0.8) 100%), linear-gradient(-225deg, rgba($uas-dark , 0.8) 0%, rgba($uas-light, 0.8) 100%), $digital-gradient);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media #{$m-to-s} {
+    margin-bottom: 30px;
+  }
+  .field--name-field-infographic-box-columns {
+    display: flex;
+    @include content-grid(0);
+    margin: auto;
+    @media #{$m-to-m} {
+      display: block;
+    }
+    > div {
+      flex: 1 1 50%;
+      .paragraph--type--infographic-box-column {
+        color: #FFFFFF;
+        font-size: 15px;
+        line-height: 1.2;
+
+        .field--name-field-infographic-column-title, h2 {
+          color: #FFFFFF;
+          margin-bottom: 30px;
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1.2;
+          text-transform: uppercase;
+          max-width: 425px;
+          @media #{$m-to-m} {
+            max-width: 100%;
+          }
+        }
+        h3 {
+          color: #FFFFFF;
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 1.2;
+          text-transform: none;
+        }
+        .field--name-field-infographic-column-body {
+          margin-bottom: 20px;
+          max-width: 425px;
+
+          @media #{$m-to-m} {
+            max-width: 100%;
+          }
+        }
+        .field--name-field-infographic-column-image,
+        .field--name-field-infographic-column-media {
+          display: inline-block;
+          max-width: 100%;
+          img {
+            width: 100%;
+            display: block;
+            margin: auto;
+          }
+        }
+      }
+      &:first-child {
+        padding-right: 45px;
+        @media #{$m-to-m} {
+          padding-right: 0;
+          padding-bottom: 30px;
+        }
+      }
+      &:last-child {
+        padding-left: 45px;
+        @media #{$m-to-m} {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

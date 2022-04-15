@@ -1,0 +1,5 @@
+name: 'Import Json'
+type: module
+description: 'Module for import json.'
+core_version_requirement: ^8 || ^9
+package: ILA

@@ -1,0 +1,31 @@
+uuid: 7bf6fe40-cecc-4fd6-9ab7-1c1e9bb9c2d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.media
+  module:
+    - menu_block
+  theme:
+    - ila
+id: media
+theme: ila
+region: header_top
+weight: -11
+provider: null
+plugin: 'menu_block:media'
+settings:
+  id: 'menu_block:media'
+  label: Media
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'media:'
+  suggestion: media
+  label_type: block
+  label_link: false
+visibility: {  }

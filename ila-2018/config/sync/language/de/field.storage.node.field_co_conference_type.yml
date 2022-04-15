@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: öffentlich
+    -
+      label: privat
+    -
+      label: 'mit Einladung'

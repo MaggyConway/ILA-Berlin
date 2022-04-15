@@ -1,0 +1,119 @@
+uuid: 7a5b209f-ed54-4286-811a-0feb562ff184
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.career_center
+    - simple_block.simple_block.career_center_social_feed
+  content:
+    - 'block_content:career_center_news:57a5c807-ae54-4beb-af99-70232ce25d00'
+    - 'block_content:careercenter_exhibitors:4695cb9c-e9e2-4649-a2a5-ba6c68cb256e'
+    - 'block_content:careercenter_image_and_links:f4b5e3bd-8398-4042-a3db-267809cc20f7'
+    - 'block_content:careercenter_sponsors:2f113323-27a4-46a9-92e7-933e980f27fd'
+    - 'block_content:careercenter_visitors:84b26e60-55d7-4da7-9e87-fb4a6a10e29b'
+    - 'block_content:header_image:bfb0a792-d238-4973-bbab-9fd2ed495473'
+  module:
+    - block_content
+    - panels
+    - simple_block
+id: career_center-panels_variant-0
+label: Page
+variant: panels_variant
+variant_settings:
+  blocks:
+    9835b8e5-92c3-47c9-8e9f-dad8f2c5562f:
+      id: 'block_content:bfb0a792-d238-4973-bbab-9fd2ed495473'
+      label: 'Header '
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -3
+      uuid: 9835b8e5-92c3-47c9-8e9f-dad8f2c5562f
+      context_mapping: {  }
+    1a14217e-f441-4e06-88f3-77b6dd001b59:
+      id: 'block_content:4695cb9c-e9e2-4649-a2a5-ba6c68cb256e'
+      label: Exhibitors
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -1
+      uuid: 1a14217e-f441-4e06-88f3-77b6dd001b59
+      context_mapping: {  }
+    60d12666-4236-4eb3-8230-3fb1dbd89f8e:
+      id: 'block_content:2f113323-27a4-46a9-92e7-933e980f27fd'
+      label: Sponsors
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 2
+      uuid: 60d12666-4236-4eb3-8230-3fb1dbd89f8e
+      context_mapping: {  }
+    49ab9f19-1a28-4673-b3a8-0b8ecac36b33:
+      id: 'block_content:f4b5e3bd-8398-4042-a3db-267809cc20f7'
+      label: Support
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: 49ab9f19-1a28-4673-b3a8-0b8ecac36b33
+      context_mapping: {  }
+    18afdbec-6f8c-4a98-a957-dd520eb8ace3:
+      id: 'block_content:84b26e60-55d7-4da7-9e87-fb4a6a10e29b'
+      label: Visitors
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 18afdbec-6f8c-4a98-a957-dd520eb8ace3
+      context_mapping: {  }
+    54700bd6-3b4a-469d-99cc-5655bc0c7c2b:
+      id: 'block_content:57a5c807-ae54-4beb-af99-70232ce25d00'
+      label: News
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -2
+      uuid: 54700bd6-3b4a-469d-99cc-5655bc0c7c2b
+      context_mapping: {  }
+    73070f27-41dd-4c9e-8a32-7586fd19784a:
+      id: 'simple_block:career_center_social_feed'
+      label: 'Career Center social feed'
+      provider: simple_block
+      label_display: '0'
+      region: content
+      weight: 3
+      uuid: 73070f27-41dd-4c9e-8a32-7586fd19784a
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 7927afb7-4186-480a-b18c-27fecc38f16d
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: career_center-panels_variant-0
+  builder: standard
+page: career_center
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

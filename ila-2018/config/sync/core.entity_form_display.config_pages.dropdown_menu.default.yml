@@ -1,0 +1,28 @@
+uuid: 1edd65c3-f2d7-4fec-974b-2689d2d4661c
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.dropdown_menu
+    - field.field.config_pages.dropdown_menu.field_menu_columns
+  module:
+    - paragraphs
+id: config_pages.dropdown_menu.default
+targetEntityType: config_pages
+bundle: dropdown_menu
+mode: default
+content:
+  field_menu_columns:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  label: true

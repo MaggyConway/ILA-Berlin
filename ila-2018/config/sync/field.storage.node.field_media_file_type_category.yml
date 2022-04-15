@@ -1,0 +1,33 @@
+uuid: b6560b7c-5213-4fed-a838-2c66c5aeae1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_media_file_type_category
+field_name: field_media_file_type_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: download
+      label: Download
+    -
+      value: video
+      label: Video
+    -
+      value: image
+      label: Image
+    -
+      value: audio
+      label: Audio
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

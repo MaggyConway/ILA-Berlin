@@ -1,0 +1,211 @@
+.paragraph-content--view-display-id-cc_impressionen {
+  margin: 30px 40px;
+
+  @media #{$m-to-m} {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .view-careercenter-media-list {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1040px;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 54%;
+      height: 62px;
+      content: '';
+      background: #ffffff;
+
+      @media #{$m-to-m} {
+        display: none;
+      }
+    }
+  }
+
+  .view-header {
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      right: -80px;
+      bottom: -40px;
+      width: 160px;
+      height: 160px;
+      opacity: .4;
+      content: '';
+      background: url('../../assets/images/diagonal-lines-light.svg') repeat, $career-green;
+      border-radius: 50%;
+
+      @media #{$m-to-m} {
+        right: -40px;
+        bottom: -10px;
+        width: 108px;
+        height: 108px;
+      }
+    }
+
+    .impressionen-header {
+      font-family: $career-font;
+      font-size: 130px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: $career-green;
+
+      @media #{$m-to-2l} {
+        font-size: 90px;
+      }
+
+      @media #{$m-to-m} {
+        font-size: 60px;
+        text-align: center;
+      }
+    }
+  }
+
+  .view-content {
+    position: relative;
+    padding-bottom: 80px;
+    background: url('../../img/diagonal-lines.svg') repeat, $career-dark;
+    border-bottom: 20px solid $career-green;
+
+    @media #{$m-to-m} {
+      border-bottom-width: 13px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      opacity: .4;
+      content: '';
+      background: url('../../assets/images/diagonal-lines-light.svg') repeat, $career-green;
+      border-radius: 50%;
+    }
+
+    &::before {
+      z-index: 1;
+      top: 0;
+      left: -145px;
+      width: 400px;
+      height: 400px;
+
+      @media #{$m-to-m} {
+        width: 268px;
+        height: 268px;
+      }
+    }
+
+    &::after {
+      top: -80px;
+      right: 160px;
+      width: 160px;
+      height: 160px;
+
+      @media #{$m-to-m} {
+        display: none;
+      }
+    }
+  }
+
+  .slick {
+    z-index: 3;
+  }
+
+  .slick__slider {
+    margin: 0 -200px;
+
+    @media #{$m-to-m} {
+      margin: 0;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .media--view-mode-pt-careercenter-view-reference-impressionen {
+    margin: 0 40px;
+
+    @media #{$m-to-m} {
+      margin: 0 20px;
+    }
+  }
+
+  .field--name-field-media-image {
+    img {
+      border: 1px solid #ffffff;
+    }
+  }
+
+  .slick__arrow {
+    top: auto;
+    bottom: -80px;
+  }
+
+  .slick-arrow {
+    top: auto;
+    bottom: 0;
+    background: $career-green;
+    border-radius: 0;
+    transform: translateY(0%);
+
+    &::before {
+      margin: 0 auto;
+      display: block;
+      width: calc(70% - 8px);
+      height: 3px;
+      opacity: 1;
+      content: '';
+      background: $career-dark;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-color: transparent $career-dark;
+    }
+  }
+
+  .slick-next {
+    right: 46%;
+    left: auto;
+
+    &::after {
+      right: 0;
+      border-width: 7px 0 7px 8px;
+      transform: translate(-100%, -50%);
+    }
+
+    @media #{$m-to-m} {
+      right: 0;
+    }
+  }
+
+  .slick-prev {
+    right: calc(46% + 2px);
+    left: auto;
+    transform: translateX(-100%);
+
+    &::after {
+      left: 0;
+      border-width: 7px 8px 7px 0;
+      transform: translate(100%, -50%);
+    }
+
+    @media #{$m-to-m} {
+      right: 2px;
+    }
+  }
+}

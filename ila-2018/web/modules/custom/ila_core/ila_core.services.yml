@@ -1,0 +1,7 @@
+services:
+  ila_core.language_redirect:
+    class: Drupal\ila_core\EventSubscriber\LanguageRedirectSubscriber
+    arguments: ['@language_manager', '@config.factory']
+    tags:
+      - { name: event_subscriber }
+

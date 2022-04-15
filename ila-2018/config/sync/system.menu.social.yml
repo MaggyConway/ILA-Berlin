@@ -1,0 +1,10 @@
+uuid: bd64cb18-b853-40fb-ac1c-4c8aa28b73d6
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: d1UJdbAqlpsqTZo7jRMTOG3PzUn5u4_zqhdHl50HHLw
+id: social
+label: Social
+description: 'Links to social media'
+locked: false

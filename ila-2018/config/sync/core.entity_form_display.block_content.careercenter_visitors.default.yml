@@ -1,0 +1,128 @@
+uuid: b8b89d47-f05c-4a43-8d6f-48077de404bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_visitors
+    - field.field.block_content.careercenter_visitors.field_cc_visitors_anchor_id
+    - field.field.block_content.careercenter_visitors.field_cc_visitors_body
+    - field.field.block_content.careercenter_visitors.field_cc_visitors_images
+    - field.field.block_content.careercenter_visitors.field_cc_visitors_title
+    - image.style.thumbnail
+  module:
+    - field_group
+    - paragraphs
+    - svg_image
+third_party_settings:
+  field_group:
+    group_accordion:
+      children:
+        - group_general
+        - group_content
+      parent_name: ''
+      weight: 0
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: none
+      label: Accordion
+      region: content
+    group_general:
+      children:
+        - info
+        - langcode
+        - translation
+        - field_cc_visitors_anchor_id
+      parent_name: group_accordion
+      weight: 4
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: General
+      region: content
+    group_content:
+      children:
+        - field_cc_visitors_title
+        - field_cc_visitors_body
+        - field_cc_visitors_images
+      parent_name: group_accordion
+      weight: 5
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: Content
+      region: content
+id: block_content.careercenter_visitors.default
+targetEntityType: block_content
+bundle: careercenter_visitors
+mode: default
+content:
+  field_cc_visitors_anchor_id:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cc_visitors_body:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_cc_visitors_images:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cc_visitors_title:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

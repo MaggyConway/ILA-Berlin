@@ -1,0 +1,9 @@
+uuid: 8c1413e6-4157-44c2-8431-5eb713a5f2c1
+langcode: en
+status: true
+dependencies: {  }
+id: fl_testimonial
+label: 'FL Testimonial'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

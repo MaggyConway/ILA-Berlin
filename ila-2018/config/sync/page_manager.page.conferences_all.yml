@@ -1,0 +1,12 @@
+uuid: bf27ae10-025e-4d1b-b4cd-51ebdc756ebb
+langcode: en
+status: true
+dependencies: {  }
+id: conferences_all
+label: 'Konferenzen 2018'
+description: ''
+use_admin_theme: false
+path: /all-conferences
+access_logic: and
+access_conditions: {  }
+parameters: {  }

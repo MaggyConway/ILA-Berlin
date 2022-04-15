@@ -1,0 +1,20 @@
+uuid: 766e7d7b-be38-4801-8eea-9cafe75fddcd
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+id: career_center
+label: 'Career Center'
+description: ''
+use_admin_theme: false
+path: /career-center-old
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles: {  }
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

@@ -1,0 +1,70 @@
+entity.ila_registration.collection:
+  title: 'Registrations'
+  route_name: entity.ila_registration.collection
+  description: 'List of Registration entities'
+  parent: system.admin
+  weight: -9
+
+# Exhibitor menu items definition
+entity.ila_registration_exhibitor.collection:
+  title: 'Exhibitor'
+  route_name: entity.ila_registration_exhibitor.collection
+  description: 'List Exhibitor entities'
+  parent: entity.ila_registration.collection
+  weight: 99
+
+# Exhibitor type menu items definition
+entity.ila_registration_exhibitor_type.collection:
+  title: 'Exhibitor type'
+  route_name: entity.ila_registration_exhibitor_type.collection
+  description: 'List Exhibitor type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+# Booth menu items definition
+entity.ila_registration_booth.collection:
+  title: 'Booth'
+  route_name: entity.ila_registration_booth.collection
+  description: 'List Booth entities'
+  parent: entity.ila_registration.collection
+  weight: 100
+
+# Booth type menu items definition
+entity.ila_registration_booth_type.collection:
+  title: 'Booth type'
+  route_name: entity.ila_registration_booth_type.collection
+  description: 'List Booth type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+# Company menu items definition
+entity.ila_registration_company.collection:
+  title: 'Company'
+  route_name: entity.ila_registration_company.collection
+  description: 'List Company entities'
+  parent: entity.ila_registration.collection
+  weight: 100
+
+# Company type menu items definition
+entity.ila_registration_company_type.collection:
+  title: 'Company type'
+  route_name: entity.ila_registration_company_type.collection
+  description: 'List Company type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+# Person menu items definition
+entity.ila_registration_person.collection:
+  title: 'Person'
+  route_name: entity.ila_registration_person.collection
+  description: 'List Person entities'
+  parent: entity.ila_registration.collection
+  weight: 100
+
+# Person type menu items definition
+entity.ila_registration_person_type.collection:
+  title: 'Person type'
+  route_name: entity.ila_registration_person_type.collection
+  description: 'List Person type (bundles)'
+  parent: system.admin_structure
+  weight: 99

@@ -1,0 +1,18 @@
+third_party_settings:
+  field_group:
+    group_contact_person:
+      format_settings:
+        label: Ansprechpartner
+      label: Ansprechpartner
+    group_main_exhibitor:
+      format_settings:
+        label: 'Angaben zum Hauptaussteller'
+      label: 'Angaben zum Hauptaussteller'
+    group_password:
+      format_settings:
+        label: Passwort
+      label: Passwort
+content:
+  field_telephone:
+    settings:
+      placeholder: Telefon

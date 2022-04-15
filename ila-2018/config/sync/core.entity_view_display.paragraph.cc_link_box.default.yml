@@ -1,0 +1,49 @@
+uuid: 35831876-9365-440c-af90-7d8c94964fb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cc_link_box.field_cc_box_link_link
+    - field.field.paragraph.cc_link_box.field_cc_link_box_subtitle
+    - field.field.paragraph.cc_link_box.field_cc_link_box_symbol_class
+    - field.field.paragraph.cc_link_box.field_cc_link_box_title
+    - field.field.paragraph.cc_link_box.field_cc_link_box_use_awesome
+    - paragraphs.paragraphs_type.cc_link_box
+  module:
+    - link
+id: paragraph.cc_link_box.default
+targetEntityType: paragraph
+bundle: cc_link_box
+mode: default
+content:
+  field_cc_box_link_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cc_link_box_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cc_link_box_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_cc_link_box_symbol_class: true
+  field_cc_link_box_use_awesome: true

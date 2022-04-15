@@ -1,0 +1,8 @@
+uuid: 29645d5f-5627-46f0-8483-621c63b1b583
+langcode: en
+status: true
+dependencies: {  }
+id: career-center
+label: 'Career Center'
+description: ''
+locked: false

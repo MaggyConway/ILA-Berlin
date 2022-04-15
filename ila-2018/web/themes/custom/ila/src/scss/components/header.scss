@@ -1,0 +1,322 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 0px;
+  z-index: 3;
+  max-height: 100vh;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu--main {
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 975px) {
+      margin-left: 0;
+    }
+  }
+
+  .header__bottom {
+    position: relative;
+    top: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    transition: all 0.3s ease;
+
+    @media (max-width: 1024px) {
+      top: 0;
+      background-color: #1B457B;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    #block-ila-branding {
+      width: 190px;
+      transition: all 0.3s ease;
+
+      @media (max-width: 1024px) {
+        width: 120px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .region-header-bottom {
+      display: flex;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (max-width: 1300px) {
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+    }
+
+    #block-config-pages {
+      display: none;
+    }
+
+    &.open {
+      #block-config-pages {
+        display: block;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #112D4F;
+        z-index: 10;
+        min-height: 100vh;
+        padding-top: 80px;
+        overflow-y: auto;
+
+        .config_pages--type--dropdown-menu {
+          max-width: 1280px;
+          margin-left: auto;
+          margin-right: auto;
+
+          @media screen and (max-width: 1300px) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .field--name-field-menu-columns {
+            display: flex;
+
+            @media screen and (max-width: 640px) {
+              flex-wrap: wrap;
+            }
+
+            > .field__item {
+              flex: 1;
+              margin-right: 80px;
+
+              @media screen and (max-width: 992px) {
+                margin-right: 20px;
+              }
+
+              @media screen and (max-width: 640px) {
+                margin-right: 0;
+                margin-bottom: 40px;
+                flex: 100%;
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              .field--name-field-menu-block-title {
+                color: $c-white;
+                font-size: 28px;
+                line-height: 34px;
+                font-weight: bold;
+              }
+
+              .field--name-field-menu-links {
+                > .field__item {
+                  a {
+                    display: block;
+                    padding: 20px 0;
+                    border-bottom: 1px solid #9BFFFF;
+                    background-repeat: no-repeat;
+                    background-size: 21px 21px;
+                    background-position: right 5px center;
+                    background-image: url(../img/svg/icon-blue-arrow-right.svg);
+                    font-size: 22px;
+                    line-height: 31px;
+
+                    @media screen and (max-width: 992px) {
+                      padding-right: 40px;
+                    }
+                  }
+
+                  &:last-child {
+                    a {
+                      border-bottom: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.is-sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+    &.sticky-header-bottom {
+      .header__bottom {
+        background-color: #1B457B;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        #block-ila-branding {
+          width: 120px;
+        }
+
+        .mobile-button {
+          top: calc(50% - 30px);
+        }
+      }
+    }
+
+    .header__bottom.open {
+      .mobile-button {
+        position: fixed;
+        top: 0;
+        right: 0 !important;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #112D4F;
+        z-index: 11;
+      }
+    }
+  }
+}
+
+#block-ila-language-switcher-full {
+  display: none;
+
+  @media screen and (max-width: 975px) {
+  
+  }
+}
+
+#block-media-2 {
+  display: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // @media screen and (max-width: 975px) {
+  //   display: block;
+  //   width: 100%;
+  //   padding: 50px;
+  //   text-align: left;
+  // }
+}
+
+#block-ila-media-links-second {
+  display: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .menu {
+    &--media {
+      margin: 0;
+      display: inline-block;
+    }
+    &__item {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+
+      > a {
+        position: relative;
+        display: block;
+        padding-right: 35px;
+        color: $c-white;
+        font-weight: 400;
+
+        &:after {
+          @include absolute-vertical-center;
+          content: '';
+          position: absolute;
+          right: 0;
+          width: 16px;
+          height: 16px;
+          background: url(../img/svg/camera-white.svg) no-repeat center;
+        }
+
+        &.icon-downloads {
+          &:after {
+            background: url(../img/svg/download-white.svg) no-repeat center;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 975px) {
+    display: block;
+    width: 100%;
+    padding: 50px;
+    text-align: left;
+  }
+}
+#block-ila-forms-links-second {
+  display: none;
+
+  @media screen and (max-width: 975px) {
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    &--form {
+      margin: 0;
+      margin-left: -10px;
+      margin-right: -10px;
+      display: flex;
+    }
+    &__item {
+      width: 50%;
+      text-align: center;
+      margin-right: 2px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      > a {
+        display: inline-block;
+        width: 100%;
+        padding: 15px;
+        background-color: rgba($c-white, .6);
+        color: $c-blue;
+        transition: .3s;
+        font-weight: 400;
+        font-size: 14px;
+
+        &:hover {
+          background-color: rgba($c-white, .85);
+        }
+      }
+    }
+  }
+}
+.mobile-menu__trigger {
+  display: none;
+
+  @media screen and (max-width: 975px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.adminimal-admin-toolbar {
+  #block-config-pages {
+    min-height: calc(100vh - 78px) !important;
+    padding-top: 180px !important;
+  }
+
+  .header__bottom.open {
+    .mobile-button {
+      top: 120px !important;
+    }
+  }
+}
+
+

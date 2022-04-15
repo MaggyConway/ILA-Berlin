@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Request D stands (without stand construction)'
+vid: request_d_stands
+description: ''
+hierarchy: 0
+weight: 0

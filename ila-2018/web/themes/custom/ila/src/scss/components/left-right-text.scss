@@ -1,0 +1,47 @@
+.left-right-text {
+  @include content-grid (60px);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.2;
+  @media #{$m-to-m} {
+    display: block;
+  }
+  @media #{$m-to-s} {
+    margin-bottom: 30px;
+  }
+
+  .field--name-field-subtitle-two {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    width: 53%;
+    @media #{$m-to-m} {
+      width: 85%;
+      margin-bottom: 13px;
+    }
+  }
+
+  .field--name-field-text-left {
+    width: 50%;
+    padding-right: 10px;
+    @media #{$m-to-m} {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+
+  .field--name-field-text-right {
+    width: 50%;
+    padding-left: 10px;
+    @media #{$m-to-m} {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

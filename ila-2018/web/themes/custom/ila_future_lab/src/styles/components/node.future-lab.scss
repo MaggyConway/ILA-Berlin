@@ -1,0 +1,31 @@
+.node--type-future-lab {
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.video-embed-field-launch-modal {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 69px;
+    height: 69px;
+    content: '';
+    background-image: url('../../assets/images/video-button.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    width: 100%;
+  }
+}

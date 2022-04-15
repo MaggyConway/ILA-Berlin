@@ -1,0 +1,168 @@
+.view-glossary-the-speakers {
+  margin-bottom: 80px;
+  .view-filters {
+    @include content-grid(45px);
+    max-height: 85px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+    .form-wrapper {
+      margin: 0;   
+      .form-radios {
+        display: flex;
+        flex-wrap: wrap;
+
+        .form-type-radio {
+
+          margin: 0;
+          margin-right: 20px;
+          margin-bottom: 5px;
+          & > label {
+            padding: 0;
+            font-weight: 300;
+            line-height: 1.2;
+            transition: color .3s;
+
+            &:before {
+              content: none;
+            }
+            &:hover {
+              cursor: pointer;
+              color: $conferences-light;
+            }
+          }
+        }
+      }
+    }
+
+    .speaker-filters {
+      max-height: 85px;
+      padding: 30px;
+      border: 1px solid $conferences-light;
+      border-width: 1px 0 1px 0;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 17px;
+
+      .link-history-back {
+        color: $conferences-dark;
+        margin-right: 15%;
+      }
+
+      .filter-open-btn {
+        position: relative;
+        padding-left: 1.5em;
+        color: $conferences-link;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          background: url('../img/controls-conf-icon.svg') center no-repeat;
+          background-size: 1em;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .form--inline {
+      padding: 15px 30px 10px;
+      border-bottom: 1px solid $conferences-light;
+
+      .form-type-radio {
+        &:first-of-type {
+          .option {
+            color: $conferences-dark;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    .views-table {
+      display: flex;
+      flex-wrap: wrap;
+
+      &:nth-child(2n+1) {
+        padding: 20px 0 28px;
+      }
+
+      &:nth-child(2n) {
+        padding: 12px 0 28px;
+        background-color: $conferences-background;
+      }
+
+      caption, tbody {
+        @include content-grid(0);
+        width: 100%;
+        text-align: left;
+      }
+
+      caption {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: $conferences-light;
+
+        .back-to-top__link {
+          margin-right: 70px;
+        }
+      }
+
+      tbody {
+        display: block;
+        tr {
+          display: list-item;
+          line-height: 1.2;
+          margin-bottom: 0;
+          list-style: none;
+          position: relative;
+          margin-bottom: 2px;
+          margin-left: 55px;
+
+          @media #{$m-to-m} {
+            margin-left: 35px;
+          }
+
+          &:before {
+            content:"\2022";
+            position: absolute;
+            left: -25px;
+            font-size: 15px;
+            @media #{$m-to-m} {
+              left: -20px;
+            }
+          }
+          a {
+            color: #000000;
+            font-weight: 600;
+          }
+        }
+      }
+
+      h3 {
+        color: $conferences-light;	
+        font-size: 15px;
+        font-weight: 300;	
+        line-height: 1.2;
+      }
+      
+    }
+  }
+}
+
+body.opened-glossary {
+  .view-glossary-the-speakers {
+    .view-filters {
+      max-height: 1000px;
+    }
+  }
+}

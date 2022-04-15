@@ -1,0 +1,487 @@
+<?php
+
+/**
+ * @file
+ * Contains common hooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Field\FieldItemList;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_alter().
+ */
+function ila_partial_validation_form_alter(array &$form, FormStateInterface $form_state, string $form_id) {
+  // Forms to alter.
+  $forms = [
+    'node_main_exhibitor_form',
+    'node_main_exhibitor_edit_form',
+  ];
+
+  if (array_search($form_id, $forms) === FALSE) {
+    return;
+  }
+
+  $form['#validate'][] = 'ila_partial_validation_validate';
+
+  // Convert all #required elements from the field groups into the
+  // #partially_required.
+  foreach ($form['#group_children'] as $child_name => $group_name) {
+    if (!isset($form[$child_name])) {
+      continue;
+    }
+
+    $form[$child_name] = _ila_partial_validation_process_partially_required($form[$child_name]);
+  }
+
+  // Set form submission callback.
+  if (isset($form['actions'])) {
+    foreach ($form['actions'] as &$action) {
+      if (!isset($action['#submit'])) {
+        continue;
+      }
+      $action['#submit'][] = 'ila_partial_validation_submit_callback';
+    }
+  }
+
+  // FIXME. Quickfix for required single checkboxes. Set correct #default_value
+  // property for these form fields.
+  $checkboxes = [
+    'field_we_hereby_accept',
+    'field_we_acknowledge_that_the_fo',
+    'field_we_acknowledge_that_my_req',
+  ];
+  if (!$node = $form_state->getFormObject()->getEntity()) {
+    foreach ($checkboxes as $field_name) {
+      $form[$field_name]['widget']['#default_value'] = [
+        'value' => 0,
+      ];
+    }
+
+    return;
+  }
+  else {
+    foreach ($checkboxes as $field_name) {
+      if (empty($node->get($field_name)->getValue())) {
+        $form[$field_name]['widget']['#default_value'] = [
+          'value' => 0,
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Validation callback for Main Exhibitor form.
+ */
+function ila_partial_validation_validate(array &$form, FormStateInterface $form_state) {
+  // Get form values not from the $form_state, but from the node object
+  // generated on the form_state base.
+  if (!$node_form = $form_state->getFormObject()) {
+    return;
+  }
+  $node = $node_form->buildEntity($form, $form_state);
+
+  $validators = _ila_partial_validation_get_validators();
+
+  $elements = [];
+  foreach ($validators as $group_name => $validator) {
+    $group_elements = _ila_partial_validation_get_field_group_elements($form, $group_name, TRUE);
+    // Filter by `#partial_required === TRUE` property.
+    foreach ($group_elements as $key => $field_name) {
+      if (!isset($form[$field_name]['widget']['#partially_required'])) {
+        unset($group_elements[$key]);
+      }
+    }
+
+    $elements[$group_name] = $group_elements;
+  }
+
+  $errors = ila_partial_validation_process_validators($elements, $validators, $node);
+
+  foreach ($errors as $element_name => $error_text) {
+    $form_state->setErrorByName($element_name, $error_text);
+
+    // Determine element field group.
+    if (!isset($form['#group_children'][$element_name])) {
+      continue;
+    }
+    $group_name = $form['#group_children'][$element_name];
+
+    $group = &$form['#fieldgroups'][$group_name];
+    if ($group->format_type !== 'accordion_item') {
+      // Quickfix: use parent field group.
+      if (!isset($form['#group_children'][$group_name])) {
+        continue;
+      }
+
+      $group = &$form['#fieldgroups'][$form['#group_children'][$group_name]];
+    }
+
+    // Open related accordion item.
+    if (isset($group->format_settings['formatter'])) {
+      $group->format_settings['formatter'] = 'open';
+    }
+  }
+}
+
+/**
+ * Processes a validation array.
+ */
+function ila_partial_validation_process_validators(array $elements, array $validators, Node $node) {
+  $errors = [];
+
+  foreach ($validators as $group_name => $validator_info) {
+    $group_elements = $elements[$group_name];
+
+    if (!isset($validator_info['validators'])) {
+      continue;
+    }
+
+    // FIXME. Primitive implementation of validator preconditions with
+    // predefined conditions.
+    if (isset($validator_info['if'])) {
+      $preconditions = $validator_info['if'];
+      // Check if a value for a given field is set or not set.
+      if (isset($preconditions['is set'])) {
+        if (_ila_partial_validation_field_item_is_empty($node->get($preconditions['is set']))) {
+          continue;
+        }
+      }
+      if (isset($preconditions['is not set'])) {
+        if (!_ila_partial_validation_field_item_is_empty($node->get($preconditions['is not set']))) {
+          continue;
+        }
+      }
+    }
+
+    $validator_result = NULL;
+    $validator_errors = [];
+    // FIXME. Very primitive and not optimized implementation of the conditions
+    // logic.  No nesting and etc.
+    foreach ($validator_info['validators'] as $operator => $conditions) {
+      $group_result = NULL;
+      $group_errors = [];
+      foreach ($conditions as $condition) {
+        if ($condition['validator'] === 'empty') {
+          $result = _ila_partial_validation_group_is_empty($group_elements, $node);
+        }
+        elseif ($condition['validator'] === 'filled') {
+          $result = _ila_partial_validation_group_is_filled($group_elements, $node);
+        }
+
+        if (isset($condition['negate']) && $condition['negate'] === TRUE) {
+          $result = !$result;
+        }
+
+        if ($group_result === NULL) {
+          $group_result = $result['result'];
+          if (isset($result['errors'])) {
+            $group_errors = array_merge($group_errors, $result['errors']);
+          }
+
+          continue;
+        }
+
+        if ($operator === 'or') {
+          $group_result = $group_result || $result['result'];
+        }
+        elseif ($operator === 'and') {
+          $group_result = $group_result && $result['result'];
+        }
+
+        if (isset($result['errors'])) {
+          $group_errors = array_merge($group_errors, $result['errors']);
+        }
+      }
+
+      if ($validator_result === NULL) {
+        $validator_result = $group_result;
+      }
+      else {
+        $validator_result = $validator_result && $group_result;
+      }
+
+      if ($group_result === FALSE) {
+        $validator_errors = array_merge($validator_errors, $group_errors);
+      }
+    }
+
+    if ($validator_result === FALSE) {
+      $errors = array_merge($errors, $validator_errors);
+    }
+  }
+
+  return $errors;
+}
+
+/**
+ * Checks if values are provided for __all__ the given elements.
+ */
+function _ila_partial_validation_group_is_filled(array $elements, Node $node) {
+  $empty_elements = [];
+  foreach ($elements as $field_name) {
+    if (_ila_partial_validation_field_item_is_empty($node->get($field_name))) {
+      $empty_elements[] = $field_name;
+    }
+  }
+
+  $errors = [];
+  // FIXME: Return error or validator type instead of exact message text.
+  foreach ($empty_elements as $element_name) {
+    $errors[$element_name] = new TranslatableMarkup('Please fill out this field.');
+  }
+
+  return [
+    'result' => empty($empty_elements),
+    'errors' => $errors,
+  ];
+}
+
+/**
+ * Checks if values are provided for _none_ of the given elements.
+ */
+function _ila_partial_validation_group_is_empty(array $elements, Node $node) {
+  $filled_elements = [];
+  foreach ($elements as $field_name) {
+    if (!_ila_partial_validation_field_item_is_empty($node->get($field_name))) {
+      $filled_elements[] = $field_name;
+    }
+  }
+
+  return [
+    'result' => empty($filled_elements),
+  ];
+}
+
+/**
+ * Returns all form elements from the given group.
+ */
+function _ila_partial_validation_get_field_group_elements(array $form, string $group_name, bool $recursive = FALSE) {
+  if (!isset($form['#fieldgroups'][$group_name]->children)) {
+    return array();
+  }
+
+  $output = [];
+  foreach ($form['#fieldgroups'][$group_name]->children as $field_name) {
+    if (!isset($form[$field_name])) {
+      if ($recursive && isset($form['#group_children'][$field_name])) {
+        $output = array_merge($output, _ila_partial_validation_get_field_group_elements($form, $field_name, TRUE));
+      }
+
+      continue;
+    }
+
+    $output[] = $field_name;
+  }
+
+  return $output;
+}
+
+/**
+ * Recursively converts all #required elements into the #partially_required.
+ */
+function _ila_partial_validation_process_partially_required(array $element) {
+  if (isset($element['#required']) && $element['#required'] === TRUE) {
+    $element['#required'] = FALSE;
+    $element['#partially_required'] = TRUE;
+    if (!isset($element['#label_attributes']['class'])) {
+      $element['#label_attributes']['class'] = [];
+    }
+    $element['#label_attributes']['class'][] = 'form-required';
+  }
+
+  $children = Element::children($element);
+  foreach ($children as $child) {
+    $element[$child] = _ila_partial_validation_process_partially_required($element[$child]);
+  }
+
+  return $element;
+}
+
+/**
+ * Checks if the value of the FieldItemList element is empty.
+ */
+function _ila_partial_validation_field_item_is_empty(FieldItemList $field_item) {
+  if ($field_item->isEmpty()) {
+    return TRUE;
+  }
+
+  // FIXME: Hardcoded field - 'member of BDLI' as radios.
+  if ($field_item->getName() === 'field_company_member_of_bdli') {
+    return FALSE;
+  }
+
+  $field_value = $field_item->getValue();
+  if (isset($field_value[0]['value']) && empty($field_value[0]['value'])) {
+    return TRUE;
+  }
+
+  return FALSE;
+}
+
+/**
+ * Returns set of hardcoded validators. Maybe someday it will be moved to UI.
+ */
+function _ila_partial_validation_get_validators() {
+  $validators = [
+    'group_company_data_a' => [
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_catalog_address_' => [
+      'if' => [
+        'is not set' => 'field_catalog_company_data_edit',
+      ],
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_invoice_data_a' => [
+      'if' => [
+        'is not set' => 'field_invoice_same_as_company',
+      ],
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_primary_contact_person' => [
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_managing_director' => [
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_press_manager' => [
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_responsible_for_protocol' => [
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+    'group_agency' => [
+      'if' => [
+        'is set' => 'field_we_are_agency',
+      ],
+      'validators' => [
+        'and' => [
+          [
+            'validator' => 'filled',
+          ],
+        ],
+      ],
+    ],
+    'group_terms_and_conditions_agree' => [
+      'validators' => [
+        'or' => [
+          ['validator' => 'empty'],
+          ['validator' => 'filled'],
+        ],
+      ],
+    ],
+  ];
+
+  return $validators;
+}
+
+/**
+ * Submit callback: show additional information on validation errors.
+ */
+function ila_partial_validation_submit_callback(array &$form, FormStateInterface $form_state) {
+  if ($form['#id'] === 'node-main-exhibitor-edit-form') {
+    $form_state->setRedirectUrl(Url::fromUserInput('/admin/content'));
+
+    return;
+  }
+
+  // Get form values not from the $form_state, but from the node object
+  // generated on the form_state base.
+  if (!$node_form = $form_state->getFormObject()) {
+    return;
+  }
+  $node = $node_form->buildEntity($form, $form_state);
+
+  $validators = _ila_partial_validation_get_validators();
+  $elements = [];
+  foreach ($validators as $group_name => $validator) {
+    $group_elements = _ila_partial_validation_get_field_group_elements($form, $group_name, TRUE);
+    // Filter by `#partial_required === TRUE` property.
+    foreach ($group_elements as $key => $field_name) {
+      if (!isset($form[$field_name]['widget']['#partially_required'])) {
+        unset($group_elements[$key]);
+      }
+    }
+
+    $elements[$group_name] = $group_elements;
+  }
+  $validators = _ila_partial_validation_filter_validators($validators, 'empty');
+  $errors = ila_partial_validation_process_validators($elements, $validators, $node);
+
+  if (!empty($errors)) {
+    \Drupal::messenger()->addMessage(t('The sections <strong>company data</strong>, <strong>primary contact person</strong>, <strong>managing director</strong> and <strong>terms and conditions</strong> are required. Depending on your choices there might be additional required information. Please review the form.'), 'warning');
+  }
+  else {
+    \Drupal::messenger()->addMessage(t('Thank you for completing your exhibitor data, you can now fill the request forms'));
+    $form_state->setRedirectUrl(Url::fromUserInput('/exhibitor-zone/requests'));
+  }
+}
+
+/**
+ * Removes specified kind of validators from the given array.
+ */
+function _ila_partial_validation_filter_validators(array $validators, string $filters_to_remove) {
+  foreach ($validators as &$group) {
+    // For not nested validators.
+    $operator = '';
+    if (isset($group['validators']['or'])) {
+      $operator = 'or';
+    }
+    elseif (isset($group['validators']['and'])) {
+      $operator = 'and';
+    }
+
+    foreach ($group['validators'][$operator] as $condition_key => $condition) {
+      if (isset($condition['validator']) && $condition['validator'] === $filters_to_remove) {
+        unset($group['validators'][$operator][$condition_key]);
+      }
+    }
+
+    if (empty($group['validators'][$operator])) {
+      unset($group['validators'][$operator]);
+    }
+  }
+
+  return $validators;
+}

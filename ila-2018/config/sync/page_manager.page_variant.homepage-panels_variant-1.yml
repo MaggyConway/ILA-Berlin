@@ -1,0 +1,104 @@
+uuid: 64f2c8e5-59e8-4ae2-8dd4-5fd416d1770c
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - simple_block.simple_block.exhibition_section
+    - simple_block.simple_block.homepage_social_feed
+    - views.view.facts
+    - views.view.sections
+  content:
+    - 'block_content:text:529322a2-a5d4-4a86-85e1-4834f38ba0c8'
+    - 'block_content:video_and_more:fa2673d1-6de1-4b7b-ae6d-64b2cb9f711c'
+  module:
+    - block_content
+    - panels
+    - simple_block
+    - views
+_core:
+  default_config_hash: 1LCP-dNGy6rdMLrivwJBcqSjXle2n65YK8H7Q6rB9YQ
+id: homepage-panels_variant-1
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    a75310f4-366b-440a-b83b-1b9215148816:
+      id: 'block_content:529322a2-a5d4-4a86-85e1-4834f38ba0c8'
+      label: 'Homepage - Header - Text'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header
+      weight: -10
+      uuid: a75310f4-366b-440a-b83b-1b9215148816
+      context_mapping: {  }
+    85c2be96-c900-45d4-ba08-1da689e74f61:
+      id: 'simple_block:homepage_social_feed'
+      label: 'Homepage social feed'
+      provider: simple_block
+      label_display: visible
+      region: social_media
+      weight: -9
+      uuid: 85c2be96-c900-45d4-ba08-1da689e74f61
+      context_mapping: {  }
+    6b345ca6-842d-433e-86e4-775c4f7e3e29:
+      id: 'views_block:facts-block_facts'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: facts
+      weight: 0
+      uuid: 6b345ca6-842d-433e-86e4-775c4f7e3e29
+      context_mapping: {  }
+    2dd42cb3-5705-4404-92df-39a35d90a643:
+      id: 'block_content:fa2673d1-6de1-4b7b-ae6d-64b2cb9f711c'
+      label: 'Homepage - Intro'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: header
+      weight: -9
+      uuid: 2dd42cb3-5705-4404-92df-39a35d90a643
+      context_mapping: {  }
+    1fd1a38f-3615-43c9-acd8-96f8435f2372:
+      id: 'views_block:sections-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: sections
+      weight: -2
+      uuid: 1fd1a38f-3615-43c9-acd8-96f8435f2372
+      context_mapping: {  }
+    1ef3ec18-882c-4012-8d57-dc7f2ef0fc29:
+      id: 'simple_block:exhibition_section'
+      label: 'Exhibition section'
+      provider: simple_block
+      label_display: '0'
+      region: exhibition
+      weight: 0
+      uuid: 1ef3ec18-882c-4012-8d57-dc7f2ef0fc29
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 8e0dd44c-5a30-4310-8dfb-cd06bbde6e33
+  label: null
+  weight: 0
+  layout: ila_homepage
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-1
+  builder: standard
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

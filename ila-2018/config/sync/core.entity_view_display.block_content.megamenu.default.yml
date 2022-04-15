@@ -1,0 +1,118 @@
+uuid: a867834d-b2b1-42fe-86ca-e2f37d54d617
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.megamenu
+    - field.field.block_content.megamenu.field_block_1
+    - field.field.block_content.megamenu.field_block_2
+    - field.field.block_content.megamenu.field_block_3
+    - field.field.block_content.megamenu.field_block_4
+  module:
+    - block_field
+    - field_group
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_tab_1
+        - group_tab
+        - group_tab_
+        - group_tab_4
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        label: Tabs
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Tabs
+      region: content
+    group_tab_1:
+      children:
+        - field_block_1
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Tab 1'
+      region: content
+    group_tab:
+      children:
+        - field_block_2
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Tab 2'
+      region: content
+    group_tab_:
+      children:
+        - field_block_3
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Tab 3'
+      region: content
+    group_tab_4:
+      children:
+        - field_block_4
+      parent_name: group_tabs
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Tab 4'
+      region: content
+id: block_content.megamenu.default
+targetEntityType: block_content
+bundle: megamenu
+mode: default
+content:
+  field_block_1:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_block_2:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_block_3:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_block_4:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden:
+  langcode: true

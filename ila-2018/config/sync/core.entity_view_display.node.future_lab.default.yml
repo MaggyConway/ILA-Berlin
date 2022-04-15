@@ -1,0 +1,106 @@
+uuid: 6125ee8e-80eb-4c44-82d6-bb16dae43df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.future_lab.body
+    - field.field.node.future_lab.field_fl_header_image
+    - field.field.node.future_lab.field_node_metatag
+    - field.field.node.future_lab.field_paragraph_reference
+    - field.field.node.future_lab.field_show_header
+    - node.type.future_lab
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - metatag
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: null
+    regions:
+      content:
+        - field_show_header
+        - field_fl_header_image
+        - group_header
+        - node_title
+        - field_paragraph_reference
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+  field_group:
+    group_header:
+      children:
+        - field_fl_header_image
+        - node_title
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Header
+      region: content
+id: node.future_lab.default
+targetEntityType: node
+bundle: future_lab
+mode: default
+content:
+  field_fl_header_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: fl_header_image
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_node_metatag:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_paragraph_reference:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_show_header:
+    type: boolean
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

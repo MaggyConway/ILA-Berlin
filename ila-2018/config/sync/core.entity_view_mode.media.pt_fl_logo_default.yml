@@ -1,0 +1,10 @@
+uuid: efc68565-d995-4b14-a4b0-0781b6133dcc
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_fl_logo_default
+label: 'PT FL Logo: Default'
+targetEntityType: media
+cache: true

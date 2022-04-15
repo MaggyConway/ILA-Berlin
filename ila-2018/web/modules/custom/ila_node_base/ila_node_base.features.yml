@@ -1,0 +1,4 @@
+excluded:
+  - views.view.sections
+  - field.field.node.downloads.field_image
+required: true

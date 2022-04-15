@@ -1,0 +1,17 @@
+name: Homepage
+description: 'Homepage layout and configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - ila_node_base
+  - ila_node_facts
+  - ila_node_news
+  - ila_node_section
+  - node
+  - page_manager
+  - panels
+  - user
+  - views
+  - views_infinite_scroll
+package: ILA

@@ -1,0 +1,18 @@
+uuid: 15ae1bee-4dc6-4042-ba0e-545f53ee9949
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_attendee_registration_block
+id: conference_registration
+label: 'Conference registration'
+description: ''
+use_admin_theme: false
+path: '/conference/{node_id}/attendee/register'
+access_logic: and
+access_conditions:
+  -
+    id: existence_conference
+    negate: false
+    context_mapping: {  }
+parameters: {  }

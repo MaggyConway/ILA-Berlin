@@ -1,0 +1,7 @@
+name: Back to top link
+description: 'Block with "Back to top" link'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block
+package: 'ILA'

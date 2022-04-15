@@ -1,0 +1,23 @@
+uuid: 22581614-63b3-4079-b7d1-a4bf1055a84d
+langcode: de
+status: true
+dependencies:
+  module:
+    - ila_core
+  theme:
+    - ila_career_center
+_core:
+  default_config_hash: _AiI54bxbXLSy9eMXrBBGJJIiZkjkvGKLHToSQq3OO8
+id: ila_career_center_language_switcher_full
+theme: ila_career_center
+region: header_top_main_nav
+weight: -10
+provider: null
+plugin: 'ila_language_block:language_interface'
+settings:
+  id: 'ila_language_block:language_interface'
+  label: 'Language switcher (Full names)'
+  provider: ila_core
+  label_display: '0'
+  links_labels: full
+visibility: {  }

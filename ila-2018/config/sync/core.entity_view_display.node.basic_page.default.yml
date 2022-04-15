@@ -1,0 +1,93 @@
+uuid: a41b8b3f-7e53-4f90-b38d-e00e173110db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic_page.field_node_metatag
+    - field.field.node.basic_page.field_paragraphs
+    - field.field.node.basic_page.field_parallax_background
+    - field.field.node.basic_page.field_style
+    - field.field.node.basic_page.field_sub_title
+    - field.field.node.basic_page.field_yoast_seo
+    - node.type.basic_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: null
+    regions:
+      content:
+        - node_title
+        - field_sub_title
+        - group_subtitle_wrapper
+        - field_paragraphs
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+  field_group:
+    group_subtitle_wrapper:
+      children:
+        - field_sub_title
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: subtitle-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'subtitle wrapper'
+      region: content
+_core:
+  default_config_hash: raaXBrrtQCfM5HmVBbBGUkLFEspVSpnCA2vaIJ52YYE
+id: node.basic_page.default
+targetEntityType: node
+bundle: basic_page
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sub_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  addtoany: true
+  field_node_metatag: true
+  field_parallax_background: true
+  field_style: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

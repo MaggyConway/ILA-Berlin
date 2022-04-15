@@ -1,0 +1,5 @@
+entity.attendee_registration.add_form:
+  route_name: entity.attendee_registration.add_form
+  title: 'Add Attendee registration'
+  appears_on:
+    - entity.attendee_registration.collection

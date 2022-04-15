@@ -1,0 +1,226 @@
+.path-node .layout-content .field--type-text-with-summary {
+  column-count: 2;
+  margin-bottom: 55px;
+
+  @media screen and (max-width: 768px) {
+    column-count: 1;
+  }
+}
+.news__links-group {
+  display: flex;
+  border-top: 1px solid $c-blue-normal;
+  border-bottom: 1px solid $c-blue-normal;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  > .field {
+    width: 50%;
+    margin-bottom: 10px;
+    color: $c-blue;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    &__label {
+      text-transform: uppercase;
+    }
+    .field__items {
+      margin-left: 25px;
+      >.field__item {
+        position: relative;
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: -25px;
+          transform: translateY(-50%);
+          height: 3px;
+          width: 3px;
+          border-radius: 50%;
+          background-color: $c-black;
+          content: '';
+        }
+      }
+    }
+  }
+
+  .field--name-field-file-private {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .field--type-ds {
+    display: inline-block;
+    color: $c-black;
+
+    &:before {
+      content: '//';
+      margin-right: 10px;
+    }
+    p {
+      display: inline-block;
+    }
+  }
+}
+#news--carousel,
+.slick--optionset--news.slick--main{
+  position: relative;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  .slick__slide {
+    .image-style-carousel {
+      min-width: 100%;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: auto;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    transition: .2s;
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+    outline: none;
+
+    &.slick-prev {
+      left: 0;
+      background: url(../img/svg/prev.png) no-repeat center;
+      &:hover,
+      &:focus {
+        left: 10px;
+      }
+    }
+
+    &.slick-next {
+      right: 0;
+      background: url(../img/svg/next.png) no-repeat center;
+      &:hover,
+      &:focus {
+        right: 10px;
+      }
+    }
+  }
+}
+#news--thumbnails,
+.slick--optionset--news-thumbnails.slick--thumbnail{
+  margin-bottom: 50px;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .slick-list {
+    padding: 0 !important;
+  }
+
+  .slick__slide {
+    padding: 10px;
+    outline: none;
+    max-width: 115px;
+
+    > .views-field-field-images,
+    > .views-field-field-media-images,
+    > .field--name-field-media-image,
+    > .field-item {
+      position: relative;
+      box-shadow: none;
+      transition: .3s;
+      height: 0;
+      padding-top: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &.slick-current {
+      > .field-item {
+        box-shadow: 0 5px 10px -4px $c-black;
+        transform: translateY(-5px);
+      }
+    }
+    .image-style-carousel-thumbnail {
+      @include absolute-center;
+      @include element-100;
+    }
+  }
+}
+.field--name-ila-prev-next {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $c-blue-normal;
+  border-bottom: 1px solid $c-blue-normal;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.paragraph--type--text {
+  margin-bottom: 100px;
+}
+.paragraph--type--two-column-text {
+  display: flex;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  .field--type-text-long {
+    width: 50%;
+    h4 {
+      @extend .h5;
+      max-width: 420px;
+    }
+
+    + .field-type-text-long {
+      margin-left: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .field--name-field-left-column {
+    padding-right: 10px;
+    @media #{$m-to-m} {
+      padding-right: 0;
+    }
+  }
+
+  .field--name-field-right-column {
+    padding-left: 10px;
+    @media #{$m-to-m} {
+      padding-left: 0;
+    }
+  }
+}
+
+.path-frontpage {
+  .layout--homepage {
+    .block-block-content-image {
+      img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+}

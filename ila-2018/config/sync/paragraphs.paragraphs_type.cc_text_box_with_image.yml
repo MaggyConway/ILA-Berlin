@@ -1,0 +1,9 @@
+uuid: f2bef38f-dc6f-41c1-a58a-f2646393e8c7
+langcode: en
+status: true
+dependencies: {  }
+id: cc_text_box_with_image
+label: 'CareerCenter -- Text box with image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chalet_rental_fee_excludin
+    - node.type.reqest_b
+id: node.reqest_b.field_chalet_rental_fee_excludin
+field_name: field_chalet_rental_fee_excludin
+entity_type: node
+bundle: reqest_b
+label: 'Chalet rental fee'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: request_b_chalets
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

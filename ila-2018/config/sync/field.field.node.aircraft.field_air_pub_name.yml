@@ -1,0 +1,19 @@
+uuid: ed6248cf-b297-4258-8ff6-4699bce7e07c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_air_pub_name
+    - node.type.aircraft
+id: node.aircraft.field_air_pub_name
+field_name: field_air_pub_name
+entity_type: node
+bundle: aircraft
+label: 'pub name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

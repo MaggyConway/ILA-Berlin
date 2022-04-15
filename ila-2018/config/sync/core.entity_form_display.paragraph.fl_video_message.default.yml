@@ -1,0 +1,52 @@
+uuid: 4173c9e3-ac0b-417c-90f0-c7427fc536ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.video_entity_browser
+    - field.field.paragraph.fl_video_message.field_media_reference
+    - field.field.paragraph.fl_video_message.field_subtitle
+    - field.field.paragraph.fl_video_message.field_title
+    - paragraphs.paragraphs_type.fl_video_message
+  module:
+    - entity_browser
+id: paragraph.fl_video_message.default
+targetEntityType: paragraph
+bundle: fl_video_message
+mode: default
+content:
+  field_media_reference:
+    weight: 0
+    settings:
+      entity_browser: video_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: media_library
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_subtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

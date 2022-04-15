@@ -1,0 +1,206 @@
+<?php
+
+/**
+ * @file
+ * Custom theme prerpocessors and etc.
+ */
+
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Implements hook_preprocess_layout().
+ */
+function ila_future_lab_preprocess_layout(array &$variables) {
+  // Add '{entity_type}--type-{entity_bundle}' class to the the layout template.
+  if (!isset($variables['content']['#entity'], $variables['content']['#entity_type'])) {
+    return;
+  }
+
+  $entity = $variables['content']['#entity'];
+  $entity_type = $variables['content']['#entity_type'];
+  $entity_bundle = str_replace('_', '-', $entity->bundle());
+
+  if ($entity_type === 'paragraph') {
+    $entity_bundle = '-' . $entity_bundle;
+  }
+
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+  $variables['attributes']['class'][] = $entity_type . '--type-' . $entity_bundle;
+  if ($entity->hasField('field_cc_anchor')) {
+    if (!$entity->field_cc_anchor->isEmpty()) {
+      $variables['attributes']['id'][] = trim($entity->field_cc_anchor->value);
+    }
+  }
+
+  if ($entity->hasField('field_show_header')) {
+    if ($entity->field_show_header->value == '1') {
+      $variables['show_header'] = true;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_future_lab_preprocess_menu__section_nodes_menu(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    if (!isset($item['url'])) {
+      continue;
+    }
+    $url_attributes = $item['url']->getOption('attributes');
+    if (isset($url_attributes['class'])) {
+      $item['attributes']->addClass($url_attributes['class']);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function ila_future_lab_preprocess_paragraph(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->hasField('field_cc_anchor')) {
+    if (!$paragraph->field_cc_anchor->isEmpty()) {
+      $variables['attributes']['id'][] = trim($paragraph->field_cc_anchor->value);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_future_lab_preprocess_paragraph__fl_header_element__default(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->hasField('field_cc_svg_tag_snippet')) {
+    return;
+  }
+  if (!$field_value = $paragraph->get('field_cc_svg_tag_snippet')->getValue()) {
+    return;
+  }
+  if ($paragraph->hasField('field_media_reference') && $media = $paragraph->field_media_reference->entity) {
+    $config = $media->getSource()->getConfiguration();
+    $source = $config['source_field'];
+    if ($source && $media->{$source}) {
+      if (!is_null($media->get($source)->getValue())) {
+        $field_image_values = $media->get($source)->getValue();
+        $variables['alt'] = $field_image_values[0]['alt'];
+        $variables['title'] = $field_image_values[0]['title'];
+      }
+      if ($file_entity = $media->{$source}->entity) {
+        $uri = $file_entity->getFileUri();
+        if ($style = \Drupal::entityTypeManager()->getStorage('image_style')->load('pt_fl_header_element_default')) {
+          $effects_conf = $style->getEffects()->getConfiguration();
+          $variables['image_banner_width'] = _ila_future_lab_search_key('width', $effects_conf);
+          $variables['image_banner_height'] = _ila_future_lab_search_key('height', $effects_conf );
+          $variables['image_banner_url'] = $style->buildUrl($uri);
+        }
+      }
+    }
+  }
+  $svg_snippet = [];
+  foreach ($field_value as $key => $paragraph_item) {
+    $paragraph_entity = Paragraph::load($paragraph_item['target_id']);
+
+    if (!$paragraph_entity) {
+      continue;
+    }
+    if (!$paragraph_entity->hasField('field_cc_svg_snippet') || !$field_cc_svg_snippet = $paragraph_entity->get('field_cc_svg_snippet')->getValue()[0]['value']) {
+      continue;
+    }
+    $svg_snippet[$key] = $field_cc_svg_snippet;
+  }
+  $variables['svg_snippets'] = $svg_snippet;
+}
+
+/**
+ * Helper function to find settings.
+ *
+ * @param string $searchKey
+ *   Setting name.
+ * @param array $arr
+ *   Array.
+ * @param array $result
+ *   Result array.
+ *
+ * @return array
+ *   Return result array.
+ */
+function _ila_future_lab_search_key($searchKey, array $arr, array &$result = []) {
+  if (isset($arr[$searchKey])) {
+    $result[$searchKey] = $arr[$searchKey];
+  }
+  foreach ($arr as $param) {
+    if (is_array($param)) {
+      _ila_future_lab_search_key($searchKey, $param, $result);
+    }
+  }
+
+  return $result;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_future_lab_preprocess_paragraph__fl_video_box_container__default(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->hasField('field_paragraph_reference')) {
+    return;
+  }
+  if (!$field_value = $paragraph->get('field_paragraph_reference')->getValue()) {
+    return;
+  }
+  $video_box_titles = [];
+  foreach ($field_value as $key => $paragraph_item) {
+    $paragraph_entity = Paragraph::load($paragraph_item['target_id']);
+
+    if (!$paragraph_entity) {
+      continue;
+    }
+    if (!$paragraph_entity->hasField('field_title') || !$field_title = $paragraph_entity->get('field_title')->getValue()[0]['value']) {
+      continue;
+    }
+    $video_box_titles[$key] = $field_title;
+  }
+  $variables['video_box_titles'] = $video_box_titles;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ila_future_lab_preprocess_paragraph__fl_box__default(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->hasField('field_background_image_bool')) {
+    return;
+  }
+  if (!$field_value = $paragraph->get('field_background_image_bool')->getValue()[0]['value']) {
+    return;
+  }
+  else {
+     $variables['attributes']['class'][] = 'graphic-background-enabled';
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph__text_boxes().
+ */
+function ila_future_lab_preprocess_paragraph__fl_dynamic_block(array &$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->hasField('field_view_reference')) {
+    return;
+  }
+  if (!$field_value = $paragraph->get('field_view_reference')->getValue()) {
+    return;
+  }
+
+  if (!isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+
+  foreach ($field_value as $view_info) {
+    if (isset($view_info['display_id']) && !empty($view_info['display_id']) && isset($view_info['target_id']) && !empty($view_info['target_id'])) {
+      $variables['attributes']['class'][] = 'paragraph-dynamic-block--' . $view_info['target_id'] . '--' . $view_info['display_id'];
+    }
+  }
+}

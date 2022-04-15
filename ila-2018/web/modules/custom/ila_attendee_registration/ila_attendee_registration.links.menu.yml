@@ -1,0 +1,15 @@
+
+# Attendee registration menu items definition
+entity.attendee_registration.collection:
+  title: 'Attendee registration list'
+  route_name: entity.attendee_registration.collection
+  description: 'List Attendee registration entities'
+  parent: system.admin_content
+  weight: 100
+
+attendee_registration.admin.structure.settings:
+  title: Attendee registration settings
+  description: 'Configure Attendee registration entities'
+  route_name: attendee_registration.settings
+  parent: system.admin_structure
+  weight: 100

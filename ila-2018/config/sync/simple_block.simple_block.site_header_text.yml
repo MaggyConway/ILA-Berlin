@@ -1,0 +1,11 @@
+uuid: 350775bd-fba8-4631-b184-2f52c4c2bad3
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: site_header_text
+title: 'Site header - Text'
+content:
+  value: "<div class=\"field--type-text-with-summary\"><strong>ILA Berlin </strong>| 22 - 26 June 2022</div>\r\n"
+  format: full_html

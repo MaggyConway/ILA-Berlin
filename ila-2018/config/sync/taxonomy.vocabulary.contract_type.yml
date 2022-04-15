@@ -1,0 +1,8 @@
+uuid: 59650e4e-78e3-40cd-8d30-d602fe98b4f2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Contract type'
+vid: contract_type
+description: 'The taxonomy which using in the content type Job Offer'
+weight: 0

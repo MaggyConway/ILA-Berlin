@@ -1,0 +1,18 @@
+uuid: 1aee1c51-796d-45f9-814b-dc8c9e0f0ae9
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_block_reference
+id: paragraph.cc_block_reference.created
+field_name: created
+entity_type: paragraph
+bundle: cc_block_reference
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,11 @@
+id: add_to_calendar_node_conference
+label: 'Add to my Calendar (Node Conference)'
+ui_limit: 'conference|*'
+properties:
+  content:
+    value: "<p><a href=\"/ila-download-node-ics/field_co_date_and_time/[node:nid]\">Add to my calendar</a></p>\r\n"
+    format: full_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

@@ -1,0 +1,10 @@
+uuid: 99667cf7-5e4e-4eb4-8c85-64da14d11cca
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.section_accordion
+label: 'Section Accordion'
+targetEntityType: media
+cache: true

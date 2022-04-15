@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_d_individual_des
+    - node.type.request_d
+  module:
+    - markup
+id: node.request_d.field_request_d_individual_des
+field_name: field_request_d_individual_des
+entity_type: node
+bundle: request_d
+label: 'The form for the individual design of your stand can be downloaded here.'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>The form for the individual design of your stand can be downloaded here.</p>\r\n"
+    format: full_html
+field_type: markup

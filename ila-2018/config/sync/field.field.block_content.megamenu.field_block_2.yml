@@ -1,0 +1,24 @@
+uuid: 4088a79d-d82d-4f68-8882-b6d56933d359
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.megamenu
+    - field.storage.block_content.field_block_2
+  module:
+    - block_field
+id: block_content.megamenu.field_block_2
+field_name: field_block_2
+entity_type: block_content
+bundle: megamenu
+label: 'Block 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

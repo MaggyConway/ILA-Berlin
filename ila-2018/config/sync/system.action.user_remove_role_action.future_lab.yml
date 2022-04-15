@@ -1,0 +1,14 @@
+uuid: 05ca393c-5a93-48d9-8b43-bd2e285b87bd
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.future_lab
+  module:
+    - user
+id: user_remove_role_action.future_lab
+label: 'Remove the Future Lab role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: future_lab

@@ -1,0 +1,21 @@
+global-styling:
+  css:
+    component:
+      vendor/font-awesome/css/font-awesome.min.css: {}
+      dist/css/main.css: {}
+      vendor/aos.css: {}
+    theme:
+      'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i,900': { type: external }
+      'https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:300,400,500,600,700,800,900': { type: external }
+  js:
+    vendor/drupal.bootstrap.js: {}
+    dist/js/main.js: {}
+    vendor/parallax.min.js: {}
+    vendor/masonry.pkgd.min.js: {}
+    vendor/jquery.matchHeight-min.js: {}
+    vendor/countUp.min.js: {}
+    vendor/jcf.js: {}
+    vendor/jcf.checkbox.js: {}
+    vendor/jquery.countdown.min.js: {}
+    vendor/lottie.min.js: {}
+    vendor/aos.js: {}

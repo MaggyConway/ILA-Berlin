@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Suchen
+      fields:
+        field_ev_venue:
+          label: Ort
+        field_co_location:
+          label: Ort
+        field_date_and_time_1:
+          label: 'Datum // Uhrzeit'
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Suche
+      header:
+        area_text_custom:
+          content: "<div class=\"conference-filters\">\r\n<a href=\"#\" class=\"link-history-back\">Zurück</a>\r\n<a href=\"#\" class=\"filter-open-btn\">Filter öffnen</a>\r\n</div>"
+      empty:
+        area_text_custom:
+          content: "<h3>Leider wurden keine Events gefunden.</h3>\r\n<p>Öffnen Sie den Filter und klicken Sie auf <b>zurücksetzen</b>, um die Event Übersicht zu sehen.</p>"

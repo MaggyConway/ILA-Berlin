@@ -1,0 +1,8 @@
+name: 'IlA postal code'
+type: module
+description: 'This module makes all postal codes required'
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - address
+  - field

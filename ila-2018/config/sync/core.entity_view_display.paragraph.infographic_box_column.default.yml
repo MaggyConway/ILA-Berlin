@@ -1,0 +1,114 @@
+uuid: 639bac3a-9a25-44e9-bad8-df404ee8b908
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infographic_box_column.field_infographic_column_body
+    - field.field.paragraph.infographic_box_column.field_infographic_column_image
+    - field.field.paragraph.infographic_box_column.field_infographic_column_media
+    - field.field.paragraph.infographic_box_column.field_infographic_column_title
+    - image.style.original_image
+    - paragraphs.paragraphs_type.infographic_box_column
+  module:
+    - ds
+    - svg_image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_infographic_column_title
+        - field_infographic_column_body
+        - field_infographic_column_image
+        - field_infographic_column_media
+id: paragraph.infographic_box_column.default
+targetEntityType: paragraph
+bundle: infographic_box_column
+mode: default
+content:
+  field_infographic_column_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_infographic_column_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: original_image
+      image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_infographic_column_media:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_infographic_column_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: 'field field--name-field-infographic-column-title field--type-string field--label-hidden field__item'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+hidden: {  }

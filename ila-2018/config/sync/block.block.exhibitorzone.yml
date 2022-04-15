@@ -1,0 +1,25 @@
+uuid: 6928823f-9de5-4060-b140-2fa2a8865255
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:page_description:db072318-f126-4b6f-9015-4dd614530989'
+  module:
+    - block_content
+  theme:
+    - exhibitor_zone
+id: exhibitorzone
+theme: exhibitor_zone
+region: header_left
+weight: 0
+provider: null
+plugin: 'block_content:db072318-f126-4b6f-9015-4dd614530989'
+settings:
+  id: 'block_content:db072318-f126-4b6f-9015-4dd614530989'
+  label: 'Exhibitor zone'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

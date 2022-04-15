@@ -1,0 +1,22 @@
+uuid: 9524e8e5-3853-41e0-9a9b-20dd3955b273
+langcode: de
+status: true
+dependencies:
+  module:
+    - contact_ajax
+third_party_settings:
+  contact_ajax:
+    enabled: true
+    prefix_id: ''
+    render_selector: ''
+    confirmation_type: 4
+    load_clean_form: null
+id: sponsoring_katalog
+label: Sponsoring-Katalog
+recipients:
+  - desiree.danisch@messe-berlin.de
+  - creixell.espilla-gilart@messe-berlin.de
+reply: ''
+weight: 0
+message: 'Vielen Dank für Ihre Nachricht. Wird werden uns zeitnah mit Ihnen in Verbindung setzen.'
+redirect: ''

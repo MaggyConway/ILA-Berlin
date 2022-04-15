@@ -1,0 +1,18 @@
+uuid: 280cd899-ba41-44ec-aecb-6917266cd0fc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: m7t-zOmeNx7wFvhlg0lME-tk4Z3LP-A4uirTyKqprTI
+name: news_teaser
+label: 'News - Teaser (435x280)'
+effects:
+  1c885811-0f1b-4531-8cb7-a2906682cb42:
+    uuid: 1c885811-0f1b-4531-8cb7-a2906682cb42
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 435
+      height: 280
+      anchor: center-center
+pipeline: image_optimiza

@@ -1,0 +1,19 @@
+uuid: 46cb5a2c-2b29-4538-a022-98d686806267
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_sponsors
+    - field.storage.block_content.field_cc_sponsors_second_line
+id: block_content.careercenter_sponsors.field_cc_sponsors_second_line
+field_name: field_cc_sponsors_second_line
+entity_type: block_content
+bundle: careercenter_sponsors
+label: 'Second line'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,124 @@
+uuid: 072b2f10-eca7-4844-bbc7-e2bc0a16b3dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_box.field_background_image_bool
+    - field.field.paragraph.fl_box.field_cc_anchor
+    - field.field.paragraph.fl_box.field_cc_link
+    - field.field.paragraph.fl_box.field_cc_text
+    - field.field.paragraph.fl_box.field_media_reference
+    - field.field.paragraph.fl_box.field_title
+    - paragraphs.paragraphs_type.fl_box
+  module:
+    - ds
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_left:
+      children:
+        - field_title
+        - field_cc_text
+        - field_cc_link
+      parent_name: group_wrapper
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-left
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Left
+      region: content
+    group_right:
+      children:
+        - field_media_reference
+      parent_name: group_wrapper
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-right
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Right
+      region: content
+    group_wrapper:
+      children:
+        - group_left
+        - group_right
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper-main
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrapper
+      region: content
+id: paragraph.fl_box.default
+targetEntityType: paragraph
+bundle: fl_box
+mode: default
+content:
+  field_cc_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cc_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_reference:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: pt_fl_box_default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_background_image_bool: true
+  field_cc_anchor: true

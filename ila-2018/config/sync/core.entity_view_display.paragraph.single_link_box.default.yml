@@ -1,0 +1,27 @@
+uuid: 49fc4918-4113-4d63-9a41-8c17e795c3d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_link_box.field_single_link_box_link
+    - paragraphs.paragraphs_type.single_link_box
+  module:
+    - link
+id: paragraph.single_link_box.default
+targetEntityType: paragraph
+bundle: single_link_box
+mode: default
+content:
+  field_single_link_box_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

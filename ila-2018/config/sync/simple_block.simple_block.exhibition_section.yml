@@ -1,0 +1,11 @@
+uuid: f5f32578-c2cb-4bf7-a7a4-59ee2ae47057
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: exhibition_section
+title: 'Exhibition section'
+content:
+  value: "<div>\r\n<h1><span>ILA 2022</span><span>Neues Hybrid Konzept</span></h1>\r\n<span class=\"text-content\">Von Mittwoch, 22. bis Sonntag, 26. Juni 2022 startet die ILA mit einem neuen hybriden Konzept am Flughafen BER. Mit dem Fokus auf Innovationen, Technologien und Nachhaltigkeit deckt die ILA mit den Bereichen Aviation, Space, Defense &amp; Security und Supplier die gesamte Bandbreite der Luft- und Raumfahrtindustrie ab. Die neue ILA richtet sich an das Fachpublikum und wird der Treffpunkt der internationalen Industrie, Politik, Streitkräfte, Wirtschaft und Wissenschaft sein.</span> <span class=\"text-content-bold\">Die Standanmeldung ist offen – profitieren Sie von 5% Early Bird Rabatt – nur noch bis 30. November 2021</span> <a href=\"\">Zur Aussteller Registrierung</a></div>\r\n"
+  format: full_html

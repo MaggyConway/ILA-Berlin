@@ -1,0 +1,292 @@
+uuid: 96ca65a9-fe46-43d1-a11d-baaccda254b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_categories
+    - field.field.node.news.field_cc_news
+    - field.field.node.news.field_city
+    - field.field.node.news.field_date_range
+    - field.field.node.news.field_downloads
+    - field.field.node.news.field_images
+    - field.field.node.news.field_links
+    - field.field.node.news.field_media_images
+    - field.field.node.news.field_media_teaser_image
+    - field.field.node.news.field_news_ausstellar_highlight
+    - field.field.node.news.field_node_metatag
+    - field.field.node.news.field_paragraphs
+    - field.field.node.news.field_sub_title
+    - field.field.node.news.field_teaser_text
+    - field.field.node.news.field_yoast_seo
+    - image.style.carousel
+    - image.style.carousel_thumbnail
+    - node.type.news
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - slick
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_publication_data:
+      children:
+        - 'dynamic_token_field:node-creation_date_with_location_news'
+        - field_city
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__publication-data
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Publication data'
+      region: content
+    group_links_group:
+      children: {  }
+      parent_name: ''
+      weight: 30
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: news__links-group
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Links group'
+      region: hidden
+    group_images:
+      children:
+        - field_media_images
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Images
+      region: content
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - field_media_images
+        - group_publication_data
+        - field_sub_title
+        - body
+        - group_images
+        - field_paragraphs
+        - ila_prev_next
+        - 'dynamic_token_field:node-creation_date_with_location_news'
+        - field_city
+    fields:
+      ila_prev_next:
+        plugin_id: ila_prev_next
+        weight: 6
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-creation_date_with_location_news':
+        plugin_id: 'dynamic_token_field:node-creation_date_with_location_news'
+        weight: 29
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+_core:
+  default_config_hash: I25oXbn8IiHmySx_4jEfJtVMZKFG9GNP8z_Q1CK9yiw
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_city:
+    type: entity_reference_label
+    weight: 30
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_media_images:
+    type: slick_media
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      optionset: news
+      optionset_thumbnail: news_thumbnails
+      skin: ''
+      skin_thumbnail: ''
+      image_style: carousel
+      thumbnail_style: carousel_thumbnail
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: rendered
+      box_style: ''
+      box_media_style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      view_mode: ct_news_default
+      ratio: ''
+      image: field_media_image
+      title: ''
+      link: ''
+      layout: ''
+      thumbnail_caption: ''
+      class: ''
+      cache: 0
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      vanilla: false
+      background: false
+      caption:
+        field_cc_logo_wall: '0'
+        field_logo_conf_host: '0'
+        field_media_image: '0'
+        field_url: '0'
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      preserve_keys: false
+      visible_items: 0
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+      icon: ''
+      responsive_image_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      id: ''
+      overlay: ''
+      use_theme_field: false
+      fx: ''
+      _uri: ''
+      sizes: ''
+      grid_header: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_sub_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  sharing_buttons:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_categories: true
+  field_cc_news: true
+  field_date_range: true
+  field_downloads: true
+  field_images: true
+  field_links: true
+  field_media_teaser_image: true
+  field_news_ausstellar_highlight: true
+  field_node_metatag: true
+  field_teaser_text: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

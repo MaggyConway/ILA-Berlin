@@ -1,0 +1,17 @@
+hash_expiration: 86400
+restrict_same_ip: false
+resendrequest_delay: 900
+confirmation_lifetime: 604800
+confirmation_request:
+  subject: 'Request for confirmation of email address from [site:name]'
+  body: "Thank you for your interest in registering for ILA Berlin 2018.\r\n \r\nPlease confirm the validity of your email address by clicking on the following link:\r\n\r\n[email-confirmer:confirmation-url]\r\n \r\nThe confirmation is required to prevent third-party registration. \r\n\r\n\r\n--\r\nYour team of ILA Berlin\r\nMesse Berlin GmbH\r\nMessedamm 22\r\n14055 Berlin, Germany\r\n\r\nPhone +49 30 3038 2153\r\nFax +49 30 3038 2053\r\nE-Mail exhibitor@ila-berlin.de\r\nwww.ila-berlin.de\r\n\r\nManagement board: Dr. Christian Göke (CEO), Dirk Hoffmann (CFO)\r\nChairman of the supervisory board: Wolf-Dieter Wolf\r\nDistrict Court: Amtsgericht Charlottenburg, HRB 5484 B (Commercial Code)"
+confirmation_response:
+  questions:
+    pending: 'Proceed to confirm your email address.'
+    expired: 'This email confirmation process has expired.'
+    cancelled: 'This email confirmation process was cancelled.'
+    confirmed: 'Your email address was confirmed.'
+  url:
+    confirm: ''
+    cancel: ''
+    error: ''

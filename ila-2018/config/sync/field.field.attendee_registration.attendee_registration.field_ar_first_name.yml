@@ -1,0 +1,20 @@
+uuid: 8bac396e-620c-406d-8b9f-d631c4859f82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.attendee_registration.field_ar_first_name
+  module:
+    - ila_attendee_registration
+id: attendee_registration.attendee_registration.field_ar_first_name
+field_name: field_ar_first_name
+entity_type: attendee_registration
+bundle: attendee_registration
+label: 'First name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

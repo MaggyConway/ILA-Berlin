@@ -1,0 +1,64 @@
+uuid: c1f49cb5-d451-4477-8d95-90599ec8d197
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_box_container.field_link_box_text
+    - field.field.paragraph.link_box_container.field_link_boxes_ref
+    - field.field.paragraph.link_box_container.field_link_boxes_title
+    - paragraphs.paragraphs_type.link_box_container
+  module:
+    - paragraphs_browser
+    - text
+id: paragraph.link_box_container.default
+targetEntityType: paragraph
+bundle: link_box_container
+mode: default
+content:
+  field_link_box_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_link_boxes_ref:
+    type: paragraphs_browser
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: link_box
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: _na
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+    region: content
+  field_link_boxes_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

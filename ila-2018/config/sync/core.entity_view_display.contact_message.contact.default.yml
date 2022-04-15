@@ -1,0 +1,61 @@
+uuid: d27b6a68-cda2-4072-b86e-a28edb758560
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.field.contact_message.contact.field_company
+    - field.field.contact_message.contact.field_last_name
+    - field.field.contact_message.contact.field_subject
+    - field.field.contact_message.contact.field_surname
+    - field.field.contact_message.contact.field_telephone
+_core:
+  default_config_hash: SsXSgonr3xXP3ykqBMDLCP8EoWRMLw7LZNzxsBKq2ww
+id: contact_message.contact.default
+targetEntityType: contact_message
+bundle: contact
+mode: default
+content:
+  field_company:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_surname:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_subject: true
+  langcode: true
+  message: true

@@ -1,0 +1,31 @@
+uuid: 6247787d-b04b-4704-8eb0-d0b1b4ea6b3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - ila_partial_validation
+    - user
+_core:
+  default_config_hash: EmlvIOlLi9qoBcLlSGJsh-eZAHPVma1Z5GuIZBmahZM
+id: request_e
+label: 'Request E'
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/request_e
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: current_user
+  -
+    id: main_exhibitor
+    negate: false
+    context_mapping: {  }
+parameters: {  }

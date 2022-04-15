@@ -1,0 +1,15 @@
+name: ILA Exhibitor Zone
+type: theme
+description: Custom sub theme of bootstrap
+core_version_requirement: ^8 || ^9
+base theme: bootstrap
+libraries:
+  - exhibitor_zone/global-styling
+# Regions
+regions:
+  header_left: Header Left
+  header_right: Header Right
+  highlighted: Highlighted
+  sidebar_first: Sidebar
+  content: Content
+  sticky: Sticky

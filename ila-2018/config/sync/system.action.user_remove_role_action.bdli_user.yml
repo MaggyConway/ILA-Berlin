@@ -1,0 +1,14 @@
+uuid: 02532e5a-265a-4351-b9c8-09849355d74b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bdli_user
+  module:
+    - user
+id: user_remove_role_action.bdli_user
+label: 'Remove the BDLI User role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bdli_user

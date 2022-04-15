@@ -1,0 +1,7 @@
+role_to_select:
+  main_exhibitor: main_exhibitor
+  editor: 0
+  press: 0
+  ila_admin: 0
+_core:
+  default_config_hash: t_8BAE6FT4QWQHV7U-LybyU4R_CpoYF8JQ_QsNPfUnA

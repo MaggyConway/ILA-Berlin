@@ -1,0 +1,45 @@
+uuid: 8bb15590-315e-4b74-965c-933e3129fff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_external
+    - paragraphs.paragraphs_type.video
+  module:
+    - filefield_paths
+    - video
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: ''
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+id: paragraph.video.field_video_external
+field_name: field_video_external
+entity_type: paragraph
+bundle: video
+label: 'Video external'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

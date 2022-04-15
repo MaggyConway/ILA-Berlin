@@ -1,0 +1,10 @@
+uuid: 668a0ad2-88c8-4ff5-8b96-ce73bbed71d3
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.partner
+label: Partner
+targetEntityType: media
+cache: true

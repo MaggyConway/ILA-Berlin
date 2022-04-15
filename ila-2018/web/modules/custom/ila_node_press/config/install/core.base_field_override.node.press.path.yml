@@ -1,0 +1,19 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.press
+  module:
+    - path
+id: node.press.path
+field_name: path
+entity_type: node
+bundle: press
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

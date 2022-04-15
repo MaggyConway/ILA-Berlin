@@ -1,0 +1,20 @@
+uuid: ef3acb45-492c-4c68-a509-5954b53e4744
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_categories
+_core:
+  default_config_hash: gYHYWO7wQeeZdMPRBStCZYxDglL1Vf4iVtthLtYk9vQ
+id: taxonomy_term.media_categories.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: media_categories
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

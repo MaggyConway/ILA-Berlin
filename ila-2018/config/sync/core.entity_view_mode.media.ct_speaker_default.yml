@@ -1,0 +1,10 @@
+uuid: 7bd5489e-ad03-4d15-8d8f-ba8c412c5e84
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_speaker_default
+label: 'CT Speaker: Default'
+targetEntityType: media
+cache: true

@@ -1,0 +1,37 @@
+uuid: 4326e2ae-157a-40c8-bbbd-cfeed485936f
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: general
+label: General
+description: ''
+matchers:
+  45463ff4-6cb0-46fa-989f-13aa6b3d398c:
+    uuid: 45463ff4-6cb0-46fa-989f-13aa6b3d398c
+    id: 'entity:node'
+    weight: 0
+    settings:
+      bundles:
+        basic_page: basic_page
+        news: news
+        section: section
+      group_by_bundle: false
+      include_unpublished: false
+      substitution_type: canonical
+      metadata: ''
+  45dba203-6607-43aa-a065-6e4d384d0850:
+    uuid: 45dba203-6607-43aa-a065-6e4d384d0850
+    id: 'entity:file'
+    weight: 0
+    settings:
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: false
+        show_thumbnail: false
+        thumbnail_image_style: null
+      substitution_type: file
+      metadata: Files

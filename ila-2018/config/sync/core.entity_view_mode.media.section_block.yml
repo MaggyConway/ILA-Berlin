@@ -1,0 +1,10 @@
+uuid: edd36e01-c6df-4bf6-baa6-53b6a0e9333a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.section_block
+label: 'Section block'
+targetEntityType: media
+cache: true

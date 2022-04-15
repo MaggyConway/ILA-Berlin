@@ -1,0 +1,7 @@
+ila_send_mail_individual_user.settings:
+  path: '/admin/config/system/conference-settings'
+  defaults:
+    _form: '\Drupal\ila_send_mail_individual_user\Form\IlaSendMailSettingsForm'
+    _title:  'Conference settings'
+  requirements:
+    _permission: 'administer site configuration'

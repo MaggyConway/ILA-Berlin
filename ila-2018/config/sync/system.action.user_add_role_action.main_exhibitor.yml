@@ -1,0 +1,14 @@
+uuid: 3c053a29-36eb-4cfb-85cd-1a58e7602a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.main_exhibitor
+  module:
+    - user
+id: user_add_role_action.main_exhibitor
+label: 'Add the Main Exhibitor role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: main_exhibitor

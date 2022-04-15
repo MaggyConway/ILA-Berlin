@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_fb1_type_of_partic
+    - node.type.request_fb_1
+  module:
+    - options
+id: node.request_fb_1.field_request_fb1_type_of_partic
+field_name: field_request_fb1_type_of_partic
+entity_type: node
+bundle: request_fb_1
+label: 'Type of participation during ILA'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

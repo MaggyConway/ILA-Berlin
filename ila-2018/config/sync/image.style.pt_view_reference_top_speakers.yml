@@ -1,0 +1,16 @@
+uuid: da25dc06-d2bb-4f95-a6be-fdc2742493c5
+langcode: en
+status: true
+dependencies: {  }
+name: pt_view_reference_top_speakers
+label: 'PT View reference: Top speakers'
+effects:
+  f7e2987f-2ef9-4745-893c-4d98854a4153:
+    uuid: f7e2987f-2ef9-4745-893c-4d98854a4153
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 155
+      height: 155
+      anchor: center-center
+pipeline: image_optimiza

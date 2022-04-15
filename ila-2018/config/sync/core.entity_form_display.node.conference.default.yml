@@ -1,0 +1,371 @@
+uuid: 21a1f046-132c-4b23-a4b5-67e33e9bdb54
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.conference.field_co_add_to_my_calendar
+    - field.field.node.conference.field_co_category
+    - field.field.node.conference.field_co_conference_languages
+    - field.field.node.conference.field_co_conference_type
+    - field.field.node.conference.field_co_contact_person
+    - field.field.node.conference.field_co_contact_registration
+    - field.field.node.conference.field_co_date
+    - field.field.node.conference.field_co_date_and_time
+    - field.field.node.conference.field_co_downloads
+    - field.field.node.conference.field_co_enable_registration
+    - field.field.node.conference.field_co_fee
+    - field.field.node.conference.field_co_host
+    - field.field.node.conference.field_co_invitation_only
+    - field.field.node.conference.field_co_location
+    - field.field.node.conference.field_co_logos
+    - field.field.node.conference.field_co_more_info
+    - field.field.node.conference.field_co_programm
+    - field.field.node.conference.field_co_registration_on_conf
+    - field.field.node.conference.field_co_slideshow
+    - field.field.node.conference.field_co_teaser_text
+    - field.field.node.conference.field_co_top_conference
+    - field.field.node.conference.field_date_and_time
+    - field.field.node.conference.field_event_category
+    - field.field.node.conference.field_node_metatag
+    - field.field.node.conference.field_speakers
+    - field.field.node.conference.field_topic
+    - field.field.node.conference.field_yoast_seo
+    - image.style.thumbnail
+    - node.type.conference
+  module:
+    - addtocalendar
+    - conditional_fields
+    - datetime_range
+    - field_group
+    - ila_optional_link
+    - inline_entity_form
+    - metatag
+    - paragraphs
+    - path
+    - svg_image
+    - text
+    - yoast_seo
+third_party_settings:
+  field_group:
+    group_co_venue:
+      children:
+        - field_co_location
+        - field_topic
+        - field_event_category
+        - field_co_fee
+        - field_co_host
+        - field_co_conference_languages
+        - field_co_enable_registration
+        - field_co_registration_on_conf
+      parent_name: ''
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Venue
+      region: content
+    group_co_programm_and_speakers:
+      children:
+        - field_co_programm
+        - field_speakers
+      parent_name: ''
+      weight: 7
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Programm and speakers'
+      region: content
+id: node.conference.default
+targetEntityType: node
+bundle: conference
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_co_add_to_my_calendar:
+    type: add_to_calendar_widget_type
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_co_conference_languages:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_co_contact_person:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_co_contact_registration:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_co_downloads:
+    type: paragraphs
+    weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_co_enable_registration:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_co_fee:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_co_host:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_co_invitation_only:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_co_location:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_co_logos:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_co_more_info:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_co_programm:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_co_registration_on_conf:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        c1f00370-8c7e-4d12-bc40-a5782a9f4625:
+          dependee: field_co_enable_registration
+          settings:
+            state: '!visible'
+            condition: '!checked'
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: conference
+    type: optional_link
+    region: content
+  field_co_slideshow:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_co_teaser_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_co_top_conference:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_date_and_time:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_category:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_node_metatag:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_speakers:
+    weight: 17
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Speaker
+      label_plural: Speakers
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_topic:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_yoast_seo:
+    weight: 22
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 17
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 24
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 19
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_co_category: true
+  field_co_conference_type: true
+  field_co_date: true
+  field_co_date_and_time: true

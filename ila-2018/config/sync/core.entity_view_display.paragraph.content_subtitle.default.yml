@@ -1,0 +1,88 @@
+uuid: 7e74dadb-95a3-49f2-8ba0-363363ecbf4b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_subtitle.field_cs_subtitle
+    - field.field.paragraph.content_subtitle.field_cs_text_left
+    - field.field.paragraph.content_subtitle.field_cs_text_right
+    - paragraphs.paragraphs_type.content_subtitle
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      content:
+        - field_cs_subtitle
+        - field_cs_text_left
+        - field_cs_text_right
+id: paragraph.content_subtitle.default
+targetEntityType: paragraph
+bundle: content_subtitle
+mode: default
+content:
+  field_cs_subtitle:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: 'field field--name-field-cs-subtitle field--type-string field--label-hidden field__item'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+  field_cs_text_left:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_cs_text_right:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

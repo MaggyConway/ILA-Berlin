@@ -1,0 +1,16 @@
+uuid: 4c137fbb-f68c-480f-ace7-1c80e18ca455
+langcode: en
+status: true
+dependencies: {  }
+name: pt_careercenter_text_box_with_image_default
+label: 'PT CareerCenter Text box with image: default (280x400)'
+effects:
+  e4a21fb5-4507-472c-ac54-ab8ff4283e91:
+    uuid: e4a21fb5-4507-472c-ac54-ab8ff4283e91
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 400
+      anchor: center-center
+pipeline: image_optimiza

@@ -1,0 +1,28 @@
+uuid: fb4c01f8-532d-4314-9d3a-1216ee1dede5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stream
+    - media.type.embedded_video
+    - paragraphs.paragraphs_type.fl_stream_box
+id: paragraph.fl_stream_box.field_stream
+field_name: field_stream
+entity_type: paragraph
+bundle: fl_stream_box
+label: Stream
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      embedded_video: embedded_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

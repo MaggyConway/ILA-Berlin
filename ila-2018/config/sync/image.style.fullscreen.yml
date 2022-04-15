@@ -1,0 +1,18 @@
+uuid: 6e57cbd9-ce0c-48b4-ac07-bd3e06ba644a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gkzntmXyTtBZtpGBpGmV7nJP0m7FnMoojmofBSjGSWs
+name: fullscreen
+label: 'Fullscreen (1920x1080)'
+effects:
+  f4a03a35-f734-4315-ab8b-5925f27e6396:
+    uuid: f4a03a35-f734-4315-ab8b-5925f27e6396
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      anchor: center-center
+pipeline: image_optimiza

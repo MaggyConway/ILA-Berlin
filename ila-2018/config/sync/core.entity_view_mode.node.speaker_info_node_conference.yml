@@ -1,0 +1,10 @@
+uuid: 9e31ec22-da18-492b-90a4-30f5b4187add
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.speaker_info_node_conference
+label: 'Speaker info (Node Conference)'
+targetEntityType: node
+cache: true

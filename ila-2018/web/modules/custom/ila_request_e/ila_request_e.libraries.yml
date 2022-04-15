@@ -1,0 +1,7 @@
+request_e:
+  version: VERSION
+  js:
+    js/request_e.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,28 @@
+uuid: 3fa98b85-0b95-4d3d-a0f0-698dd4bddbff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_reference
+    - media.type.image
+    - paragraphs.paragraphs_type.cc_text_box_with_image
+id: paragraph.cc_text_box_with_image.field_media_reference
+field_name: field_media_reference
+entity_type: paragraph
+bundle: cc_text_box_with_image
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

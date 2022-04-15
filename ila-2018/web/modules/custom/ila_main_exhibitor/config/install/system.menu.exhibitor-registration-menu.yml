@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: exhibitor-registration-menu
+label: 'Exhibitor registration menu'
+description: 'Links to main exhibitor registration page and etc'
+locked: false

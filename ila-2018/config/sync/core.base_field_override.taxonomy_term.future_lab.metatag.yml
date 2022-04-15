@@ -1,0 +1,18 @@
+uuid: 72b2802b-ca3e-4471-a925-a87e892075fd
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.future_lab
+id: taxonomy_term.future_lab.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: future_lab
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

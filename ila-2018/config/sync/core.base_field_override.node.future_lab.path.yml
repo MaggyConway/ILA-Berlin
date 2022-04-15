@@ -1,0 +1,20 @@
+uuid: f68d4c0e-b74e-475d-9d26-1ff99059e487
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+  module:
+    - path
+id: node.future_lab.path
+field_name: path
+entity_type: node
+bundle: future_lab
+label: URL-Alias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

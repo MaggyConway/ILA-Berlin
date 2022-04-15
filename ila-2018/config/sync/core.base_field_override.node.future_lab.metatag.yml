@@ -1,0 +1,18 @@
+uuid: b338ab0b-e33b-43f1-af5e-2068e9699e6d
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.metatag
+field_name: metatag
+entity_type: node
+bundle: future_lab
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

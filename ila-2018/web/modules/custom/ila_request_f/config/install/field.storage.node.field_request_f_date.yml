@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_request_f_date
+field_name: field_request_f_date
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '25. April 2018'
+      label: '25. April 2018'
+    -
+      value: '26. April 2018'
+      label: '26. April 2018'
+    -
+      value: '27. April 2018'
+      label: '27. April 2018'
+    -
+      value: '28. April 2018'
+      label: '28. April 2018'
+    -
+      value: '29. April 2018'
+      label: '29. April 2018'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

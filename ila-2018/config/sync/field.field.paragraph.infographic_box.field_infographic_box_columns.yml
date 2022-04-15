@@ -1,0 +1,76 @@
+uuid: a0d3d8d5-0ddb-4321-8d36-773c63a72b01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_box_columns
+    - paragraphs.paragraphs_type.infographic_box
+    - paragraphs.paragraphs_type.infographic_box_column
+  module:
+    - entity_reference_revisions
+id: paragraph.infographic_box.field_infographic_box_columns
+field_name: field_infographic_box_columns
+entity_type: paragraph
+bundle: infographic_box
+label: Columns
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      infographic_box_column: infographic_box_column
+    target_bundles_drag_drop:
+      infographic_box_column:
+        enabled: true
+        weight: 17
+      content_subtitle:
+        weight: 18
+        enabled: false
+      image_box:
+        weight: 19
+        enabled: false
+      image_full:
+        weight: 20
+        enabled: false
+      image_row:
+        weight: 21
+        enabled: false
+      infographic_box:
+        weight: 22
+        enabled: false
+      link_box:
+        weight: 23
+        enabled: false
+      link_box_container:
+        weight: 24
+        enabled: false
+      quote:
+        weight: 25
+        enabled: false
+      request_link:
+        weight: 26
+        enabled: false
+      slideshow:
+        weight: 27
+        enabled: false
+      text:
+        weight: 28
+        enabled: false
+      text_box:
+        weight: 29
+        enabled: false
+      text_boxes:
+        weight: 30
+        enabled: false
+      title_text:
+        weight: 31
+        enabled: false
+      two_column_text:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

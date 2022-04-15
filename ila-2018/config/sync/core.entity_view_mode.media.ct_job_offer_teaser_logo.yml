@@ -1,0 +1,10 @@
+uuid: e88d9a64-179e-4ea4-9276-8a07e9f07b3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_job_offer_teaser_logo
+label: 'CT Job Offer: Teaser (Logo 110x110)'
+targetEntityType: media
+cache: true

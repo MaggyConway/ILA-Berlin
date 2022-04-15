@@ -1,0 +1,10 @@
+confirmed: ''
+message:
+  thanks: '<h2>Conference registration send</h2></br>Dear @user_name, thank you very much for your registration.</br>You will shortly receive a confirmation by Email.</br>If not please check also you spam folder.'
+  register: 'You have already registered for this conference.'
+  email_attendee:
+    subject: ''
+    body: ''
+  email_host:
+    subject: ''
+    body: ''

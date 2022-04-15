@@ -1,0 +1,27 @@
+uuid: c2f989e8-3800-4f89-a7d4-227ba8fc7bcf
+langcode: de
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: EDBwooG8mPrN8Cali_g5wOKh3mJkcz0K2ZOFyExMk_E
+id: exhibitor_downloads
+label: 'Exhibitor downloads'
+description: ''
+use_admin_theme: false
+path: /exhibitor-zone/downloads
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      authenticated: authenticated
+      editor: editor
+      press: press
+      ila_admin: ila_admin
+      main_exhibitor: main_exhibitor
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

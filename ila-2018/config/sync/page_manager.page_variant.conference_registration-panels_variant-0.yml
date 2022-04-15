@@ -1,0 +1,62 @@
+uuid: cd297269-bb1a-4548-a5bf-7e4ed7325330
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.conference_registration
+    - views.view.conferences
+  module:
+    - node
+    - panels
+    - views
+id: conference_registration-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    cca4b206-3531-40e0-8213-ceff1dda5212:
+      id: 'views_block:conferences-block_5'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: -1
+      uuid: cca4b206-3531-40e0-8213-ceff1dda5212
+      context_mapping: {  }
+    48fc59a4-9a20-4de7-b059-8f1470ff0b92:
+      id: 'views_block:conferences-block_6'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: 48fc59a4-9a20-4de7-b059-8f1470ff0b92
+      context_mapping: {  }
+    67f309e2-e14f-49bc-8be0-86ce5b4b6f00:
+      id: attendee_registration
+      label: 'Attendee registration'
+      provider: node
+      label_display: '0'
+      region: content
+      weight: 2
+      uuid: 67f309e2-e14f-49bc-8be0-86ce5b4b6f00
+      context_mapping: {  }
+  id: panels_variant
+  uuid: b9ca448e-5870-4f24-b3e7-ede3326c7f96
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: conference_registration-panels_variant-0
+  builder: standard
+page: conference_registration
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

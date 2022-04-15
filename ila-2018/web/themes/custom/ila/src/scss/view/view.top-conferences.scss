@@ -1,0 +1,152 @@
+.view-display-id-top_conferences {
+  width: 100%;
+  background: linear-gradient(177.94deg, rgba(46,24,71,0.35) 0%, rgba(153,30,102,0.18) 100%);
+  padding-top: 100px;
+  padding-bottom: 140px;
+  margin-bottom: 100px;
+
+  @media #{$m-to-m} {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .view-header,
+  .view-content {
+    margin: 0 auto 50px;
+    padding: 0 50px;
+    max-width: 1440px;
+
+    @media #{$m-to-m} {
+      padding: 0 15px;
+    }
+  }
+
+  .view-header {
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .top-conference-header--text {
+    font-size: 17px;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  .view-content {
+    .slick__slide {
+      display: flex;
+      justify-content: center;
+
+      > .node--type-conference {
+        position: relative;
+        width: 33%;
+        max-width: 435px;
+        margin: 0 18px;
+        border: 1px solid $conferences-dark;
+        padding: 30px 30px 75px;
+      }
+    }
+
+    .slick-slide {
+      display: flex;
+      margin: 0 -18px;
+      justify-content: center;
+
+      @media #{$m-to-l} {
+        margin: 0;
+        flex-direction: column;
+      }
+
+      > div {
+        position: relative;
+        width: 33%;
+        max-width: 435px;
+        margin: 0 18px;
+        border: 1px solid $conferences-dark;
+        padding: 30px 30px 75px;
+
+        &:empty {
+          display: none;
+        }
+  
+        @media #{$m-to-l} {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+
+  .field--name-node-title {
+    padding: 0;
+
+    h2 {
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 900;
+      color: $conferences-dark;
+    }
+  }
+
+  .field--name-field-co-date-and-time {
+    margin-bottom: 12px;
+    font-size: 17px;
+    color: $conferences-light;
+  }
+
+  .field--name-field-co-teaser-text {
+    margin-bottom: 28px;
+  }
+
+  .field--name-node-link {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    a {
+      @extend .btn;
+      color: $conferences-light;
+      border-color: $conferences-light;
+
+      &::before,
+      &::after {
+        border-color: $conferences-light;
+      }
+
+      &:hover {
+        color: $conferences-dark;
+
+        &::before,
+        &::after {
+          border-color: $conferences-dark;
+        }
+      }
+    }
+  }
+
+  .view-footer {
+    text-align: center;
+
+    .btn {
+      color: $conferences-light;
+      border-color: $conferences-light;
+
+      &::before,
+      &::after {
+        border-color: $conferences-light;
+      }
+
+      &:hover {
+        color: $conferences-dark;
+
+        &::before,
+        &::after {
+          border-color: $conferences-dark;
+        }
+      }
+    }
+  }
+}

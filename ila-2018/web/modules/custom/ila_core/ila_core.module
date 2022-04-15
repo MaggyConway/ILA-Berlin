@@ -1,0 +1,117 @@
+<?php
+
+use Drupal\user\Entity\Role;
+use Drupal\user\Entity\User;
+
+/**
+ * @file
+ * Module hook implementations.
+ */
+
+/**
+ * Implements hook_token_info_alter().
+ */
+function ila_core_token_info_alter(&$data) {
+  $data['tokens']['file']['mime-label'] = [
+    'name' => t('MIME Label'),
+    'description' => t('Human readable file type.'),
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function ila_core_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+
+  if ($type == 'file') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'mime-label':
+          /** @var \Drupal\file\FileInterface $file */
+          $file = $data['file'];
+
+          $replacements[$original] = _ila_core_get_file_mime_label($file->getMimeType());
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Map file mime type to human readable label.
+ * @todo Should be configurable via UI?
+ */
+function _ila_core_get_file_mime_label($mime_type) {
+  $mapping = [
+    'text/plain' => t('Text'),
+    'application/pdf' => t('Adobe PDF'),
+    'application/zip' => t('Zip File'),
+  ];
+
+  return isset($mapping[$mime_type]) ? $mapping[$mime_type] : t('File');
+}
+
+/**
+ * Implements hook_datalayer_meta()
+ */
+function ila_core_datalayer_meta() {
+  return array(
+    'currentLanguage',
+    'userAnotherProperty',
+  );
+}
+
+/**
+ * Implements hook_datalayer_alter()
+ */
+function ila_core_datalayer_alter(&$properties) {
+  $language_id = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $properties['currentLanguage'] = $language_id ? $language_id : '';
+}
+
+/**
+ * Remove obsolete taxonomies.
+ */
+function ila_core_update_8001(&$sandbox) {
+  $vocabularies = [
+    'request_a_stands',
+    'request_b_chalets',
+    'request_c',
+    'request_d_stands_including_const',
+    'request_d_stands',
+    'request_e_stands_including_const',
+    'request_e_stands_without_stand_c',
+    'request_f'
+    ];
+  foreach ($vocabularies as $vocabulary) {
+    $vocab = Drupal\taxonomy\Entity\Vocabulary::load($vocabulary);
+    if ($vocab) {
+      $vocab->delete();
+    }
+  }
+}
+
+/**
+ * Remove users with main_exhibitor role, while leaving the rest.
+ */
+function ila_core_update_8002(&$sandbox) {
+  //load users with only main_exhibitor role and delete them
+  $uids = \Drupal::entityQuery('user')
+    ->condition('roles', 'main_exhibitor')
+    ->execute();
+  $users = User::loadMultiple($uids);
+  $users = array_filter($users, function($v) {
+    $roles = $v->getRoles();
+    return (count($roles) == 2 && in_array('main_exhibitor', $roles));
+  });
+  foreach ($users as $user) {
+    $user->delete();
+  }
+
+//  //delete role itself
+//  $exhibitor_role = Role::load('main_exhibitor');
+//  $exhibitor_role->delete();
+}

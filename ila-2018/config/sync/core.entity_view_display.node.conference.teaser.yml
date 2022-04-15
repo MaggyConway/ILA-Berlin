@@ -1,0 +1,102 @@
+uuid: de5cc6f3-0465-4c83-bf80-1274ffd8cdd5
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.conference.field_co_add_to_my_calendar
+    - field.field.node.conference.field_co_category
+    - field.field.node.conference.field_co_conference_languages
+    - field.field.node.conference.field_co_conference_type
+    - field.field.node.conference.field_co_contact_person
+    - field.field.node.conference.field_co_contact_registration
+    - field.field.node.conference.field_co_date
+    - field.field.node.conference.field_co_date_and_time
+    - field.field.node.conference.field_co_downloads
+    - field.field.node.conference.field_co_enable_registration
+    - field.field.node.conference.field_co_fee
+    - field.field.node.conference.field_co_host
+    - field.field.node.conference.field_co_invitation_only
+    - field.field.node.conference.field_co_location
+    - field.field.node.conference.field_co_logos
+    - field.field.node.conference.field_co_more_info
+    - field.field.node.conference.field_co_programm
+    - field.field.node.conference.field_co_registration_on_conf
+    - field.field.node.conference.field_co_slideshow
+    - field.field.node.conference.field_co_teaser_text
+    - field.field.node.conference.field_co_top_conference
+    - field.field.node.conference.field_node_metatag
+    - field.field.node.conference.field_speakers
+    - field.field.node.conference.field_yoast_seo
+    - node.type.conference
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_co_host
+        - field_co_time
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.conference.teaser
+targetEntityType: node
+bundle: conference
+mode: teaser
+content:
+  field_co_host:
+    type: basic_string
+    weight: 1
+    region: ds_content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_co_add_to_my_calendar: true
+  field_co_category: true
+  field_co_conference_languages: true
+  field_co_conference_type: true
+  field_co_contact_person: true
+  field_co_contact_registration: true
+  field_co_date: true
+  field_co_date_and_time: true
+  field_co_downloads: true
+  field_co_enable_registration: true
+  field_co_fee: true
+  field_co_invitation_only: true
+  field_co_location: true
+  field_co_logos: true
+  field_co_more_info: true
+  field_co_programm: true
+  field_co_registration_on_conf: true
+  field_co_slideshow: true
+  field_co_teaser_text: true
+  field_co_top_conference: true
+  field_node_metatag: true
+  field_speakers: true
+  field_yoast_seo: true
+  flag_flag: true
+  langcode: true
+  links: true

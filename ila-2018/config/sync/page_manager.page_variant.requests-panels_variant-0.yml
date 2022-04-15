@@ -1,0 +1,108 @@
+uuid: 41b8efe9-dcfb-4961-8b20-3b36d4a9b058
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.requests
+  content:
+    - 'block_content:info_list:c1e825f2-743e-431c-af97-e86315a907c0'
+    - 'block_content:page_description:8a26d08e-337d-45de-b571-2947060c37d1'
+    - 'block_content:request_links:17232190-e127-405f-aeb0-bb1ba894c534'
+    - 'block_content:request_links:6c521919-cb2d-420b-a67e-f62c9181879d'
+    - 'block_content:request_links:8a1621e2-0b60-42d6-9235-5cc151926d72'
+    - 'block_content:request_links:e0f82c3f-9cb9-48ef-9c93-74799cb1382c'
+  module:
+    - block_content
+    - panels
+id: requests-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    169f50eb-e642-419e-a981-dc0bf05c10d1:
+      id: 'block_content:8a26d08e-337d-45de-b571-2947060c37d1'
+      label: 'REGISTRATION OPTIONS'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: -10
+      uuid: 169f50eb-e642-419e-a981-dc0bf05c10d1
+      context_mapping: {  }
+    e3506f94-7499-41c8-8a8c-6f7d9205de71:
+      id: 'block_content:c1e825f2-743e-431c-af97-e86315a907c0'
+      label: 'How to send your requests'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: second
+      weight: 0
+      uuid: e3506f94-7499-41c8-8a8c-6f7d9205de71
+      context_mapping: {  }
+    19308666-8079-4c4e-a543-8a5a271de4ea:
+      id: 'block_content:e0f82c3f-9cb9-48ef-9c93-74799cb1382c'
+      label: 'Request Links: Chalets'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: first
+      weight: -2
+      uuid: 19308666-8079-4c4e-a543-8a5a271de4ea
+      context_mapping: {  }
+    cebd8b25-b720-4315-afa4-5f3ca7ba8e6e:
+      id: 'block_content:8a1621e2-0b60-42d6-9235-5cc151926d72'
+      label: 'Request Links: Conferences'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: first
+      weight: -1
+      uuid: cebd8b25-b720-4315-afa4-5f3ca7ba8e6e
+      context_mapping: {  }
+    038de87e-2daf-4067-b8e5-b9725a44fe56:
+      id: 'block_content:17232190-e127-405f-aeb0-bb1ba894c534'
+      label: 'Request Links: Exhibition space'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: first
+      weight: 0
+      uuid: 038de87e-2daf-4067-b8e5-b9725a44fe56
+      context_mapping: {  }
+    b7cbab9b-6436-4250-977a-e99af0d326ae:
+      id: 'block_content:6c521919-cb2d-420b-a67e-f62c9181879d'
+      label: 'Request Links: Outdoor area'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: first
+      weight: 1
+      uuid: b7cbab9b-6436-4250-977a-e99af0d326ae
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 5086d7b4-0016-4a03-9cf1-cc64d360f7e0
+  label: null
+  weight: 0
+  layout: layout_twocol
+  layout_settings: {  }
+  page_title: Requests
+  storage_type: page_manager
+  storage_id: requests-panels_variant-0
+  builder: standard
+page: requests
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

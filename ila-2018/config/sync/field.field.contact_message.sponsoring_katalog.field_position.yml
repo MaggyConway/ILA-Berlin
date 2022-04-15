@@ -1,0 +1,19 @@
+uuid: b01e2cd1-1f2d-4d50-b836-2221a8799357
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+    - field.storage.contact_message.field_position
+id: contact_message.sponsoring_katalog.field_position
+field_name: field_position
+entity_type: contact_message
+bundle: sponsoring_katalog
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

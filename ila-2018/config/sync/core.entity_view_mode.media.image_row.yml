@@ -1,0 +1,10 @@
+uuid: ddf67fd3-ba88-4e76-a70f-07f7a51e1b4c
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_row
+label: 'Image Row'
+targetEntityType: media
+cache: true

@@ -1,0 +1,76 @@
+uuid: 68f4c6ee-dbca-40f7-9214-004805391af6
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded_big
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - image.style.embedded_big
+    - media.type.image
+  module:
+    - ds
+    - linked_field
+    - svg_image
+id: media.image.embedded_big
+targetEntityType: media
+bundle: image
+mode: embedded_big
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: embedded_big
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: ''
+        height: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_url
+        advanced:
+          target: _blank
+          class: image-link
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  field_url: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

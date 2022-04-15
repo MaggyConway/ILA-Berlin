@@ -1,0 +1,376 @@
+.path-exhibitor-zone {
+  label {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+    color: $main-text-color;
+    margin-bottom: 5px;
+  }
+  .form-required,
+  .fieldset-legend {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 5px;
+
+    h1, h2, h3, h4, h5 {
+      display: inline-block;
+    }
+    &:after {
+      display: inline;
+      background: none;
+      content: '*';
+    }
+  }
+  // .block-title {
+  //   font-size: 40px;
+  //   color: #1d428a;
+  //   text-transform: uppercase;
+  //   font-weight: 700;
+  //   margin-bottom: 50px;
+  // }
+  .wrapp-2-cols {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: -30px;
+    margin-right: -30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &.password {
+      > .form-group {
+        @extend .wrapp-2-cols;
+
+        .form-type-password-confirm {
+          @extend .wrapp-2-cols;
+        }
+      }
+    }
+
+    > div,
+    > fieldset {
+      flex: 1 1 50%;
+      min-width: 50%;
+      max-width: 50%;
+      padding: 0 30px;
+    }
+
+    >.field--type-boolean {
+      flex: 1 1 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin-bottom: 0;
+
+      + div {
+        margin-top: 10px;
+      }
+    }
+
+    .field--type-markup {
+      flex: 1 1 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .wrapp-2-cols {
+      flex: 1 1 100%;
+      min-width: 100%;
+      max-width: none;
+    }
+
+    .field-group-fieldset {
+      flex: 1 1 100%;
+      min-width: 100%;
+      max-width: none;
+      border: none;
+      
+      .panel-heading {
+        padding: 0;
+        background: none;
+        border: none;
+      }
+      .panel-title {
+        @extend h3;
+        background: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      .panel-body {
+        @extend .wrapp-2-cols;
+        padding: 0;
+        border: none;
+
+        .field--type-address {
+          flex: 1 1 100%;
+          min-width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+  div.wrapp-3-cols {
+    max-width: none;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: flex-end;
+
+    > div {
+      flex: 1 1 33%;
+      min-width: 33%;
+      max-width: 33%;
+      padding-left: 15px;
+      padding-right: 15px;
+      
+      &.field--type-boolean {
+        margin-bottom: 12px;
+      }
+      &.field--name-field-company-member-of-bdli {
+        legend {
+          float: none; 
+          margin: 0;
+          .fieldset-legend {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+  div.field--type-address {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 0;
+
+    div:empty {
+      display: none;
+    }
+
+    > .form-group > div >.form-group {
+      @extend .wrapp-2-cols;
+      margin-bottom: 0;
+
+      > div {
+        margin-bottom: 15px;
+      }
+
+      > div.address-container-inline {
+        //flex: 1 1 100%;
+        width: auto;
+        max-width: 100%;
+        flex-basis: auto;
+       // margin-bottom: 10px;
+        padding: 0 30px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        //order: 1;
+        > div {
+          width: 100%;
+          max-width: 350px;
+          margin-right: 0;
+          padding-right: 30px;
+          min-width: 100px;
+          margin-bottom: 0;
+          &:nth-child(2) {
+            margin-right: 0;
+            padding-left: 30px; 
+            padding-right: 0;
+          }
+          &:only-child {
+            width: 100%;
+            max-width: 320px;
+            padding: 0;
+          }
+        }
+      }
+      > div.address-container-inline[data-drupal-selector="edit-field-company-address-0-address-container2"],
+        div.address-container-inline[data-drupal-selector="edit-field-company-address-0-address-container1"],
+        div.address-container-inline[data-drupal-selector="edit-field-agency-address-0-address-container2"],
+        div.address-container-inline[data-drupal-selector="edit-field-agency-address-0-address-container1"] {
+          order: 1;
+       }
+    }
+
+    .address-container-inline {
+      display: flex;
+      align-items: baseline;
+
+      > div {
+        min-width: 100px;
+      }
+    }
+  }
+  .field-group--pref-size {
+    align-items: flex-end;
+    margin-top: 30px;
+
+    > .field--widget-string-textarea {
+      flex: 1 1 40%;
+      max-width: 40%;
+      min-width: 40%;
+    }
+
+    .control-label {
+      margin-bottom: 5px;
+      font-weight: 400;
+    }
+
+    .form-textarea {
+      height: 65px;
+      margin-bottom: 5px;
+    }
+  }
+  .form-inline {
+    .form-control {
+      display: block;
+      width: 100%;
+    }
+  }
+  .field-group--square {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    align-items: flex-end;
+    padding-right: 0 !important;
+    min-width: 60% !important;
+
+    .field--type-markup {
+      flex: 1 1 100%;
+      min-width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 0;
+    }
+
+    .field--type-float {
+      flex: 1 1 33%;
+      min-width: 33%;
+      max-width: 33%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .field--type-markup:last-child {
+      text-align: right;
+    }
+  }
+  .field--widget-grouped-options {
+    .form-group {
+      margin: 0;
+    }
+    .form-type-checkbox {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    .control-label {
+      margin-bottom: 0;
+    }
+  }
+  legend {
+    border: none;
+  }
+  .grouped-checkbox-depth-0 {
+    margin-top: 15px;
+    .control-label {
+      font-weight: 500;
+      color: $c-darkblue;
+      font-size: 14px;
+    }
+  }
+  .grouped-checkbox-depth-1 {
+    .control-label {
+      font-weight: 200;
+      color: $c-darkblue;
+      font-size: 14px;
+
+      &.option {
+        color: $c-black;
+        font-weight: 400;
+      }
+    }
+  }
+  .grouped-checkbox-depth-2 {
+    font-weight: 400;
+
+    .control-label {
+      font-weight: 400;
+    }
+  }
+  .grouped-checkbox-title-only {
+    margin-top: 15px;
+
+    + .grouped-checkbox-title-only {
+      margin-top: 0;
+    }
+  }
+  .field--widget-options-buttons {
+    // margin-top: -15px;
+    legend {
+      float: left;
+      width: auto;
+      margin-right: 70px;
+    }
+    .fieldset-legend {
+      @extend h3;
+    }
+    .fieldset-wrapper {
+      display: inline-block;
+    }
+    .form-type-radio {
+      margin-top: 8px;
+      margin-bottom: 0;
+      display: inline-block;
+      margin-right: 60px;
+    }
+  }
+  #edit-field-listing-in-online-and-prin-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .field--name-field-we-are-agency {
+    margin-bottom: 5px;
+
+    .form-type-radio {
+      display: block;
+    }
+
+    .fieldset-legend,
+    legend {
+      margin-bottom: 0;
+    }
+
+    fieldset.error > .fieldset-wrapper > div:first-child {
+      display: none;
+    }
+  }
+
+  .field--name-field-for-agencies-and-externals {
+    margin-bottom: 30px;
+  }
+}
+
+.path-exhibitor-zone-co-exhibitor {
+  div.field--type-address {
+    & > .form-group > div > .form-group{
+      & > div.address-container-inline {
+        > div {
+          max-width: 390px;
+          &:only-child {
+            width: 100%;
+            max-width: 360px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  } 
+}

@@ -1,0 +1,6 @@
+name: 'ILA download ICS'
+description: 'A simple API for exporting ICS files'
+type: module
+core_version_requirement: ^8 || ^9
+project: 'ILA'
+

@@ -1,0 +1,11 @@
+id: job_offer_mailto
+label: 'Job offer mailto contact person'
+ui_limit: job_offer|default
+properties:
+  content:
+    value: '[node:field_job_contact_person_email]'
+    format: plain_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

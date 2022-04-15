@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faq
+    - field.storage.block_content.field_faq
+  module:
+    - faqfield
+id: block_content.faq.field_faq
+field_name: field_faq
+entity_type: block_content
+bundle: faq
+label: FAQ
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  default_format: plain_text
+field_type: faqfield

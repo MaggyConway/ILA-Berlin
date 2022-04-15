@@ -1,0 +1,6 @@
+name: ILA Back to Request page
+description: Defines 'Back to Request page' block.
+
+type: module
+core_version_requirement: ^8 || ^9
+package: ILA

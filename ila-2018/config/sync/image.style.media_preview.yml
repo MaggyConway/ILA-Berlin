@@ -1,0 +1,28 @@
+uuid: 2afd465e-ee87-4fb0-a6bd-de0ea26baffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.downloads
+  module:
+    - crop
+_core:
+  default_config_hash: nXjY_E6eKRl4goVWRd7_FHYLa52ZOcDNfhQp04mgmZM
+name: media_preview
+label: 'Media preview (170x240)'
+effects:
+  6a6ba8de-4392-4f28-a07a-9bb06f75c6f7:
+    uuid: 6a6ba8de-4392-4f28-a07a-9bb06f75c6f7
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: downloads
+  e073a5e6-11f4-4305-9b1c-de1f3f8ff1c1:
+    uuid: e073a5e6-11f4-4305-9b1c-de1f3f8ff1c1
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 180
+      height: 180
+      anchor: center-center
+pipeline: image_optimiza

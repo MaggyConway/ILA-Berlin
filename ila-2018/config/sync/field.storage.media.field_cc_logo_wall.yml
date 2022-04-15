@@ -1,0 +1,22 @@
+uuid: e5bd1b84-43ee-44bb-a83e-1be6a35e0798
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - media
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: media.field_cc_logo_wall
+field_name: field_cc_logo_wall
+entity_type: media
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

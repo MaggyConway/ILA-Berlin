@@ -1,0 +1,11 @@
+uuid: f5f5fcb0-ece0-484c-9c44-d06dc2abf690
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: conferences_disrupter
+title: 'Organize your conference'
+content:
+  value: "<p><a class=\"en\" href=\"mailto:Desiree.Danisch@messe-berlin.de?subject=Organize your conference\">Organize your conference</a></p>\r\n"
+  format: full_html

@@ -1,0 +1,16 @@
+uuid: 2dd5424a-be6c-433c-ab80-2ce0364ff226
+langcode: en
+status: true
+dependencies: {  }
+name: partners_logo_style_3
+label: 'Partners logo style 3'
+effects:
+  ecab4aab-13de-4b20-83e5-3d2a254c1fd4:
+    uuid: ecab4aab-13de-4b20-83e5-3d2a254c1fd4
+    id: image_scale
+    weight: 1
+    data:
+      width: 270
+      height: 190
+      upscale: false
+pipeline: image_optimiza

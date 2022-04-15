@@ -1,0 +1,9 @@
+uuid: 1e486995-6bcd-4c7c-9fda-4bd763d3e9b2
+langcode: en
+status: true
+dependencies: {  }
+id: exhibition
+label: Exhibition
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,18 @@
+uuid: 94db19cf-a98c-47c4-b4f0-08fb07dd1914
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_svg_tag_snippet
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.cc_svg_tag_snippet
+target_entity_type_id: paragraph
+target_bundle: cc_svg_tag_snippet
+default_langcode: site_default
+language_alterable: false

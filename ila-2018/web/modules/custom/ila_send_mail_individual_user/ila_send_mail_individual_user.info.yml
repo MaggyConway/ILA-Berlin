@@ -1,0 +1,6 @@
+name: Ila send mail to individual user
+type: module
+description: The module provides the ability to send mail to individual user after change conference node author.
+
+core_version_requirement: ^8 || ^9
+package: ILA

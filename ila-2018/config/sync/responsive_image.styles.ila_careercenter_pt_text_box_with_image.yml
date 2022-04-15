@@ -1,0 +1,29 @@
+uuid: ac64d266-fbd4-4429-8fc9-efee5d29f7e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.pt_careercenter_text_box_with_image_default
+    - image.style.pt_careercenter_text_box_with_image_mobile
+  theme:
+    - ila_career_center
+id: ila_careercenter_pt_text_box_with_image
+label: 'ILA CareerCenter PT Text box with image'
+image_style_mappings:
+  -
+    breakpoint_id: ila_career_center.desktop_full_hd
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: pt_careercenter_text_box_with_image_default
+  -
+    breakpoint_id: ila_career_center.tablet_portrait
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: pt_careercenter_text_box_with_image_mobile
+  -
+    breakpoint_id: ila_career_center.phone
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: pt_careercenter_text_box_with_image_mobile
+breakpoint_group: ila_career_center
+fallback_image_style: pt_careercenter_text_box_with_image_default

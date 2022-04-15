@@ -1,0 +1,19 @@
+uuid: 3e343c6b-e6e8-44cc-ac29-c02baa6efd96
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.career_center_news
+    - field.storage.block_content.field_cc_news_anchor_id
+id: block_content.career_center_news.field_cc_news_anchor_id
+field_name: field_cc_news_anchor_id
+entity_type: block_content
+bundle: career_center_news
+label: 'Anchor ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

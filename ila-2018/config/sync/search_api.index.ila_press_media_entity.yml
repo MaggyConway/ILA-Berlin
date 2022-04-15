@@ -1,0 +1,262 @@
+uuid: 45403f3c-8822-46d2-a824-046403da9680
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+    - file
+    - search_api
+    - search_api_solr
+  config:
+    - field.storage.media.field_media_audio_file
+    - field.storage.media.field_description
+    - field.storage.media.field_media_image
+    - field.storage.media.field_media_video_file
+    - field.storage.media.field_press_category
+    - field.storage.media.field_press_file
+    - field.storage.media.field_preview_image
+    - search_api.server.default_database
+id: ila_press_media_entity
+name: 'ILA Press Media Entity'
+description: ''
+read_only: false
+field_settings:
+  bundle:
+    label: Medientyp
+    datasource_id: 'entity:media'
+    property_path: bundle
+    type: string
+    dependencies:
+      module:
+        - media
+  created:
+    label: 'Geschrieben am'
+    datasource_id: 'entity:media'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - media
+  default_langcode:
+    label: Standardübersetzung
+    datasource_id: 'entity:media'
+    property_path: default_langcode
+    type: boolean
+    dependencies:
+      module:
+        - media
+  fid:
+    label: 'Audio file » Datei » Datei-ID'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_audio_file:entity:fid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_audio_file
+      module:
+        - file
+  field_description:
+    label: Beschreibung
+    datasource_id: 'entity:media'
+    property_path: field_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_description
+  field_media_audio_file:
+    label: 'Audio file'
+    datasource_id: 'entity:media'
+    property_path: field_media_audio_file
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_audio_file
+  field_media_image:
+    label: Image
+    datasource_id: 'entity:media'
+    property_path: field_media_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+  field_media_video_file:
+    label: 'Video file'
+    datasource_id: 'entity:media'
+    property_path: field_media_video_file
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_video_file
+  field_press_category:
+    label: 'Presse Kategorie'
+    datasource_id: 'entity:media'
+    property_path: field_press_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_press_category
+  field_press_file:
+    label: 'Im Presse Bereich anzeigen '
+    datasource_id: 'entity:media'
+    property_path: field_press_file
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.media.field_press_file
+  field_preview_image:
+    label: Vorschaubild
+    datasource_id: 'entity:media'
+    property_path: field_preview_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_preview_image
+  filemime:
+    label: 'Image » Datei » MIME-Typ der Datei'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_image:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+      module:
+        - file
+  filemime_1:
+    label: 'Audio file » Datei » MIME-Typ der Datei'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_audio_file:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_audio_file
+      module:
+        - file
+  filemime_2:
+    label: 'Video file » Datei » MIME-Typ der Datei'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_video_file:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_video_file
+      module:
+        - file
+  filesize:
+    label: 'Image » Datei » Dateigröße'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_image:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+      module:
+        - file
+  filesize_1:
+    label: 'Audio file » Datei » Dateigröße'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_audio_file:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_audio_file
+      module:
+        - file
+  filesize_2:
+    label: 'Video file » Datei » Dateigröße'
+    datasource_id: 'entity:media'
+    property_path: 'field_media_video_file:entity:filesize'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.media.field_media_video_file
+      module:
+        - file
+  langcode:
+    label: Language
+    datasource_id: 'entity:media'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - media
+  mid:
+    label: ID
+    datasource_id: 'entity:media'
+    property_path: mid
+    type: integer
+    dependencies:
+      module:
+        - media
+  name:
+    label: Name
+    datasource_id: 'entity:media'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - media
+  status:
+    label: Published
+    datasource_id: 'entity:media'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - media
+  thumbnail:
+    label: Vorschaubild
+    datasource_id: 'entity:media'
+    property_path: thumbnail
+    type: integer
+    dependencies:
+      module:
+        - media
+  uuid:
+    label: UUID
+    datasource_id: 'entity:media'
+    property_path: uuid
+    type: string
+    dependencies:
+      module:
+        - media
+datasource_settings:
+  'entity:media':
+    bundles:
+      default: false
+      selected:
+        - audio
+        - image
+        - local_video
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  hierarchy:
+    fields:
+      field_press_category: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - bundle
+      - field_description
+      - field_press_category
+      - langcode
+      - name
+      - uuid
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: lifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

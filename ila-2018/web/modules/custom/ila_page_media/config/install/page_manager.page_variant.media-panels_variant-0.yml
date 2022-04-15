@@ -1,0 +1,81 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - page_manager.page.media
+    - views.view.media
+  content:
+    - 'block_content:page_description:e4eacdc6-920c-4e8d-996e-ff844c27f481'
+    - 'block_content:text:9eefee0c-c60c-4fbd-83bb-cbde90921583'
+    - 'block_content:text:ab0e0017-2ee0-4bb1-baa1-27b0a9868ec8'
+  module:
+    - block_content
+    - panels
+    - views
+id: media-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    43a5fb4d-7758-46c1-9d81-94852fe5b095:
+      id: 'views_block:media-block_media'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 43a5fb4d-7758-46c1-9d81-94852fe5b095
+      context_mapping: {  }
+    7e007a1d-ca87-4740-988e-0829719a3742:
+      id: 'block_content:e4eacdc6-920c-4e8d-996e-ff844c27f481'
+      label: Media
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -2
+      uuid: 7e007a1d-ca87-4740-988e-0829719a3742
+      context_mapping: {  }
+    5202fcdb-94c8-4050-a1da-fa49c6cfb104:
+      id: 'block_content:9eefee0c-c60c-4fbd-83bb-cbde90921583'
+      label: 'Media contact'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: 5202fcdb-94c8-4050-a1da-fa49c6cfb104
+      context_mapping: {  }
+    17a3f788-3418-43af-b651-eb9fca74979c:
+      id: 'block_content:ab0e0017-2ee0-4bb1-baa1-27b0a9868ec8'
+      label: 'Media - Description'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 2
+      uuid: 17a3f788-3418-43af-b651-eb9fca74979c
+      context_mapping: {  }
+  id: panels_variant
+  uuid: f1eb41bb-b2ee-42ba-9302-0cbfb4ffea64
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: Media
+  storage_type: page_manager
+  storage_id: media-panels_variant-0
+  builder: standard
+page: media
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

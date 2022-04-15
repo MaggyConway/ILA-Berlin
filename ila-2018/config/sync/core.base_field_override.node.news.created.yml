@@ -1,0 +1,20 @@
+uuid: b85e7a34-471c-4223-8653-5448c4d78c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+_core:
+  default_config_hash: HuRUJUdlIsjCFxUxMFDuLVdZ6o9zUWbOYSkzmOzzxvI
+id: node.news.created
+field_name: created
+entity_type: node
+bundle: news
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

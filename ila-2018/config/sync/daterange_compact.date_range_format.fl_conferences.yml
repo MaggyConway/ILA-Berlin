@@ -1,0 +1,18 @@
+uuid: 8b6ad329-c970-486a-9392-baf25d6fdff5
+langcode: en
+status: true
+dependencies: {  }
+id: fl_conferences
+label: 'FL Conferences'
+date_settings:
+  default_pattern: d.m.Y
+  separator: ' - '
+  same_month_start_pattern: d
+  same_month_end_pattern: d.m.Y
+  same_year_start_pattern: d.m.
+  same_year_end_pattern: d.m.Y
+datetime_settings:
+  default_pattern: 'd.m.y H:i'
+  separator: ' - '
+  same_day_start_pattern: 'd.m.y H:i'
+  same_day_end_pattern: 'H:i'

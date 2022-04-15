@@ -1,0 +1,10 @@
+uuid: 8441298d-6a2d-4150-9b66-2ddf128cc248
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_section_header_2_3
+label: 'CT Section: header 2/3'
+targetEntityType: media
+cache: true

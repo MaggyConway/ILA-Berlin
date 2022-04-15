@@ -1,0 +1,8 @@
+uuid: 1e7946f6-65a3-40cd-b720-6c0c3ed422c3
+langcode: und
+status: true
+dependencies: {  }
+name: 'Conference Categories'
+vid: conference_categories
+description: ''
+weight: 0

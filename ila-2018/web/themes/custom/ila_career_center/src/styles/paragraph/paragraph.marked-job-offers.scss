@@ -1,0 +1,173 @@
+.paragraph-content--view-display-id-cc_marked_job_offers {
+  margin: 60px auto;
+  max-width: 1440px;
+
+  .view-display-id-cc_marked_job_offers {
+    margin: 0 auto;
+    width: 84%;
+    max-width: 1200px;
+
+    @media #{$m-to-m} {
+      width: 100%;
+    }
+  }
+
+  .view-header {
+    padding: 0 40px;
+
+    .jobs-header {
+      position: relative;
+      top: 30px;
+      padding: 7px 20px;
+      display: inline-block;
+      min-width: 150px;
+      font-family: $career-font;
+      font-size: 32px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      background-color: $career-dark;
+    }
+
+    @media #{$m-to-m} {
+      padding: 0 15px;
+    }
+  }
+
+  .view-content {
+    padding: 50px 40px;
+    background: url('../../assets/images/diagonal-lines-light.svg') repeat, $career-green;
+
+    .views-row {
+      margin-bottom: 40px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media #{$m-to-m} {
+      padding: 50px 15px;
+    }
+  }
+
+  .node--type-job-offer {
+    position: relative;
+    padding: 30px 0 10px;
+    background-color: #ffffff;
+    border: 1px solid $career-green;
+    box-shadow: 5px 5px 0 0 $career-dark;
+
+    @media #{$m-to-m} {
+      font-size: 13px;
+    }
+  }
+
+  .wrapper--top {
+    position: relative;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    padding: 0 0 10px 20px;
+    display: flex;
+    max-width: calc(100% - 128px);
+    min-height: 110px;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 3px solid $career-green;
+
+    @media #{$m-to-m} {
+      margin-right: 10px;
+      margin-left: 10px;
+      padding: 0 0 10px;
+      max-width: 100%;
+      min-height: 0;
+    }
+  }
+
+  .wrapper--bottom {
+    padding: 0 20px;
+
+    @media #{$m-to-m} {
+      padding: 0 10px;
+    }
+  }
+
+  .wrapper--top--title-with-logo {
+    @media #{$m-to-m} {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .field--name-field-job-logo {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding-left: 15px;
+    background-color: #ffffff;
+    transform: translateX(100%);
+
+    @media #{$m-to-m} {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 0;
+      max-width: 70px;
+      flex-shrink: 0;
+      transform: none;
+    }
+  }
+
+  .field--name-node-title {
+    a {
+      color: $career-dark;
+    }
+
+    h2 {
+      font-size: 21px;
+
+      @media #{$m-to-m} {
+        font-size: 19px;
+      }
+    }
+  }
+
+  .wrapper--top--offerer-info {
+    color: #646672;
+
+    > .field {
+      display: inline-block;
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+      color: #646672;
+    }
+  }
+
+  .wrapper--bottom--jobpost-details {
+    max-width: calc(100% - 150px);
+    font-weight: 700;
+
+    > .field {
+      margin-right: 18px;
+      display: inline-block;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .flag {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    transform: translateY(50%);
+
+    @media #{$m-to-m} {
+      right: -1px;
+    }
+  }
+}

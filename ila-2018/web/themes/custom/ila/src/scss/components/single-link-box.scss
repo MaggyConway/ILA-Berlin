@@ -1,0 +1,41 @@
+.paragraph--type--single-link-box {
+  background-image: linear-gradient(45deg, rgba($space-dark, 1) 0%, rgba($space-light, 1) 100%);
+  margin: 40px 0;
+
+  padding: {
+    bottom: 45px;
+    top: 45px;
+  }
+
+  .field--name-field-single-link-box-link {
+    padding: 0 15px;
+    text-align: center;
+    word-break: break-all;
+
+    a {
+      @extend .btn;
+
+      color: $c-white;
+      border-color: $c-white;
+      font: {
+        size: 20px;
+        weight: bold;
+      }
+      line-height: 24px;
+      margin: 0 auto;
+      padding: {
+        top: 20px;
+        bottom: 20px;
+      }
+
+      &:hover {
+        color: $space-light;
+      }
+
+      &::before,
+      &::after {
+        border-color: $space-light;
+      }
+    }
+  }
+}

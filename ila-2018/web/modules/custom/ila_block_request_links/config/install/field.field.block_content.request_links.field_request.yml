@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.request_links
+    - field.storage.block_content.field_request
+    - paragraphs.paragraphs_type.request_link
+  module:
+    - entity_reference_revisions
+id: block_content.request_links.field_request
+field_name: field_request
+entity_type: block_content
+bundle: request_links
+label: Request
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      request_link: request_link
+    target_bundles_drag_drop:
+      request_link:
+        enabled: true
+        weight: 4
+      text:
+        weight: 5
+        enabled: false
+      two_column_text:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

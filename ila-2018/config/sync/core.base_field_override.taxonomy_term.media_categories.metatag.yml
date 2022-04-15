@@ -1,0 +1,18 @@
+uuid: 91248140-2ef9-46f7-a803-4345be24e55f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_categories
+id: taxonomy_term.media_categories.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: media_categories
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

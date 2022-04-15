@@ -1,0 +1,23 @@
+uuid: cbff613e-2a00-4485-9b7d-c42c3943b1ad
+langcode: de
+status: true
+dependencies:
+  module:
+    - ila_core
+  theme:
+    - ila_future_lab
+_core:
+  default_config_hash: _AiI54bxbXLSy9eMXrBBGJJIiZkjkvGKLHToSQq3OO8
+id: ila_future_lab_language_switcher_full
+theme: ila_future_lab
+region: header_top_main_nav
+weight: -7
+provider: null
+plugin: 'ila_language_block:language_interface'
+settings:
+  id: 'ila_language_block:language_interface'
+  label: 'Language switcher (Full names)'
+  provider: ila_core
+  label_display: '0'
+  links_labels: full
+visibility: {  }

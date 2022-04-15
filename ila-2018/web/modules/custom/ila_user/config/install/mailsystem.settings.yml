@@ -1,0 +1,9 @@
+theme: ila
+defaults:
+  sender: ila_mailer
+  formatter: ila_mailer
+modules:
+  swiftmailer:
+    none:
+      formatter: swiftmailer
+      sender: swiftmailer

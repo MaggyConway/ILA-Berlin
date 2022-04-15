@@ -1,0 +1,85 @@
+$container-gutter: 15px;
+$container: 1130px + $container-gutter * 2;
+$container-small: 890px + $container-gutter * 2;
+$container-wide: 1350 + $container-gutter * 2;
+$col-gutter: $container-gutter;
+
+.clearfix {
+  @include clearfix;
+}
+
+.container {
+  display: block;
+  width: auto;
+  max-width: $container;
+  padding-left: $container-gutter;
+  padding-right: $container-gutter;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--small {
+    max-width: $container-small;
+  }
+
+  &--wide {
+    max-width: $container-wide;
+  }
+}
+
+.row {
+  @include clearfix;
+
+  display: block;
+  margin-left: -$col-gutter;
+  margin-right: -$col-gutter;
+}
+
+.col {
+  display: block;
+  float: left;
+  padding-right: $col-gutter;
+  padding-left: $col-gutter;
+}
+main {
+  //background: url(../img/Clouds.png);
+  //background-position: center;
+  //background-size: cover;
+  //background-attachment: fixed;
+  //background-repeat: repeat-y;
+}
+.layout-container {
+  position: relative;
+}
+
+body:not(.path-frontpage):not(.page-node-type-section):not(.page-node-type-basic-page):not(.path-career-center):not(.page-node-type-conference):not(.path-conference-speakers):not(.path-conference):not(.page-node-type-speaker) {
+  .layout-content {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 190px; // header height
+    padding-bottom: 177px; // footer heigth
+    margin-bottom: -177px;
+    box-sizing: border-box;
+
+    .region-content {
+      @extend .container;
+      padding-top: 120px;
+      padding-bottom: 50px;
+      @media screen and (max-width: 975px) {
+        padding-top: 70px;
+      }
+      @media screen and (max-width: 609px) {
+        padding-top: 40px;
+      }
+    }
+  }
+  &.toolbar-horizontal {
+    .layout-content {
+      min-height: calc(100vh - 39px); // toolbar height
+    }
+  }
+  &.toolbar-tray-open {
+    .layout-content {
+      min-height: calc(100vh - 80px); // toolbar height
+    }
+  }
+}

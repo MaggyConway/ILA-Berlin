@@ -1,0 +1,22 @@
+uuid: 25d2973c-6388-426a-abd7-3b4daf26c99c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press
+_core:
+  default_config_hash: vd7lky6iSGzz2VBLlLlkMGShLt6NSch7cSp2qqi3ns0
+id: node.press.menu_link
+field_name: menu_link
+entity_type: node
+bundle: press
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 8a41ba9a-930b-4d6a-a78e-c0b7db461e0c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - media.type.local_video
+  module:
+    - text
+id: media.local_video.field_description
+field_name: field_description
+entity_type: media
+bundle: local_video
+label: Beschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

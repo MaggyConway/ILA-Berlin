@@ -1,0 +1,8 @@
+uuid: 012e8706-d7bc-40ed-b91d-4ae5fb9ac05c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Press Media Category'
+vid: press_media_category
+description: ''
+weight: 0

@@ -1,0 +1,10 @@
+uuid: 81fa636b-8bea-4e91-9879-071c81e4350d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZiY-KS80cojwnHaoG6EUSUjpkKAXz4kljg4pVmSWiKM
+id: faq
+label: FAQ
+revision: 0
+description: 'Frequently asked questions block.'

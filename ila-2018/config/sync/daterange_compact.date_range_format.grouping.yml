@@ -1,0 +1,18 @@
+uuid: 145a3433-a5e0-4308-b02a-72125bfb818b
+langcode: de
+status: true
+dependencies: {  }
+id: grouping
+label: Grouping
+date_settings:
+  default_pattern: 'l, d. F Y'
+  separator: ''
+  same_month_start_pattern: 'l, d. F Y'
+  same_month_end_pattern: ' '
+  same_year_start_pattern: 'l, d. F Y'
+  same_year_end_pattern: ' '
+datetime_settings:
+  default_pattern: 'l, d. F Y'
+  separator: ''
+  same_day_start_pattern: 'l, d. F Y'
+  same_day_end_pattern: ' '

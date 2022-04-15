@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.request_fb_1
+id: node.request_fb_1.title
+field_name: title
+entity_type: node
+bundle: request_fb_1
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

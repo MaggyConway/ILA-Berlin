@@ -1,0 +1,152 @@
+uuid: e2af92a5-819f-4ea7-a252-ef62a8b741da
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_career_center
+    - field.field.node.event.field_co_add_to_my_calendar
+    - field.field.node.event.field_date_and_time
+    - field.field.node.event.field_ev_ila_nr
+    - field.field.node.event.field_ev_venue
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_node_export
+    - field.field.node.event.field_future_lab
+    - field.field.node.event.field_node_metatag
+    - field.field.node.event.field_press_category
+    - field.field.node.event.field_teaser_text
+    - field.field.node.event.field_topic
+    - field.field.node.event.field_yoast_seo
+    - node.type.event
+  module:
+    - addtocalendar
+    - daterange_compact
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_co_add_to_my_calendar
+        - field_date_and_time
+        - field_ev_venue
+        - field_teaser_text
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_co_add_to_my_calendar:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: add_to_calendar
+    region: ds_content
+  field_date_and_time:
+    weight: 2
+    label: inline
+    settings:
+      format_type: medium
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: blue
+          display_text: Kalendereintrag
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'ILA Berlin 2020 – die führende Innovationsmesse der Luft- und Raumfahrt'
+          atc_organizer_email:
+            field: token
+            tokenized: ila@messe-berlin.de
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: daterange_compact
+    region: ds_content
+  field_ev_venue:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_teaser_text:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+hidden:
+  addtoany: true
+  field_career_center: true
+  field_ev_ila_nr: true
+  field_event_category: true
+  field_event_node_export: true
+  field_future_lab: true
+  field_node_metatag: true
+  field_press_category: true
+  field_topic: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

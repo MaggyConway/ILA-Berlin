@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_catalog_company_telephone
+    - node.type.main_exhibitor
+  module:
+    - telephone
+id: node.main_exhibitor.field_catalog_company_telephone
+field_name: field_catalog_company_telephone
+entity_type: node
+bundle: main_exhibitor
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

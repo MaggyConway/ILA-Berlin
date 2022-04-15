@@ -1,0 +1,21 @@
+uuid: 0901b332-4679-4466-967d-8f6036f3234b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference_text
+    - paragraphs.paragraphs_type.block_reference
+  module:
+    - text
+id: paragraph.block_reference.field_block_reference_text
+field_name: field_block_reference_text
+entity_type: paragraph
+bundle: block_reference
+label: text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

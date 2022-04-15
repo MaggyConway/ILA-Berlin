@@ -1,0 +1,19 @@
+uuid: e696035c-ab24-4ab0-a028-ff9747e1ea13
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text
+    - field.storage.block_content.field_css_class
+id: block_content.text.field_css_class
+field_name: field_css_class
+entity_type: block_content
+bundle: text
+label: 'CSS Class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

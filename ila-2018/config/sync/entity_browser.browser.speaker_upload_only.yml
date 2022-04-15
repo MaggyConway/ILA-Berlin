@@ -1,0 +1,41 @@
+uuid: a8759980-1f7d-407a-aa2f-5aad3cbe08f7
+langcode: de
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - dropzonejs_eb_widget
+    - media
+name: speaker_upload_only
+label: 'Speaker Upload only'
+display: modal
+display_configuration:
+  width: '1240'
+  height: '800'
+  link_text: 'Entitäten auswählen'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  a6f254e4-03f1-4354-9a74-9599c0ee188a:
+    settings:
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 5M
+      extensions: 'jpg jpeg gif png'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+      auto_select: false
+    uuid: a6f254e4-03f1-4354-9a74-9599c0ee188a
+    weight: 1
+    label: 'Bild hochladen'
+    id: dropzonejs_media_entity

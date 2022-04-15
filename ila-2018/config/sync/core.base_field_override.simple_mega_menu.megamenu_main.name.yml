@@ -1,0 +1,20 @@
+uuid: e30f6b29-63b1-4331-9f9c-9408745bb980
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+id: simple_mega_menu.megamenu_main.name
+field_name: name
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: Name
+description: 'The name of the Simple mega menu entity.'
+required: false
+translatable: true
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

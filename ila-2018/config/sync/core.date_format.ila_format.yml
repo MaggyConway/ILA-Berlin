@@ -1,0 +1,10 @@
+uuid: 6d0d8d2b-e325-45d8-b05e-69e8e6830554
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WDAYvcjXdNyNL_xuQ1BP8WbrI93FVua1yjWHVdSukUU
+id: ila_format
+label: 'ILA Format'
+locked: false
+pattern: 'j. F Y'

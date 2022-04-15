@@ -1,0 +1,4 @@
+entity_type_groups:
+  node:
+    bdli_event:
+      advanced: advanced

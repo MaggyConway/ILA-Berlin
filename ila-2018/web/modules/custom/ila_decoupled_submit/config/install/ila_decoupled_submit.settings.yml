@@ -1,0 +1,2 @@
+decoupled_submit_block:
+  form_selector: '.node-form'

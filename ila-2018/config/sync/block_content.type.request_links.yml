@@ -1,0 +1,10 @@
+uuid: 59991a2a-3924-43bf-ad5d-417ccee50cf6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2_REwt47G64ZYYgC-aFzBQ6apWOwisjUx0vbFdUKVv0
+id: request_links
+label: 'Request links'
+revision: 0
+description: ''

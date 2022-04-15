@@ -1,0 +1,44 @@
+uuid: e1d04185-2b4c-487d-b847-f7d380c6e206
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careercenter_sponsors
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_anchor_id
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_first_line
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_images
+    - field.field.block_content.careercenter_sponsors.field_cc_sponsors_second_line
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_career_sponsors_content:
+      children:
+        - field_cc_sponsors_first_line
+        - field_cc_sponsors_second_line
+        - field_cc_sponsors_images
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: career-sponsors__content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Career sponsors content'
+      region: content
+id: block_content.careercenter_sponsors.default
+targetEntityType: block_content
+bundle: careercenter_sponsors
+mode: default
+content: {  }
+hidden:
+  field_cc_sponsors_anchor_id: true
+  field_cc_sponsors_first_line: true
+  field_cc_sponsors_images: true
+  field_cc_sponsors_second_line: true
+  langcode: true

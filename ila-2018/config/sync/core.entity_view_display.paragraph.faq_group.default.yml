@@ -1,0 +1,136 @@
+uuid: beeeeb69-cb25-4809-8bfb-85523216d109
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq_group.field_faq_group_faq
+    - field.field.paragraph.faq_group.field_faq_group_image
+    - field.field.paragraph.faq_group.field_faq_group_title
+    - image.style.faq_group
+    - paragraphs.paragraphs_type.faq_group
+  module:
+    - ds
+    - faqfield
+    - field_group
+    - svg_image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_faq_group_image
+        - group_content
+        - field_faq_group_title
+        - field_faq_group_faq
+  field_group:
+    group_content:
+      children:
+        - field_faq_group_title
+        - field_faq_group_faq
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: faq-group__content-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+      region: ds_content
+id: paragraph.faq_group.default
+targetEntityType: paragraph
+bundle: faq_group
+mode: default
+content:
+  field_faq_group_faq:
+    weight: 2
+    label: hidden
+    settings:
+      active: null
+      heightStyle: content
+      collapsible: true
+      event: click
+      animate:
+        duration: 200
+        easing: linear
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: faqfield_accordion
+    region: ds_content
+  field_faq_group_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: faq_group
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: ds_content
+  field_faq_group_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h3
+            fi-cl: faq-group__title
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+hidden: {  }

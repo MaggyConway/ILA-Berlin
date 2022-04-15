@@ -1,0 +1,16 @@
+uuid: 387a0dc7-0256-4803-b46b-4d5678cfc5b0
+langcode: en
+status: true
+dependencies: {  }
+name: media_preview_image
+label: 'Media preview image'
+effects:
+  34ec47af-7d81-4c13-a817-e2ff5a6faa1c:
+    uuid: 34ec47af-7d81-4c13-a817-e2ff5a6faa1c
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 550
+      height: 310
+      anchor: center-center
+pipeline: image_optimiza

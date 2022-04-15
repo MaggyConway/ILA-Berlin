@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.request_exhibition_space
+  module:
+    - path
+id: node.request_exhibition_space.path
+field_name: path
+entity_type: node
+bundle: request_exhibition_space
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

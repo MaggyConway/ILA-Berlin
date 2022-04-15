@@ -1,0 +1,221 @@
+uuid: d5a8f88c-1d80-4d6b-be99-5e5f224af8e3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mxDcL42Rr3a0Aa6SHyN7J0lkpb7WCWW8My3e-nM_Q54
+name: node_main_exhibitor
+label: 'node main_exhibitor validation'
+entity_type: node
+bundle: main_exhibitor
+field_validation_rules:
+  646770de-a8d5-42b7-8997-4ea0ba7c4f77:
+    uuid: 646770de-a8d5-42b7-8997-4ea0ba7c4f77
+    id: regex_field_validation_rule
+    title: 'Catalog Company Homepage URL'
+    weight: '2'
+    field_name: field_catalog_company_homepage
+    column: value
+    error_message: 'Please add correct URL.'
+    data:
+      setting: '/((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z0-9\&\.\/\?\:@\-_=#])*/'
+  8e9dde7e-82e8-45c2-b976-764f42e7e846:
+    uuid: 8e9dde7e-82e8-45c2-b976-764f42e7e846
+    id: regex_field_validation_rule
+    title: 'Company Homepage'
+    weight: '3'
+    field_name: field_company_homepage
+    column: value
+    error_message: 'Please add correct URL.'
+    data:
+      setting: '/((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z0-9\&\.\/\?\:@\-_=#])*/'
+  4b339e62-5f26-4120-9468-593cae5b6d40:
+    uuid: 4b339e62-5f26-4120-9468-593cae5b6d40
+    id: regex_field_validation_rule
+    title: 'Protocol Job Titile'
+    weight: '-10'
+    field_name: field_protocol_job_title
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  e50fb4d3-9fa0-4f46-aace-8345a4eaf6fe:
+    uuid: e50fb4d3-9fa0-4f46-aace-8345a4eaf6fe
+    id: regex_field_validation_rule
+    title: 'Protocol First Name'
+    weight: '-10'
+    field_name: field_protocol_first_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  65e2d5f8-b076-411d-8284-5e61572b4eb0:
+    uuid: 65e2d5f8-b076-411d-8284-5e61572b4eb0
+    id: regex_field_validation_rule
+    title: 'Primary Job Titile'
+    weight: '-10'
+    field_name: field_primary_job_title
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  e2c5d400-9fd0-4c7b-baa3-a7bb759ed89a:
+    uuid: e2c5d400-9fd0-4c7b-baa3-a7bb759ed89a
+    id: regex_field_validation_rule
+    title: 'Primary Last Name'
+    weight: '-10'
+    field_name: field_primary_last_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  27973ffd-5119-4f6b-8f92-b6845dda6299:
+    uuid: 27973ffd-5119-4f6b-8f92-b6845dda6299
+    id: regex_field_validation_rule
+    title: 'Primary First Name'
+    weight: '-10'
+    field_name: field_primary_first_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  3cee54c8-4afd-486b-a4e2-a2ef9372dcef:
+    uuid: 3cee54c8-4afd-486b-a4e2-a2ef9372dcef
+    id: regex_field_validation_rule
+    title: 'Press Last Name'
+    weight: '-10'
+    field_name: field_press_last_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  b8ab1e3f-0118-4354-ab7f-0feaa4ce4802:
+    uuid: b8ab1e3f-0118-4354-ab7f-0feaa4ce4802
+    id: regex_field_validation_rule
+    title: 'Press Job Title'
+    weight: '-10'
+    field_name: field_press_job_title
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  92a508c9-bb3d-4a9f-b9f2-483c08963afe:
+    uuid: 92a508c9-bb3d-4a9f-b9f2-483c08963afe
+    id: regex_field_validation_rule
+    title: 'Press First Name'
+    weight: '-10'
+    field_name: field_press_first_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  0cab8142-90a7-484b-82e2-77de315b75f1:
+    uuid: 0cab8142-90a7-484b-82e2-77de315b75f1
+    id: regex_field_validation_rule
+    title: 'Mdirector Job Titile'
+    weight: '-10'
+    field_name: field_mdirector_job_title
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  d51516ee-19c6-48e5-a9b4-b11eca09fb20:
+    uuid: d51516ee-19c6-48e5-a9b4-b11eca09fb20
+    id: regex_field_validation_rule
+    title: 'Agent First Name'
+    weight: '4'
+    field_name: field_agent_first_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  8a1e4688-0475-49ee-a5ab-67811b11e53e:
+    uuid: 8a1e4688-0475-49ee-a5ab-67811b11e53e
+    id: regex_field_validation_rule
+    title: 'Agen Job Title'
+    weight: '5'
+    field_name: field_agent_job_title
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  a3a702b8-bcdb-494e-bf2f-c7d3dcd2a340:
+    uuid: a3a702b8-bcdb-494e-bf2f-c7d3dcd2a340
+    id: regex_field_validation_rule
+    title: 'Agent Last Name'
+    weight: '6'
+    field_name: field_agent_last_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  f690d957-14fc-4d12-9f2b-65bcafc20f86:
+    uuid: f690d957-14fc-4d12-9f2b-65bcafc20f86
+    id: regex_field_validation_rule
+    title: 'Invoice Recipient First Name'
+    weight: '7'
+    field_name: field_invoice_recipient_fname
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  069d0778-8a8e-4c24-88ba-163edfbd1af9:
+    uuid: 069d0778-8a8e-4c24-88ba-163edfbd1af9
+    id: regex_field_validation_rule
+    title: 'Invoice Recipient Job Title'
+    weight: '8'
+    field_name: field_invoice_recipient_job_titl
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  17f8032a-fbc1-40af-8209-3ae3c79331a2:
+    uuid: 17f8032a-fbc1-40af-8209-3ae3c79331a2
+    id: regex_field_validation_rule
+    title: 'Invoice Recipient Last Name'
+    weight: '9'
+    field_name: field_invoice_recipient_lname
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  48547c42-00f5-47c8-9bd8-18d8812a29bd:
+    uuid: 48547c42-00f5-47c8-9bd8-18d8812a29bd
+    id: regex_field_validation_rule
+    title: 'Mdirector First Name'
+    weight: '10'
+    field_name: field_mdirector_first_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  90c91e0b-80aa-46f4-a0af-3f0047343238:
+    uuid: 90c91e0b-80aa-46f4-a0af-3f0047343238
+    id: regex_field_validation_rule
+    title: 'Mdirector Last Name'
+    weight: '-10'
+    field_name: field_mdirector_last_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  7b0b9a3f-df50-43de-8431-d86110264ff3:
+    uuid: 7b0b9a3f-df50-43de-8431-d86110264ff3
+    id: regex_field_validation_rule
+    title: 'Protocol Last Name'
+    weight: -10
+    field_name: field_protocol_last_name
+    column: value
+    error_message: 'Please enter only letters.'
+    data:
+      setting: '/^[a-zA-ZäöüÄÖÜß ]+$/'
+  04179646-e3e8-47a5-bbb8-c26d2ffbeb96:
+    uuid: 04179646-e3e8-47a5-bbb8-c26d2ffbeb96
+    id: regex_field_validation_rule
+    title: 'Agency Homepage URL'
+    weight: '1'
+    field_name: field_agency_homepage
+    column: value
+    error_message: 'Please add correct URL.'
+    data:
+      setting: '/((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z0-9\&\.\/\?\:@\-_=#])*/'

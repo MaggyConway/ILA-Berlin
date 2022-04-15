@@ -1,0 +1,10 @@
+uuid: da7f1cad-44fb-44b8-a7bc-8f53a3696012
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.partner_big
+label: 'Partner big'
+targetEntityType: media
+cache: true

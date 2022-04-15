@@ -1,0 +1,13 @@
+uuid: 76d95af2-5993-4e7e-800c-0e6648b0e01f
+langcode: de
+status: true
+dependencies: {  }
+id: file
+label: Dokument
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listing_in_online_and_prin
+    - node.type.main_exhibitor
+  module:
+    - markup
+id: node.main_exhibitor.field_listing_in_online_and_prin
+field_name: field_listing_in_online_and_prin
+entity_type: node
+bundle: main_exhibitor
+label: 'Listing in online- and print catalog:'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h3>Listing in online- and print catalog:</h3>\r\n\r\n<p>Co-exhibitors receive a free listing with basic company information in the Virtual Market Place® (online catalog) and the print catalog.</p>\r\n"
+    format: full_html
+field_type: markup

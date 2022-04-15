@@ -1,0 +1,6 @@
+maintain_index_table: true
+override_selector: false
+terms_per_page_admin: 100
+langcode: de
+_core:
+  default_config_hash: kQlK1ruSFlPnpCzT8pQBMZtQOmHPaTO3eexo6lnhrio

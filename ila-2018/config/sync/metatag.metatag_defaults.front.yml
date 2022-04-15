@@ -1,0 +1,13 @@
+uuid: 305158d8-539d-4a78-9323-ddabc6613ba7
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  shortlink: '[site:url]'
+  title: 'ILA Berlin 2022 – Internationale Luft- und Raumfahrtausstellung'
+  canonical_url: '[site:url]'
+  description: 'ILA Berlin 2022 – Die größte internationale Luft- und Raumfahrtausstellung in Europa zeigt ✓Innovationen ✓Hightech-Produkte ✓Trends uvm.'

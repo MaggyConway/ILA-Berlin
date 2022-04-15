@@ -1,0 +1,154 @@
+.path-m-bdli-events-m {
+  .layout-container {
+    background: #ffffff;
+    main {
+      background-image: none !important;
+    }
+  }
+  .view-header {
+    max-width: 100%;
+    .print-info {
+        display: none;
+      }
+    .button-container {
+      float: right;
+      bottom: 0;
+      right: 28px;
+      position: relative;
+      @media screen and (max-width: 1130px) {
+        float: none;
+        bottom: 34px;
+        position: inherit;
+        margin-top: 20px;
+        padding-top: 20px;
+        margin-left: 0;
+      }
+      .print-button {
+        display: inline-block;
+        float: none;
+        border: 1px solid #2dccd3;;
+        border-radius: 0;
+        padding: 10px 55px;
+        min-width: 100px;
+        text-align: center;
+        background-color: #1d428a;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: -30px 10px;
+        width: auto;
+        color: white;
+        &:hover {
+          background-color: white;
+          color: #2dccd3;
+          border: 1px solid #2dccd3;
+        }
+      }
+    }
+  }
+  .view-filters {
+   .views-exposed-form {
+      padding: 8px 10px;
+      .form--inline {
+        display: flex;
+        @media screen and (max-width: 1010px) {
+          display: block;
+        }
+        .form-item {
+          background: none;
+          margin-right: 35px;
+          border-bottom: 1px dashed #009cde;
+          width: 270px;
+          height: 100%;
+          label {
+            display: none;
+          }
+          input {
+            border: 0;
+            background: none;
+            outline: 0;
+            line-height: 1.75;
+          }
+        }
+        .form-item-field-date-value {
+          width: 200px !important;
+        }
+        .form-type-select {
+          width: 350px !important;
+        }
+        .chosen-container {
+          width: auto !important;
+          .chosen-choices {
+            border: none;
+            background: none;
+            box-shadow: none;
+            .chosen-search-input {
+              width: auto !important;
+              font-size: 15px !important;
+              color: #71757b !important;
+            }
+          }
+        }
+        .form-actions {
+          margin-top: 8px;
+          max-width: 160px;
+          input {
+            margin-left: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    .view-grouping-header {
+      color: #1d428a;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .view-grouping-content {
+      .bdli-event-title {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 300;
+          color: #1d428a;
+          margin-bottom: 10px;
+      }
+      caption {
+        color: #009cde;
+        font-weight: 900;
+      }
+    }
+    .views-table {
+      th {
+        font-weight: 400;
+      }
+      td {
+        padding-right: 50px !important;
+        .views-field {
+          font-weight: 400;
+        }
+        th {
+          font-weight: 400 !important;
+        }
+      }
+      .views-field-field-ev-venue {
+        width: 170px !important;
+      }
+      .views-field-field-ev-time {
+        width: 170px !important;
+      }
+      .views-field-field-contact-persons {
+        width: 210px !important;
+        min-width: 250px;
+        word-break: break-word;
+      }
+    }
+  }
+  .block-lia-back-to-top {
+    position: fixed !important;
+  }
+}

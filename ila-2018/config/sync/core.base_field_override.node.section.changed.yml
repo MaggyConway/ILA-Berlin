@@ -1,0 +1,20 @@
+uuid: fd06e741-ace9-475a-be02-b31fbc92e23a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.section
+_core:
+  default_config_hash: qbQOdcYBVnHUkpV8EpBfsIeRFxXkILyMN0eE3DDPsGU
+id: node.section.changed
+field_name: changed
+entity_type: node
+bundle: section
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

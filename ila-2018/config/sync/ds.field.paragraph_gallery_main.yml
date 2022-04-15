@@ -1,0 +1,18 @@
+id: paragraph_gallery_main
+label: 'Paragraph Gallery Main'
+ui_limit: ''
+properties:
+  block: 'views_block:paragraph_gallery-block_1'
+  use_block_title: false
+  config:
+    id: 'views_block:paragraph_gallery-block_1'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: none
+    context_mapping: {  }
+type: block
+type_label: 'Block field'
+entities:
+  paragraph: paragraph

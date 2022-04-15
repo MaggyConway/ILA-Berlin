@@ -1,0 +1,151 @@
+uuid: 74660de4-5bcf-4937-b0de-50abc59df0ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_video_external
+    - field.field.paragraph.video.field_video_local
+    - paragraphs.paragraphs_type.video
+  module:
+    - ds
+    - field_group
+    - video
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_title
+        - group_local_video_wrapper
+        - field_video_external
+        - group_button
+        - field_video_local
+  field_group:
+    group_local_video_wrapper:
+      children:
+        - group_button
+        - field_video_local
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: local-video-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Local video wrapper'
+    group_button:
+      children: {  }
+      parent_name: group_local_video_wrapper
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: true
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: group-button-element
+      label: Button
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: 'field field--name-field-title field--type-string field--label-hidden field__item'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: content
+  field_video_external:
+    weight: 3
+    label: hidden
+    settings:
+      width: '1120'
+      height: '620'
+      autoplay: false
+      related_videos: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: video_embed_player
+    region: content
+  field_video_local:
+    weight: 21
+    label: above
+    settings:
+      width: '1120'
+      height: '620'
+      loop: true
+      muted: true
+      preload: auto
+      controls: false
+      autoplay: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: abspielen
+            lb-col: false
+            classes: {  }
+    type: video_player_list
+    region: content
+hidden:
+  search_api_excerpt: true

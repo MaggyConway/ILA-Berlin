@@ -1,0 +1,30 @@
+cancel_confirm:
+  body: "<p>[user:display-name],</p>\r\n\r\n<p>A request to cancel your account has been made at [site:name].</p>\r\n\r\n<p>You may now cancel your account on [site:url-brief] by clicking this link or copying and pasting it into your browser:\r\n\r\n<a href=\"[user:cancel-url]\">[user:cancel-url]</a></p>\r\n\r\n<p>NOTE: The cancellation of your account is not reversible.</p>\r\n\r\n<p>This link expires in one day and nothing will happen if it is not used.</p>\r\n\r\n<p>--  [site:name] team</p>"
+  subject: 'Account cancellation request for [user:display-name] at [site:name]'
+password_reset:
+  body: "<p>Dear [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>Thank you for your interest in registering for ILA Berlin 2020.</p>\r\n \r\n<p>Please confirm the validity of your email address by clicking on the following link:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>The confirmation is required to prevent third-party registration.</p>"
+  subject: 'ILA 2020 - your account has been activated '
+register_admin_created:
+  body: "<p>Dear [user:field_first_name] [user:field_last_name],</p>\r\n\r\n<p>The ILA Team has created an account for you to edit your conference page. You may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n\r\n<p>This link can only be used once to log in and will lead you to a page where you can set your password.</p>\r\n\r\n<p>After setting your password, you will be able to log in at [site:login-url] in the future using:\r\n\r\nusername: [user:name]\r\npassword: Your password</p>\r\n\r\n<p>--  [site:name] team</p>"
+  subject: 'ILA Berlin 2020 | Login Conference Editor'
+register_no_approval_required:
+  body: "<p>Dear [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>Thank you for your interest in registering for ILA Berlin 2020.</p>\r\n \r\n<p>Please confirm the validity of your email address by clicking on the following link:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>The confirmation is required to prevent third-party registration.</p>\r\n\r\n"
+  subject: 'Account details for [user:display-name] at [site:name]'
+register_pending_approval:
+  body: "<p>Dear [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>Thank you for your interest in registering for ILA Berlin 2020.</p>\r\n \r\n<p>Please confirm the validity of your email address by clicking on the following link:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>The confirmation is required to prevent third-party registration.</p>\r\n\r\n"
+  subject: 'Account details for [user:display-name] at [site:name]'
+register_pending_approval_admin:
+  body: "<p>Dear [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>Thank you for your interest in registering for ILA Berlin 2020.</p>\r\n \r\n<p>Please confirm the validity of your email address by clicking on the following link:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>The confirmation is required to prevent third-party registration.</p>\r\n\r\n"
+  subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+status_activated:
+  body: "<p>Dear [user:field_salutation] [user:field_last_name],</p>\r\n \r\n<p>Thank you for your interest in registering for ILA Berlin 2020.</p>\r\n \r\n<p>Please confirm the validity of your email address by clicking on the following link:\r\n\r\n<a href=\"[user:one-time-login-url]\">[user:one-time-login-url]</a></p>\r\n<p>The confirmation is required to prevent third-party registration.</p>"
+  subject: 'Account details for [user:display-name] at [site:name] (approved)'
+status_blocked:
+  body: "[user:display-name],\r\n\r\nYour account on [site:name] has been blocked.\r\n\r\n--  [site:name] team"
+  subject: 'Account details for [user:display-name] at [site:name] (blocked)'
+status_canceled:
+  body: "[user:display-name],\r\n\r\nYour account on [site:name] has been canceled.\r\n\r\n--  [site:name] team"
+  subject: 'Account details for [user:display-name] at [site:name] (canceled)'
+langcode: en
+_core:
+  default_config_hash: ZbvmZ5jLPMf4CFeh9EnV8Ze5MRfEhFC9KSGuRQQFrj0

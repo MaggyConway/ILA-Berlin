@@ -1,0 +1,9 @@
+uuid: bb8934cc-7434-45c2-baec-d3b80ba3a6bc
+langcode: en
+status: true
+dependencies: {  }
+id: cc_testimonials_container
+label: 'CareerCenter -- Testimonials container'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

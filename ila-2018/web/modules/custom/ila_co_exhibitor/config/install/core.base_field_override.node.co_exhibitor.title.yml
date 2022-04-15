@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.co_exhibitor
+id: node.co_exhibitor.title
+field_name: title
+entity_type: node
+bundle: co_exhibitor
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,403 @@
+uuid: 17afe204-5133-4bb9-aafd-43e3b7a31a3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - field.storage.node.field_co_add_to_my_calendar
+    - field.storage.node.field_co_category
+    - field.storage.node.field_co_conference_languages
+    - field.storage.node.field_co_conference_type
+    - field.storage.node.field_co_contact_person
+    - field.storage.node.field_co_contact_registration
+    - field.storage.node.field_co_date
+    - field.storage.node.field_co_date_and_time
+    - field.storage.node.field_co_downloads
+    - field.storage.node.field_co_enable_registration
+    - field.storage.node.field_co_fee
+    - field.storage.node.field_co_host
+    - field.storage.node.field_co_invitation_only
+    - field.storage.node.field_co_location
+    - field.storage.node.field_co_logos
+    - field.storage.node.field_co_programm
+    - field.storage.node.field_co_slideshow
+    - field.storage.node.field_co_teaser_text
+    - field.storage.node.field_co_top_conference
+    - field.storage.node.field_date_and_time
+    - field.storage.node.field_event_category
+    - field.storage.node.field_first_name
+    - field.storage.node.field_linked_in
+    - field.storage.node.field_portrait
+    - field.storage.node.field_position
+    - field.storage.node.field_sp_title
+    - field.storage.node.field_speakers
+    - field.storage.node.field_surname
+    - field.storage.node.field_top_speaker
+    - field.storage.node.field_topic
+    - field.storage.node.field_xing
+    - search_api.server.default_database
+  module:
+    - node
+    - search_api
+    - ila_search_api
+    - search_api_solr
+id: ila_conferences
+name: 'ILA Conferences'
+description: ''
+read_only: false
+field_settings:
+  field_bio:
+    label: Vita
+    datasource_id: 'entity:node'
+    property_path: field_bio
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_bio
+  field_co_add_to_my_calendar:
+    label: 'Add to my calendar'
+    datasource_id: 'entity:node'
+    property_path: field_co_add_to_my_calendar
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_add_to_my_calendar
+  field_co_category:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_co_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_co_category
+  field_co_conference_languages:
+    label: 'Conference languages'
+    datasource_id: 'entity:node'
+    property_path: field_co_conference_languages
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_co_conference_languages
+  field_co_conference_type:
+    label: 'Conference type'
+    datasource_id: 'entity:node'
+    property_path: field_co_conference_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_co_conference_type
+  field_co_contact_person:
+    label: 'Contact Person'
+    datasource_id: 'entity:node'
+    property_path: field_co_contact_person
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_contact_person
+  field_co_contact_registration:
+    label: 'Contact Person for Registration'
+    datasource_id: 'entity:node'
+    property_path: field_co_contact_registration
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_contact_registration
+  field_co_date:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: field_co_date
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_co_date
+  field_co_date_and_time:
+    label: 'Date and Time'
+    datasource_id: 'entity:node'
+    property_path: field_co_date_and_time
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_co_date_and_time
+  field_co_downloads:
+    label: Downloads
+    datasource_id: 'entity:node'
+    property_path: field_co_downloads
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_co_downloads
+  field_co_enable_registration:
+    label: 'Enable registration (Activation online registration)'
+    datasource_id: 'entity:node'
+    property_path: field_co_enable_registration
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_enable_registration
+  field_co_fee:
+    label: 'Attendance Fee'
+    datasource_id: 'entity:node'
+    property_path: field_co_fee
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_co_fee
+  field_co_host:
+    label: Host
+    datasource_id: 'entity:node'
+    property_path: field_co_host
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_host
+  field_co_invitation_only:
+    label: 'Invitation only'
+    datasource_id: 'entity:node'
+    property_path: field_co_invitation_only
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_invitation_only
+  field_co_location:
+    label: Location
+    datasource_id: 'entity:node'
+    property_path: field_co_location
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_location
+  field_co_logos:
+    label: 'Partner / Sponsoren'
+    datasource_id: 'entity:node'
+    property_path: field_co_logos
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_co_logos
+  field_co_programm:
+    label: 'Conference Programm'
+    datasource_id: 'entity:node'
+    property_path: field_co_programm
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_programm
+  field_co_slideshow:
+    label: 'Conference slideshow'
+    datasource_id: 'entity:node'
+    property_path: field_co_slideshow
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_co_slideshow
+  field_co_teaser_text:
+    label: 'Conference teaser text'
+    datasource_id: 'entity:node'
+    property_path: field_co_teaser_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_co_teaser_text
+  field_co_top_conference:
+    label: 'Top Conference'
+    datasource_id: 'entity:node'
+    property_path: field_co_top_conference
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_co_top_conference
+  field_date_and_time:
+    label: 'Datum und Uhrzeit (Streamlining -> Event Date)'
+    datasource_id: 'entity:node'
+    property_path: field_date_and_time
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_and_time
+  field_event_category:
+    label: 'Kategorie (Event Terms)'
+    datasource_id: 'entity:node'
+    property_path: field_event_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_category
+  field_first_name:
+    label: Vorname
+    datasource_id: 'entity:node'
+    property_path: field_first_name
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_first_name
+  field_linked_in:
+    label: 'Linked IN'
+    datasource_id: 'entity:node'
+    property_path: field_linked_in
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_linked_in
+  field_portrait:
+    label: 'Portrait Bild'
+    datasource_id: 'entity:node'
+    property_path: field_portrait
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_portrait
+  field_position:
+    label: Position/Institution
+    datasource_id: 'entity:node'
+    property_path: field_position
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_position
+  field_sp_title:
+    label: Titel
+    datasource_id: 'entity:node'
+    property_path: field_sp_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_sp_title
+  field_speakers:
+    label: 'Speakers (New)'
+    datasource_id: 'entity:node'
+    property_path: field_speakers
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_speakers
+  field_surname:
+    label: Nachname
+    datasource_id: 'entity:node'
+    property_path: field_surname
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_surname
+  field_top_speaker:
+    label: 'Top Speaker'
+    datasource_id: 'entity:node'
+    property_path: field_top_speaker
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_top_speaker
+  field_topic:
+    label: Thema
+    datasource_id: 'entity:node'
+    property_path: field_topic
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_topic
+  field_xing:
+    label: XING
+    datasource_id: 'entity:node'
+    property_path: field_xing
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_xing
+  ila_conferences_start_date:
+    label: 'Conferences Start Date'
+    property_path: ila_conferences_start_date
+    type: date
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Authored by'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - conference
+        - speaker
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ila_conferences_start_date: {  }
+  hierarchy:
+    fields:
+      field_event_category: taxonomy_term-parent
+      field_topic: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  aggregated_field: {  }
+  entity_status: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  add_url: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_bio
+      - field_co_conference_type
+      - field_co_contact_person
+      - field_co_contact_registration
+      - field_co_fee
+      - field_co_host
+      - field_co_location
+      - field_co_programm
+      - field_co_teaser_text
+      - field_event_category
+      - field_first_name
+      - field_linked_in
+      - field_position
+      - field_sp_title
+      - field_surname
+      - field_xing
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_database

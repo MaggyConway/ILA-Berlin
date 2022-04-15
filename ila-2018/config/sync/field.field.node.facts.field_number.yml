@@ -1,0 +1,21 @@
+uuid: 3be83c6d-f18d-406b-98cb-794d6bc39ebe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number
+    - node.type.facts
+_core:
+  default_config_hash: 0oj7SJ1eMrIP6JBWlGamOY7Cu8cpnYf5vpcHQxQo9yA
+id: node.facts.field_number
+field_name: field_number
+entity_type: node
+bundle: facts
+label: Number
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: integer

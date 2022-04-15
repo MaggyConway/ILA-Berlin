@@ -1,0 +1,21 @@
+uuid: 0351fbd6-4967-47eb-9540-815149f0648d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_left
+    - node.type.section
+  module:
+    - text
+id: node.section.field_text_left
+field_name: field_text_left
+entity_type: node
+bundle: section
+label: 'Text links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

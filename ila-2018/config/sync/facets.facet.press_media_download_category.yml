@@ -1,0 +1,57 @@
+uuid: 1d73ab5f-b58d-4c1d-a2a5-b30df2dd9d59
+langcode: de
+status: true
+dependencies:
+  config:
+    - search_api.index.ila_press_media_downloads
+    - views.view.press_media_download_search
+  module:
+    - search_api
+id: press_media_download_category
+name: 'Press Media Download Category'
+url_alias: press_media_download_category
+weight: 0
+min_count: 1
+show_only_one_result: false
+field_identifier: field_download_category
+facet_source_id: 'search_api:views_block__press_media_download_search__block_1'
+widget:
+  type: ila_checkbox
+  config:
+    show_numbers: false
+    soft_limit: '0'
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+query_operator: or
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: false
+processor_configs:
+  term_weight_widget_order:
+    processor_id: term_weight_widget_order
+    weights:
+      sort: 60
+    settings:
+      sort: ASC
+  translate_entity:
+    processor_id: translate_entity
+    weights:
+      build: 5
+    settings: {  }
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: false

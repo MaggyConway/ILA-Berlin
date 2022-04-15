@@ -1,0 +1,22 @@
+uuid: 62845e36-5593-40c9-9b90-ff928a76a101
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.downloads
+  module:
+    - path
+_core:
+  default_config_hash: hzZww_Aw0V8uIsoz-a9VtaJN0znimjSyAbu4sFvJ0PM
+id: node.downloads.path
+field_name: path
+entity_type: node
+bundle: downloads
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

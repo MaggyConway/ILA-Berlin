@@ -1,0 +1,11 @@
+uuid: ab56ad18-35d2-46b9-a9f5-e9e6ecfce308
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: image_video_2020
+title: 'Image Video 2020'
+content:
+  value: "<drupal-entity data-embed-button=\"media_entity_embed\" data-entity-embed-display=\"view_mode:media.embedded_big\" data-entity-type=\"media\" data-entity-uuid=\"27a50113-a39f-425f-a787-4378e3c49432\"></drupal-entity>\r\n"
+  format: full_html

@@ -1,0 +1,26 @@
+uuid: e10e11ac-e22f-4899-9743-f50a0599e709
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_svg_tag_snippet.field_cc_svg_snippet
+    - paragraphs.paragraphs_type.fl_svg_tag_snippet
+  module:
+    - text
+id: paragraph.fl_svg_tag_snippet.default
+targetEntityType: paragraph
+bundle: fl_svg_tag_snippet
+mode: default
+content:
+  field_cc_svg_snippet:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: b17e3582-55ed-4f07-8865-2cb28e8e10ab
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_cc_partner_logo
+    - media.type.image
+id: media.image.field_cc_partner_logo
+field_name: field_cc_partner_logo
+entity_type: media
+bundle: image
+label: 'Career Center Partner Logo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

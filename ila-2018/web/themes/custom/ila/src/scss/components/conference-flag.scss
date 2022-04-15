@@ -1,0 +1,118 @@
+.path-conference-speakers, .path-all-conferences, .page-node-type-conference, .path-notepad, .path-conference {
+  .flag-flag {
+    a {
+      text-indent: -9999px;
+      font-size: 0;
+      display: block;
+      width: 18px;
+      height: 18px;
+      
+    }
+    &.action-flag a {
+      background: url(../img/add-favorites.png) no-repeat;
+      background-color: rgba(255, 255, 255, 0.3);
+      &:hover {
+        background: url(../img/added-favorites.png) no-repeat;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+    &.action-unflag a {
+      background: url(../img/added-favorites.png) no-repeat;
+      background-color: rgba(255, 255, 255, 0.3);
+      &:hover {
+        background: url(../img/add-favorites.png) no-repeat;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+    .ajax-progress {
+      display: none;
+    }
+  }
+
+  .flag-trash {
+    .flag-flag {
+      // &.action-flag a {
+      //   background: url(../img/add-favorites.png) no-repeat;
+      //   background-color: rgba(255, 255, 255, 0.3);
+      //   //background-size: 18px;
+      //   &:hover {
+      //     background: url(../img/added-favorites.png) no-repeat;
+      //     background-color: rgba(255, 255, 255, 0.3);
+      //   }
+      // }
+      &.action-unflag{
+        a {
+          background: url(../img/remove-favorites.png) no-repeat;
+          background-color: rgba(255, 255, 255, 0.3);
+          background-size: 13px;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .flag__description {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+.page-node-type-conference, .path-conference {
+  .flag-flag {
+    .flag__description{
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      color: $conferences-light;
+      display: block;
+
+      @media #{$m-to-m} {
+        position: static;
+        margin-right: 1.5%;
+      }
+      @media #{$m-to-s} {
+        position: static;
+      }
+    }
+    a {
+      width: 23px;
+      height: 24px; 
+    }
+    &.action-flag a {
+      background: url(../img/add-favorites-big.png) no-repeat;
+      background-size: 23px;
+
+      @media #{$m-to-m} {
+        margin-right: 4%;
+      }
+
+      @media #{$m-to-s} {
+        margin-right: 6%;
+      }
+
+      &:hover {
+        background: url(../img/added-favorites-big.png) no-repeat;
+        background-size: 23px;
+      }
+    }
+    &.action-unflag a {
+      background: url(../img/added-favorites-big.png) no-repeat;
+      background-size: 23px;
+
+      @media #{$m-to-m} {
+        margin-right: 4%;
+      }
+
+      @media #{$m-to-s} {
+        margin-right: 6%;
+      }
+
+      &:hover {
+        background: url(../img/add-favorites-big.png) no-repeat;
+        background-size: 23px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+uuid: 26bfde28-add8-41fe-a11a-cd820ae1b581
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_careercenter
+label: 'News CareerCenter'
+targetEntityType: node
+cache: true

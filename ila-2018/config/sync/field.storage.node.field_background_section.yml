@@ -1,0 +1,19 @@
+uuid: 833becb0-7851-4a37-8184-fcf29d652fc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - colorapi
+    - node
+id: node.field_background_section
+field_name: field_background_section
+entity_type: node
+type: colorapi_color_field
+settings: {  }
+module: colorapi
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

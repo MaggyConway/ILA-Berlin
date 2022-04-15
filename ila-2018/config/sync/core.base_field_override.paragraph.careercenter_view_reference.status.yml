@@ -1,0 +1,22 @@
+uuid: 2482c9da-6189-47d9-a723-56b11fb92557
+langcode: de
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.careercenter_view_reference
+id: paragraph.careercenter_view_reference.status
+field_name: status
+entity_type: paragraph
+bundle: careercenter_view_reference
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Wir bestellen im Namen des Hauptausstellers.'
+  off_label: 'Wir bestellen im eigenen Namen.'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 84f15a54-cd29-49a8-b2c5-9b098087181a
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cc_svg_tag_snippet
+id: paragraph.cc_svg_tag_snippet.status
+field_name: status
+entity_type: paragraph
+bundle: cc_svg_tag_snippet
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

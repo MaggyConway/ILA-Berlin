@@ -1,0 +1,23 @@
+uuid: 5b66c3ef-26ef-4856-8626-88f0c65e1453
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linked_in
+    - node.type.speaker
+  module:
+    - link
+id: node.speaker.field_linked_in
+field_name: field_linked_in
+entity_type: node
+bundle: speaker
+label: 'Linked IN'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

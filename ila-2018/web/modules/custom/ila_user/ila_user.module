@@ -1,0 +1,168 @@
+<?php
+
+/**
+ * @file
+ * Module hooks implementations.
+ */
+
+use Drupal\address\Plugin\Field\FieldWidget\AddressDefaultWidget;
+use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Render\Markup;
+use Drupal\Component\Render\PlainTextOutput;
+use Drupal\Core\Url;
+use Drupal\Core\Path\PathValidator;
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function ila_user_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  if ($context['widget'] instanceof AddressDefaultWidget) {
+    $element['#type'] = 'container';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function ila_user_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $class = 'half';
+  $form['field_salutation']['#attributes']['class'][] = $class;
+  $form['field_title']['#attributes']['class'][] = $class;
+  $form['field_first_name']['#attributes']['class'][] = $class;
+  $form['field_last_name']['#attributes']['class'][] = $class;
+
+  // Add custom submit handler.
+  $form['actions']['submit']['#submit'][] = '_ila_user_register_form_submit';
+
+  // Hide some markup fields.
+  $form['field_account_data_warning']['#access'] = false;
+}
+
+/*
+ * Implemented hook_form_FORM_ID_alter().
+ */
+function ila_user_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if (isset($_GET['pass-reset-token'])) {
+    $form['account']['pass']['#required'] = TRUE;
+  }
+
+  if (!\Drupal::currentUser()->isAnonymous()) {
+    // Temp fix with field groups.
+    $account_field = 'account';
+    $key = array_search($account_field, $form['#fieldgroups']['group_contact_wrapper']->children);
+    if ($key && isset($form['#fieldgroups']['group_password_wrapper'])) {
+      unset($form['#fieldgroups']['group_contact_wrapper']->children[$key]);
+      $form['#fieldgroups']['group_password_wrapper']->children[$key] = $account_field;
+      $form['#group_children']['account'] = 'group_password_wrapper';
+    }
+
+    if (isset($form['#fieldgroups']['group_main_exhibitor']->children)) {
+      foreach ($form['#fieldgroups']['group_main_exhibitor']->children as $form_element_id) {
+        if (isset($form[$form_element_id])) {
+          $form[$form_element_id]['#access'] = FALSE;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Custom submit handler for registration form.
+ */
+function _ila_user_register_form_submit($form, FormStateInterface $form_state) {
+  // Redirect to thank you for registration page.
+  $form_state->setRedirect('entity.node.canonical', ['node' => '50']);
+}
+
+/**
+ * Implements hook_user_login().
+ *
+ * @param $account
+ */
+function ila_user_user_login($account) {
+  $route_name = \Drupal::request()->attributes->get('_route');
+  if ($route_name == 'user.reset.login') {
+    return;
+  }
+  \Drupal::service('request_stack')->getCurrentRequest()->query->set('destination', '/');
+}
+
+/**
+ * Implements hook_user_login().
+ *
+ * @param $account
+ */
+function ila_user_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->id() == 51) {
+    $user_roles = \Drupal::currentUser()->getRoles();
+    $user_id = \Drupal::currentUser()->id();
+
+    if ($user_id == 1 || $user_id == 0) {
+      return;
+    }
+
+    if (!in_array("administrator", $user_roles) && !in_array('editor', $user_roles)) {
+      //user_logout();
+    }
+  }
+}
+
+/**
+ * Implements hook_mail_alter
+ */
+function ila_user_mail_alter(&$message) {
+  $token_service = \Drupal::token();
+  $langcode = $message['langcode'];
+
+  // Disable default email on register.
+  $variables = [];
+  if (isset($message['params']['account'])) {
+    $variables = ['user' => $message['params']['account']];
+  }
+  $email_ids = [
+    //'user_register_pending_approval',
+    'user_register_pending_approval_admin',
+  ];
+  if (!empty($message['id']) && in_array($message['id'], $email_ids)) {
+    $message['send'] = false;
+  }
+
+  $mail_config = \Drupal::configFactory()->getEditable('user.mail');
+  if ($message['id'] == 'user_register_no_approval_required' && $message['langcode'] == 'en') {
+    $token_options = ['langcode' => $langcode, 'callback' => 'user_mail_tokens', 'clear' => TRUE];
+   // $message['subject'] .= PlainTextOutput::renderFromHtml($token_service->replace($mail_config->get('register_no_approval_required.subject'), $variables, $token_options));
+    $message['body'][0] = $token_service->replace($mail_config->get('register_no_approval_required.body'), $variables, $token_options);
+  }
+
+  if ($message['id'] == 'user_password_reset' && $message['langcode'] == 'en') {
+    $token_options = ['langcode' => $langcode, 'callback' => 'user_mail_tokens', 'clear' => TRUE];
+    $message['subject'] = PlainTextOutput::renderFromHtml($token_service->replace($mail_config->get('password_reset.subject'), $variables, $token_options));
+    $message['body'][0] = $token_service->replace($mail_config->get('password_reset.body'), $variables, $token_options);
+  }
+}
+
+function ila_user_tokens($replacements, $data, $options) {
+  if (isset($data['user'])) {
+    $replacements['[user:one-time-login-url]'] = user_pass_reset_url($data['user'], $options);
+    $replacements['[user:cancel-url]'] = user_cancel_url($data['user'], $options);
+  }
+}
+
+/**
+ * Implements hook_mail_alter
+ */
+function ila_user_form_user_pass_reset_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Disable default email on register.
+  $form['head'] = [
+    '#markup' => '<h1>' . t('ILA Berlin 2020 confirmation') . '</h1>',
+    '#weight' => -10,
+  ];
+  $form['message']['#markup'] = '<p>' . t('Please confirm your email address.') . '</p>';
+  unset($form['help']);
+  $form['actions']['submit']['#value'] = t('Confirm');
+}

@@ -1,0 +1,35 @@
+.form-type-checkbox {
+  .jcf-checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    background: #fff;
+    border: 1px solid $conferences-light;
+    height: 17px;
+    width: 17px;
+    margin-top: 2px;
+    vertical-align: top;
+    flex: 0 0 17px;
+    span {
+      position: absolute;
+      display: none;
+      height: 5px;
+      width: 10px;
+      top: 50%;
+      left: 50%;
+      margin: -8px 0 0 -5px;
+      border: 2px solid  $conferences-light;
+      border-width: 0 0 2px 2px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin: -4px 0 0 -5px;
+    }
+    &.jcf-checked {
+      span {
+        display: block;
+      }
+    }
+  }
+}

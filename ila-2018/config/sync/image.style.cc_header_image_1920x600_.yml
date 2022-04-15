@@ -1,0 +1,16 @@
+uuid: 1e979758-de10-45d0-95e6-522174515693
+langcode: en
+status: true
+dependencies: {  }
+name: cc_header_image_1920x600_
+label: 'CC Header image (1920x600)'
+effects:
+  c1b692cd-8291-4b0a-a317-cb590b509c7e:
+    uuid: c1b692cd-8291-4b0a-a317-cb590b509c7e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 600
+      anchor: center-center
+pipeline: image_optimiza

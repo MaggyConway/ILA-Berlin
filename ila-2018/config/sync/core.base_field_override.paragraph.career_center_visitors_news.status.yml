@@ -1,0 +1,22 @@
+uuid: de7b999a-0e74-4735-ab31-5c17d6147a93
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.career_center_visitors_news
+id: paragraph.career_center_visitors_news.status
+field_name: status
+entity_type: paragraph
+bundle: career_center_visitors_news
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

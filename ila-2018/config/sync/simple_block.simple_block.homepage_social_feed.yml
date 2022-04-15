@@ -1,0 +1,11 @@
+uuid: f25aad08-cbb5-484c-94ce-8cf94a5e7a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: homepage_social_feed
+title: 'Homepage social feed'
+content:
+  value: "<div id=\"curator-feed-default-feed-en\">\r\n<div class=\"title-block\">\r\n<h2>Always On Air</h2>\r\n\r\n<div class=\"description\">ILA Berlin Social Media Board</div>\r\n</div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n(function(){\r\nvar i, e, d = document, s = \"script\";i = d.createElement(\"script\");i.async = 1;\r\ni.src = \"https://cdn.curator.io/published/ee12cfdf-7831-4bd7-abd8-6144577cd619.js\";\r\ne = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);\r\n})();\r\n</script>"
+  format: full_html

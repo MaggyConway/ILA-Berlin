@@ -1,0 +1,22 @@
+uuid: 482927da-1c1c-4a69-9930-0d2712a8e87c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _dNbm0V4SWIdjrgYr0Bo9grkethPTqKgCPXrklTpJw8
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access email confirmation'
+  - 'access protected page password screen'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'flag flag'
+  - 'unflag flag'
+  - 'view config_pages entity'
+  - 'view field_date_and_time'
+  - 'view media'
+  - 'view published simple mega menu entities'

@@ -1,0 +1,126 @@
+uuid: 9d49e26f-28f5-46a3-9f40-5d0d5a0be678
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.file
+    - media.type.image
+    - media.type.local_video
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - entity_browser_entity_form
+    - media
+    - views
+_core:
+  default_config_hash: UoGZLPH_DEy28wDjCYqiBKYsKoHlf6l6deygJjqdgPc
+name: media_entity_browser
+label: 'Media Entity Browser'
+display: modal
+display_configuration:
+  width: '1280'
+  height: '940'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  6586703a-6976-4124-8a49-cbb07ceaa3b1:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 6586703a-6976-4124-8a49-cbb07ceaa3b1
+    weight: -10
+    label: Bibliothek
+    id: view
+  866327c5-99c3-476d-a4af-6252d780aab6:
+    settings:
+      form_mode: media_library
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: 'jpg jpeg gif png svg'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: 866327c5-99c3-476d-a4af-6252d780aab6
+    weight: -9
+    label: 'Bild hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  b8f54ade-5dd0-44ea-b048-1803e6b67a5f:
+    settings:
+      form_mode: media_library
+      media_type: audio
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: mp3
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: b8f54ade-5dd0-44ea-b048-1803e6b67a5f
+    weight: -7
+    label: 'Audio File hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  31f805a5-b149-40a1-86f0-e5bcb076122b:
+    settings:
+      form_mode: default
+      media_type: file
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: 'doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: 31f805a5-b149-40a1-86f0-e5bcb076122b
+    weight: -8
+    label: 'Datei hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  a6ecf14b-5fb6-4cfa-9bd4-64a60fd605e0:
+    settings:
+      form_mode: default
+      media_type: local_video
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Dateien auf diese Fläche Ziehen um diese hochzuladen.'
+      max_filesize: 150M
+      extensions: mp4
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Entitäten auswählen'
+    uuid: a6ecf14b-5fb6-4cfa-9bd4-64a60fd605e0
+    weight: -6
+    label: 'Video File hochladen'
+    id: dropzonejs_media_entity_inline_entity_form
+  aae2838a-45e0-493c-af90-175a8993c156:
+    settings:
+      entity_type: media
+      bundle: embedded_video
+      form_mode: default
+      submit_text: 'Save entity'
+    uuid: aae2838a-45e0-493c-af90-175a8993c156
+    weight: 6
+    label: 'Ein remote Video hinzufügen'
+    id: entity_form

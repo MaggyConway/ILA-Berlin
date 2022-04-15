@@ -1,0 +1,15 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.image_fullscreen
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: block_content.image_fullscreen
+target_entity_type_id: block_content
+target_bundle: image_fullscreen
+default_langcode: site_default
+language_alterable: false

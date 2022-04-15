@@ -1,0 +1,637 @@
+.path-events {
+  .layout-container {
+    background: #ffffff;
+    main {
+      background-image: none !important;
+    }
+  }
+  .layout-content {
+    padding-top: 150px;
+
+    @media screen and (max-width: 975px) {
+      padding-top: 105px;
+    }
+    @media screen and (max-width: 609px) {
+      padding-top: 103px;
+    }
+  }
+}
+
+.toolbar-vertical {
+  &.path-career-center {
+    .layout-content {
+      @media screen and (max-width: 609px) {
+        padding-top: 64px;
+      }
+    }
+  }
+}
+
+.view-events,
+.view-aircraft,
+.view-events-conferences-search,
+.view-bdli-events-search {
+  .view-header {
+    font-size: 17px;
+    @extend .h4;
+    margin-bottom: 70px;
+  }
+
+  .view-filters {
+    border-top: 1px solid $c-blue-normal;
+    border-bottom: 1px solid $c-blue-normal;
+    margin-bottom: 55px;
+    .form--inline {
+      display: flex;
+      @media screen and (max-width: 609px) {
+        display: block;
+      }
+      .form-item {
+        background: none;
+        margin-right: 35px;
+        border-bottom: 1px dashed #009cde;
+        width: 270px;
+        height: 100%;
+        label {
+          display: none;
+        }
+        input {
+          border: 0;
+          background: none;
+          outline: 0;
+          line-height: 1.75;
+        }
+      }
+      .form-item-field-date-value {
+        width: 200px !important;
+      }
+      .form-type-select {
+        width: 350px !important;
+      }
+      .chosen-container {
+        width: auto !important;
+        .chosen-choices {
+          border: none;
+          background: none;
+          box-shadow: none;
+          .chosen-search-input {
+            width: auto !important;
+            font-size: 15px !important;
+            color: #71757b !important;
+          }
+        }
+      }
+      .form-actions {
+        margin-top: 8px;
+        input {
+          margin-left: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    form {
+      padding: 20px 10px;
+      .form-radios {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .form-item.form-type-radio {
+        margin: 0;
+        padding-right: 55px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+
+        label {
+          padding: 0;
+          color: $c-purple;
+          font-size: 15px;
+          font-weight: 900;
+          line-height: 2.667;
+          text-transform: uppercase;
+          transition: all .3s;
+          cursor: pointer;
+
+          &:before {
+            display: none;
+          }
+
+          &:hover {
+            color: $c-blue-normal;
+          }
+        }
+
+        input:checked {
+          & + label {
+            color: $c-blue-normal;
+          }
+        }
+      }
+      .form-actions {
+        margin: 0;
+      }
+    }
+  }
+
+  .view-content {
+    .view-grouping-header {
+      color: #009cde;
+      text-transform: uppercase;
+    }
+    .view-grouping-content {
+      .bdli-event-title {
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 300;
+        color: #1d428a;
+        margin-bottom: 10px;
+      }
+      caption {
+        color: #1d428a;
+        .field--name-description {
+           text-transform: none;
+           font-size: 12px;
+        }
+      }
+    }
+    .views-table {
+      margin-bottom: 65px;
+      width: 100%;
+
+      @media #{$m-to-m} {
+        display: block;
+      }
+      caption {
+        @extend .h4;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        text-align: left;
+
+        @media #{$m-to-m} {
+          display: block;
+          margin-bottom: 0;
+          padding-bottom: 15px;
+          border-bottom: 1px solid $c-blue-normal;
+        }
+      }
+      thead {
+        border-bottom: 1px solid $c-blue-normal;
+
+        @media #{$m-to-m} {
+          display: none;
+        }
+      }
+      th {
+        color: $c-purple;
+        font-weight: 900;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-align: left;
+        padding-bottom: 15px;
+      }
+      tbody {
+
+        @media #{$m-to-m} {
+          display: block;
+        }
+
+        tr {
+          border-bottom: 1px solid $c-blue-normal;
+
+          @media #{$m-to-m} {
+            display: block;
+          }
+        }
+        td {
+          padding: 20px 0;
+          vertical-align: middle;
+
+          @media #{$m-to-m} {
+            display: block;
+            padding-top: 0;
+            padding-bottom: 15px;
+          }
+        }
+      }
+
+      td.views-field-title.views-field-body,
+      td.views-field.views-field-title,
+      td.views-field.views-field-title-1 {
+        padding-right: 50px !important;
+
+        color: $c-purple;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        @media #{$m-to-l} {
+          padding-right: 20px;
+        }
+
+        @media #{$m-to-m} {
+          width: 100%;
+          padding-right: 0;
+          padding-top: 20px;
+        }
+
+        p, ul {
+          margin-top: 12px;
+          color: #000000;
+          text-transform: none;
+        }
+
+        ul {
+          margin-top: 0;
+          padding-left: 35px;
+          list-style: none;
+
+          li {
+            position: relative;
+            margin-bottom: 15px;
+
+            &:before {
+              content: "\2022";
+              position: absolute;
+              left: -22px;
+              font-size: 15px;
+              line-height: 1.2;
+            }
+          }
+        }
+      }
+
+      td.views-field-field-ev-venue,
+      td.views-field-field-contact-persons {
+        width: 300px;
+        padding-right: 50px;
+
+        @media #{$m-to-2l} {
+          width: 210px;
+        }
+        @media #{$m-to-l} {
+          width: 180px;
+          padding-right: 20px;
+        }
+        @media #{$m-to-m} {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+      td.views-field.views-field-field-air-category {
+        width: 250px;
+        padding-right: 50px;
+
+        @media #{$m-to-2l} {
+          width: 210px;
+        }
+        @media #{$m-to-l} {
+          width: 180px;
+          padding-right: 20px;
+        }
+        @media #{$m-to-m} {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+      td.views-field-field-date-and-time,
+      td.views-field-field-date-and-time-1 {
+        width: 210px;
+        color: $c-blue-normal;
+
+        @media #{$m-to-l} {
+          width: 150px;
+        }
+        @media #{$m-to-m} {
+          width: 100%;
+        }
+      }
+      td.views-field.views-field-field-air-mtow-kg- {
+        width: 280px;
+
+        @media #{$m-to-l} {
+          width: 150px;
+        }
+        @media #{$m-to-m} {
+          width: 100%;
+        }
+      }
+      td.views-field.views-field-field-air-display-time {
+        color: $c-blue-normal;
+      }
+    }
+  }
+}
+
+.view-events-conferences-search,
+.view-bdli-events-search {
+  max-width: 1145px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  .view-header {
+    position: relative;
+    margin-bottom: 50px;
+    max-height: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid $c-blue-normal;
+    border-width: 1px 0 1px 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    font-size: 15px;
+
+    &.opened {
+      max-height: 1500px;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .conference-filters {
+      margin-bottom: -1px;
+      padding: 30px;
+      width: 100%;
+      max-height: 85px;
+      border-bottom: 1px solid $c-blue-normal;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 17px;
+
+      @media #{$m-to-sm} {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 60px;
+        max-height: 145px;
+      }
+
+      .link-history-back {
+        color: $c-blue;
+      }
+    }
+
+    .filter-open-btn,
+    .reset-facet-filters {
+      position: relative;
+      margin-left: 15%;
+      padding-left: 1.5em;
+      color: $c-blue;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 11px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    .filter-open-btn {
+      &::before {
+        background-image: url('../img/controls-conf-icon.svg');
+      }
+    }
+
+    .reset-facet-filters {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 17px;
+      opacity: 0;
+      transition: .3s;
+
+      &::before {
+        background-image: url('../img/svg/cancel-conf-icon.svg');
+      }
+    }
+
+    .block-ila-reset-link-facets-block {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      white-space: nowrap;
+      min-width: 170px;
+
+      @media #{$m-to-sm} {
+        top: 80px;
+        right: 60px;
+      }
+    }
+
+    .block-facets {
+      margin: 40px 0;
+      padding: 0 40px;
+      width: 30%;
+      border-right: 1px solid #eeeeee;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+
+      @media #{$m-to-2l} {
+        width: 50%;
+      }
+
+      @media #{$m-to-l} {
+        ul {
+          padding: 0;
+        }
+      }
+
+      @media #{$m-to-sm} {
+        width: 100%;
+      }
+    }
+
+    .facets-widget-ila_checkbox {
+      > ul {
+        padding-left: 0;
+      }
+      .facet-item--expanded {
+        ul {
+          padding-left: 10px;
+        }
+      }
+
+      .item-list__checkbox {
+        padding: 0;
+      }
+
+      .facet-item {
+        list-style-type: none;
+        margin: 10px 0;
+
+        label {
+        }
+      }
+    }
+  }
+  .view-filters {
+    margin-bottom: 25px;
+    border: 0;
+    @media (min-width: 768px) {
+      position: absolute;
+      top: -130px;
+      right: 235px;
+      margin-bottom: 0;
+      max-width: 490px;
+      padding-right: 15px;
+      display: flex;
+      justify-content: flex-end;
+      transform: translateX(50%);
+    }
+    .form--inline {
+      .form-item {
+        margin-top: 15px;
+      }
+    }
+  }
+  .view-content {
+    margin-bottom: 60px;
+
+    .views-field-field-co-add-to-my-calendar {
+      width: 2.2%;
+
+      .addtocalendar {
+        display: block;
+      }
+
+      .atcb-link {
+        font-size: 0;
+        width: 25px;
+        height: 25px;
+        background: url('../img/svg/add-calendar-icon-blue.svg') center no-repeat;
+        background-size: 15px 20px;
+        box-shadow: none;
+        padding: 0;
+        @media #{$m-to-m} {
+          margin-left: auto;
+        }
+      }
+
+      .atcb-list {
+        right: 0;
+        left: 0;
+        padding: 10px;
+        border: 1px solid #bababa;
+        border-radius: 2px;
+        box-shadow: 0 0 5px #aaa;
+        @media (min-width: 768px) {
+          left: auto;
+        }
+        a {
+          color: $c-blue;
+          font-family: $main-font;
+          text-decoration: none;
+          font-weight: 100;
+          padding: 5px 15px;
+        }
+      }
+
+      .atcb-item {
+        padding: 0;
+        margin: 3px 0;
+        &:hover {
+          background: none !important;
+        }
+      }
+    }
+  }
+  .view-empty {
+    margin-bottom: 60px;
+  }
+}
+
+.conference-filters-opened {
+  .view-events-conferences-search,
+  .view-bdli-events-search {
+    .view-header {
+      max-height: 1500px;
+
+      .reset-facet-filters {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.view-bdli-events-search {
+  @media(min-width: 768px) {
+    margin-top: 60px;
+  }
+}
+
+.node--type-event {
+  &.node--view-mode-full {
+    position: relative;
+    .field--name-field-co-add-to-my-calendar {
+      @media (min-width: 768px) {
+        position: absolute;
+        right: 10px;
+        top: 55px;
+      }
+    }
+    .addtocalendar {
+      display: block;
+    }
+    .atcb-link {
+      font-size: 0;
+      width: 25px;
+      height: 25px;
+      background: url('../img/svg/add-calendar-icon-blue.svg') center no-repeat;
+      background-size: 15px 20px;
+      box-shadow: none;
+      @media #{$m-to-m} {
+        margin-left: auto;
+      }
+    }
+    .atcb-list {
+      right: 0;
+      left: auto;
+      padding: 10px;
+      border: 1px solid #bababa;
+      border-radius: 2px;
+      box-shadow: 0 0 5px #AAA;
+      a {
+        color: $c-blue;
+        line-height: 1.3em;
+        vertical-align: middle;
+        padding: 5px 15px;
+      }
+    }
+
+    .atcb-item {
+      margin: 3px 0;
+    }
+  }
+  .field--name-field-date-and-time {
+    margin-bottom: 10px;
+  }
+  .field--name-field-ev-venue {
+    margin-bottom: 20px;
+  }
+  .field--type-text-with-summary {
+    column-count: auto !important;
+  }
+  .field--name-body {
+    ul {
+      margin-bottom: 20px;
+    }
+  }
+}

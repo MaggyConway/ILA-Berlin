@@ -1,0 +1,27 @@
+uuid: bc710245-db8c-4fef-bb75-79869fb1ea2f
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.media
+  module:
+    - system
+  theme:
+    - ila
+_core:
+  default_config_hash: q5HNcNohzRhDa5H7xxnY4hcLeuqtLSfMkEtUMf54f_I
+id: ila_media_links
+theme: ila
+region: header_top
+weight: -6
+provider: null
+plugin: 'system_menu_block:media'
+settings:
+  id: 'system_menu_block:media'
+  label: Medien
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

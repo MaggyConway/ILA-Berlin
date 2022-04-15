@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_fax
+    - node.type.co_exhibitor
+  module:
+    - telephone
+id: node.co_exhibitor.field_primary_fax
+field_name: field_primary_fax
+entity_type: node
+bundle: co_exhibitor
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

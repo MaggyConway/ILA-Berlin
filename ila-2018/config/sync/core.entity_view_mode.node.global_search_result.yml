@@ -1,0 +1,10 @@
+uuid: 609f83a4-6cc1-4cff-a4d0-68125df4ff53
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.global_search_result
+label: 'Global search result'
+targetEntityType: node
+cache: true

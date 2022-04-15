@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.request_fb_1.field_aircraft_type
+    - field.field.node.request_fb_1.field_overall_length_in_m
+    - field.field.node.request_fb_1.field_product_group
+    - field.field.node.request_fb_1.field_product_group_index
+    - field.field.node.request_fb_1.field_registration
+    - field.field.node.request_fb_1.field_registration_aircrafts
+    - field.field.node.request_fb_1.field_request_fb1_aircraft_cat
+    - field.field.node.request_fb_1.field_request_fb1_amount_of_plan
+    - field.field.node.request_fb_1.field_request_fb1_date_arrival
+    - field.field.node.request_fb_1.field_request_fb1_date_departure
+    - field.field.node.request_fb_1.field_request_fb1_herewith_conf
+    - field.field.node.request_fb_1.field_request_fb1_please_note
+    - field.field.node.request_fb_1.field_request_fb1_plus_advert
+    - field.field.node.request_fb_1.field_request_fb1_required_serv
+    - field.field.node.request_fb_1.field_request_fb1_type_of_partic
+    - field.field.node.request_fb_1.field_weight_in_kg_mtow_
+    - field.field.node.request_fb_1.field_wing_or_rotor_span_in_m
+    - node.type.request_fb_1
+  module:
+    - user
+id: node.request_fb_1.teaser
+targetEntityType: node
+bundle: request_fb_1
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_aircraft_type: true
+  field_overall_length_in_m: true
+  field_product_group: true
+  field_product_group_index: true
+  field_registration: true
+  field_registration_aircrafts: true
+  field_request_fb1_aircraft_cat: true
+  field_request_fb1_amount_of_plan: true
+  field_request_fb1_date_arrival: true
+  field_request_fb1_date_departure: true
+  field_request_fb1_herewith_conf: true
+  field_request_fb1_please_note: true
+  field_request_fb1_plus_advert: true
+  field_request_fb1_required_serv: true
+  field_request_fb1_type_of_partic: true
+  field_weight_in_kg_mtow_: true
+  field_wing_or_rotor_span_in_m: true
+  langcode: true

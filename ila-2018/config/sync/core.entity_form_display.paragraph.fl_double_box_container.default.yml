@@ -1,0 +1,48 @@
+uuid: 8a2e0031-e553-457d-8815-3a040ff809f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_double_box_container.field_cc_anchor
+    - field.field.paragraph.fl_double_box_container.field_double_box_item
+    - field.field.paragraph.fl_double_box_container.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_double_box_container
+  module:
+    - paragraphs
+id: paragraph.fl_double_box_container.default
+targetEntityType: paragraph
+bundle: fl_double_box_container
+mode: default
+content:
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_double_box_item:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: fl_double_box
+    third_party_settings: {  }
+    region: content
+  field_paragraph_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

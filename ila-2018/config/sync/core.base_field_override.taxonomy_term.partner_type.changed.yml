@@ -1,0 +1,18 @@
+uuid: 51116492-42c6-40c5-8385-f110b40822ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.partner_type
+id: taxonomy_term.partner_type.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: partner_type
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

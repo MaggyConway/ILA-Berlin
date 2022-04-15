@@ -1,0 +1,18 @@
+uuid: 64b60f85-3939-4d02-8b62-5dc06bb1aa53
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.bdli_event
+id: node.bdli_event.metatag
+field_name: metatag
+entity_type: node
+bundle: bdli_event
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

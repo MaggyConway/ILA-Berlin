@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.request_b
+  content:
+    - 'block_content:page_description:6c3983d4-b6f3-4e7d-8c07-3c28a1d5fed9'
+  module:
+    - block_content
+    - node
+    - panels
+id: request_b-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    c9b5ee0a-1886-451b-aaa7-14a8d68d9f9b:
+      id: exhibitor_registration
+      label: 'Exhibitor registration'
+      provider: node
+      label_display: '0'
+      type: reqest_b
+      show_help: 0
+      region: content
+      weight: 1
+      uuid: c9b5ee0a-1886-451b-aaa7-14a8d68d9f9b
+      context_mapping: {  }
+    9090fec3-21c3-4cb0-aac6-5223ff3875d5:
+      id: 'block_content:6c3983d4-b6f3-4e7d-8c07-3c28a1d5fed9'
+      label: 'REGISTRATION OF CHALETS'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 9090fec3-21c3-4cb0-aac6-5223ff3875d5
+      context_mapping: {  }
+  id: panels_variant
+  uuid: f18b9d52-2722-4ecd-a58c-4a67b2ecb91b
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: 'REGISTRATION OF CHALETS'
+  storage_type: page_manager
+  storage_id: request_b-panels_variant-0
+  builder: standard
+page: request_b
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

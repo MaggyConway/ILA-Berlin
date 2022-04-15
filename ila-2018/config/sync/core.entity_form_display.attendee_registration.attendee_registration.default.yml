@@ -1,0 +1,168 @@
+uuid: 51cdc04f-13fb-42ad-bc1a-39a7eb38286c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.attendee_registration.attendee_registration.field_ar_0zip_code
+    - field.field.attendee_registration.attendee_registration.field_ar_branch
+    - field.field.attendee_registration.attendee_registration.field_ar_city
+    - field.field.attendee_registration.attendee_registration.field_ar_company
+    - field.field.attendee_registration.attendee_registration.field_ar_conference
+    - field.field.attendee_registration.attendee_registration.field_ar_country
+    - field.field.attendee_registration.attendee_registration.field_ar_email
+    - field.field.attendee_registration.attendee_registration.field_ar_fax
+    - field.field.attendee_registration.attendee_registration.field_ar_first_name
+    - field.field.attendee_registration.attendee_registration.field_ar_last_name
+    - field.field.attendee_registration.attendee_registration.field_ar_phone
+    - field.field.attendee_registration.attendee_registration.field_ar_position
+    - field.field.attendee_registration.attendee_registration.field_ar_registration_confirmed
+    - field.field.attendee_registration.attendee_registration.field_ar_salutation
+    - field.field.attendee_registration.attendee_registration.field_ar_street
+  module:
+    - address
+    - ila_attendee_registration
+    - telephone
+id: attendee_registration.attendee_registration.default
+targetEntityType: attendee_registration
+bundle: attendee_registration
+mode: default
+content:
+  field_ar_0zip_code:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ar_branch:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ar_city:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ar_company:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ar_conference:
+    type: options_select
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ar_country:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: address_country_default
+    region: content
+  field_ar_email:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_ar_fax:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_ar_first_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ar_last_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ar_phone:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_ar_position:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ar_registration_confirmed:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_ar_salutation:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ar_street:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

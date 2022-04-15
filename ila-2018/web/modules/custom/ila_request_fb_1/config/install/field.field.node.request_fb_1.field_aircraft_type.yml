@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aircraft_type
+    - node.type.request_fb_1
+id: node.request_fb_1.field_aircraft_type
+field_name: field_aircraft_type
+entity_type: node
+bundle: request_fb_1
+label: 'Aircraft type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

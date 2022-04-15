@@ -1,0 +1,18 @@
+uuid: 7be0ed66-077b-4bf1-9838-00affd977f44
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.future_lab
+id: node.future_lab.title
+field_name: title
+entity_type: node
+bundle: future_lab
+label: Titel
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

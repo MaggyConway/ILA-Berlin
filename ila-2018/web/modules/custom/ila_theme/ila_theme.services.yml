@@ -1,0 +1,7 @@
+services:
+  theme.negotiator.ila_theme:
+    class: Drupal\ila_theme\Theme\IlaThemeswitcherNegotiator
+    arguments:
+      - '@path.matcher'
+    tags:
+      - { name: theme_negotiator, priority: 10 }

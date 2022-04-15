@@ -1,0 +1,25 @@
+uuid: 9701bd8d-ef7a-4736-8707-7823f6ea33fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_ajax
+third_party_settings:
+  contact_ajax:
+    enabled: true
+    prefix_id: ''
+    render_selector: ''
+    confirmation_type: 3
+    load_from_message:
+      value: "<p>Thank you for your message!</p>\r\n"
+      format: filtered_html
+_core:
+  default_config_hash: U1pa9LoEKgJLRHd8KgPbHli6-JhVhx05oDcMCS4e5WY
+id: contact
+label: Contact
+recipients:
+  - ila@messe-berlin.de
+reply: "Thank you for your message and your interest in ILA Berlin 2020. This is an automatic confirmation, please do not reply.\r\nWe will answer your request as soon as possible.\r\n\r\nDon’t miss our ILA News. Follow us on our Social Media Channels and subscribe to our Newsletter on www.ila-berlin.de/en/newsletter.\r\n\r\nWe hope to see you at ILA Berlin in May.\r\n\r\nYours\r\n\r\nILA Berlin Team"
+weight: 0
+message: ''
+redirect: ''

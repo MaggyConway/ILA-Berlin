@@ -1,0 +1,17 @@
+name: 'Block - Video'
+description: 'Block content - "Video" bundle configuration'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - block_content
+  - ds
+  - field
+  - file
+  - filefield_paths
+  - ila_block_base
+  - ila_core
+  - ila_video_popup
+  - image
+  - text
+  - video
+package: ILA

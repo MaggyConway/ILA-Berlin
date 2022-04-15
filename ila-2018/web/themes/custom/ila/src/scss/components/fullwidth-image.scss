@@ -1,0 +1,10 @@
+.paragraph--type--image-full {
+  margin-bottom: 45px;
+
+  .field--name-field-if-image,
+  .field--name-field-media {
+    img {
+      width: 100%;
+    }
+  }
+}

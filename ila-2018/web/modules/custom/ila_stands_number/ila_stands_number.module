@@ -1,0 +1,55 @@
+<?php
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function ila_stands_number_theme($existing, $type, $theme, $path) {
+  return array(
+    'ila_radios' => [
+      'render element' => 'element',
+    ],
+  );
+}
+
+function template_preprocess_ila_radios(&$variables) {
+  $variables['children'] = Element::children($variables['element']);
+}
+
+/**
+ * @param array $suggestions
+ * @param array $variables
+ */
+function ila_stands_number_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['element']['#wrapped_label'])) {
+    //$suggestions[] = 'form_element__wrapped';
+  }
+}
+
+/**
+ * @param $variables
+ */
+function ila_stands_number_preprocess_form_element__wrapped(&$variables) {
+  $variables['label']['#theme'] = 'form_element_label__open';
+  $variables['label_open'] = $variables['label'];
+  unset($variables['label']);
+
+  $variables['title'] = str_replace("\n", '', $variables['element']['#title']);
+  $data = explode('/', $variables['title']);
+  $variables['values'] = $data;
+}
+
+/**
+ * @param $element
+ * @param $form_state
+ * @return mixed
+ */
+function ila_stands_number_process_radios($element, $form_state) {
+  $options = $element['#options'];
+  foreach($options as $delta => $items) {
+    //$element[$delta]['#wrapped_label'] = TRUE;
+  }
+
+  return $element;
+}

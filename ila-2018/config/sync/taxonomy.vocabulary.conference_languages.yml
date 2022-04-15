@@ -1,0 +1,8 @@
+uuid: de3d960c-dc1c-43f4-8ddb-a5dd79278d0f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Conference languages'
+vid: conference_languages
+description: ''
+weight: 0

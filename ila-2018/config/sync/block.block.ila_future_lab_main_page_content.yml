@@ -1,0 +1,22 @@
+uuid: 64211757-d4a8-4573-8963-93687a45c62a
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ila_future_lab
+_core:
+  default_config_hash: WTJ4GaCWyrLyDp8RaXXnV1E5h1WnqxebL_cKmw3MiUU
+id: ila_future_lab_main_page_content
+theme: ila_future_lab
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

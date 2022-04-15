@@ -1,0 +1,24 @@
+name: Co-exhibitor
+description: 'Provides Co-exhibitor content type and related configuration. Contains registration info about co-exhibitors.'
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - address
+  - block_content
+  - content_translation
+  - field
+  - field_group
+  - ila_main_exhibitor
+  - ila_node_base
+  - ila_partial_validation
+  - language
+  - link
+  - markup
+  - menu_ui
+  - node
+  - options
+  - page_manager
+  - panels
+  - path
+  - telephone
+  - user

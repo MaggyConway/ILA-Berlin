@@ -1,0 +1,114 @@
+$container-gutter: 15px;
+$container: 1130px + $container-gutter * 2;
+$container-small: 890px + $container-gutter * 2;
+$container-wide: 1350 + $container-gutter * 2;
+$col-gutter: $container-gutter;
+
+.clearfix {
+  @include clearfix;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-gutter;
+  padding-left: $container-gutter;
+  display: block;
+  width: auto;
+  max-width: $container;
+
+  &--small {
+    max-width: $container-small;
+  }
+
+  &--wide {
+    max-width: $container-wide;
+  }
+}
+
+.row {
+  @include clearfix;
+
+  margin-right: -$col-gutter;
+  margin-left: -$col-gutter;
+  display: block;
+}
+
+.col {
+  padding-right: $col-gutter;
+  padding-left: $col-gutter;
+  display: block;
+  float: left;
+}
+
+.layout-container {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.page-node-type-career-center,
+.path-bookmarks {
+  .layout-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* stylelint-disable */
+
+.node--type-career-center {
+  > .layout__region--content {
+    > .field--name-field-paragraph-reference {
+      > .field__item {
+        margin-bottom: 60px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable */
+
+// body:not(.path-frontpage):not(.page-node-type-section):not(.page-node-type-basic-page):not(.path-career-center):not(.page-node-type-conference):not(.path-conferences):not(.path-conference) {
+//   .layout-content {
+//     position: relative;
+//     margin-bottom: -177px;
+//     padding-top: 107px; // header height
+//     padding-bottom: 177px; // footer heigth
+//     box-sizing: border-box;
+//     min-height: 100vh;
+
+//     .region-content {
+//       @extend .container;
+
+//       padding-top: 120px;
+//       padding-bottom: 50px;
+
+//       @media screen and (max-width: 975px) {
+//         padding-top: 70px;
+//       }
+
+//       @media screen and (max-width: 609px) {
+//         padding-top: 40px;
+//       }
+//     }
+//   }
+
+//   &.toolbar-horizontal {
+//     .layout-content {
+//       min-height: calc(100vh - 39px); // toolbar height
+//     }
+//   }
+
+//   &.toolbar-tray-open {
+//     .layout-content {
+//       min-height: calc(100vh - 80px); // toolbar height
+//     }
+//   }
+// }

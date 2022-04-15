@@ -1,0 +1,19 @@
+uuid: 3d744afd-5120-423f-b57a-5622b80562c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - user
+id: user.field_user_subtitle
+field_name: field_user_subtitle
+entity_type: user
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

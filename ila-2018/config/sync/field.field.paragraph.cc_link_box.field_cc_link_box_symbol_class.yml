@@ -1,0 +1,19 @@
+uuid: 90e2e3c2-c21a-479c-9be8-2f5df15a498a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_link_box_symbol_class
+    - paragraphs.paragraphs_type.cc_link_box
+id: paragraph.cc_link_box.field_cc_link_box_symbol_class
+field_name: field_cc_link_box_symbol_class
+entity_type: paragraph
+bundle: cc_link_box
+label: 'Symbol class'
+description: 'Like <em>fa-twitter</em> or <em>fa-facebook</em>. See <a href="http://fontawesome.io/icons/">http://fontawesome.io/icons/</a> for a full list.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

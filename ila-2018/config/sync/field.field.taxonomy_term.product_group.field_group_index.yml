@@ -1,0 +1,21 @@
+uuid: ad6691dc-09fc-468a-a7dd-421966f18a55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_group_index
+    - taxonomy.vocabulary.product_group
+_core:
+  default_config_hash: CTrFXx4_5WiV6P5YF-2rqvADADPiOs5sNu3LUh1jr4U
+id: taxonomy_term.product_group.field_group_index
+field_name: field_group_index
+entity_type: taxonomy_term
+bundle: product_group
+label: Index
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

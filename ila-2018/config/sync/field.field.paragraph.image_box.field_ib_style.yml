@@ -1,0 +1,21 @@
+uuid: 45622a3d-1df4-4b5e-8566-86bfde5a31dd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ib_style
+    - paragraphs.paragraphs_type.image_box
+  module:
+    - options
+id: paragraph.image_box.field_ib_style
+field_name: field_ib_style
+entity_type: paragraph
+bundle: image_box
+label: 'Ausrichtung Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

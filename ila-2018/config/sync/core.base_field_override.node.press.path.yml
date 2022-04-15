@@ -1,0 +1,22 @@
+uuid: e282aab3-ab64-41be-8c2c-c1532e19c2c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press
+  module:
+    - path
+_core:
+  default_config_hash: tMmuP_Fi_7UbY0AXIEs1Io_Ehz3q3OsCKFv5VPg2ZNE
+id: node.press.path
+field_name: path
+entity_type: node
+bundle: press
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

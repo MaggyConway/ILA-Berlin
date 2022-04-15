@@ -1,0 +1,48 @@
+uuid: 75ffa8e2-baa7-4d2a-8550-ccc932bd8dce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_testimonials_container.field_cc_anchor
+    - field.field.paragraph.fl_testimonials_container.field_paragraph_reference
+    - field.field.paragraph.fl_testimonials_container.field_paragraph_title
+    - paragraphs.paragraphs_type.fl_testimonials_container
+  module:
+    - paragraphs
+id: paragraph.fl_testimonials_container.default
+targetEntityType: paragraph
+bundle: fl_testimonials_container
+mode: default
+content:
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_reference:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: fl_testimonial
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

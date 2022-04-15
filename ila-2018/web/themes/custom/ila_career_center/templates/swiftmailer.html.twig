@@ -1,0 +1,130 @@
+{#
+/**
+ * @file
+ * The default template file for e-mails.
+ *
+ * Available variables:
+ * - subject: The subject.
+ * - body: The message content.
+ * - message: The $message array created and used in the mail building
+ *   procedure. Its content varies between cases, but typically contains at
+ *   least the following elements:
+ *   - id: The message identifier.
+ *   - module: The module that handles the building of the message.
+ *   - key: The key of the message.
+ *   - to: The recipient email address.
+ *   - from: The email address of the sender.
+ *   - langcode: The langcode to use to compose the e-mail.
+ *   - params: The message parameters.
+ *
+ * This template may be overriden by module and/or mail key, using any of the
+ * following template names:
+ * - swiftmailer.html.twig: global, used by default.
+ * - swiftmailer--mymodule.html.twig: only emails sent by the module "mymodule".
+ * - swiftmailer--mymodule--test.html.twig: only emails by the module
+ *   "mymodule" with key "test".
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_swiftmailer()
+ *
+ * @ingroup themeable
+ */
+#}
+<html>
+<head>
+  <style type="text/css">
+    table tr td {
+      font-family: Arial;
+      font-size: 15px;
+      line-height: 1.5em;
+      color: black;
+    }
+    li {
+      list-style-type: none;
+      color: #1d428a;
+      font-size: 13px;
+    }
+    a {
+      color: #2dccd3;
+      text-decoration: none;
+    }
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  </style>
+</head>
+<body style="">
+<div style="">
+  <div style="">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+           align="center" width="100%" style="padding-bottom: 18px">
+      <tbody>
+      <tr>
+        <td style="">
+            {{ body }}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="padding-bottom: 10px">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+           align="center" width="100%" style="">
+      <tbody>
+      <tr>
+        <td style="">
+          <p style="color: #1d428a;">{{ '--' }}</p>
+          <div style="font-size: 17px; color: #1d428a; font-weight: bold">
+            <p>{{ 'Your team of ILA Berlin'|t }}</p>
+          </div>
+          <ul>
+            <li>{{ 'Messe Berlin GmbH'|t }}</li>
+            <li>{{ 'Messedamm 22'|t }}</li>
+            <li>{{ '14055 Berlin, Germany'|t }}</li>
+          </ul>
+          <ul>
+            <li>{{ 'Phone +49 30 3038 2153'|t }}</li>
+            <li>{{ 'Fax +49 30 3038 2053'|t }}</li>
+            <li><a href="mailto:exhibitor@ila-berlin.de">{{ 'E-Mail exhibitor@ila-berlin.de'|t }}</a></li>
+            <li><a href="https://www.ila-berlin.de">{{ 'www.ila-berlin.de'|t }}</a></li>
+          </ul>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  <div style="padding-bottom: 20px">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+           align="center" width="100%" style="">
+      <tbody>
+      <tr>
+        <td>
+          <img src="image:/themes/custom/ila/src/img/e-mail_banner.png"
+               alt="alt_text" border="0" align="center"
+               style="width: 432px; height: 56px;">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="padding-bottom: 20px">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+           align="center" width="100%" style="color: #1d428a;">
+      <tbody>
+      <tr>
+        <td>
+          <p style="max-width: 400px; color: #1d428a;">
+           {{ 'Management board: Dr. Christian Göke (CEO), Dirk Hoffmann (CFO)
+            Chairman of the supervisory board: Wolf-Dieter Wolf
+            District Court: Amtsgericht Charlottenburg, HRB 5484 B (Commercial Code)' |t
+             }}
+          </p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

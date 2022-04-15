@@ -1,0 +1,7 @@
+name: 'Partial validation for Field Group'
+type: module
+description: 'Allows to save the form even when not all required fields are filled in'
+core_version_requirement: ^8 || ^9
+package: ILA
+dependencies:
+  - field_group

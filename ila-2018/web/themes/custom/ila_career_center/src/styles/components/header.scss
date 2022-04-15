@@ -1,0 +1,332 @@
+/* stylelint-disable */
+
+.header {
+  padding-top: 0;
+  width: 100%;
+
+  &__bottom {
+    padding: 25px 50px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: $career-dark;
+    transition: .5s;
+
+    .region-header-bottom {
+      display: flex;
+      align-items: center;
+
+      .menu--career-center {
+        width: 75%;
+
+        .menu {
+          margin: 0;
+          display: flex;
+          justify-content: space-between;
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          a {
+            padding: 1em;
+            color: $career-green;
+          }
+        }
+
+        @media screen and (max-width: 975px) {
+          display: none;
+        }
+      }
+    }
+
+    @media #{$m-to-m} {
+      display: none;
+    }
+  }
+
+  .block-system-branding-block {
+    width: 25%;
+    text-align: left;
+    transition: all .05s;
+    transition-delay: .2s;
+
+    &.logo-hide {
+      opacity: 0;
+    }
+
+    img {
+      max-width: 160px;
+    }
+
+    @media #{$m-to-m} {
+      margin: 0 auto;
+    }
+  }
+  // overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // .menu--main {
+  //   margin-right: auto;
+  //   margin-left: auto;
+  //
+  //   @media screen and (max-width: 975px) {
+  //     margin-left: 0;
+  //   }
+  // }
+
+  &.is-sticky {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+
+    .header__bottom {
+      position: relative;
+      top: 52px;
+      padding-top: 60px;
+      background: linear-gradient(
+          181.37deg,
+          rgba(#009cde, .85) 0%,
+          rgba(#0199db, .85) 29.87%,
+          rgba(#1d428a, .85) 100%
+        ),
+        url('../../img/header_bg_2.jpg') top center no-repeat;
+      background-size: cover;
+    }
+
+    .region-header-bottom {
+      position: relative;
+      display: flex;
+
+      #block-logoparthercountry {
+        display: block;
+
+        h2 {
+          display: none;
+        }
+
+        .logo-partner-country {
+          position: relative;
+          margin-top: 16%;
+
+          img {
+            width: auto;
+            height: 80px;
+          }
+        }
+      }
+    }
+
+    #block-ila-branding {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-right: auto;
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      @media screen and (max-width: 1280px) {
+        // display: none;
+        position: static;
+        margin: auto 0;
+      }
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    .header-bottom__menu {
+      padding: 5px 0;
+      border-bottom: none;
+    }
+
+    .menu--main {
+      margin-right: auto;
+      margin-left: auto;
+
+      // .menu--main {
+      //   margin-left: auto;
+      // }
+
+      @media screen and (max-width: 975px) {
+        margin-left: 0;
+      }
+
+      // @media screen and (max-width: 975px) {
+      //   padding-top: 35px;
+      //   padding-bottom: 35px;
+      //   border-bottom: 1px solid $c-white;
+      //   width: 100%;
+      // }
+    }
+  }
+}
+// .toolbar-horizontal {
+//   .is-sticky .header__bottom {
+//     margin-top: 39px;
+//   }
+//   &.toolbar-tray-open {
+//     .is-sticky .header__bottom {
+//       margin-top: 80px;
+//     }
+//   }
+// }
+
+#block-ila-career-center-language-switcher-full {
+  display: none;
+
+  .links {
+    li {
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      &.is-active {
+        display: none;
+      }
+    }
+
+    .language-link {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $c-blue-normal;
+    }
+
+    @media screen and (max-width: 975px) {
+      @include list-reset;
+    }
+
+    @media screen and (max-width: 975px) {
+      padding-left: 50px;
+      width: 100%;
+      border-top: 1px solid $c-white;
+      border-bottom: 1px solid $c-white;
+    }
+  }
+
+  @media #{$m-to-m} {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+#block-media-2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: none;
+
+  @media screen and (max-width: 975px) {
+    padding: 50px;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+#block-ila-media-links-second {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: none;
+
+  .menu {
+    &__item {
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+
+      > a {
+        position: relative;
+        padding-right: 35px;
+        display: block;
+        font-weight: 400;
+        color: $c-white;
+
+        &::after {
+          position: absolute;
+          right: 0;
+          width: 16px;
+          height: 16px;
+          content: '';
+          background: url(../../img/svg/camera-white.svg) no-repeat center;
+
+          @include absolute-vertical-center;
+        }
+
+        &.icon-downloads {
+          &::after {
+            background: url(../../img/svg/download-white.svg) no-repeat center;
+          }
+        }
+      }
+    }
+
+    &--media {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: 975px) {
+    padding: 50px;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+#block-ila-career-center-forms-links-second {
+  display: none;
+
+  .menu {
+    &__item {
+      margin-right: 2px;
+      width: 50%;
+      text-align: center;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      > a {
+        padding: 15px;
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        color: $c-blue;
+        background-color: rgba($c-white, .6);
+        transition: .3s;
+
+        &:hover {
+          background-color: rgba($c-white, .85);
+        }
+      }
+    }
+
+    &--form {
+      margin: 0;
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 975px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.mobile-menu__trigger {
+  display: none;
+
+  @media screen and (max-width: 975px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* stylelint-enable */

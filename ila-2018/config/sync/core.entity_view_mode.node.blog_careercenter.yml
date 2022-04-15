@@ -1,0 +1,10 @@
+uuid: 758b932e-300f-443b-8487-e29d509e0407
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blog_careercenter
+label: 'Blog CareerCenter'
+targetEntityType: node
+cache: true

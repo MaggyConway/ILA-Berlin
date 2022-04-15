@@ -1,0 +1,12 @@
+id: file_info_short
+label: 'File Info - Short'
+ui_limit: downloads|token
+properties:
+  content:
+    value: '[node:field_file_private:entity:size]'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node
+langcode: de

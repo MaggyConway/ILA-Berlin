@@ -1,0 +1,23 @@
+uuid: 197a384f-2b33-4767-8ecd-20a50107712a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_image_bool
+    - paragraphs.paragraphs_type.fl_box
+id: paragraph.fl_box.field_background_image_bool
+field_name: field_background_image_bool
+entity_type: paragraph
+bundle: fl_box
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

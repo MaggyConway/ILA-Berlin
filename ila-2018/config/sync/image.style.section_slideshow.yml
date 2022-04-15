@@ -1,0 +1,16 @@
+uuid: e063132e-7036-4dc7-a08d-e3be0cc5d8a1
+langcode: en
+status: true
+dependencies: {  }
+name: section_slideshow
+label: 'Section - Slideshow (1115x650)'
+effects:
+  bf69015f-f988-464c-b7c4-185b1d8ea3e4:
+    uuid: bf69015f-f988-464c-b7c4-185b1d8ea3e4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1115
+      height: 650
+      anchor: center-center
+pipeline: image_optimiza

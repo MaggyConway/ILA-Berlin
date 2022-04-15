@@ -1,0 +1,16 @@
+uuid: 0701169a-e50e-4666-a277-6e0e83d35528
+langcode: en
+status: true
+dependencies: {  }
+name: pt_text_box
+label: 'PT Text box'
+effects:
+  c7dc122b-1420-4f9c-9556-2a5816806119:
+    uuid: c7dc122b-1420-4f9c-9556-2a5816806119
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 320
+      anchor: center-center
+pipeline: company_list_optimiz

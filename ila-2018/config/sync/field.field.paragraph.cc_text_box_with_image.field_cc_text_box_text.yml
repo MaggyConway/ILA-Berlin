@@ -1,0 +1,21 @@
+uuid: 7c50aa3d-0b14-40af-a720-bd45e0b7974d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_text_box_text
+    - paragraphs.paragraphs_type.cc_text_box_with_image
+  module:
+    - text
+id: paragraph.cc_text_box_with_image.field_cc_text_box_text
+field_name: field_cc_text_box_text
+entity_type: paragraph
+bundle: cc_text_box_with_image
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

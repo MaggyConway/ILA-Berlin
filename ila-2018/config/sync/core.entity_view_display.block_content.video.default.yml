@@ -1,0 +1,71 @@
+uuid: 7297ac77-d323-47ea-9ce0-e2b9b94f7958
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.field.block_content.video.field_video
+    - field.field.block_content.video.field_video_external
+    - field.field.block_content.video.field_video_overlay
+  module:
+    - ds
+    - ila_video_popup
+    - video
+_core:
+  default_config_hash: n_tacG2Kg8OyGfBVnmoxJ18DM39Ygzm_kuPzyvgWPxw
+id: block_content.video.default
+targetEntityType: block_content
+bundle: video
+mode: default
+content:
+  field_video:
+    weight: 0
+    label: hidden
+    settings:
+      width: '1920'
+      height: '1080'
+      autoplay: true
+      loop: true
+      muted: true
+      preload: auto
+      controls: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: video_player_list
+    region: content
+  field_video_external:
+    weight: 1
+    label: hidden
+    settings:
+      autoplay: '1'
+      width: '1024'
+      height: '576'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: ila_video_embed_popup
+    region: content
+  field_video_overlay:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: video_overlay
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,58 @@
+uuid: ac29d75f-6bce-4c10-921b-bb20a186d9ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - page_manager.page.exhibitor_downloads
+    - views.view.downloads
+  content:
+    - 'block_content:page_description:2fe6659a-4286-4fc7-8319-ed5d88ed7327'
+  module:
+    - block_content
+    - panels
+    - views
+_core:
+  default_config_hash: JBT6eevjPVEV-vz7z7Ndj5Bak4Mdaqto8f1k59xudNI
+id: exhibitor_downloads-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    a1437f99-73e9-4485-9576-291ac7ca88c5:
+      id: 'block_content:2fe6659a-4286-4fc7-8319-ed5d88ed7327'
+      label: Downloads
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -1
+      uuid: a1437f99-73e9-4485-9576-291ac7ca88c5
+      context_mapping: {  }
+    3f0e615c-b676-43ec-a9d6-b8aa623cd989:
+      id: 'views_block:downloads-block_downloads_available'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 1
+      uuid: 3f0e615c-b676-43ec-a9d6-b8aa623cd989
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 43fdb8bd-20d1-46cb-a412-760f001cdab7
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings: {  }
+  page_title: Downloads
+  storage_type: page_manager
+  storage_id: exhibitor_downloads-panels_variant-0
+  builder: standard
+page: exhibitor_downloads
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

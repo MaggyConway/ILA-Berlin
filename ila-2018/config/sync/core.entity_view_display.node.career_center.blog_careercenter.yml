@@ -1,0 +1,66 @@
+uuid: 62351a44-5627-490b-a8cc-f6e5427084e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.blog_careercenter
+    - field.field.node.career_center.body
+    - field.field.node.career_center.field_blogpost
+    - field.field.node.career_center.field_node_metatag
+    - field.field.node.career_center.field_paragraph_reference
+    - node.type.career_center
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_post_date
+        - node_title
+        - node_link
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: ds_post_date_blog_careercenter
+      node_link:
+        plugin_id: node_link
+        weight: 2
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.career_center.blog_careercenter
+targetEntityType: node
+bundle: career_center
+mode: blog_careercenter
+content: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_blogpost: true
+  field_node_metatag: true
+  field_paragraph_reference: true
+  langcode: true
+  links: true

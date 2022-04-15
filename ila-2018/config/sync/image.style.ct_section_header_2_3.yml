@@ -1,0 +1,16 @@
+uuid: 631b4f16-f413-47c5-bc09-c015cb192cef
+langcode: en
+status: true
+dependencies: {  }
+name: ct_section_header_2_3
+label: 'CT Section: header 2/3'
+effects:
+  2ef9fed5-90ba-4074-8ee6-fab7958b4d11:
+    uuid: 2ef9fed5-90ba-4074-8ee6-fab7958b4d11
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 860
+      height: 700
+      anchor: center-center
+pipeline: image_optimiza

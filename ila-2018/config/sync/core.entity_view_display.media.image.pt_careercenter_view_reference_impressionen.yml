@@ -1,0 +1,69 @@
+uuid: d4910837-e561-4a87-a25c-0a4e8e3e1515
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pt_careercenter_view_reference_impressionen
+    - field.field.media.image.field_cc_impressionen
+    - field.field.media.image.field_cc_logo_wall
+    - field.field.media.image.field_cc_partner_logo
+    - field.field.media.image.field_description
+    - field.field.media.image.field_download_category
+    - field.field.media.image.field_isc_logo
+    - field.field.media.image.field_joboffer_external_image_id
+    - field.field.media.image.field_logo_conf_host
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_press_category
+    - field.field.media.image.field_press_file
+    - field.field.media.image.field_show_on_downloads
+    - field.field.media.image.field_url
+    - image.style.cc_impressionen_width_560
+    - media.type.image
+  module:
+    - colorbox
+    - ds
+id: media.image.pt_careercenter_view_reference_impressionen
+targetEntityType: media
+bundle: image
+mode: pt_careercenter_view_reference_impressionen
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      colorbox_node_style: cc_impressionen_width_560
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: none
+      colorbox_caption_custom: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: colorbox
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_cc_impressionen: true
+  field_cc_logo_wall: true
+  field_cc_partner_logo: true
+  field_description: true
+  field_download_category: true
+  field_isc_logo: true
+  field_joboffer_external_image_id: true
+  field_logo_conf_host: true
+  field_press_category: true
+  field_press_file: true
+  field_show_on_downloads: true
+  field_url: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

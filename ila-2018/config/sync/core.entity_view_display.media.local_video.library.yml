@@ -1,0 +1,67 @@
+uuid: 05f2df45-5242-4ff8-be03-ae86b1a6f80c
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.library
+    - field.field.media.local_video.field_career_center
+    - field.field.media.local_video.field_description
+    - field.field.media.local_video.field_media_video_file
+    - field.field.media.local_video.field_press_file
+    - field.field.media.local_video.field_preview_image
+    - image.style.thumbnail
+    - media.type.local_video
+  module:
+    - ds
+    - svg_image
+    - text
+id: media.local_video.library
+targetEntityType: media
+bundle: local_video
+mode: library
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_preview_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+      svg_render_as_image: '1'
+      svg_attributes:
+        width: '100'
+        height: '100'
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_career_center: true
+  field_media_video_file: true
+  field_press_file: true
+  langcode: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

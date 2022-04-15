@@ -1,0 +1,31 @@
+uuid: a6f70c97-7908-4113-ac36-f0f4fcda3564
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.career-center
+  module:
+    - menu_block
+  theme:
+    - ila_career_center
+id: cc_mobile_menu
+theme: ila_career_center
+region: header_top_main_nav
+weight: -11
+provider: null
+plugin: 'menu_block:career-center'
+settings:
+  id: 'menu_block:career-center'
+  label: CareerCenter
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'career-center:'
+  suggestion: career_center
+  label_type: block
+  label_link: false
+visibility: {  }

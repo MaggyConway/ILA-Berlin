@@ -1,0 +1,18 @@
+.sliding-popup-bottom {
+  background: $c-black !important; /* stylelint-disable-line */
+}
+
+.eu-cookie-compliance-agree-button,
+.disagree-button.eu-cookie-compliance-more-button {
+  @extend .btn;
+
+  font-size: 14px;
+  text-transform: none;
+  text-shadow: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:hover {
+    background: $c-yellow;
+  }
+}

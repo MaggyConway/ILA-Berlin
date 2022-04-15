@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_air_category:
+          label: Kategorie
+        field_air_mtow_kg_:
+          label: 'Länge // Spannweite // max Startgewicht'
+        field_air_display_time:
+          label: Ausstellungszeit
+      title: Fluggeräte
+      header:
+        area:
+          content:
+            value: "<h1>Fluggeräte Liste</h1>\r\n<div class=\"field--name-field-sub-title\">*Änderungen vorbehalten</div>"
+            format: plain_html
+      exposed_form:
+        options:
+          submit_button: Suche
+          reset_button_label: zurücksetzen
+      filters:
+        combine:
+          expose:
+            label: Suchbegriff

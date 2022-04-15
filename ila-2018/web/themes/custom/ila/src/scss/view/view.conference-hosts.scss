@@ -1,0 +1,76 @@
+.view-display-id-conference_hosts,
+.view-display-id-isc_partner {
+  margin: 0 auto 100px;
+  padding: 0 50px;
+
+  @media #{$m-to-m} {
+    padding: 0 15px;
+  }
+
+  .view-header {
+    margin-bottom: 50px;
+  }
+
+  .conference-hosts-header {
+    font-size: 40px;
+    font-weight: 900;
+    color: $conferences-dark;
+    @include section-theme-specific('color', $defense-dark, $aviation-dark, $space-dark, $suppliers-dark, $special-dark, $conferences-link, $career-green, $uas-dark, $digital-dark);
+    text-transform: uppercase;
+  }
+
+  .conference-hosts-header--text {
+    font-size: 17px;
+    color: $conferences-light;
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+  }
+
+  .view-content {
+    .slick-slide {
+      > div {
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        .slick__slide {
+          position: relative;
+          padding: 15px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            top: 50%;
+            right: 0;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            transform: translateY(-50%);
+          }
+
+          &:last-of-type {
+            &::before {
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .field--name-field-media-image {
+      img {
+        margin: 0 auto;
+        filter: grayscale(100%);
+        transition: all .3s ease-in-out;
+      }
+
+      &:hover {
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}

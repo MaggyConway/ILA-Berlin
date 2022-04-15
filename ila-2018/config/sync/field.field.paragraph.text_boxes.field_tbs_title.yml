@@ -1,0 +1,19 @@
+uuid: dfc86709-aa52-4661-8e1a-a3cf711a1508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tbs_title
+    - paragraphs.paragraphs_type.text_boxes
+id: paragraph.text_boxes.field_tbs_title
+field_name: field_tbs_title
+entity_type: paragraph
+bundle: text_boxes
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,67 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="speaker-left">
+      {{ content.field_portrait }}
+    </div>
+    <div class="speaker-middle">
+      <div class="speaker-details">
+        <div class="speaker-name-title">
+          <span>{{ content.field_surname.0 }},</span>
+          {% if content.field_sp_title %}
+          <span>{{ content.field_sp_title.0 }}</span>
+          {% endif %}
+          <span>{{ content.field_first_name.0 }}</span>
+        </div>
+        {% if content.field_position %}
+        <div class="speaker-position">
+          {{ content.field_position }}
+        </div>
+        {% endif %}
+        {% if url %}
+        <div class="speaker-node-details-wrapper">
+          <a href="{{ url }}" class="speaker-node-details">{% trans %}more conferences{% endtrans %}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="speaker-right">
+      {% if content.field_linked_in %}
+        {{ content.field_linked_in }}
+      {% endif %}
+      {% if content.field_xing %}
+        {{ content.field_xing }}
+      {% endif %}
+    </div>
+  </div>
+
+</article>

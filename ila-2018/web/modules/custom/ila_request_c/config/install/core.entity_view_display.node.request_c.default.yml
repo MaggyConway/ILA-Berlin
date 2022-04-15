@@ -1,0 +1,147 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.request_c.field__outdoor_area
+    - field.field.node.request_c.field_product_group
+    - field.field.node.request_c.field_product_group_index
+    - field.field.node.request_c.field_registration_outdoor_area
+    - field.field.node.request_c.field_request_c_comments
+    - field.field.node.request_c.field_request_c_depth_in_m
+    - field.field.node.request_c.field_request_c_plus_advertising
+    - field.field.node.request_c.field_request_c_plus_auma
+    - field.field.node.request_c.field_request_c_preferred_stand
+    - field.field.node.request_c.field_request_c_registration_inf
+    - field.field.node.request_c.field_request_c_registration_of
+    - field.field.node.request_c.field_request_c_total_in_m2
+    - field.field.node.request_c.field_request_c_we_will_show
+    - field.field.node.request_c.field_request_c_width_in_m
+    - node.type.request_c
+  module:
+    - markup
+    - user
+id: node.request_c.default
+targetEntityType: node
+bundle: request_c
+mode: default
+content:
+  field__outdoor_area:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_product_group:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_group_index:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_registration_outdoor_area:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_request_c_comments:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_request_c_depth_in_m:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_c_plus_advertising:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_plus_auma:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_preferred_stand:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_registration_inf:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_registration_of:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_request_c_total_in_m2:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_request_c_we_will_show:
+    weight: 108
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_request_c_width_in_m:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

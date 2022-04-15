@@ -1,0 +1,19 @@
+uuid: 93072194-770a-45fb-a3fc-f933f3e7a9a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cc_tiled_title_subtitle
+    - paragraphs.paragraphs_type.cc_tiled_title
+id: paragraph.cc_tiled_title.field_cc_tiled_title_subtitle
+field_name: field_cc_tiled_title_subtitle
+entity_type: paragraph
+bundle: cc_tiled_title
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

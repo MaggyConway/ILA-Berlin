@@ -1,0 +1,33 @@
+.paragraph--type--video {
+  margin-bottom: 20px;
+
+  .field--name-field-title {
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #112D4F;
+  }
+
+  .field--name-field-video-local,
+  .field--name-field-video-external.field--type-video {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .field--name-field-video-local {
+    video {
+      @media screen and (max-width: 1024px) {
+        height: auto !important;
+      }
+    }
+
+    iframe, video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+uuid: 3cac4436-a691-45c4-baea-b1fd8bd52890
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.press
+  module:
+    - text
+_core:
+  default_config_hash: J_AgiCJCzWIfv_acthyC0yScXNFgCy3V4N2Pf306G8M
+id: node.press.body
+field_name: body
+entity_type: node
+bundle: press
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,60 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.downloads.body
+    - field.field.node.downloads.field_downloads_show_on_print
+    - field.field.node.downloads.field_file_private
+    - field.field.node.downloads.field_image
+    - node.type.downloads
+  module:
+    - ila_file_download_formatter
+    - image
+    - text
+    - user
+id: node.downloads.default
+targetEntityType: node
+bundle: downloads
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_downloads_show_on_print:
+    weight: 104
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_file_private:
+    weight: 103
+    label: hidden
+    settings:
+      link_text: Download
+    third_party_settings: {  }
+    type: ila_download_link
+    region: content
+  field_image:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

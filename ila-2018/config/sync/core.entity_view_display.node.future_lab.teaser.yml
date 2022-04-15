@@ -1,0 +1,41 @@
+uuid: 4df3a53c-2475-433e-9638-06a3b82eead3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.future_lab.body
+    - field.field.node.future_lab.field_fl_header_image
+    - field.field.node.future_lab.field_node_metatag
+    - field.field.node.future_lab.field_paragraph_reference
+    - field.field.node.future_lab.field_show_header
+    - node.type.future_lab
+  module:
+    - text
+    - user
+id: node.future_lab.teaser
+targetEntityType: node
+bundle: future_lab
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_fl_header_image: true
+  field_node_metatag: true
+  field_paragraph_reference: true
+  field_show_header: true
+  langcode: true
+  search_api_excerpt: true

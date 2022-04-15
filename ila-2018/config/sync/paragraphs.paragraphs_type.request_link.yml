@@ -1,0 +1,11 @@
+uuid: 24f2cf6d-ec83-49f7-bc12-8a6a85351958
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JDQSUVy-4LayAKzckjj59k9haRsaSTwG7oBx71wmWMo
+id: request_link
+label: 'Request link'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

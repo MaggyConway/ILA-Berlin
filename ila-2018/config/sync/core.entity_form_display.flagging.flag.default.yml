@@ -1,0 +1,12 @@
+uuid: d64ecdcb-84d9-40cf-b93d-ac75465226aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.flag
+id: flagging.flag.default
+targetEntityType: flagging
+bundle: flag
+mode: default
+content: {  }
+hidden: {  }

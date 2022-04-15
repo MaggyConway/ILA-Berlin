@@ -1,0 +1,78 @@
+uuid: 8bec3118-da5e-4375-84f3-40fda8f12042
+langcode: de
+status: true
+dependencies:
+  config:
+    - contact.form.sponsoring_katalog
+    - field.field.contact_message.sponsoring_katalog.field_firm
+    - field.field.contact_message.sponsoring_katalog.field_last_name
+    - field.field.contact_message.sponsoring_katalog.field_mr_ms
+    - field.field.contact_message.sponsoring_katalog.field_position
+    - field.field.contact_message.sponsoring_katalog.field_subject
+    - field.field.contact_message.sponsoring_katalog.field_surname
+    - field.field.contact_message.sponsoring_katalog.field_telephone
+  module:
+    - telephone
+id: contact_message.sponsoring_katalog.default
+targetEntityType: contact_message
+bundle: sponsoring_katalog
+mode: default
+content:
+  field_firm:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mr_ms:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_position:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_surname:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  mail:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  copy: true
+  field_subject: true
+  langcode: true
+  message: true
+  name: true
+  preview: true
+  subject: true

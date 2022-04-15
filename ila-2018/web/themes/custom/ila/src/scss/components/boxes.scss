@@ -1,0 +1,135 @@
+.paragraph--type--text-boxes {
+  @include content-grid (30px);
+
+  .field--name-field-tbs-title {
+    @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+    @include section-theme-specific('font-family', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', 'Roboto', $career-font, 'Roboto', 'Roboto');
+    @include section-theme-specific('font-size', 20px, 20px, 20px, 20px, 20px, 20px, 2em, 20px, 20px);
+
+    font-weight: 900; 
+    line-height: 1.1764;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+  }
+
+  &.field--separators {
+    &-bottom {
+      padding-bottom: 5px;
+      position: relative;
+
+      &::before {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+    }
+
+    &-top {
+      padding-top: 45px;
+      position: relative;
+
+      &::before {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        top: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+    }
+
+    &-both {
+      padding: {
+        bottom: 5px;
+        top: 45px;
+      }
+      position: relative;
+
+      &::before {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        top: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+
+      &::after {
+        @include section-theme-specific('background-color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);
+
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+      }
+    }
+  }
+
+  > .field--name-field-tbs-paragraph-ref {
+    display: flex;
+    flex-wrap: wrap;
+
+    > .field__item {
+      flex: 1 1 50%;
+      max-width: 50%;
+      width: 50%;
+      @media #{$m-to-m} {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      &:nth-child(odd) {
+        padding-right: 10px;
+
+        @media #{$m-to-m} {
+          padding-right: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        padding-left: 10px;
+
+        @media #{$m-to-m} {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .paragraph--type--text-box {
+    margin-bottom: 43px;
+    @media #{$m-to-m} {
+      margin-bottom: 35px;
+    }
+    .field--name-field-tb-title {
+      @include section-theme-specific('color', $defense-light, $aviation-light, $space-light, $suppliers-light, $special-light, $conferences-light, $career-light-green, $uas-light, $digital-light);	
+      font-size: 15px;
+      font-weight: 300;	
+      line-height: 1.2;
+      margin-bottom: 13px;
+      text-transform: uppercase;
+      @media #{$m-to-m} {
+        margin-bottom: 17px;
+      }
+    }
+
+    .field--name-field-tb-text {
+      color: #000000;
+      font-size: 15px;	
+      font-weight: 300;	
+      line-height: 1.2;
+    }
+  }
+}

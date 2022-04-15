@@ -1,0 +1,39 @@
+uuid: c54c35f1-c142-4a98-aaac-b639c9817f30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fl_header.field_cc_anchor
+    - field.field.paragraph.fl_header.field_paragraph_reference
+    - paragraphs.paragraphs_type.fl_header
+  module:
+    - paragraphs
+id: paragraph.fl_header.default
+targetEntityType: paragraph
+bundle: fl_header
+mode: default
+content:
+  field_cc_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_reference:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: fl_header_element
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

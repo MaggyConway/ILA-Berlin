@@ -1,0 +1,29 @@
+uuid: 2b011036-9487-4419-9fd6-c5d90d40acb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.facts.field_facts_number
+    - field.field.node.facts.field_node_metatag
+    - field.field.node.facts.field_number
+    - node.type.facts
+  module:
+    - user
+_core:
+  default_config_hash: rGFuQBosQ5d8CW_6nkTkcZF4Wu9suNMMnCKNq-tAXmA
+id: node.facts.teaser
+targetEntityType: node
+bundle: facts
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_facts_number: true
+  field_node_metatag: true
+  field_number: true
+  langcode: true

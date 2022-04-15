@@ -1,0 +1,22 @@
+uuid: 7b10af4c-f34b-4ca3-b22e-47fc25ca6ab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+_core:
+  default_config_hash: WDEQuvOYmrezgGZcCAK-PUcKkb8_xGA-jqQd7FCH6zA
+id: node.basic_page.menu_link
+field_name: menu_link
+entity_type: node
+bundle: basic_page
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

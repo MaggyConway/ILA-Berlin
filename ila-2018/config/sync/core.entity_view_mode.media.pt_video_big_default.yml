@@ -1,0 +1,10 @@
+uuid: 478d03e9-d72b-4371-b7e9-fad45c45f1b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_video_big_default
+label: 'PT Video Big: Default'
+targetEntityType: media
+cache: true

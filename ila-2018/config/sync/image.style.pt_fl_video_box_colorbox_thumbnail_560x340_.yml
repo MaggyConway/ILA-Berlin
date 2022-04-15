@@ -1,0 +1,16 @@
+uuid: 4f957af8-e9f4-4dba-8c8b-0e862b6eb3c2
+langcode: en
+status: true
+dependencies: {  }
+name: pt_fl_video_box_colorbox_thumbnail_560x340_
+label: 'PT FL Video Box Colorbox Thumbnail (560x340)'
+effects:
+  45162f9f-76e5-4e29-9ada-ead066082fdb:
+    uuid: 45162f9f-76e5-4e29-9ada-ead066082fdb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 560
+      height: 340
+      anchor: center-center
+pipeline: image_optimiza

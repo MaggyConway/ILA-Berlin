@@ -1,0 +1,5 @@
+ila_send_mail_individual_user.settings:
+  title: Conference settings
+  description: 'Configure the Message after node created for user role conference.'
+  parent: system.admin_config_system
+  route_name: ila_send_mail_individual_user.settings

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_request_d_width_in_m
+    - node.type.request_d
+id: node.request_d.field_request_d_width_in_m
+field_name: field_request_d_width_in_m
+entity_type: node
+bundle: request_d
+label: 'Width in m'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float
